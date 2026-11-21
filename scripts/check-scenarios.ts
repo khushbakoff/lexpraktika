@@ -1,7 +1,7 @@
 // Ishga tushirish: npm run check:scenarios
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { missingSources, scenarioSchema } from "../lib/scenario-schema.ts";
+import { missingSources, scenarioSchema } from "../lib/content/scenario-schema.ts";
 
 const dir = join(import.meta.dirname, "..", "content", "scenarios");
 let failed = false;

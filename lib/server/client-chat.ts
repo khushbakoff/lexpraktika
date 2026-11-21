@@ -1,5 +1,5 @@
 import "server-only";
-import type { Scenario, Step } from "@/lib/scenario-schema";
+import type { Scenario, Step } from "@/lib/content/scenario-schema";
 import { ChatError, completeJson, isAiConfigured, mapAiError } from "./ai";
 
 export { ChatError, isAiConfigured };

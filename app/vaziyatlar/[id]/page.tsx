@@ -1,9 +1,9 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import BackLink from "@/components/BackLink";
-import Roadmap from "@/components/Roadmap";
-import PageSkeleton from "@/components/PageSkeleton";
-import { getScenario, listScenarios } from "@/lib/scenarios";
+import BackLink from "@/components/layout/BackLink";
+import Roadmap from "@/components/scenarios/Roadmap";
+import PageSkeleton from "@/components/layout/PageSkeleton";
+import { getScenario, listScenarios } from "@/lib/content/scenarios";
 
 export function generateStaticParams() {
   return listScenarios().map((s) => ({ id: s.id }));

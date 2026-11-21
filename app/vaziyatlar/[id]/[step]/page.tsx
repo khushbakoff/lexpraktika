@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import StepScreen from "@/components/steps/StepScreen";
-import PageSkeleton from "@/components/PageSkeleton";
-import { getScenario, listScenarios } from "@/lib/scenarios";
+import PageSkeleton from "@/components/layout/PageSkeleton";
+import { getScenario, listScenarios } from "@/lib/content/scenarios";
 
 export function generateStaticParams() {
   return listScenarios().flatMap((s) => s.steps.map((st) => ({ id: s.id, step: st.id })));

@@ -97,22 +97,36 @@ Batafsil: `docs/SERVER.md`.
 
 ## Loyiha tuzilishi
 
+Batafsil: `docs/ARXITEKTURA.md`.
+
 ```
-app/            sahifalar va API route'lar (vaziyatlar, ariza, profil, universitet, tashkilot...)
-components/     UI: xarita (PathMap), Ariza studiyasi, Shell, bosqich ekranlari
-content/
-  scenarios/    57 ta vaziyat shabloni (JSON)
-  ariza/        ariza mashqlari va darslari
-  lex-index.json  Lex.uz qidiruv indeksi
-lib/            domen mantiqi; lib/server/ da AI, baza, niqoblash
-scripts/        tekshiruv, seed, deploy
-docs/           BOSQICHLAR.md (bajarilganlar), KEYINGI_ISHLAR.md (rejalar), SERVER.md
-android/        Capacitor Android loyihasi
+app/              sahifalar (marshrutlar), API route'lar, server actions
+components/
+  layout/         Shell, TabBar, BackLink, mavzu/til, Telegram
+  home/           bosh sahifa
+  scenarios/      vaziyatlar xaritasi (PathMap), ro'yxat, yo'l, natija
+  steps/          vaziyat bosqichi ekranlari
+  ariza/          Ariza yozish studiyasi (kompyuter)
+  profile/        profil, onboarding, tariflar
+  panels/         universitet, tashkilot, ish beruvchi
+  auth/  assistant/  ui/
+content/          scenarios/ (57 JSON), ariza/ (mashqlar), employers/, lex-index.json
+lib/
+  content/        sxemalar (zod) va kontentni yuklash
+  learning/       ball hisobi, progress, faollik, tavsiyalar
+  ariza/          ariza joylashuv tekshiruvi (qoidalar)
+  user/           profil, tarif, /me
+  ui/             mavzu, orqaga, AI sozlamasi (brauzer)
+  server/         AI, baza, sessiya, niqoblash, Lex qidiruv (faqat serverda)
+  i18n/           til va lotin/kirill
+scripts/          check-scenarios, seed, deploy, gen-registry; lex/ (Lex.uz manbalari), authoring/
+docs/             ARXITEKTURA, BOSQICHLAR, KEYINGI_ISHLAR, SERVER
+android/          Capacitor Android loyihasi
 ```
 
 ## Yangi vaziyat qo'shish
 
-1. `content/scenarios/` ga JSON qo'shing (sxema: `lib/scenario-schema.ts`).
+1. `content/scenarios/` ga JSON qo'shing (sxema: `lib/content/scenario-schema.ts`).
 2. Har da'voga `sources` (Lex.uz) yozing, moddani xotiradan yozmang.
 3. Bosqich ballari yig'indisi 100 bo'lsin.
 4. `npm run check:scenarios` o'tsin.

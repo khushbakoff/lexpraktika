@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
-import TabBar from "@/components/ui/TabBar";
-import Shell from "@/components/Shell";
-import SessionSync from "@/components/SessionSync";
-import LocaleDom from "@/components/LocaleDom";
-import TelegramMiniApp from "@/components/TelegramMiniApp";
-import { THEME_INIT_SCRIPT } from "@/lib/theme";
+import TabBar from "@/components/layout/TabBar";
+import Shell from "@/components/layout/Shell";
+import SessionSync from "@/components/layout/SessionSync";
+import LocaleDom from "@/components/layout/LocaleDom";
+import TelegramMiniApp from "@/components/layout/TelegramMiniApp";
+import { THEME_INIT_SCRIPT } from "@/lib/ui/theme";
 
 const docFont = Source_Serif_4({ variable: "--font-doc", subsets: ["latin", "latin-ext"] });
 

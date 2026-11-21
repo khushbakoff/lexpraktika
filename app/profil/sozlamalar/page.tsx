@@ -1,4 +1,4 @@
-import { SettingsView } from "@/components/ProfileClient";
+import { SettingsView } from "@/components/profile/ProfileClient";
 
 export default function Page() {
   return <SettingsView />;

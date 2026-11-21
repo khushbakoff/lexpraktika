@@ -1,6 +1,6 @@
 import "server-only";
-import { isPlanId, type PlanId } from "@/lib/plans";
-import { PLANS } from "@/lib/plans";
+import { isPlanId, type PlanId } from "@/lib/user/plans";
+import { PLANS } from "@/lib/user/plans";
 import { getSession } from "./guard";
 import { rateLimit } from "./rate-limit";
 

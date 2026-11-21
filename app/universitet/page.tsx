@@ -1,4 +1,4 @@
-import UniversityPanel from "@/components/UniversityPanel";
+import UniversityPanel from "@/components/panels/UniversityPanel";
 
 export default function Universitet() {
   return <UniversityPanel />;

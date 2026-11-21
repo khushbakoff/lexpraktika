@@ -136,11 +136,11 @@ Daromad raqamlari hozircha **faraz**, universitetlar bilan suhbatda tekshiriladi
 - [x] Profil: tahrirlash, Ko'nikmalar va Sozlamalar alohida sahifalar, hisobni o'chirish
 - [x] Nom LexPraktika, logotip A (L+P monogram): ilova, manifest, Android ikonka
 - [x] Bosh sahifa Duolingo uslubida: seriya, kunlik maqsad, 7 kunlik chiziq, yo'l tugunlari. Profil: tahrirlash tugmasi ism kartasida
-- [x] Manba havolasi aynan moddaga ochiladi (anchor, scripts/add-anchors.py)
+- [x] Manba havolasi aynan moddaga ochiladi (anchor, scripts/lex/add-anchors.py)
 - [x] Logotip: ko'k-kulrang doira, L va P oq bo'shliqda (ilova, PWA, Android ikonka)
 - [x] Logotip: oltin-qora halqa, L va P (referens bo'yicha)
 - [x] Lex.uz bilan jonli tekshiruv (/api/lex-check) va AI tushuntirish (/api/lex-explain), SourceSheet ichida
-- [x] Huquqiy yordamchi (/yordamchi): savol -> Lex.uz moddalar indeksi (4063 modda, scripts/build-lex-index.py) -> AI mos modda va qismni ko'rsatadi
+- [x] Huquqiy yordamchi (/yordamchi): savol -> Lex.uz moddalar indeksi (4063 modda, scripts/lex/build-lex-index.py) -> AI mos modda va qismni ko'rsatadi
 - [x] AI provayder: Groq (OpenAI formati) AI_BASE_URL orqali; Telegram bot @LexPraktika_bot ulandi (.env.local)
 - [x] Serverga yuklandi (HTTPS: lex.193-180-213-14.sslip.io), Telegram Mini App: menyu tugmasi, /start webhook, initData orqali kirish
 - [x] Yordamchi avval 1 raund aniqlashtiruvchi savol beradi (tayyor javob tugmalari bilan), keyin Lex.uz moddalarini ko'rsatadi

@@ -5,7 +5,7 @@ import type { ObjectId } from "mongodb";
 import { col, toObjectId } from "@/lib/server/db";
 import { loginBase, randomPassword, randomSuffix } from "@/lib/server/credentials";
 import { fail, requireRole } from "@/lib/server/guard";
-import { hashPassword } from "@/lib/password";
+import { hashPassword } from "@/lib/server/password";
 
 export type StudentRow = {
   id: string;

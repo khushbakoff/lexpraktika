@@ -2,8 +2,8 @@
 
 import SelectMark from "@/components/ui/SelectMark";
 import { useState } from "react";
-import type { Step } from "@/lib/scenario-schema";
-import { scoreDeadline, type StepResult } from "@/lib/scoring";
+import type { Step } from "@/lib/content/scenario-schema";
+import { scoreDeadline, type StepResult } from "@/lib/learning/scoring";
 
 type Props = { step: Extract<Step, { type: "deadline-pick" }>; onSubmit: (r: StepResult) => void };
 

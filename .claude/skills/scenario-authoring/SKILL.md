@@ -8,7 +8,7 @@ description: LexSim vaziyat (scenario) JSON sxemasi va yozish tartibi. Yangi vaz
 Vaziyat = qonuniy ketma-ketlikdagi bosqichlar zanjiri. **Tartibni yurist belgilaydi**, kod va AI uni o'zgartirmaydi.
 
 ## Fayl
-`content/scenarios/<slug>.json`, `lib/scenario-schema.ts` (zod) bilan tekshiriladi.
+`content/scenarios/<slug>.json`, `lib/content/scenario-schema.ts` (zod) bilan tekshiriladi.
 
 ## Sxema
 ```json
@@ -65,8 +65,8 @@ Simulyatordagi **har bir huquqiy da'vo davlat tomonidan chiqarilgan hujjatga aso
 - `status: "verified"` faqat hamma joyda `act` + `article` + `https://lex.uz/` havolasi bo'lganda va yurist `reviewedBy` bo'lganda mumkin. Sxema shuni majburlaydi (`missingSources`).
 - Hujjat o'zgarsa (qonun yangilansa) vaziyat qayta tekshiriladi; `status` qayta `sample` ga tushadi.
 - `npm run check:scenarios` manbasi yo'q joylarni sanab beradi.
-- Ish tartibi: `sh scripts/fetch-lex.sh` (matnlarni `.research/` ga yuklaydi) → moddani `python3 -I scripts/lex-article.py .research/mehnat.txt 545` bilan o'qing → iqtibosni (`quote`) matndan aynan ko'chiring → `python3 -I scripts/verify-quotes.py` har iqtibosni moddada qidirib tekshiradi.
-- Bosqich id'larini o'zgartirsangiz `lib/progress.ts` dagi saqlash versiyasini (`lexsim:progress:vN`) oshiring, aks holda eski natijalar yangi bosqichlarga aralashadi.
+- Ish tartibi: `sh scripts/lex/fetch-lex.sh` (matnlarni `.research/` ga yuklaydi) → moddani `python3 -I scripts/lex/lex-article.py .research/mehnat.txt 545` bilan o'qing → iqtibosni (`quote`) matndan aynan ko'chiring → `python3 -I scripts/lex/verify-quotes.py` har iqtibosni moddada qidirib tekshiradi.
+- Bosqich id'larini o'zgartirsangiz `lib/learning/progress.ts` dagi saqlash versiyasini (`lexsim:progress:vN`) oshiring, aks holda eski natijalar yangi bosqichlarga aralashadi.
 - Qiyin savol turlari: `document-pick` ni umumiy ko'p tanlovli savol sifatida ishlating (`prompt`, `submitLabel`), `authority-pick` ni tartib (ketma-ketlik) uchun.
 
 ## Qoidalar

@@ -1,6 +1,6 @@
-import ScenarioList from "@/components/ScenarioList";
-import { listEmployerSummaries } from "@/lib/employers";
-import { listSummaries } from "@/lib/scenarios";
+import ScenarioList from "@/components/scenarios/ScenarioList";
+import { listEmployerSummaries } from "@/lib/content/employers";
+import { listSummaries } from "@/lib/content/scenarios";
 
 export default function Vaziyatlar() {
   return <ScenarioList scenarios={listSummaries()} employers={listEmployerSummaries()} />;

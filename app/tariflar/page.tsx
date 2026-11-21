@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
-import PlansCard from "@/components/PlansCard";
+import PlansCard from "@/components/profile/PlansCard";
 
 export const metadata = { title: "Tariflar · LexPraktika" };
 

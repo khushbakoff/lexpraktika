@@ -1,11 +1,11 @@
 "use client";
 
-import { aiHeaders } from "@/lib/ai-privacy";
+import { aiHeaders } from "@/lib/ui/ai-privacy";
 
 import { useEffect, useRef, useState } from "react";
 import { Send } from "lucide-react";
-import type { Scenario, Step } from "@/lib/scenario-schema";
-import { scoreFacts, type StepResult } from "@/lib/scoring";
+import type { Scenario, Step } from "@/lib/content/scenario-schema";
+import { scoreFacts, type StepResult } from "@/lib/learning/scoring";
 import GlassCard from "@/components/ui/GlassCard";
 import Icon3D from "@/components/ui/Icon3D";
 

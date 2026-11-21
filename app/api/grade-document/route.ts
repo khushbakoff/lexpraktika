@@ -1,6 +1,6 @@
 import { NO_AI_ERROR, aiDisabledByUser } from "@/lib/server/ai-guard";
 import { z } from "zod";
-import { getScenario } from "@/lib/scenarios";
+import { getScenario } from "@/lib/content/scenarios";
 import { ChatError, isAiConfigured } from "@/lib/server/ai";
 import { gradeDraft } from "@/lib/server/grade-document";
 import { signFacts } from "@/lib/server/chat-proof";

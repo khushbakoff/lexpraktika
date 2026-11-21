@@ -1,14 +1,14 @@
 "use client";
 
-import BackLink from "@/components/BackLink";
-import type { Scenario } from "@/lib/scenario-schema";
+import BackLink from "@/components/layout/BackLink";
+import type { Scenario } from "@/lib/content/scenario-schema";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import { useState, type ReactNode } from "react";
-import { useScenarioProgress } from "@/lib/progress";
-import { useMe } from "@/lib/me";
+import { useScenarioProgress } from "@/lib/learning/progress";
+import { useMe } from "@/lib/user/me";
 import { submitResult } from "@/app/actions/progress";
-import type { StepResult } from "@/lib/scoring";
+import type { StepResult } from "@/lib/learning/scoring";
 import GlassCard from "@/components/ui/GlassCard";
 import GlassButton from "@/components/ui/GlassButton";
 import FactsInput from "./FactsInput";

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import type { Step } from "@/lib/scenario-schema";
-import { scoreForm, type StepResult } from "@/lib/scoring";
+import type { Step } from "@/lib/content/scenario-schema";
+import { scoreForm, type StepResult } from "@/lib/learning/scoring";
 import GlassCard from "@/components/ui/GlassCard";
 
 type Props = { step: Extract<Step, { type: "form" }>; onSubmit: (r: StepResult) => void };

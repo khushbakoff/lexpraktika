@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { Flag } from "lucide-react";
-import type { Step } from "@/lib/scenario-schema";
-import { scoreDocReview, type StepResult } from "@/lib/scoring";
+import type { Step } from "@/lib/content/scenario-schema";
+import { scoreDocReview, type StepResult } from "@/lib/learning/scoring";
 import GlassCard from "@/components/ui/GlassCard";
 
 type Props = { step: Extract<Step, { type: "doc-review" }>; onSubmit: (r: StepResult) => void };

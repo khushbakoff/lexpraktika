@@ -1,5 +1,5 @@
-import { SkillsView } from "@/components/ProfileClient";
-import { listScenarios } from "@/lib/scenarios";
+import { SkillsView } from "@/components/profile/ProfileClient";
+import { listScenarios } from "@/lib/content/scenarios";
 
 export default function Page() {
   // Bosqich turlari: natijalar qaysi ko'nikmaga tegishli ekanini aniqlash uchun

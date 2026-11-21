@@ -3,7 +3,7 @@
 import { col, getDb, isBackendConfigured } from "@/lib/server/db";
 import { fail, getSession, type Role } from "@/lib/server/guard";
 import { endSession, startSession } from "@/lib/server/session";
-import { hashPassword, normalizeLogin, verifyPassword } from "@/lib/password";
+import { hashPassword, normalizeLogin, verifyPassword } from "@/lib/server/password";
 
 export type StoredResult = {
   score: number;

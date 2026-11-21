@@ -1,4 +1,4 @@
-import AssistantClient from "@/components/AssistantClient";
+import AssistantClient from "@/components/assistant/AssistantClient";
 
 export const metadata = { title: "Huquqiy yordamchi · LexPraktika" };
 

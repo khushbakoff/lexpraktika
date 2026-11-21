@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { Check, ChevronRight, Info, X } from "lucide-react";
-import type { Source } from "@/lib/scenario-schema";
-import type { StepResult } from "@/lib/scoring";
+import type { Source } from "@/lib/content/scenario-schema";
+import type { StepResult } from "@/lib/learning/scoring";
 import GlassCard from "@/components/ui/GlassCard";
 import SourceSheet from "@/components/ui/SourceSheet";
 

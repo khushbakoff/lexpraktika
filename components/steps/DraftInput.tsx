@@ -1,11 +1,11 @@
 "use client";
 
-import { aiHeaders } from "@/lib/ai-privacy";
+import { aiHeaders } from "@/lib/ui/ai-privacy";
 
 import { useState } from "react";
 import { Check, X } from "lucide-react";
-import type { Scenario, Step } from "@/lib/scenario-schema";
-import { scoreDraft, scoreDraftSkipped, type StepResult } from "@/lib/scoring";
+import type { Scenario, Step } from "@/lib/content/scenario-schema";
+import { scoreDraft, scoreDraftSkipped, type StepResult } from "@/lib/learning/scoring";
 import GlassCard from "@/components/ui/GlassCard";
 
 type Props = {

@@ -5,7 +5,7 @@ import { randomInt } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { MongoClient, type ObjectId } from "mongodb";
-import { hashPassword } from "../lib/password.ts";
+import { hashPassword } from "../lib/server/password.ts";
 
 const uri = process.env.MONGODB_URI;
 if (!uri) {

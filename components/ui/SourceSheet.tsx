@@ -1,10 +1,10 @@
 "use client";
 
-import { aiHeaders } from "@/lib/ai-privacy";
+import { aiHeaders } from "@/lib/ui/ai-privacy";
 
 import { useEffect, useState } from "react";
 import { CheckCircle2, ExternalLink, RefreshCw, Sparkles, TriangleAlert, X } from "lucide-react";
-import type { Source } from "@/lib/scenario-schema";
+import type { Source } from "@/lib/content/scenario-schema";
 
 /** Iqtibos ⟦ ⟧ belgilari bilan ajratilgan matnni <mark> bilan ko'rsatadi. */
 function Highlighted({ text }: { text: string }) {

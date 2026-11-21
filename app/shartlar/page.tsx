@@ -1,4 +1,4 @@
-import LegalDoc from "@/components/LegalDoc";
+import LegalDoc from "@/components/layout/LegalDoc";
 
 export const metadata = { title: "Foydalanish shartlari · LexPraktika" };
 

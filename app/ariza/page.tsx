@@ -1,4 +1,4 @@
-import ArizaStudio from "@/components/ArizaStudio";
+import ArizaStudio from "@/components/ariza/ArizaStudio";
 
 export const metadata = { title: "Ariza yozish · LexPraktika" };
 

@@ -1,8 +1,8 @@
 "use server";
 
 import { z } from "zod";
-import { getScenario } from "@/lib/scenarios";
-import { scoreStep, type StepResult } from "@/lib/scoring";
+import { getScenario } from "@/lib/content/scenarios";
+import { scoreStep, type StepResult } from "@/lib/learning/scoring";
 import { col } from "@/lib/server/db";
 import { fail, requireRole } from "@/lib/server/guard";
 import { verifyFacts } from "@/lib/server/chat-proof";
