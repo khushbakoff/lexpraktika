@@ -1,12 +1,17 @@
 # LexPraktika
 
+## Taqdimot
+
+[![LexPraktika taqdimoti](taqdimot/muqova.png)](taqdimot/LexPraktika_taqdimot.pdf)
+
+**[Taqdimotni ochish (PDF, 9 slayd)](taqdimot/LexPraktika_taqdimot.pdf)** · **[Demo](https://lex.193-180-213-14.sslip.io)** · **[Telegram bot](https://t.me/LexPraktika_bot)**
+
+---
+
 Huquq talabalari uchun yuridik amaliyot trenajyori. Talaba haqiqiy hayotiy vaziyatni bosqichma-bosqich o'tadi: mijoz (AI) bilan suhbatlashadi, to'g'ri organ va hujjatni tanlaydi, ariza yozadi, AI esa xatolarni topib ko'rsatadi.
 
 LexHackathon 2026, 02-trek ishtirokchisi. Interfeys tili: o'zbek (lotin).
 
-Demo: https://lex.193-180-213-14.sslip.io
-
-Taqdimot (PDF): [docs/taqdimot/LexPraktika_taqdimot.pdf](docs/taqdimot/LexPraktika_taqdimot.pdf)
 
 ## Muammo
 
