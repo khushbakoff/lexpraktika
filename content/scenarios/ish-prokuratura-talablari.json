@@ -1,0 +1,466 @@
+{
+  "id": "ish-prokuratura-talablari",
+  "title": "Prokuratura xodimi bo'lish uchun talablar",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "huquq-tartibot",
+    "davlat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Nomzod prokuratura organida prokuror yoki tergovchi bo'lmoqchi. Lavozimga talablar va qasamyodni «Prokuratura to'g'risida»gi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Jahongir, 26 yosh, yurist",
+    "openingLine": "Assalomu alaykum. Prokuraturada tergovchi bo'lmoqchiman. Menga qanday talablar qo'yiladi?",
+    "hiddenFacts": [
+      {
+        "id": "edu",
+        "fact": "Jahongirda oliy yuridik ma'lumot bor",
+        "revealOn": []
+      },
+      {
+        "id": "citizen",
+        "fact": "O'zbekiston fuqarosi",
+        "revealOn": []
+      },
+      {
+        "id": "health",
+        "fact": "Sog'lig'i xizmat vazifalarini bajarishga imkon beradi",
+        "revealOn": []
+      },
+      {
+        "id": "age",
+        "fact": "26 yoshda",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "edu",
+        "citizen",
+        "health"
+      ],
+      "questions": [
+        {
+          "id": "q-edu",
+          "text": "Ma'lumotingiz?",
+          "factId": "edu",
+          "reply": "Oliy yuridik ma'lumotim bor."
+        },
+        {
+          "id": "q-citizen",
+          "text": "Fuqarolikingiz?",
+          "factId": "citizen",
+          "reply": "O'zbekiston fuqarosiman."
+        },
+        {
+          "id": "q-health",
+          "text": "Sog'lig'ingiz?",
+          "factId": "health",
+          "reply": "Yaxshi, muammo yo'q."
+        },
+        {
+          "id": "q-age",
+          "text": "Necha yoshdasiz?",
+          "factId": "age",
+          "reply": "26 yoshdaman."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Lavozimga talablar",
+      "sources": [],
+      "points": 15,
+      "description": "Talablarni aniqlang.",
+      "prompt": "Prokuratura organlarida prokuror, tergovchi lavozimlariga qo'yiladigan talablar haqida qaysilari to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "edu",
+          "label": "Oliy yuridik ma'lumotga ega bo'lish",
+          "required": true,
+          "why": "43-modda.",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "oliy yuridik maʼlumotga ega",
+              "heading": "43-modda. Prokuratura organlaridagi lavozimlarga tayinlanadigan shaxslarga nisbatan qoʻyiladigan talablar",
+              "text": "Prokuratura organlarida prokurorlar, tergovchilar, surishtiruvchilar va ish oʻrganuvchilar lavozimiga ⟦oliy yuridik maʼlumotga ega⟧, zarur kasbiy fazilatlari boʻlgan, zimmalariga yuklanadigan xizmat vazifalarini bajarishga sogʻligʻi imkon beradigan Oʻzbekiston Respublikasining fuqarolari tayinlanadi.",
+              "anchor": "-106650"
+            }
+          ]
+        },
+        {
+          "id": "quality",
+          "label": "Zarur kasbiy fazilatlarga ega bo'lish",
+          "required": true,
+          "why": "43-modda.",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "zarur kasbiy fazilatlari boʻlgan",
+              "heading": "43-modda. Prokuratura organlaridagi lavozimlarga tayinlanadigan shaxslarga nisbatan qoʻyiladigan talablar",
+              "text": "Prokuratura organlarida prokurorlar, tergovchilar, surishtiruvchilar va ish oʻrganuvchilar lavozimiga oliy yuridik maʼlumotga ega, ⟦zarur kasbiy fazilatlari boʻlgan⟧, zimmalariga yuklanadigan xizmat vazifalarini bajarishga sogʻligʻi imkon beradigan Oʻzbekiston Respublikasining fuqarolari tayinlanadi.",
+              "anchor": "-106650"
+            }
+          ]
+        },
+        {
+          "id": "health",
+          "label": "Sog'lig'i xizmat vazifalarini bajarishga imkon berish",
+          "required": true,
+          "why": "43-modda.",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "zimmalariga yuklanadigan xizmat vazifalarini bajarishga sogʻligʻi imkon beradigan",
+              "heading": "43-modda. Prokuratura organlaridagi lavozimlarga tayinlanadigan shaxslarga nisbatan qoʻyiladigan talablar",
+              "text": "Prokuratura organlarida prokurorlar, tergovchilar, surishtiruvchilar va ish oʻrganuvchilar lavozimiga oliy yuridik maʼlumotga ega, zarur kasbiy fazilatlari boʻlgan, ⟦zimmalariga yuklanadigan xizmat vazifalarini bajarishga sogʻligʻi imkon beradigan⟧ Oʻzbekiston Respublikasining fuqarolari tayinlanadi.",
+              "anchor": "-106650"
+            }
+          ]
+        },
+        {
+          "id": "citizen",
+          "label": "O'zbekiston Respublikasi fuqarosi bo'lish",
+          "required": true,
+          "why": "43-modda.",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "Oʻzbekiston Respublikasining fuqarolari tayinlanadi",
+              "heading": "43-modda. Prokuratura organlaridagi lavozimlarga tayinlanadigan shaxslarga nisbatan qoʻyiladigan talablar",
+              "text": "Prokuratura organlarida prokurorlar, tergovchilar, surishtiruvchilar va ish oʻrganuvchilar lavozimiga oliy yuridik maʼlumotga ega, zarur kasbiy fazilatlari boʻlgan, zimmalariga yuklanadigan xizmat vazifalarini bajarishga sogʻligʻi imkon beradigan ⟦Oʻzbekiston Respublikasining fuqarolari tayinlanadi⟧.",
+              "anchor": "-106650"
+            }
+          ]
+        },
+        {
+          "id": "special",
+          "label": "Alohida hollarda iqtisod, moliya, axborot texnologiyalari kabi sohalardagi oliy ma'lumotli mutaxassislar ham qabul qilinishi mumkin",
+          "required": true,
+          "why": "43-modda.",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "iqtisodiyot, moliya, sotsiologiya, axborot-kommunikatsiya texnologiyalari sohasida va boshqa sohalarda oliy maʼlumotga, zarur bilim va tajribaga ega boʻlgan mutaxassislar qabul qilinishi mumkin",
+              "heading": "43-modda. Prokuratura organlaridagi lavozimlarga tayinlanadigan shaxslarga nisbatan qoʻyiladigan talablar",
+              "text": "Alohida hollarda, prokuratura organlaridagi xizmatga ⟦iqtisodiyot, moliya, sotsiologiya, axborot-kommunikatsiya texnologiyalari sohasida va boshqa sohalarda oliy maʼlumotga, zarur bilim va tajribaga ega boʻlgan mutaxassislar qabul qilinishi mumkin⟧.",
+              "anchor": "-106650"
+            }
+          ]
+        },
+        {
+          "id": "any",
+          "label": "Oliy ma'lumotsiz ham prokuror bo'lish mumkin",
+          "required": false,
+          "why": "Oliy yuridik ma'lumot talab qilinadi (43-modda).",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "oliy yuridik maʼlumotga ega",
+              "heading": "43-modda. Prokuratura organlaridagi lavozimlarga tayinlanadigan shaxslarga nisbatan qoʻyiladigan talablar",
+              "text": "Prokuratura organlarida prokurorlar, tergovchilar, surishtiruvchilar va ish oʻrganuvchilar lavozimiga ⟦oliy yuridik maʼlumotga ega⟧, zarur kasbiy fazilatlari boʻlgan, zimmalariga yuklanadigan xizmat vazifalarini bajarishga sogʻligʻi imkon beradigan Oʻzbekiston Respublikasining fuqarolari tayinlanadi.",
+              "anchor": "-106650"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Qasamyod va yosh",
+      "sources": [],
+      "points": 25,
+      "description": "Qoidalarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "age",
+          "label": "Tuman, shahar prokurori lavozimiga tayinlanadigan shaxs kamida necha yoshda bo'lishi kerak?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "y18",
+              "label": "18 yosh"
+            },
+            {
+              "id": "y21",
+              "label": "21 yosh"
+            },
+            {
+              "id": "y25",
+              "label": "25 yosh"
+            },
+            {
+              "id": "y35",
+              "label": "35 yosh"
+            }
+          ],
+          "correct": "y25",
+          "why": "Yigirma besh yoshdan kichik bo'lmagan (43-modda).",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "yigirma besh yoshdan kichik boʻlmagan shaxslar tayinlanadi",
+              "heading": "43-modda. Prokuratura organlaridagi lavozimlarga tayinlanadigan shaxslarga nisbatan qoʻyiladigan talablar",
+              "text": "Oʻzbekiston Respublikasi Bosh prokurori, Oʻzbekiston Respublikasi Harbiy prokurori, Oʻzbekiston Respublikasi Transport prokurori, Qoraqalpogʻiston Respublikasi prokurori, viloyatlar va Toshkent shahar prokurorlari, shuningdek tumanlar, shaharlar prokurorlari hamda ularga tenglashtirilgan prokurorlar lavozimiga ⟦yigirma besh yoshdan kichik boʻlmagan shaxslar tayinlanadi⟧.",
+              "anchor": "-106650"
+            }
+          ]
+        },
+        {
+          "id": "oath",
+          "label": "Prokuror yoki tergovchi lavozimiga birinchi marta tayinlanayotgan shaxs",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "oath",
+              "label": "Qasamyod qabul qiladi"
+            },
+            {
+              "id": "exam",
+              "label": "Faqat imtihon topshiradi"
+            },
+            {
+              "id": "none",
+              "label": "Hech narsa qilmaydi"
+            }
+          ],
+          "correct": "oath",
+          "why": "Qasamyod qabul qiladi (44-modda).",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "44-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "Prokuror yoki tergovchi lavozimiga birinchi marta tayinlanayotgan shaxs quyidagi mazmunda qasamyod qabul qiladi",
+              "heading": "44-modda. Prokurorlar va tergovchilarning qasamyodi",
+              "text": "⟦Prokuror yoki tergovchi lavozimiga birinchi marta tayinlanayotgan shaxs quyidagi mazmunda qasamyod qabul qiladi⟧:",
+              "anchor": "-106655"
+            }
+          ]
+        },
+        {
+          "id": "order",
+          "label": "Qasamyod qabul qilish tartibini kim belgilaydi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "gp",
+              "label": "Bosh prokuror"
+            },
+            {
+              "id": "court",
+              "label": "Oliy sud"
+            },
+            {
+              "id": "min",
+              "label": "Adliya vazirligi"
+            }
+          ],
+          "correct": "gp",
+          "why": "O'zbekiston Respublikasi Bosh prokurori (44-modda).",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "44-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "Qasamyod qabul qilish tartibi Oʻzbekiston Respublikasi Bosh prokurori tomonidan belgilanadi",
+              "heading": "44-modda. Prokurorlar va tergovchilarning qasamyodi",
+              "text": "⟦Qasamyod qabul qilish tartibi Oʻzbekiston Respublikasi Bosh prokurori tomonidan belgilanadi⟧.",
+              "anchor": "-106655"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Prokuratura xodimi bo'lish uchun talablar). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Jahongirda oliy yuridik ma'lumot bor; O'zbekiston fuqarosi; Sog'lig'i xizmat vazifalarini bajarishga imkon beradi",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "oliy yuridik maʼlumotga ega",
+              "heading": "43-modda. Prokuratura organlaridagi lavozimlarga tayinlanadigan shaxslarga nisbatan qoʻyiladigan talablar",
+              "text": "Prokuratura organlarida prokurorlar, tergovchilar, surishtiruvchilar va ish oʻrganuvchilar lavozimiga ⟦oliy yuridik maʼlumotga ega⟧, zarur kasbiy fazilatlari boʻlgan, zimmalariga yuklanadigan xizmat vazifalarini bajarishga sogʻligʻi imkon beradigan Oʻzbekiston Respublikasining fuqarolari tayinlanadi.",
+              "anchor": "-106650"
+            },
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "44-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "Prokuror yoki tergovchi lavozimiga birinchi marta tayinlanayotgan shaxs quyidagi mazmunda qasamyod qabul qiladi",
+              "heading": "44-modda. Prokurorlar va tergovchilarning qasamyodi",
+              "text": "⟦Prokuror yoki tergovchi lavozimiga birinchi marta tayinlanayotgan shaxs quyidagi mazmunda qasamyod qabul qiladi⟧:",
+              "anchor": "-106655"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Oliy yuridik ma'lumotga ega bo'lish; Zarur kasbiy fazilatlarga ega bo'lish; Sog'lig'i xizmat vazifalarini bajarishga imkon berish; O'zbekiston Respublikasi fuqarosi bo'lish",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Lavozimga tayinlanish",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "meet",
+          "label": "Oliy yuridik ma'lumotli, sog'lig'i imkon beradigan fuqaro lavozimga tayinlanadi",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "oliy yuridik maʼlumotga ega, zarur kasbiy fazilatlari boʻlgan",
+              "heading": "43-modda. Prokuratura organlaridagi lavozimlarga tayinlanadigan shaxslarga nisbatan qoʻyiladigan talablar",
+              "text": "Prokuratura organlarida prokurorlar, tergovchilar, surishtiruvchilar va ish oʻrganuvchilar lavozimiga ⟦oliy yuridik maʼlumotga ega, zarur kasbiy fazilatlari boʻlgan⟧, zimmalariga yuklanadigan xizmat vazifalarini bajarishga sogʻligʻi imkon beradigan Oʻzbekiston Respublikasining fuqarolari tayinlanadi.",
+              "anchor": "-106650"
+            }
+          ]
+        },
+        {
+          "id": "oath",
+          "label": "Birinchi marta tayinlanayotgan shaxs qasamyod qabul qiladi",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "44-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "Prokuror yoki tergovchi lavozimiga birinchi marta tayinlanayotgan shaxs quyidagi mazmunda qasamyod qabul qiladi",
+              "heading": "44-modda. Prokurorlar va tergovchilarning qasamyodi",
+              "text": "⟦Prokuror yoki tergovchi lavozimiga birinchi marta tayinlanayotgan shaxs quyidagi mazmunda qasamyod qabul qiladi⟧:",
+              "anchor": "-106655"
+            }
+          ]
+        },
+        {
+          "id": "duty",
+          "label": "Xizmat vazifalarini halol va vijdonan bajaradi",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "44-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "Oʻz xizmat vazifalarimni halol va vijdonan bajarishga",
+              "heading": "44-modda. Prokurorlar va tergovchilarning qasamyodi",
+              "text": "Prokuror yoki tergovchi lavozimiga birinchi marta tayinlanayotgan shaxs quyidagi mazmunda qasamyod qabul qiladi:\n“⟦Oʻz xizmat vazifalarimni halol va vijdonan bajarishga⟧, qonun buzilishiga qarshi murosasiz kurashishga, fuqaro, jamiyat va davlat manfaatlarini himoya qilishga tantanali qasamyod qilaman”.",
+              "anchor": "-106655"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Qasamyod mazmuni",
+      "sources": [
+        {
+          "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+          "article": "44-modda",
+          "url": "https://lex.uz/docs/-106197",
+          "quote": "Oʻz xizmat vazifalarimni halol va vijdonan bajarishga, qonun buzilishiga qarshi murosasiz kurashishga, fuqaro, jamiyat va davlat manfaatlarini himoya qilishga tantanali qasamyod qilaman",
+          "heading": "44-modda. Prokurorlar va tergovchilarning qasamyodi",
+          "text": "Prokuror yoki tergovchi lavozimiga birinchi marta tayinlanayotgan shaxs quyidagi mazmunda qasamyod qabul qiladi:\n“⟦Oʻz xizmat vazifalarimni halol va vijdonan bajarishga, qonun buzilishiga qarshi murosasiz kurashishga, fuqaro, jamiyat va davlat manfaatlarini himoya qilishga tantanali qasamyod qilaman⟧”.",
+          "anchor": "-106655"
+        }
+      ],
+      "points": 15,
+      "description": "Qasamyodda xizmat vazifalarini qanday bajarishga tantanali qasamyod qilinadi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Halol va vijdonan"
+        },
+        {
+          "id": "b",
+          "label": "Tezkor va shoshilinch"
+        },
+        {
+          "id": "c",
+          "label": "Faqat buyruq bo'yicha"
+        },
+        {
+          "id": "d",
+          "label": "Foyda uchun"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

@@ -1,0 +1,463 @@
+{
+  "id": "jinoyat-himoyachi-majburiy",
+  "title": "O'g'limning ishida advokat shartmi?",
+  "area": "Jinoyat-protsessual huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Voyaga yetmagan bola o'g'irlikda gumon qilinmoqda. Himoyachi ishtiroki majburiy bo'lgan ishlar va himoyachi huquqlarini Jinoyat-protsessual kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Mansur, 40 yosh, 16 yoshli bolaning otasi",
+    "openingLine": "Assalomu alaykum. O'g'limni o'g'irlikda gumon qilishyapti. Unga advokat tayinlanishi shartmi?",
+    "hiddenFacts": [
+      {
+        "id": "minor",
+        "fact": "Bola 16 yoshda, ya'ni voyaga yetmagan",
+        "revealOn": []
+      },
+      {
+        "id": "suspect",
+        "fact": "Bola o'g'irlikda gumon qilinmoqda",
+        "revealOn": []
+      },
+      {
+        "id": "nolawyer",
+        "fact": "Hozircha himoyachisi yo'q",
+        "revealOn": []
+      },
+      {
+        "id": "lang",
+        "fact": "Bola o'zbek tilini yaxshi biladi",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "minor",
+        "suspect",
+        "nolawyer"
+      ],
+      "questions": [
+        {
+          "id": "q-minor",
+          "text": "O'g'lingiz necha yoshda?",
+          "factId": "minor",
+          "reply": "16 yoshda."
+        },
+        {
+          "id": "q-suspect",
+          "text": "U nimada gumon qilinmoqda?",
+          "factId": "suspect",
+          "reply": "Do'kondan telefon o'g'irlashda."
+        },
+        {
+          "id": "q-nolawyer",
+          "text": "Advokat bormi?",
+          "factId": "nolawyer",
+          "reply": "Yo'q, hali tayinlanmagan."
+        },
+        {
+          "id": "q-lang",
+          "text": "U sud tilini biladimi?",
+          "factId": "lang",
+          "reply": "Ha, yaxshi biladi."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bolangiz qanday sport bilan shug'ullanadi?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, advokat masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Himoyachi majburiy ishlar",
+      "sources": [],
+      "points": 15,
+      "description": "Qaysi ishlarda himoyachi ishtiroki shart.",
+      "prompt": "Quyidagilardan qaysilarida himoyachi ishtirok etishi shart? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "minor",
+          "label": "Voyaga yetmaganlarning ishi",
+          "required": true,
+          "why": "51-moddaning 1-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "51-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "voyaga yetmaganlarning ishi boʻyicha",
+              "heading": "51-modda. Himoyachi ishtirok etishi shart boʻlgan hollar",
+              "text": "Quyidagi ishlar boʻyicha:\n1) ⟦voyaga yetmaganlarning ishi boʻyicha⟧;",
+              "anchor": "-253601"
+            }
+          ]
+        },
+        {
+          "id": "lang",
+          "label": "Sudlov ishi olib borilayotgan tilni bilmaydigan shaxslarning ishi",
+          "required": true,
+          "why": "51-moddaning 3-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "51-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "sudlov ishi olib borilayotgan tilni bilmaydigan shaxslarning ishi boʻyicha",
+              "heading": "51-modda. Himoyachi ishtirok etishi shart boʻlgan hollar",
+              "text": "2) soqovlar, karlar, koʻrlar, jismoniy nuqsoni yoki ruhiy holati buzilganligi sababli oʻzini oʻzi himoya qilish huquqini amalga oshirishga qiynaladigan boshqa shaxslarning ishi boʻyicha;\n3) ⟦sudlov ishi olib borilayotgan tilni bilmaydigan shaxslarning ishi boʻyicha⟧;",
+              "anchor": "-253601"
+            }
+          ]
+        },
+        {
+          "id": "life",
+          "label": "Umrbod ozodlikdan mahrum qilish jazosi tayinlanishi mumkin bo'lgan jinoyatlar",
+          "required": true,
+          "why": "51-moddaning 4-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "51-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "umrbod ozodlikdan mahrum qilish jazosi tayinlanishi mumkin boʻlgan jinoyatlarni",
+              "heading": "51-modda. Himoyachi ishtirok etishi shart boʻlgan hollar",
+              "text": "4) jazo chorasi sifatida ⟦umrbod ozodlikdan mahrum qilish jazosi tayinlanishi mumkin boʻlgan jinoyatlarni⟧ sodir etishda gumon qilinayotgan yoki ayblanayotgan shaxslarning ishi boʻyicha;",
+              "anchor": "-253601"
+            }
+          ]
+        },
+        {
+          "id": "pros",
+          "label": "Davlat ayblovchisi yoki jamoat ayblovchisi ishtirok etayotgan ishlar",
+          "required": true,
+          "why": "51-moddaning 6-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "51-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "davlat ayblovchisi yoki jamoat ayblovchisi ishtirok etayotgan ishlar boʻyicha",
+              "heading": "51-modda. Himoyachi ishtirok etishi shart boʻlgan hollar",
+              "text": "5) shaxslarning manfaatlari oʻzaro qarama-qarshi boʻlib, ulardan aqalli biri himoyachiga ega boʻlgan ishlar boʻyicha;\n6) ⟦davlat ayblovchisi yoki jamoat ayblovchisi ishtirok etayotgan ishlar boʻyicha⟧;",
+              "anchor": "-253601"
+            }
+          ]
+        },
+        {
+          "id": "traffic",
+          "label": "Yo'l harakati qoidasini buzganlik uchun ma'muriy ish",
+          "required": false,
+          "why": "51-modda jinoyat ishlariga tegishli, ro'yxatda bunday ish yo'q.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "51-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Quyidagi ishlar boʻyicha:",
+              "heading": "51-modda. Himoyachi ishtirok etishi shart boʻlgan hollar",
+              "text": "⟦Quyidagi ishlar boʻyicha:⟧",
+              "anchor": "-253601"
+            }
+          ]
+        },
+        {
+          "id": "relative",
+          "label": "Faqat qarindoshlari talab qilgan har qanday ish",
+          "required": false,
+          "why": "51-modda ro'yxatida bunday asos yo'q.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "51-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Quyidagi ishlar boʻyicha:",
+              "heading": "51-modda. Himoyachi ishtirok etishi shart boʻlgan hollar",
+              "text": "⟦Quyidagi ishlar boʻyicha:⟧",
+              "anchor": "-253601"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Himoyachi huquqlari",
+      "sources": [],
+      "points": 25,
+      "description": "Himoyachi va gumon qilinuvchi huquqlarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "minorcase",
+          "label": "Voyaga yetmagan gumon qilinuvchi ishida himoyachi",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "opt",
+              "label": "Ixtiyoriy"
+            },
+            {
+              "id": "must",
+              "label": "Ishtirok etishi shart"
+            },
+            {
+              "id": "court",
+              "label": "Faqat sud bosqichida shart"
+            }
+          ],
+          "correct": "must",
+          "why": "Voyaga yetmaganlarning ishi bo'yicha himoyachi ishtirok etishi shart (51-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "51-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "voyaga yetmaganlarning ishi boʻyicha",
+              "heading": "51-modda. Himoyachi ishtirok etishi shart boʻlgan hollar",
+              "text": "Quyidagi ishlar boʻyicha:\n1) ⟦voyaga yetmaganlarning ishi boʻyicha⟧;",
+              "anchor": "-253601"
+            }
+          ]
+        },
+        {
+          "id": "meet",
+          "label": "Himoyachi bilan uchrashuvlar",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "free",
+              "label": "Soni va davomiyligi cheklanmagan, xoli"
+            },
+            {
+              "id": "lim",
+              "label": "Kuniga 10 daqiqa"
+            },
+            {
+              "id": "none",
+              "label": "Tergovchi ishtirokida faqat"
+            }
+          ],
+          "correct": "free",
+          "why": "Uchrashuvlarning soni va davomiyligi cheklanmagan, xoli uchrashiladi (48-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "48-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish",
+              "heading": "48-modda. Gumon qilinuvchining huquq va majburiyatlari",
+              "text": "Gumon qilinuvchi: oʻzining nimada gumon qilinayotganligini bilish; ushlab turilganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; u amalda ushlangan yoki jinoyat joyida ushlash bilan bogʻliq tezkor-qidiruv tadbiri amalda yakunlangan yoxud uning gumon qilinuvchi deb eʼtirof etilganligi toʻgʻrisidagi qaror unga maʼlum qilingan paytdan boshlab himoyachiga ega boʻlish hamda ⟦uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish⟧, ushbu Kodeksning 230-moddasi ikkinchi qismida nazarda tutilgan hollar bundan mustasno; ushlanganidan keyin yigirma toʻrt soatdan kechiktirmay soʻroq qilinishini talab qilish; oʻziga nisbatan qoʻyilgan gumon xususida hamda ishning boshqa har qanday holatlari toʻgʻrisida koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish va koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xaba…",
+              "anchor": "-253587"
+            }
+          ]
+        },
+        {
+          "id": "start",
+          "label": "Himoyachiga ega bo'lish huquqi qachondan boshlanadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "trial",
+              "label": "Faqat sud majlisidan"
+            },
+            {
+              "id": "detained",
+              "label": "Ushlangan yoki gumon qilinuvchi deb e'tirof etilgani ma'lum qilingan paytdan"
+            },
+            {
+              "id": "end",
+              "label": "Tergov tugagach"
+            }
+          ],
+          "correct": "detained",
+          "why": "Amalda ushlangan paytdan yoki gumon qilinuvchi deb e'tirof etilganligi ma'lum qilingan paytdan boshlab (48-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "48-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "himoyachiga ega boʻlish",
+              "heading": "48-modda. Gumon qilinuvchining huquq va majburiyatlari",
+              "text": "Gumon qilinuvchi: oʻzining nimada gumon qilinayotganligini bilish; ushlab turilganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; u amalda ushlangan yoki jinoyat joyida ushlash bilan bogʻliq tezkor-qidiruv tadbiri amalda yakunlangan yoxud uning gumon qilinuvchi deb eʼtirof etilganligi toʻgʻrisidagi qaror unga maʼlum qilingan paytdan boshlab ⟦himoyachiga ega boʻlish⟧ hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish, ushbu Kodeksning 230-moddasi ikkinchi qismida nazarda tutilgan hollar bundan mustasno; ushlanganidan keyin yigirma toʻrt soatdan kechiktirmay soʻroq qilinishini talab qilish; oʻziga nisbatan qoʻyilgan gumon xususida hamda ishning boshqa har qanday holatlari toʻgʻrisida koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish va koʻrsatuvlaridan jin…",
+              "anchor": "-253587"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (O'g'limning ishida advokat shartmi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Bola 16 yoshda, ya'ni voyaga yetmagan; Bola o'g'irlikda gumon qilinmoqda; Hozircha himoyachisi yo'q",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "51-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "voyaga yetmaganlarning ishi boʻyicha",
+              "heading": "51-modda. Himoyachi ishtirok etishi shart boʻlgan hollar",
+              "text": "Quyidagi ishlar boʻyicha:\n1) ⟦voyaga yetmaganlarning ishi boʻyicha⟧;",
+              "anchor": "-253601"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "48-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish",
+              "heading": "48-modda. Gumon qilinuvchining huquq va majburiyatlari",
+              "text": "Gumon qilinuvchi: oʻzining nimada gumon qilinayotganligini bilish; ushlab turilganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; u amalda ushlangan yoki jinoyat joyida ushlash bilan bogʻliq tezkor-qidiruv tadbiri amalda yakunlangan yoxud uning gumon qilinuvchi deb eʼtirof etilganligi toʻgʻrisidagi qaror unga maʼlum qilingan paytdan boshlab himoyachiga ega boʻlish hamda ⟦uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish⟧, ushbu Kodeksning 230-moddasi ikkinchi qismida nazarda tutilgan hollar bundan mustasno; ushlanganidan keyin yigirma toʻrt soatdan kechiktirmay soʻroq qilinishini talab qilish; oʻziga nisbatan qoʻyilgan gumon xususida hamda ishning boshqa har qanday holatlari toʻgʻrisida koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish va koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xaba…",
+              "anchor": "-253587"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Voyaga yetmaganlarning ishi; Sudlov ishi olib borilayotgan tilni bilmaydigan shaxslarning ishi; Umrbod ozodlikdan mahrum qilish jazosi tayinlanishi mumkin bo'lgan jinoyatlar; Davlat ayblovchisi yoki jamoat ayblovchisi ishtirok etayotgan ishlar",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Himoyachi ishtiroki",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni to'g'ri belgilang.",
+      "order": [
+        {
+          "id": "know",
+          "label": "Shaxs nimada gumon qilinayotganini bilib oladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "48-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "oʻzining nimada gumon qilinayotganligini bilish",
+              "heading": "48-modda. Gumon qilinuvchining huquq va majburiyatlari",
+              "text": "Gumon qilinuvchi: ⟦oʻzining nimada gumon qilinayotganligini bilish⟧; ushlab turilganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; u amalda ushlangan yoki jinoyat joyida ushlash bilan bogʻliq tezkor-qidiruv tadbiri amalda yakunlangan yoxud uning gumon qilinuvchi deb eʼtirof etilganligi toʻgʻrisidagi qaror unga maʼlum qilingan paytdan boshlab himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan …",
+              "anchor": "-253587"
+            }
+          ]
+        },
+        {
+          "id": "get",
+          "label": "Himoyachiga ega bo'ladi va u bilan xoli uchrashadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "48-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish",
+              "heading": "48-modda. Gumon qilinuvchining huquq va majburiyatlari",
+              "text": "Gumon qilinuvchi: oʻzining nimada gumon qilinayotganligini bilish; ushlab turilganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; u amalda ushlangan yoki jinoyat joyida ushlash bilan bogʻliq tezkor-qidiruv tadbiri amalda yakunlangan yoxud uning gumon qilinuvchi deb eʼtirof etilganligi toʻgʻrisidagi qaror unga maʼlum qilingan paytdan boshlab ⟦himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish⟧, ushbu Kodeksning 230-moddasi ikkinchi qismida nazarda tutilgan hollar bundan mustasno; ushlanganidan keyin yigirma toʻrt soatdan kechiktirmay soʻroq qilinishini talab qilish; oʻziga nisbatan qoʻyilgan gumon xususida hamda ishning boshqa har qanday holatlari toʻgʻrisida koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish va koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xaba…",
+              "anchor": "-253587"
+            }
+          ]
+        },
+        {
+          "id": "join",
+          "label": "Himoyachi guvohnoma va order taqdim etgach ishda ishtirok etadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "53-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "advokatlik guvohnomasini koʻrsatganidan va muayyan ishni yuritishga vakolatli ekanligini tasdiqlovchi orderni taqdim etganidan soʻng ishda ishtirok etish",
+              "heading": "53-modda. Himoyachining huquq va majburiyatlari",
+              "text": "Himoyachi: manfaatlarini himoya qilayotgan shaxsning nimada gumon qilinayotganligi yoki ayblanayotganligini bilish; ⟦advokatlik guvohnomasini koʻrsatganidan va muayyan ishni yuritishga vakolatli ekanligini tasdiqlovchi orderni taqdim etganidan soʻng ishda ishtirok etish⟧; gumon qilinuvchi soʻroq qilinayotganda ishtirok etish, shaxsga ayblov eʼlon qilinayotganda hozir boʻlish hamda ayblanuvchi soʻroq qilinayotganda, shuningdek ularning ishtirokida oʻtkaziladigan boshqa tergov harakatlarida ishtirok etish va gumon qilinuvchilarga, ayblanuvchilarga, guvohlarga, ekspertlarga, mutaxassislarga savollar berish; boshqa tergov harakatlari yurgizilayotganda surishtiruvchi yoki tergovchining ruxsati bilan ishtirok etish; …",
+              "anchor": "-253617"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Jazo turi",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "51-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "umrbod ozodlikdan mahrum qilish jazosi tayinlanishi mumkin boʻlgan jinoyatlarni",
+          "heading": "51-modda. Himoyachi ishtirok etishi shart boʻlgan hollar",
+          "text": "4) jazo chorasi sifatida ⟦umrbod ozodlikdan mahrum qilish jazosi tayinlanishi mumkin boʻlgan jinoyatlarni⟧ sodir etishda gumon qilinayotgan yoki ayblanayotgan shaxslarning ishi boʻyicha;",
+          "anchor": "-253601"
+        }
+      ],
+      "points": 15,
+      "description": "Qaysi jazo tayinlanishi mumkin bo'lgan jinoyatlarda himoyachi ishtiroki shart?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Jarima"
+        },
+        {
+          "id": "b",
+          "label": "Umrbod ozodlikdan mahrum qilish"
+        },
+        {
+          "id": "c",
+          "label": "Axloq tuzatish ishlari"
+        },
+        {
+          "id": "d",
+          "label": "Majburiy jamoat ishlari"
+        }
+      ],
+      "correct": "b"
+    }
+  ]
+}

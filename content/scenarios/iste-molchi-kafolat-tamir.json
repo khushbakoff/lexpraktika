@@ -1,0 +1,475 @@
+{
+  "id": "iste-molchi-kafolat-tamir",
+  "title": "Kafolat muddatida ta'mirga berilgan muzlatgich",
+  "area": "Iste'molchi huquqi",
+  "areaId": "iste'molchi",
+  "tracks": [
+    "advokat",
+    "davlat",
+    "korxona",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Muzlatgich kafolat muddatida buzilib, ta'mirga berilgan. Nuqsonlarni bartaraf etish muddatlari va ta'mir vaqtida almashtiruvchi tovar berilishini Iste'molchilar qonuni bo'yicha belgilang.",
+  "client": {
+    "persona": "Mahbuba, 48 yosh, uy bekasi",
+    "openingLine": "Assalomu alaykum. Muzlatgichim kafolat muddatida buzildi, do'kon ta'mirga oldi, necha kundan beri qaytarmayapti. Huquqlarim qanday?",
+    "hiddenFacts": [
+      {
+        "id": "warranty",
+        "fact": "Muzlatgich kafolat muddatida buzilgan",
+        "revealOn": []
+      },
+      {
+        "id": "claim",
+        "fact": "Iste'molchi sotuvchiga nuqsonni bartaraf etish talabini qo'ygan",
+        "revealOn": []
+      },
+      {
+        "id": "days",
+        "fact": "Talab qo'yilganiga 25 kun bo'lgan",
+        "revealOn": []
+      },
+      {
+        "id": "loan",
+        "fact": "Uzoq muddat foydalaniladigan tovar, almashtiruvchi tovar berilmagan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "warranty",
+        "claim",
+        "days"
+      ],
+      "questions": [
+        {
+          "id": "q-warranty",
+          "text": "Muzlatgich qachon buzildi?",
+          "factId": "warranty",
+          "reply": "Kafolat muddati ichida."
+        },
+        {
+          "id": "q-claim",
+          "text": "Talab qo'ydingizmi?",
+          "factId": "claim",
+          "reply": "Ha, sotuvchiga yozma talab berdim."
+        },
+        {
+          "id": "q-days",
+          "text": "Necha kun o'tdi?",
+          "factId": "days",
+          "reply": "Yigirma besh kun o'tdi."
+        },
+        {
+          "id": "q-loan",
+          "text": "Vaqtincha muzlatgich berishdimi?",
+          "factId": "loan",
+          "reply": "Yo'q, bermadilar."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Ta'mir qoidalari",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Kafolat muddatida topilgan nuqsonlarni bartaraf etish haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "seller",
+          "label": "Sotuvchi nuqsonlarni talab qo'yilgan paytdan yigirma kun ichida bepul bartaraf etishi lozim",
+          "required": true,
+          "why": "15-modda.",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "sotuvchi isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida",
+              "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+              "text": "Tovarda kafolat muddatida topilgan nuqsonlarni ⟦sotuvchi isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida⟧, ishlab chiqaruvchi esa, oʻn kun ichida bepul bartaraf etishi lozim.",
+              "anchor": "-6010"
+            }
+          ]
+        },
+        {
+          "id": "producer",
+          "label": "Ishlab chiqaruvchi o'n kun ichida bartaraf etishi lozim",
+          "required": true,
+          "why": "15-modda.",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "ishlab chiqaruvchi esa, oʻn kun ichida bepul bartaraf etishi lozim",
+              "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+              "text": "Tovarda kafolat muddatida topilgan nuqsonlarni sotuvchi isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida, ⟦ishlab chiqaruvchi esa, oʻn kun ichida bepul bartaraf etishi lozim⟧.",
+              "anchor": "-6010"
+            }
+          ]
+        },
+        {
+          "id": "loan",
+          "label": "Ta'mir vaqtida iste'molchining talabiga ko'ra uch kun ichida ayni shunday tovar berib turiladi",
+          "required": true,
+          "why": "15-modda.",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "uch kun ichida unga ayni shunday markali (modelli, artikulli) tovar berib turiladi",
+              "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+              "text": "Uzoq muddat davomida foydalaniladigan tovarni taʼmirlashga ketadigan vaqtda foydalanib turish uchun isteʼmolchining talabiga binoan nuqsonli tovar qaytarib berilganidan keyin ⟦uch kun ichida unga ayni shunday markali (modelli, artikulli) tovar berib turiladi⟧ (sotuvchining hisobidan uning oʻzi yoki vakili eltib beradi). Buning uchun ishlab chiqaruvchi sotuvchi bilan birgalikda shartnoma asosida tovarlarning almashuv fondini nazarda tutishlari shart. Mazkur talablar tatbiq etilmaydigan uzoq muddat davomida foydalaniladigan tovarlar roʻyxatini Oʻzbekiston Respublikasi Hukumati belgilaydi.",
+              "anchor": "-6010"
+            }
+          ]
+        },
+        {
+          "id": "extend",
+          "label": "Kafolat muddati iste'molchi tovardan foydalana olmagan davrga uzaytiriladi",
+          "required": true,
+          "why": "15-modda.",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "kafolat muddati isteʼmolchining tovardan foydalana olmagan davrga teng muddatga uzaytiriladi",
+              "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+              "text": "Tovardagi nuqsonlarni bartaraf etish xususida talab qoʻyilgan taqdirda, undan foydalanishning ⟦kafolat muddati isteʼmolchining tovardan foydalana olmagan davrga teng muddatga uzaytiriladi⟧. Mazkur muddat isteʼmolchi nuqsonlarni bartaraf etish talabi bilan murojaat etgan kundan eʼtiboran hisoblana boshlaydi.",
+              "anchor": "-6010"
+            }
+          ]
+        },
+        {
+          "id": "month",
+          "label": "Sotuvchi nuqsonni bartaraf etish uchun uch oy muddatga ega",
+          "required": false,
+          "why": "Sotuvchi yigirma kun ichida bartaraf etishi lozim (15-modda).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida",
+              "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+              "text": "Tovarda kafolat muddatida topilgan nuqsonlarni sotuvchi ⟦isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida⟧, ishlab chiqaruvchi esa, oʻn kun ichida bepul bartaraf etishi lozim.",
+              "anchor": "-6010"
+            }
+          ]
+        },
+        {
+          "id": "noloan",
+          "label": "Uzoq muddat foydalaniladigan tovarda ta'mir vaqtida tovar berib turish talab qilinmaydi",
+          "required": false,
+          "why": "Iste'molchining talabiga ko'ra tovar berib turiladi (15-modda).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "uch kun ichida unga ayni shunday markali (modelli, artikulli) tovar berib turiladi",
+              "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+              "text": "Uzoq muddat davomida foydalaniladigan tovarni taʼmirlashga ketadigan vaqtda foydalanib turish uchun isteʼmolchining talabiga binoan nuqsonli tovar qaytarib berilganidan keyin ⟦uch kun ichida unga ayni shunday markali (modelli, artikulli) tovar berib turiladi⟧ (sotuvchining hisobidan uning oʻzi yoki vakili eltib beradi). Buning uchun ishlab chiqaruvchi sotuvchi bilan birgalikda shartnoma asosida tovarlarning almashuv fondini nazarda tutishlari shart. Mazkur talablar tatbiq etilmaydigan uzoq muddat davomida foydalaniladigan tovarlar roʻyxatini Oʻzbekiston Respublikasi Hukumati belgilaydi.",
+              "anchor": "-6010"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Muddatlar",
+      "sources": [],
+      "points": 25,
+      "description": "Muddatlarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "seller",
+          "label": "Sotuvchi nuqsonni bepul bartaraf etishi lozim bo'lgan muddat",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d7",
+              "label": "7 kun"
+            },
+            {
+              "id": "d20",
+              "label": "20 kun"
+            },
+            {
+              "id": "d45",
+              "label": "45 kun"
+            },
+            {
+              "id": "m3",
+              "label": "3 oy"
+            }
+          ],
+          "correct": "d20",
+          "why": "Talab qo'yilgan paytdan yigirma kun ichida (15-modda).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida",
+              "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+              "text": "Tovarda kafolat muddatida topilgan nuqsonlarni sotuvchi ⟦isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida⟧, ishlab chiqaruvchi esa, oʻn kun ichida bepul bartaraf etishi lozim.",
+              "anchor": "-6010"
+            }
+          ]
+        },
+        {
+          "id": "producer",
+          "label": "Ishlab chiqaruvchi uchun bu muddat",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d3",
+              "label": "3 kun"
+            },
+            {
+              "id": "d10",
+              "label": "10 kun"
+            },
+            {
+              "id": "d20",
+              "label": "20 kun"
+            },
+            {
+              "id": "d60",
+              "label": "60 kun"
+            }
+          ],
+          "correct": "d10",
+          "why": "O'n kun ichida (15-modda).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "ishlab chiqaruvchi esa, oʻn kun ichida bepul bartaraf etishi lozim",
+              "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+              "text": "Tovarda kafolat muddatida topilgan nuqsonlarni sotuvchi isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida, ⟦ishlab chiqaruvchi esa, oʻn kun ichida bepul bartaraf etishi lozim⟧.",
+              "anchor": "-6010"
+            }
+          ]
+        },
+        {
+          "id": "loan",
+          "label": "Ta'mir vaqtida almashtiruvchi tovar necha kun ichida beriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d1",
+              "label": "1 kun"
+            },
+            {
+              "id": "d3",
+              "label": "3 kun"
+            },
+            {
+              "id": "d10",
+              "label": "10 kun"
+            },
+            {
+              "id": "d30",
+              "label": "30 kun"
+            }
+          ],
+          "correct": "d3",
+          "why": "Uch kun ichida (15-modda).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "uch kun ichida unga ayni shunday markali (modelli, artikulli) tovar berib turiladi",
+              "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+              "text": "Uzoq muddat davomida foydalaniladigan tovarni taʼmirlashga ketadigan vaqtda foydalanib turish uchun isteʼmolchining talabiga binoan nuqsonli tovar qaytarib berilganidan keyin ⟦uch kun ichida unga ayni shunday markali (modelli, artikulli) tovar berib turiladi⟧ (sotuvchining hisobidan uning oʻzi yoki vakili eltib beradi). Buning uchun ishlab chiqaruvchi sotuvchi bilan birgalikda shartnoma asosida tovarlarning almashuv fondini nazarda tutishlari shart. Mazkur talablar tatbiq etilmaydigan uzoq muddat davomida foydalaniladigan tovarlar roʻyxatini Oʻzbekiston Respublikasi Hukumati belgilaydi.",
+              "anchor": "-6010"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Kafolat muddatida ta'mirga berilgan muzlatgich). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Muzlatgich kafolat muddatida buzilgan; Iste'molchi sotuvchiga nuqsonni bartaraf etish talabini qo'ygan; Talab qo'yilganiga 25 kun bo'lgan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "sotuvchi isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida",
+              "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+              "text": "Tovarda kafolat muddatida topilgan nuqsonlarni ⟦sotuvchi isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida⟧, ishlab chiqaruvchi esa, oʻn kun ichida bepul bartaraf etishi lozim.",
+              "anchor": "-6010"
+            },
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "16-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "isteʼmolchi tovarning xarid narxini nuqsonga mutanosib ravishda kamaytirishni yoki shartnomani bekor qilib",
+              "heading": "16-modda. Isteʼmolchining nuqsonli tovarning xarid narxini nuqsonga mutanosib ravishda kamaytirishni yoki shartnomani bekor qilishni talab qilish huquqi",
+              "text": "Agar sotuvchi (ishlab chiqaruvchi) isteʼmolchining tovarni almashtirib berish yoki undagi nuqsonlarni bartaraf etish haqidagi talablarini bajarmagan boʻlsa, ⟦isteʼmolchi tovarning xarid narxini nuqsonga mutanosib ravishda kamaytirishni yoki shartnomani bekor qilib⟧ yetkazilgan ziyon va maʼnaviy zararni ushbu Qonunning 20 va 22-moddalariga muvofiq qoplashni talab qilishga haqli.",
+              "anchor": "-6023"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Sotuvchi nuqsonlarni talab qo'yilgan paytdan yigirma kun ichida bepul bartaraf etishi lozim; Ishlab chiqaruvchi o'n kun ichida bartaraf etishi lozim; Ta'mir vaqtida iste'molchining talabiga ko'ra uch kun ichida ayni shunday tovar berib turiladi; Kafolat muddati iste'molchi tovardan foydalana olmagan davrga uzaytiriladi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Iste'molchi yo'li",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "demand",
+          "label": "Iste'molchi kafolat muddatida nuqsonni bartaraf etish talabini qo'yadi",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "Tovarda kafolat muddatida topilgan nuqsonlarni",
+              "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+              "text": "⟦Tovarda kafolat muddatida topilgan nuqsonlarni⟧ sotuvchi isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida, ishlab chiqaruvchi esa, oʻn kun ichida bepul bartaraf etishi lozim.",
+              "anchor": "-6010"
+            }
+          ]
+        },
+        {
+          "id": "fix",
+          "label": "Sotuvchi yigirma kun ichida (ishlab chiqaruvchi o'n kunda) bepul bartaraf etadi",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida",
+              "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+              "text": "Tovarda kafolat muddatida topilgan nuqsonlarni sotuvchi ⟦isteʼmolchi tegishli talab qoʻygan paytdan eʼtiboran yigirma kun ichida⟧, ishlab chiqaruvchi esa, oʻn kun ichida bepul bartaraf etishi lozim.",
+              "anchor": "-6010"
+            }
+          ]
+        },
+        {
+          "id": "fallback",
+          "label": "Bajarilmasa, narxni kamaytirish yoki shartnomani bekor qilish talabi qo'yiladi",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "16-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "isteʼmolchi tovarning xarid narxini nuqsonga mutanosib ravishda kamaytirishni yoki shartnomani bekor qilib",
+              "heading": "16-modda. Isteʼmolchining nuqsonli tovarning xarid narxini nuqsonga mutanosib ravishda kamaytirishni yoki shartnomani bekor qilishni talab qilish huquqi",
+              "text": "Agar sotuvchi (ishlab chiqaruvchi) isteʼmolchining tovarni almashtirib berish yoki undagi nuqsonlarni bartaraf etish haqidagi talablarini bajarmagan boʻlsa, ⟦isteʼmolchi tovarning xarid narxini nuqsonga mutanosib ravishda kamaytirishni yoki shartnomani bekor qilib⟧ yetkazilgan ziyon va maʼnaviy zararni ushbu Qonunning 20 va 22-moddalariga muvofiq qoplashni talab qilishga haqli.",
+              "anchor": "-6023"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Kafolat uzayishi",
+      "sources": [
+        {
+          "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+          "article": "15-modda",
+          "url": "https://lex.uz/docs/-4704",
+          "quote": "kafolat muddati isteʼmolchining tovardan foydalana olmagan davrga teng muddatga uzaytiriladi",
+          "heading": "15-modda. Tovar nuqsonlarini bepul bartaraf etish tartibi",
+          "text": "Tovardagi nuqsonlarni bartaraf etish xususida talab qoʻyilgan taqdirda, undan foydalanishning ⟦kafolat muddati isteʼmolchining tovardan foydalana olmagan davrga teng muddatga uzaytiriladi⟧. Mazkur muddat isteʼmolchi nuqsonlarni bartaraf etish talabi bilan murojaat etgan kundan eʼtiboran hisoblana boshlaydi.",
+          "anchor": "-6010"
+        }
+      ],
+      "points": 15,
+      "description": "Nuqsonlarni bartaraf etish talabi qo'yilganda kafolat muddati qanday o'zgaradi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Iste'molchi tovardan foydalana olmagan davrga teng muddatga uzaytiriladi"
+        },
+        {
+          "id": "b",
+          "label": "O'zgarmaydi"
+        },
+        {
+          "id": "c",
+          "label": "Bekor bo'ladi"
+        },
+        {
+          "id": "d",
+          "label": "Ikki baravar qisqaradi"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

@@ -1,0 +1,435 @@
+{
+  "id": "ish-advokat-manfaatlar-tonashuvi",
+  "title": "Manfaatlar to'qnashuvi: topshiriqni qabul qilsa bo'ladimi?",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "advokat",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Advokatga yangi mijoz murojaat qilgan, ammo avvalgi mijoz manfaatlariga zid. Advokat qachon topshiriqni qabul qilishga haqli emasligini Advokatura qonuni bo'yicha belgilang.",
+  "client": {
+    "persona": "Advokat",
+    "openingLine": "Assalomu alaykum. Yangi mijoz murojaat qildi, lekin avval boshqa mijozga shu ish bo'yicha yordam bergandim. Topshiriqni qabul qilsam bo'ladimi?",
+    "hiddenFacts": [
+      {
+        "id": "prev",
+        "fact": "Advokat avval boshqa shaxsga shu ish bo'yicha yordam ko'rsatgan",
+        "revealOn": []
+      },
+      {
+        "id": "conflict",
+        "fact": "Yangi mijoz manfaati avvalgisiga zid",
+        "revealOn": []
+      },
+      {
+        "id": "judge",
+        "fact": "Advokat avval shu ishda boshqa sifatda ishtirok etgan",
+        "revealOn": []
+      },
+      {
+        "id": "interest",
+        "fact": "Advokat ishdan shaxsan manfaatdor",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "prev",
+        "conflict",
+        "judge"
+      ],
+      "questions": [
+        {
+          "id": "q-prev",
+          "text": "Avval kimga yordam bergansiz?",
+          "factId": "prev",
+          "reply": "Boshqa shaxsga shu ish bo'yicha."
+        },
+        {
+          "id": "q-conflict",
+          "text": "Manfaatlar mosmi?",
+          "factId": "conflict",
+          "reply": "Yo'q, zid."
+        },
+        {
+          "id": "q-judge",
+          "text": "Boshqa rolda ishtirok etganmisiz?",
+          "factId": "judge",
+          "reply": "Ha, ekspert sifatida."
+        },
+        {
+          "id": "q-interest",
+          "text": "Sizga ham foyda bormi?",
+          "factId": "interest",
+          "reply": "Bevosita manfaatdorman."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Topshiriqni rad etish",
+      "sources": [],
+      "points": 15,
+      "description": "Qaysi hollarda qabul qilish mumkin emas.",
+      "prompt": "Advokat yuridik yordam ko'rsatish topshirig'ini qaysi hollarda qabul qilishga haqli emas? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "conflict",
+          "label": "Avval yordam ko'rsatgan shaxslarning manfaatlari yangi mijoz manfaatlariga zid kelsa",
+          "required": true,
+          "why": "7-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan",
+              "heading": "7-modda. Advokatning vazifalari",
+              "text": "Advokat muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari ⟦ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan⟧ yoki u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs, jamoat ayblovchisi, sud majlisi kotibi, ekspert, mutaxassis, jabrlanuvchining, fuqaroviy daʼvogarning, fuqaroviy javobgarning vakili, guvoh, xolis, tarjimon sifatida ishtirok etgan hollarda, shuningdek agar ishni surishtiruv yoki dastlabki tergov shaklida tergov qilishda yoxud sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa, xuddi shuningdek agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa bu hol unga ishonch bildiruvchi shaxsning (himoya ostidagi shaxsning) manfaatlariga zid kelsa, yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas.",
+              "anchor": "-1426214"
+            }
+          ]
+        },
+        {
+          "id": "role",
+          "label": "Advokat shu ishda sudya, prokuror, tergovchi, ekspert, guvoh va boshqa sifatida ishtirok etgan bo'lsa",
+          "required": true,
+          "why": "7-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs",
+              "heading": "7-modda. Advokatning vazifalari",
+              "text": "Advokat muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan yoki ⟦u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs⟧, jamoat ayblovchisi, sud majlisi kotibi, ekspert, mutaxassis, jabrlanuvchining, fuqaroviy daʼvogarning, fuqaroviy javobgarning vakili, guvoh, xolis, tarjimon sifatida ishtirok etgan hollarda, shuningdek agar ishni surishtiruv yoki dastlabki tergov shaklida tergov qilishda yoxud sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa, xuddi shuningdek agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa bu hol unga ishonch bildiruvchi shaxsning (himoya ostidagi shaxsning) manfaatlariga zid kelsa, yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas.",
+              "anchor": "-1426214"
+            }
+          ]
+        },
+        {
+          "id": "relative",
+          "label": "Ishni tergov qilishda yoki sudda advokatning qarindoshi bo'lgan mansabdor shaxs ishtirok etsa",
+          "required": true,
+          "why": "7-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa",
+              "heading": "7-modda. Advokatning vazifalari",
+              "text": "Advokat muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan yoki u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs, jamoat ayblovchisi, sud majlisi kotibi, ekspert, mutaxassis, jabrlanuvchining, fuqaroviy daʼvogarning, fuqaroviy javobgarning vakili, guvoh, xolis, tarjimon sifatida ishtirok etgan hollarda, shuningdek agar ishni surishtiruv yoki dastlabki tergov shaklida tergov qilishda yoxud ⟦sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa⟧, xuddi shuningdek agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa bu hol unga ishonch bildiruvchi shaxsning (himoya ostidagi shaxsning) manfaatlariga zid kelsa, yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas.",
+              "anchor": "-1426214"
+            }
+          ]
+        },
+        {
+          "id": "personal",
+          "label": "Advokat bevosita yoki bilvosita ishdan shaxsan manfaatdor bo'lsa va bu mijoz manfaatiga zid bo'lsa",
+          "required": true,
+          "why": "7-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa",
+              "heading": "7-modda. Advokatning vazifalari",
+              "text": "Advokat muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan yoki u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs, jamoat ayblovchisi, sud majlisi kotibi, ekspert, mutaxassis, jabrlanuvchining, fuqaroviy daʼvogarning, fuqaroviy javobgarning vakili, guvoh, xolis, tarjimon sifatida ishtirok etgan hollarda, shuningdek agar ishni surishtiruv yoki dastlabki tergov shaklida tergov qilishda yoxud sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa, xuddi shuningdek ⟦agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa⟧ bu hol unga ishonch bildiruvchi shaxsning (himoya ostidagi shaxsning) manfaatlariga zid kelsa, yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas.",
+              "anchor": "-1426214"
+            }
+          ]
+        },
+        {
+          "id": "any",
+          "label": "Manfaatlar zid bo'lsa ham honorarni oshirib, qabul qilsa bo'ladi",
+          "required": false,
+          "why": "Bunday holda topshiriqni qabul qilishga haqli emas (7-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas",
+              "heading": "7-modda. Advokatning vazifalari",
+              "text": "Advokat muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan yoki u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs, jamoat ayblovchisi, sud majlisi kotibi, ekspert, mutaxassis, jabrlanuvchining, fuqaroviy daʼvogarning, fuqaroviy javobgarning vakili, guvoh, xolis, tarjimon sifatida ishtirok etgan hollarda, shuningdek agar ishni surishtiruv yoki dastlabki tergov shaklida tergov qilishda yoxud sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa, xuddi shuningdek agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa bu hol unga ishonch bildiruvchi shaxsning (himoya ostidagi shaxsning) manfaatlariga zid kelsa, ⟦yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas⟧.",
+              "anchor": "-1426214"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Advokat vazifalari",
+      "sources": [],
+      "points": 25,
+      "description": "Vazifalarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "duty",
+          "label": "Advokat o'z faoliyatida nimalarga rioya etishi shart?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "all",
+              "label": "Qonunchilik, kasb etikasi, advokatlik siri va qasamyodga"
+            },
+            {
+              "id": "fee",
+              "label": "Faqat honorar tartibiga"
+            },
+            {
+              "id": "none",
+              "label": "Hech nimaga"
+            }
+          ],
+          "correct": "all",
+          "why": "Qonunchilik, kasb etikasi, advokatlik siri va advokat qasamyodiga (7-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "Advokat oʻz professional faoliyatida amaldagi qonunchilik talablariga, Advokatning kasb etikasi qoidalariga, advokatlik siri va advokat qasamyodiga rioya etishi",
+              "heading": "7-modda. Advokatning vazifalari",
+              "text": "⟦Advokat oʻz professional faoliyatida amaldagi qonunchilik talablariga, Advokatning kasb etikasi qoidalariga, advokatlik siri va advokat qasamyodiga rioya etishi⟧, oʻziga yuridik yordam soʻrab murojaat etgan jismoniy hamda yuridik shaxslarning huquqlari va qonuniy manfaatlarini himoya qilishning qonunda nazarda tutilgan vositalari hamda usullaridan foydalanishi shart.",
+              "anchor": "-1426214"
+            }
+          ]
+        },
+        {
+          "id": "conflict",
+          "label": "Manfaatlar zid bo'lsa, advokat topshiriqni",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "yes",
+              "label": "Qabul qiladi"
+            },
+            {
+              "id": "no",
+              "label": "Qabul qilishga haqli emas"
+            },
+            {
+              "id": "half",
+              "label": "Yarmini qabul qiladi"
+            }
+          ],
+          "correct": "no",
+          "why": "Qabul qilishga haqli emas (7-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas",
+              "heading": "7-modda. Advokatning vazifalari",
+              "text": "Advokat muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan yoki u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs, jamoat ayblovchisi, sud majlisi kotibi, ekspert, mutaxassis, jabrlanuvchining, fuqaroviy daʼvogarning, fuqaroviy javobgarning vakili, guvoh, xolis, tarjimon sifatida ishtirok etgan hollarda, shuningdek agar ishni surishtiruv yoki dastlabki tergov shaklida tergov qilishda yoxud sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa, xuddi shuningdek agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa bu hol unga ishonch bildiruvchi shaxsning (himoya ostidagi shaxsning) manfaatlariga zid kelsa, ⟦yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas⟧.",
+              "anchor": "-1426214"
+            }
+          ]
+        },
+        {
+          "id": "role",
+          "label": "Advokat shu ishda sudya, prokuror, tergovchi yoki ekspert sifatida ishtirok etgan bo'lsa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "yes",
+              "label": "Qabul qiladi"
+            },
+            {
+              "id": "no",
+              "label": "Qabul qilishga haqli emas"
+            },
+            {
+              "id": "fee",
+              "label": "Faqat haq evaziga"
+            }
+          ],
+          "correct": "no",
+          "why": "Topshiriqni qabul qilishga haqli emas (7-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs",
+              "heading": "7-modda. Advokatning vazifalari",
+              "text": "Advokat muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan yoki ⟦u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs⟧, jamoat ayblovchisi, sud majlisi kotibi, ekspert, mutaxassis, jabrlanuvchining, fuqaroviy daʼvogarning, fuqaroviy javobgarning vakili, guvoh, xolis, tarjimon sifatida ishtirok etgan hollarda, shuningdek agar ishni surishtiruv yoki dastlabki tergov shaklida tergov qilishda yoxud sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa, xuddi shuningdek agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa bu hol unga ishonch bildiruvchi shaxsning (himoya ostidagi shaxsning) manfaatlariga zid kelsa, yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas.",
+              "anchor": "-1426214"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Manfaatlar to'qnashuvi: topshiriqni qabul qilsa bo'ladimi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Advokat avval boshqa shaxsga shu ish bo'yicha yordam ko'rsatgan; Yangi mijoz manfaati avvalgisiga zid; Advokat avval shu ishda boshqa sifatda ishtirok etgan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan",
+              "heading": "7-modda. Advokatning vazifalari",
+              "text": "Advokat muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari ⟦ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan⟧ yoki u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs, jamoat ayblovchisi, sud majlisi kotibi, ekspert, mutaxassis, jabrlanuvchining, fuqaroviy daʼvogarning, fuqaroviy javobgarning vakili, guvoh, xolis, tarjimon sifatida ishtirok etgan hollarda, shuningdek agar ishni surishtiruv yoki dastlabki tergov shaklida tergov qilishda yoxud sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa, xuddi shuningdek agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa bu hol unga ishonch bildiruvchi shaxsning (himoya ostidagi shaxsning) manfaatlariga zid kelsa, yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas.",
+              "anchor": "-1426214"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Avval yordam ko'rsatgan shaxslarning manfaatlari yangi mijoz manfaatlariga zid kelsa; Advokat shu ishda sudya, prokuror, tergovchi, ekspert, guvoh va boshqa sifatida ishtirok etgan bo'lsa; Ishni tergov qilishda yoki sudda advokatning qarindoshi bo'lgan mansabdor shaxs ishtirok etsa; Advokat bevosita yoki bilvosita ishdan shaxsan manfaatdor bo'lsa va bu mijoz manfaatiga zid bo'lsa",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Topshiriqni baholash",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "ask",
+          "label": "Yangi mijoz ishni olib borishni so'rab murojaat qiladi",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "ishni olib borishni soʻrab murojaat etgan shaxsning",
+              "heading": "7-modda. Advokatning vazifalari",
+              "text": "Advokat muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari ⟦ishni olib borishni soʻrab murojaat etgan shaxsning⟧ manfaatlariga zid kelgan yoki u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs, jamoat ayblovchisi, sud majlisi kotibi, ekspert, mutaxassis, jabrlanuvchining, fuqaroviy daʼvogarning, fuqaroviy javobgarning vakili, guvoh, xolis, tarjimon sifatida ishtirok etgan hollarda, shuningdek agar ishni surishtiruv yoki dastlabki tergov shaklida tergov qilishda yoxud sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa, xuddi shuningdek agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa bu hol unga ishonch bildiruvchi shaxsning (himoya ostidagi shaxsning) manfaatlariga zid kelsa, yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas.",
+              "anchor": "-1426214"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "label": "Advokat avvalgi mijozlar va o'z manfaatlari bilan zidlikni tekshiradi",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari",
+              "heading": "7-modda. Advokatning vazifalari",
+              "text": "Advokat ⟦muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari⟧ ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan yoki u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs, jamoat ayblovchisi, sud majlisi kotibi, ekspert, mutaxassis, jabrlanuvchining, fuqaroviy daʼvogarning, fuqaroviy javobgarning vakili, guvoh, xolis, tarjimon sifatida ishtirok etgan hollarda, shuningdek agar ishni surishtiruv yoki dastlabki tergov shaklida tergov qilishda yoxud sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa, xuddi shuningdek agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa bu hol unga ishonch bildiruvchi shaxsning (himoya ostidagi shaxsning) manfaatlariga zid kelsa, yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas.",
+              "anchor": "-1426214"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "label": "Zidlik bo'lsa, topshiriqni qabul qilmaydi",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas",
+              "heading": "7-modda. Advokatning vazifalari",
+              "text": "Advokat muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan yoki u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs, jamoat ayblovchisi, sud majlisi kotibi, ekspert, mutaxassis, jabrlanuvchining, fuqaroviy daʼvogarning, fuqaroviy javobgarning vakili, guvoh, xolis, tarjimon sifatida ishtirok etgan hollarda, shuningdek agar ishni surishtiruv yoki dastlabki tergov shaklida tergov qilishda yoxud sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa, xuddi shuningdek agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa bu hol unga ishonch bildiruvchi shaxsning (himoya ostidagi shaxsning) manfaatlariga zid kelsa, ⟦yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas⟧.",
+              "anchor": "-1426214"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Manfaat",
+      "sources": [
+        {
+          "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+          "article": "7-modda",
+          "url": "https://lex.uz/docs/-54503",
+          "quote": "yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas",
+          "heading": "7-modda. Advokatning vazifalari",
+          "text": "Advokat muayyan ish boʻyicha yuridik yordam koʻrsatayotgan yoki ilgari yuridik yordam koʻrsatgan shaxslarning manfaatlari ishni olib borishni soʻrab murojaat etgan shaxsning manfaatlariga zid kelgan yoki u sudya, prokuror, tergovchi, surishtiruv oʻtkazuvchi shaxs, jamoat ayblovchisi, sud majlisi kotibi, ekspert, mutaxassis, jabrlanuvchining, fuqaroviy daʼvogarning, fuqaroviy javobgarning vakili, guvoh, xolis, tarjimon sifatida ishtirok etgan hollarda, shuningdek agar ishni surishtiruv yoki dastlabki tergov shaklida tergov qilishda yoxud sudda advokatning qarindoshi boʻlgan mansabdor shaxs ishtirok etgan yoki ishtirok etayotgan boʻlsa, xuddi shuningdek agar advokat bevosita yoki bilvosita shu ishdan shaxsan manfaatdor boʻlsa bu hol unga ishonch bildiruvchi shaxsning (himoya ostidagi shaxsning) manfaatlariga zid kelsa, ⟦yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas⟧.",
+          "anchor": "-1426214"
+        }
+      ],
+      "points": 15,
+      "description": "Advokat ishdan shaxsan manfaatdor bo'lsa va bu ishonch bildiruvchi manfaatiga zid kelsa, u topshiriqni qabul qila oladimi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Qabul qilishga haqli emas"
+        },
+        {
+          "id": "b",
+          "label": "Qabul qiladi"
+        },
+        {
+          "id": "c",
+          "label": "Qisman qabul qiladi"
+        },
+        {
+          "id": "d",
+          "label": "Prokuror ruxsati bilan qabul qiladi"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

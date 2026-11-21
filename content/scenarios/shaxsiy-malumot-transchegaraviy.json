@@ -1,0 +1,454 @@
+{
+  "id": "shaxsiy-malumot-transchegaraviy",
+  "title": "Mijozlar ma'lumotini xorijdagi serverga uzatish",
+  "area": "Shaxsiy ma'lumotlar",
+  "areaId": "shaxsiy-malumot",
+  "tracks": [
+    "korxona",
+    "advokat",
+    "davlat",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Kompaniya mijozlar ma'lumotlarini xorijiy bulut xizmatiga uzatmoqchi. Transchegaraviy uzatish shartlarini «Shaxsga doir ma'lumotlar to'g'risida»gi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Laylo, 34 yosh, kompaniya yuristi",
+    "openingLine": "Assalomu alaykum. Kompaniyamiz mijozlar ma'lumotlarini xorijdagi bulutga o'tkazmoqchi. Qonun bunga yo'l qo'yadimi?",
+    "hiddenFacts": [
+      {
+        "id": "abroad",
+        "fact": "Ma'lumotlar O'zbekiston hududidan tashqariga uzatilmoqchi",
+        "revealOn": []
+      },
+      {
+        "id": "protect",
+        "fact": "Qabul qiluvchi davlat ma'lumotlar bir xilda himoyalanishini ta'minlashi aniq emas",
+        "revealOn": []
+      },
+      {
+        "id": "consent",
+        "fact": "Mijozlardan transchegaraviy uzatishga alohida rozilik olinmagan",
+        "revealOn": []
+      },
+      {
+        "id": "scope",
+        "fact": "Ma'lumotlar mijozlarning shaxsiy ma'lumotlari",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "abroad",
+        "protect",
+        "consent"
+      ],
+      "questions": [
+        {
+          "id": "q-abroad",
+          "text": "Qayerga uzatiladi?",
+          "factId": "abroad",
+          "reply": "Xorijdagi bulut serverga."
+        },
+        {
+          "id": "q-protect",
+          "text": "U davlatda himoya qanday?",
+          "factId": "protect",
+          "reply": "Aniq bilmaymiz."
+        },
+        {
+          "id": "q-consent",
+          "text": "Rozilik olganmisiz?",
+          "factId": "consent",
+          "reply": "Yo'q, alohida rozilik olmaganmiz."
+        },
+        {
+          "id": "q-scope",
+          "text": "Qanday ma'lumotlar?",
+          "factId": "scope",
+          "reply": "Mijozlarning ismi, telefoni."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Transchegaraviy uzatish",
+      "sources": [],
+      "points": 15,
+      "description": "Shartlarni aniqlang.",
+      "prompt": "Transchegaraviy uzatish haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "def",
+          "label": "Ma'lumotlarni O'zbekiston hududidan tashqariga uzatish transchegaraviy uzatish hisoblanadi",
+          "required": true,
+          "why": "15-modda.",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "Shaxsga doir maʼlumotlarni mulkdor va (yoki) operator tomonidan Oʻzbekiston Respublikasi hududidan tashqariga uzatish shaxsga doir maʼlumotlarni transchegaraviy uzatishdir",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "⟦Shaxsga doir maʼlumotlarni mulkdor va (yoki) operator tomonidan Oʻzbekiston Respublikasi hududidan tashqariga uzatish shaxsga doir maʼlumotlarni transchegaraviy uzatishdir⟧.",
+              "anchor": "-4397366"
+            }
+          ]
+        },
+        {
+          "id": "same",
+          "label": "Subyektlar huquqlari bir xilda himoya qilinishini ta'minlovchi davlatlar hududiga amalga oshiriladi",
+          "required": true,
+          "why": "15-modda.",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "huquqlari bir xilda himoya qilinishini taʼminlovchi chet davlatlar hududiga amalga oshiriladi",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "Shaxsga doir maʼlumotlarni transchegaraviy uzatish shaxsga doir maʼlumotlar subyektlarining ⟦huquqlari bir xilda himoya qilinishini taʼminlovchi chet davlatlar hududiga amalga oshiriladi⟧.",
+              "anchor": "-4397366"
+            }
+          ]
+        },
+        {
+          "id": "consent",
+          "label": "Bir xil himoyani ta'minlamaydigan davlatga subyektning roziligi bilan uzatish mumkin",
+          "required": true,
+          "why": "15-modda.",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "subyektning oʻz shaxsga doir maʼlumotlarini transchegaraviy uzatish boʻyicha roziligi mavjud boʻlganda",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "Shaxsga doir maʼlumotlarning bir xilda himoya qilinishini taʼminlamaydigan chet davlatlar hududiga shaxsga doir maʼlumotlarni transchegaraviy uzatish quyidagi hollarda amalga oshirilishi mumkin:\n⟦subyektning oʻz shaxsga doir maʼlumotlarini transchegaraviy uzatish boʻyicha roziligi mavjud boʻlganda⟧;",
+              "anchor": "-4397366"
+            }
+          ]
+        },
+        {
+          "id": "treaty",
+          "label": "Xalqaro shartnomalarda nazarda tutilgan hollarda uzatish mumkin",
+          "required": true,
+          "why": "15-modda.",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "Oʻzbekiston Respublikasining xalqaro shartnomalarida nazarda tutilgan hollarda",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "⟦Oʻzbekiston Respublikasining xalqaro shartnomalarida nazarda tutilgan hollarda⟧.",
+              "anchor": "-4397366"
+            }
+          ]
+        },
+        {
+          "id": "anywhere",
+          "label": "Ma'lumotlarni istalgan davlatga rozilik va shartlarsiz uzatish mumkin",
+          "required": false,
+          "why": "Uzatish 15-moddadagi shartlarga bog'liq.",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "Shaxsga doir maʼlumotlarning bir xilda himoya qilinishini taʼminlamaydigan chet davlatlar hududiga",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "⟦Shaxsga doir maʼlumotlarning bir xilda himoya qilinishini taʼminlamaydigan chet davlatlar hududiga⟧ shaxsga doir maʼlumotlarni transchegaraviy uzatish quyidagi hollarda amalga oshirilishi mumkin:",
+              "anchor": "-4397366"
+            }
+          ]
+        },
+        {
+          "id": "never",
+          "label": "Transchegaraviy uzatish har doim taqiqlangan",
+          "required": false,
+          "why": "Shartlar bo'lganda uzatish mumkin (15-modda).",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "quyidagi hollarda amalga oshirilishi mumkin",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "Shaxsga doir maʼlumotlarning bir xilda himoya qilinishini taʼminlamaydigan chet davlatlar hududiga shaxsga doir maʼlumotlarni transchegaraviy uzatish ⟦quyidagi hollarda amalga oshirilishi mumkin⟧:",
+              "anchor": "-4397366"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Shartlar",
+      "sources": [],
+      "points": 25,
+      "description": "Uzatish shartlarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "def",
+          "label": "Transchegaraviy uzatish nima?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "out",
+              "label": "Ma'lumotlarni O'zbekiston hududidan tashqariga uzatish"
+            },
+            {
+              "id": "in",
+              "label": "Ma'lumotni mamlakat ichida ko'chirish"
+            },
+            {
+              "id": "print",
+              "label": "Ma'lumotni qog'ozga chiqarish"
+            }
+          ],
+          "correct": "out",
+          "why": "Ma'lumotlarni O'zbekiston hududidan tashqariga uzatish (15-modda).",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "hududidan tashqariga uzatish shaxsga doir maʼlumotlarni transchegaraviy uzatishdir",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "Shaxsga doir maʼlumotlarni mulkdor va (yoki) operator tomonidan Oʻzbekiston Respublikasi ⟦hududidan tashqariga uzatish shaxsga doir maʼlumotlarni transchegaraviy uzatishdir⟧.",
+              "anchor": "-4397366"
+            }
+          ]
+        },
+        {
+          "id": "weak",
+          "label": "Bir xil himoyani ta'minlamaydigan davlatga uzatish uchun asoslardan biri",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "consent",
+              "label": "Subyektning transchegaraviy uzatishga roziligi"
+            },
+            {
+              "id": "fee",
+              "label": "Kompaniya to'lovi"
+            },
+            {
+              "id": "none",
+              "label": "Asos kerak emas"
+            }
+          ],
+          "correct": "consent",
+          "why": "Subyektning transchegaraviy uzatish bo'yicha roziligi (15-modda).",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "subyektning oʻz shaxsga doir maʼlumotlarini transchegaraviy uzatish boʻyicha roziligi mavjud boʻlganda",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "Shaxsga doir maʼlumotlarning bir xilda himoya qilinishini taʼminlamaydigan chet davlatlar hududiga shaxsga doir maʼlumotlarni transchegaraviy uzatish quyidagi hollarda amalga oshirilishi mumkin:\n⟦subyektning oʻz shaxsga doir maʼlumotlarini transchegaraviy uzatish boʻyicha roziligi mavjud boʻlganda⟧;",
+              "anchor": "-4397366"
+            }
+          ]
+        },
+        {
+          "id": "limit",
+          "label": "Davlat xavfsizligi va fuqarolar huquqlarini himoya qilish maqsadida transchegaraviy uzatish",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "free",
+              "label": "Hech qachon cheklanmaydi"
+            },
+            {
+              "id": "limit",
+              "label": "Taqiqlanishi yoki cheklanishi mumkin"
+            },
+            {
+              "id": "only",
+              "label": "Faqat jarima bilan jazolanadi"
+            }
+          ],
+          "correct": "limit",
+          "why": "Taqiqlanishi yoki cheklanishi mumkin (15-modda).",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "taqiqlanishi yoki cheklanishi mumkin",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "Shaxsga doir maʼlumotlarni transchegaraviy uzatish Oʻzbekiston Respublikasining konstitutsiyaviy tuzumi asoslarini, Oʻzbekiston Respublikasi fuqarolarining maʼnaviyatini, sogʻligʻini, huquqlari va qonuniy manfaatlarini himoya qilish, mamlakat mudofaasini hamda davlat xavfsizligini taʼminlash maqsadida ⟦taqiqlanishi yoki cheklanishi mumkin⟧.",
+              "anchor": "-4397366"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Mijozlar ma'lumotini xorijdagi serverga uzatish). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Ma'lumotlar O'zbekiston hududidan tashqariga uzatilmoqchi; Qabul qiluvchi davlat ma'lumotlar bir xilda himoyalanishini ta'minlashi aniq emas; Mijozlardan transchegaraviy uzatishga alohida rozilik olinmagan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "Shaxsga doir maʼlumotlarni mulkdor va (yoki) operator tomonidan Oʻzbekiston Respublikasi hududidan tashqariga uzatish shaxsga doir maʼlumotlarni transchegaraviy uzatishdir",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "⟦Shaxsga doir maʼlumotlarni mulkdor va (yoki) operator tomonidan Oʻzbekiston Respublikasi hududidan tashqariga uzatish shaxsga doir maʼlumotlarni transchegaraviy uzatishdir⟧.",
+              "anchor": "-4397366"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Ma'lumotlarni O'zbekiston hududidan tashqariga uzatish transchegaraviy uzatish hisoblanadi; Subyektlar huquqlari bir xilda himoya qilinishini ta'minlovchi davlatlar hududiga amalga oshiriladi; Bir xil himoyani ta'minlamaydigan davlatga subyektning roziligi bilan uzatish mumkin; Xalqaro shartnomalarda nazarda tutilgan hollarda uzatish mumkin",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Uzatishga tayyorgarlik",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "check",
+          "label": "Qabul qiluvchi davlat subyektlar huquqlarini bir xilda himoya qilishi aniqlanadi",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "huquqlari bir xilda himoya qilinishini taʼminlovchi chet davlatlar hududiga amalga oshiriladi",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "Shaxsga doir maʼlumotlarni transchegaraviy uzatish shaxsga doir maʼlumotlar subyektlarining ⟦huquqlari bir xilda himoya qilinishini taʼminlovchi chet davlatlar hududiga amalga oshiriladi⟧.",
+              "anchor": "-4397366"
+            }
+          ]
+        },
+        {
+          "id": "consent",
+          "label": "Bir xil himoya ta'minlanmasa, subyektning roziligi olinadi",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "subyektning oʻz shaxsga doir maʼlumotlarini transchegaraviy uzatish boʻyicha roziligi mavjud boʻlganda",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "Shaxsga doir maʼlumotlarning bir xilda himoya qilinishini taʼminlamaydigan chet davlatlar hududiga shaxsga doir maʼlumotlarni transchegaraviy uzatish quyidagi hollarda amalga oshirilishi mumkin:\n⟦subyektning oʻz shaxsga doir maʼlumotlarini transchegaraviy uzatish boʻyicha roziligi mavjud boʻlganda⟧;",
+              "anchor": "-4397366"
+            }
+          ]
+        },
+        {
+          "id": "transfer",
+          "label": "Shartlar bajarilgach, ma'lumotlar uzatiladi",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "quyidagi hollarda amalga oshirilishi mumkin",
+              "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+              "text": "Shaxsga doir maʼlumotlarning bir xilda himoya qilinishini taʼminlamaydigan chet davlatlar hududiga shaxsga doir maʼlumotlarni transchegaraviy uzatish ⟦quyidagi hollarda amalga oshirilishi mumkin⟧:",
+              "anchor": "-4397366"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Cheklash",
+      "sources": [
+        {
+          "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+          "article": "15-modda",
+          "url": "https://lex.uz/docs/-4396419",
+          "quote": "Oʻzbekiston Respublikasi fuqarolarining maʼnaviyatini, sogʻligʻini, huquqlari va qonuniy manfaatlarini himoya qilish, mamlakat mudofaasini hamda davlat xavfsizligini taʼminlash maqsadida taqiqlanishi yoki cheklanishi mumkin",
+          "heading": "15-modda. Shaxsga doir maʼlumotlarni transchegaraviy uzatish",
+          "text": "Shaxsga doir maʼlumotlarni transchegaraviy uzatish Oʻzbekiston Respublikasining konstitutsiyaviy tuzumi asoslarini, ⟦Oʻzbekiston Respublikasi fuqarolarining maʼnaviyatini, sogʻligʻini, huquqlari va qonuniy manfaatlarini himoya qilish, mamlakat mudofaasini hamda davlat xavfsizligini taʼminlash maqsadida taqiqlanishi yoki cheklanishi mumkin⟧.",
+          "anchor": "-4397366"
+        }
+      ],
+      "points": 15,
+      "description": "Qaysi maqsadlarda transchegaraviy uzatish taqiqlanishi yoki cheklanishi mumkin?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Konstitutsiyaviy tuzum, fuqarolar huquqlari va davlat xavfsizligini himoya qilish"
+        },
+        {
+          "id": "b",
+          "label": "Faqat kompaniya foydasi"
+        },
+        {
+          "id": "c",
+          "label": "Faqat reklama"
+        },
+        {
+          "id": "d",
+          "label": "Hech qaysi maqsadda"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

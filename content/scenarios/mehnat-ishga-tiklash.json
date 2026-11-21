@@ -1,0 +1,455 @@
+{
+  "id": "mehnat-ishga-tiklash",
+  "title": "Qonunsiz bo'shatildim: ishga tiklanmoqchiman",
+  "area": "Mehnat huquqi",
+  "areaId": "mehnat",
+  "tracks": [
+    "advokat",
+    "korxona",
+    "davlat",
+    "umumiy",
+    "sudya"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Xodim qonunsiz bo'shatilganini aytib ishga tiklanmoqchi. Qaysi organ ko'radi, qanday muddatda murojaat qilinadi, Mehnat kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Ravshan, 36 yosh, ombor mudiri",
+    "openingLine": "Assalomu alaykum. Meni asossiz ishdan bo'shatishdi. Ishga tiklanmoqchiman, qayerga va qachongacha murojaat qilishim kerak?",
+    "hiddenFacts": [
+      {
+        "id": "fired",
+        "fact": "Ravshan ish beruvchi buyrug'i bilan bo'shatilgan",
+        "revealOn": []
+      },
+      {
+        "id": "copy",
+        "fact": "Buyruqning ko'chirma nusxasi 20 kun oldin topshirilgan",
+        "revealOn": []
+      },
+      {
+        "id": "goal",
+        "fact": "Mijoz ishga tiklanishni xohlaydi",
+        "revealOn": []
+      },
+      {
+        "id": "comm",
+        "fact": "Korxonada mehnat nizolari komissiyasi tuzilgan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "fired",
+        "copy",
+        "goal"
+      ],
+      "questions": [
+        {
+          "id": "q-fired",
+          "text": "Nima bo'ldi?",
+          "factId": "fired",
+          "reply": "Buyruq bilan ishdan bo'shatishdi."
+        },
+        {
+          "id": "q-copy",
+          "text": "Buyruq nusxasini qachon oldingiz?",
+          "factId": "copy",
+          "reply": "Taxminan 20 kun oldin."
+        },
+        {
+          "id": "q-goal",
+          "text": "Nimani xohlaysiz?",
+          "factId": "goal",
+          "reply": "Ishga qaytishni xohlayman."
+        },
+        {
+          "id": "q-comm",
+          "text": "Komissiya bormi?",
+          "factId": "comm",
+          "reply": "Ha, komissiya tuzilgan."
+        },
+        {
+          "id": "q-filler",
+          "text": "Omborda nima saqlanadi?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ishga tiklash masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Qaysi organ ko'radi",
+      "sources": [],
+      "points": 15,
+      "description": "Ishga tiklash bo'yicha nizo qayerda ko'riladi.",
+      "prompt": "Ishga tiklash to'g'risidagi nizo bo'yicha qaysi to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "court",
+          "label": "Ishga tiklash haqidagi nizo bevosita sudda ko'riladi",
+          "required": true,
+          "why": "558-modda 2-band.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "558-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ишга тиклаш тўғрисидаги",
+              "heading": "558-модда. Бевосита судда кўриб чиқилиши лозим бўлган якка тартибдаги меҳнат низолари",
+              "text": "2) меҳнат шартномасини бекор қилиш асосларидан қатъи назар, ⟦ишга тиклаш тўғрисидаги⟧, меҳнат шартномасини бекор қилиш санасини ва асослари таърифини ўзгартириш ҳақидаги, мажбурий прогул ёки кам ҳақ тўланадиган иш бажарилган вақт учун ҳақ тўлаш тўғрисидаги;",
+              "anchor": "6268925"
+            }
+          ]
+        },
+        {
+          "id": "direct",
+          "label": "Komissiya tuzilgan bo'lsa ham bu nizo bevosita sudda ko'riladi",
+          "required": true,
+          "why": "558-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "558-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Қуйидаги якка тартибдаги меҳнат низолари бевосита судда кўриб чиқилади",
+              "heading": "558-модда. Бевосита судда кўриб чиқилиши лозим бўлган якка тартибдаги меҳнат низолари",
+              "text": "⟦Қуйидаги якка тартибдаги меҳнат низолари бевосита судда кўриб чиқилади⟧:",
+              "anchor": "6268925"
+            }
+          ]
+        },
+        {
+          "id": "copy",
+          "label": "Murojaat muddati buyruq ko'chirma nusxasi topshirilgan kundan hisoblanadi",
+          "required": true,
+          "why": "560-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "560-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ишга тиклаш тўғрисидаги низолар бўйича",
+              "heading": "560-модда. Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилиш муддатлари",
+              "text": "Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилишнинг қуйидаги муддатлари белгиланади:\n⟦ишга тиклаш тўғрисидаги низолар бўйича⟧ — ходимга у билан меҳнат шартномаси бекор қилинганлиги ҳақидаги иш берувчи буйруғининг кўчирма нусхаси топширилган кундан эътиборан уч ой;",
+              "anchor": "6269139"
+            }
+          ]
+        },
+        {
+          "id": "labins",
+          "label": "Davlat mehnat inspeksiyasi nizoni hal qiladi",
+          "required": false,
+          "why": "Nizoni komissiya yoki sud ko'radi; inspeksiya sudga murojaat qilish huquqiga ega (545, 559-moddalar).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "559-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Давлат меҳнат инспекциясининг мансабдор шахслари",
+              "heading": "559-модда. Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилиш ҳуқуқи",
+              "text": "1) ходим ёки касаба уюшмалари, уларнинг бирлашмалари, бўлинмалари ва бошланғич касаба уюшмалари ташкилотлари;\n2) ⟦Давлат меҳнат инспекциясининг мансабдор шахслари⟧;",
+              "anchor": "6269101"
+            }
+          ]
+        },
+        {
+          "id": "employer",
+          "label": "Ish beruvchining o'zi nizoni oxirgi hal qiladi",
+          "required": false,
+          "why": "Yakka tartibdagi mehnat nizolari komissiya yoki sud tomonidan ko'riladi (545-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "545-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "меҳнат низолари бўйича комиссиялар томонидан",
+              "heading": "545-модда. Якка тартибдаги меҳнат низоларини кўриб чиқувчи органлар",
+              "text": "Якка тартибдаги меҳнат низолари қуйидагилар томонидан кўриб чиқилади:\n⟦меҳнат низолари бўйича комиссиялар томонидан⟧, бундан бевосита судда кўриладиган низолар мустасно;",
+              "anchor": "6268737"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Muddat va organ",
+      "sources": [],
+      "points": 25,
+      "description": "Ishga tiklash nizosining muddat va organlarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "deadline",
+          "label": "Ishga tiklash bo'yicha sudga murojaat muddati",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "m1",
+              "label": "1 oy"
+            },
+            {
+              "id": "m3",
+              "label": "3 oy"
+            },
+            {
+              "id": "m6",
+              "label": "6 oy"
+            },
+            {
+              "id": "y1",
+              "label": "1 yil"
+            }
+          ],
+          "correct": "m3",
+          "why": "Buyruq ko'chirma nusxasi topshirilgan kundan boshlab uch oy (560-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "560-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ишга тиклаш тўғрисидаги низолар бўйича — ходимга у билан меҳнат шартномаси бекор қилинганлиги ҳақидаги иш берувчи буйруғининг кўчирма нусхаси топширилган кундан эътиборан уч ой",
+              "heading": "560-модда. Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилиш муддатлари",
+              "text": "Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилишнинг қуйидаги муддатлари белгиланади:\n⟦ишга тиклаш тўғрисидаги низолар бўйича — ходимга у билан меҳнат шартномаси бекор қилинганлиги ҳақидаги иш берувчи буйруғининг кўчирма нусхаси топширилган кундан эътиборан уч ой⟧;",
+              "anchor": "6269139"
+            }
+          ]
+        },
+        {
+          "id": "other",
+          "label": "Boshqa mehnat nizolari bo'yicha murojaat muddati",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "m1",
+              "label": "1 oy"
+            },
+            {
+              "id": "m3",
+              "label": "3 oy"
+            },
+            {
+              "id": "m6",
+              "label": "6 oy"
+            },
+            {
+              "id": "y1",
+              "label": "1 yil"
+            }
+          ],
+          "correct": "m6",
+          "why": "Xodim huquqi buzilganini bilgan yoki bilishi kerak bo'lgan kundan olti oy (560-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "560-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "бошқа меҳнат низолари бўйича — ходим ўзининг ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган кундан эътиборан олти ой",
+              "heading": "560-модда. Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилиш муддатлари",
+              "text": "⟦бошқа меҳнат низолари бўйича — ходим ўзининг ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган кундан эътиборан олти ой⟧.",
+              "anchor": "6269139"
+            }
+          ]
+        },
+        {
+          "id": "who",
+          "label": "Ishga tiklash nizosi qayerda ko'riladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "court",
+              "label": "Bevosita sudda"
+            },
+            {
+              "id": "comm",
+              "label": "Faqat komissiyada"
+            },
+            {
+              "id": "insp",
+              "label": "Mehnat inspeksiyasida"
+            }
+          ],
+          "correct": "court",
+          "why": "Bevosita sudda (558-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "558-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ишга тиклаш тўғрисидаги",
+              "heading": "558-модда. Бевосита судда кўриб чиқилиши лозим бўлган якка тартибдаги меҳнат низолари",
+              "text": "2) меҳнат шартномасини бекор қилиш асосларидан қатъи назар, ⟦ишга тиклаш тўғрисидаги⟧, меҳнат шартномасини бекор қилиш санасини ва асослари таърифини ўзгартириш ҳақидаги, мажбурий прогул ёки кам ҳақ тўланадиган иш бажарилган вақт учун ҳақ тўлаш тўғрисидаги;",
+              "anchor": "6268925"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Qonunsiz bo'shatildim: ishga tiklanmoqchiman). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Ravshan ish beruvchi buyrug'i bilan bo'shatilgan; Buyruqning ko'chirma nusxasi 20 kun oldin topshirilgan; Mijoz ishga tiklanishni xohlaydi",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "558-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ишга тиклаш тўғрисидаги",
+              "heading": "558-модда. Бевосита судда кўриб чиқилиши лозим бўлган якка тартибдаги меҳнат низолари",
+              "text": "2) меҳнат шартномасини бекор қилиш асосларидан қатъи назар, ⟦ишга тиклаш тўғрисидаги⟧, меҳнат шартномасини бекор қилиш санасини ва асослари таърифини ўзгартириш ҳақидаги, мажбурий прогул ёки кам ҳақ тўланадиган иш бажарилган вақт учун ҳақ тўлаш тўғрисидаги;",
+              "anchor": "6268925"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "560-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ишга тиклаш тўғрисидаги низолар бўйича",
+              "heading": "560-модда. Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилиш муддатлари",
+              "text": "Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилишнинг қуйидаги муддатлари белгиланади:\n⟦ишга тиклаш тўғрисидаги низолар бўйича⟧ — ходимга у билан меҳнат шартномаси бекор қилинганлиги ҳақидаги иш берувчи буйруғининг кўчирма нусхаси топширилган кундан эътиборан уч ой;",
+              "anchor": "6269139"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Ishga tiklash haqidagi nizo bevosita sudda ko'riladi; Komissiya tuzilgan bo'lsa ham bu nizo bevosita sudda ko'riladi; Murojaat muddati buyruq ko'chirma nusxasi topshirilgan kundan hisoblanadi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Ishga tiklash yo'li",
+      "sources": [],
+      "points": 15,
+      "description": "Harakatlar ketma-ketligini belgilang.",
+      "order": [
+        {
+          "id": "copy",
+          "label": "Ish beruvchi buyrug'ining ko'chirma nusxasi xodimga topshiriladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "560-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "иш берувчи буйруғининг кўчирма нусхаси топширилган кундан эътиборан уч ой",
+              "heading": "560-модда. Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилиш муддатлари",
+              "text": "Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилишнинг қуйидаги муддатлари белгиланади:\nишга тиклаш тўғрисидаги низолар бўйича — ходимга у билан меҳнат шартномаси бекор қилинганлиги ҳақидаги ⟦иш берувчи буйруғининг кўчирма нусхаси топширилган кундан эътиборан уч ой⟧;",
+              "anchor": "6269139"
+            }
+          ]
+        },
+        {
+          "id": "court",
+          "label": "Xodim uch oy ichida bevosita sudga murojaat qiladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "558-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ишга тиклаш тўғрисидаги",
+              "heading": "558-модда. Бевосита судда кўриб чиқилиши лозим бўлган якка тартибдаги меҳнат низолари",
+              "text": "2) меҳнат шартномасини бекор қилиш асосларидан қатъи назар, ⟦ишга тиклаш тўғрисидаги⟧, меҳнат шартномасини бекор қилиш санасини ва асослари таърифини ўзгартириш ҳақидаги, мажбурий прогул ёки кам ҳақ тўланадиган иш бажарилган вақт учун ҳақ тўлаш тўғрисидаги;",
+              "anchor": "6268925"
+            }
+          ]
+        },
+        {
+          "id": "mediation",
+          "label": "Nizo istalgan bosqichda mediatorga o'tkazilishi mumkin",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "545-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "«Медиация тўғрисида»ги Ўзбекистон Республикаси Қонунига мувофиқ кўриб чиқиш учун медиаторга ўтказилиши мумкин",
+              "heading": "545-модда. Якка тартибдаги меҳнат низоларини кўриб чиқувчи органлар",
+              "text": "Ҳар қандай якка тартибдаги меҳнат низоси меҳнат низолари бўйича комиссияда ёки судда кўриб чиқишнинг исталган босқичида, суд алоҳида хонага (маслаҳатхонага) суд ҳужжатини қабул қилиш учун киришидан олдин ⟦«Медиация тўғрисида»ги Ўзбекистон Республикаси Қонунига мувофиқ кўриб чиқиш учун медиаторга ўтказилиши мумкин⟧.",
+              "anchor": "6268737"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Mediatsiya",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+          "article": "560-modda",
+          "url": "https://lex.uz/docs/6257288",
+          "quote": "Якка тартибдаги меҳнат низоларини кўриб чиқиш бўйича судга мурожаат этиш муддатининг ўтиши якка тартибдаги меҳнат низосини медиация тартибида кўриб чиқиш даврида тўхтатиб турилади",
+          "heading": "560-модда. Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилиш муддатлари",
+          "text": "⟦Якка тартибдаги меҳнат низоларини кўриб чиқиш бўйича судга мурожаат этиш муддатининг ўтиши якка тартибдаги меҳнат низосини медиация тартибида кўриб чиқиш даврида тўхтатиб турилади⟧.",
+          "anchor": "6269139"
+        }
+      ],
+      "points": 15,
+      "description": "Mehnat nizosi mediatsiya tartibida ko'rilayotgan davrda murojaat muddati nima bo'ladi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "To'xtatib turiladi"
+        },
+        {
+          "id": "b",
+          "label": "Tezlashadi"
+        },
+        {
+          "id": "c",
+          "label": "Bekor bo'ladi"
+        },
+        {
+          "id": "d",
+          "label": "O'zgarmaydi"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

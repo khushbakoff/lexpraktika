@@ -1,0 +1,663 @@
+{
+  "id": "sifatsiz-tovar",
+  "title": "Sotib olingan telefon nuqsonli chiqdi",
+  "area": "Iste'molchi huquqi",
+  "areaId": "iste'molchi",
+  "tracks": [
+    "advokat",
+    "davlat",
+    "korxona",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijoz 25 kun oldin telefon sotib olgan, u nuqsonli chiqdi, sotuvchi almashtirmayapti. Iste'molchi huquqlari, muddatlar va tartibni Iste'molchilar huquqlarini himoya qilish to'g'risidagi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Dilshod, 30 yosh, dasturchi",
+    "openingLine": "Assalomu alaykum. Do'kondan telefon olgandim, ekrani o'z-o'zidan o'chib qolyapti. Sotuvchi almashtirmayapti.",
+    "hiddenFacts": [
+      {
+        "id": "defect",
+        "fact": "Telefon ekrani o'z-o'zidan o'chib qoladi (ishlab chiqarish nuqsoni)",
+        "revealOn": [
+          "nuqson",
+          "nima bo'ldi"
+        ]
+      },
+      {
+        "id": "when",
+        "fact": "Telefon 25 kun oldin sotib olingan, kafolat muddati 12 oy",
+        "revealOn": [
+          "qachon",
+          "kafolat"
+        ]
+      },
+      {
+        "id": "receipt",
+        "fact": "Kassa cheki va kafolat hujjati bor",
+        "revealOn": [
+          "chek",
+          "hujjat"
+        ]
+      },
+      {
+        "id": "refusal",
+        "fact": "Sotuvchi og'zaki almashtirishni rad etdi",
+        "revealOn": [
+          "sotuvchi",
+          "rad"
+        ]
+      },
+      {
+        "id": "wants",
+        "fact": "Mijoz ayni shunday modelli telefonga almashtirishni xohlaydi",
+        "revealOn": [
+          "xohlay",
+          "talab"
+        ]
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 10,
+      "description": "Nuqson nima, qachon sotib olingan, chek bor-yo'qligi, sotuvchi nima degan.",
+      "requiredFactIds": [
+        "defect",
+        "when",
+        "receipt",
+        "refusal"
+      ],
+      "questions": [
+        {
+          "id": "q-defect",
+          "text": "Telefonda aynan nima nuqson?",
+          "factId": "defect",
+          "reply": "Ekran o'z-o'zidan o'chib qoladi, ishlab chiqarish nuqsoniga o'xshaydi."
+        },
+        {
+          "id": "q-when",
+          "text": "Qachon sotib olgansiz, kafolat qancha?",
+          "factId": "when",
+          "reply": "25 kun oldin. Kafolat 12 oy."
+        },
+        {
+          "id": "q-receipt",
+          "text": "Chek va kafolat hujjati bormi?",
+          "factId": "receipt",
+          "reply": "Ha, kassa cheki ham, kafolat hujjati ham bor."
+        },
+        {
+          "id": "q-refusal",
+          "text": "Sotuvchi nima dedi?",
+          "factId": "refusal",
+          "reply": "Og'zaki almashtirmayman, dedi."
+        },
+        {
+          "id": "q-wants",
+          "text": "Siz nimani xohlaysiz?",
+          "factId": "wants",
+          "reply": "Ayni shunday telefonga almashtirib berishsin."
+        },
+        {
+          "id": "q-color",
+          "text": "Telefon rangi qanday?",
+          "factId": null,
+          "reply": "Qora, lekin bu muhim emas."
+        }
+      ]
+    },
+    {
+      "id": "documents",
+      "type": "document-pick",
+      "title": "Hujjatlarni yig'ing",
+      "sources": [],
+      "points": 15,
+      "description": "Talab uchun kerakli hujjatlarni tanlang.",
+      "prompt": "Talab uchun kerakli hujjatlarni belgilang.",
+      "submitLabel": "Hujjatlarni topshirish",
+      "options": [
+        {
+          "id": "receipt",
+          "label": "Kassa cheki yoki tovar cheki",
+          "required": true,
+          "why": "Oldi-sotdi amalga oshirilganda iste'molchiga kassa yoki tovar cheki beriladi. U xaridni tasdiqlaydi (10-modda).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "10-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "Oldi-sotdi amalga oshirilganda isteʼmolchiga kassa yoki tovar cheki beriladi.",
+              "heading": "10-modda. Tovar (ish, xizmat)lar uchun haq toʻlash shakli hamda tartibi",
+              "text": "⟦Oldi-sotdi amalga oshirilganda isteʼmolchiga kassa yoki tovar cheki beriladi.⟧ Tovarni kassa yoki tovar chekini bermasdan sotish taqiqlanadi.",
+              "anchor": "-4791"
+            }
+          ]
+        },
+        {
+          "id": "warranty",
+          "label": "Kafolat hujjati (tovar pasporti)",
+          "required": true,
+          "why": "Kafolat muddati tovarning pasportida yoki tovar bilan birga beriladigan boshqa hujjatda ko'rsatiladi (11-modda).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "11-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "Kafolat muddati tovar (xizmat)ning pasportida yoki tovarni sotish yoxud xizmat koʻrsatish paytida tovar bilan birgalikda isteʼmolchiga beriladigan boshqa hujjatda koʻrsatiladi.",
+              "heading": "11-modda. Ishlab chiqaruvchi (ijrochi)ning kafillik majburiyatlari",
+              "text": "⟦Kafolat muddati tovar (xizmat)ning pasportida yoki tovarni sotish yoxud xizmat koʻrsatish paytida tovar bilan birgalikda isteʼmolchiga beriladigan boshqa hujjatda koʻrsatiladi.⟧",
+              "anchor": "-4794"
+            }
+          ]
+        },
+        {
+          "id": "friend",
+          "label": "Do'stingizning pasporti nusxasi",
+          "required": false,
+          "why": "Xaridni va kafolatni tasdiqlamaydi (10, 11-moddalar).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "10-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "Oldi-sotdi amalga oshirilganda isteʼmolchiga kassa yoki tovar cheki beriladi.",
+              "heading": "10-modda. Tovar (ish, xizmat)lar uchun haq toʻlash shakli hamda tartibi",
+              "text": "⟦Oldi-sotdi amalga oshirilganda isteʼmolchiga kassa yoki tovar cheki beriladi.⟧ Tovarni kassa yoki tovar chekini bermasdan sotish taqiqlanadi.",
+              "anchor": "-4791"
+            }
+          ]
+        },
+        {
+          "id": "othershop",
+          "label": "Boshqa do'kondan olingan chek",
+          "required": false,
+          "why": "Bu sotuvchidan sotib olinganini tasdiqlamaydi (10-modda).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "10-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "Oldi-sotdi amalga oshirilganda isteʼmolchiga kassa yoki tovar cheki beriladi.",
+              "heading": "10-modda. Tovar (ish, xizmat)lar uchun haq toʻlash shakli hamda tartibi",
+              "text": "⟦Oldi-sotdi amalga oshirilganda isteʼmolchiga kassa yoki tovar cheki beriladi.⟧ Tovarni kassa yoki tovar chekini bermasdan sotish taqiqlanadi.",
+              "anchor": "-4791"
+            }
+          ]
+        },
+        {
+          "id": "booklet",
+          "label": "Telefon qutisidagi reklama bukleti",
+          "required": false,
+          "why": "Kafolat hujjati o'rnini bosmaydi (11-modda).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "11-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "Kafolat muddati tovar (xizmat)ning pasportida",
+              "heading": "11-modda. Ishlab chiqaruvchi (ijrochi)ning kafillik majburiyatlari",
+              "text": "⟦Kafolat muddati tovar (xizmat)ning pasportida⟧ yoki tovarni sotish yoxud xizmat koʻrsatish paytida tovar bilan birgalikda isteʼmolchiga beriladigan boshqa hujjatda koʻrsatiladi.",
+              "anchor": "-4794"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rights",
+      "type": "document-pick",
+      "title": "Iste'molchi huquqlari",
+      "sources": [],
+      "points": 15,
+      "description": "Nuqsonli tovar sotilganda iste'molchi nimani talab qilishi mumkin.",
+      "prompt": "Nuqsonli tovar sotilganda iste'molchi nimani talab qilishga haqli? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "same",
+          "label": "Ayni shunday markali (modelli) sifatli tovarga almashtirib berish",
+          "required": true,
+          "why": "13-moddaning birinchi talabi.",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "tovarni ayni shunday markali (modelli, artikulli) maqbul sifatli tovarga almashtirib berish;",
+              "heading": "13-modda. Isteʼmolchiga nuqsonli tovar sotilganda uning huquqlari",
+              "text": "Nuqsonli tovar sotilganda isteʼmolchi, agar bu hol shartnoma tuzish paytida aytib oʻtilmagan boʻlsa, oʻz xohishiga qarab quyidagilardan birini talab qilishga haqli:\n⟦tovarni ayni shunday markali (modelli, artikulli) maqbul sifatli tovarga almashtirib berish;⟧",
+              "anchor": "-5901"
+            }
+          ]
+        },
+        {
+          "id": "other",
+          "label": "Boshqa markali tovarga almashtirish va narxni qayta hisob-kitob qilish",
+          "required": true,
+          "why": "13-modda.",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "tovarni boshqa markali (modelli, artikulli) shunday tovarga almashtirib, uning xarid narxini tegishincha qayta hisob-kitob qilish;",
+              "heading": "13-modda. Isteʼmolchiga nuqsonli tovar sotilganda uning huquqlari",
+              "text": "tovarni ayni shunday markali (modelli, artikulli) maqbul sifatli tovarga almashtirib berish;\n⟦tovarni boshqa markali (modelli, artikulli) shunday tovarga almashtirib, uning xarid narxini tegishincha qayta hisob-kitob qilish;⟧",
+              "anchor": "-5901"
+            }
+          ]
+        },
+        {
+          "id": "repair",
+          "label": "Nuqsonlarni bepul bartaraf etish yoki xarajatlarni qoplash",
+          "required": true,
+          "why": "13-modda.",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "tovarning nuqsonlarini bepul bartaraf etish yoki isteʼmolchining yoxud uchinchi shaxsning nuqsonlarni bartaraf etishga qilgan xarajatlarini qoplash;",
+              "heading": "13-modda. Isteʼmolchiga nuqsonli tovar sotilganda uning huquqlari",
+              "text": "tovarni boshqa markali (modelli, artikulli) shunday tovarga almashtirib, uning xarid narxini tegishincha qayta hisob-kitob qilish;\n⟦tovarning nuqsonlarini bepul bartaraf etish yoki isteʼmolchining yoxud uchinchi shaxsning nuqsonlarni bartaraf etishga qilgan xarajatlarini qoplash;⟧",
+              "anchor": "-5901"
+            }
+          ]
+        },
+        {
+          "id": "reduce",
+          "label": "Xarid narxini nuqsonga mutanosib ravishda kamaytirish",
+          "required": true,
+          "why": "13-modda.",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "xarid narxini nuqsonga mutanosib ravishda kamaytirish;",
+              "heading": "13-modda. Isteʼmolchiga nuqsonli tovar sotilganda uning huquqlari",
+              "text": "tovarning nuqsonlarini bepul bartaraf etish yoki isteʼmolchining yoxud uchinchi shaxsning nuqsonlarni bartaraf etishga qilgan xarajatlarini qoplash;\n⟦xarid narxini nuqsonga mutanosib ravishda kamaytirish;⟧",
+              "anchor": "-5901"
+            }
+          ]
+        },
+        {
+          "id": "cancel",
+          "label": "Shartnomani bekor qilib, ko'rilgan zararni qoplash",
+          "required": true,
+          "why": "13-modda.",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "shartnomani bekor qilib, koʻrilgan zararni qoplash.",
+              "heading": "13-modda. Isteʼmolchiga nuqsonli tovar sotilganda uning huquqlari",
+              "text": "⟦shartnomani bekor qilib, koʻrilgan zararni qoplash.⟧",
+              "anchor": "-5901"
+            }
+          ]
+        },
+        {
+          "id": "double",
+          "label": "Tovar narxining ikki baravarini talab qilish",
+          "required": false,
+          "why": "13-moddadagi talablar ro'yxatida bunday talab yo'q.",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "oʻz xohishiga qarab quyidagilardan birini talab qilishga haqli",
+              "heading": "13-modda. Isteʼmolchiga nuqsonli tovar sotilganda uning huquqlari",
+              "text": "Nuqsonli tovar sotilganda isteʼmolchi, agar bu hol shartnoma tuzish paytida aytib oʻtilmagan boʻlsa, ⟦oʻz xohishiga qarab quyidagilardan birini talab qilishga haqli⟧:",
+              "anchor": "-5901"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "label": "Do'kon faoliyatini to'xtatishni talab qilish",
+          "required": false,
+          "why": "13-moddadagi iste'molchi talablari ro'yxatida yo'q.",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "oʻz xohishiga qarab quyidagilardan birini talab qilishga haqli",
+              "heading": "13-modda. Isteʼmolchiga nuqsonli tovar sotilganda uning huquqlari",
+              "text": "Nuqsonli tovar sotilganda isteʼmolchi, agar bu hol shartnoma tuzish paytida aytib oʻtilmagan boʻlsa, ⟦oʻz xohishiga qarab quyidagilardan birini talab qilishga haqli⟧:",
+              "anchor": "-5901"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Talabnoma",
+      "sources": [],
+      "points": 15,
+      "description": "Sotuvchiga talabnoma maydonlarini to'ldiring.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "demand",
+          "label": "Mijoz nimani talab qiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "same",
+              "label": "Ayni shunday markali (modelli) sifatli tovarga almashtirib berishni"
+            },
+            {
+              "id": "double",
+              "label": "Tovar narxining ikki baravarini"
+            },
+            {
+              "id": "close",
+              "label": "Do'kon litsenziyasini bekor qildirishni"
+            }
+          ],
+          "correct": "same",
+          "why": "Mijoz ayni shunday modelli tovarga almashtirishni xohlaydi: bu 13-moddadagi birinchi talab.",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "tovarni ayni shunday markali (modelli, artikulli) maqbul sifatli tovarga almashtirib berish;",
+              "heading": "13-modda. Isteʼmolchiga nuqsonli tovar sotilganda uning huquqlari",
+              "text": "Nuqsonli tovar sotilganda isteʼmolchi, agar bu hol shartnoma tuzish paytida aytib oʻtilmagan boʻlsa, oʻz xohishiga qarab quyidagilardan birini talab qilishga haqli:\n⟦tovarni ayni shunday markali (modelli, artikulli) maqbul sifatli tovarga almashtirib berish;⟧",
+              "anchor": "-5901"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "label": "Sotuvchi tovarni almashtirib berishi shart bo'lgan muddat (qo'shimcha tekshiruv talab qilinmasa)",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d3",
+              "label": "3 kun"
+            },
+            {
+              "id": "d7",
+              "label": "7 kun"
+            },
+            {
+              "id": "d30",
+              "label": "30 kun"
+            },
+            {
+              "id": "m3",
+              "label": "3 oy"
+            }
+          ],
+          "correct": "d7",
+          "why": "Sotuvchi ayni shunday tovarga yetti kunlik muddatda almashtirib berishi shart (14-modda).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "14-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "yetti kunlik muddatda",
+              "heading": "14-modda. Nuqsonli tovarni almashtirib berish tartibi",
+              "text": "Isteʼmolchi tovarning ishlab chiqarilishiga, tuzilishiga, tarkibiga doir kamchiliklarni yoki boshqa nuqsonlarni aniqlagan taqdirda sotuvchi (ishlab chiqaruvchi) uni ayni shunday markali (modelli, artikulli) tovarga ⟦yetti kunlik muddatda⟧, tovar sifatini sotuvchi (ishlab chiqaruvchi) tomonidan qoʻshimcha ravishda tekshirish zarur boʻlganida esa, isteʼmolchi talab qoʻygan paytdan eʼtiboran yigirma kun ichida almashtirib berishi shart.",
+              "anchor": "-5985"
+            }
+          ]
+        },
+        {
+          "id": "extra",
+          "label": "Sotuvchi sifatni qo'shimcha tekshirishi zarur bo'lsa, muddat",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d10",
+              "label": "10 kun"
+            },
+            {
+              "id": "d20",
+              "label": "20 kun"
+            },
+            {
+              "id": "d45",
+              "label": "45 kun"
+            },
+            {
+              "id": "d60",
+              "label": "60 kun"
+            }
+          ],
+          "correct": "d20",
+          "why": "Tovar sifatini qo'shimcha tekshirish zarur bo'lganda talab qo'yilgan paytdan yigirma kun ichida (14-modda).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "14-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "isteʼmolchi talab qoʻygan paytdan eʼtiboran yigirma kun ichida",
+              "heading": "14-modda. Nuqsonli tovarni almashtirib berish tartibi",
+              "text": "Isteʼmolchi tovarning ishlab chiqarilishiga, tuzilishiga, tarkibiga doir kamchiliklarni yoki boshqa nuqsonlarni aniqlagan taqdirda sotuvchi (ishlab chiqaruvchi) uni ayni shunday markali (modelli, artikulli) tovarga yetti kunlik muddatda, tovar sifatini sotuvchi (ishlab chiqaruvchi) tomonidan qoʻshimcha ravishda tekshirish zarur boʻlganida esa, ⟦isteʼmolchi talab qoʻygan paytdan eʼtiboran yigirma kun ichida⟧ almashtirib berishi shart.",
+              "anchor": "-5985"
+            }
+          ]
+        },
+        {
+          "id": "penalty",
+          "label": "Muddat o'tkazib yuborilgan har kun uchun sotuvchi qancha neustoyka (penya) to'laydi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "p01",
+              "label": "Tovar bahosining 0,1 foizi"
+            },
+            {
+              "id": "p1",
+              "label": "Tovar bahosining 1 foizi"
+            },
+            {
+              "id": "p5",
+              "label": "Tovar bahosining 5 foizi"
+            },
+            {
+              "id": "none",
+              "label": "Neustoyka yo'q"
+            }
+          ],
+          "correct": "p1",
+          "why": "O'tkazib yuborilgan har bir kun uchun tovar bahosining bir foizi miqdorida neustoyka (14-modda).",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "14-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "tovar bahosining bir foizi miqdorida neustoyka (penya) toʻlaydi",
+              "heading": "14-modda. Nuqsonli tovarni almashtirib berish tartibi",
+              "text": "Ana shu muddatlarning oʻtkazib yuborilgan har bir kuni uchun sotuvchi (ishlab chiqaruvchi) isteʼmolchiga almashtirilgan tovarni berish bilan bir vaqtda ⟦tovar bahosining bir foizi miqdorida neustoyka (penya) toʻlaydi⟧.",
+              "anchor": "-5985"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Sotib olingan telefon nuqsonli chiqdi). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Telefon ekrani o'z-o'zidan o'chib qoladi (ishlab chiqarish nuqsoni); Telefon 25 kun oldin sotib olingan, kafolat muddati 12 oy; Kassa cheki va kafolat hujjati bor; Sotuvchi og'zaki almashtirishni rad etdi",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "10-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "Oldi-sotdi amalga oshirilganda isteʼmolchiga kassa yoki tovar cheki beriladi.",
+              "heading": "10-modda. Tovar (ish, xizmat)lar uchun haq toʻlash shakli hamda tartibi",
+              "text": "⟦Oldi-sotdi amalga oshirilganda isteʼmolchiga kassa yoki tovar cheki beriladi.⟧ Tovarni kassa yoki tovar chekini bermasdan sotish taqiqlanadi.",
+              "anchor": "-4791"
+            },
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "11-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "Kafolat muddati tovar (xizmat)ning pasportida yoki tovarni sotish yoxud xizmat koʻrsatish paytida tovar bilan birgalikda isteʼmolchiga beriladigan boshqa hujjatda koʻrsatiladi.",
+              "heading": "11-modda. Ishlab chiqaruvchi (ijrochi)ning kafillik majburiyatlari",
+              "text": "⟦Kafolat muddati tovar (xizmat)ning pasportida yoki tovarni sotish yoxud xizmat koʻrsatish paytida tovar bilan birgalikda isteʼmolchiga beriladigan boshqa hujjatda koʻrsatiladi.⟧",
+              "anchor": "-4794"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Kassa cheki yoki tovar cheki; Kafolat hujjati (tovar pasporti)",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Harakatlar tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Iste'molchi harakatlarini to'g'ri ketma-ketlikda belgilang.",
+      "order": [
+        {
+          "id": "demand",
+          "label": "Sotuvchiga almashtirib berish talabini qo'yish",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "oʻz xohishiga qarab quyidagilardan birini talab qilishga haqli",
+              "heading": "13-modda. Isteʼmolchiga nuqsonli tovar sotilganda uning huquqlari",
+              "text": "Nuqsonli tovar sotilganda isteʼmolchi, agar bu hol shartnoma tuzish paytida aytib oʻtilmagan boʻlsa, ⟦oʻz xohishiga qarab quyidagilardan birini talab qilishga haqli⟧:",
+              "anchor": "-5901"
+            }
+          ]
+        },
+        {
+          "id": "deadline",
+          "label": "Sotuvchi 7 kun ichida (zarur bo'lsa 20 kun) almashtirib berishi shart",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "14-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "yetti kunlik muddatda",
+              "heading": "14-modda. Nuqsonli tovarni almashtirib berish tartibi",
+              "text": "Isteʼmolchi tovarning ishlab chiqarilishiga, tuzilishiga, tarkibiga doir kamchiliklarni yoki boshqa nuqsonlarni aniqlagan taqdirda sotuvchi (ishlab chiqaruvchi) uni ayni shunday markali (modelli, artikulli) tovarga ⟦yetti kunlik muddatda⟧, tovar sifatini sotuvchi (ishlab chiqaruvchi) tomonidan qoʻshimcha ravishda tekshirish zarur boʻlganida esa, isteʼmolchi talab qoʻygan paytdan eʼtiboran yigirma kun ichida almashtirib berishi shart.",
+              "anchor": "-5985"
+            }
+          ]
+        },
+        {
+          "id": "fallback",
+          "label": "Bajarmasa: narxni kamaytirish yoki shartnomani bekor qilish va zararni qoplashni talab qilish",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "16-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "isteʼmolchi tovarning xarid narxini nuqsonga mutanosib ravishda kamaytirishni yoki shartnomani bekor qilib",
+              "heading": "16-modda. Isteʼmolchining nuqsonli tovarning xarid narxini nuqsonga mutanosib ravishda kamaytirishni yoki shartnomani bekor qilishni talab qilish huquqi",
+              "text": "Agar sotuvchi (ishlab chiqaruvchi) isteʼmolchining tovarni almashtirib berish yoki undagi nuqsonlarni bartaraf etish haqidagi talablarini bajarmagan boʻlsa, ⟦isteʼmolchi tovarning xarid narxini nuqsonga mutanosib ravishda kamaytirishni yoki shartnomani bekor qilib⟧ yetkazilgan ziyon va maʼnaviy zararni ushbu Qonunning 20 va 22-moddalariga muvofiq qoplashni talab qilishga haqli.",
+              "anchor": "-6023"
+            }
+          ]
+        },
+        {
+          "id": "court",
+          "label": "Huquqlar buzilgan bo'lsa, sudga murojaat qilish",
+          "sources": [
+            {
+              "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+              "article": "29-modda",
+              "url": "https://lex.uz/docs/-4704",
+              "quote": "Isteʼmolchining huquqlari buzilgan taqdirda, u sudga murojaat qilishga haqlidir.",
+              "heading": "29-modda. Isteʼmolchilarning huquqlarini sud orqali himoya qilish",
+              "text": "⟦Isteʼmolchining huquqlari buzilgan taqdirda, u sudga murojaat qilishga haqlidir.⟧ Daʼvolar, agar qonun hujjatlarida boshqacha qoida belgilanmagan boʻlsa, javobgar, isteʼmolchi joylashgan yerdagi yoki zarar yetkazilgan joydagi sudga taqdim etiladi.",
+              "anchor": "-6523"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Nuqsonni aniqlash muddati",
+      "sources": [
+        {
+          "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+          "article": "13-modda",
+          "url": "https://lex.uz/docs/-4704",
+          "quote": "kafolat muddati va yaroqlilik muddati belgilanmagan tovarlar boʻyicha olti oy mobaynida",
+          "heading": "13-modda. Isteʼmolchiga nuqsonli tovar sotilganda uning huquqlari",
+          "text": "tovarning kafolat muddati yoxud yaroqlilik muddati mobaynida;\n⟦kafolat muddati va yaroqlilik muddati belgilanmagan tovarlar boʻyicha olti oy mobaynida⟧;",
+          "anchor": "-5901"
+        }
+      ],
+      "description": "Kafolat va yaroqlilik muddati belgilanmagan tovarda nuqson qancha muddatda aniqlansa, iste'molchi 13-modda huquqlaridan foydalanadi.",
+      "points": 15,
+      "options": [
+        {
+          "id": "m1",
+          "label": "1 oy"
+        },
+        {
+          "id": "m3",
+          "label": "3 oy"
+        },
+        {
+          "id": "m6",
+          "label": "6 oy"
+        },
+        {
+          "id": "y2",
+          "label": "2 yil"
+        }
+      ],
+      "correct": "m6"
+    }
+  ]
+}

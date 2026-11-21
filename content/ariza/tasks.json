@@ -1,0 +1,1467 @@
+[
+ {
+  "minutes": 2,
+  "ai": false,
+  "passAt": 70,
+  "rubric": [],
+  "example": [
+   {
+    "text": "Chilonzor tumani hokimiga",
+    "align": "left",
+    "indent": true,
+    "bold": false
+   }
+  ],
+  "expect": {
+   "organ": [
+    "hokim",
+    "chilonzor"
+   ],
+   "name": [],
+   "address": [],
+   "phone": false,
+   "date": []
+  },
+  "id": "kimga",
+  "level": 1,
+  "title": "Kimga yoziladi",
+  "intro": "Rasmiy arizaning birinchi qismi: ariza kimga yo'naltirilganini yozing. Uni sahifada qayerga va qanday shaklda qo'yishni o'zingiz hal qiling.",
+  "given": [
+   "Siz arizani Chilonzor tumani hokimiga yozmoqchisiz"
+  ],
+  "minChars": 10,
+  "requires": [
+   "kimga"
+  ],
+  "lesson": {
+   "title": "Dars: ariza kimga yoziladi",
+   "points": [
+    {
+     "part": "Kimga (organ yoki mansabdor shaxs)",
+     "what": "Ariza yo'naltiriladigan organ yoki rahbar.",
+     "where": "Sahifaning eng tepasida, yuqori o'ng burchakda. Word'da: o'ngga tekislash yoki o'ng yarmiga surish (chekinish) tugmasi.",
+     "how": "Lavozim va organ nomi to'liq, 'kimga?' savoliga javob sifatida 'ga' kelishigida yoziladi. Qisqartirmang.",
+     "example": "Chilonzor tumani hokimiga"
+    }
+   ]
+  },
+  "exampleKind": "full"
+ },
+ {
+  "minutes": 3,
+  "ai": false,
+  "passAt": 70,
+  "rubric": [],
+  "example": [
+   {
+    "text": "Chilonzor tumani hokimiga",
+    "align": "left",
+    "indent": true,
+    "bold": false
+   },
+   {
+    "text": "Chilonzor tumani, Bunyodkor ko'chasi, 12-uy, 34-xonadonda yashovchi Karimov Aziz Bahodirovichdan",
+    "align": "left",
+    "indent": true,
+    "bold": false
+   },
+   {
+    "text": "Tel: +998 90 123 45 67",
+    "align": "left",
+    "indent": true,
+    "bold": false
+   }
+  ],
+  "expect": {
+   "organ": [
+    "hokim"
+   ],
+   "name": [
+    "karimov",
+    "aziz"
+   ],
+   "address": [
+    "bunyodkor",
+    "12",
+    "34"
+   ],
+   "phone": true,
+   "date": []
+  },
+  "id": "kimdan",
+  "level": 1,
+  "title": "Kimdan: murojaatchi ma'lumoti",
+  "intro": "Murojaatchi ma'lumotini (F.I.Sh., manzil, telefon) vaziyat bo'yicha yozing va organ nomi bilan birga hujjatning to'g'ri joyiga qo'ying.",
+  "given": [
+   "Murojaat qiluvchi: Karimov Aziz Bahodirovich",
+   "Manzil: Toshkent shahar, Chilonzor tumani, Bunyodkor ko'chasi, 12-uy, 34-xonadon",
+   "Telefon: +998 90 123 45 67",
+   "Murojaat qilinadigan organ: Chilonzor tumani hokimi"
+  ],
+  "minChars": 40,
+  "requires": [
+   "kimga",
+   "kimdan"
+  ],
+  "lesson": {
+   "title": "Dars: murojaatchi ma'lumoti (shapka)",
+   "points": [
+    {
+     "part": "Kimdan (murojaatchi)",
+     "what": "Arizani yozayotgan shaxs.",
+     "where": "Organ nomining aynan ostida, shu yuqori o'ng burchakda. Matn ichida emas.",
+     "how": "F.I.Sh. to'liq, 'kimdan?' savoliga javob: 'dan' kelishigida. Oldidan yashash manzili: 'Chilonzor tumani, Bunyodkor ko'chasi, 12-uy, 34-xonadonda yashovchi Karimov Aziz Bahodirovichdan'.",
+     "example": "Chilonzor tumani, Bunyodkor ko'chasi, 12-uy, 34-xonadonda yashovchi Karimov Aziz Bahodirovichdan"
+    },
+    {
+     "part": "Manzil va telefon",
+     "what": "Murojaatchi bilan bog'lanish uchun.",
+     "where": "Shapkada, ism bilan birga (yoki ostida). Arizaning matniga yozilmaydi.",
+     "how": "Manzil: shahar/tuman, ko'cha, uy, xonadon. Telefon: 'Tel: +998 90 123 45 67'.",
+     "example": "Tel: +998 90 123 45 67"
+    }
+   ]
+  },
+  "exampleKind": "full"
+ },
+ {
+  "minutes": 4,
+  "ai": true,
+  "passAt": 70,
+  "rubric": [
+   {
+    "id": "clear",
+    "label": "Talab aniq: nimani va qayerda ta'mirlash so'ralgani yozilgan",
+    "weight": 60,
+    "sources": []
+   },
+   {
+    "id": "polite",
+    "label": "So'rov rasmiy ohangda ('so'rayman', 'iltimos qilaman') yozilgan",
+    "weight": 40,
+    "sources": []
+   }
+  ],
+  "example": [
+   {
+    "text": "ARIZA",
+    "align": "center",
+    "indent": false,
+    "bold": true
+   },
+   {
+    "text": "Bunyodkor ko'chasi, 12-uy oldidagi yo'l qoplamasi buzilgan, yomg'irda suv to'planmoqda. Shu yo'lni ta'mirlashni so'rayman.",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   }
+  ],
+  "expect": {
+   "organ": [],
+   "name": [],
+   "address": [],
+   "phone": false,
+   "date": []
+  },
+  "id": "sarlavha",
+  "level": 1,
+  "title": "Sarlavha va talab",
+  "intro": "Hujjat nomini va talab matnini yozing. Nom qayerda va qanday ko'rinishda bo'lishini, matn qayerdan boshlanishini o'zingiz belgilang.",
+  "given": [
+   "Mavzu: uy oldidagi yo'lni ta'mirlashni so'rash",
+   "Manzil: Bunyodkor ko'chasi, 12-uy oldi"
+  ],
+  "minChars": 60,
+  "requires": [
+   "sarlavha",
+   "matn"
+  ],
+  "lesson": {
+   "title": "Dars: sarlavha va matn",
+   "points": [
+    {
+     "part": "Sarlavha",
+     "what": "Hujjat nomi.",
+     "where": "Shapkadan keyin, sahifaning o'rtasida (markazga tekislash).",
+     "how": "Katta harflar bilan, nuqtasiz: ARIZA. Qalin qilsangiz bo'ladi.",
+     "example": "ARIZA"
+    },
+    {
+     "part": "Matn va talab",
+     "what": "Nima sodir bo'lgani va nima so'ralayotgani.",
+     "where": "Sarlavhadan keyin, yangi abzatsdan. Chapdan yoki ikki tomonga tekis (markazga yoki o'ngga emas).",
+     "how": "Birinchi shaxsda, qisqa va aniq. Oxirida talab: 'so'rayman', 'iltimos qilaman'.",
+     "example": "Bunyodkor ko'chasi, 12-uy oldidagi yo'l buzilgan. Shu yo'lni ta'mirlashni so'rayman."
+    }
+   ]
+  },
+  "exampleKind": "full"
+ },
+ {
+  "minutes": 2,
+  "ai": false,
+  "passAt": 70,
+  "rubric": [],
+  "example": [
+   {
+    "text": "2026-yil 20-noyabr",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "____ A.B.Karimov",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   }
+  ],
+  "expect": {
+   "organ": [],
+   "name": [
+    "karimov"
+   ],
+   "address": [],
+   "phone": false,
+   "date": [
+    "2026",
+    "noyabr"
+   ]
+  },
+  "id": "sana_imzo",
+  "level": 1,
+  "title": "Sana va imzo qayerga",
+  "intro": "Arizani yakunlang: sana va imzoni hujjatning to'g'ri joyiga qo'ying.",
+  "given": [
+   "Sana: 2026-yil 20-noyabr",
+   "Imzo: Karimov A.B."
+  ],
+  "minChars": 15,
+  "requires": [
+   "sana",
+   "imzo"
+  ],
+  "lesson": {
+   "title": "Dars: sana va imzo",
+   "points": [
+    {
+     "part": "Sana",
+     "what": "Arizani yozgan kun.",
+     "where": "Arizaning eng pastida, matn (va ilovalar)dan keyin, chap tomonda.",
+     "how": "To'liq: yil, oy, kun. Masalan: 2026-yil 20-noyabr.",
+     "example": "2026-yil 20-noyabr"
+    },
+    {
+     "part": "Imzo",
+     "what": "Murojaatchining imzosi va familiyasi.",
+     "where": "Sana bilan bir qatorda, o'ng tomonda (alohida abzatsda o'ngga tekislang).",
+     "how": "Imzo joyi chiziq bilan, keyin qisqartirilgan ism: initsiallar va familiya.",
+     "example": "____ A.B.Karimov"
+    }
+   ]
+  },
+  "exampleKind": "full"
+ },
+ {
+  "minutes": 3,
+  "ai": false,
+  "passAt": 70,
+  "rubric": [],
+  "example": [
+   {
+    "text": "Ilova: 1) mehnat shartnomasi nusxasi; 2) bank ko'chirmasi.",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "2026-yil 20-noyabr",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "____ A.B.Karimov",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   }
+  ],
+  "expect": {
+   "organ": [],
+   "name": [
+    "karimov"
+   ],
+   "address": [],
+   "phone": false,
+   "date": [
+    "2026",
+    "noyabr"
+   ]
+  },
+  "lesson": {
+   "title": "Dars: ilovalar",
+   "points": [
+    {
+     "part": "Ilovalar",
+     "what": "Arizaga qo'shib beriladigan hujjatlar (dalillar).",
+     "where": "Matndan keyin, sana va imzodan oldin. Chapdan tekislanadi.",
+     "how": "'Ilova:' so'zi bilan boshlanadi, hujjatlar raqam bilan sanaladi. Nusxa bo'lsa 'nusxasi' deb yoziladi.",
+     "example": "Ilova: 1) mehnat shartnomasi nusxasi; 2) bank ko'chirmasi."
+    },
+    {
+     "part": "Keyin sana va imzo",
+     "what": "Ilovalardan keyin arizani yakunlaysiz.",
+     "where": "Sana chapda, imzo o'ngda: oldingi mashqdagidek.",
+     "how": "Tartib: Ilova, keyin sana, keyin imzo.",
+     "example": "2026-yil 20-noyabr"
+    }
+   ]
+  },
+  "id": "ilova",
+  "level": 1,
+  "title": "Ilovalar qayerga",
+  "intro": "Arizaga qo'shiladigan hujjatlarni sanang va ularni sana hamda imzodan oldin joylashtiring.",
+  "given": [
+   "Ilova qilinadigan hujjatlar: mehnat shartnomasi nusxasi, bank ko'chirmasi",
+   "Sana: 2026-yil 20-noyabr",
+   "Imzo: Karimov A.B."
+  ],
+  "minChars": 40,
+  "requires": [
+   "ilova",
+   "sana",
+   "imzo"
+  ],
+  "exampleKind": "full"
+ },
+ {
+  "minutes": 4,
+  "ai": false,
+  "passAt": 70,
+  "rubric": [],
+  "example": [
+   {
+    "text": "ARIZA",
+    "align": "center",
+    "indent": false,
+    "bold": true
+   },
+   {
+    "text": "Ish haqim 2026-yil sentabr oyidan beri kechiktirib to'lanmoqda. Mehnat kodeksining 333-moddasiga asosan kechiktirilgan har bir kun uchun pulli kompensatsiya to'lashingizni so'rayman.",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   }
+  ],
+  "expect": {
+   "organ": [],
+   "name": [],
+   "address": [],
+   "phone": false,
+   "date": []
+  },
+  "lesson": {
+   "title": "Dars: qonuniy asos",
+   "points": [
+    {
+     "part": "Qonuniy asos",
+     "what": "Talabingiz qaysi qonun moddasiga tayanishi.",
+     "where": "Matn ichida, odatda talabdan oldin: '... moddasiga asosan ... so'rayman'.",
+     "how": "Qonun nomi va modda raqami to'liq. Moddani Lex.uz dan tekshirib yozing, xotiradan yozmang.",
+     "example": "Mehnat kodeksining 333-moddasiga asosan ..."
+    },
+    {
+     "part": "Matn tartibi",
+     "what": "Matn uch bo'lakdan iborat.",
+     "where": "Sarlavhadan keyin, chapdan yoki ikki tomonga tekis.",
+     "how": "1) nima bo'ldi (fakt); 2) qaysi moddaga asosan; 3) nimani so'rayman (talab).",
+     "example": "Ish haqim kechiktirilmoqda. ... moddasiga asosan ... to'lashingizni so'rayman."
+    }
+   ]
+  },
+  "id": "asos",
+  "level": 1,
+  "title": "Qonuniy asos",
+  "intro": "Talabni qonun moddasiga tayanib yozing: avval nima bo'ldi, keyin qaysi moddaga asosan, oxirida nimani so'raysiz.",
+  "given": [
+   "Mavzu: ish haqi kechiktirilgani uchun kompensatsiya so'rash",
+   "Asos: O'zbekiston Respublikasi Mehnat kodeksining 333-moddasi",
+   "Talab: kechiktirilgan har bir kun uchun pulli kompensatsiya to'lash"
+  ],
+  "minChars": 80,
+  "requires": [
+   "sarlavha",
+   "matn",
+   "asos"
+  ],
+  "exampleKind": "full"
+ },
+ {
+  "minutes": 6,
+  "ai": true,
+  "passAt": 70,
+  "rubric": [
+   {
+    "id": "clear",
+    "label": "Ta'til muddati aniq: boshlanish sanasi va kunlar soni ko'rsatilgan",
+    "weight": 40,
+    "sources": []
+   },
+   {
+    "id": "polite",
+    "label": "So'rov rasmiy ohangda ('so'rayman', 'iltimos qilaman') yozilgan",
+    "weight": 30,
+    "sources": []
+   },
+   {
+    "id": "role",
+    "label": "Murojaatchining lavozimi va bo'limi ko'rsatilgan",
+    "weight": 30,
+    "sources": []
+   }
+  ],
+  "example": [
+   {
+    "text": "'Mevazor' MChJ direktori",
+    "align": "left",
+    "indent": true,
+    "bold": false
+   },
+   {
+    "text": "Rustamov S.A.ga",
+    "align": "left",
+    "indent": true,
+    "bold": false
+   },
+   {
+    "text": "sotuv bo'limi xodimi",
+    "align": "left",
+    "indent": true,
+    "bold": false
+   },
+   {
+    "text": "Karimov Aziz Bahodirovichdan",
+    "align": "left",
+    "indent": true,
+    "bold": false
+   },
+   {
+    "text": "Bunyodkor ko'chasi, 12-uy, 34-xonadon",
+    "align": "left",
+    "indent": true,
+    "bold": false
+   },
+   {
+    "text": "ARIZA",
+    "align": "center",
+    "indent": false,
+    "bold": true
+   },
+   {
+    "text": "Menga 2026-yil 1 dekabrdan boshlab 10 kalendar kunlik yillik mehnat ta'tili berishingizni so'rayman.",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "2026-yil 20-noyabr",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "____ A.B.Karimov",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   }
+  ],
+  "expect": {
+   "organ": [
+    "direktor",
+    "mevazor"
+   ],
+   "name": [
+    "karimov"
+   ],
+   "address": [
+    "bunyodkor"
+   ],
+   "phone": false,
+   "date": []
+  },
+  "id": "tatil",
+  "level": 2,
+  "title": "Ta'til so'rab ariza",
+  "intro": "Birinchi to'liq ariza. Varaqda har qatorga nima yozilishi ko'rsatilgan: siz matnni yozasiz va har qatorni to'g'ri joyga tekislaysiz.",
+  "given": [
+   "Siz: Karimov Aziz Bahodirovich, 'Mevazor' MChJ sotuv bo'limi xodimi",
+   "Manzil: Toshkent shahar, Chilonzor tumani, Bunyodkor ko'chasi, 12-uy, 34-xonadon",
+   "Direktor: Rustamov Sherzod Anvarovich",
+   "So'rov: 2026-yil 1 dekabrdan 10 kalendar kunlik yillik mehnat ta'tili"
+  ],
+  "minChars": 140,
+  "requires": [
+   "kimga",
+   "kimdan",
+   "sarlavha",
+   "matn",
+   "sana",
+   "imzo"
+  ],
+  "lesson": {
+   "title": "Dars: arizaning to'liq tartibi",
+   "points": [
+    {
+     "part": "Tartib",
+     "what": "Hujjat yuqoridan pastga shunday joylashadi.",
+     "where": "1) shapka (kimga, kimdan, manzil) o'ngda; 2) ARIZA markazda; 3) matn va talab; 4) sana (chapda) va imzo (o'ngda).",
+     "how": "Matnda: kim, nimani, qaysi sanadan boshlab, qancha muddatga so'rayapti. Aniq sana va muddat yozing.",
+     "example": "Menga 2026-yil 1 dekabrdan boshlab 10 kalendar kunlik yillik mehnat ta'tili berishingizni so'rayman."
+    }
+   ]
+  },
+  "scaffold": [
+   "Kimga: korxona nomi va rahbar lavozimi (o'ng tomonda)",
+   "Rahbarning familiyasi va initsiallari, 'ga' bilan",
+   "Kimdan: lavozimingiz va bo'limingiz",
+   "F.I.Sh., 'dan' bilan",
+   "Manzil",
+   "Sarlavha (markazda, katta harflar bilan)",
+   "Matn: nimani, qaysi sanadan, necha kunga so'rayapsiz",
+   "Sana (pastda, chapda)",
+   "Imzo va initsiallar (o'ngda)"
+  ],
+  "exampleKind": "full",
+  "organ": "'Mevazor' MChJ"
+ },
+ {
+  "minutes": 10,
+  "ai": true,
+  "passAt": 70,
+  "rubric": [
+   {
+    "id": "date",
+    "label": "Huquqi buzilganini bilgan (bilishi kerak bo'lgan) sana ko'rsatilgan, ishga kirgan sana emas",
+    "weight": 25,
+    "sources": [
+     {
+      "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+      "article": "549-modda",
+      "url": "https://lex.uz/docs/6257288",
+      "quote": "сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган",
+      "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+      "text": "Ходимнинг меҳнат низолари бўйича комиссияга берилган аризасида қуйидагилар кўрсатилиши керак:\n⟦сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган⟧ ва у комиссияга мурожаат қилиш учун муддатнинг ўтиши бошланишини қайси сана билан боғласа, ўша сана);",
+      "anchor": "6268809"
+     }
+    ]
+   },
+   {
+    "id": "amount",
+    "label": "To'lanmagan ish haqi to'g'ri hisoblangan: 3 oy × 3 000 000 = 9 000 000 so'm",
+    "weight": 25,
+    "sources": [
+     {
+      "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+      "article": "546-modda",
+      "url": "https://lex.uz/docs/6257288",
+      "quote": "Ходимнинг пулга оид талаблари",
+      "heading": "546-модда. Ходимнинг пулга оид талабларини қаноатлантириш",
+      "text": "Иш берувчи ⟦ходимнинг пулга оид талаблари⟧ни муддати чекланмаган ҳолда бутун давр учун қаноатлантиришга ҳақли.",
+      "anchor": "6268744"
+     }
+    ]
+   },
+   {
+    "id": "comp",
+    "label": "Kechiktirilgan kunlar uchun pulli kompensatsiya talab qilingan",
+    "weight": 25,
+    "sources": [
+     {
+      "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+      "article": "333-modda",
+      "url": "https://lex.uz/docs/6257288",
+      "quote": "ҳар бир кечиктирилган кун учун",
+      "heading": "333-модда. Ходимга иш ҳақи тўлашни ва унга тўланиши лозим бўлган бошқа тўловларни кечиктирганлик учун иш берувчининг моддий жавобгарлиги",
+      "text": "Иш берувчи иш ҳақини, таътил тўловларини, меҳнат шартномаси бекор қилингандаги тўловларни ва (ёки) ходимга тўланиши лозим бўлган бошқа тўловларни тўлаш муддатини бузган тақдирда, уларни тўлов муддатидан кейинги кундан эътиборан то ҳақиқатда ҳисоб-китоб қилинган кунни ўз ичига олган муддатгача ⟦ҳар бир кечиктирилган кун учун⟧ Ўзбекистон Республикаси Марказий банкининг ўша вақтда амалда бўлган қайта молиялаштириш ставкасидан келиб чиққан ҳолда фоизлар (пулли компенсация) билан бирга тўлаши шарт.",
+      "anchor": "6265195"
+     },
+     {
+      "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+      "article": "546-modda",
+      "url": "https://lex.uz/docs/6257288",
+      "quote": "асосли деб топилган тақдирда тўлиқ миқдорда қаноатлантирилади",
+      "heading": "546-модда. Ходимнинг пулга оид талабларини қаноатлантириш",
+      "text": "Ходимнинг пулга оид талаблари якка тартибдаги меҳнат низосини кўриб чиқувчи меҳнат низолари бўйича комиссия ёки суд томонидан ⟦асосли деб топилган тақдирда тўлиқ миқдорда қаноатлантирилади⟧.",
+      "anchor": "6268744"
+     }
+    ]
+   },
+   {
+    "id": "evidence",
+    "label": "Dalillar (masalan, mehnat shartnomasi) va ilova hujjatlari ro'yxati ko'rsatilgan",
+    "weight": 25,
+    "sources": [
+     {
+      "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+      "article": "549-modda",
+      "url": "https://lex.uz/docs/6257288",
+      "quote": "аризага илова қилинаётган ҳужжатлар рўйхати",
+      "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+      "text": "⟦аризага илова қилинаётган ҳужжатлар рўйхати⟧.",
+      "anchor": "6268809"
+     }
+    ]
+   }
+  ],
+  "example": [
+   {
+    "text": "'Mevazor' MChJ mehnat nizolari bo'yicha komissiyasiga",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "sotuvchi Karimov Aziz Bahodirovichdan",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Chilonzor tumani, Bunyodkor ko'chasi, 12-uy, 34-xonadon",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "ARIZA",
+    "align": "center",
+    "indent": false,
+    "bold": true
+   },
+   {
+    "text": "Men 'Mevazor' MChJ do'konida sotuvchi bo'lib ishlayman, oylik ish haqim 3 000 000 so'm. 2026-yil 5-sentabrdan boshlab ish haqim to'lanmayapti: avgust, sentabr va oktabr oylari uchun jami 9 000 000 so'm to'lanmagan.",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Mehnat kodeksining 333-moddasiga asosan menga to'lanmagan 9 000 000 (to'qqiz million) so'm ish haqini hamda kechiktirilgan har bir kun uchun pulli kompensatsiyani to'lashni so'rayman.",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Ilova: 1) mehnat shartnomasi nusxasi; 2) bank ko'chirmasi.",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "2026-yil 21-noyabr",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "____ A.B.Karimov",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   }
+  ],
+  "expect": {
+   "organ": [
+    "komissiya"
+   ],
+   "name": [
+    "karimov"
+   ],
+   "address": [
+    "bunyodkor"
+   ],
+   "phone": false,
+   "date": [
+    "2026",
+    "noyabr"
+   ]
+  },
+  "lesson": {
+   "title": "Dars: hamma qismlar birgalikda",
+   "points": [
+    {
+     "part": "Hujjat tartibi",
+     "what": "Oldingi mashqlarda o'rgangan qismlar bitta hujjatda.",
+     "where": "1) shapka o'ngda: kimga, kimdan, manzil; 2) ARIZA markazda; 3) matn; 4) Ilova; 5) sana chapda, imzo o'ngda.",
+     "how": "Har qism alohida abzatsda. Enter bilan yangi abzats oching.",
+     "example": "ARIZA"
+    },
+    {
+     "part": "Matn ichidagi tartib",
+     "what": "Fakt, asos, talab.",
+     "where": "Sarlavhadan keyin, ikki tomonga tekis.",
+     "how": "Birinchi abzats: nima bo'ldi (sana, summa). Ikkinchi abzats: '... moddasiga asosan ... so'rayman'.",
+     "example": "Mehnat kodeksining 333-moddasiga asosan ... to'lashni so'rayman."
+    }
+   ]
+  },
+  "id": "ish_haqi_tayyor",
+  "level": 2,
+  "title": "Ish haqi: hamma ma'lumot berilgan",
+  "intro": "Endi karkas yo'q, lekin kerakli hamma ma'lumot berilgan. Shapka, sarlavha, matn (fakt, asos, talab), ilova, sana va imzoni o'zingiz joylashtirasiz.",
+  "given": [
+   "Siz: Karimov Aziz Bahodirovich, 'Mevazor' MChJ do'konida sotuvchi",
+   "Manzil: Chilonzor tumani, Bunyodkor ko'chasi, 12-uy, 34-xonadon",
+   "Kimga: 'Mevazor' MChJ mehnat nizolari bo'yicha komissiyasiga",
+   "Avgust, sentabr va oktabr oylari uchun ish haqi to'lanmagan: oyiga 3 000 000 so'm, jami 9 000 000 so'm",
+   "Ish haqi to'lanmaganini 2026-yil 5-sentabrda bildingiz",
+   "Asos: Mehnat kodeksining 333-moddasi",
+   "Talab: 9 000 000 so'm ish haqi va kechiktirilgan kunlar uchun pulli kompensatsiya",
+   "Ilova: mehnat shartnomasi nusxasi, bank ko'chirmasi",
+   "Sana: 2026-yil 21-noyabr"
+  ],
+  "minChars": 200,
+  "requires": [
+   "kimga",
+   "kimdan",
+   "sarlavha",
+   "matn",
+   "ilova",
+   "sana",
+   "imzo"
+  ],
+  "exampleKind": "full",
+  "organ": "'Mevazor' MChJ mehnat nizolari bo'yicha komissiyasi"
+ },
+ {
+  "minutes": 14,
+  "ai": true,
+  "passAt": 70,
+  "rubric": [
+   {
+    "id": "date",
+    "label": "Huquqi buzilganini bilgan (bilishi kerak bo'lgan) sana ko'rsatilgan, ishga kirgan sana emas",
+    "weight": 25,
+    "sources": [
+     {
+      "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+      "article": "549-modda",
+      "url": "https://lex.uz/docs/6257288",
+      "quote": "сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган",
+      "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+      "text": "Ходимнинг меҳнат низолари бўйича комиссияга берилган аризасида қуйидагилар кўрсатилиши керак:\n⟦сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган⟧ ва у комиссияга мурожаат қилиш учун муддатнинг ўтиши бошланишини қайси сана билан боғласа, ўша сана);",
+      "anchor": "6268809"
+     }
+    ]
+   },
+   {
+    "id": "amount",
+    "label": "To'lanmagan ish haqi to'g'ri hisoblangan: 3 oy × 3 000 000 = 9 000 000 so'm",
+    "weight": 25,
+    "sources": [
+     {
+      "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+      "article": "546-modda",
+      "url": "https://lex.uz/docs/6257288",
+      "quote": "Ходимнинг пулга оид талаблари",
+      "heading": "546-модда. Ходимнинг пулга оид талабларини қаноатлантириш",
+      "text": "Иш берувчи ⟦ходимнинг пулга оид талаблари⟧ни муддати чекланмаган ҳолда бутун давр учун қаноатлантиришга ҳақли.",
+      "anchor": "6268744"
+     }
+    ]
+   },
+   {
+    "id": "comp",
+    "label": "Kechiktirilgan kunlar uchun pulli kompensatsiya talab qilingan",
+    "weight": 25,
+    "sources": [
+     {
+      "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+      "article": "333-modda",
+      "url": "https://lex.uz/docs/6257288",
+      "quote": "ҳар бир кечиктирилган кун учун",
+      "heading": "333-модда. Ходимга иш ҳақи тўлашни ва унга тўланиши лозим бўлган бошқа тўловларни кечиктирганлик учун иш берувчининг моддий жавобгарлиги",
+      "text": "Иш берувчи иш ҳақини, таътил тўловларини, меҳнат шартномаси бекор қилингандаги тўловларни ва (ёки) ходимга тўланиши лозим бўлган бошқа тўловларни тўлаш муддатини бузган тақдирда, уларни тўлов муддатидан кейинги кундан эътиборан то ҳақиқатда ҳисоб-китоб қилинган кунни ўз ичига олган муддатгача ⟦ҳар бир кечиктирилган кун учун⟧ Ўзбекистон Республикаси Марказий банкининг ўша вақтда амалда бўлган қайта молиялаштириш ставкасидан келиб чиққан ҳолда фоизлар (пулли компенсация) билан бирга тўлаши шарт.",
+      "anchor": "6265195"
+     },
+     {
+      "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+      "article": "546-modda",
+      "url": "https://lex.uz/docs/6257288",
+      "quote": "асосли деб топилган тақдирда тўлиқ миқдорда қаноатлантирилади",
+      "heading": "546-модда. Ходимнинг пулга оид талабларини қаноатлантириш",
+      "text": "Ходимнинг пулга оид талаблари якка тартибдаги меҳнат низосини кўриб чиқувчи меҳнат низолари бўйича комиссия ёки суд томонидан ⟦асосли деб топилган тақдирда тўлиқ миқдорда қаноатлантирилади⟧.",
+      "anchor": "6268744"
+     }
+    ]
+   },
+   {
+    "id": "evidence",
+    "label": "Dalillar (masalan, mehnat shartnomasi) va ilova hujjatlari ro'yxati ko'rsatilgan",
+    "weight": 25,
+    "sources": [
+     {
+      "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+      "article": "549-modda",
+      "url": "https://lex.uz/docs/6257288",
+      "quote": "аризага илова қилинаётган ҳужжатлар рўйхати",
+      "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+      "text": "⟦аризага илова қилинаётган ҳужжатлар рўйхати⟧.",
+      "anchor": "6268809"
+     }
+    ]
+   }
+  ],
+  "example": [
+   {
+    "text": "Mehnat nizolari bo'yicha komissiyaga",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "do'kon sotuvchisi Karimov Azizdan",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Chilonzor tumani, Bunyodkor ko'chasi, 12-uy, 34-xonadon",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Tel: +998 90 123 45 67",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "ARIZA",
+    "align": "center",
+    "indent": false,
+    "bold": true
+   },
+   {
+    "text": "Men do'konda sotuvchi bo'lib ishlayman, oylik ish haqim 3 000 000 so'm. 2026-yil 5-sentabrdan boshlab ish haqim to'lanmayapti: uch oy uchun jami 9 000 000 so'm to'lanmagan. Boshqa xodimlarga ham ish haqi to'lanmagan.",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Mehnat kodeksining 333-moddasiga asosan menga to'lanmagan 9 000 000 (to'qqiz million) so'm ish haqini hamda kechiktirilgan har bir kun uchun pulli kompensatsiyani to'lashni so'rayman.",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Ilova: 1) mehnat shartnomasi nusxasi; 2) bank ko'chirmasi.",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "2026-yil 21-noyabr",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "____ A.Karimov",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   }
+  ],
+  "expect": {
+   "organ": [],
+   "name": [],
+   "address": [],
+   "phone": false,
+   "date": []
+  },
+  "id": "ish_haqi",
+  "level": 3,
+  "title": "Ish haqi to'lanmadi: komissiyaga ariza",
+  "intro": "Endi vaziyatda faqat faktlar bor. Kimga yozishni, sanani va summani o'zingiz aniqlaysiz. Oldingi mashqdagi tuzilma o'sha-o'sha.",
+  "given": [
+   "Aziz, 28 yosh, do'konda sotuvchi",
+   "Ish haqi 3 oydan beri to'lanmagan",
+   "Oylik ish haqi 3 000 000 so'm",
+   "Yozma mehnat shartnomasi bor, nusxasi uyda",
+   "Boshqa xodimlarga ham to'lanmagan"
+  ],
+  "minChars": 250,
+  "requires": [
+   "kimga",
+   "kimdan",
+   "sarlavha",
+   "matn",
+   "ilova",
+   "sana",
+   "imzo"
+  ],
+  "lesson": {
+   "title": "Dars: vaziyatdan ma'lumot ajratish",
+   "points": [
+    {
+     "part": "Kimga yozasiz",
+     "what": "Vaziyatda organ aytilmagan, uni o'zingiz aniqlaysiz.",
+     "where": "Shapkada, yuqori o'ngda.",
+     "how": "Ish haqi bo'yicha nizoda xodim mehnat nizolari bo'yicha komissiyaga ariza beradi (Mehnat kodeksi, 549-modda).",
+     "example": "Mehnat nizolari bo'yicha komissiyaga"
+    },
+    {
+     "part": "Sana",
+     "what": "Huquqingiz buzilganini bilgan kun.",
+     "where": "Matnda, faktlar orasida.",
+     "how": "Ishga kirgan sana emas: ish haqi to'lanmay qolgan kunni yozing (549-modda).",
+     "example": "2026-yil 5-sentabrdan boshlab ish haqim to'lanmayapti."
+    },
+    {
+     "part": "Summa",
+     "what": "Talab qilinadigan pul.",
+     "where": "Talab qismida.",
+     "how": "Oylar soni × oylik ish haqi. Raqamni tekshirib yozing.",
+     "example": "3 × 3 000 000 = 9 000 000 so'm"
+    },
+    {
+     "part": "Qo'shimcha talab",
+     "what": "Kechiktirilgan kunlar uchun pulli kompensatsiya.",
+     "where": "Asosiy talab bilan birga.",
+     "how": "Mehnat kodeksining 333-moddasiga asoslanadi.",
+     "example": "... hamda kechiktirilgan har bir kun uchun pulli kompensatsiyani to'lashni so'rayman."
+    }
+   ]
+  },
+  "exampleKind": "full",
+  "organ": "Mehnat nizolari bo'yicha komissiya"
+ },
+ {
+  "minutes": 15,
+  "ai": true,
+  "passAt": 70,
+  "rubric": [
+   {
+    "id": "parties",
+    "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+    "weight": 15,
+    "sources": []
+   },
+   {
+    "id": "facts",
+    "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Telefon ekrani o'z-o'zidan o'chib qoladi (ishlab chiqarish nuqsoni); Telefon 25 kun oldin sotib olingan, kafolat muddati 12 oy; Kassa cheki va kafolat hujjati bor; Sotuvchi og'zaki almashtirishni rad etdi",
+    "weight": 35,
+    "sources": []
+   },
+   {
+    "id": "claim",
+    "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+    "weight": 20,
+    "sources": []
+   },
+   {
+    "id": "basis",
+    "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+    "weight": 15,
+    "sources": [
+     {
+      "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+      "article": "10-modda",
+      "url": "https://lex.uz/docs/-4704",
+      "quote": "Oldi-sotdi amalga oshirilganda isteʼmolchiga kassa yoki tovar cheki beriladi.",
+      "heading": "10-modda. Tovar (ish, xizmat)lar uchun haq toʻlash shakli hamda tartibi",
+      "text": "⟦Oldi-sotdi amalga oshirilganda isteʼmolchiga kassa yoki tovar cheki beriladi.⟧ Tovarni kassa yoki tovar chekini bermasdan sotish taqiqlanadi.",
+      "anchor": "-4791"
+     },
+     {
+      "act": "«Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida»gi Qonun (221-I-son)",
+      "article": "11-modda",
+      "url": "https://lex.uz/docs/-4704",
+      "quote": "Kafolat muddati tovar (xizmat)ning pasportida yoki tovarni sotish yoxud xizmat koʻrsatish paytida tovar bilan birgalikda isteʼmolchiga beriladigan boshqa hujjatda koʻrsatiladi.",
+      "heading": "11-modda. Ishlab chiqaruvchi (ijrochi)ning kafillik majburiyatlari",
+      "text": "⟦Kafolat muddati tovar (xizmat)ning pasportida yoki tovarni sotish yoxud xizmat koʻrsatish paytida tovar bilan birgalikda isteʼmolchiga beriladigan boshqa hujjatda koʻrsatiladi.⟧",
+      "anchor": "-4794"
+     }
+    ]
+   },
+   {
+    "id": "attach",
+    "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Kassa cheki yoki tovar cheki; Kafolat hujjati (tovar pasporti)",
+    "weight": 15,
+    "sources": []
+   }
+  ],
+  "example": [
+   {
+    "text": "'[Do'kon nomi]' do'koni rahbariga",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "[Ko'cha], [uy]-uyda yashovchi [F.I.Sh.]dan",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Tel: [telefon raqami]",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "TALABNOMA",
+    "align": "center",
+    "indent": false,
+    "bold": true
+   },
+   {
+    "text": "[Sana]da do'koningizdan [tovar nomi] sotib oldim. [Qachondan beri qanday nuqson paydo bo'ldi.] [Kafolat muddati.] [Sotuvchi qanday javob berdi.]",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "[Qonun nomi]ning [modda raqami]-moddasiga asosan [nima qilishni: almashtirish yoki pulni qaytarish]ni so'rayman.",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Ilova: 1) kassa cheki nusxasi; 2) kafolat hujjati nusxasi.",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "2026-yil 21-noyabr",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "____ [initsiallar va familiya]",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   }
+  ],
+  "expect": {
+   "organ": [],
+   "name": [],
+   "address": [],
+   "phone": false,
+   "date": []
+  },
+  "id": "tovar",
+  "level": 3,
+  "title": "Sifatsiz tovar: pulni qaytarish talabi",
+  "intro": "Sotuvchiga talabnoma. Yangi: sarlavha TALABNOMA, kimga: do'kon rahbari. Tuzilma oldingi mashqlar bilan bir xil.",
+  "given": [
+   "Dilshod, 30 yosh, dasturchi",
+   "Telefon ekrani o'z-o'zidan o'chib qoladi (ishlab chiqarish nuqsoni)",
+   "Telefon 25 kun oldin sotib olingan, kafolat muddati 12 oy",
+   "Kassa cheki va kafolat hujjati bor",
+   "Sotuvchi og'zaki almashtirishni rad etdi",
+   "Mijoz ayni shunday modelli telefonga almashtirishni xohlaydi"
+  ],
+  "minChars": 250,
+  "requires": [
+   "kimga",
+   "kimdan",
+   "sarlavha",
+   "matn",
+   "ilova",
+   "sana",
+   "imzo"
+  ],
+  "lesson": {
+   "title": "Dars: sotuvchiga talabnoma",
+   "points": [
+    {
+     "part": "Kimga",
+     "what": "Talabnoma sotuvchiga yoziladi.",
+     "where": "Shapkada, yuqori o'ngda.",
+     "how": "Do'kon nomi va rahbari, 'ga' kelishigida.",
+     "example": "'[Do'kon nomi]' do'koni rahbariga"
+    },
+    {
+     "part": "Sarlavha",
+     "what": "Hujjat nomi.",
+     "where": "Markazda.",
+     "how": "Katta harflar bilan.",
+     "example": "TALABNOMA"
+    },
+    {
+     "part": "Faktlar",
+     "what": "Tovar, sotib olingan sana, nuqson, kafolat muddati, sotuvchining javobi.",
+     "where": "Matnning boshida.",
+     "how": "Aniq sana va tovar nomi bilan.",
+     "example": "[Sana]da do'koningizdan [tovar] sotib oldim. [Nuqson]."
+    },
+    {
+     "part": "Ilovalar",
+     "what": "Xaridni va kafolatni tasdiqlovchi hujjatlar.",
+     "where": "Matndan keyin, sanadan oldin.",
+     "how": "Hujjatlarni raqam bilan sanang.",
+     "example": "Ilova: 1) kassa cheki nusxasi; 2) kafolat hujjati nusxasi."
+    }
+   ]
+  },
+  "exampleKind": "template",
+  "organ": "Do'kon ma'muriyati"
+ },
+ {
+  "minutes": 15,
+  "ai": true,
+  "passAt": 70,
+  "rubric": [
+   {
+    "id": "parties",
+    "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+    "weight": 15,
+    "sources": []
+   },
+   {
+    "id": "facts",
+    "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Ikkita voyaga yetmagan farzand (7 va 4 yosh); Otasi oyiga 6 000 000 so'm daromad oladi; Aliment haqida kelishuv yo'q",
+    "weight": 35,
+    "sources": []
+   },
+   {
+    "id": "claim",
+    "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+    "weight": 20,
+    "sources": []
+   },
+   {
+    "id": "basis",
+    "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+    "weight": 15,
+    "sources": [
+     {
+      "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+      "article": "136-modda",
+      "url": "https://lex.uz/docs/-104720",
+      "quote": "Aliment olish huquqiga ega boʻlgan shaxs, aliment talab qilish huquqi vujudga kelganidan soʻng qancha muddat oʻtganidan qatʼi nazar, xohlagan vaqtda aliment undirish toʻgʻrisidagi talab bilan sudga murojaat qilishga haqlidir.",
+      "heading": "136-modda. Alimentni sud tartibida undirish",
+      "text": "⟦Aliment olish huquqiga ega boʻlgan shaxs, aliment talab qilish huquqi vujudga kelganidan soʻng qancha muddat oʻtganidan qatʼi nazar, xohlagan vaqtda aliment undirish toʻgʻrisidagi talab bilan sudga murojaat qilishga haqlidir.⟧",
+      "anchor": "-159404"
+     },
+     {
+      "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+      "article": "96-modda",
+      "url": "https://lex.uz/docs/-104720",
+      "quote": "vasiylik va homiylik organlari, shuningdek oʻn toʻrt yoshga toʻlgan bola voyaga yetmagan bolaning taʼminoti uchun ota yoki onadan qonunda belgilangan miqdorda aliment undirish toʻgʻrisida daʼvo qoʻzgʻatishga haqlidir",
+      "heading": "96-modda. Ota-onaning voyaga yetmagan bolalariga taʼminot berish majburiyati",
+      "text": "Voyaga yetmagan bolalarga aliment toʻlash haqida ota-ona oʻrtasida kelishuv boʻlmaganda yoki aliment ixtiyoriy ravishda toʻlanmaganda va ota-onadan birortasi ham aliment undirish toʻgʻrisida sudga daʼvo yoxud ariza bilan murojaat qilmagan hollarda, ⟦vasiylik va homiylik organlari, shuningdek oʻn toʻrt yoshga toʻlgan bola voyaga yetmagan bolaning taʼminoti uchun ota yoki onadan qonunda belgilangan miqdorda aliment undirish toʻgʻrisida daʼvo qoʻzgʻatishga haqlidir⟧.",
+      "anchor": "-159180"
+     }
+    ]
+   },
+   {
+    "id": "attach",
+    "label": "Ilova qilinadigan hujjatlar ro'yxati, sana va imzo ko'rsatilgan",
+    "weight": 15,
+    "sources": []
+   }
+  ],
+  "example": [
+   {
+    "text": "[Tuman] tumanlararo fuqarolik ishlari bo'yicha sudiga",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Da'vogar: [F.I.Sh.], [ko'cha], [uy]-uy, tel: [telefon]",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Javobgar: [F.I.Sh.], [manzil]",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "DA'VO ARIZASI",
+    "align": "center",
+    "indent": false,
+    "bold": true
+   },
+   {
+    "text": "[Farzandlar: ismlari va yoshi.] [Javobgar qachondan beri aliment to'lamayapti.] [Javobgarning daromadi.] [Aliment haqida kelishuv yo'qligi.]",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Oila kodeksining 136-moddasiga asosan javobgardan voyaga yetmagan farzandlarim ta'minoti uchun aliment undirishni so'rayman.",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Ilova: 1) [farzandlar bilan qarindoshlikni tasdiqlovchi hujjat nusxasi]; 2) [boshqa dalillar].",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "2026-yil 21-noyabr",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "____ [initsiallar va familiya]",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   }
+  ],
+  "expect": {
+   "organ": [],
+   "name": [],
+   "address": [],
+   "phone": false,
+   "date": []
+  },
+  "id": "aliment",
+  "level": 3,
+  "title": "Aliment undirish: sudga ariza",
+  "intro": "Birinchi sudga da'vo arizasi. Yangi: shapkada sud nomi, da'vogar va javobgar. Qolgan tuzilma o'sha-o'sha.",
+  "given": [
+   "Nodira, 33 yosh, ikki farzandning onasi",
+   "Ikkita voyaga yetmagan farzand (7 va 4 yosh)",
+   "Otasi oyiga 6 000 000 so'm daromad oladi",
+   "Aliment haqida kelishuv yo'q",
+   "To'rt oydan beri to'lanmagan"
+  ],
+  "minChars": 250,
+  "requires": [
+   "kimga",
+   "kimdan",
+   "sarlavha",
+   "matn",
+   "ilova",
+   "sana",
+   "imzo"
+  ],
+  "lesson": {
+   "title": "Dars: sudga da'vo arizasi",
+   "points": [
+    {
+     "part": "Sud nomi",
+     "what": "Da'vo sudga yoziladi.",
+     "where": "Shapkada, eng yuqorida o'ngda.",
+     "how": "Sudning to'liq nomi, 'ga' kelishigida.",
+     "example": "[Tuman] tumanlararo fuqarolik ishlari bo'yicha sudiga"
+    },
+    {
+     "part": "Da'vogar",
+     "what": "Sudga murojaat qilayotgan shaxs.",
+     "where": "Sud nomidan keyin, o'ngda.",
+     "how": "'Da'vogar:' so'zi, F.I.Sh., manzil, telefon.",
+     "example": "Da'vogar: [F.I.Sh.], [ko'cha], [uy]-uy, tel: [telefon]"
+    },
+    {
+     "part": "Javobgar",
+     "what": "Kimdan talab qilinayotgan shaxs.",
+     "where": "Da'vogardan keyin, o'ngda.",
+     "how": "'Javobgar:' so'zi, F.I.Sh., manzil.",
+     "example": "Javobgar: [F.I.Sh.], [manzil]"
+    },
+    {
+     "part": "Sarlavha va talab",
+     "what": "Hujjat nomi va talab.",
+     "where": "Sarlavha markazda, talab matn oxirida.",
+     "how": "Talab qonun moddasiga tayanadi (Oila kodeksi, 136-modda: alimentni sud tartibida undirish).",
+     "example": "DA'VO ARIZASI"
+    }
+   ]
+  },
+  "exampleKind": "template",
+  "organ": "Fuqarolik ishlari bo'yicha sud"
+ },
+ {
+  "minutes": 20,
+  "ai": true,
+  "passAt": 70,
+  "rubric": [
+   {
+    "id": "parties",
+    "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+    "weight": 15,
+    "sources": []
+   },
+   {
+    "id": "facts",
+    "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Ijara haqi ketma-ket 3 oy to'lanmagan; Oylik ijara haqi 5 000 000 so'm; Shartnoma yozma, 2 yilga tuzilgan, davlat ro'yxatidan o'tgan; Ijarachiga hali yozma ogohlantirish yuborilmagan",
+    "weight": 35,
+    "sources": []
+   },
+   {
+    "id": "claim",
+    "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+    "weight": 20,
+    "sources": []
+   },
+   {
+    "id": "basis",
+    "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+    "weight": 15,
+    "sources": [
+     {
+      "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+      "article": "539-modda",
+      "url": "https://lex.uz/docs/-180552",
+      "quote": "taraflardan birontasi yuridik shaxs boʻlgan hollarda esa, muddatidan qatʼi nazar, yozma shaklda tuzilishi shart.",
+      "heading": "539-modda. Mulk ijarasi shartnomasining shakli",
+      "text": "Mulk ijarasi shartnomasi bir yildan ortiq muddatga moʻljallangan boʻlsa, ⟦taraflardan birontasi yuridik shaxs boʻlgan hollarda esa, muddatidan qatʼi nazar, yozma shaklda tuzilishi shart.⟧",
+      "anchor": "-184381"
+     },
+     {
+      "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+      "article": "544-modda",
+      "url": "https://lex.uz/docs/-180552",
+      "quote": "Ijaraga oluvchi mol-mulkdan foydalanganlik uchun haqni oʻz vaqtida toʻlab turishi shart.",
+      "heading": "544-modda. Mol-mulkdan foydalanganlik uchun haq toʻlash",
+      "text": "⟦Ijaraga oluvchi mol-mulkdan foydalanganlik uchun haqni oʻz vaqtida toʻlab turishi shart.⟧",
+      "anchor": "-184420"
+     }
+    ]
+   },
+   {
+    "id": "attach",
+    "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Yozma ijara shartnomasi; Shartnomaning davlat ro'yxatidan o'tganligi va soliq organida hisobga qo'yilganligi haqidagi hujjat; To'lovlar bo'yicha bank ko'chirmasi",
+    "weight": 15,
+    "sources": []
+   }
+  ],
+  "example": [
+   {
+    "text": "[Sud nomi]ga",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Da'vogar: [F.I.Sh.], [ko'cha], [uy]-uy",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Javobgar: [ijarachi nomi], [manzil]",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Da'vo bahosi: [summa] so'm",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "DA'VO ARIZASI",
+    "align": "center",
+    "indent": false,
+    "bold": true
+   },
+   {
+    "text": "[Shartnoma: qachon, qancha muddatga tuzilgan, davlat ro'yxatidan o'tgani.] [Oylik ijara haqi va necha oy to'lanmagani.] [Hisob: oylar × oylik haq = jami qarz.]",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "[Qonun nomi]ning [modda raqami]-moddasiga asosan quyidagilarni so'rayman:",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "1) javobgardan [summa] so'm ijara haqi qarzini undirish; 2) [boshqa talab, bo'lsa].",
+    "align": "justify",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "Ilova: 1) ijara shartnomasi nusxasi; 2) to'lovlar bo'yicha bank ko'chirmasi; 3) [boshqa dalillar].",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "2026-yil 21-noyabr",
+    "align": "left",
+    "indent": false,
+    "bold": false
+   },
+   {
+    "text": "____ [initsiallar va familiya]",
+    "align": "right",
+    "indent": false,
+    "bold": false
+   }
+  ],
+  "expect": {
+   "organ": [],
+   "name": [],
+   "address": [],
+   "phone": false,
+   "date": []
+  },
+  "id": "ijara",
+  "level": 4,
+  "title": "Ijara haqi to'lanmadi: da'vo",
+  "intro": "Murakkab: bir nechta talab, hisob-kitob va ilovalar bilan.",
+  "given": [
+   "Shavkat, 45 yosh, tijorat binosi egasi",
+   "Ijara haqi ketma-ket 3 oy to'lanmagan",
+   "Oylik ijara haqi 5 000 000 so'm",
+   "Shartnoma yozma, 2 yilga tuzilgan, davlat ro'yxatidan o'tgan",
+   "Ijarachiga hali yozma ogohlantirish yuborilmagan",
+   "Ijarachi binoni yaxshi saqlayapti"
+  ],
+  "minChars": 300,
+  "requires": [
+   "kimga",
+   "kimdan",
+   "sarlavha",
+   "matn",
+   "ilova",
+   "sana",
+   "imzo"
+  ],
+  "lesson": {
+   "title": "Dars: bir nechta talab va da'vo bahosi",
+   "points": [
+    {
+     "part": "Da'vo bahosi",
+     "what": "Undiriladigan jami summa.",
+     "where": "Shapkada, javobgardan keyin.",
+     "how": "Oylar soni × oylik haq. Raqam bilan yozing.",
+     "example": "Da'vo bahosi: [summa] so'm"
+    },
+    {
+     "part": "Bir nechta talab",
+     "what": "Talablar ro'yxati.",
+     "where": "Matn oxirida.",
+     "how": "'quyidagilarni so'rayman:' deb, har talabni raqam bilan yozing.",
+     "example": "1) javobgardan [summa] so'm qarzni undirish; 2) [boshqa talab]."
+    }
+   ]
+  },
+  "exampleKind": "template",
+  "organ": "Sud"
+ }
+]

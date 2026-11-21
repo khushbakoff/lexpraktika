@@ -1,0 +1,462 @@
+{
+  "id": "protsessual-davoni-taminlash",
+  "title": "Javobgar mol-mulkni sotib yuborishi mumkin",
+  "area": "Fuqarolik protsessi",
+  "areaId": "fuqarolik",
+  "tracks": [
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Da'vogar javobgar mol-mulkni sotib yuborishidan xavotirda. Da'voni ta'minlash asoslari, choralari va saqlanish muddatini Fuqarolik protsessual kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Akmal, 46 yosh, da'vogar",
+    "openingLine": "Assalomu alaykum. Sudda da'vo qo'zg'atdim, javobgar mol-mulkini sotib yuborishi mumkin. Sud hujjati ijrosi qiyin bo'lib qolmaydimi? Nima qilsam bo'ladi?",
+    "hiddenFacts": [
+      {
+        "id": "claim",
+        "fact": "Da'vogar pul undirish bo'yicha da'vo qo'zg'atgan",
+        "revealOn": []
+      },
+      {
+        "id": "risk",
+        "fact": "Javobgar mol-mulkini sotib yuborishi mumkin",
+        "revealOn": []
+      },
+      {
+        "id": "stage",
+        "fact": "Ish hali sudda ko'rilmoqda",
+        "revealOn": []
+      },
+      {
+        "id": "prop",
+        "fact": "Javobgarning bank hisobi va avtomobili bor",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "claim",
+        "risk",
+        "stage"
+      ],
+      "questions": [
+        {
+          "id": "q-claim",
+          "text": "Da'voingiz nima haqida?",
+          "factId": "claim",
+          "reply": "Qarz undirish."
+        },
+        {
+          "id": "q-risk",
+          "text": "Nimadan xavotirdasiz?",
+          "factId": "risk",
+          "reply": "Javobgar mol-mulkini sotib yuborishidan."
+        },
+        {
+          "id": "q-stage",
+          "text": "Ish qaysi bosqichda?",
+          "factId": "stage",
+          "reply": "Sudda ko'rilmoqda."
+        },
+        {
+          "id": "q-prop",
+          "text": "Javobgarning nimasi bor?",
+          "factId": "prop",
+          "reply": "Bank hisobi va avtomobil."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Da'voni ta'minlash choralari",
+      "sources": [],
+      "points": 15,
+      "description": "Qaysilari da'voni ta'minlash chorasi.",
+      "prompt": "Quyidagilardan qaysilari da'voni ta'minlash choralari bo'lishi mumkin? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "seize",
+          "label": "Javobgarga tegishli mol-mulk yoki pul mablag'larini xatlash",
+          "required": true,
+          "why": "106-modda 1-band.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "106-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "javobgarga tegishli boʻlgan va uning oʻzida yoki boshqa shaxsda turgan mol-mulkni yoxud pul mablagʻlarini xatlash",
+              "heading": "106-modda. Daʼvoni taʼminlash choralari",
+              "text": "Quyidagilar daʼvoni taʼminlash choralari boʻlishi mumkin:\n1) ⟦javobgarga tegishli boʻlgan va uning oʻzida yoki boshqa shaxsda turgan mol-mulkni yoxud pul mablagʻlarini xatlash⟧;",
+              "anchor": "-3520529"
+            }
+          ]
+        },
+        {
+          "id": "ban",
+          "label": "Javobgar muayyan harakatlarni amalga oshirishini taqiqlash",
+          "required": true,
+          "why": "106-modda 2-band.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "106-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "javobgar muayyan harakatlarni amalga oshirishini taqiqlash",
+              "heading": "106-modda. Daʼvoni taʼminlash choralari",
+              "text": "1) javobgarga tegishli boʻlgan va uning oʻzida yoki boshqa shaxsda turgan mol-mulkni yoxud pul mablagʻlarini xatlash;\n2) ⟦javobgar muayyan harakatlarni amalga oshirishini taqiqlash⟧;",
+              "anchor": "-3520529"
+            }
+          ]
+        },
+        {
+          "id": "third",
+          "label": "Boshqa shaxslarning javobgarga mol-mulk berishini yoki majburiyatlarni bajarishini taqiqlash",
+          "required": true,
+          "why": "106-modda 3-band.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "106-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "boshqa shaxslarning javobgarga mol-mulk berishini yoki unga nisbatan boshqa majburiyatlarni bajarishini taqiqlash",
+              "heading": "106-modda. Daʼvoni taʼminlash choralari",
+              "text": "2) javobgar muayyan harakatlarni amalga oshirishini taqiqlash;\n3) ⟦boshqa shaxslarning javobgarga mol-mulk berishini yoki unga nisbatan boshqa majburiyatlarni bajarishini taqiqlash⟧;",
+              "anchor": "-3520529"
+            }
+          ]
+        },
+        {
+          "id": "keeper",
+          "label": "Nizoli mol-mulkni saqlash uchun uchinchi shaxsga topshirish",
+          "required": true,
+          "why": "106-modda 7-band.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "106-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "nizoli mol-mulkni saqlash uchun uchinchi shaxsga (saqlovchiga) topshirish",
+              "heading": "106-modda. Daʼvoni taʼminlash choralari",
+              "text": "7) ⟦nizoli mol-mulkni saqlash uchun uchinchi shaxsga (saqlovchiga) topshirish⟧.",
+              "anchor": "-3520529"
+            }
+          ]
+        },
+        {
+          "id": "arrest",
+          "label": "Javobgarni qamoqqa olish",
+          "required": false,
+          "why": "106-modda ro'yxatida bunday chora yo'q.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "106-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "Quyidagilar daʼvoni taʼminlash choralari boʻlishi mumkin",
+              "heading": "106-modda. Daʼvoni taʼminlash choralari",
+              "text": "⟦Quyidagilar daʼvoni taʼminlash choralari boʻlishi mumkin⟧:",
+              "anchor": "-3520529"
+            }
+          ]
+        },
+        {
+          "id": "disproportion",
+          "label": "Da'vo talabiga nomutanosib, juda katta choralar",
+          "required": false,
+          "why": "Choralar talabga mutanosib bo'lishi kerak (106-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "106-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "Daʼvoni taʼminlash choralari daʼvogar arz qilgan talabga mutanosib boʻlishi kerak",
+              "heading": "106-modda. Daʼvoni taʼminlash choralari",
+              "text": "⟦Daʼvoni taʼminlash choralari daʼvogar arz qilgan talabga mutanosib boʻlishi kerak⟧.",
+              "anchor": "-3520529"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Asoslar va muddat",
+      "sources": [],
+      "points": 25,
+      "description": "Da'voni ta'minlash qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "when",
+          "label": "Da'voni ta'minlashga sud protsessining qaysi bosqichida yo'l qo'yiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "start",
+              "label": "Faqat boshida"
+            },
+            {
+              "id": "any",
+              "label": "Har qanday bosqichida"
+            },
+            {
+              "id": "end",
+              "label": "Faqat hal qiluv qaroridan keyin"
+            }
+          ],
+          "correct": "any",
+          "why": "Har qanday bosqichida (105-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "105-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "Daʼvoni taʼminlashga sud protsessining har qanday bosqichida yoʻl qoʻyiladi",
+              "heading": "105-modda. Daʼvoni taʼminlash asoslari",
+              "text": "⟦Daʼvoni taʼminlashga sud protsessining har qanday bosqichida yoʻl qoʻyiladi⟧.",
+              "anchor": "-3520519"
+            }
+          ]
+        },
+        {
+          "id": "ground",
+          "label": "Da'voni ta'minlashga qachon yo'l qo'yiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "any",
+              "label": "Har qanday holatda"
+            },
+            {
+              "id": "hard",
+              "label": "Choralarni ko'rmaslik sud hujjati ijrosini qiyinlashtirsa yoki imkonsiz qilsa"
+            },
+            {
+              "id": "never",
+              "label": "Hech qachon"
+            }
+          ],
+          "correct": "hard",
+          "why": "Choralarni ko'rmaslik sud hujjati ijrosini qiyinlashtirsa yoki uni bajarib bo'lmaydigan qilib qo'ysa (105-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "105-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "Agar daʼvoni taʼminlash choralarini koʻrmaslik sud hujjati ijrosini qiyinlashtirsa yoki uni bajarib boʻlmaydigan qilib qoʻysa, daʼvoni taʼminlashga yoʻl qoʻyiladi",
+              "heading": "105-modda. Daʼvoni taʼminlash asoslari",
+              "text": "Sud (sudya) daʼvoni taʼminlash choralarini ishda ishtirok etuvchi shaxslarning arizasi yoki oʻz tashabbusi boʻyicha koʻrishi mumkin. ⟦Agar daʼvoni taʼminlash choralarini koʻrmaslik sud hujjati ijrosini qiyinlashtirsa yoki uni bajarib boʻlmaydigan qilib qoʻysa, daʼvoni taʼminlashga yoʻl qoʻyiladi⟧.",
+              "anchor": "-3520519"
+            }
+          ]
+        },
+        {
+          "id": "kept",
+          "label": "Da'vo qanoatlantirilsa, choralar qancha saqlanadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "date",
+              "label": "Qaror chiqqan kunigacha"
+            },
+            {
+              "id": "execute",
+              "label": "Hal qiluv qarori amalda ijro etilguniga qadar"
+            },
+            {
+              "id": "m1",
+              "label": "1 oy"
+            }
+          ],
+          "correct": "execute",
+          "why": "Hal qiluv qarori amalda ijro etilguniga qadar (112-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "112-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "daʼvoni taʼminlash choralari hal qiluv qarori amalda ijro etilguniga qadar oʻz kuchini saqlab qoladi",
+              "heading": "112-modda. Daʼvoni taʼminlash choralarining saqlanish muddati",
+              "text": "Daʼvo qanoatlantirilgan taqdirda, ⟦daʼvoni taʼminlash choralari hal qiluv qarori amalda ijro etilguniga qadar oʻz kuchini saqlab qoladi⟧.",
+              "anchor": "-3520586"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Javobgar mol-mulkni sotib yuborishi mumkin). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Da'vogar pul undirish bo'yicha da'vo qo'zg'atgan; Javobgar mol-mulkini sotib yuborishi mumkin; Ish hali sudda ko'rilmoqda",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "106-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "javobgarga tegishli boʻlgan va uning oʻzida yoki boshqa shaxsda turgan mol-mulkni yoxud pul mablagʻlarini xatlash",
+              "heading": "106-modda. Daʼvoni taʼminlash choralari",
+              "text": "Quyidagilar daʼvoni taʼminlash choralari boʻlishi mumkin:\n1) ⟦javobgarga tegishli boʻlgan va uning oʻzida yoki boshqa shaxsda turgan mol-mulkni yoxud pul mablagʻlarini xatlash⟧;",
+              "anchor": "-3520529"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "105-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "Daʼvoni taʼminlashga sud protsessining har qanday bosqichida yoʻl qoʻyiladi",
+              "heading": "105-modda. Daʼvoni taʼminlash asoslari",
+              "text": "⟦Daʼvoni taʼminlashga sud protsessining har qanday bosqichida yoʻl qoʻyiladi⟧.",
+              "anchor": "-3520519"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Javobgarga tegishli mol-mulk yoki pul mablag'larini xatlash; Javobgar muayyan harakatlarni amalga oshirishini taqiqlash; Boshqa shaxslarning javobgarga mol-mulk berishini yoki majburiyatlarni bajarishini taqiqlash; Nizoli mol-mulkni saqlash uchun uchinchi shaxsga topshirish",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Ta'minlash jarayoni",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "app",
+          "label": "Ishda ishtirok etuvchi shaxs ariza beradi, unda asoslar va zaruriyat ko'rsatiladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "105-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "Daʼvoni taʼminlash toʻgʻrisidagi arizada daʼvoni taʼminlash choralarini koʻrish asoslari va zaruriyati koʻrsatilgan boʻlishi lozim",
+              "heading": "105-modda. Daʼvoni taʼminlash asoslari",
+              "text": "⟦Daʼvoni taʼminlash toʻgʻrisidagi arizada daʼvoni taʼminlash choralarini koʻrish asoslari va zaruriyati koʻrsatilgan boʻlishi lozim⟧.",
+              "anchor": "-3520519"
+            }
+          ]
+        },
+        {
+          "id": "measure",
+          "label": "Sud mutanosib chorani (masalan, xatlash) ko'radi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "106-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "Daʼvoni taʼminlash choralari daʼvogar arz qilgan talabga mutanosib boʻlishi kerak",
+              "heading": "106-modda. Daʼvoni taʼminlash choralari",
+              "text": "⟦Daʼvoni taʼminlash choralari daʼvogar arz qilgan talabga mutanosib boʻlishi kerak⟧.",
+              "anchor": "-3520529"
+            }
+          ]
+        },
+        {
+          "id": "kept",
+          "label": "Da'vo qanoatlantirilsa, choralar qaror ijrosigacha saqlanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "112-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "daʼvoni taʼminlash choralari hal qiluv qarori amalda ijro etilguniga qadar oʻz kuchini saqlab qoladi",
+              "heading": "112-modda. Daʼvoni taʼminlash choralarining saqlanish muddati",
+              "text": "Daʼvo qanoatlantirilgan taqdirda, ⟦daʼvoni taʼminlash choralari hal qiluv qarori amalda ijro etilguniga qadar oʻz kuchini saqlab qoladi⟧.",
+              "anchor": "-3520586"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Da'vo rad etilsa",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+          "article": "112-modda",
+          "url": "https://lex.uz/docs/-3517337",
+          "quote": "daʼvoni taʼminlash choralari hal qiluv qarori qonuniy kuchga kirguniga qadar saqlanib qoladi",
+          "heading": "112-modda. Daʼvoni taʼminlash choralarining saqlanish muddati",
+          "text": "Daʼvo rad qilingan taqdirda, ⟦daʼvoni taʼminlash choralari hal qiluv qarori qonuniy kuchga kirguniga qadar saqlanib qoladi⟧. Biroq sud daʼvoni taʼminlash choralarini bekor qilish toʻgʻrisida hal qiluv qarori bilan bir vaqtda yoki u qabul qilinganidan soʻng ajrim chiqarishi mumkin.",
+          "anchor": "-3520586"
+        }
+      ],
+      "points": 15,
+      "description": "Da'vo rad qilinsa, da'voni ta'minlash choralari qancha saqlanadi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Hal qiluv qarori qonuniy kuchga kirguniga qadar"
+        },
+        {
+          "id": "b",
+          "label": "Darhol bekor bo'ladi"
+        },
+        {
+          "id": "c",
+          "label": "Bir yil"
+        },
+        {
+          "id": "d",
+          "label": "Abadiy"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

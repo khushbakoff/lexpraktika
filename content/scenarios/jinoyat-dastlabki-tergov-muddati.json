@@ -1,0 +1,458 @@
+{
+  "id": "jinoyat-dastlabki-tergov-muddati",
+  "title": "Dastlabki tergov qancha davom etadi?",
+  "area": "Jinoyat-protsessual huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Himoyachi dastlabki tergov muddati haqida so'ramoqda. Tergov muddatlari, ishlarni birlashtirish va tergov tamomlangan hisoblanadigan kunni Jinoyat-protsessual kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Davron, 52 yosh, himoyachi",
+    "openingLine": "Assalomu alaykum. Mijozim ishi bo'yicha tergov uzoq cho'zilyapti. Dastlabki tergov muddati qancha va qachon tamomlangan hisoblanadi?",
+    "hiddenFacts": [
+      {
+        "id": "start",
+        "fact": "Jinoyat ishi 2 oy oldin qo'zg'atilgan",
+        "revealOn": []
+      },
+      {
+        "id": "merge",
+        "fact": "Ish boshqa ish bilan birlashtirilgan",
+        "revealOn": []
+      },
+      {
+        "id": "split",
+        "fact": "Alohida ish yurituvga ajratish rejalashtirilmoqda",
+        "revealOn": []
+      },
+      {
+        "id": "end",
+        "fact": "Tergovchi ishni ayblov xulosasi bilan prokurorga yubormoqchi",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "start",
+        "merge",
+        "split"
+      ],
+      "questions": [
+        {
+          "id": "q-start",
+          "text": "Ish qachon qo'zg'atilgan?",
+          "factId": "start",
+          "reply": "Taxminan 2 oy oldin."
+        },
+        {
+          "id": "q-merge",
+          "text": "Ish birlashtirilganmi?",
+          "factId": "merge",
+          "reply": "Ha, boshqa ish bilan birlashtirishgan."
+        },
+        {
+          "id": "q-split",
+          "text": "Ajratish haqida gap bormi?",
+          "factId": "split",
+          "reply": "Ha, yangi shaxs bo'yicha ajratishmoqchi."
+        },
+        {
+          "id": "q-end",
+          "text": "Tergov qachon tugaydi?",
+          "factId": "end",
+          "reply": "Ish prokurorga topshiriladi."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Tergov muddatlari",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Dastlabki tergov muddati haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "three",
+          "label": "Dastlabki tergov ish qo'zg'atilgan kundan uch oydan oshmagan muddatda tamomlanishi lozim",
+          "required": true,
+          "why": "351-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Dastlabki tergov jinoyat ishi qoʻzgʻatilgan kundan boshlab uch oydan oshmagan muddatda tamomlanishi lozim",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "⟦Dastlabki tergov jinoyat ishi qoʻzgʻatilgan kundan boshlab uch oydan oshmagan muddatda tamomlanishi lozim⟧.",
+              "anchor": "-255592"
+            }
+          ]
+        },
+        {
+          "id": "merge",
+          "label": "Ishlar birlashtirilganda muddat uzoqroq tergov qilingan ish bo'yicha belgilanadi",
+          "required": true,
+          "why": "351-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ular boʻyicha ish yuritish muddati uzoqroq muddat davomida tergov qilingan jinoyat ishi boʻyicha belgilanadi",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "Jinoyat ishlari birlashtirilayotganda ⟦ular boʻyicha ish yuritish muddati uzoqroq muddat davomida tergov qilingan jinoyat ishi boʻyicha belgilanadi⟧. Bunda qolgan jinoyat ishlari boʻyicha ish yuritish muddati uzoqroq tergov qilingan ishning muddati bilan qamrab olinadi va qoʻshimcha ravishda hisobga olinmaydi.",
+              "anchor": "-255592"
+            }
+          ]
+        },
+        {
+          "id": "split",
+          "label": "Yangi jinoyat yoki yangi shaxs bo'yicha ajratilgan ishda muddat tegishli qaror chiqarilgan kundan hisoblanadi",
+          "required": true,
+          "why": "351-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "tegishli qaror chiqarilgan kundan eʼtiboran hisoblanadi",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "Alohida ish yurituvga ajratilgan jinoyat ishi boʻyicha dastlabki tergov muddati, agar jinoyat ishi yangi jinoyat boʻyicha yoki yangi shaxsga nisbatan ajratilayotgan boʻlsa, ⟦tegishli qaror chiqarilgan kundan eʼtiboran hisoblanadi⟧. Qolgan hollarda muddat bu jinoyat ishi qaysi jinoyat ishidan alohida ish yurituvga ajratilgan boʻlsa, oʻsha jinoyat ishi qoʻzgʻatilgan paytdan eʼtiboran hisoblanadi.",
+              "anchor": "-255592"
+            }
+          ]
+        },
+        {
+          "id": "end",
+          "label": "Ish ayblov xulosasi bilan prokurorga topshirilgan kuni dastlabki tergov tamomlangan hisoblanadi",
+          "required": true,
+          "why": "351-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "prokurorga topshirilgan kuni yoxud ishni tugatish haqida qaror chiqarilgan kuni dastlabki tergov tamomlangan hisoblanadi",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "Ish ayblov xulosasi bilan, ishni tibbiy yoʻsindagi majburlov choralarini qoʻllash yoxud taraflarning yarashuvi uchun sudga yuborish toʻgʻrisidagi qaror bilan, amnistiya aktiga asosan jinoyat ishini tugatish haqida sudga iltimosnoma kiritish toʻgʻrisidagi taqdimnoma bilan ⟦prokurorga topshirilgan kuni yoxud ishni tugatish haqida qaror chiqarilgan kuni dastlabki tergov tamomlangan hisoblanadi⟧.",
+              "anchor": "-255592"
+            }
+          ]
+        },
+        {
+          "id": "year",
+          "label": "Dastlabki tergov muddati bir yil",
+          "required": false,
+          "why": "Uch oydan oshmagan muddat (351-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "uch oydan oshmagan muddatda tamomlanishi lozim",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "Dastlabki tergov jinoyat ishi qoʻzgʻatilgan kundan boshlab ⟦uch oydan oshmagan muddatda tamomlanishi lozim⟧.",
+              "anchor": "-255592"
+            }
+          ]
+        },
+        {
+          "id": "sum",
+          "label": "Birlashtirilgan ishlarning muddatlari qo'shib hisoblanadi",
+          "required": false,
+          "why": "Qolgan ishlar muddati uzoqroq muddat bilan qamrab olinadi, qo'shimcha hisobga olinmaydi (351-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "qoʻshimcha ravishda hisobga olinmaydi",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "Jinoyat ishlari birlashtirilayotganda ular boʻyicha ish yuritish muddati uzoqroq muddat davomida tergov qilingan jinoyat ishi boʻyicha belgilanadi. Bunda qolgan jinoyat ishlari boʻyicha ish yuritish muddati uzoqroq tergov qilingan ishning muddati bilan qamrab olinadi va ⟦qoʻshimcha ravishda hisobga olinmaydi⟧.",
+              "anchor": "-255592"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Muddat hisobi",
+      "sources": [],
+      "points": 25,
+      "description": "Muddatlarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "term",
+          "label": "Dastlabki tergov muddati (ish qo'zg'atilgan kundan)",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "m1",
+              "label": "1 oy"
+            },
+            {
+              "id": "m3",
+              "label": "3 oy"
+            },
+            {
+              "id": "m6",
+              "label": "6 oy"
+            },
+            {
+              "id": "y1",
+              "label": "1 yil"
+            }
+          ],
+          "correct": "m3",
+          "why": "Uch oydan oshmagan (351-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "uch oydan oshmagan muddatda tamomlanishi lozim",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "Dastlabki tergov jinoyat ishi qoʻzgʻatilgan kundan boshlab ⟦uch oydan oshmagan muddatda tamomlanishi lozim⟧.",
+              "anchor": "-255592"
+            }
+          ]
+        },
+        {
+          "id": "merge",
+          "label": "Ishlar birlashtirilganda muddat qanday belgilanadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "sum",
+              "label": "Muddatlar qo'shiladi"
+            },
+            {
+              "id": "longer",
+              "label": "Uzoqroq tergov qilingan ish bo'yicha belgilanadi"
+            },
+            {
+              "id": "new",
+              "label": "Yangidan 3 oy"
+            }
+          ],
+          "correct": "longer",
+          "why": "Uzoqroq tergov qilingan ish bo'yicha, qo'shimcha hisobga olinmaydi (351-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ular boʻyicha ish yuritish muddati uzoqroq muddat davomida tergov qilingan jinoyat ishi boʻyicha belgilanadi",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "Jinoyat ishlari birlashtirilayotganda ⟦ular boʻyicha ish yuritish muddati uzoqroq muddat davomida tergov qilingan jinoyat ishi boʻyicha belgilanadi⟧. Bunda qolgan jinoyat ishlari boʻyicha ish yuritish muddati uzoqroq tergov qilingan ishning muddati bilan qamrab olinadi va qoʻshimcha ravishda hisobga olinmaydi.",
+              "anchor": "-255592"
+            }
+          ]
+        },
+        {
+          "id": "end",
+          "label": "Dastlabki tergov qachon tamomlangan hisoblanadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "handover",
+              "label": "Ish ayblov xulosasi bilan prokurorga topshirilgan kuni"
+            },
+            {
+              "id": "last",
+              "label": "Oxirgi so'roq kuni"
+            },
+            {
+              "id": "court",
+              "label": "Sud majlisi boshlangan kuni"
+            }
+          ],
+          "correct": "handover",
+          "why": "Ish ayblov xulosasi bilan prokurorga topshirilgan kuni (351-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "prokurorga topshirilgan kuni yoxud ishni tugatish haqida qaror chiqarilgan kuni dastlabki tergov tamomlangan hisoblanadi",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "Ish ayblov xulosasi bilan, ishni tibbiy yoʻsindagi majburlov choralarini qoʻllash yoxud taraflarning yarashuvi uchun sudga yuborish toʻgʻrisidagi qaror bilan, amnistiya aktiga asosan jinoyat ishini tugatish haqida sudga iltimosnoma kiritish toʻgʻrisidagi taqdimnoma bilan ⟦prokurorga topshirilgan kuni yoxud ishni tugatish haqida qaror chiqarilgan kuni dastlabki tergov tamomlangan hisoblanadi⟧.",
+              "anchor": "-255592"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Dastlabki tergov qancha davom etadi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Jinoyat ishi 2 oy oldin qo'zg'atilgan; Ish boshqa ish bilan birlashtirilgan; Alohida ish yurituvga ajratish rejalashtirilmoqda",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Dastlabki tergov jinoyat ishi qoʻzgʻatilgan kundan boshlab uch oydan oshmagan muddatda tamomlanishi lozim",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "⟦Dastlabki tergov jinoyat ishi qoʻzgʻatilgan kundan boshlab uch oydan oshmagan muddatda tamomlanishi lozim⟧.",
+              "anchor": "-255592"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Dastlabki tergov ish qo'zg'atilgan kundan uch oydan oshmagan muddatda tamomlanishi lozim; Ishlar birlashtirilganda muddat uzoqroq tergov qilingan ish bo'yicha belgilanadi; Yangi jinoyat yoki yangi shaxs bo'yicha ajratilgan ishda muddat tegishli qaror chiqarilgan kundan hisoblanadi; Ish ayblov xulosasi bilan prokurorga topshirilgan kuni dastlabki tergov tamomlangan hisoblanadi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Tergov bosqichlari",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "open",
+          "label": "Jinoyat ishi qo'zg'atiladi, tergov muddati shu kundan hisoblanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "jinoyat ishi qoʻzgʻatilgan kundan boshlab",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "Dastlabki tergov ⟦jinoyat ishi qoʻzgʻatilgan kundan boshlab⟧ uch oydan oshmagan muddatda tamomlanishi lozim.",
+              "anchor": "-255592"
+            }
+          ]
+        },
+        {
+          "id": "limit",
+          "label": "Dastlabki tergov uch oydan oshmagan muddatda tamomlanishi lozim",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "uch oydan oshmagan muddatda tamomlanishi lozim",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "Dastlabki tergov jinoyat ishi qoʻzgʻatilgan kundan boshlab ⟦uch oydan oshmagan muddatda tamomlanishi lozim⟧.",
+              "anchor": "-255592"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "label": "Ish ayblov xulosasi bilan prokurorga topshirilgan kuni tergov tamomlangan hisoblanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "351-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "prokurorga topshirilgan kuni yoxud ishni tugatish haqida qaror chiqarilgan kuni dastlabki tergov tamomlangan hisoblanadi",
+              "heading": "351-modda. Dastlabki tergov muddatlari",
+              "text": "Ish ayblov xulosasi bilan, ishni tibbiy yoʻsindagi majburlov choralarini qoʻllash yoxud taraflarning yarashuvi uchun sudga yuborish toʻgʻrisidagi qaror bilan, amnistiya aktiga asosan jinoyat ishini tugatish haqida sudga iltimosnoma kiritish toʻgʻrisidagi taqdimnoma bilan ⟦prokurorga topshirilgan kuni yoxud ishni tugatish haqida qaror chiqarilgan kuni dastlabki tergov tamomlangan hisoblanadi⟧.",
+              "anchor": "-255592"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Ajratilgan ish",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "351-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "tegishli qaror chiqarilgan kundan eʼtiboran hisoblanadi",
+          "heading": "351-modda. Dastlabki tergov muddatlari",
+          "text": "Alohida ish yurituvga ajratilgan jinoyat ishi boʻyicha dastlabki tergov muddati, agar jinoyat ishi yangi jinoyat boʻyicha yoki yangi shaxsga nisbatan ajratilayotgan boʻlsa, ⟦tegishli qaror chiqarilgan kundan eʼtiboran hisoblanadi⟧. Qolgan hollarda muddat bu jinoyat ishi qaysi jinoyat ishidan alohida ish yurituvga ajratilgan boʻlsa, oʻsha jinoyat ishi qoʻzgʻatilgan paytdan eʼtiboran hisoblanadi.",
+          "anchor": "-255592"
+        }
+      ],
+      "points": 15,
+      "description": "Yangi jinoyat yoki yangi shaxsga nisbatan ajratilgan ishda tergov muddati qachondan hisoblanadi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Tegishli qaror chiqarilgan kundan"
+        },
+        {
+          "id": "b",
+          "label": "Dastlabki ish qo'zg'atilgan kundan"
+        },
+        {
+          "id": "c",
+          "label": "Sud majlisi kunidan"
+        },
+        {
+          "id": "d",
+          "label": "Hisoblanmaydi"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

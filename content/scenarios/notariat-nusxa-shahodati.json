@@ -1,0 +1,453 @@
+{
+  "id": "notariat-nusxa-shahodati",
+  "title": "Diplom nusxasini notarius tasdiqlaydimi?",
+  "area": "Notariat",
+  "areaId": "fuqarolik",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijoz hujjat nusxasi to'g'riligini tasdiqlatmoqchi. Qanday nusxa notarial shahodatlanishi mumkinligini «Notariat to'g'risida»gi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Ulug'bek, 24 yosh, bitiruvchi",
+    "openingLine": "Assalomu alaykum. Diplom nusxasini notarius tasdiqlashi kerak. Qanday nusxa olib kelaman?",
+    "hiddenFacts": [
+      {
+        "id": "doc",
+        "fact": "Mijoz diplom nusxasini tasdiqlatmoqchi",
+        "revealOn": []
+      },
+      {
+        "id": "source",
+        "fact": "Nusxa universitet tomonidan berilgan",
+        "revealOn": []
+      },
+      {
+        "id": "stamp",
+        "fact": "Universitet nusxani muhr bilan tasdiqlagan",
+        "revealOn": []
+      },
+      {
+        "id": "where",
+        "fact": "Nusxada asl hujjat universitetda ekanligi yozilmagan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "doc",
+        "source",
+        "stamp"
+      ],
+      "questions": [
+        {
+          "id": "q-doc",
+          "text": "Qanday hujjat?",
+          "factId": "doc",
+          "reply": "Diplomning nusxasi."
+        },
+        {
+          "id": "q-source",
+          "text": "Nusxani kim bergan?",
+          "factId": "source",
+          "reply": "Universitet bergan."
+        },
+        {
+          "id": "q-stamp",
+          "text": "Muhr bormi?",
+          "factId": "stamp",
+          "reply": "Ha, muhr bosilgan."
+        },
+        {
+          "id": "q-where",
+          "text": "Asli qayerda deb yozilganmi?",
+          "factId": "where",
+          "reply": "Yo'q, yozilmagan."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Nusxa shahodati shartlari",
+      "sources": [],
+      "points": 15,
+      "description": "Qaysi nusxa shahodatlanadi.",
+      "prompt": "Hujjat nusxasidan ko'chirilgan nusxa to'g'riligini shahodatlash haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "notarized",
+          "label": "Avvalgi nusxaning to'g'riligi notarial tartibda shahodatlangan bo'lsa",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar, ⟦basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa⟧ yoki hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ish qogʻozida bayon etilgan, muhr bosib tasdiqlangan va unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak.",
+              "anchor": "-55310"
+            }
+          ]
+        },
+        {
+          "id": "issued",
+          "label": "Nusxa asl nusxa tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan bo'lsa",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar, basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa yoki ⟦hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa⟧, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ish qogʻozida bayon etilgan, muhr bosib tasdiqlangan va unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak.",
+              "anchor": "-55310"
+            }
+          ]
+        },
+        {
+          "id": "written",
+          "label": "Bunday nusxa yuridik shaxsning ish qog'ozida bayon etilgan va muhr bilan tasdiqlangan bo'lishi kerak",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "ish qogʻozida bayon etilgan, muhr bosib tasdiqlangan",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar, basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa yoki hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ⟦ish qogʻozida bayon etilgan, muhr bosib tasdiqlangan⟧ va unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak.",
+              "anchor": "-55310"
+            }
+          ]
+        },
+        {
+          "id": "original",
+          "label": "Nusxada hujjatning asli shu tashkilotda ekanligi yozib qo'yilgan bo'lishi kerak",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar, basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa yoki hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ish qogʻozida bayon etilgan, muhr bosib tasdiqlangan va ⟦unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak⟧.",
+              "anchor": "-55310"
+            }
+          ]
+        },
+        {
+          "id": "anycopy",
+          "label": "Istalgan fotonusxa shahodatlanadi",
+          "required": false,
+          "why": "Faqat 66-modda shartlariga mos nusxa shahodatlanadi.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "⟦Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar⟧, basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa yoki hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ish qogʻozida bayon etilgan, muhr bosib tasdiqlangan va unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak.",
+              "anchor": "-55310"
+            }
+          ]
+        },
+        {
+          "id": "noseal",
+          "label": "Muhrsiz nusxa ham yetarli",
+          "required": false,
+          "why": "Nusxa muhr bilan tasdiqlangan bo'lishi kerak (66-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "muhr bosib tasdiqlangan",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar, basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa yoki hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ish qogʻozida bayon etilgan, ⟦muhr bosib tasdiqlangan⟧ va unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak.",
+              "anchor": "-55310"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Nusxa shartlari",
+      "sources": [],
+      "points": 25,
+      "description": "Shartlarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "who",
+          "label": "Nusxa qaysi holda shahodatlanishi mumkin?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "any",
+              "label": "Har qanday fotonusxa"
+            },
+            {
+              "id": "issued",
+              "label": "Asl nusxani tayyorlagan tashkilot bergan yoki avval notarial shahodatlangan"
+            },
+            {
+              "id": "web",
+              "label": "Internetdan olingan nusxa"
+            }
+          ],
+          "correct": "issued",
+          "why": "Asl nusxa tayyorlangan tashkilot bergan yoki avval notarial shahodatlangan bo'lsa (66-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar, basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa yoki ⟦hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa⟧, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ish qogʻozida bayon etilgan, muhr bosib tasdiqlangan va unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak.",
+              "anchor": "-55310"
+            }
+          ]
+        },
+        {
+          "id": "note",
+          "label": "Nusxada nima yozib qo'yilgan bo'lishi kerak?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Hech narsa"
+            },
+            {
+              "id": "orig",
+              "label": "Hujjatning asli shu tashkilotda ekanligi"
+            },
+            {
+              "id": "price",
+              "label": "Nusxa narxi"
+            }
+          ],
+          "correct": "orig",
+          "why": "Hujjatning asli shu tashkilotda ekanligi (66-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar, basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa yoki hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ish qogʻozida bayon etilgan, muhr bosib tasdiqlangan va ⟦unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak⟧.",
+              "anchor": "-55310"
+            }
+          ]
+        },
+        {
+          "id": "seal",
+          "label": "Nusxa qanday tasdiqlangan bo'lishi kerak?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Tasdiqlash shart emas"
+            },
+            {
+              "id": "seal",
+              "label": "Muhr bosib tasdiqlangan"
+            },
+            {
+              "id": "sign",
+              "label": "Faqat imzo bilan"
+            }
+          ],
+          "correct": "seal",
+          "why": "Muhr bosib tasdiqlangan (66-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "muhr bosib tasdiqlangan",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar, basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa yoki hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ish qogʻozida bayon etilgan, ⟦muhr bosib tasdiqlangan⟧ va unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak.",
+              "anchor": "-55310"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Diplom nusxasini notarius tasdiqlaydimi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Mijoz diplom nusxasini tasdiqlatmoqchi; Nusxa universitet tomonidan berilgan; Universitet nusxani muhr bilan tasdiqlagan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar, ⟦basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa⟧ yoki hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ish qogʻozida bayon etilgan, muhr bosib tasdiqlangan va unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak.",
+              "anchor": "-55310"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Avvalgi nusxaning to'g'riligi notarial tartibda shahodatlangan bo'lsa; Nusxa asl nusxa tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan bo'lsa; Bunday nusxa yuridik shaxsning ish qog'ozida bayon etilgan va muhr bilan tasdiqlangan bo'lishi kerak; Nusxada hujjatning asli shu tashkilotda ekanligi yozib qo'yilgan bo'lishi kerak",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Nusxa tayyorlash",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "issue",
+          "label": "Tashkilot hujjat nusxasini o'z ish qog'ozida beradi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "ish qogʻozida bayon etilgan",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar, basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa yoki hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ⟦ish qogʻozida bayon etilgan⟧, muhr bosib tasdiqlangan va unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak.",
+              "anchor": "-55310"
+            }
+          ]
+        },
+        {
+          "id": "seal",
+          "label": "Nusxa muhr bosib tasdiqlanadi va unda asli tashkilotda ekanligi yoziladi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar, basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa yoki hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ish qogʻozida bayon etilgan, muhr bosib tasdiqlangan va ⟦unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak⟧.",
+              "anchor": "-55310"
+            }
+          ]
+        },
+        {
+          "id": "notary",
+          "label": "Notarius nusxaning to'g'riligini shahodatlaydi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "toʻgʻriligini notariuslar",
+              "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+              "text": "Hujjat nusxasidan koʻchirilgan nusxaning ⟦toʻgʻriligini notariuslar⟧, basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa yoki hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ish qogʻozida bayon etilgan, muhr bosib tasdiqlangan va unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak.",
+              "anchor": "-55310"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Avvalgi nusxa",
+      "sources": [
+        {
+          "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+          "article": "66-modda",
+          "url": "https://lex.uz/docs/-54458",
+          "quote": "basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa",
+          "heading": "66-modda. Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini shahodatlash",
+          "text": "Hujjat nusxasidan koʻchirilgan nusxaning toʻgʻriligini notariuslar, ⟦basharti avvalgi nusxaning toʻgʻriligi notarial tartibda shahodatlangan boʻlsa⟧ yoki hujjatning nusxasi uning asl nusxasi tayyorlangan korxona, muassasa, tashkilot tomonidan berilgan boʻlsa, shahodatlaydi. Keyingi holatda hujjatning nusxasi mazkur yuridik shaxsning ish qogʻozida bayon etilgan, muhr bosib tasdiqlangan va unda shu hujjatning asli mazkur korxona, muassasa, tashkilotda ekanligi yozib qoʻyilgan boʻlishi kerak.",
+          "anchor": "-55310"
+        }
+      ],
+      "points": 15,
+      "description": "Avvalgi nusxaning to'g'riligi notarial tartibda shahodatlangan bo'lsa, notarius undan ko'chirilgan nusxani shahodatlaydimi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Ha, shahodatlaydi"
+        },
+        {
+          "id": "b",
+          "label": "Yo'q, hech qachon"
+        },
+        {
+          "id": "c",
+          "label": "Faqat sud ruxsati bilan"
+        },
+        {
+          "id": "d",
+          "label": "Faqat prokuror ruxsati bilan"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

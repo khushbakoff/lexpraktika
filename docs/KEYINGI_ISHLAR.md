@@ -1,0 +1,73 @@
+# Keyingi ishlar
+
+Hozircha MVP'ga kirmagan, keyinga qoldirilgan ishlar. Bajarilganini o'chirib boring.
+
+- [ ] Baza (Supabase yoki Postgres) va foydalanuvchi avtorizatsiyasi
+- [ ] Ko'proq vaziyat: ijara, iste'molchi huquqi, YaTT, aliment
+- [ ] Qoraqalpoq va rus tillari
+- [ ] Capacitor bilan App Store / Play Market
+- [ ] Telegram bot kanali (bildirishnoma, rost/yolg'on tekshiruvi)
+- [ ] Lex.uz'dan qonun o'zgarishini avtomatik kuzatish
+- [ ] Ish beruvchi uchun profil ko'rinishi (talaba ruxsati bilan)
+- [ ] Ovozli rejim
+- [ ] O'qituvchi paneli (guruh natijalari)
+- [ ] Mijoz suhbati: hozir tez savollar, 4-bosqichda AI bilan erkin suhbat
+- [ ] Ariza: erkin matn va AI baholash (4-bosqich)
+- [ ] Yo'nalishga xos vaziyatlar: advokat, sudya, prokuror/tergovchi, notarius, korxona yuristi, davlat xizmati. Bir nizo turli rolda boshqacha ko'rinadi (masalan, ish haqi nizosi: xodim advokati vs korxona yuristi). Yurist bilan yoziladi
+- [ ] Streak, nishonlar (badge), kunlik missiya, reyting
+- [ ] Daraja bo'yicha qiyinlik (boshlovchi/orta/ilgor): vaziyatga `level` bor, lekin saralashda hali ishlatilmaydi
+- [ ] Mustaqil Android ilova (kabelsiz): `capacitor.config.ts` dagi `server.url` ni olib tashlash va web'ni build ichiga joylash (static export yoki hostingdagi https manzil), keyin `npx cap sync android`
+- [ ] Android ilova ikonkasi va splash (hozir standart Capacitor ikonkasi)
+- [ ] iOS: Capacitor iOS platforma, Apple Developer hisobi kerak
+- [ ] Release APK/AAB imzolash (keystore), Play Market
+- [ ] Parolni birinchi kirishda almashtirish (`must_change_password`), parol tiklash
+- [ ] Nomzod uchun bildirishnoma (email/Telegram)
+- [ ] Tashkilot o'zi talaba qidirishi (talaba "ochiq profil" rozilik bergan bo'lsa)
+- [ ] **Yurist tasdig'i (ustuvor):** 42 ta vaziyatning barcha asoslari Lex.uz matnidan olingan va iqtiboslari `python3 -I scripts/verify-quotes.py` bilan tekshirilgan, lekin yurist ko'rib `status: "verified"` + `reviewedBy` qo'ymaguncha ular "namunaviy" qoladi. Ayniqsa "bu variant ro'yxatda yo'q" tipidagi noto'g'ri javoblar va harakatlar tartibi (ketma-ketlik) tekshirilishi kerak
+- [ ] Qonun o'zgarganda vaziyatni avtomatik qayta tekshirish (Lex.uz kuzatuvi)
+- [ ] YaTT ochish: Lex.uz'da topilgan manbalar eski (2001, 2003 yillar qarorlari), joriy tartib (Vazirlar Mahkamasi qarori, davlat xizmatlari) aniq manbada topilmaguncha yozilmaydi
+- [ ] Jinoyat haqida ariza berish: Jinoyat-protsessual kodeksi matnini o'qib yoziladi (prokuror/tergovchi yo'nalishi uchun)
+- [ ] Aliment: voyaga yetgan bolalar, er-xotin aliment (99–101, 117–121-moddalar), notarial kelishuv (130–134)
+- [ ] Notariat: vasiyatnoma, meros (45, 58–63-moddalar). Shaxsiy ma'lumot: transchegaraviy uzatish (15-modda), javobgarlik (33-modda)
+- [ ] Iste'molchi qonunining 18-moddasi (maqbul sifatli tovarni 10 kunda almashtirish) uchun alohida vaziyat; qaytarilmaydigan tovarlar ro'yxati Hukumat qarorida (alohida manba kerak)
+- [ ] Lex.uz matnlari yangilanganda `sh scripts/fetch-lex.sh` va `verify-quotes.py` ni qayta ishga tushirish (qonun o'zgargan bo'lishi mumkin)
+- [ ] **HTTPS va domen (ustuvor):** hozir server HTTP, login/parol ochiq uzatiladi. Domen olib, nginx + certbot qo'yish, keyin `COOKIE_SECURE=true` va `capacitor.config.ts` dagi manzilni almashtirish
+- [ ] MongoDB zaxira nusxasi (`mongodump --db lexsim`, cron), serverda umumiy mongod autentifikatsiyasiz ishlaydi
+- [ ] Server xotirasi tig'iz (swap deyarli to'la): LexPraktika'ni alohida serverga ko'chirish yoki xotira bo'shatish
+- [ ] Platforma admini: universitet va tashkilot hisoblarini yaratish interfeysi (hozir `npm run seed` yoki qo'lda)
+- [ ] Email tasdiqlash va parol tiklash (mustaqil foydalanuvchilar uchun), hozir email tasdiqlanmaydi
+- [ ] Demo ma'lumotni (`demo.*` hisoblar) haqiqiy ishga tushirishdan oldin o'chirish
+- [ ] **Qat'iy qamrov (har yo'nalish x har daraja >= 10 ta o'z darajasida):** hozir faqat Advokat va Umumiy to'liq. Yetishmaydi: Sudya (1-daraja 6, 3-daraja 9), Prokuror/tergovchi (6/5/4), Notarius (3/5/2), Korxona yuristi (4/7/6), Davlat xizmati (8/3/3). Taxminan 25-30 ta yangi vaziyat kerak. `npm run coverage` holatni ko'rsatadi
+- [ ] Hali o'qilmagan qonunlar (yangi vaziyatlar uchun): Soliq kodeksi, Iqtisodiy protsessual kodeks, Ma'muriy sud ishlarini yuritish kodeksi, Mehnat kodeksining boshqa boblari (ommaviy bo'shatish, intizomiy jazo, moddiy javobgarlik), Fuqarolik kodeksining birinchi qismi (da'vo muddati, bitimlar, vakillik), Oila kodeksi (ota-onalik huquqi, meros), Jinoyat kodeksining Maxsus qismi
+- [ ] Mehnat kodeksi matni Lex.uz'da kirill yozuvida: ilovada kirill matn ko'rinadi. Lotin variantini topib almashtirish yoki lotinlashtirish
+- [ ] Vaziyat generatorlari `scripts/authoring/` da (faqat yangi vaziyatlar uchun manba), JSON'ni qo'lda tahrir qilsangiz qayta ishga tushirmang
+- [ ] AI mijoz: so'rov limiti hozir xotirada (`lib/server/rate-limit.ts`, bitta jarayon uchun). Bir nechta server bo'lsa MongoDB/Redis'ga ko'chirish; foydalanuvchi bo'yicha kunlik limit (bepul/pullik kurs bilan bog'lash)
+- [ ] AI mijoz: model `AI_MODEL` env bilan almashtiriladi (standart `claude-opus-5-5`). Xarajat/tezlik uchun `claude-haiku-5-5` yoki `claude-sonnet-5-5` bilan sifatni solishtirib ko'rish
+- [ ] AI mijoz: barcha 57 vaziyatda `hiddenFacts` AI uchun yetarlimi tekshirish (hozir faqat `mehnat-ish-haqi` bilan sinalmoqda)
+- [ ] `doc-review` 3 vaziyatda (mehnat, ijara, aliment), `draft` (AI) va muzokara/`counterpart` faqat `mehnat-ish-haqi` da. Boshqa vaziyatlarga ham qo'shish (shartnoma, da'vo arizasi, shikoyat): har bir mezon va xato bandi Lex.uz asosi bilan yoziladi
+- [ ] Sud majlisi simulyatori: `counterpart` (sudya) bilan ko'p rolli suhbat, talaba nutqi va dalil taqdimoti
+- [ ] `draft` bahosi: AI mezonni noto'g'ri baholashi mumkin. Tanlab inson tekshiruvi va talaba e'tirozi (shikoyat) tugmasi
+- [ ] **Google va Telegram kirishini ishga tushirish (ustuvor):** kod tayyor (`app/api/auth/*`). Kerak: domen + HTTPS, Google OAuth klienti (Console'da redirect URI), Telegram bot (`/setdomain`), env kalitlar. Telegram widget o'rniga domensiz variant kerak bo'lsa: bot orqali deep-link kirish
+- [ ] Maxfiylik siyosati va foydalanish shartlari (`app/maxfiylik`, `app/shartlar`) yurist ko'rib chiqishi kerak; aloqa ma'lumoti (email/telegram) yozilishi kerak
+- [ ] "Hisobni va ma'lumotlarni o'chirish" tugmasi (shaxsiy ma'lumot qonunidagi huquq): hozir faqat so'rov bo'yicha qo'lda
+- [ ] Til qatlami: faqat interfeys matnlari (`lib/i18n/dict.ts`) rus va ingliz tilida. Vaziyat mazmuni (Lex.uz matnlari), universitet/tashkilot panellari va yangi matnlar hali tarjima qilinmagan. Kirill va yangi alifbo avtomatik o'tkazgich (`lib/i18n/translit.ts`), tilshunos tekshirishi kerak
+- [ ] Majburiy ro'yxatdan o'tish yoqilgan: demoda hakamlar uchun tayyor hisob (`demo.*`) bering yoki mehmon rejimini qaytaring
+
+- Server nomi/yo'li (lexsim), localStorage kalitlari va paket id (uz.lexsim.app) ataylab o'zgartirilmadi; taqdimotdagi nomni almashtirish kerak
+- Seriya hozir faqat qurilmada (localStorage). Serverga ko'chirish, kunlik XP maqsadi, liga/reyting, tugunlarni qulflash (ketma-ket ochish) qo'shish mumkin
+- Lex.uz jonli tekshiruv: tahrir izohlari matndan olinadi; Lex.uz o'zgarishlar tarixi (oldingi tahrir) bilan aniq solishtirish, senariylardagi barcha manbalarni davriy (kunlik) tekshirib yurist panelida 'o'zgargan' belgisi chiqarish
+- Yordamchi: indeksni yangilash (sh scripts/fetch-lex.sh && python3 -I scripts/build-lex-index.py), indeksga boshqa qonunlar qo'shish, embedding bilan qidiruv, suhbatni davom ettirish (ko'p savol)
+- Mini App: o'z domen (sslip.io vaqtinchalik emas, lekin brend emas), Telegram Stars/to'lov, bildirishnomalar; Google kirish uchun ham endi HTTPS domen bor (GOOGLE_CLIENT_* kerak)
+- **Ma'lumot lokalizatsiyasi (ustuvor):** server hozir Kopengagenda (Webdock). Foydalanuvchi ma'lumoti O'zbekistondagi hostingga ko'chirilishi kerak (yurist bilan tasdiqlash). AI (Groq, AQSh) chet elda: mahalliy model (masalan gpt-oss-20b, GPU serverda O'zbekistonda) yoki mahalliy AI provayder.
+
+## Ariza yozish ustaxonasi (kompyuter versiyasi)
+- Mashqlar (`content/ariza/tasks.json`) 1-2 daraja o'zimiz yozgan format mashqlari, 3-6 vaziyat JSON mezonlaridan olingan. Yurist ko'rib chiqishi kerak ("namunaviy").
+- Mashq natijalari hozir faqat brauzerda (localStorage). Server/profilga saqlash va universitet panelida ko'rsatish kerak.
+- Tuzilish tekshiruvi qoidalarga asoslangan (lib/ariza.ts): murakkab hujjatlarda yolg'on ogohlantirish bo'lishi mumkin, haqiqiy talabalar bilan sinab sozlash kerak.
+- Qo'shimcha mashqlar: ishdan bo'shash arizasi, shikoyat, da'vo arizasi (ko'p talabli).
+- Ariza: 1-daraja AI'siz mashqlari (kimga, kimdan, sana_imzo, ilova, asos) faqat tuzilishni tekshiradi: kalit so'zlardan iborat ma'nosiz matn ham o'tadi. Mazmunni tekshirish (AI yoki "given" bilan solishtirish) kerak.
+- Ariza: tovar, aliment, ijara mashqlarida to'liq namuna o'rniga tuzilma namunasi ([qavs] bilan). To'liq namunani yurist yozishi kerak (qaysi modda talabning asosi, ilovalar ro'yxati). ish_haqi va ish_haqi_tayyor namunalari 333/549-moddalarga tayanadi, yurist tasdig'i kerak.
+- Ariza: shikoyat mashqlari (apellyatsiya, ma'muriy shikoyat), "ilovalar papkasi" (kerakli/ortiqcha hujjatni tanlash), topshirgandan keyin organ javobi (qabul qilindi / harakatsiz qoldirildi) hali yo'q.
+- Ariza AI yordamchi: suhbat faqat brauzer xotirasida (sahifa yangilansa o'chadi). Kerak bo'lsa serverga saqlash; AI javob sifatini haqiqiy talabalar bilan baholash.
+- Ariza Word: abzats chekinishi (o'ng yarim) brauzerning bekor qilish tarixiga tushmaydi; .doc yuklab olish HTML asosida (haqiqiy .docx uchun kutubxona kerak).
+- [ ] **AI limiti (qaror kerak):** serverda DEFAULT_PLAN yo'q, foydalanuvchilar Bepul tarifda: AI (ariza yordamchi + AI tekshiruv + mijoz) kuniga 5 ta so'rov. Demo uchun .env.production ga DEFAULT_PLAN=pro qo'shish yoki ariza AI ga alohida limit berish.

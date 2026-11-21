@@ -1,0 +1,454 @@
+{
+  "id": "notariat-ishonib-topshirish",
+  "title": "Ishonchnomani boshqa shaxsga qayta topshirish",
+  "area": "Notariat",
+  "areaId": "fuqarolik",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy",
+    "korxona"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Vakil o'ziga berilgan ishonchnoma vakolatini boshqa shaxsga ishonib topshirmoqchi. Qayta ishonchnomani tasdiqlash shartlarini «Notariat to'g'risida»gi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Farrux, 40 yosh, vakil",
+    "openingLine": "Assalomu alaykum. Menga ishonchnoma berilgan, men uni boshqa kishiga qayta topshirmoqchiman. Notarius buni tasdiqlaydimi?",
+    "hiddenFacts": [
+      {
+        "id": "main",
+        "fact": "Farruxga asosiy ishonchnoma berilgan",
+        "revealOn": []
+      },
+      {
+        "id": "delegate",
+        "fact": "Asosiy ishonchnomada ishonib topshirish huquqi ko'rsatilgan",
+        "revealOn": []
+      },
+      {
+        "id": "scope",
+        "fact": "Qayta ishonchnomada asosiydan ortiq vakolat yozilmoqchi",
+        "revealOn": []
+      },
+      {
+        "id": "term",
+        "fact": "Qayta ishonchnomaning muddati asosiydan uzoq bo'lishi rejalashtirilgan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "main",
+        "delegate",
+        "scope"
+      ],
+      "questions": [
+        {
+          "id": "q-main",
+          "text": "Sizga qanday ishonchnoma berilgan?",
+          "factId": "main",
+          "reply": "Mijozdan asosiy ishonchnoma olganman."
+        },
+        {
+          "id": "q-delegate",
+          "text": "Unda boshqaga topshirish huquqi bormi?",
+          "factId": "delegate",
+          "reply": "Ha, bunday huquq ko'rsatilgan."
+        },
+        {
+          "id": "q-scope",
+          "text": "Qanday vakolat yozmoqchisiz?",
+          "factId": "scope",
+          "reply": "Asosiydagidan bir oz ko'proq."
+        },
+        {
+          "id": "q-term",
+          "text": "Muddati qancha?",
+          "factId": "term",
+          "reply": "Asosiy muddatdan uzoqroq."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Qayta ishonchnoma shartlari",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Vakolatni boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "main",
+          "label": "Ishonib topshirish huquqi ko'rsatilgan asosiy ishonchnoma taqdim etilgandan keyin tasdiqlanadi",
+          "required": true,
+          "why": "47-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma ⟦shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin⟧ yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish muddatidan ortiq boʻlishi mumkin emas.",
+              "anchor": "-55232"
+            }
+          ]
+        },
+        {
+          "id": "scope",
+          "label": "Qayta ishonchnoma asosiy ishonchnomadan ko'proq huquqni qamrab olmasligi kerak",
+          "required": true,
+          "why": "47-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma ⟦asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak⟧. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish muddatidan ortiq boʻlishi mumkin emas.",
+              "anchor": "-55232"
+            }
+          ]
+        },
+        {
+          "id": "term",
+          "label": "Qayta ishonchnomaning amal qilish muddati asosiy ishonchnomadan ortiq bo'lishi mumkin emas",
+          "required": true,
+          "why": "47-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish muddatidan ortiq boʻlishi mumkin emas",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning ⟦amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish muddatidan ortiq boʻlishi mumkin emas⟧.",
+              "anchor": "-55232"
+            }
+          ]
+        },
+        {
+          "id": "notary",
+          "label": "Notariuslar bir yoki bir necha shaxs nomidan yozilgan ishonchnomalarni tasdiqlaydi",
+          "required": true,
+          "why": "47-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Notariuslar bir yoki bir necha shaxs nomidan bir yoki bir necha shaxs nomiga yozilgan ishonchnomalarni tasdiqlaydi",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "⟦Notariuslar bir yoki bir necha shaxs nomidan bir yoki bir necha shaxs nomiga yozilgan ishonchnomalarni tasdiqlaydi⟧.",
+              "anchor": "-55232"
+            }
+          ]
+        },
+        {
+          "id": "more",
+          "label": "Qayta ishonchnomada asosiydan ko'proq vakolat berish mumkin",
+          "required": false,
+          "why": "Asosiydan ko'proq huquqni qamrab olmasligi kerak (47-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "koʻproq huquqni qamrab olmasligi kerak",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma asosiy ishonchnoma boʻyicha berilganidan ⟦koʻproq huquqni qamrab olmasligi kerak⟧. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish muddatidan ortiq boʻlishi mumkin emas.",
+              "anchor": "-55232"
+            }
+          ]
+        },
+        {
+          "id": "longer",
+          "label": "Qayta ishonchnoma asosiydan uzoq muddatga berilishi mumkin",
+          "required": false,
+          "why": "Asosiy ishonchnoma muddatidan ortiq bo'lishi mumkin emas (47-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "muddatidan ortiq boʻlishi mumkin emas",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish ⟦muddatidan ortiq boʻlishi mumkin emas⟧.",
+              "anchor": "-55232"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Shartlar",
+      "sources": [],
+      "points": 25,
+      "description": "Shartlarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "basis",
+          "label": "Qayta ishonchnoma qaysi hujjat taqdim etilgandan keyin tasdiqlanadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Hech qanday hujjatsiz"
+            },
+            {
+              "id": "main",
+              "label": "Ishonib topshirish huquqi ko'rsatilgan asosiy ishonchnoma"
+            },
+            {
+              "id": "pass",
+              "label": "Faqat pasport"
+            }
+          ],
+          "correct": "main",
+          "why": "Ishonib topshirish huquqi ko'rsatilgan asosiy ishonchnoma (47-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma ⟦shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin⟧ yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish muddatidan ortiq boʻlishi mumkin emas.",
+              "anchor": "-55232"
+            }
+          ]
+        },
+        {
+          "id": "scope",
+          "label": "Qayta ishonchnoma vakolati hajmi",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "more",
+              "label": "Asosiydan ko'proq bo'lishi mumkin"
+            },
+            {
+              "id": "limit",
+              "label": "Asosiydan ko'proq bo'lmasligi kerak"
+            },
+            {
+              "id": "any",
+              "label": "Cheklanmagan"
+            }
+          ],
+          "correct": "limit",
+          "why": "Asosiy ishonchnomadan ko'proq huquqni qamrab olmasligi kerak (47-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma ⟦asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak⟧. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish muddatidan ortiq boʻlishi mumkin emas.",
+              "anchor": "-55232"
+            }
+          ]
+        },
+        {
+          "id": "term",
+          "label": "Qayta ishonchnoma muddati",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "long",
+              "label": "Asosiy muddatdan uzoq bo'lishi mumkin"
+            },
+            {
+              "id": "short",
+              "label": "Asosiy muddatdan ortiq bo'lishi mumkin emas"
+            },
+            {
+              "id": "forever",
+              "label": "Muddatsiz"
+            }
+          ],
+          "correct": "short",
+          "why": "Asosiy ishonchnoma muddatidan ortiq bo'lishi mumkin emas (47-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "muddatidan ortiq boʻlishi mumkin emas",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish ⟦muddatidan ortiq boʻlishi mumkin emas⟧.",
+              "anchor": "-55232"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Ishonchnomani boshqa shaxsga qayta topshirish). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Farruxga asosiy ishonchnoma berilgan; Asosiy ishonchnomada ishonib topshirish huquqi ko'rsatilgan; Qayta ishonchnomada asosiydan ortiq vakolat yozilmoqchi",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma ⟦shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin⟧ yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish muddatidan ortiq boʻlishi mumkin emas.",
+              "anchor": "-55232"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Ishonib topshirish huquqi ko'rsatilgan asosiy ishonchnoma taqdim etilgandan keyin tasdiqlanadi; Qayta ishonchnoma asosiy ishonchnomadan ko'proq huquqni qamrab olmasligi kerak; Qayta ishonchnomaning amal qilish muddati asosiy ishonchnomadan ortiq bo'lishi mumkin emas; Notariuslar bir yoki bir necha shaxs nomidan yozilgan ishonchnomalarni tasdiqlaydi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Qayta ishonchnoma tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "main",
+          "label": "Vakilga ishonib topshirish huquqi ko'rsatilgan asosiy ishonchnoma beriladi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma shunday ⟦ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma⟧ taqdim etilganidan keyin yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish muddatidan ortiq boʻlishi mumkin emas.",
+              "anchor": "-55232"
+            }
+          ]
+        },
+        {
+          "id": "present",
+          "label": "Vakil notariusga asosiy ishonchnomani taqdim etadi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "asosiy ishonchnoma taqdim etilganidan keyin",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan ⟦asosiy ishonchnoma taqdim etilganidan keyin⟧ yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish muddatidan ortiq boʻlishi mumkin emas.",
+              "anchor": "-55232"
+            }
+          ]
+        },
+        {
+          "id": "confirm",
+          "label": "Notarius asosiydan ortiq vakolat va muddat bo'lmagan qayta ishonchnomani tasdiqlaydi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "47-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "amal qilish muddatidan ortiq boʻlishi mumkin emas",
+              "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+              "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning ⟦amal qilish muddatidan ortiq boʻlishi mumkin emas⟧.",
+              "anchor": "-55232"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Muddat",
+      "sources": [
+        {
+          "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+          "article": "47-modda",
+          "url": "https://lex.uz/docs/-54458",
+          "quote": "amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish muddatidan ortiq boʻlishi mumkin emas",
+          "heading": "47-modda. Ishonchnomalarni tasdiqlash",
+          "text": "Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma shunday ishonib topshirish huquqi koʻrsatib qoʻyilgan asosiy ishonchnoma taqdim etilganidan keyin yoki asosiy ishonchnoma boʻyicha vakil ishonchnoma bergan shaxsning manfaatlarini himoya qilish uchun vaziyat taqozosi bilan shunday ish tutishga majbur boʻlganligi haqida dalillar taqdim etganidan keyin notarial tasdiqlanishi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnoma asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak. Oʻz vakolatini boshqa shaxsga ishonib topshirish tartibida berilgan ishonchnomaning ⟦amal qilish muddati bu ishonchnomani berishga asos boʻlgan asosiy ishonchnomaning amal qilish muddatidan ortiq boʻlishi mumkin emas⟧.",
+          "anchor": "-55232"
+        }
+      ],
+      "points": 15,
+      "description": "Qayta ishonchnomaning amal qilish muddati qanday bo'lishi kerak?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Asosiy ishonchnoma muddatidan ortiq bo'lishi mumkin emas"
+        },
+        {
+          "id": "b",
+          "label": "Hech qanday cheklov yo'q"
+        },
+        {
+          "id": "c",
+          "label": "Doim 1 yil"
+        },
+        {
+          "id": "d",
+          "label": "Asosiydan 2 baravar uzoq"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

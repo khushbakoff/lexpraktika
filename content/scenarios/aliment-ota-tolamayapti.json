@@ -1,0 +1,652 @@
+{
+  "id": "aliment-ota-tolamayapti",
+  "title": "Bolalarning otasi aliment to'lamayapti",
+  "area": "Oila huquqi",
+  "areaId": "oila",
+  "tracks": [
+    "advokat",
+    "sudya",
+    "notarius",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Ikki voyaga yetmagan bolaning onasi mijoz. Ota to'rt oydan beri aliment to'lamayapti. Kim murojaat qiladi, miqdor qanday hisoblanadi, tartib va muddat qanday, Oila kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Nodira, 33 yosh, ikki farzandning onasi",
+    "openingLine": "Assalomu alaykum. Bolalarimning otasi to'rt oydan beri aliment bermayapti, nima qilsam bo'ladi?",
+    "hiddenFacts": [
+      {
+        "id": "kids",
+        "fact": "Ikkita voyaga yetmagan farzand (7 va 4 yosh)",
+        "revealOn": [
+          "farzand",
+          "bola"
+        ]
+      },
+      {
+        "id": "income",
+        "fact": "Otasi oyiga 6 000 000 so'm daromad oladi",
+        "revealOn": [
+          "daromad",
+          "ish haqi"
+        ]
+      },
+      {
+        "id": "agreement",
+        "fact": "Aliment haqida kelishuv yo'q",
+        "revealOn": [
+          "kelishuv"
+        ]
+      },
+      {
+        "id": "since",
+        "fact": "To'rt oydan beri to'lanmagan",
+        "revealOn": [
+          "qachondan"
+        ]
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 5,
+      "description": "Nechta bola, otaning daromadi, kelishuv bormi.",
+      "requiredFactIds": [
+        "kids",
+        "income",
+        "agreement"
+      ],
+      "questions": [
+        {
+          "id": "q-kids",
+          "text": "Nechta voyaga yetmagan farzandingiz bor?",
+          "factId": "kids",
+          "reply": "Ikkita: 7 yoshli o'g'il va 4 yoshli qiz."
+        },
+        {
+          "id": "q-income",
+          "text": "Bolalarning otasi qancha daromad oladi?",
+          "factId": "income",
+          "reply": "Korxonada ishlaydi, oyiga 6 000 000 so'm oladi."
+        },
+        {
+          "id": "q-agreement",
+          "text": "Aliment haqida kelishuv bormi?",
+          "factId": "agreement",
+          "reply": "Yo'q, hech qanday kelishuv tuzmaganmiz."
+        },
+        {
+          "id": "q-since",
+          "text": "Qachondan beri to'lamayapti?",
+          "factId": "since",
+          "reply": "To'rt oydan beri bir tiyin ham bermadi."
+        },
+        {
+          "id": "q-pet",
+          "text": "Bolalaringiz uy hayvonini yoqtiradimi?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, aliment haqida gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "who",
+      "type": "document-pick",
+      "title": "Kim sudga murojaat qiladi?",
+      "sources": [],
+      "points": 15,
+      "description": "Aliment undirish haqida kim talab qo'yishi mumkin.",
+      "prompt": "Voyaga yetmagan bolalar uchun aliment undirish bo'yicha kimlar sudga murojaat qilishga haqli? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "parent",
+          "label": "Aliment olish huquqiga ega shaxs (bolalar bilan yashayotgan ota yoki ona)",
+          "required": true,
+          "why": "Aliment olish huquqiga ega shaxs sudga murojaat qilishga haqli (136-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "136-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Aliment olish huquqiga ega boʻlgan shaxs, aliment talab qilish huquqi vujudga kelganidan soʻng qancha muddat oʻtganidan qatʼi nazar, xohlagan vaqtda aliment undirish toʻgʻrisidagi talab bilan sudga murojaat qilishga haqlidir.",
+              "heading": "136-modda. Alimentni sud tartibida undirish",
+              "text": "⟦Aliment olish huquqiga ega boʻlgan shaxs, aliment talab qilish huquqi vujudga kelganidan soʻng qancha muddat oʻtganidan qatʼi nazar, xohlagan vaqtda aliment undirish toʻgʻrisidagi talab bilan sudga murojaat qilishga haqlidir.⟧",
+              "anchor": "-159404"
+            }
+          ]
+        },
+        {
+          "id": "guardian",
+          "label": "Vasiylik va homiylik organlari",
+          "required": true,
+          "why": "Ota-ona kelishuvi bo'lmaganda va ular sudga murojaat qilmaganda vasiylik va homiylik organlari ham da'vo qo'zg'atishga haqli (96-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "96-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "vasiylik va homiylik organlari, shuningdek oʻn toʻrt yoshga toʻlgan bola voyaga yetmagan bolaning taʼminoti uchun ota yoki onadan qonunda belgilangan miqdorda aliment undirish toʻgʻrisida daʼvo qoʻzgʻatishga haqlidir",
+              "heading": "96-modda. Ota-onaning voyaga yetmagan bolalariga taʼminot berish majburiyati",
+              "text": "Voyaga yetmagan bolalarga aliment toʻlash haqida ota-ona oʻrtasida kelishuv boʻlmaganda yoki aliment ixtiyoriy ravishda toʻlanmaganda va ota-onadan birortasi ham aliment undirish toʻgʻrisida sudga daʼvo yoxud ariza bilan murojaat qilmagan hollarda, ⟦vasiylik va homiylik organlari, shuningdek oʻn toʻrt yoshga toʻlgan bola voyaga yetmagan bolaning taʼminoti uchun ota yoki onadan qonunda belgilangan miqdorda aliment undirish toʻgʻrisida daʼvo qoʻzgʻatishga haqlidir⟧.",
+              "anchor": "-159180"
+            }
+          ]
+        },
+        {
+          "id": "child14",
+          "label": "O'n to'rt yoshga to'lgan bola",
+          "required": true,
+          "why": "96-moddaning uchinchi qismi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "96-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "shuningdek oʻn toʻrt yoshga toʻlgan bola voyaga yetmagan bolaning taʼminoti uchun ota yoki onadan qonunda belgilangan miqdorda aliment undirish toʻgʻrisida daʼvo qoʻzgʻatishga haqlidir",
+              "heading": "96-modda. Ota-onaning voyaga yetmagan bolalariga taʼminot berish majburiyati",
+              "text": "Voyaga yetmagan bolalarga aliment toʻlash haqida ota-ona oʻrtasida kelishuv boʻlmaganda yoki aliment ixtiyoriy ravishda toʻlanmaganda va ota-onadan birortasi ham aliment undirish toʻgʻrisida sudga daʼvo yoxud ariza bilan murojaat qilmagan hollarda, vasiylik va homiylik organlari, ⟦shuningdek oʻn toʻrt yoshga toʻlgan bola voyaga yetmagan bolaning taʼminoti uchun ota yoki onadan qonunda belgilangan miqdorda aliment undirish toʻgʻrisida daʼvo qoʻzgʻatishga haqlidir⟧.",
+              "anchor": "-159180"
+            }
+          ]
+        },
+        {
+          "id": "school",
+          "label": "Bolalarning maktab direktori",
+          "required": false,
+          "why": "96 va 136-moddalarda aliment undirish uchun murojaat qiluvchi shaxslar orasida maktab direktori ko'rsatilmagan.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "96-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Voyaga yetmagan bolalariga taʼminot berish majburiyatini ixtiyoriy ravishda bajarmagan ota (ona)dan sudning hal qiluv qaroriga yoki sud buyrugʻiga asosan aliment undiriladi.",
+              "heading": "96-modda. Ota-onaning voyaga yetmagan bolalariga taʼminot berish majburiyati",
+              "text": "⟦Voyaga yetmagan bolalariga taʼminot berish majburiyatini ixtiyoriy ravishda bajarmagan ota (ona)dan sudning hal qiluv qaroriga yoki sud buyrugʻiga asosan aliment undiriladi.⟧",
+              "anchor": "-159180"
+            }
+          ]
+        },
+        {
+          "id": "neighbor",
+          "label": "Oilaning qo'shnisi",
+          "required": false,
+          "why": "96 va 136-moddalarda bunday shaxs ko'rsatilmagan.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "96-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Voyaga yetmagan bolalariga taʼminot berish majburiyatini ixtiyoriy ravishda bajarmagan ota (ona)dan sudning hal qiluv qaroriga yoki sud buyrugʻiga asosan aliment undiriladi.",
+              "heading": "96-modda. Ota-onaning voyaga yetmagan bolalariga taʼminot berish majburiyati",
+              "text": "⟦Voyaga yetmagan bolalariga taʼminot berish majburiyatini ixtiyoriy ravishda bajarmagan ota (ona)dan sudning hal qiluv qaroriga yoki sud buyrugʻiga asosan aliment undiriladi.⟧",
+              "anchor": "-159180"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amount",
+      "type": "form",
+      "title": "Aliment miqdori",
+      "sources": [],
+      "points": 15,
+      "description": "Kelishuv bo'lmaganda sud belgilaydigan miqdorni hisoblang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "share",
+          "label": "Ikki bola uchun otaning oylik daromadining qaysi qismi undiriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "quarter",
+              "label": "To'rtdan bir qismi"
+            },
+            {
+              "id": "third",
+              "label": "Uchdan bir qismi"
+            },
+            {
+              "id": "half",
+              "label": "Yarmi"
+            },
+            {
+              "id": "fifth",
+              "label": "Beshdan bir qismi"
+            }
+          ],
+          "correct": "third",
+          "why": "Kelishuv bo'lmasa: bir bola uchun to'rtdan bir, ikki bola uchun uchdan bir, uch va undan ortiq bola uchun yarmi (99-modda). Sud ahvolga qarab kamaytirishi yoki ko'paytirishi mumkin.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "99-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "ikki bola uchun — uchdan bir qismi",
+              "heading": "99-modda. Ota-onaning voyaga yetmagan bolalariga toʻlaydigan aliment miqdori",
+              "text": "Agar voyaga yetmagan bolalariga taʼminot berish haqida ota-ona oʻrtasida kelishuv boʻlmasa, ularning taʼminoti uchun aliment sud tomonidan ota-onaning har oydagi ish haqi va (yoki) boshqa daromadining bir bola uchun — toʻrtdan bir qismi; ⟦ikki bola uchun — uchdan bir qismi⟧; uch va undan ortiq bola uchun — yarmisi miqdorida undiriladi. Bu toʻlovlarning miqdori taraflarning moddiy yoki oilaviy ahvolini va boshqa eʼtiborga loyiq holatlarni hisobga olgan holda sud tomonidan kamaytirilishi yoki koʻpaytirilishi mumkin.",
+              "anchor": "-159203"
+            }
+          ]
+        },
+        {
+          "id": "sum",
+          "label": "Otaning daromadi 6 000 000 so'm. Ikki bolaga oyiga necha so'm aliment (so'm)?",
+          "kind": "number",
+          "options": [],
+          "correct": "2000000",
+          "why": "6 000 000 so'mning uchdan bir qismi = 2 000 000 so'm (99-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "99-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "ikki bola uchun — uchdan bir qismi",
+              "heading": "99-modda. Ota-onaning voyaga yetmagan bolalariga toʻlaydigan aliment miqdori",
+              "text": "Agar voyaga yetmagan bolalariga taʼminot berish haqida ota-ona oʻrtasida kelishuv boʻlmasa, ularning taʼminoti uchun aliment sud tomonidan ota-onaning har oydagi ish haqi va (yoki) boshqa daromadining bir bola uchun — toʻrtdan bir qismi; ⟦ikki bola uchun — uchdan bir qismi⟧; uch va undan ortiq bola uchun — yarmisi miqdorida undiriladi. Bu toʻlovlarning miqdori taraflarning moddiy yoki oilaviy ahvolini va boshqa eʼtiborga loyiq holatlarni hisobga olgan holda sud tomonidan kamaytirilishi yoki koʻpaytirilishi mumkin.",
+              "anchor": "-159203"
+            }
+          ]
+        },
+        {
+          "id": "floor",
+          "label": "Har bir bola uchun aliment eng kam ish haqining necha foizidan kam bo'lmasligi kerak?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "p10",
+              "label": "10 foiz"
+            },
+            {
+              "id": "p265",
+              "label": "26,5 foiz"
+            },
+            {
+              "id": "p50",
+              "label": "50 foiz"
+            },
+            {
+              "id": "p100",
+              "label": "100 foiz"
+            }
+          ],
+          "correct": "p265",
+          "why": "Har bir bola uchun undiriladigan aliment qonunchilikda belgilangan mehnatga haq to'lash eng kam miqdorining 26,5 foizidan kam bo'lmasligi kerak (99-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "99-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "26,5 foizidan kam boʻlmasligi kerak",
+              "heading": "99-modda. Ota-onaning voyaga yetmagan bolalariga toʻlaydigan aliment miqdori",
+              "text": "Har bir bola uchun undiriladigan aliment miqdori qonunchilik bilan belgilangan mehnatga haq toʻlash eng kam miqdorining ⟦26,5 foizidan kam boʻlmasligi kerak⟧.",
+              "anchor": "-159203"
+            }
+          ]
+        },
+        {
+          "id": "from",
+          "label": "Aliment qaysi paytdan boshlab undiriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "birth",
+              "label": "Bolalar tug'ilgan kundan"
+            },
+            {
+              "id": "divorce",
+              "label": "Ajrashgan kundan"
+            },
+            {
+              "id": "filing",
+              "label": "Sudga murojaat etilgan paytdan"
+            }
+          ],
+          "correct": "filing",
+          "why": "Aliment sudga murojaat etilgan paytdan boshlab undiriladi (136-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "136-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Aliment sudga murojaat etilgan paytdan boshlab undiriladi.",
+              "heading": "136-modda. Alimentni sud tartibida undirish",
+              "text": "⟦Aliment sudga murojaat etilgan paytdan boshlab undiriladi.⟧",
+              "anchor": "-159404"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "type": "doc-review",
+      "title": "Da'vo arizasidagi xatolarni toping",
+      "points": 10,
+      "sources": [],
+      "description": "Kichik yurist aliment undirish bo'yicha da'vo arizasi loyihasini yozdi. Sudga topshirishdan oldin xatolarni toping.",
+      "docTitle": "Aliment undirish to'g'risida sudga DA'VO ARIZASI (loyiha)",
+      "clauses": [
+        {
+          "id": "c1",
+          "text": "Men, Nodira, ikki voyaga yetmagan farzandimning (7 va 4 yosh) onasiman.",
+          "flawed": false,
+          "why": "Bu mijoz aytgan faktlarga mos.",
+          "fix": "",
+          "sources": []
+        },
+        {
+          "id": "c2",
+          "text": "Bolalarning otasi bilan aliment to'g'risida kelishuvimiz bor, lekin u bajarmayapti.",
+          "flawed": true,
+          "why": "Mijoz aytgan fakt: aliment haqida kelishuv yo'q. Kelishuv bo'lmasagina aliment miqdorini sud belgilaydi (99-modda).",
+          "fix": "Aliment bo'yicha kelishuv yo'qligini ko'rsatish.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "99-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "ikki bola uchun — uchdan bir qismi",
+              "heading": "99-modda. Ota-onaning voyaga yetmagan bolalariga toʻlaydigan aliment miqdori",
+              "text": "Agar voyaga yetmagan bolalariga taʼminot berish haqida ota-ona oʻrtasida kelishuv boʻlmasa, ularning taʼminoti uchun aliment sud tomonidan ota-onaning har oydagi ish haqi va (yoki) boshqa daromadining bir bola uchun — toʻrtdan bir qismi; ⟦ikki bola uchun — uchdan bir qismi⟧; uch va undan ortiq bola uchun — yarmisi miqdorida undiriladi. Bu toʻlovlarning miqdori taraflarning moddiy yoki oilaviy ahvolini va boshqa eʼtiborga loyiq holatlarni hisobga olgan holda sud tomonidan kamaytirilishi yoki koʻpaytirilishi mumkin.",
+              "anchor": "-159203"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "text": "Otasi to'rt oydan beri aliment to'lamayapti.",
+          "flawed": false,
+          "why": "Bu mijoz aytgan faktga mos.",
+          "fix": "",
+          "sources": []
+        },
+        {
+          "id": "c4",
+          "text": "Otasining oylik daromadi 4 000 000 so'm.",
+          "flawed": true,
+          "why": "Mijoz aytgan fakt: otasi oyiga 6 000 000 so'm daromad oladi. Aliment aynan daromaddan hisoblanadi (99-modda), shuning uchun daromad noto'g'ri yozilsa, summa ham noto'g'ri chiqadi.",
+          "fix": "6 000 000 so'm.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "99-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "ikki bola uchun — uchdan bir qismi",
+              "heading": "99-modda. Ota-onaning voyaga yetmagan bolalariga toʻlaydigan aliment miqdori",
+              "text": "Agar voyaga yetmagan bolalariga taʼminot berish haqida ota-ona oʻrtasida kelishuv boʻlmasa, ularning taʼminoti uchun aliment sud tomonidan ota-onaning har oydagi ish haqi va (yoki) boshqa daromadining bir bola uchun — toʻrtdan bir qismi; ⟦ikki bola uchun — uchdan bir qismi⟧; uch va undan ortiq bola uchun — yarmisi miqdorida undiriladi. Bu toʻlovlarning miqdori taraflarning moddiy yoki oilaviy ahvolini va boshqa eʼtiborga loyiq holatlarni hisobga olgan holda sud tomonidan kamaytirilishi yoki koʻpaytirilishi mumkin.",
+              "anchor": "-159203"
+            }
+          ]
+        },
+        {
+          "id": "c5",
+          "text": "Daromadning to'rtdan bir qismini aliment sifatida undirishni so'rayman.",
+          "flawed": true,
+          "why": "Kelishuv bo'lmasa ikki bola uchun daromadning uchdan bir qismi undiriladi; to'rtdan bir qism bir bola uchun (99-modda).",
+          "fix": "Daromadning uchdan bir qismi (6 000 000 so'm uchun 2 000 000 so'm).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "99-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "ikki bola uchun — uchdan bir qismi",
+              "heading": "99-modda. Ota-onaning voyaga yetmagan bolalariga toʻlaydigan aliment miqdori",
+              "text": "Agar voyaga yetmagan bolalariga taʼminot berish haqida ota-ona oʻrtasida kelishuv boʻlmasa, ularning taʼminoti uchun aliment sud tomonidan ota-onaning har oydagi ish haqi va (yoki) boshqa daromadining bir bola uchun — toʻrtdan bir qismi; ⟦ikki bola uchun — uchdan bir qismi⟧; uch va undan ortiq bola uchun — yarmisi miqdorida undiriladi. Bu toʻlovlarning miqdori taraflarning moddiy yoki oilaviy ahvolini va boshqa eʼtiborga loyiq holatlarni hisobga olgan holda sud tomonidan kamaytirilishi yoki koʻpaytirilishi mumkin.",
+              "anchor": "-159203"
+            }
+          ]
+        },
+        {
+          "id": "c6",
+          "text": "Aliment har bir bola uchun eng kam ish haqining 26,5 foizidan kam bo'lmasligini so'rayman.",
+          "flawed": false,
+          "why": "Har bir bola uchun undiriladigan aliment qonunchilikda belgilangan eng kam miqdorning 26,5 foizidan kam bo'lmasligi kerak (99-modda).",
+          "fix": "",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "99-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "26,5 foizidan kam boʻlmasligi kerak",
+              "heading": "99-modda. Ota-onaning voyaga yetmagan bolalariga toʻlaydigan aliment miqdori",
+              "text": "Har bir bola uchun undiriladigan aliment miqdori qonunchilik bilan belgilangan mehnatga haq toʻlash eng kam miqdorining ⟦26,5 foizidan kam boʻlmasligi kerak⟧.",
+              "anchor": "-159203"
+            }
+          ]
+        },
+        {
+          "id": "c7",
+          "text": "Alimentni sudga murojaat etilgan paytdan boshlab undirishni so'rayman.",
+          "flawed": false,
+          "why": "Aliment sudga murojaat etilgan paytdan boshlab undiriladi (136-modda).",
+          "fix": "",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "136-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Aliment sudga murojaat etilgan paytdan boshlab undiriladi.",
+              "heading": "136-modda. Alimentni sud tartibida undirish",
+              "text": "⟦Aliment sudga murojaat etilgan paytdan boshlab undiriladi.⟧",
+              "anchor": "-159404"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Bolalarning otasi aliment to'lamayapti). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Ikkita voyaga yetmagan farzand (7 va 4 yosh); Otasi oyiga 6 000 000 so'm daromad oladi; Aliment haqida kelishuv yo'q",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "136-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Aliment olish huquqiga ega boʻlgan shaxs, aliment talab qilish huquqi vujudga kelganidan soʻng qancha muddat oʻtganidan qatʼi nazar, xohlagan vaqtda aliment undirish toʻgʻrisidagi talab bilan sudga murojaat qilishga haqlidir.",
+              "heading": "136-modda. Alimentni sud tartibida undirish",
+              "text": "⟦Aliment olish huquqiga ega boʻlgan shaxs, aliment talab qilish huquqi vujudga kelganidan soʻng qancha muddat oʻtganidan qatʼi nazar, xohlagan vaqtda aliment undirish toʻgʻrisidagi talab bilan sudga murojaat qilishga haqlidir.⟧",
+              "anchor": "-159404"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "96-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "vasiylik va homiylik organlari, shuningdek oʻn toʻrt yoshga toʻlgan bola voyaga yetmagan bolaning taʼminoti uchun ota yoki onadan qonunda belgilangan miqdorda aliment undirish toʻgʻrisida daʼvo qoʻzgʻatishga haqlidir",
+              "heading": "96-modda. Ota-onaning voyaga yetmagan bolalariga taʼminot berish majburiyati",
+              "text": "Voyaga yetmagan bolalarga aliment toʻlash haqida ota-ona oʻrtasida kelishuv boʻlmaganda yoki aliment ixtiyoriy ravishda toʻlanmaganda va ota-onadan birortasi ham aliment undirish toʻgʻrisida sudga daʼvo yoxud ariza bilan murojaat qilmagan hollarda, ⟦vasiylik va homiylik organlari, shuningdek oʻn toʻrt yoshga toʻlgan bola voyaga yetmagan bolaning taʼminoti uchun ota yoki onadan qonunda belgilangan miqdorda aliment undirish toʻgʻrisida daʼvo qoʻzgʻatishga haqlidir⟧.",
+              "anchor": "-159180"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Aliment olish huquqiga ega shaxs (bolalar bilan yashayotgan ota yoki ona); Vasiylik va homiylik organlari; O'n to'rt yoshga to'lgan bola",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Harakatlar tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Aliment undirish jarayonini to'g'ri ketma-ketlikda belgilang.",
+      "order": [
+        {
+          "id": "claim",
+          "label": "Sudga ariza berish (nizo bo'lmasa, ariza buyruq tartibida ko'riladi)",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "136-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "bu ariza buyruq tartibida ish yuritish tarzida koʻrib chiqiladi",
+              "heading": "136-modda. Alimentni sud tartibida undirish",
+              "text": "Mazkur shaxs, nizo boʻlmagan taqdirda, voyaga yetmagan bolalar uchun aliment undirish toʻgʻrisidagi ariza bilan sudga murojaat etishga haqli boʻlib, ⟦bu ariza buyruq tartibida ish yuritish tarzida koʻrib chiqiladi⟧.",
+              "anchor": "-159404"
+            }
+          ]
+        },
+        {
+          "id": "decision",
+          "label": "Sud qarori yoki sud buyrug'iga asosan aliment undiriladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "96-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "sudning hal qiluv qaroriga yoki sud buyrugʻiga asosan aliment undiriladi",
+              "heading": "96-modda. Ota-onaning voyaga yetmagan bolalariga taʼminot berish majburiyati",
+              "text": "Voyaga yetmagan bolalariga taʼminot berish majburiyatini ixtiyoriy ravishda bajarmagan ota (ona)dan ⟦sudning hal qiluv qaroriga yoki sud buyrugʻiga asosan aliment undiriladi⟧.",
+              "anchor": "-159180"
+            }
+          ]
+        },
+        {
+          "id": "employer",
+          "label": "Ish beruvchi har oy aliment ushlab qolib, 3 kun ichida aliment oluvchiga to'laydi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "137-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "uch kundan kechiktirmay aliment oluvchi shaxsga aliment toʻlashi",
+              "heading": "137-modda. Ish beruvchining (tashkilot maʼmuriyatining) aliment ushlab qolish majburiyati",
+              "text": "Aliment toʻlashi shart boʻlgan shaxsning ish joyidagi ish beruvchi yoki pensiya, nafaqa, stipendiya olayotgan joyidagi tashkilot maʼmuriyati aliment toʻlash toʻgʻrisidagi notarial tartibda tasdiqlangan kelishuvga yoki ijro varaqasiga asosan aliment toʻlashi shart boʻlgan shaxsning ish haqidan va (yoki) boshqa daromadidan har oyda aliment ushlab qolib, aliment toʻlashi shart boʻlgan shaxsga ish haqi toʻlangan va (yoki) boshqa daromadlar olingan kundan boshlab, ⟦uch kundan kechiktirmay aliment oluvchi shaxsga aliment toʻlashi⟧ yoki aliment toʻlashi shart boʻlgan shaxsning hisobidan unga oʻtkazishi shart.",
+              "anchor": "-159408"
+            }
+          ]
+        },
+        {
+          "id": "debt",
+          "label": "To'lanmasa, aliment qarzi hisoblanadi va neustoyka undiriladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "142-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "oʻndan bir foizi miqdorida aliment oluvchiga neustoyka toʻlaydi",
+              "heading": "142-modda. Alimentni oʻz vaqtida toʻlamaganlik uchun javobgarlik",
+              "text": "Sudning hal qiluv qaroriga koʻra aliment toʻlashi shart boʻlgan shaxsning aybi bilan qarz vujudga kelgan boʻlsa, aybdor shaxs kechiktirilgan har bir kun uchun toʻlanmay qolgan aliment summasining ⟦oʻndan bir foizi miqdorida aliment oluvchiga neustoyka toʻlaydi⟧.",
+              "anchor": "-159426"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "penalty",
+      "type": "deadline-pick",
+      "title": "Neustoyka",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+          "article": "142-modda",
+          "url": "https://lex.uz/docs/-104720",
+          "quote": "kechiktirilgan har bir kun uchun toʻlanmay qolgan aliment summasining oʻndan bir foizi miqdorida",
+          "heading": "142-modda. Alimentni oʻz vaqtida toʻlamaganlik uchun javobgarlik",
+          "text": "Sudning hal qiluv qaroriga koʻra aliment toʻlashi shart boʻlgan shaxsning aybi bilan qarz vujudga kelgan boʻlsa, aybdor shaxs ⟦kechiktirilgan har bir kun uchun toʻlanmay qolgan aliment summasining oʻndan bir foizi miqdorida⟧ aliment oluvchiga neustoyka toʻlaydi.",
+          "anchor": "-159426"
+        }
+      ],
+      "description": "Sud qaroriga ko'ra to'lanmay qolgan aliment uchun har bir kechiktirilgan kunga neustoyka miqdorini belgilang.",
+      "points": 10,
+      "options": [
+        {
+          "id": "p001",
+          "label": "0,01 foiz"
+        },
+        {
+          "id": "p01",
+          "label": "0,1 foiz (o'ndan bir foiz)"
+        },
+        {
+          "id": "p1",
+          "label": "1 foiz"
+        },
+        {
+          "id": "none",
+          "label": "Neustoyka yo'q"
+        }
+      ],
+      "correct": "p01"
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Murojaat muddati",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+          "article": "136-modda",
+          "url": "https://lex.uz/docs/-104720",
+          "quote": "qancha muddat oʻtganidan qatʼi nazar, xohlagan vaqtda",
+          "heading": "136-modda. Alimentni sud tartibida undirish",
+          "text": "Aliment olish huquqiga ega boʻlgan shaxs, aliment talab qilish huquqi vujudga kelganidan soʻng ⟦qancha muddat oʻtganidan qatʼi nazar, xohlagan vaqtda⟧ aliment undirish toʻgʻrisidagi talab bilan sudga murojaat qilishga haqlidir.",
+          "anchor": "-159404"
+        }
+      ],
+      "description": "Aliment olish huquqi vujudga kelganidan keyin sudga qancha muddat ichida murojaat qilish mumkin?",
+      "points": 15,
+      "options": [
+        {
+          "id": "m3",
+          "label": "3 oy ichida"
+        },
+        {
+          "id": "y1",
+          "label": "1 yil ichida"
+        },
+        {
+          "id": "any",
+          "label": "Qancha muddat o'tganidan qat'i nazar, xohlagan vaqtda"
+        },
+        {
+          "id": "m6",
+          "label": "Ajrashgandan keyin 6 oy ichida"
+        }
+      ],
+      "correct": "any"
+    }
+  ]
+}

@@ -1,0 +1,472 @@
+{
+  "id": "oila-nikoh-yoshi",
+  "title": "17 yoshda nikohga kirish mumkinmi?",
+  "area": "Oila huquqi",
+  "areaId": "oila",
+  "tracks": [
+    "advokat",
+    "notarius",
+    "sudya",
+    "umumiy",
+    "davlat"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "17 yoshli qiz nikohga kirmoqchi. Nikoh yoshi, uni kamaytirish va nikohga to'siq bo'ladigan holatlarni Oila kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Malohat, 17 yosh, talaba",
+    "openingLine": "Assalomu alaykum. Men 17 yoshdaman, turmush qurmoqchiman. Bu mumkinmi?",
+    "hiddenFacts": [
+      {
+        "id": "age",
+        "fact": "Qiz 17 yoshda",
+        "revealOn": []
+      },
+      {
+        "id": "preg",
+        "fact": "Qiz homilador",
+        "revealOn": []
+      },
+      {
+        "id": "single",
+        "fact": "Ikkala tomon ham boshqa nikohda emas",
+        "revealOn": []
+      },
+      {
+        "id": "kin",
+        "fact": "Ular qarindosh emas",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "age",
+        "preg",
+        "single"
+      ],
+      "questions": [
+        {
+          "id": "q-age",
+          "text": "Necha yoshdasiz?",
+          "factId": "age",
+          "reply": "17 yoshdaman."
+        },
+        {
+          "id": "q-preg",
+          "text": "Alohida holat bormi?",
+          "factId": "preg",
+          "reply": "Ha, homiladorman."
+        },
+        {
+          "id": "q-single",
+          "text": "Siz yoki kuyovingiz boshqa nikohdami?",
+          "factId": "single",
+          "reply": "Yo'q, ikkalamiz ham yolg'izmiz."
+        },
+        {
+          "id": "q-kin",
+          "text": "Qarindoshlikingiz bormi?",
+          "factId": "kin",
+          "reply": "Yo'q."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Nikoh yoshi va to'siqlar",
+      "sources": [],
+      "points": 15,
+      "description": "Nikoh qoidalarini aniqlang.",
+      "prompt": "Nikoh haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "age",
+          "label": "Nikoh yoshi erkaklar va ayollar uchun o'n sakkiz yosh",
+          "required": true,
+          "why": "15-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Nikoh yoshi erkaklar va ayollar uchun oʻn sakkiz yosh etib belgilanadi",
+              "heading": "15-modda. Nikoh yoshi",
+              "text": "⟦Nikoh yoshi erkaklar va ayollar uchun oʻn sakkiz yosh etib belgilanadi⟧.",
+              "anchor": "-158633"
+            }
+          ]
+        },
+        {
+          "id": "hokim",
+          "label": "Uzrli sabab bo'lsa hokim nikoh yoshini ko'pi bilan bir yilga kamaytirishi mumkin",
+          "required": true,
+          "why": "15-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "hokimi nikoh yoshini koʻpi bilan bir yilga kamaytirishi mumkin",
+              "heading": "15-modda. Nikoh yoshi",
+              "text": "Uzrli sabablar boʻlganida, alohida hollarda (homiladorlik, bola tugʻilishi, voyaga yetmagan shaxsning toʻla muomalaga layoqatli deb eʼlon qilinishi (emansipatsiya), nikohga kirishni xohlovchilarning iltimosiga koʻra nikoh davlat roʻyxatidan oʻtkaziladigan joydagi tuman, shahar ⟦hokimi nikoh yoshini koʻpi bilan bir yilga kamaytirishi mumkin⟧.",
+              "anchor": "-158633"
+            }
+          ]
+        },
+        {
+          "id": "bigamy",
+          "label": "Ro'yxatga olingan boshqa nikohda turgan shaxs bilan nikoh yo'l qo'yilmaydi",
+          "required": true,
+          "why": "16-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "16-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "loaqal bittasi roʻyxatga olingan boshqa nikohda turgan shaxslar oʻrtasida",
+              "heading": "16-modda. Nikoh tuzishga monelik qiladigan holatlar",
+              "text": "Nikoh tuzishga:\n⟦loaqal bittasi roʻyxatga olingan boshqa nikohda turgan shaxslar oʻrtasida⟧;",
+              "anchor": "-158639"
+            }
+          ]
+        },
+        {
+          "id": "kin",
+          "label": "To'g'ri tutashgan qarindoshlar o'rtasida nikoh yo'l qo'yilmaydi",
+          "required": true,
+          "why": "16-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "16-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "nasl-nasab shajarasi boʻyicha toʻgʻri tutashgan qarindoshlar oʻrtasida",
+              "heading": "16-modda. Nikoh tuzishga monelik qiladigan holatlar",
+              "text": "⟦nasl-nasab shajarasi boʻyicha toʻgʻri tutashgan qarindoshlar oʻrtasida⟧, tugʻishgan va oʻgay aka-ukalar bilan opa-singillar oʻrtasida, shuningdek farzandlikka oluvchilar bilan farzandlikka olinganlar oʻrtasida;",
+              "anchor": "-158639"
+            }
+          ]
+        },
+        {
+          "id": "never",
+          "label": "Hech qanday uzrli sabab bo'lsa ham 18 yoshdan oldin nikoh mumkin emas",
+          "required": false,
+          "why": "Uzrli sabablarda hokim yoshni kamaytirishi mumkin (15-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Uzrli sabablar boʻlganida, alohida hollarda",
+              "heading": "15-modda. Nikoh yoshi",
+              "text": "⟦Uzrli sabablar boʻlganida, alohida hollarda⟧ (homiladorlik, bola tugʻilishi, voyaga yetmagan shaxsning toʻla muomalaga layoqatli deb eʼlon qilinishi (emansipatsiya), nikohga kirishni xohlovchilarning iltimosiga koʻra nikoh davlat roʻyxatidan oʻtkaziladigan joydagi tuman, shahar hokimi nikoh yoshini koʻpi bilan bir yilga kamaytirishi mumkin.",
+              "anchor": "-158633"
+            }
+          ]
+        },
+        {
+          "id": "three",
+          "label": "Hokim nikoh yoshini uch yilgacha kamaytirishi mumkin",
+          "required": false,
+          "why": "Ko'pi bilan bir yilga (15-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "koʻpi bilan bir yilga kamaytirishi mumkin",
+              "heading": "15-modda. Nikoh yoshi",
+              "text": "Uzrli sabablar boʻlganida, alohida hollarda (homiladorlik, bola tugʻilishi, voyaga yetmagan shaxsning toʻla muomalaga layoqatli deb eʼlon qilinishi (emansipatsiya), nikohga kirishni xohlovchilarning iltimosiga koʻra nikoh davlat roʻyxatidan oʻtkaziladigan joydagi tuman, shahar hokimi nikoh yoshini ⟦koʻpi bilan bir yilga kamaytirishi mumkin⟧.",
+              "anchor": "-158633"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Yosh va monelik",
+      "sources": [],
+      "points": 25,
+      "description": "Nikoh yoshi va unga monelik qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "age",
+          "label": "Nikoh yoshi",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "y16",
+              "label": "16 yosh"
+            },
+            {
+              "id": "y17",
+              "label": "17 yosh"
+            },
+            {
+              "id": "y18",
+              "label": "18 yosh"
+            },
+            {
+              "id": "y21",
+              "label": "21 yosh"
+            }
+          ],
+          "correct": "y18",
+          "why": "O'n sakkiz yosh (15-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Nikoh yoshi erkaklar va ayollar uchun oʻn sakkiz yosh",
+              "heading": "15-modda. Nikoh yoshi",
+              "text": "⟦Nikoh yoshi erkaklar va ayollar uchun oʻn sakkiz yosh⟧ etib belgilanadi.",
+              "anchor": "-158633"
+            }
+          ]
+        },
+        {
+          "id": "cut",
+          "label": "Hokim nikoh yoshini eng ko'pi bilan qancha kamaytirishi mumkin?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "m6",
+              "label": "6 oyga"
+            },
+            {
+              "id": "y1",
+              "label": "1 yilga"
+            },
+            {
+              "id": "y2",
+              "label": "2 yilga"
+            },
+            {
+              "id": "y3",
+              "label": "3 yilga"
+            }
+          ],
+          "correct": "y1",
+          "why": "Ko'pi bilan bir yilga (15-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "koʻpi bilan bir yilga kamaytirishi mumkin",
+              "heading": "15-modda. Nikoh yoshi",
+              "text": "Uzrli sabablar boʻlganida, alohida hollarda (homiladorlik, bola tugʻilishi, voyaga yetmagan shaxsning toʻla muomalaga layoqatli deb eʼlon qilinishi (emansipatsiya), nikohga kirishni xohlovchilarning iltimosiga koʻra nikoh davlat roʻyxatidan oʻtkaziladigan joydagi tuman, shahar hokimi nikoh yoshini ⟦koʻpi bilan bir yilga kamaytirishi mumkin⟧.",
+              "anchor": "-158633"
+            }
+          ]
+        },
+        {
+          "id": "reason",
+          "label": "Qaysi hol nikoh yoshini kamaytirish uchun uzrli sabab sifatida ko'rsatilgan?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "preg",
+              "label": "Homiladorlik"
+            },
+            {
+              "id": "wish",
+              "label": "Ota-onaning xohishi"
+            },
+            {
+              "id": "money",
+              "label": "Mol-mulk masalasi"
+            }
+          ],
+          "correct": "preg",
+          "why": "Homiladorlik, bola tug'ilishi, emansipatsiya (15-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "homiladorlik, bola tugʻilishi, voyaga yetmagan shaxsning toʻla muomalaga layoqatli deb eʼlon qilinishi",
+              "heading": "15-modda. Nikoh yoshi",
+              "text": "Uzrli sabablar boʻlganida, alohida hollarda (⟦homiladorlik, bola tugʻilishi, voyaga yetmagan shaxsning toʻla muomalaga layoqatli deb eʼlon qilinishi⟧ (emansipatsiya), nikohga kirishni xohlovchilarning iltimosiga koʻra nikoh davlat roʻyxatidan oʻtkaziladigan joydagi tuman, shahar hokimi nikoh yoshini koʻpi bilan bir yilga kamaytirishi mumkin.",
+              "anchor": "-158633"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (17 yoshda nikohga kirish mumkinmi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Qiz 17 yoshda; Qiz homilador; Ikkala tomon ham boshqa nikohda emas",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Nikoh yoshi erkaklar va ayollar uchun oʻn sakkiz yosh etib belgilanadi",
+              "heading": "15-modda. Nikoh yoshi",
+              "text": "⟦Nikoh yoshi erkaklar va ayollar uchun oʻn sakkiz yosh etib belgilanadi⟧.",
+              "anchor": "-158633"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "16-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "loaqal bittasi roʻyxatga olingan boshqa nikohda turgan shaxslar oʻrtasida",
+              "heading": "16-modda. Nikoh tuzishga monelik qiladigan holatlar",
+              "text": "Nikoh tuzishga:\n⟦loaqal bittasi roʻyxatga olingan boshqa nikohda turgan shaxslar oʻrtasida⟧;",
+              "anchor": "-158639"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Nikoh yoshi erkaklar va ayollar uchun o'n sakkiz yosh; Uzrli sabab bo'lsa hokim nikoh yoshini ko'pi bilan bir yilga kamaytirishi mumkin; Ro'yxatga olingan boshqa nikohda turgan shaxs bilan nikoh yo'l qo'yilmaydi; To'g'ri tutashgan qarindoshlar o'rtasida nikoh yo'l qo'yilmaydi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Yoshni kamaytirish",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "age",
+          "label": "Nikoh yoshi 18 yosh deb belgilangan",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Nikoh yoshi erkaklar va ayollar uchun oʻn sakkiz yosh",
+              "heading": "15-modda. Nikoh yoshi",
+              "text": "⟦Nikoh yoshi erkaklar va ayollar uchun oʻn sakkiz yosh⟧ etib belgilanadi.",
+              "anchor": "-158633"
+            }
+          ]
+        },
+        {
+          "id": "ask",
+          "label": "Uzrli sabab bo'lsa, nikohga kirishni xohlovchilar iltimos qiladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "nikohga kirishni xohlovchilarning iltimosiga koʻra",
+              "heading": "15-modda. Nikoh yoshi",
+              "text": "Uzrli sabablar boʻlganida, alohida hollarda (homiladorlik, bola tugʻilishi, voyaga yetmagan shaxsning toʻla muomalaga layoqatli deb eʼlon qilinishi (emansipatsiya), ⟦nikohga kirishni xohlovchilarning iltimosiga koʻra⟧ nikoh davlat roʻyxatidan oʻtkaziladigan joydagi tuman, shahar hokimi nikoh yoshini koʻpi bilan bir yilga kamaytirishi mumkin.",
+              "anchor": "-158633"
+            }
+          ]
+        },
+        {
+          "id": "hokim",
+          "label": "Tuman yoki shahar hokimi yoshni ko'pi bilan bir yilga kamaytirishi mumkin",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "15-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "hokimi nikoh yoshini koʻpi bilan bir yilga kamaytirishi mumkin",
+              "heading": "15-modda. Nikoh yoshi",
+              "text": "Uzrli sabablar boʻlganida, alohida hollarda (homiladorlik, bola tugʻilishi, voyaga yetmagan shaxsning toʻla muomalaga layoqatli deb eʼlon qilinishi (emansipatsiya), nikohga kirishni xohlovchilarning iltimosiga koʻra nikoh davlat roʻyxatidan oʻtkaziladigan joydagi tuman, shahar ⟦hokimi nikoh yoshini koʻpi bilan bir yilga kamaytirishi mumkin⟧.",
+              "anchor": "-158633"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Boshqa nikoh",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+          "article": "16-modda",
+          "url": "https://lex.uz/docs/-104720",
+          "quote": "loaqal bittasi roʻyxatga olingan boshqa nikohda turgan shaxslar oʻrtasida",
+          "heading": "16-modda. Nikoh tuzishga monelik qiladigan holatlar",
+          "text": "Nikoh tuzishga:\n⟦loaqal bittasi roʻyxatga olingan boshqa nikohda turgan shaxslar oʻrtasida⟧;",
+          "anchor": "-158639"
+        }
+      ],
+      "points": 15,
+      "description": "Ro'yxatga olingan boshqa nikohda turgan shaxs bilan nikoh tuzish mumkinmi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Yo'l qo'yilmaydi"
+        },
+        {
+          "id": "b",
+          "label": "Mumkin"
+        },
+        {
+          "id": "c",
+          "label": "Hokim ruxsati bilan mumkin"
+        },
+        {
+          "id": "d",
+          "label": "Sud ruxsati bilan mumkin"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

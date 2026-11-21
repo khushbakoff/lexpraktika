@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">LexPraktika</string>
+    <string name="title_activity_main">LexPraktika</string>
+    <string name="package_name">uz.lexsim.app</string>
+    <string name="custom_url_scheme">uz.lexsim.app</string>
+</resources>

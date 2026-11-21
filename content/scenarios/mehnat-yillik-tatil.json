@@ -1,0 +1,450 @@
+{
+  "id": "mehnat-yillik-tatil",
+  "title": "Ishdan ketdim, ta'til puli berilmadi",
+  "area": "Mehnat huquqi",
+  "areaId": "mehnat",
+  "tracks": [
+    "advokat",
+    "korxona",
+    "davlat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Xodim ishdan ketayotib foydalanilmagan ta'til puli berilmayotganini aytmoqda. Yillik ta'til davomiyligi va ta'til uchun pulli kompensatsiyani Mehnat kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Sanjar, 30 yosh, sotuv menejeri",
+    "openingLine": "Assalomu alaykum. Ishdan ketdim, ta'tilimni ishlatmagan edim, ish beruvchi pul bermayapti. Haqqim bormi?",
+    "hiddenFacts": [
+      {
+        "id": "left",
+        "fact": "Sanjar mehnat shartnomasi bekor qilingach ishdan ketgan",
+        "revealOn": []
+      },
+      {
+        "id": "unused",
+        "fact": "Foydalanilmagan yillik ta'til bor",
+        "revealOn": []
+      },
+      {
+        "id": "refuse",
+        "fact": "Ish beruvchi ta'til uchun pul to'lashdan bosh tortmoqda",
+        "revealOn": []
+      },
+      {
+        "id": "sunday",
+        "fact": "Hisob-kitobda yakshanba kuni hisobga olinmasligi kerak",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "left",
+        "unused",
+        "refuse"
+      ],
+      "questions": [
+        {
+          "id": "q-left",
+          "text": "Nima bo'ldi?",
+          "factId": "left",
+          "reply": "Ishdan ketdim, shartnoma bekor qilindi."
+        },
+        {
+          "id": "q-unused",
+          "text": "Ta'tilni ishlatganmisiz?",
+          "factId": "unused",
+          "reply": "Yo'q, bu yil umuman ta'tilga chiqmadim."
+        },
+        {
+          "id": "q-refuse",
+          "text": "Ish beruvchi nima deydi?",
+          "factId": "refuse",
+          "reply": "Ketding, endi pul yo'q, deydi."
+        },
+        {
+          "id": "q-sunday",
+          "text": "Ish haftasi qanday?",
+          "factId": "sunday",
+          "reply": "Haftasiga olti kun ishlayman."
+        },
+        {
+          "id": "q-filler",
+          "text": "Qaysi mahsulotlarni sotardingiz?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ta'til masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Ta'til qoidalari",
+      "sources": [],
+      "points": 15,
+      "description": "Ta'til va kompensatsiya qoidalari.",
+      "prompt": "Yillik ta'til haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "min",
+          "label": "Yillik asosiy eng kam ta'til yigirma bir kalendar kun",
+          "required": true,
+          "why": "217-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "217-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги йигирма бир календарь кунни ташкил этади",
+              "heading": "217-модда. Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги",
+              "text": "⟦Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги йигирма бир календарь кунни ташкил этади⟧.",
+              "anchor": "6263022"
+            }
+          ]
+        },
+        {
+          "id": "comp",
+          "label": "Shartnoma bekor qilinganda foydalanilmagan ta'tillar uchun pulli kompensatsiya to'lanadi",
+          "required": true,
+          "why": "234-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "234-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Меҳнат шартномаси бекор қилинганда ходимга барча фойдаланилмаган ҳар йилги асосий ва қўшимча меҳнат таътиллари учун пулли компенсация тўланади",
+              "heading": "234-модда. Ҳар йилги меҳнат таътилини пулли компенсация билан алмаштириш",
+              "text": "⟦Меҳнат шартномаси бекор қилинганда ходимга барча фойдаланилмаган ҳар йилги асосий ва қўшимча меҳнат таътиллари учун пулли компенсация тўланади⟧.",
+              "anchor": "6263207"
+            }
+          ]
+        },
+        {
+          "id": "sunday",
+          "label": "Kompensatsiya hisoblashda yakshanba kuni inobatga olinmaydi",
+          "required": true,
+          "why": "234-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "234-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Пулли компенсация тўлашда якшанба куни инобатга олинмайди",
+              "heading": "234-модда. Ҳар йилги меҳнат таътилини пулли компенсация билан алмаштириш",
+              "text": "⟦Пулли компенсация тўлашда якшанба куни инобатга олинмайди⟧.",
+              "anchor": "6263207"
+            }
+          ]
+        },
+        {
+          "id": "none",
+          "label": "Ishdan ketgan xodimga ta'til uchun pul to'lanmaydi",
+          "required": false,
+          "why": "Foydalanilmagan ta'tillar uchun pulli kompensatsiya to'lanadi (234-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "234-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "пулли компенсация тўланади",
+              "heading": "234-модда. Ҳар йилги меҳнат таътилини пулли компенсация билан алмаштириш",
+              "text": "Меҳнат шартномаси бекор қилинганда ходимга барча фойдаланилмаган ҳар йилги асосий ва қўшимча меҳнат таътиллари учун ⟦пулли компенсация тўланади⟧.",
+              "anchor": "6263207"
+            }
+          ]
+        },
+        {
+          "id": "fourteen",
+          "label": "Yillik asosiy eng kam ta'til 14 kun",
+          "required": false,
+          "why": "Eng kam ta'til yigirma bir kalendar kun (217-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "217-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "йигирма бир календарь кунни ташкил этади",
+              "heading": "217-модда. Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги",
+              "text": "Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги ⟦йигирма бир календарь кунни ташкил этади⟧.",
+              "anchor": "6263022"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Hisob-kitob",
+      "sources": [],
+      "points": 25,
+      "description": "Ta'til hisob-kitobi qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "days",
+          "label": "Yillik asosiy eng kam ta'til davomiyligi",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d14",
+              "label": "14 kalendar kun"
+            },
+            {
+              "id": "d21",
+              "label": "21 kalendar kun"
+            },
+            {
+              "id": "d28",
+              "label": "28 kalendar kun"
+            },
+            {
+              "id": "d30",
+              "label": "30 kalendar kun"
+            }
+          ],
+          "correct": "d21",
+          "why": "Yigirma bir kalendar kun (217-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "217-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "йигирма бир календарь кунни ташкил этади",
+              "heading": "217-модда. Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги",
+              "text": "Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги ⟦йигирма бир календарь кунни ташкил этади⟧.",
+              "anchor": "6263022"
+            }
+          ]
+        },
+        {
+          "id": "term",
+          "label": "Shartnoma bekor qilinganda foydalanilmagan ta'til uchun",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "pay",
+              "label": "Pulli kompensatsiya to'lanadi"
+            },
+            {
+              "id": "none",
+              "label": "Hech narsa to'lanmaydi"
+            },
+            {
+              "id": "next",
+              "label": "Keyingi ish joyida beriladi"
+            }
+          ],
+          "correct": "pay",
+          "why": "Pulli kompensatsiya to'lanadi (234-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "234-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Меҳнат шартномаси бекор қилинганда ходимга барча фойдаланилмаган ҳар йилги асосий ва қўшимча меҳнат таътиллари учун пулли компенсация тўланади",
+              "heading": "234-модда. Ҳар йилги меҳнат таътилини пулли компенсация билан алмаштириш",
+              "text": "⟦Меҳнат шартномаси бекор қилинганда ходимга барча фойдаланилмаган ҳар йилги асосий ва қўшимча меҳнат таътиллари учун пулли компенсация тўланади⟧.",
+              "anchor": "6263207"
+            }
+          ]
+        },
+        {
+          "id": "sunday",
+          "label": "Kompensatsiya to'lashda yakshanba kuni",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "count",
+              "label": "Inobatga olinadi"
+            },
+            {
+              "id": "skip",
+              "label": "Inobatga olinmaydi"
+            },
+            {
+              "id": "double",
+              "label": "Ikki baravar hisoblanadi"
+            }
+          ],
+          "correct": "skip",
+          "why": "Inobatga olinmaydi (234-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "234-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Пулли компенсация тўлашда якшанба куни инобатга олинмайди",
+              "heading": "234-модда. Ҳар йилги меҳнат таътилини пулли компенсация билан алмаштириш",
+              "text": "⟦Пулли компенсация тўлашда якшанба куни инобатга олинмайди⟧.",
+              "anchor": "6263207"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Ishdan ketdim, ta'til puli berilmadi). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Sanjar mehnat shartnomasi bekor qilingach ishdan ketgan; Foydalanilmagan yillik ta'til bor; Ish beruvchi ta'til uchun pul to'lashdan bosh tortmoqda",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "217-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги йигирма бир календарь кунни ташкил этади",
+              "heading": "217-модда. Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги",
+              "text": "⟦Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги йигирма бир календарь кунни ташкил этади⟧.",
+              "anchor": "6263022"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "234-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Меҳнат шартномаси бекор қилинганда ходимга барча фойдаланилмаган ҳар йилги асосий ва қўшимча меҳнат таътиллари учун пулли компенсация тўланади",
+              "heading": "234-модда. Ҳар йилги меҳнат таътилини пулли компенсация билан алмаштириш",
+              "text": "⟦Меҳнат шартномаси бекор қилинганда ходимга барча фойдаланилмаган ҳар йилги асосий ва қўшимча меҳнат таътиллари учун пулли компенсация тўланади⟧.",
+              "anchor": "6263207"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Yillik asosiy eng kam ta'til yigirma bir kalendar kun; Shartnoma bekor qilinganda foydalanilmagan ta'tillar uchun pulli kompensatsiya to'lanadi; Kompensatsiya hisoblashda yakshanba kuni inobatga olinmaydi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Ta'til huquqi",
+      "sources": [],
+      "points": 15,
+      "description": "Jarayonni belgilang.",
+      "order": [
+        {
+          "id": "right",
+          "label": "Xodim yillik asosiy ta'tilga (kamida 21 kalendar kun) ega",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "217-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги йигирма бир календарь кунни ташкил этади",
+              "heading": "217-модда. Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги",
+              "text": "⟦Ҳар йилги асосий энг кам меҳнат таътилининг давомийлиги йигирма бир календарь кунни ташкил этади⟧.",
+              "anchor": "6263022"
+            }
+          ]
+        },
+        {
+          "id": "end",
+          "label": "Mehnat shartnomasi bekor qilinadi, ta'til foydalanilmagan qoladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "234-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Меҳнат шартномаси бекор қилинганда",
+              "heading": "234-модда. Ҳар йилги меҳнат таътилини пулли компенсация билан алмаштириш",
+              "text": "⟦Меҳнат шартномаси бекор қилинганда⟧ ходимга барча фойдаланилмаган ҳар йилги асосий ва қўшимча меҳнат таътиллари учун пулли компенсация тўланади.",
+              "anchor": "6263207"
+            }
+          ]
+        },
+        {
+          "id": "pay",
+          "label": "Foydalanilmagan ta'tillar uchun pulli kompensatsiya to'lanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "234-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "пулли компенсация тўланади",
+              "heading": "234-модда. Ҳар йилги меҳнат таътилини пулли компенсация билан алмаштириш",
+              "text": "Меҳнат шартномаси бекор қилинганда ходимга барча фойдаланилмаган ҳар йилги асосий ва қўшимча меҳнат таътиллари учун ⟦пулли компенсация тўланади⟧.",
+              "anchor": "6263207"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Qo'shimcha kompensatsiya",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+          "article": "234-modda",
+          "url": "https://lex.uz/docs/6257288",
+          "quote": "Ходимларга иш даврида уларнинг хоҳишига кўра ҳар йилги меҳнат таътили учун таътилнинг ушбу Кодекснинг 217-моддасида белгиланган энг кам давомийлигидан ташқари пулли компенсация тўланиши мумкин",
+          "heading": "234-модда. Ҳар йилги меҳнат таътилини пулли компенсация билан алмаштириш",
+          "text": "⟦Ходимларга иш даврида уларнинг хоҳишига кўра ҳар йилги меҳнат таътили учун таътилнинг ушбу Кодекснинг 217-моддасида белгиланган энг кам давомийлигидан ташқари пулли компенсация тўланиши мумкин⟧.",
+          "anchor": "6263207"
+        }
+      ],
+      "points": 15,
+      "description": "Ish davrida xodimning xohishiga ko'ra ta'til uchun pulli kompensatsiya to'lanishi mumkinmi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Ha, eng kam ta'tildan tashqari qismi uchun"
+        },
+        {
+          "id": "b",
+          "label": "Yo'q, hech qachon"
+        },
+        {
+          "id": "c",
+          "label": "Faqat prokuror ruxsati bilan"
+        },
+        {
+          "id": "d",
+          "label": "Faqat sud qarori bilan"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

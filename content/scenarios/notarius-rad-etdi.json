@@ -1,0 +1,480 @@
+{
+  "id": "notarius-rad-etdi",
+  "title": "Notarius ishonchnomani tasdiqlashni rad etdi",
+  "area": "Notariat",
+  "areaId": "fuqarolik",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Notarius mijozning ishonchnomasini tasdiqlashni og'zaki rad etdi. Rad etish asoslari, qaror muddati, sababni yozma olish va shikoyat tartibini «Notariat to'g'risida»gi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Gulbahor, 38 yosh, tadbirkor",
+    "openingLine": "Assalomu alaykum. Notarius ishonchnomamni tasdiqlashni rad etdi, hech narsa yozib ham bermadi.",
+    "hiddenFacts": [
+      {
+        "id": "refusal",
+        "fact": "Notarius ishonchnomani tasdiqlashni og'zaki rad etdi",
+        "revealOn": [
+          "rad",
+          "notarius"
+        ]
+      },
+      {
+        "id": "reason",
+        "fact": "Sabab: hujjatlar qonunchilik talablariga mos emas",
+        "revealOn": [
+          "sabab"
+        ]
+      },
+      {
+        "id": "written",
+        "fact": "Yozma qaror berilmagan",
+        "revealOn": [
+          "yozma",
+          "qaror"
+        ]
+      },
+      {
+        "id": "wants",
+        "fact": "Mijoz tasdiqlatmoqchi yoki shikoyat qilmoqchi",
+        "revealOn": [
+          "xohlay"
+        ]
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Notarius nima dedi, yozma qaror berildimi.",
+      "requiredFactIds": [
+        "refusal",
+        "reason",
+        "written"
+      ],
+      "questions": [
+        {
+          "id": "q-refusal",
+          "text": "Notarius nima qildi?",
+          "factId": "refusal",
+          "reply": "Ishonchnomani tasdiqlashni bugun og'zaki rad etdi."
+        },
+        {
+          "id": "q-reason",
+          "text": "Sababini aytdimi?",
+          "factId": "reason",
+          "reply": "Hujjatlaringiz qonunchilik talablariga mos emas, dedi."
+        },
+        {
+          "id": "q-written",
+          "text": "Yozma qaror berdimi?",
+          "factId": "written",
+          "reply": "Yo'q, hech qanday yozma qaror bermadi."
+        },
+        {
+          "id": "q-wants",
+          "text": "Siz nimani xohlaysiz?",
+          "factId": "wants",
+          "reply": "Ishonchnomani tasdiqlatmoqchiman yoki rad etilsa shikoyat qilmoqchiman."
+        },
+        {
+          "id": "q-car",
+          "text": "Qanday mashinada keldingiz?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, notarius masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "grounds",
+      "type": "document-pick",
+      "title": "Rad etish asoslari",
+      "sources": [],
+      "points": 15,
+      "description": "Notarius qaysi hollarda harakatni rad etadi.",
+      "prompt": "Notarius qaysi hollarda notarial harakatni amalga oshirishni rad etadi? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "law",
+          "label": "Harakatni amalga oshirish qonunga zid bo'lsa",
+          "required": true,
+          "why": "38-moddaning birinchi asosi.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "bunday harakatni amalga oshirish qonunga zid boʻlsa",
+              "heading": "38-modda. Notarial harakatni amalga oshirishni rad etish",
+              "text": "Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi, agar:\n⟦bunday harakatni amalga oshirish qonunga zid boʻlsa⟧;",
+              "anchor": "-55201"
+            }
+          ]
+        },
+        {
+          "id": "incapable",
+          "label": "Muomalaga layoqatsiz fuqaro yoki zarur vakolatlari bo'lmagan vakil murojaat qilgan bo'lsa",
+          "required": true,
+          "why": "38-modda asosi.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "muomalaga layoqatsiz fuqaro yoxud zarur vakolatlari boʻlmagan vakil notarial harakatni amalga oshirishni soʻrab murojaat qilgan boʻlsa",
+              "heading": "38-modda. Notarial harakatni amalga oshirishni rad etish",
+              "text": "bu harakat boshqa notarius tomonidan amalga oshirilishi kerak boʻlsa;\n⟦muomalaga layoqatsiz fuqaro yoxud zarur vakolatlari boʻlmagan vakil notarial harakatni amalga oshirishni soʻrab murojaat qilgan boʻlsa⟧;",
+              "anchor": "-55201"
+            }
+          ]
+        },
+        {
+          "id": "deal",
+          "label": "Bitim qonun talablariga muvofiq bo'lmasa",
+          "required": true,
+          "why": "38-modda asosi.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "bitim qonun talablariga muvofiq boʻlmasa",
+              "heading": "38-modda. Notarial harakatni amalga oshirishni rad etish",
+              "text": "yuridik shaxs nomidan amalga oshiriladigan bitim uning ustavida yoki nizomida koʻrsatilgan maqsadlarga zid boʻlsa;\n⟦bitim qonun talablariga muvofiq boʻlmasa⟧;",
+              "anchor": "-55201"
+            }
+          ]
+        },
+        {
+          "id": "docs",
+          "label": "Taqdim etilayotgan hujjatlar qonunchilik talablariga muvofiq bo'lmasa",
+          "required": true,
+          "why": "Bizning vaziyatda notarius aynan shu asosni aytgan.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "notarial harakatni amalga oshirish uchun taqdim etilayotgan hujjatlar qonunchilik talablariga muvofiq boʻlmasa",
+              "heading": "38-modda. Notarial harakatni amalga oshirishni rad etish",
+              "text": "⟦notarial harakatni amalga oshirish uchun taqdim etilayotgan hujjatlar qonunchilik talablariga muvofiq boʻlmasa⟧.",
+              "anchor": "-55201"
+            }
+          ]
+        },
+        {
+          "id": "stranger",
+          "label": "Murojaat etuvchi notarius bilan tanish bo'lmasa",
+          "required": false,
+          "why": "38-moddadagi rad etish asoslari ro'yxatida bunday asos yo'q.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi, agar:",
+              "heading": "38-modda. Notarial harakatni amalga oshirishni rad etish",
+              "text": "⟦Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi, agar:⟧",
+              "anchor": "-55201"
+            }
+          ]
+        },
+        {
+          "id": "mood",
+          "label": "Notariusning kayfiyati yomon bo'lsa",
+          "required": false,
+          "why": "38-moddadagi rad etish asoslari ro'yxatida bunday asos yo'q.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi, agar:",
+              "heading": "38-modda. Notarial harakatni amalga oshirishni rad etish",
+              "text": "⟦Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi, agar:⟧",
+              "anchor": "-55201"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Rad etishga javob",
+      "sources": [],
+      "points": 25,
+      "description": "Rad etilgandan keyingi huquq va muddatlarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "days",
+          "label": "Rad etilganda notarius qaror chiqarishi shart bo'lgan muddat",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d1",
+              "label": "1 kun"
+            },
+            {
+              "id": "d3",
+              "label": "3 kun"
+            },
+            {
+              "id": "d10",
+              "label": "10 kun"
+            },
+            {
+              "id": "m1",
+              "label": "1 oy"
+            }
+          ],
+          "correct": "d3",
+          "why": "Notarius murojaat qilingan kundan boshlab uch kundan kechiktirmay rad etish haqida qaror chiqaradi (38-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "notarius murojaat qilingan kundan boshlab uch kundan kechiktirmasdan qaror chiqaradi",
+              "heading": "38-modda. Notarial harakatni amalga oshirishni rad etish",
+              "text": "Notarial harakatni amalga oshirish rad etilgan taqdirda notarial harakatni amalga oshirishni rad etish haqida ⟦notarius murojaat qilingan kundan boshlab uch kundan kechiktirmasdan qaror chiqaradi⟧.",
+              "anchor": "-55201"
+            }
+          ]
+        },
+        {
+          "id": "reason",
+          "label": "Rad etish sababini yozma bayon qildirish uchun nima qilish kerak?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "auto",
+              "label": "Hech narsa, notarius o'zi yozib beradi"
+            },
+            {
+              "id": "ask",
+              "label": "Notariusga iltimos bilan murojaat qilish"
+            },
+            {
+              "id": "court",
+              "label": "Avval sudga ariza berish"
+            }
+          ],
+          "correct": "ask",
+          "why": "Notarius rad etilgan shaxsning iltimosiga binoan sababni yozma bayon etadi va shikoyat tartibini tushuntiradi (38-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "rad etilgan shaxsning iltimosiga binoan rad etish sababini yozma ravishda bayon etishi",
+              "heading": "38-modda. Notarial harakatni amalga oshirishni rad etish",
+              "text": "Notarius notarial harakatni amalga oshirish toʻgʻrisidagi murojaati ⟦rad etilgan shaxsning iltimosiga binoan rad etish sababini yozma ravishda bayon etishi⟧ va rad etish ustidan shikoyat qilish tartibini tushuntirib berishi lozim.",
+              "anchor": "-55201"
+            }
+          ]
+        },
+        {
+          "id": "where",
+          "label": "Rad etish to'g'risidagi qarorni qayerga shikoyat qilish mumkin?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "prosecutor",
+              "label": "Prokuraturaga"
+            },
+            {
+              "id": "court",
+              "label": "Notarial idora turgan joydagi sudga"
+            },
+            {
+              "id": "other",
+              "label": "Boshqa notariusga"
+            },
+            {
+              "id": "mahalla",
+              "label": "Mahalla fuqarolar yig'iniga"
+            }
+          ],
+          "correct": "court",
+          "why": "Manfaatdor shaxs notarial idora turgan joydagi sudga shikoyat qilishga haqli (39-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "39-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "notarial idora turgan joydagi sudga shikoyat qilishga haqlidir",
+              "heading": "39-modda. Notarial harakat ustidan, notarial harakatni kechiktirish yoki uni amalga oshirishni rad etish toʻgʻrisidagi qaror ustidan shikoyat qilish",
+              "text": "Amalga oshirilgan notarial harakatni, notarial harakatni kechiktirish yoki notarial harakatni amalga oshirishni rad etish toʻgʻrisidagi qarorni notoʻgʻri deb hisoblagan manfaatdor shaxs bu xususda ⟦notarial idora turgan joydagi sudga shikoyat qilishga haqlidir⟧.",
+              "anchor": "-55211"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Notarius ishonchnomani tasdiqlashni rad etdi). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Notarius ishonchnomani tasdiqlashni og'zaki rad etdi; Sabab: hujjatlar qonunchilik talablariga mos emas; Yozma qaror berilmagan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "bunday harakatni amalga oshirish qonunga zid boʻlsa",
+              "heading": "38-modda. Notarial harakatni amalga oshirishni rad etish",
+              "text": "Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi, agar:\n⟦bunday harakatni amalga oshirish qonunga zid boʻlsa⟧;",
+              "anchor": "-55201"
+            },
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "39-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "notarial idora turgan joydagi sudga shikoyat qilishga haqlidir",
+              "heading": "39-modda. Notarial harakat ustidan, notarial harakatni kechiktirish yoki uni amalga oshirishni rad etish toʻgʻrisidagi qaror ustidan shikoyat qilish",
+              "text": "Amalga oshirilgan notarial harakatni, notarial harakatni kechiktirish yoki notarial harakatni amalga oshirishni rad etish toʻgʻrisidagi qarorni notoʻgʻri deb hisoblagan manfaatdor shaxs bu xususda ⟦notarial idora turgan joydagi sudga shikoyat qilishga haqlidir⟧.",
+              "anchor": "-55211"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Harakatni amalga oshirish qonunga zid bo'lsa; Muomalaga layoqatsiz fuqaro yoki zarur vakolatlari bo'lmagan vakil murojaat qilgan bo'lsa; Bitim qonun talablariga muvofiq bo'lmasa; Taqdim etilayotgan hujjatlar qonunchilik talablariga muvofiq bo'lmasa",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Harakatlar tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Rad etilgandan keyingi harakatlarni to'g'ri ketma-ketlikda belgilang.",
+      "order": [
+        {
+          "id": "decision",
+          "label": "Notarius murojaat kunidan 3 kun ichida rad etish haqida qaror chiqaradi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "notarius murojaat qilingan kundan boshlab uch kundan kechiktirmasdan qaror chiqaradi",
+              "heading": "38-modda. Notarial harakatni amalga oshirishni rad etish",
+              "text": "Notarial harakatni amalga oshirish rad etilgan taqdirda notarial harakatni amalga oshirishni rad etish haqida ⟦notarius murojaat qilingan kundan boshlab uch kundan kechiktirmasdan qaror chiqaradi⟧.",
+              "anchor": "-55201"
+            }
+          ]
+        },
+        {
+          "id": "reason",
+          "label": "Iltimos bo'yicha notarius sababni yozma bayon etadi va shikoyat tartibini tushuntiradi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "rad etilgan shaxsning iltimosiga binoan rad etish sababini yozma ravishda bayon etishi",
+              "heading": "38-modda. Notarial harakatni amalga oshirishni rad etish",
+              "text": "Notarius notarial harakatni amalga oshirish toʻgʻrisidagi murojaati ⟦rad etilgan shaxsning iltimosiga binoan rad etish sababini yozma ravishda bayon etishi⟧ va rad etish ustidan shikoyat qilish tartibini tushuntirib berishi lozim.",
+              "anchor": "-55201"
+            }
+          ]
+        },
+        {
+          "id": "court",
+          "label": "Manfaatdor shaxs notarial idora turgan joydagi sudga shikoyat qiladi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "39-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "notarial idora turgan joydagi sudga shikoyat qilishga haqlidir",
+              "heading": "39-modda. Notarial harakat ustidan, notarial harakatni kechiktirish yoki uni amalga oshirishni rad etish toʻgʻrisidagi qaror ustidan shikoyat qilish",
+              "text": "Amalga oshirilgan notarial harakatni, notarial harakatni kechiktirish yoki notarial harakatni amalga oshirishni rad etish toʻgʻrisidagi qarorni notoʻgʻri deb hisoblagan manfaatdor shaxs bu xususda ⟦notarial idora turgan joydagi sudga shikoyat qilishga haqlidir⟧.",
+              "anchor": "-55211"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Kechiktirish muddati",
+      "sources": [
+        {
+          "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+          "article": "31-modda",
+          "url": "https://lex.uz/docs/-54458",
+          "quote": "Notarial harakatni amalga oshirishni kechiktirish muddati bir oydan oshmasligi lozim.",
+          "heading": "31-modda. Notarial harakatni amalga oshirish va toʻxtatib turish muddatlari",
+          "text": "Notarial harakatlarni amalga oshirish, basharti qonunga binoan manfaatdor shaxslardan ushbu harakatlarni amalga oshirishga eʼtiroz bor-yoʻqligini soʻrash zarur boʻlganda, kechiktirilishi mumkin. ⟦Notarial harakatni amalga oshirishni kechiktirish muddati bir oydan oshmasligi lozim.⟧ Notarial harakatni amalga oshirishni soʻrab murojaat qilgan shaxsning talabiga koʻra unga notarial harakatni amalga oshirishni kechiktirish haqidagi qaror beriladi.",
+          "anchor": "-55152"
+        }
+      ],
+      "description": "Notarial harakat qo'shimcha ma'lumot yoki manfaatdor shaxslarning e'tirozini so'rash uchun kechiktirilsa, kechiktirish muddati eng ko'pi bilan qancha bo'lishi mumkin?",
+      "points": 15,
+      "options": [
+        {
+          "id": "d3",
+          "label": "3 kun"
+        },
+        {
+          "id": "d10",
+          "label": "10 kun"
+        },
+        {
+          "id": "m1",
+          "label": "1 oy"
+        },
+        {
+          "id": "m3",
+          "label": "3 oy"
+        }
+      ],
+      "correct": "m1"
+    }
+  ]
+}

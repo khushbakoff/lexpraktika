@@ -1,0 +1,161 @@
+{
+  "id": "advokatlik-tuzilmasi",
+  "title": "Advokatlik tuzilmasi",
+  "trackId": "advokat",
+  "icon": "scale",
+  "tagline": "Advokatlik byurosi, firmasi, hay'ati: mijozni himoya qilish va yuridik yordam",
+  "about": "Advokatlik tuzilmasi nomzoddan litsenziya shartlarini (oliy yuridik ma'lumot, stajirovka, malaka imtihoni), advokatlik siri va manfaatlar to'qnashuvi qoidalarini hamda mijozni himoya qilish ko'nikmalarini talab qiladi.",
+  "requirements": [
+    {
+      "id": "candidate",
+      "title": "Advokat bo'lish shartlari",
+      "detail": "Oliy yuridik ma'lumot, fuqarolik, stajirovka, malaka imtihoni va litsenziya.",
+      "kind": "kirish",
+      "scenarioIds": [
+        "ish-advokat-talablari"
+      ],
+      "sources": [
+        {
+          "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+          "article": "3-modda",
+          "url": "https://lex.uz/docs/-54503",
+          "quote": "Oliy yuridik maʼlumotga ega boʻlgan"
+        },
+        {
+          "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+          "article": "3¹-modda",
+          "url": "https://lex.uz/docs/-54503",
+          "quote": "kamida uch oy muddat stajirovka oʻtashi kerak hamda malaka imtihonini topshirishi shart"
+        }
+      ]
+    },
+    {
+      "id": "secret",
+      "title": "Advokatlik siri",
+      "detail": "Nimalar sirga kiradi va uni saqlash majburiyati.",
+      "kind": "ish",
+      "scenarioIds": [
+        "ish-advokat-advokatlik-siri"
+      ],
+      "sources": [
+        {
+          "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+          "article": "9-modda",
+          "url": "https://lex.uz/docs/-54503",
+          "quote": "Advokat advokatlik sirini saqlashi shart"
+        }
+      ]
+    },
+    {
+      "id": "conflict",
+      "title": "Manfaatlar to'qnashuvi va vazifalar",
+      "detail": "Qaysi topshiriqlarni qabul qilishga haqli emas.",
+      "kind": "ish",
+      "scenarioIds": [
+        "ish-advokat-manfaatlar-tonashuvi"
+      ],
+      "sources": [
+        {
+          "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+          "article": "7-modda",
+          "url": "https://lex.uz/docs/-54503",
+          "quote": "yuridik yordam koʻrsatish toʻgʻrisidagi topshiriqni qabul qilishga haqli emas"
+        }
+      ]
+    },
+    {
+      "id": "inquiry",
+      "title": "Advokat so'rovi",
+      "detail": "Davlat organlaridan ma'lumot so'rash va muddatlar.",
+      "kind": "ish",
+      "scenarioIds": [
+        "ish-advokat-sorovi"
+      ],
+      "sources": [
+        {
+          "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+          "article": "7¹-modda",
+          "url": "https://lex.uz/docs/-54503",
+          "quote": "advokat soʻrovi olingan sanadan eʼtiboran oʻn besh kundan kechiktirmay taqdim etiladi"
+        }
+      ]
+    },
+    {
+      "id": "defense",
+      "title": "Jinoyat ishida himoya",
+      "detail": "Ushlangan shaxs, ayblanuvchi huquqlari, himoyachi ishtiroki.",
+      "kind": "ish",
+      "scenarioIds": [
+        "jinoyat-ushlab-turish",
+        "jinoyat-himoyachi-majburiy",
+        "jinoyat-ayblanuvchi-huquqlari"
+      ],
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "48-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish"
+        },
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "51-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "voyaga yetmaganlarning ishi boʻyicha"
+        }
+      ]
+    },
+    {
+      "id": "civil",
+      "title": "Mijozlar nizolari: mehnat va fuqarolik",
+      "detail": "Eng ko'p uchraydigan fuqarolik va mehnat nizolari.",
+      "kind": "ish",
+      "scenarioIds": [
+        "mehnat-ish-haqi",
+        "mehnat-ishga-tiklash",
+        "ijara-tolov-buzildi",
+        "protsessual-sud-buyrugi"
+      ],
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+          "article": "545-modda",
+          "url": "https://lex.uz/docs/6257288",
+          "quote": "Ходим меҳнат низосини ҳал қилиш учун ўз танловига кўра меҳнат низолари бўйича комиссияга ёки бевосита судга мурожаат этишга ҳақли"
+        },
+        {
+          "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+          "article": "177-modda",
+          "url": "https://lex.uz/docs/-3517337",
+          "quote": "ariza sudga kelib tushgan kundan eʼtiboran uch kun ichida sudya tomonidan beriladi"
+        }
+      ]
+    }
+  ],
+  "workflow": [
+    {
+      "title": "Mijoz bilan birinchi uchrashuv: sirni saqlash",
+      "scenarioId": "ish-advokat-advokatlik-siri"
+    },
+    {
+      "title": "Topshiriqni qabul qilishdan oldin: manfaatlar to'qnashuvi",
+      "scenarioId": "ish-advokat-manfaatlar-tonashuvi"
+    },
+    {
+      "title": "Ma'lumot kerak: advokat so'rovi",
+      "scenarioId": "ish-advokat-sorovi"
+    },
+    {
+      "title": "Mijoz ushlangan: huquqlarini himoya qilish",
+      "scenarioId": "jinoyat-ushlab-turish"
+    },
+    {
+      "title": "Himoyachi ishtiroki shart bo'lgan ishlar",
+      "scenarioId": "jinoyat-himoyachi-majburiy"
+    },
+    {
+      "title": "Ayblanuvchi huquqlari",
+      "scenarioId": "jinoyat-ayblanuvchi-huquqlari"
+    }
+  ]
+}

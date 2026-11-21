@@ -1,0 +1,423 @@
+{
+  "id": "ish-notarius-muomala-layoqati",
+  "title": "Mijozning muomala layoqatiga shubha",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijoz ruhiy holati tufayli shubha uyg'otmoqda, lekin muomalaga layoqatsizligi haqida ma'lumot yo'q. Notarius qanday harakat qilishini Yo'riqnoma bo'yicha belgilang.",
+  "client": {
+    "persona": "Notarius",
+    "openingLine": "Assalomu alaykum. Keksa mijoz bitim tuzmoqchi, lekin u ruhiy holati buzilgan bo'lishi mumkin. Layoqatsiz deb topilganligi haqida ma'lumot yo'q. Nima qilaman?",
+    "hiddenFacts": [
+      {
+        "id": "doubt",
+        "fact": "Mijozning ruhiy holatiga shubha bor",
+        "revealOn": []
+      },
+      {
+        "id": "nodoc",
+        "fact": "Layoqatsiz deb topilganligi haqida ma'lumot yo'q",
+        "revealOn": []
+      },
+      {
+        "id": "press",
+        "fact": "Mijoz bosim ostida bo'lishi mumkin",
+        "revealOn": []
+      },
+      {
+        "id": "deal",
+        "fact": "Bitim mijozning mulkiga tegishli",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "doubt",
+        "nodoc",
+        "press"
+      ],
+      "questions": [
+        {
+          "id": "q-doubt",
+          "text": "Nimadan shubhalanyapsiz?",
+          "factId": "doubt",
+          "reply": "U gaplarimni tushunmayapti shekilli."
+        },
+        {
+          "id": "q-nodoc",
+          "text": "Hujjat bormi?",
+          "factId": "nodoc",
+          "reply": "Layoqatsizlik haqida ma'lumot yo'q."
+        },
+        {
+          "id": "q-press",
+          "text": "Boshqa belgi bormi?",
+          "factId": "press",
+          "reply": "Yonidagi kishi uning o'rniga gapiryapti."
+        },
+        {
+          "id": "q-deal",
+          "text": "Qanday bitim?",
+          "factId": "deal",
+          "reply": "Uyni o'tkazish."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Layoqatni tekshirish",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Muomala layoqatini tekshirish haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "talk",
+          "label": "Notarius muomala layoqatini shaxsiy muloqot davomida aniqlaydi",
+          "required": true,
+          "why": "4-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi",
+              "heading": "4-band.",
+              "text": "Notarius notarial harakat amalga oshirishni soʻrab murojaat etgan jismoniy shaxsning ⟦muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi⟧."
+            }
+          ]
+        },
+        {
+          "id": "delay",
+          "label": "Shubha bo'lsa-yu layoqatsizlik haqida ma'lumot bo'lmasa, notarius harakatni kechiktiradi",
+          "required": true,
+          "why": "4-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "u notarial harakatni amalga oshirishni kechiktiradi",
+              "heading": "4-band.",
+              "text": "Notariusga murojaat etgan shaxsning ruhiy holati buzilganligi yoki aqli zaifligi oqibatida oʻz xatti-harakatlarining ahamiyatini tushuna olmaydi yoki shu harakatlarni boshqara olmaydi deb yoxud spirtli ichimliklarni yoki giyohvandlik va psixotrop moddalarni isteʼmol qilishi oqibatida oʻz oilasini ogʻir moddiy ahvolga solib qoʻyadi deb hisoblash uchun asosi boʻlsada (shubha tugʻdirsada), ammo shu fuqaroning muomalaga layoqatsiz yoki muomala layoqati cheklanganligi toʻgʻrisida maʼlumotlar boʻlmasa, ⟦u notarial harakatni amalga oshirishni kechiktiradi⟧ va sudning shu shaxsni muomalaga layoqatsiz yoki muomala layoqati cheklangan deb topganligi toʻgʻrisidagi qarori mavjud yoki mavjud emasligini Tizim orqali tekshiradi."
+            }
+          ]
+        },
+        {
+          "id": "system",
+          "label": "Sudning layoqatsiz deb topgan qarori bor-yo'qligini Tizim orqali tekshiradi",
+          "required": true,
+          "why": "4-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "mavjud yoki mavjud emasligini Tizim orqali tekshiradi",
+              "heading": "4-band.",
+              "text": "Notariusga murojaat etgan shaxsning ruhiy holati buzilganligi yoki aqli zaifligi oqibatida oʻz xatti-harakatlarining ahamiyatini tushuna olmaydi yoki shu harakatlarni boshqara olmaydi deb yoxud spirtli ichimliklarni yoki giyohvandlik va psixotrop moddalarni isteʼmol qilishi oqibatida oʻz oilasini ogʻir moddiy ahvolga solib qoʻyadi deb hisoblash uchun asosi boʻlsada (shubha tugʻdirsada), ammo shu fuqaroning muomalaga layoqatsiz yoki muomala layoqati cheklanganligi toʻgʻrisida maʼlumotlar boʻlmasa, u notarial harakatni amalga oshirishni kechiktiradi va sudning shu shaxsni muomalaga layoqatsiz yoki muomala layoqati cheklangan deb topganligi toʻgʻrisidagi qarori ⟦mavjud yoki mavjud emasligini Tizim orqali tekshiradi⟧."
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "label": "Shubha bo'lsa darhol rad etib, tekshirmaydi",
+          "required": false,
+          "why": "Notarius harakatni kechiktirib, sud qarorini Tizim orqali tekshiradi (4-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "u notarial harakatni amalga oshirishni kechiktiradi",
+              "heading": "4-band.",
+              "text": "Notariusga murojaat etgan shaxsning ruhiy holati buzilganligi yoki aqli zaifligi oqibatida oʻz xatti-harakatlarining ahamiyatini tushuna olmaydi yoki shu harakatlarni boshqara olmaydi deb yoxud spirtli ichimliklarni yoki giyohvandlik va psixotrop moddalarni isteʼmol qilishi oqibatida oʻz oilasini ogʻir moddiy ahvolga solib qoʻyadi deb hisoblash uchun asosi boʻlsada (shubha tugʻdirsada), ammo shu fuqaroning muomalaga layoqatsiz yoki muomala layoqati cheklanganligi toʻgʻrisida maʼlumotlar boʻlmasa, ⟦u notarial harakatni amalga oshirishni kechiktiradi⟧ va sudning shu shaxsni muomalaga layoqatsiz yoki muomala layoqati cheklangan deb topganligi toʻgʻrisidagi qarori mavjud yoki mavjud emasligini Tizim orqali tekshiradi."
+            }
+          ]
+        },
+        {
+          "id": "ignore",
+          "label": "Shubhani e'tiborsiz qoldirib, bitimni tasdiqlaydi",
+          "required": false,
+          "why": "Shubha bo'lsa harakat kechiktirilib, tekshirilishi kerak (4-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "kechiktiradi va sudning shu shaxsni muomalaga layoqatsiz",
+              "heading": "4-band.",
+              "text": "Notariusga murojaat etgan shaxsning ruhiy holati buzilganligi yoki aqli zaifligi oqibatida oʻz xatti-harakatlarining ahamiyatini tushuna olmaydi yoki shu harakatlarni boshqara olmaydi deb yoxud spirtli ichimliklarni yoki giyohvandlik va psixotrop moddalarni isteʼmol qilishi oqibatida oʻz oilasini ogʻir moddiy ahvolga solib qoʻyadi deb hisoblash uchun asosi boʻlsada (shubha tugʻdirsada), ammo shu fuqaroning muomalaga layoqatsiz yoki muomala layoqati cheklanganligi toʻgʻrisida maʼlumotlar boʻlmasa, u notarial harakatni amalga oshirishni ⟦kechiktiradi va sudning shu shaxsni muomalaga layoqatsiz⟧ yoki muomala layoqati cheklangan deb topganligi toʻgʻrisidagi qarori mavjud yoki mavjud emasligini Tizim orqali tekshiradi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Harakatlar",
+      "sources": [],
+      "points": 25,
+      "description": "Notarius harakatlarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "how",
+          "label": "Muomala layoqati qanday aniqlanadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "talk",
+              "label": "Shaxsiy muloqot davomida"
+            },
+            {
+              "id": "doc",
+              "label": "Faqat pasport orqali"
+            },
+            {
+              "id": "sms",
+              "label": "SMS orqali"
+            }
+          ],
+          "correct": "talk",
+          "why": "Shaxsiy muloqot davomida (4-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi",
+              "heading": "4-band.",
+              "text": "Notarius notarial harakat amalga oshirishni soʻrab murojaat etgan jismoniy shaxsning ⟦muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi⟧."
+            }
+          ]
+        },
+        {
+          "id": "doubt",
+          "label": "Shubha bor, lekin layoqatsizlik haqida ma'lumot yo'q bo'lsa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "delay",
+              "label": "Harakatni kechiktirib, sud qarorini Tizim orqali tekshiradi"
+            },
+            {
+              "id": "do",
+              "label": "Darhol tasdiqlaydi"
+            },
+            {
+              "id": "call",
+              "label": "Mijozning qarindoshidan so'raydi"
+            }
+          ],
+          "correct": "delay",
+          "why": "Harakatni kechiktiradi va sud qarorini Tizim orqali tekshiradi (4-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "u notarial harakatni amalga oshirishni kechiktiradi",
+              "heading": "4-band.",
+              "text": "Notariusga murojaat etgan shaxsning ruhiy holati buzilganligi yoki aqli zaifligi oqibatida oʻz xatti-harakatlarining ahamiyatini tushuna olmaydi yoki shu harakatlarni boshqara olmaydi deb yoxud spirtli ichimliklarni yoki giyohvandlik va psixotrop moddalarni isteʼmol qilishi oqibatida oʻz oilasini ogʻir moddiy ahvolga solib qoʻyadi deb hisoblash uchun asosi boʻlsada (shubha tugʻdirsada), ammo shu fuqaroning muomalaga layoqatsiz yoki muomala layoqati cheklanganligi toʻgʻrisida maʼlumotlar boʻlmasa, ⟦u notarial harakatni amalga oshirishni kechiktiradi⟧ va sudning shu shaxsni muomalaga layoqatsiz yoki muomala layoqati cheklangan deb topganligi toʻgʻrisidagi qarori mavjud yoki mavjud emasligini Tizim orqali tekshiradi."
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "label": "Sud qarorini qayerdan tekshiradi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "system",
+              "label": "Tizim orqali"
+            },
+            {
+              "id": "mahalla",
+              "label": "Mahalla yig'inidan"
+            },
+            {
+              "id": "bank",
+              "label": "Bankdan"
+            }
+          ],
+          "correct": "system",
+          "why": "Tizim orqali (4-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "mavjud yoki mavjud emasligini Tizim orqali tekshiradi",
+              "heading": "4-band.",
+              "text": "Notariusga murojaat etgan shaxsning ruhiy holati buzilganligi yoki aqli zaifligi oqibatida oʻz xatti-harakatlarining ahamiyatini tushuna olmaydi yoki shu harakatlarni boshqara olmaydi deb yoxud spirtli ichimliklarni yoki giyohvandlik va psixotrop moddalarni isteʼmol qilishi oqibatida oʻz oilasini ogʻir moddiy ahvolga solib qoʻyadi deb hisoblash uchun asosi boʻlsada (shubha tugʻdirsada), ammo shu fuqaroning muomalaga layoqatsiz yoki muomala layoqati cheklanganligi toʻgʻrisida maʼlumotlar boʻlmasa, u notarial harakatni amalga oshirishni kechiktiradi va sudning shu shaxsni muomalaga layoqatsiz yoki muomala layoqati cheklangan deb topganligi toʻgʻrisidagi qarori ⟦mavjud yoki mavjud emasligini Tizim orqali tekshiradi⟧."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Mijozning muomala layoqatiga shubha). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Mijozning ruhiy holatiga shubha bor; Layoqatsiz deb topilganligi haqida ma'lumot yo'q; Mijoz bosim ostida bo'lishi mumkin",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi",
+              "heading": "4-band.",
+              "text": "Notarius notarial harakat amalga oshirishni soʻrab murojaat etgan jismoniy shaxsning ⟦muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi⟧."
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Notarius muomala layoqatini shaxsiy muloqot davomida aniqlaydi; Shubha bo'lsa-yu layoqatsizlik haqida ma'lumot bo'lmasa, notarius harakatni kechiktiradi; Sudning layoqatsiz deb topgan qarori bor-yo'qligini Tizim orqali tekshiradi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Notarius qadamlari",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "talk",
+          "label": "Shaxsiy muloqotda layoqatini aniqlaydi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi",
+              "heading": "4-band.",
+              "text": "Notarius notarial harakat amalga oshirishni soʻrab murojaat etgan jismoniy shaxsning ⟦muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi⟧."
+            }
+          ]
+        },
+        {
+          "id": "delay",
+          "label": "Shubha tug'ilsa, harakatni kechiktiradi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "u notarial harakatni amalga oshirishni kechiktiradi",
+              "heading": "4-band.",
+              "text": "Notariusga murojaat etgan shaxsning ruhiy holati buzilganligi yoki aqli zaifligi oqibatida oʻz xatti-harakatlarining ahamiyatini tushuna olmaydi yoki shu harakatlarni boshqara olmaydi deb yoxud spirtli ichimliklarni yoki giyohvandlik va psixotrop moddalarni isteʼmol qilishi oqibatida oʻz oilasini ogʻir moddiy ahvolga solib qoʻyadi deb hisoblash uchun asosi boʻlsada (shubha tugʻdirsada), ammo shu fuqaroning muomalaga layoqatsiz yoki muomala layoqati cheklanganligi toʻgʻrisida maʼlumotlar boʻlmasa, ⟦u notarial harakatni amalga oshirishni kechiktiradi⟧ va sudning shu shaxsni muomalaga layoqatsiz yoki muomala layoqati cheklangan deb topganligi toʻgʻrisidagi qarori mavjud yoki mavjud emasligini Tizim orqali tekshiradi."
+            }
+          ]
+        },
+        {
+          "id": "system",
+          "label": "Sud qarori bor-yo'qligini Tizim orqali tekshiradi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "mavjud yoki mavjud emasligini Tizim orqali tekshiradi",
+              "heading": "4-band.",
+              "text": "Notariusga murojaat etgan shaxsning ruhiy holati buzilganligi yoki aqli zaifligi oqibatida oʻz xatti-harakatlarining ahamiyatini tushuna olmaydi yoki shu harakatlarni boshqara olmaydi deb yoxud spirtli ichimliklarni yoki giyohvandlik va psixotrop moddalarni isteʼmol qilishi oqibatida oʻz oilasini ogʻir moddiy ahvolga solib qoʻyadi deb hisoblash uchun asosi boʻlsada (shubha tugʻdirsada), ammo shu fuqaroning muomalaga layoqatsiz yoki muomala layoqati cheklanganligi toʻgʻrisida maʼlumotlar boʻlmasa, u notarial harakatni amalga oshirishni kechiktiradi va sudning shu shaxsni muomalaga layoqatsiz yoki muomala layoqati cheklangan deb topganligi toʻgʻrisidagi qarori ⟦mavjud yoki mavjud emasligini Tizim orqali tekshiradi⟧."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Layoqatni aniqlash",
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "4-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi",
+          "heading": "4-band.",
+          "text": "Notarius notarial harakat amalga oshirishni soʻrab murojaat etgan jismoniy shaxsning ⟦muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi⟧."
+        }
+      ],
+      "points": 15,
+      "description": "Notarius muomala layoqatini qanday aniqlaydi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Murojaat etuvchi bilan shaxsiy muloqot davomida"
+        },
+        {
+          "id": "b",
+          "label": "Faqat yozma so'rov bilan"
+        },
+        {
+          "id": "c",
+          "label": "Mahalla xati bilan"
+        },
+        {
+          "id": "d",
+          "label": "Aniqlamaydi"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

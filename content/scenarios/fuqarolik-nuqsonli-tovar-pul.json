@@ -1,0 +1,463 @@
+{
+  "id": "fuqarolik-nuqsonli-tovar-pul",
+  "title": "Sotuvchi pulni to'liq qaytarmayapti",
+  "area": "Fuqarolik huquqi",
+  "areaId": "fuqarolik",
+  "tracks": [
+    "advokat",
+    "korxona",
+    "sudya",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Xaridor nuqsonli tovarni qaytardi, sotuvchi foydalanganlik uchun pulning bir qismini ushlab qolmoqchi. Xaridor huquqlarini Fuqarolik kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Odil, 33 yosh, haydovchi",
+    "openingLine": "Assalomu alaykum. Sotib olgan blenderim nuqsonli chiqdi, qaytardim. Sotuvchi 'ishlatgansiz' deb pulning bir qismini ushlab qolmoqchi. Huquqi bormi?",
+    "hiddenFacts": [
+      {
+        "id": "defect",
+        "fact": "Blender nuqsonli, kamchilik shartnoma tuzishda aytilmagan",
+        "revealOn": []
+      },
+      {
+        "id": "used",
+        "fact": "Xaridor tovardan qisman foydalangan",
+        "revealOn": []
+      },
+      {
+        "id": "hold",
+        "fact": "Sotuvchi qiymat pasayishi uchun pulning bir qismini ushlab qolmoqchi",
+        "revealOn": []
+      },
+      {
+        "id": "wish",
+        "fact": "Xaridor shartnomani bekor qilib pulni qaytarishni xohlaydi",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "defect",
+        "used",
+        "hold"
+      ],
+      "questions": [
+        {
+          "id": "q-defect",
+          "text": "Nuqson nima?",
+          "factId": "defect",
+          "reply": "Motor qizib, o'zi o'chib qoladi, sotuvchi buni aytmagan edi."
+        },
+        {
+          "id": "q-used",
+          "text": "Ishlatganmisiz?",
+          "factId": "used",
+          "reply": "Ha, bir necha marta ishlatdim."
+        },
+        {
+          "id": "q-hold",
+          "text": "Sotuvchi nima deydi?",
+          "factId": "hold",
+          "reply": "Ishlatilgani uchun yarmini ushlab qolaman, deydi."
+        },
+        {
+          "id": "q-wish",
+          "text": "Nimani xohlaysiz?",
+          "factId": "wish",
+          "reply": "Shartnomani bekor qilib, pulimni qaytarib olmoqchiman."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Xaridor huquqlari",
+      "sources": [],
+      "points": 15,
+      "description": "Sifatsiz tovar sotilganda xaridor huquqlari.",
+      "prompt": "Sifati tegishli darajada bo'lmagan tovar sotilganda xaridor nimani talab qilishi mumkin? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "same",
+          "label": "Xuddi shu markadagi sifatli tovarga almashtirish",
+          "required": true,
+          "why": "434-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "xuddi shu markadagi (modeldagi, artikuldagi) sifati tegishli darajada boʻlgan tovarga almashtirishni",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida, agar uning kamchiliklari shartnoma tuzish paytida maʼlum qilinmagan boʻlsa, sotib oluvchi oʻz xohishiga koʻra:\n⟦xuddi shu markadagi (modeldagi, artikuldagi) sifati tegishli darajada boʻlgan tovarga almashtirishni⟧;",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "other",
+          "label": "Boshqa markadagi tovarga almashtirish, narxni qayta hisoblab",
+          "required": true,
+          "why": "434-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "xarid narxini tegishincha qayta hisoblagan holda boshqa markadagi (modeldagi, artikuldagi) sifati tegishli darajada boʻlgan tovarga almashtirishni",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "xuddi shu markadagi (modeldagi, artikuldagi) sifati tegishli darajada boʻlgan tovarga almashtirishni;\n⟦xarid narxini tegishincha qayta hisoblagan holda boshqa markadagi (modeldagi, artikuldagi) sifati tegishli darajada boʻlgan tovarga almashtirishni⟧;",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "repair",
+          "label": "Kamchiliklarni tekinga bartaraf etish yoki xarajatlarni qoplash",
+          "required": true,
+          "why": "434-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "tovarning kamchiliklarini tekinga bartaraf etishni",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "⟦tovarning kamchiliklarini tekinga bartaraf etishni⟧ yoki sotib oluvchi yoxud uchinchi shaxs tomonidan tovarning kamchiliklarini bartaraf etish uchun qilingan xarajatlar qoplanishini;",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "reduce",
+          "label": "Xarid narxini mutanosib kamaytirish",
+          "required": true,
+          "why": "434-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "xarid narxini mutanosib ravishda kamaytirishni",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "tovarning kamchiliklarini tekinga bartaraf etishni yoki sotib oluvchi yoxud uchinchi shaxs tomonidan tovarning kamchiliklarini bartaraf etish uchun qilingan xarajatlar qoplanishini;\n⟦xarid narxini mutanosib ravishda kamaytirishni⟧;",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "cancel",
+          "label": "Zarar o'rnini qoplagan holda shartnomani bekor qilish",
+          "required": true,
+          "why": "434-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "koʻrilgan zarar oʻrnini qoplagan holda shartnoma bekor qilinishini talab qilish huquqiga ega",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "⟦koʻrilgan zarar oʻrnini qoplagan holda shartnoma bekor qilinishini talab qilish huquqiga ega⟧.",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "hold",
+          "label": "Sotuvchi foydalanganlik tufayli qiymat pasayishini ushlab qolishi mumkin",
+          "required": false,
+          "why": "Sotuvchi qiymat pasaygan summani ushlab qolishga haqli emas (434-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "shuncha summani ushlab qolishga haqli emas",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "Tovar uchun toʻlangan pul summasini sotib oluvchiga qaytarish vaqtda sotuvchi undan tovardan toʻliq yoki qisman foydalanganligi, tovar koʻrinishi yoʻqolganligi yoki boshqa shunga oʻxshash holatlar tufayli tovar qiymati qancha pasaygan boʻlsa, ⟦shuncha summani ushlab qolishga haqli emas⟧.",
+              "anchor": "-183202"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Pulni qaytarish",
+      "sources": [],
+      "points": 25,
+      "description": "Pulni qaytarish va javobgarlik qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "choice",
+          "label": "Xaridor huquqni qanday tanlaydi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "own",
+              "label": "O'z xohishiga ko'ra"
+            },
+            {
+              "id": "seller",
+              "label": "Sotuvchi tanlaydi"
+            },
+            {
+              "id": "court",
+              "label": "Faqat sud tanlaydi"
+            }
+          ],
+          "correct": "own",
+          "why": "O'z xohishiga ko'ra (434-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotib oluvchi oʻz xohishiga koʻra",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida, agar uning kamchiliklari shartnoma tuzish paytida maʼlum qilinmagan boʻlsa, ⟦sotib oluvchi oʻz xohishiga koʻra⟧:",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "hold",
+          "label": "Pulni qaytarishda sotuvchi tovardan foydalanilgani uchun qiymat pasayishini ushlab qolishi mumkinmi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "yes",
+              "label": "Mumkin"
+            },
+            {
+              "id": "no",
+              "label": "Haqli emas"
+            },
+            {
+              "id": "half",
+              "label": "Faqat yarmini"
+            }
+          ],
+          "correct": "no",
+          "why": "Haqli emas (434-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "shuncha summani ushlab qolishga haqli emas",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "Tovar uchun toʻlangan pul summasini sotib oluvchiga qaytarish vaqtda sotuvchi undan tovardan toʻliq yoki qisman foydalanganligi, tovar koʻrinishi yoʻqolganligi yoki boshqa shunga oʻxshash holatlar tufayli tovar qiymati qancha pasaygan boʻlsa, ⟦shuncha summani ushlab qolishga haqli emas⟧.",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "duty",
+          "label": "Zararni qoplash va neustoyka to'lash sotuvchini majburiyatni asl holida bajarishdan",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "free",
+              "label": "Ozod qiladi"
+            },
+            {
+              "id": "notfree",
+              "label": "Ozod qilmaydi"
+            },
+            {
+              "id": "half",
+              "label": "Yarim ozod qiladi"
+            }
+          ],
+          "correct": "notfree",
+          "why": "Ozod qilmaydi (436-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "436-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotuvchini majburiyatni asl holida bajarishdan ozod qilmaydi",
+              "heading": "436-modda. Sotuvchining javobgarligi va majburiyatni asl holida bajarish",
+              "text": "Sotuvchi chakana oldi-sotdi shartnomasi boʻyicha majburiyatini bajarmagan taqdirda zararni qoplash va neustoyka toʻlash ⟦sotuvchini majburiyatni asl holida bajarishdan ozod qilmaydi⟧.",
+              "anchor": "-183215"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Sotuvchi pulni to'liq qaytarmayapti). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Blender nuqsonli, kamchilik shartnoma tuzishda aytilmagan; Xaridor tovardan qisman foydalangan; Sotuvchi qiymat pasayishi uchun pulning bir qismini ushlab qolmoqchi",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "xuddi shu markadagi (modeldagi, artikuldagi) sifati tegishli darajada boʻlgan tovarga almashtirishni",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida, agar uning kamchiliklari shartnoma tuzish paytida maʼlum qilinmagan boʻlsa, sotib oluvchi oʻz xohishiga koʻra:\n⟦xuddi shu markadagi (modeldagi, artikuldagi) sifati tegishli darajada boʻlgan tovarga almashtirishni⟧;",
+              "anchor": "-183202"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "436-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotuvchini majburiyatni asl holida bajarishdan ozod qilmaydi",
+              "heading": "436-modda. Sotuvchining javobgarligi va majburiyatni asl holida bajarish",
+              "text": "Sotuvchi chakana oldi-sotdi shartnomasi boʻyicha majburiyatini bajarmagan taqdirda zararni qoplash va neustoyka toʻlash ⟦sotuvchini majburiyatni asl holida bajarishdan ozod qilmaydi⟧.",
+              "anchor": "-183215"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Xuddi shu markadagi sifatli tovarga almashtirish; Boshqa markadagi tovarga almashtirish, narxni qayta hisoblab; Kamchiliklarni tekinga bartaraf etish yoki xarajatlarni qoplash; Xarid narxini mutanosib kamaytirish",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Xaridor harakatlari",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "defect",
+          "label": "Tovar kamchiligi shartnoma tuzishda ma'lum qilinmaganligi aniqlanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "agar uning kamchiliklari shartnoma tuzish paytida maʼlum qilinmagan boʻlsa",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida, ⟦agar uning kamchiliklari shartnoma tuzish paytida maʼlum qilinmagan boʻlsa⟧, sotib oluvchi oʻz xohishiga koʻra:",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "choose",
+          "label": "Xaridor o'z xohishiga ko'ra huquqlardan birini tanlaydi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotib oluvchi oʻz xohishiga koʻra",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida, agar uning kamchiliklari shartnoma tuzish paytida maʼlum qilinmagan boʻlsa, ⟦sotib oluvchi oʻz xohishiga koʻra⟧:",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "refund",
+          "label": "Pul qaytarilganda sotuvchi qiymat pasayishini ushlab qolmaydi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "shuncha summani ushlab qolishga haqli emas",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "Tovar uchun toʻlangan pul summasini sotib oluvchiga qaytarish vaqtda sotuvchi undan tovardan toʻliq yoki qisman foydalanganligi, tovar koʻrinishi yoʻqolganligi yoki boshqa shunga oʻxshash holatlar tufayli tovar qiymati qancha pasaygan boʻlsa, ⟦shuncha summani ushlab qolishga haqli emas⟧.",
+              "anchor": "-183202"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Majburiyat asl holida",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+          "article": "436-modda",
+          "url": "https://lex.uz/docs/-180552",
+          "quote": "sotuvchini majburiyatni asl holida bajarishdan ozod qilmaydi",
+          "heading": "436-modda. Sotuvchining javobgarligi va majburiyatni asl holida bajarish",
+          "text": "Sotuvchi chakana oldi-sotdi shartnomasi boʻyicha majburiyatini bajarmagan taqdirda zararni qoplash va neustoyka toʻlash ⟦sotuvchini majburiyatni asl holida bajarishdan ozod qilmaydi⟧.",
+          "anchor": "-183215"
+        }
+      ],
+      "points": 15,
+      "description": "Sotuvchi majburiyatni bajarmaganda zararni qoplash va neustoyka to'lash uni majburiyatni asl holida bajarishdan ozod qiladimi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Ozod qilmaydi"
+        },
+        {
+          "id": "b",
+          "label": "Ozod qiladi"
+        },
+        {
+          "id": "c",
+          "label": "Faqat yarmiga ozod qiladi"
+        },
+        {
+          "id": "d",
+          "label": "Sud xohishiga ko'ra"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

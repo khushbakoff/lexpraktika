@@ -1,0 +1,454 @@
+{
+  "id": "jinoyat-dalillar",
+  "title": "Videoyozuv dalil bo'ladimi?",
+  "area": "Jinoyat-protsessual huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijozda janjalning videoyozuvi bor. Dalil nima, nimalar dalil hisoblanadi va tezkor-qidiruv natijalari qachon dalil bo'ladi, Jinoyat-protsessual kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Behzod, 34 yosh, do'kon egasi",
+    "openingLine": "Assalomu alaykum. Do'konimdagi janjalning videosi bor. Bu sudda dalil bo'ladimi?",
+    "hiddenFacts": [
+      {
+        "id": "video",
+        "fact": "Mijozda janjalning videoyozuvi bor",
+        "revealOn": []
+      },
+      {
+        "id": "witness",
+        "fact": "Ikki guvoh voqeani ko'rgan",
+        "revealOn": []
+      },
+      {
+        "id": "exp",
+        "fact": "Jarohat bo'yicha ekspert xulosasi bor",
+        "revealOn": []
+      },
+      {
+        "id": "rumor",
+        "fact": "Qo'shni voqea haqida mish-mish eshitgan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "video",
+        "witness",
+        "exp"
+      ],
+      "questions": [
+        {
+          "id": "q-video",
+          "text": "Sizda nima bor?",
+          "factId": "video",
+          "reply": "Kuzatuv kamerasining videoyozuvi."
+        },
+        {
+          "id": "q-witness",
+          "text": "Guvohlar bormi?",
+          "factId": "witness",
+          "reply": "Ha, ikkita xaridor ko'rgan."
+        },
+        {
+          "id": "q-exp",
+          "text": "Tibbiy xulosa bormi?",
+          "factId": "exp",
+          "reply": "Ha, ekspert xulosasi tayyor."
+        },
+        {
+          "id": "q-rumor",
+          "text": "Boshqa ma'lumot bormi?",
+          "factId": "rumor",
+          "reply": "Qo'shnim birovdan eshitganini aytdi."
+        },
+        {
+          "id": "q-filler",
+          "text": "Kamerani qachon o'rnatgansiz?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, dalillar haqida gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Dalil manbalari",
+      "sources": [],
+      "points": 15,
+      "description": "Qaysi ma'lumotlar jinoyat ishida dalil hisoblanadi.",
+      "prompt": "Quyidagilardan qaysilari jinoyat ishida dalillarni aniqlash vositasi bo'ladi? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "testimony",
+          "label": "Guvoh, jabrlanuvchi, gumon qilinuvchi, ayblanuvchi ko'rsatuvlari",
+          "required": true,
+          "why": "81-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "guvohning, jabrlanuvchining, gumon qilinuvchining, ayblanuvchining, sudlanuvchining koʻrsatuvlari",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Bu maʼlumotlar ⟦guvohning, jabrlanuvchining, gumon qilinuvchining, ayblanuvchining, sudlanuvchining koʻrsatuvlari⟧, ekspertning xulosasi, ashyoviy, yozma va raqamli dalillar, ovozli yozuvlar, videoyozuvlar, kinotasvir va fotosuratlardan iborat materiallar, tergov va sud harakatlarining bayonnomalari va boshqa hujjatlar bilan aniqlanadi.",
+              "anchor": "-253745"
+            }
+          ]
+        },
+        {
+          "id": "expert",
+          "label": "Ekspert xulosasi",
+          "required": true,
+          "why": "81-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ekspertning xulosasi",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Bu maʼlumotlar guvohning, jabrlanuvchining, gumon qilinuvchining, ayblanuvchining, sudlanuvchining koʻrsatuvlari, ⟦ekspertning xulosasi⟧, ashyoviy, yozma va raqamli dalillar, ovozli yozuvlar, videoyozuvlar, kinotasvir va fotosuratlardan iborat materiallar, tergov va sud harakatlarining bayonnomalari va boshqa hujjatlar bilan aniqlanadi.",
+              "anchor": "-253745"
+            }
+          ]
+        },
+        {
+          "id": "digital",
+          "label": "Ashyoviy, yozma va raqamli dalillar",
+          "required": true,
+          "why": "81-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ashyoviy, yozma va raqamli dalillar",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Bu maʼlumotlar guvohning, jabrlanuvchining, gumon qilinuvchining, ayblanuvchining, sudlanuvchining koʻrsatuvlari, ekspertning xulosasi, ⟦ashyoviy, yozma va raqamli dalillar⟧, ovozli yozuvlar, videoyozuvlar, kinotasvir va fotosuratlardan iborat materiallar, tergov va sud harakatlarining bayonnomalari va boshqa hujjatlar bilan aniqlanadi.",
+              "anchor": "-253745"
+            }
+          ]
+        },
+        {
+          "id": "video",
+          "label": "Ovozli yozuvlar, videoyozuvlar, fotosuratlar",
+          "required": true,
+          "why": "81-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ovozli yozuvlar, videoyozuvlar, kinotasvir va fotosuratlardan iborat materiallar",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Bu maʼlumotlar guvohning, jabrlanuvchining, gumon qilinuvchining, ayblanuvchining, sudlanuvchining koʻrsatuvlari, ekspertning xulosasi, ashyoviy, yozma va raqamli dalillar, ⟦ovozli yozuvlar, videoyozuvlar, kinotasvir va fotosuratlardan iborat materiallar⟧, tergov va sud harakatlarining bayonnomalari va boshqa hujjatlar bilan aniqlanadi.",
+              "anchor": "-253745"
+            }
+          ]
+        },
+        {
+          "id": "protocol",
+          "label": "Tergov va sud harakatlarining bayonnomalari",
+          "required": true,
+          "why": "81-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "tergov va sud harakatlarining bayonnomalari",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Bu maʼlumotlar guvohning, jabrlanuvchining, gumon qilinuvchining, ayblanuvchining, sudlanuvchining koʻrsatuvlari, ekspertning xulosasi, ashyoviy, yozma va raqamli dalillar, ovozli yozuvlar, videoyozuvlar, kinotasvir va fotosuratlardan iborat materiallar, ⟦tergov va sud harakatlarining bayonnomalari⟧ va boshqa hujjatlar bilan aniqlanadi.",
+              "anchor": "-253745"
+            }
+          ]
+        },
+        {
+          "id": "rumor",
+          "label": "Birovdan eshitilgan taxminiy mish-mish",
+          "required": false,
+          "why": "Dalil — ishni hal qilishga asos bo'ladigan faktik ma'lumot, taxmin emas (81-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "faktik maʼlumotlar jinoyat ishi boʻyicha dalil hisoblanadi",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Ijtimoiy xavfli qilmishning yuz bergan-bermaganligini, shu qilmishni sodir etgan shaxsning aybli-aybsizligini va ishni toʻgʻri hal qilish uchun ahamiyatga molik boshqa holatlarni surishtiruvchining, tergovchining va sudning qonunda belgilangan tartibda aniqlashiga asos boʻladigan har qanday ⟦faktik maʼlumotlar jinoyat ishi boʻyicha dalil hisoblanadi⟧.",
+              "anchor": "-253745"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Dalil tushunchasi",
+      "sources": [],
+      "points": 25,
+      "description": "Dalilga oid qoidalarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "def",
+          "label": "Jinoyat ishida dalil nima?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "facts",
+              "label": "Qonunda belgilangan tartibda aniqlashga asos bo'ladigan har qanday faktik ma'lumotlar"
+            },
+            {
+              "id": "opinion",
+              "label": "Tergovchining shaxsiy fikri"
+            },
+            {
+              "id": "rumor",
+              "label": "Qo'shnilarning gap-so'zlari"
+            }
+          ],
+          "correct": "facts",
+          "why": "Qilmish yuz bergan-bermaganligini, shaxsning aybli-aybsizligini aniqlashga asos bo'ladigan har qanday faktik ma'lumotlar (81-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "aniqlashiga asos boʻladigan har qanday faktik maʼlumotlar jinoyat ishi boʻyicha dalil hisoblanadi",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Ijtimoiy xavfli qilmishning yuz bergan-bermaganligini, shu qilmishni sodir etgan shaxsning aybli-aybsizligini va ishni toʻgʻri hal qilish uchun ahamiyatga molik boshqa holatlarni surishtiruvchining, tergovchining va sudning qonunda belgilangan tartibda ⟦aniqlashiga asos boʻladigan har qanday faktik maʼlumotlar jinoyat ishi boʻyicha dalil hisoblanadi⟧.",
+              "anchor": "-253745"
+            }
+          ]
+        },
+        {
+          "id": "digital",
+          "label": "Videoyozuv va raqamli yozuvlar",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "yes",
+              "label": "Dalillarni aniqlash vositasi bo'la oladi"
+            },
+            {
+              "id": "no",
+              "label": "Hech qachon dalil bo'lmaydi"
+            },
+            {
+              "id": "jud",
+              "label": "Faqat sudyaning xohishiga ko'ra"
+            }
+          ],
+          "correct": "yes",
+          "why": "Raqamli dalillar, videoyozuvlar dalillarni aniqlash vositalari ro'yxatida bor (81-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ovozli yozuvlar, videoyozuvlar, kinotasvir va fotosuratlardan iborat materiallar",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Bu maʼlumotlar guvohning, jabrlanuvchining, gumon qilinuvchining, ayblanuvchining, sudlanuvchining koʻrsatuvlari, ekspertning xulosasi, ashyoviy, yozma va raqamli dalillar, ⟦ovozli yozuvlar, videoyozuvlar, kinotasvir va fotosuratlardan iborat materiallar⟧, tergov va sud harakatlarining bayonnomalari va boshqa hujjatlar bilan aniqlanadi.",
+              "anchor": "-253745"
+            }
+          ]
+        },
+        {
+          "id": "orm",
+          "label": "Tezkor-qidiruv tadbirlari natijalari dalil bo'lishi uchun",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "any",
+              "label": "Qanday olinganidan qat'i nazar"
+            },
+            {
+              "id": "law",
+              "label": "Faqat qonun talablariga muvofiq olingan, tekshirilgan va baholangan bo'lsa"
+            },
+            {
+              "id": "never",
+              "label": "Hech qachon dalil bo'lmaydi"
+            }
+          ],
+          "correct": "law",
+          "why": "Faqat qonun talablariga muvofiq olingan bo'lsa va Kodeks normalariga muvofiq tekshirilib baholansa (81-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "faqat qonun talablariga muvofiq olingan boʻlsa",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Agar tezkor-qidiruv tadbirlarining natijalari ⟦faqat qonun talablariga muvofiq olingan boʻlsa⟧, ushbu Kodeks normalariga muvofiq tekshirilgan va baholanganidan keyin hamda huquqni muhofaza qiluvchi organlar xodimlarining yoki tezkor-qidiruv tadbirida ishtirok etgan boshqa shaxslarning harakatlariga bogʻliq boʻlmagan holda shaxsda jinoyat sodir etish uchun shakllangan qasd mavjud boʻlganligidan dalolat bersa, ushbu natijalar dalil sifatida tan olinishi mumkin.",
+              "anchor": "-253745"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Videoyozuv dalil bo'ladimi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Mijozda janjalning videoyozuvi bor; Ikki guvoh voqeani ko'rgan; Jarohat bo'yicha ekspert xulosasi bor",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "guvohning, jabrlanuvchining, gumon qilinuvchining, ayblanuvchining, sudlanuvchining koʻrsatuvlari",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Bu maʼlumotlar ⟦guvohning, jabrlanuvchining, gumon qilinuvchining, ayblanuvchining, sudlanuvchining koʻrsatuvlari⟧, ekspertning xulosasi, ashyoviy, yozma va raqamli dalillar, ovozli yozuvlar, videoyozuvlar, kinotasvir va fotosuratlardan iborat materiallar, tergov va sud harakatlarining bayonnomalari va boshqa hujjatlar bilan aniqlanadi.",
+              "anchor": "-253745"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Guvoh, jabrlanuvchi, gumon qilinuvchi, ayblanuvchi ko'rsatuvlari; Ekspert xulosasi; Ashyoviy, yozma va raqamli dalillar; Ovozli yozuvlar, videoyozuvlar, fotosuratlar",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Natijani dalil sifatida tan olish",
+      "sources": [],
+      "points": 15,
+      "description": "Tezkor-qidiruv natijasi dalil bo'lishi shartlarini ketma-ketlikda belgilang.",
+      "order": [
+        {
+          "id": "legal",
+          "label": "Natijalar qonun talablariga muvofiq olingan bo'lishi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "faqat qonun talablariga muvofiq olingan boʻlsa",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Agar tezkor-qidiruv tadbirlarining natijalari ⟦faqat qonun talablariga muvofiq olingan boʻlsa⟧, ushbu Kodeks normalariga muvofiq tekshirilgan va baholanganidan keyin hamda huquqni muhofaza qiluvchi organlar xodimlarining yoki tezkor-qidiruv tadbirida ishtirok etgan boshqa shaxslarning harakatlariga bogʻliq boʻlmagan holda shaxsda jinoyat sodir etish uchun shakllangan qasd mavjud boʻlganligidan dalolat bersa, ushbu natijalar dalil sifatida tan olinishi mumkin.",
+              "anchor": "-253745"
+            }
+          ]
+        },
+        {
+          "id": "checked",
+          "label": "Kodeks normalariga muvofiq tekshirilib, baholanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ushbu Kodeks normalariga muvofiq tekshirilgan va baholanganidan keyin",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Agar tezkor-qidiruv tadbirlarining natijalari faqat qonun talablariga muvofiq olingan boʻlsa, ⟦ushbu Kodeks normalariga muvofiq tekshirilgan va baholanganidan keyin⟧ hamda huquqni muhofaza qiluvchi organlar xodimlarining yoki tezkor-qidiruv tadbirida ishtirok etgan boshqa shaxslarning harakatlariga bogʻliq boʻlmagan holda shaxsda jinoyat sodir etish uchun shakllangan qasd mavjud boʻlganligidan dalolat bersa, ushbu natijalar dalil sifatida tan olinishi mumkin.",
+              "anchor": "-253745"
+            }
+          ]
+        },
+        {
+          "id": "intent",
+          "label": "Shaxsda jinoyat uchun qasd shakllanganligidan dalolat bersa, dalil sifatida tan olinishi mumkin",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "81-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "shaxsda jinoyat sodir etish uchun shakllangan qasd mavjud boʻlganligidan dalolat bersa",
+              "heading": "81-modda. Dalillarning turlari",
+              "text": "Agar tezkor-qidiruv tadbirlarining natijalari faqat qonun talablariga muvofiq olingan boʻlsa, ushbu Kodeks normalariga muvofiq tekshirilgan va baholanganidan keyin hamda huquqni muhofaza qiluvchi organlar xodimlarining yoki tezkor-qidiruv tadbirida ishtirok etgan boshqa shaxslarning harakatlariga bogʻliq boʻlmagan holda ⟦shaxsda jinoyat sodir etish uchun shakllangan qasd mavjud boʻlganligidan dalolat bersa⟧, ushbu natijalar dalil sifatida tan olinishi mumkin.",
+              "anchor": "-253745"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Dalil nimani aniqlaydi",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "81-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "Ijtimoiy xavfli qilmishning yuz bergan-bermaganligini, shu qilmishni sodir etgan shaxsning aybli-aybsizligini",
+          "heading": "81-modda. Dalillarning turlari",
+          "text": "⟦Ijtimoiy xavfli qilmishning yuz bergan-bermaganligini, shu qilmishni sodir etgan shaxsning aybli-aybsizligini⟧ va ishni toʻgʻri hal qilish uchun ahamiyatga molik boshqa holatlarni surishtiruvchining, tergovchining va sudning qonunda belgilangan tartibda aniqlashiga asos boʻladigan har qanday faktik maʼlumotlar jinoyat ishi boʻyicha dalil hisoblanadi.",
+          "anchor": "-253745"
+        }
+      ],
+      "points": 15,
+      "description": "Dalillar nimani aniqlashga asos bo'ladi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Qilmish yuz bergan-bermaganligini va shaxsning aybli-aybsizligini"
+        },
+        {
+          "id": "b",
+          "label": "Faqat jabrlanuvchining kayfiyatini"
+        },
+        {
+          "id": "c",
+          "label": "Faqat sud binosi manzilini"
+        },
+        {
+          "id": "d",
+          "label": "Hech narsani"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

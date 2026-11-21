@@ -1,0 +1,407 @@
+{
+  "id": "ish-notarius-xato-aniqlandi",
+  "title": "O'z xatom aniqlandi: nima qilaman?",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Notarius o'z xatosi natijasida amalga oshirgan notarial harakat noto'g'ri ekanini bilib qoldi. Qanday harakat qilishini Yo'riqnoma bo'yicha belgilang.",
+  "client": {
+    "persona": "Notarius",
+    "openingLine": "Assalomu alaykum. Bir oy oldin tasdiqlagan hujjatimda o'z xatom borligini bilib qoldim. Nima qilishim kerak?",
+    "hiddenFacts": [
+      {
+        "id": "error",
+        "fact": "Notarius o'z xatosi tufayli noto'g'ri notarial harakat amalga oshirgan",
+        "revealOn": []
+      },
+      {
+        "id": "when",
+        "fact": "Xato bir oy oldin sodir etilgan",
+        "revealOn": []
+      },
+      {
+        "id": "cancel",
+        "fact": "Harakatni bekor qilish zarur",
+        "revealOn": []
+      },
+      {
+        "id": "who",
+        "fact": "Bekor qilish uchun kimga murojaat qilish kerak",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "error",
+        "when",
+        "cancel"
+      ],
+      "questions": [
+        {
+          "id": "q-error",
+          "text": "Nima xato bo'lgan?",
+          "factId": "error",
+          "reply": "Hujjatda xato qilib tasdiqlaganman."
+        },
+        {
+          "id": "q-when",
+          "text": "Qachon?",
+          "factId": "when",
+          "reply": "Bir oy oldin."
+        },
+        {
+          "id": "q-cancel",
+          "text": "Nima xohlaysiz?",
+          "factId": "cancel",
+          "reply": "Harakatni bekor qilmoqchiman."
+        },
+        {
+          "id": "q-who",
+          "text": "Kimga xabar berishim kerak?",
+          "factId": "who",
+          "reply": "Bilmayman."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Xatoni tuzatish",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Notarius o'z xatosi natijasida noto'g'ri harakat amalga oshirganini bilib qolsa, qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "report",
+          "label": "Harakatni bekor qilish choralarini ko'rish uchun prokurorga xabar qilishga majbur",
+          "required": true,
+          "why": "23-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "23-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda prokurorga xabar qilishga majbur",
+              "heading": "23-band.",
+              "text": "Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini bilib qolgan taqdirda, ⟦u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda prokurorga xabar qilishga majbur⟧. Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi."
+            }
+          ]
+        },
+        {
+          "id": "justice",
+          "label": "Prokurorni xabardor qilganligi haqida hududiy adliya organlarini xabardor qiladi",
+          "required": true,
+          "why": "23-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "23-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi",
+              "heading": "23-band.",
+              "text": "Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini bilib qolgan taqdirda, u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda prokurorga xabar qilishga majbur. ⟦Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi⟧."
+            }
+          ]
+        },
+        {
+          "id": "hide",
+          "label": "Xatoni yashirib, harakatni o'zi jimgina o'zgartiradi",
+          "required": false,
+          "why": "Notarius prokurorga xabar qilishga majbur (23-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "23-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "prokurorga xabar qilishga majbur",
+              "heading": "23-band.",
+              "text": "Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini bilib qolgan taqdirda, u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda ⟦prokurorga xabar qilishga majbur⟧. Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi."
+            }
+          ]
+        },
+        {
+          "id": "wait",
+          "label": "Mijoz so'ramaguncha hech narsa qilmaydi",
+          "required": false,
+          "why": "Xatoni bilib qolganda xabar qilish majburiyati paydo bo'ladi (23-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "23-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "bilib qolgan taqdirda",
+              "heading": "23-band.",
+              "text": "Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini ⟦bilib qolgan taqdirda⟧, u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda prokurorga xabar qilishga majbur. Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Xabar qilish",
+      "sources": [],
+      "points": 25,
+      "description": "Majburiyatlarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "who",
+          "label": "Notarius o'z xatosini bilib qolsa kimga xabar qilishga majbur?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "prosecutor",
+              "label": "Prokurorga"
+            },
+            {
+              "id": "client",
+              "label": "Faqat mijozga"
+            },
+            {
+              "id": "press",
+              "label": "Matbuotga"
+            }
+          ],
+          "correct": "prosecutor",
+          "why": "Prokurorga (23-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "23-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "prokurorga xabar qilishga majbur",
+              "heading": "23-band.",
+              "text": "Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini bilib qolgan taqdirda, u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda ⟦prokurorga xabar qilishga majbur⟧. Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi."
+            }
+          ]
+        },
+        {
+          "id": "justice",
+          "label": "Prokurorni xabardor qilgach, yana kimni xabardor qiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "justice",
+              "label": "Tegishli hududiy adliya organlarini"
+            },
+            {
+              "id": "bank",
+              "label": "Bankni"
+            },
+            {
+              "id": "none",
+              "label": "Hech kimni"
+            }
+          ],
+          "correct": "justice",
+          "why": "Tegishli hududiy adliya organlarini (23-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "23-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi",
+              "heading": "23-band.",
+              "text": "Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini bilib qolgan taqdirda, u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda prokurorga xabar qilishga majbur. ⟦Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi⟧."
+            }
+          ]
+        },
+        {
+          "id": "aim",
+          "label": "Xabar qilishdan maqsad",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "cancel",
+              "label": "Harakatni belgilangan tartibda bekor qilish choralarini ko'rish"
+            },
+            {
+              "id": "fine",
+              "label": "Mijozni jarimaga tortish"
+            },
+            {
+              "id": "hide",
+              "label": "Xatoni yashirish"
+            }
+          ],
+          "correct": "cancel",
+          "why": "Harakatni belgilangan tartibda bekor qilish choralarini ko'rish (23-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "23-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "belgilangan tartibda bekor qilish choralarini koʻrish uchun",
+              "heading": "23-band.",
+              "text": "Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini bilib qolgan taqdirda, u ana shu notarial harakatni ⟦belgilangan tartibda bekor qilish choralarini koʻrish uchun⟧ bu haqda prokurorga xabar qilishga majbur. Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (O'z xatom aniqlandi: nima qilaman?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Notarius o'z xatosi tufayli noto'g'ri notarial harakat amalga oshirgan; Xato bir oy oldin sodir etilgan; Harakatni bekor qilish zarur",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "23-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda prokurorga xabar qilishga majbur",
+              "heading": "23-band.",
+              "text": "Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini bilib qolgan taqdirda, ⟦u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda prokurorga xabar qilishga majbur⟧. Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi."
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Harakatni bekor qilish choralarini ko'rish uchun prokurorga xabar qilishga majbur; Prokurorni xabardor qilganligi haqida hududiy adliya organlarini xabardor qiladi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Xatoni tuzatish tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "found",
+          "label": "Notarius o'z xatosi tufayli harakat noto'g'riligini bilib qoladi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "23-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini bilib qolgan taqdirda",
+              "heading": "23-band.",
+              "text": "⟦Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini bilib qolgan taqdirda⟧, u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda prokurorga xabar qilishga majbur. Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi."
+            }
+          ]
+        },
+        {
+          "id": "pros",
+          "label": "Prokurorga xabar qiladi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "23-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "prokurorga xabar qilishga majbur",
+              "heading": "23-band.",
+              "text": "Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini bilib qolgan taqdirda, u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda ⟦prokurorga xabar qilishga majbur⟧. Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi."
+            }
+          ]
+        },
+        {
+          "id": "justice",
+          "label": "Prokurorni xabardor qilganini hududiy adliya organlariga bildiradi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "23-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "tegishli hududiy adliya organlarini xabardor qiladi",
+              "heading": "23-band.",
+              "text": "Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini bilib qolgan taqdirda, u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda prokurorga xabar qilishga majbur. Notarius prokurorni xabardor qilganligi toʻgʻrisida ⟦tegishli hududiy adliya organlarini xabardor qiladi⟧."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Xabar majburiyati",
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "23-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "prokurorga xabar qilishga majbur",
+          "heading": "23-band.",
+          "text": "Notarius yoʻl qoʻygan xatosi natijasida oʻzi amalga oshirgan notarial harakatning notoʻgʻriligini bilib qolgan taqdirda, u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda ⟦prokurorga xabar qilishga majbur⟧. Notarius prokurorni xabardor qilganligi toʻgʻrisida tegishli hududiy adliya organlarini xabardor qiladi."
+        }
+      ],
+      "points": 15,
+      "description": "Notarius o'z xatosini bilib qolganda prokurorga xabar qilish uning uchun qanday?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Majburiyat"
+        },
+        {
+          "id": "b",
+          "label": "Ixtiyoriy"
+        },
+        {
+          "id": "c",
+          "label": "Faqat mijoz talabi bilan"
+        },
+        {
+          "id": "d",
+          "label": "Taqiqlangan"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

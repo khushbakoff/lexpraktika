@@ -1,0 +1,502 @@
+{
+  "id": "murojaat-javob-yoq",
+  "title": "Hokimlikka ariza berdim, javob yo'q",
+  "area": "Davlat organlariga murojaat",
+  "areaId": "mamuriy",
+  "tracks": [
+    "davlat",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijoz tuman hokimligiga yozma ariza bergan, 20 kundan beri javob yo'q. Murojaatga talablar, berish tartibi, ko'rib chiqish muddati va shikoyat tartibini «Jismoniy va yuridik shaxslarning murojaatlari to'g'risida»gi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Jasur, 40 yosh, uy egasi",
+    "openingLine": "Assalomu alaykum. Hokimlikka ariza bergandim, 20 kun o'tdi, hech qanday javob yo'q.",
+    "hiddenFacts": [
+      {
+        "id": "form",
+        "fact": "Yozma ariza, ism, manzil va imzo bilan, hokimlikka topshirilgan",
+        "revealOn": [
+          "shakl",
+          "qanday"
+        ]
+      },
+      {
+        "id": "when",
+        "fact": "Ariza 20 kun oldin berilgan",
+        "revealOn": [
+          "qachon"
+        ]
+      },
+      {
+        "id": "silence",
+        "fact": "Javob ham, muddat uzaytirilgani haqida xabar ham kelmagan",
+        "revealOn": [
+          "javob",
+          "xabar"
+        ]
+      },
+      {
+        "id": "topic",
+        "fact": "Yer uchastkasiga kommunal xizmat ulash haqida",
+        "revealOn": [
+          "nima haqida"
+        ]
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Ariza qanday berilgan, qachon, javob bormi.",
+      "requiredFactIds": [
+        "form",
+        "when",
+        "silence"
+      ],
+      "questions": [
+        {
+          "id": "q-form",
+          "text": "Arizangiz qanday shaklda berilgan?",
+          "factId": "form",
+          "reply": "Yozma, ismim, manzilim va imzom bilan, tuman hokimligiga topshirganman."
+        },
+        {
+          "id": "q-when",
+          "text": "Qachon bergansiz?",
+          "factId": "when",
+          "reply": "20 kun oldin."
+        },
+        {
+          "id": "q-silence",
+          "text": "Javob yoki muddat uzaytirilgani haqida xabar keldimi?",
+          "factId": "silence",
+          "reply": "Yo'q, hech qanday xabar kelmadi."
+        },
+        {
+          "id": "q-topic",
+          "text": "Arizangiz nima haqida?",
+          "factId": "topic",
+          "reply": "Yer uchastkamga kommunal xizmat ulash haqida."
+        },
+        {
+          "id": "q-weather",
+          "text": "Bugun havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, arizam haqida gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "requirements",
+      "type": "document-pick",
+      "title": "Murojaatga talablar",
+      "sources": [],
+      "points": 15,
+      "description": "Yozma murojaatda nimalar bo'lishi shart.",
+      "prompt": "Jismoniy shaxsning yozma murojaatida nimalar bo'lishi shart? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "name",
+          "label": "Familiya, ism, otasining ismi va yashash joyi haqidagi ma'lumot",
+          "required": true,
+          "why": "Bu ma'lumotlar ko'rsatilmasa murojaat anonim hisoblanadi va ko'rib chiqilmaydi (6, 20-moddalar).",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "Jismoniy shaxsning murojaatida jismoniy shaxsning familiyasi (ismi, otasining ismi), uning yashash joyi toʻgʻrisidagi maʼlumotlar koʻrsatilgan va murojaatning mohiyati bayon etilgan boʻlishi kerak.",
+              "heading": "6-modda. Murojaatlarga qoʻyiladigan talablar",
+              "text": "⟦Jismoniy shaxsning murojaatida jismoniy shaxsning familiyasi (ismi, otasining ismi), uning yashash joyi toʻgʻrisidagi maʼlumotlar koʻrsatilgan va murojaatning mohiyati bayon etilgan boʻlishi kerak.⟧",
+              "anchor": "-2510026"
+            }
+          ]
+        },
+        {
+          "id": "essence",
+          "label": "Murojaatning mohiyatini bayon etish",
+          "required": true,
+          "why": "6-moddaning birinchi qismi.",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "va murojaatning mohiyati bayon etilgan boʻlishi kerak",
+              "heading": "6-modda. Murojaatlarga qoʻyiladigan talablar",
+              "text": "Jismoniy shaxsning murojaatida jismoniy shaxsning familiyasi (ismi, otasining ismi), uning yashash joyi toʻgʻrisidagi maʼlumotlar koʻrsatilgan ⟦va murojaatning mohiyati bayon etilgan boʻlishi kerak⟧.",
+              "anchor": "-2510026"
+            }
+          ]
+        },
+        {
+          "id": "sign",
+          "label": "Murojaat etuvchining imzosi",
+          "required": true,
+          "why": "Imzo bilan tasdiqlanmagan murojaatlar anonim deb hisoblanadi (6-modda).",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "imzo (elektron raqamli imzo) bilan tasdiqlanmagan murojaatlar anonim murojaatlar deb hisoblanadi",
+              "heading": "6-modda. Murojaatlarga qoʻyiladigan talablar",
+              "text": "Jismoniy shaxsning familiyasi (ismi, otasining ismi), uning yashash joyi toʻgʻrisidagi maʼlumotlar yoki yuridik shaxsning toʻliq nomi, uning joylashgan yeri (pochta manzili) toʻgʻrisidagi maʼlumotlar koʻrsatilmagan yoxud ular haqida yolgʻon maʼlumotlar koʻrsatilgan, shuningdek ⟦imzo (elektron raqamli imzo) bilan tasdiqlanmagan murojaatlar anonim murojaatlar deb hisoblanadi⟧.",
+              "anchor": "-2510026"
+            }
+          ]
+        },
+        {
+          "id": "notary",
+          "label": "Arizani notarial tasdiqlatish",
+          "required": false,
+          "why": "6-moddada bunday talab yo'q.",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "Yozma murojaat murojaat etuvchi jismoniy shaxsning imzosi",
+              "heading": "6-modda. Murojaatlarga qoʻyiladigan talablar",
+              "text": "⟦Yozma murojaat murojaat etuvchi jismoniy shaxsning imzosi⟧ yoki murojaat etuvchi yuridik shaxs rahbarining yoxud vakolatli shaxsining imzosi bilan tasdiqlangan boʻlishi lozim. Jismoniy shaxsning yozma murojaatini murojaat etuvchining imzosi bilan tasdiqlash imkoni boʻlmagan taqdirda, bu murojaat uni yozib bergan shaxsning imzosi bilan tasdiqlanib, uning familiyasi (ismi, otasining ismi) ham qoʻshimcha ravishda yozib qoʻyilishi kerak.",
+              "anchor": "-2510026"
+            }
+          ]
+        },
+        {
+          "id": "phone",
+          "label": "Telefon raqamini ko'rsatish",
+          "required": false,
+          "why": "6-modda talablari ro'yxatida telefon raqami yo'q.",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "Jismoniy shaxsning murojaatida jismoniy shaxsning familiyasi (ismi, otasining ismi), uning yashash joyi toʻgʻrisidagi maʼlumotlar koʻrsatilgan va murojaatning mohiyati bayon etilgan boʻlishi kerak.",
+              "heading": "6-modda. Murojaatlarga qoʻyiladigan talablar",
+              "text": "⟦Jismoniy shaxsning murojaatida jismoniy shaxsning familiyasi (ismi, otasining ismi), uning yashash joyi toʻgʻrisidagi maʼlumotlar koʻrsatilgan va murojaatning mohiyati bayon etilgan boʻlishi kerak.⟧",
+              "anchor": "-2510026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Murojaat tartibi",
+      "sources": [],
+      "points": 25,
+      "description": "Murojaatni berish qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "to",
+          "label": "Murojaat kimga beriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "any",
+              "label": "Istalgan davlat organiga"
+            },
+            {
+              "id": "competent",
+              "label": "Masalani hal etish vakolatiga kiradigan organga yoki yuqori turuvchi organga"
+            },
+            {
+              "id": "media",
+              "label": "Faqat ommaviy axborot vositasiga"
+            }
+          ],
+          "correct": "competent",
+          "why": "Murojaatlar masalani hal etish vakolatiga kiradigan davlat organiga yoki bo'ysunuv tartibida yuqori turuvchi organga beriladi (16-modda).",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "16-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "Murojaatlar ularda qoʻyilgan masalalarni hal etish oʻz vakolati doirasiga kiradigan davlat organiga bevosita yoxud boʻysunuv tartibida yuqori turuvchi organga beriladi.",
+              "heading": "16-modda. Murojaatlarni berish tartibi",
+              "text": "⟦Murojaatlar ularda qoʻyilgan masalalarni hal etish oʻz vakolati doirasiga kiradigan davlat organiga bevosita yoxud boʻysunuv tartibida yuqori turuvchi organga beriladi.⟧",
+              "anchor": "-2510067"
+            }
+          ]
+        },
+        {
+          "id": "rep",
+          "label": "Murojaat vakil orqali berilsa nima ilova qilinadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "power",
+              "label": "Vakolatni tasdiqlovchi hujjat"
+            },
+            {
+              "id": "diploma",
+              "label": "Vakilning diplomi"
+            },
+            {
+              "id": "none",
+              "label": "Hech narsa"
+            }
+          ],
+          "correct": "power",
+          "why": "Vakillar orqali berilgan murojaatlarga ularning vakolatlarini tasdiqlovchi hujjatlar ilova qilinadi (6-modda).",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "Murojaat etuvchi jismoniy va yuridik shaxslarning vakillari orqali berilgan murojaatlarga ularning vakolatlarini tasdiqlovchi hujjatlar ilova qilinadi.",
+              "heading": "6-modda. Murojaatlarga qoʻyiladigan talablar",
+              "text": "⟦Murojaat etuvchi jismoniy va yuridik shaxslarning vakillari orqali berilgan murojaatlarga ularning vakolatlarini tasdiqlovchi hujjatlar ilova qilinadi.⟧",
+              "anchor": "-2510026"
+            }
+          ]
+        },
+        {
+          "id": "anon",
+          "label": "Qaysi murojaat anonim deb hisoblanadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "short",
+              "label": "Qisqa yozilgan murojaat"
+            },
+            {
+              "id": "noname",
+              "label": "Ism, manzil ko'rsatilmagan yoki imzosiz murojaat"
+            },
+            {
+              "id": "long",
+              "label": "Uzun yozilgan murojaat"
+            }
+          ],
+          "correct": "noname",
+          "why": "Familiya, ism va yashash joyi ko'rsatilmagan yoki imzo bilan tasdiqlanmagan murojaatlar anonim hisoblanadi (6-modda). Anonim murojaatlar ko'rib chiqilmaydi (20-modda).",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "imzo (elektron raqamli imzo) bilan tasdiqlanmagan murojaatlar anonim murojaatlar deb hisoblanadi",
+              "heading": "6-modda. Murojaatlarga qoʻyiladigan talablar",
+              "text": "Jismoniy shaxsning familiyasi (ismi, otasining ismi), uning yashash joyi toʻgʻrisidagi maʼlumotlar yoki yuridik shaxsning toʻliq nomi, uning joylashgan yeri (pochta manzili) toʻgʻrisidagi maʼlumotlar koʻrsatilmagan yoxud ular haqida yolgʻon maʼlumotlar koʻrsatilgan, shuningdek ⟦imzo (elektron raqamli imzo) bilan tasdiqlanmagan murojaatlar anonim murojaatlar deb hisoblanadi⟧.",
+              "anchor": "-2510026"
+            }
+          ]
+        },
+        {
+          "id": "digital",
+          "label": "Elektron murojaat qanday tasdiqlanadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "eds",
+              "label": "Elektron raqamli imzo bilan"
+            },
+            {
+              "id": "sms",
+              "label": "SMS orqali"
+            },
+            {
+              "id": "none",
+              "label": "Tasdiqlash shart emas"
+            }
+          ],
+          "correct": "eds",
+          "why": "Elektron murojaat elektron raqamli imzo bilan tasdiqlangan elektron hujjat shaklida bo'lishi kerak (6-modda).",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "Elektron murojaat elektron raqamli imzo bilan tasdiqlangan",
+              "heading": "6-modda. Murojaatlarga qoʻyiladigan talablar",
+              "text": "⟦Elektron murojaat elektron raqamli imzo bilan tasdiqlangan⟧ va elektron hujjatning uni identifikatsiya qilish imkoniyatini beradigan boshqa rekvizitlariga ega boʻlgan elektron hujjat shaklida boʻlishi kerak. Elektron murojaat qonunda belgilangan talablarga muvofiq boʻlishi kerak.",
+              "anchor": "-2510026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Hokimlikka ariza berdim, javob yo'q). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Yozma ariza, ism, manzil va imzo bilan, hokimlikka topshirilgan; Ariza 20 kun oldin berilgan; Javob ham, muddat uzaytirilgani haqida xabar ham kelmagan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "Jismoniy shaxsning murojaatida jismoniy shaxsning familiyasi (ismi, otasining ismi), uning yashash joyi toʻgʻrisidagi maʼlumotlar koʻrsatilgan va murojaatning mohiyati bayon etilgan boʻlishi kerak.",
+              "heading": "6-modda. Murojaatlarga qoʻyiladigan talablar",
+              "text": "⟦Jismoniy shaxsning murojaatida jismoniy shaxsning familiyasi (ismi, otasining ismi), uning yashash joyi toʻgʻrisidagi maʼlumotlar koʻrsatilgan va murojaatning mohiyati bayon etilgan boʻlishi kerak.⟧",
+              "anchor": "-2510026"
+            },
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "16-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "Murojaatlar ularda qoʻyilgan masalalarni hal etish oʻz vakolati doirasiga kiradigan davlat organiga bevosita yoxud boʻysunuv tartibida yuqori turuvchi organga beriladi.",
+              "heading": "16-modda. Murojaatlarni berish tartibi",
+              "text": "⟦Murojaatlar ularda qoʻyilgan masalalarni hal etish oʻz vakolati doirasiga kiradigan davlat organiga bevosita yoxud boʻysunuv tartibida yuqori turuvchi organga beriladi.⟧",
+              "anchor": "-2510067"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Familiya, ism, otasining ismi va yashash joyi haqidagi ma'lumot; Murojaatning mohiyatini bayon etish; Murojaat etuvchining imzosi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Ko'rib chiqish tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Murojaat ko'rib chiqilishi bosqichlarini belgilang.",
+      "order": [
+        {
+          "id": "give",
+          "label": "Murojaat vakolatli davlat organiga beriladi",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "16-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "hal etish oʻz vakolati doirasiga kiradigan davlat organiga bevosita",
+              "heading": "16-modda. Murojaatlarni berish tartibi",
+              "text": "Murojaatlar ularda qoʻyilgan masalalarni ⟦hal etish oʻz vakolati doirasiga kiradigan davlat organiga bevosita⟧ yoxud boʻysunuv tartibida yuqori turuvchi organga beriladi.",
+              "anchor": "-2510067"
+            }
+          ]
+        },
+        {
+          "id": "consider",
+          "label": "Organ murojaatni 15 kun ichida (zarur bo'lsa bir oygacha) ko'rib chiqadi",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "19-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "oʻn besh kun ichida, qoʻshimcha oʻrganish va (yoki) tekshirish, qoʻshimcha hujjatlarni soʻrab olish talab etilganda esa bir oygacha boʻlgan muddatda koʻrib chiqiladi",
+              "heading": "19-modda. Murojaatlarni koʻrib chiqish muddatlari",
+              "text": "Ariza yoki shikoyat masalani mazmunan hal etishi shart boʻlgan davlat organiga kelib tushgan kundan eʼtiboran ⟦oʻn besh kun ichida, qoʻshimcha oʻrganish va (yoki) tekshirish, qoʻshimcha hujjatlarni soʻrab olish talab etilganda esa bir oygacha boʻlgan muddatda koʻrib chiqiladi⟧.",
+              "anchor": "-2510088"
+            }
+          ]
+        },
+        {
+          "id": "notify",
+          "label": "Natija yozma yoki elektron shaklda xabar qilinadi, rozi bo'lmasa shikoyat tartibi tushuntiriladi",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "23-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "koʻrib chiqish natijalari hamda qabul qilingan qaror haqida murojaat koʻrib chiqilganidan soʻng yozma yoxud elektron shaklda darhol xabar qilishi shart",
+              "heading": "23-modda. Murojaatni koʻrib chiqqan davlat organining majburiyatlari",
+              "text": "Murojaatni koʻrib chiqqan davlat organi murojaat etuvchiga ⟦koʻrib chiqish natijalari hamda qabul qilingan qaror haqida murojaat koʻrib chiqilganidan soʻng yozma yoxud elektron shaklda darhol xabar qilishi shart⟧.",
+              "anchor": "-2510103"
+            }
+          ]
+        },
+        {
+          "id": "appeal",
+          "label": "Rozi bo'lmasa, yuqori turuvchi organga shikoyat qilish (bir yil ichida)",
+          "sources": [
+            {
+              "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+              "article": "17-modda",
+              "url": "https://lex.uz/docs/-2509996",
+              "quote": "uzogʻi bilan bir yildan kechiktirmay beriladi",
+              "heading": "17-modda. Murojaatlarni berish muddatlari",
+              "text": "Boʻysunuv tartibida yuqori turuvchi organga ariza yoki shikoyat jismoniy yoki yuridik shaxsga uning huquqlari, erkinliklari hamda qonuniy manfaatlarini buzuvchi harakat (harakatsizlik) sodir etilganligi yoxud qaror qabul qilinganligi maʼlum boʻlgan paytdan eʼtiboran ⟦uzogʻi bilan bir yildan kechiktirmay beriladi⟧.",
+              "anchor": "-2510071"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Ko'rib chiqish muddati",
+      "sources": [
+        {
+          "act": "«Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida»gi Qonun (OʻRQ-378-son)",
+          "article": "19-modda",
+          "url": "https://lex.uz/docs/-2509996",
+          "quote": "oʻn besh kun ichida",
+          "heading": "19-modda. Murojaatlarni koʻrib chiqish muddatlari",
+          "text": "Ariza yoki shikoyat masalani mazmunan hal etishi shart boʻlgan davlat organiga kelib tushgan kundan eʼtiboran ⟦oʻn besh kun ichida⟧, qoʻshimcha oʻrganish va (yoki) tekshirish, qoʻshimcha hujjatlarni soʻrab olish talab etilganda esa bir oygacha boʻlgan muddatda koʻrib chiqiladi.",
+          "anchor": "-2510088"
+        }
+      ],
+      "description": "Ariza masalani mazmunan hal etishi shart bo'lgan davlat organiga kelib tushgan kundan qancha kun ichida ko'rib chiqiladi (qo'shimcha tekshiruv talab etilmasa)?",
+      "points": 15,
+      "options": [
+        {
+          "id": "d3",
+          "label": "3 kun"
+        },
+        {
+          "id": "d15",
+          "label": "15 kun"
+        },
+        {
+          "id": "d45",
+          "label": "45 kun"
+        },
+        {
+          "id": "m3",
+          "label": "3 oy"
+        }
+      ],
+      "correct": "d15"
+    }
+  ]
+}

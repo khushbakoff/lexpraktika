@@ -1,0 +1,510 @@
+{
+  "id": "ish-notarius-talablari",
+  "title": "Notarius bo'lish uchun nomzodga talablar",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Nomzod notarius bo'lmoqchi. Yosh, ma'lumot, staj, stajirovka, malaka imtihoni va cheklovlarni «Notariat to'g'risida»gi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Anvar, 31 yosh, yurist",
+    "openingLine": "Assalomu alaykum. Notarius bo'lmoqchiman. Menga qanday talablar qo'yiladi?",
+    "hiddenFacts": [
+      {
+        "id": "age",
+        "fact": "Anvar 31 yoshda",
+        "revealOn": []
+      },
+      {
+        "id": "edu",
+        "fact": "Oliy yuridik ma'lumoti bor",
+        "revealOn": []
+      },
+      {
+        "id": "exp",
+        "fact": "Yuridik mutaxassislik bo'yicha 4 yil ish staji bor, notarial idorada stajirovka o'tmagan",
+        "revealOn": []
+      },
+      {
+        "id": "rec",
+        "fact": "Sudlanganlik holati yo'q",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "age",
+        "edu",
+        "exp"
+      ],
+      "questions": [
+        {
+          "id": "q-age",
+          "text": "Necha yoshdasiz?",
+          "factId": "age",
+          "reply": "31 yoshdaman."
+        },
+        {
+          "id": "q-edu",
+          "text": "Ma'lumotingiz?",
+          "factId": "edu",
+          "reply": "Oliy yuridik ma'lumotim bor."
+        },
+        {
+          "id": "q-exp",
+          "text": "Ish stajingiz?",
+          "factId": "exp",
+          "reply": "To'rt yil yurist bo'lib ishlaganman, notarial idorada stajirovka o'tmaganman."
+        },
+        {
+          "id": "q-rec",
+          "text": "Sudlanganmisiz?",
+          "factId": "rec",
+          "reply": "Yo'q."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Notarius bo'lish shartlari",
+      "sources": [],
+      "points": 15,
+      "description": "Shartlarni aniqlang.",
+      "prompt": "Notarius bo'lish shartlari haqida qaysilari to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "age",
+          "label": "Yigirma besh yoshdan kichik va oltmish besh yoshdan katta bo'lmaslik",
+          "required": true,
+          "why": "2-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "2-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Yigirma besh yoshdan kichik va oltmish besh yoshdan katta boʻlmagan",
+              "heading": "2-modda. Oʻzbekiston Respublikasida notarius",
+              "text": "⟦Yigirma besh yoshdan kichik va oltmish besh yoshdan katta boʻlmagan⟧, oliy yuridik maʼlumotga, yuridik mutaxassislik boʻyicha kamida uch yillik ish stajiga ega boʻlgan, shu jumladan notarial idorada kamida bir yil stajirovka oʻtagan, malaka imtihonini topshirgan Oʻzbekiston Respublikasi fuqarosi notarius boʻlishi mumkin. Sudyalik lavozimida kamida besh yil ishlagan yoki notarius yordamchisi yoxud adliya organlarining notarial faoliyatga rahbarlik qilish va ushbu faoliyatni nazorat qilish bilan bogʻliq lavozimlarida kamida uch yil ishlagan shaxslar uchun stajirovkadan oʻtish talab qilinmaydi. Surishtiruvchi, tergovchi, prokuror, adliya organlarining ishi notariat faoliyati bilan bogʻliq boʻlmagan boshqaruv xodimi yoki advokat sifatida kamida uch yil ishlagan shaxslar, agar ularning vakolatlari tugatilgan paytdan eʼtiboran besh yil oʻtmagan boʻlsa, olti oy muddat stajirovka oʻtaydi.",
+              "anchor": "-3993587"
+            }
+          ]
+        },
+        {
+          "id": "edu",
+          "label": "Oliy yuridik ma'lumotga ega bo'lish",
+          "required": true,
+          "why": "2-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "2-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "oliy yuridik maʼlumotga",
+              "heading": "2-modda. Oʻzbekiston Respublikasida notarius",
+              "text": "Yigirma besh yoshdan kichik va oltmish besh yoshdan katta boʻlmagan, ⟦oliy yuridik maʼlumotga⟧, yuridik mutaxassislik boʻyicha kamida uch yillik ish stajiga ega boʻlgan, shu jumladan notarial idorada kamida bir yil stajirovka oʻtagan, malaka imtihonini topshirgan Oʻzbekiston Respublikasi fuqarosi notarius boʻlishi mumkin. Sudyalik lavozimida kamida besh yil ishlagan yoki notarius yordamchisi yoxud adliya organlarining notarial faoliyatga rahbarlik qilish va ushbu faoliyatni nazorat qilish bilan bogʻliq lavozimlarida kamida uch yil ishlagan shaxslar uchun stajirovkadan oʻtish talab qilinmaydi. Surishtiruvchi, tergovchi, prokuror, adliya organlarining ishi notariat faoliyati bilan bogʻliq boʻlmagan boshqaruv xodimi yoki advokat sifatida kamida uch yil ishlagan shaxslar, agar ularning vakolatlari tugatilgan paytdan eʼtiboran besh yil oʻtmagan boʻlsa, olti oy muddat stajirovka oʻtaydi.",
+              "anchor": "-3993587"
+            }
+          ]
+        },
+        {
+          "id": "exp",
+          "label": "Yuridik mutaxassislik bo'yicha kamida uch yillik ish staji",
+          "required": true,
+          "why": "2-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "2-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "kamida uch yillik ish stajiga",
+              "heading": "2-modda. Oʻzbekiston Respublikasida notarius",
+              "text": "Yigirma besh yoshdan kichik va oltmish besh yoshdan katta boʻlmagan, oliy yuridik maʼlumotga, yuridik mutaxassislik boʻyicha ⟦kamida uch yillik ish stajiga⟧ ega boʻlgan, shu jumladan notarial idorada kamida bir yil stajirovka oʻtagan, malaka imtihonini topshirgan Oʻzbekiston Respublikasi fuqarosi notarius boʻlishi mumkin. Sudyalik lavozimida kamida besh yil ishlagan yoki notarius yordamchisi yoxud adliya organlarining notarial faoliyatga rahbarlik qilish va ushbu faoliyatni nazorat qilish bilan bogʻliq lavozimlarida kamida uch yil ishlagan shaxslar uchun stajirovkadan oʻtish talab qilinmaydi. Surishtiruvchi, tergovchi, prokuror, adliya organlarining ishi notariat faoliyati bilan bogʻliq boʻlmagan boshqaruv xodimi yoki advokat sifatida kamida uch yil ishlagan shaxslar, agar ularning vakolatlari tugatilgan paytdan eʼtiboran besh yil oʻtmagan boʻlsa, olti oy muddat stajirovka oʻtaydi.",
+              "anchor": "-3993587"
+            }
+          ]
+        },
+        {
+          "id": "intern",
+          "label": "Notarial idorada kamida bir yil stajirovka o'tgan bo'lish (istisnolar bundan mustasno)",
+          "required": true,
+          "why": "2-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "2-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "kamida bir yil stajirovka oʻtagan",
+              "heading": "2-modda. Oʻzbekiston Respublikasida notarius",
+              "text": "Yigirma besh yoshdan kichik va oltmish besh yoshdan katta boʻlmagan, oliy yuridik maʼlumotga, yuridik mutaxassislik boʻyicha kamida uch yillik ish stajiga ega boʻlgan, shu jumladan notarial idorada ⟦kamida bir yil stajirovka oʻtagan⟧, malaka imtihonini topshirgan Oʻzbekiston Respublikasi fuqarosi notarius boʻlishi mumkin. Sudyalik lavozimida kamida besh yil ishlagan yoki notarius yordamchisi yoxud adliya organlarining notarial faoliyatga rahbarlik qilish va ushbu faoliyatni nazorat qilish bilan bogʻliq lavozimlarida kamida uch yil ishlagan shaxslar uchun stajirovkadan oʻtish talab qilinmaydi. Surishtiruvchi, tergovchi, prokuror, adliya organlarining ishi notariat faoliyati bilan bogʻliq boʻlmagan boshqaruv xodimi yoki advokat sifatida kamida uch yil ishlagan shaxslar, agar ularning vakolatlari tugatilgan paytdan eʼtiboran besh yil oʻtmagan boʻlsa, olti oy muddat stajirovka oʻtaydi.",
+              "anchor": "-3993587"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "label": "Malaka imtihonini topshirgan bo'lish",
+          "required": true,
+          "why": "2-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "2-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "malaka imtihonini topshirgan",
+              "heading": "2-modda. Oʻzbekiston Respublikasida notarius",
+              "text": "Yigirma besh yoshdan kichik va oltmish besh yoshdan katta boʻlmagan, oliy yuridik maʼlumotga, yuridik mutaxassislik boʻyicha kamida uch yillik ish stajiga ega boʻlgan, shu jumladan notarial idorada kamida bir yil stajirovka oʻtagan, ⟦malaka imtihonini topshirgan⟧ Oʻzbekiston Respublikasi fuqarosi notarius boʻlishi mumkin. Sudyalik lavozimida kamida besh yil ishlagan yoki notarius yordamchisi yoxud adliya organlarining notarial faoliyatga rahbarlik qilish va ushbu faoliyatni nazorat qilish bilan bogʻliq lavozimlarida kamida uch yil ishlagan shaxslar uchun stajirovkadan oʻtish talab qilinmaydi. Surishtiruvchi, tergovchi, prokuror, adliya organlarining ishi notariat faoliyati bilan bogʻliq boʻlmagan boshqaruv xodimi yoki advokat sifatida kamida uch yil ishlagan shaxslar, agar ularning vakolatlari tugatilgan paytdan eʼtiboran besh yil oʻtmagan boʻlsa, olti oy muddat stajirovka oʻtaydi.",
+              "anchor": "-3993587"
+            }
+          ]
+        },
+        {
+          "id": "convict",
+          "label": "Qasddan sodir etgan jinoyati uchun sudlanganlik holati tugallanmagan shaxs ham notarius bo'la oladi",
+          "required": false,
+          "why": "Bunday shaxs notarius bo'lishi mumkin emas (2-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "2-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "qasddan sodir etgan jinoyati uchun sudlanganlik holati tugallanmagan yoki sudlanganligi olib tashlanmagan shaxs",
+              "heading": "2-modda. Oʻzbekiston Respublikasida notarius",
+              "text": "muomalaga layoqatsiz yoki muomala layoqati cheklangan deb topilgan shaxs;\n⟦qasddan sodir etgan jinoyati uchun sudlanganlik holati tugallanmagan yoki sudlanganligi olib tashlanmagan shaxs⟧;",
+              "anchor": "-3993587"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Staj va imtihon",
+      "sources": [],
+      "points": 25,
+      "description": "Muddat va shartlarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "exp",
+          "label": "Yuridik mutaxassislik bo'yicha kamida qancha ish staji kerak?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "y1",
+              "label": "1 yil"
+            },
+            {
+              "id": "y3",
+              "label": "3 yil"
+            },
+            {
+              "id": "y5",
+              "label": "5 yil"
+            },
+            {
+              "id": "y10",
+              "label": "10 yil"
+            }
+          ],
+          "correct": "y3",
+          "why": "Kamida uch yil (2-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "2-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "kamida uch yillik ish stajiga",
+              "heading": "2-modda. Oʻzbekiston Respublikasida notarius",
+              "text": "Yigirma besh yoshdan kichik va oltmish besh yoshdan katta boʻlmagan, oliy yuridik maʼlumotga, yuridik mutaxassislik boʻyicha ⟦kamida uch yillik ish stajiga⟧ ega boʻlgan, shu jumladan notarial idorada kamida bir yil stajirovka oʻtagan, malaka imtihonini topshirgan Oʻzbekiston Respublikasi fuqarosi notarius boʻlishi mumkin. Sudyalik lavozimida kamida besh yil ishlagan yoki notarius yordamchisi yoxud adliya organlarining notarial faoliyatga rahbarlik qilish va ushbu faoliyatni nazorat qilish bilan bogʻliq lavozimlarida kamida uch yil ishlagan shaxslar uchun stajirovkadan oʻtish talab qilinmaydi. Surishtiruvchi, tergovchi, prokuror, adliya organlarining ishi notariat faoliyati bilan bogʻliq boʻlmagan boshqaruv xodimi yoki advokat sifatida kamida uch yil ishlagan shaxslar, agar ularning vakolatlari tugatilgan paytdan eʼtiboran besh yil oʻtmagan boʻlsa, olti oy muddat stajirovka oʻtaydi.",
+              "anchor": "-3993587"
+            }
+          ]
+        },
+        {
+          "id": "intern",
+          "label": "Notarial idorada kamida qancha stajirovka o'tish kerak?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "m1",
+              "label": "1 oy"
+            },
+            {
+              "id": "m6",
+              "label": "6 oy"
+            },
+            {
+              "id": "y1",
+              "label": "1 yil"
+            },
+            {
+              "id": "y3",
+              "label": "3 yil"
+            }
+          ],
+          "correct": "y1",
+          "why": "Kamida bir yil (2-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "2-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "kamida bir yil stajirovka oʻtagan",
+              "heading": "2-modda. Oʻzbekiston Respublikasida notarius",
+              "text": "Yigirma besh yoshdan kichik va oltmish besh yoshdan katta boʻlmagan, oliy yuridik maʼlumotga, yuridik mutaxassislik boʻyicha kamida uch yillik ish stajiga ega boʻlgan, shu jumladan notarial idorada ⟦kamida bir yil stajirovka oʻtagan⟧, malaka imtihonini topshirgan Oʻzbekiston Respublikasi fuqarosi notarius boʻlishi mumkin. Sudyalik lavozimida kamida besh yil ishlagan yoki notarius yordamchisi yoxud adliya organlarining notarial faoliyatga rahbarlik qilish va ushbu faoliyatni nazorat qilish bilan bogʻliq lavozimlarida kamida uch yil ishlagan shaxslar uchun stajirovkadan oʻtish talab qilinmaydi. Surishtiruvchi, tergovchi, prokuror, adliya organlarining ishi notariat faoliyati bilan bogʻliq boʻlmagan boshqaruv xodimi yoki advokat sifatida kamida uch yil ishlagan shaxslar, agar ularning vakolatlari tugatilgan paytdan eʼtiboran besh yil oʻtmagan boʻlsa, olti oy muddat stajirovka oʻtaydi.",
+              "anchor": "-3993587"
+            }
+          ]
+        },
+        {
+          "id": "retake",
+          "label": "Malaka imtihonini topshira olmagan talabgor uni takroran qachondan topshirishi mumkin?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "w1",
+              "label": "1 haftadan keyin"
+            },
+            {
+              "id": "m1",
+              "label": "1 oydan keyin"
+            },
+            {
+              "id": "m6",
+              "label": "6 oydan keyin"
+            },
+            {
+              "id": "y2",
+              "label": "2 yildan keyin"
+            }
+          ],
+          "correct": "m6",
+          "why": "Kamida olti oydan keyin (151-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "151-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Malaka imtihonini topshira olmagan talabgor uni takroran topshirishga kamida olti oydan keyin qoʻyiladi",
+              "heading": "151-modda. Notarius maqomiga ega boʻlish. Notariusni lavozimga tayinlash va lavozimdan ozod etish",
+              "text": "⟦Malaka imtihonini topshira olmagan talabgor uni takroran topshirishga kamida olti oydan keyin qoʻyiladi⟧.",
+              "anchor": "-4707452"
+            }
+          ]
+        },
+        {
+          "id": "apply",
+          "label": "Imtihondan muvaffaqiyatli o'tgan talabgor litsenziya olish uchun necha vaqt ichida murojaat qilishi kerak?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "w1",
+              "label": "1 hafta"
+            },
+            {
+              "id": "m1",
+              "label": "1 oy"
+            },
+            {
+              "id": "m6",
+              "label": "6 oy"
+            },
+            {
+              "id": "y1",
+              "label": "1 yil"
+            }
+          ],
+          "correct": "m1",
+          "why": "Bir oy muddat ichida (151-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "151-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Malaka imtihonini muvaffaqiyatli topshirgan talabgor bir oy muddat ichida",
+              "heading": "151-modda. Notarius maqomiga ega boʻlish. Notariusni lavozimga tayinlash va lavozimdan ozod etish",
+              "text": "⟦Malaka imtihonini muvaffaqiyatli topshirgan talabgor bir oy muddat ichida⟧ Qoraqalpogʻiston Respublikasi Adliya vazirligiga, adliya boshqarmalariga litsenziya olish uchun murojaat qilishi kerak.",
+              "anchor": "-4707452"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Notarius bo'lish uchun nomzodga talablar). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Anvar 31 yoshda; Oliy yuridik ma'lumoti bor; Yuridik mutaxassislik bo'yicha 4 yil ish staji bor, notarial idorada stajirovka o'tmagan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "2-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Yigirma besh yoshdan kichik va oltmish besh yoshdan katta boʻlmagan",
+              "heading": "2-modda. Oʻzbekiston Respublikasida notarius",
+              "text": "⟦Yigirma besh yoshdan kichik va oltmish besh yoshdan katta boʻlmagan⟧, oliy yuridik maʼlumotga, yuridik mutaxassislik boʻyicha kamida uch yillik ish stajiga ega boʻlgan, shu jumladan notarial idorada kamida bir yil stajirovka oʻtagan, malaka imtihonini topshirgan Oʻzbekiston Respublikasi fuqarosi notarius boʻlishi mumkin. Sudyalik lavozimida kamida besh yil ishlagan yoki notarius yordamchisi yoxud adliya organlarining notarial faoliyatga rahbarlik qilish va ushbu faoliyatni nazorat qilish bilan bogʻliq lavozimlarida kamida uch yil ishlagan shaxslar uchun stajirovkadan oʻtish talab qilinmaydi. Surishtiruvchi, tergovchi, prokuror, adliya organlarining ishi notariat faoliyati bilan bogʻliq boʻlmagan boshqaruv xodimi yoki advokat sifatida kamida uch yil ishlagan shaxslar, agar ularning vakolatlari tugatilgan paytdan eʼtiboran besh yil oʻtmagan boʻlsa, olti oy muddat stajirovka oʻtaydi.",
+              "anchor": "-3993587"
+            },
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "151-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Malaka imtihonini topshira olmagan talabgor uni takroran topshirishga kamida olti oydan keyin qoʻyiladi",
+              "heading": "151-modda. Notarius maqomiga ega boʻlish. Notariusni lavozimga tayinlash va lavozimdan ozod etish",
+              "text": "⟦Malaka imtihonini topshira olmagan talabgor uni takroran topshirishga kamida olti oydan keyin qoʻyiladi⟧.",
+              "anchor": "-4707452"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Yigirma besh yoshdan kichik va oltmish besh yoshdan katta bo'lmaslik; Oliy yuridik ma'lumotga ega bo'lish; Yuridik mutaxassislik bo'yicha kamida uch yillik ish staji; Notarial idorada kamida bir yil stajirovka o'tgan bo'lish (istisnolar bundan mustasno)",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Notarius bo'lish yo'li",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "meet",
+          "label": "Nomzod yosh, ma'lumot va staj talablariga javob beradi, stajirovka o'tadi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "2-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "kamida bir yil stajirovka oʻtagan",
+              "heading": "2-modda. Oʻzbekiston Respublikasida notarius",
+              "text": "Yigirma besh yoshdan kichik va oltmish besh yoshdan katta boʻlmagan, oliy yuridik maʼlumotga, yuridik mutaxassislik boʻyicha kamida uch yillik ish stajiga ega boʻlgan, shu jumladan notarial idorada ⟦kamida bir yil stajirovka oʻtagan⟧, malaka imtihonini topshirgan Oʻzbekiston Respublikasi fuqarosi notarius boʻlishi mumkin. Sudyalik lavozimida kamida besh yil ishlagan yoki notarius yordamchisi yoxud adliya organlarining notarial faoliyatga rahbarlik qilish va ushbu faoliyatni nazorat qilish bilan bogʻliq lavozimlarida kamida uch yil ishlagan shaxslar uchun stajirovkadan oʻtish talab qilinmaydi. Surishtiruvchi, tergovchi, prokuror, adliya organlarining ishi notariat faoliyati bilan bogʻliq boʻlmagan boshqaruv xodimi yoki advokat sifatida kamida uch yil ishlagan shaxslar, agar ularning vakolatlari tugatilgan paytdan eʼtiboran besh yil oʻtmagan boʻlsa, olti oy muddat stajirovka oʻtaydi.",
+              "anchor": "-3993587"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "label": "Litsenziya olish uchun malaka imtihonini topshiradi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "151-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "litsenziya olish uchun malaka imtihoni topshirishi shart",
+              "heading": "151-modda. Notarius maqomiga ega boʻlish. Notariusni lavozimga tayinlash va lavozimdan ozod etish",
+              "text": "Xususiy amaliyot bilan shugʻullanuvchi notarius maqomiga ega boʻlishga talabgor shaxs (bundan buyon matnda talabgor deb yuritiladi) ⟦litsenziya olish uchun malaka imtihoni topshirishi shart⟧.",
+              "anchor": "-4707452"
+            }
+          ]
+        },
+        {
+          "id": "apply",
+          "label": "Imtihondan o'tgach bir oy ichida adliya organiga litsenziya uchun murojaat qiladi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "151-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Malaka imtihonini muvaffaqiyatli topshirgan talabgor bir oy muddat ichida",
+              "heading": "151-modda. Notarius maqomiga ega boʻlish. Notariusni lavozimga tayinlash va lavozimdan ozod etish",
+              "text": "⟦Malaka imtihonini muvaffaqiyatli topshirgan talabgor bir oy muddat ichida⟧ Qoraqalpogʻiston Respublikasi Adliya vazirligiga, adliya boshqarmalariga litsenziya olish uchun murojaat qilishi kerak.",
+              "anchor": "-4707452"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Cheklov",
+      "sources": [
+        {
+          "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+          "article": "7-modda",
+          "url": "https://lex.uz/docs/-54458",
+          "quote": "tadbirkorlik va boshqa faoliyat bilan shugʻullanishga",
+          "heading": "7-modda. Notarius faoliyatidagi cheklovlar",
+          "text": "Notarius:\nilmiy, ijodiy va pedagogik faoliyatdan, shuningdek Notarial palata va uning hududiy boshqarmalaridagi faoliyatdan tashqari ⟦tadbirkorlik va boshqa faoliyat bilan shugʻullanishga⟧;",
+          "anchor": "-4707223"
+        }
+      ],
+      "points": 15,
+      "description": "Xususiy amaliyot bilan shug'ullanuvchi notarius ilmiy, ijodiy va pedagogik faoliyatdan tashqari nima bilan shug'ullanishga haqli emas?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Tadbirkorlik va boshqa faoliyat bilan"
+        },
+        {
+          "id": "b",
+          "label": "Notarial harakatlar bilan"
+        },
+        {
+          "id": "c",
+          "label": "Hujjatlarni tasdiqlash bilan"
+        },
+        {
+          "id": "d",
+          "label": "Cheklov yo'q"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

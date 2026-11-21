@@ -1,0 +1,838 @@
+{
+  "id": "mehnat-ish-haqi",
+  "title": "Ish haqim 3 oy to'lanmadi",
+  "area": "Mehnat huquqi",
+  "areaId": "mehnat",
+  "tracks": [
+    "advokat",
+    "korxona",
+    "davlat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijozga ish haqi 3 oydan beri to'lanmagan. Dalillarni yig'ing, nizoni ko'ruvchi organlarni aniqlang, ariza tuzing, tartib va muddatni belgilang. Barcha asoslar Mehnat kodeksiga (Lex.uz) tayanadi.",
+  "client": {
+    "persona": "Aziz, 28 yosh, do'konda sotuvchi",
+    "openingLine": "Assalomu alaykum. Ish haqim to'lanmayapti, nima qilsam bilmayman.",
+    "hiddenFacts": [
+      {
+        "id": "since",
+        "fact": "Ish haqi 3 oydan beri to'lanmagan",
+        "revealOn": [
+          "qachondan",
+          "muddat"
+        ]
+      },
+      {
+        "id": "amount",
+        "fact": "Oylik ish haqi 3 000 000 so'm",
+        "revealOn": [
+          "qancha",
+          "oylik"
+        ]
+      },
+      {
+        "id": "contract",
+        "fact": "Yozma mehnat shartnomasi bor, nusxasi uyda",
+        "revealOn": [
+          "shartnoma"
+        ]
+      },
+      {
+        "id": "others",
+        "fact": "Boshqa xodimlarga ham to'lanmagan",
+        "revealOn": [
+          "boshqa",
+          "hamkasb"
+        ]
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 10,
+      "description": "Mijozdan qachondan, qancha, shartnoma bormi, boshqalarga ham to'lanmaganmi, shuni so'rang.",
+      "requiredFactIds": [
+        "since",
+        "amount",
+        "contract"
+      ],
+      "questions": [
+        {
+          "id": "q-since",
+          "text": "Ish haqi qachondan to'lanmayapti?",
+          "factId": "since",
+          "reply": "Taxminan 3 oydan beri bir tiyin ham bermadi."
+        },
+        {
+          "id": "q-amount",
+          "text": "Oylik ish haqingiz qancha?",
+          "factId": "amount",
+          "reply": "Kelishilgan oylik 3 000 000 so'm."
+        },
+        {
+          "id": "q-contract",
+          "text": "Yozma mehnat shartnomangiz bormi?",
+          "factId": "contract",
+          "reply": "Ha, imzolangan shartnoma bor, nusxasi uyda turibdi."
+        },
+        {
+          "id": "q-others",
+          "text": "Boshqa xodimlarga ham to'lanmayaptimi?",
+          "factId": "others",
+          "reply": "Ha, hamkasblarim ham shikoyat qilyapti."
+        },
+        {
+          "id": "q-fired",
+          "text": "Sizni ishdan bo'shatishganmi?",
+          "factId": null,
+          "reply": "Yo'q, hali ishlayapman."
+        },
+        {
+          "id": "q-hobby",
+          "text": "Bo'sh vaqtingizda nima qilasiz?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish haqim haqida gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "documents",
+      "type": "document-pick",
+      "title": "Dalillarni yig'ing",
+      "sources": [],
+      "points": 15,
+      "description": "Arizaga qo'shiladigan dalillarni tanlang. Keraksizlari ham bor.",
+      "prompt": "Ariza talablarni tasdiqlovchi dalillar bilan birga beriladi. Kerakli dalillarni belgilang.",
+      "submitLabel": "Dalillarni topshirish",
+      "options": [
+        {
+          "id": "contract",
+          "label": "Mehnat shartnomasi",
+          "required": true,
+          "why": "Xodim va ish beruvchi o'rtasidagi mehnat munosabati mehnat shartnomasi asosida yuzaga keladi (26-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "26-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "меҳнат шартномаси асосида юзага келади",
+              "heading": "26-модда. Якка тартибдаги меҳнатга оид муносабатларнинг юзага келиши",
+              "text": "Ходим ва иш берувчи ўртасидаги якка тартибдаги меҳнатга оид муносабатлар ушбу Кодексга мувофиқ улар томонидан тузиладиган ⟦меҳнат шартномаси асосида юзага келади⟧.",
+              "anchor": "6258000"
+            }
+          ]
+        },
+        {
+          "id": "order",
+          "label": "Ishga qabul qilish buyrug'i",
+          "required": true,
+          "why": "Ishga qabul qilish ish beruvchining buyrug'i bilan rasmiylashtiriladi, buyruq shartnoma asosida chiqariladi (127-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "127-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Буйруқ чиқариш учун ходим билан тузилган меҳнат шартномаси асос бўлади.",
+              "heading": "127-модда. Иш берувчи томонидан ходимни ишга қабул қилиш тўғрисида буйруқ чиқариши ҳамда ишга қабул қилиш ҳақидаги маълумотларни ходимнинг меҳнат дафтарчасига ва «Ягона миллий меҳнат тизими» идоралараро дастурий-аппарат комплексига киритиш",
+              "text": "Ишга қабул қилиш иш берувчининг буйруғи билан расмийлаштирилади. ⟦Буйруқ чиқариш учун ходим билан тузилган меҳнат шартномаси асос бўлади.⟧",
+              "anchor": "6260606"
+            }
+          ]
+        },
+        {
+          "id": "bank",
+          "label": "Bank ko'chirmasi (to'lovlar tarixi)",
+          "required": true,
+          "why": "Ariza xodimda mavjud bo'lgan, talablarni tasdiqlovchi dalillarni ko'rsatishi kerak (549-modda). To'lovlar qachon bo'lgani ko'chirmadan ko'rinadi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "549-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ходимнинг важларини тасдиқловчи ўзида мавжуд бўлган важлар",
+              "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+              "text": "сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган ва у комиссияга мурожаат қилиш учун муддатнинг ўтиши бошланишини қайси сана билан боғласа, ўша сана);\n⟦ходимнинг важларини тасдиқловчи ўзида мавжуд бўлган важлар⟧;",
+              "anchor": "6268809"
+            }
+          ]
+        },
+        {
+          "id": "birth",
+          "label": "Tug'ilganlik haqida guvohnoma",
+          "required": false,
+          "why": "Bu hujjat ish haqi talabini tasdiqlamaydi. Arizadagi dalillar xodimning talablarini asoslashi kerak (549-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "549-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ходимнинг важларини тасдиқловчи ўзида мавжуд бўлган важлар",
+              "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+              "text": "сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган ва у комиссияга мурожаат қилиш учун муддатнинг ўтиши бошланишини қайси сана билан боғласа, ўша сана);\n⟦ходимнинг важларини тасдиқловчи ўзида мавжуд бўлган важлар⟧;",
+              "anchor": "6268809"
+            }
+          ]
+        },
+        {
+          "id": "diploma",
+          "label": "Diplom nusxasi",
+          "required": false,
+          "why": "Ish haqi nizosida talabni tasdiqlovchi dalil emas (549-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "549-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ходимнинг важларини тасдиқловчи ўзида мавжуд бўлган важлар",
+              "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+              "text": "сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган ва у комиссияга мурожаат қилиш учун муддатнинг ўтиши бошланишини қайси сана билан боғласа, ўша сана);\n⟦ходимнинг важларини тасдиқловчи ўзида мавжуд бўлган важлар⟧;",
+              "anchor": "6268809"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negotiation",
+      "type": "client-chat",
+      "title": "Ish beruvchi bilan muzokara",
+      "points": 10,
+      "sources": [],
+      "description": "Sudgacha kelishuvga urinib ko'ring. Ish beruvchi vakilidan kompaniyaning pozitsiyasini aniqlang.",
+      "counterpart": {
+        "persona": "Dilshod, ish beruvchining HR menejeri",
+        "openingLine": "Assalomu alaykum. Aziz masalasida kelgansiz deb tushundim. Eshitaman.",
+        "hiddenFacts": [
+          {
+            "id": "admit",
+            "fact": "Kompaniya ish haqi qarzi borligini tan oladi (hisob-kitobda 9 000 000 so'm ko'rinadi)",
+            "revealOn": []
+          },
+          {
+            "id": "reason",
+            "fact": "Kechikish sababi: kompaniya mijozlardan to'lovlarni o'z vaqtida olmagan",
+            "revealOn": []
+          },
+          {
+            "id": "offer",
+            "fact": "Kompaniya qarzni ikki muddatga bo'lib to'lashni taklif qila oladi",
+            "revealOn": []
+          },
+          {
+            "id": "comp",
+            "fact": "Kompaniya kechiktirilgan kunlar uchun kompensatsiya to'lashni istamaydi",
+            "revealOn": []
+          }
+        ]
+      },
+      "requiredFactIds": [
+        "admit",
+        "offer",
+        "comp"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Kompaniya ish haqi qarzi borligini tan oladimi?",
+          "factId": "admit",
+          "reply": "Ha, hisob-kitobda Azizning 9 000 000 so'mlik qarzi ko'rinadi. Buni inkor qilmaymiz."
+        },
+        {
+          "id": "q2",
+          "text": "Kechikishning sababi nima?",
+          "factId": "reason",
+          "reply": "Mijozlarimiz to'lovlarni kechiktirdi, shuning uchun pul yetmadi."
+        },
+        {
+          "id": "q3",
+          "text": "Qarzni qanday to'lash mumkin?",
+          "factId": "offer",
+          "reply": "Ikki muddatga bo'lib to'lab berishimiz mumkin."
+        },
+        {
+          "id": "q4",
+          "text": "Kechiktirilgan kunlar uchun kompensatsiya to'laysizmi?",
+          "factId": "comp",
+          "reply": "Kompensatsiyani to'lashni xohlamaymiz, faqat asosiy qarzni."
+        }
+      ]
+    },
+    {
+      "id": "bodies",
+      "type": "document-pick",
+      "title": "Nizoni qaysi organ ko'radi?",
+      "sources": [],
+      "points": 10,
+      "description": "Ish haqi bo'yicha yakka tartibdagi mehnat nizosini ko'ruvchi organlarni aniqlang.",
+      "prompt": "Yakka tartibdagi mehnat nizosini qaysi organlar ko'rib chiqadi? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "commission",
+          "label": "Mehnat nizolari bo'yicha komissiya",
+          "required": true,
+          "why": "Yakka tartibdagi mehnat nizolari mehnat nizolari bo'yicha komissiyalar tomonidan ko'riladi (545-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "545-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "меҳнат низолари бўйича комиссиялар томонидан",
+              "heading": "545-модда. Якка тартибдаги меҳнат низоларини кўриб чиқувчи органлар",
+              "text": "Якка тартибдаги меҳнат низолари қуйидагилар томонидан кўриб чиқилади:\n⟦меҳнат низолари бўйича комиссиялар томонидан⟧, бундан бевосита судда кўриладиган низолар мустасно;",
+              "anchor": "6268737"
+            }
+          ]
+        },
+        {
+          "id": "court",
+          "label": "Sud",
+          "required": true,
+          "why": "Xodim nizoni hal qilish uchun o'z tanloviga ko'ra komissiyaga yoki bevosita sudga murojaat etishga haqli (545-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "545-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Ходим меҳнат низосини ҳал қилиш учун ўз танловига кўра меҳнат низолари бўйича комиссияга ёки бевосита судга мурожаат этишга ҳақли.",
+              "heading": "545-модда. Якка тартибдаги меҳнат низоларини кўриб чиқувчи органлар",
+              "text": "⟦Ходим меҳнат низосини ҳал қилиш учун ўз танловига кўра меҳнат низолари бўйича комиссияга ёки бевосита судга мурожаат этишга ҳақли.⟧",
+              "anchor": "6268737"
+            }
+          ]
+        },
+        {
+          "id": "inspection",
+          "label": "Davlat mehnat inspeksiyasi",
+          "required": false,
+          "why": "545-moddada nizoni ko'ruvchi organ sifatida faqat komissiya va sud ko'rsatilgan. Inspeksiya mansabdor shaxslari nizo ko'rilishi uchun sudga murojaat qilish huquqiga ega (559-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "545-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "меҳнат низолари бўйича комиссиялар томонидан",
+              "heading": "545-модда. Якка тартибдаги меҳнат низоларини кўриб чиқувчи органлар",
+              "text": "Якка тартибдаги меҳнат низолари қуйидагилар томонидан кўриб чиқилади:\n⟦меҳнат низолари бўйича комиссиялар томонидан⟧, бундан бевосита судда кўриладиган низолар мустасно;",
+              "anchor": "6268737"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "559-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Давлат меҳнат инспекциясининг мансабдор шахслари;",
+              "heading": "559-модда. Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилиш ҳуқуқи",
+              "text": "1) ходим ёки касаба уюшмалари, уларнинг бирлашмалари, бўлинмалари ва бошланғич касаба уюшмалари ташкилотлари;\n2) ⟦Давлат меҳнат инспекциясининг мансабдор шахслари;⟧",
+              "anchor": "6269101"
+            }
+          ]
+        },
+        {
+          "id": "prosecutor",
+          "label": "Prokuratura",
+          "required": false,
+          "why": "Prokuror nizo ko'rilishi uchun sudga murojaat qilish huquqiga ega, lekin nizoni ko'ruvchi organ emas (545, 559-moddalar).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "559-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "прокурор.",
+              "heading": "559-модда. Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилиш ҳуқуқи",
+              "text": "5) ⟦прокурор.⟧",
+              "anchor": "6269101"
+            }
+          ]
+        },
+        {
+          "id": "employer",
+          "label": "Ish beruvchining rahbari",
+          "required": false,
+          "why": "Pulga oid da'vo xususiyatidagi nizolar komissiya yoki sudda ko'riladi (543, 545-moddalar). Ish beruvchi va kasaba uyushmasi qo'mitasi mehnat shartlarini o'zgartirish haqidagi da'vosiz nizolarni hal etadi (543-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "543-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "иш берувчи ва касаба уюшмаси қўмитаси томонидан ҳал этилади",
+              "heading": "543-модда. Якка тартибдаги меҳнат низоларини кўриб чиқиш тартиби",
+              "text": "Ходим учун янги меҳнат шартларини белгилаш ёки мавжуд меҳнат шартларини ўзгартириш тўғрисидаги якка тартибдаги меҳнат низолари (даъвосиз хусусиятга эга бўлган якка тартибдаги меҳнат низолари) ⟦иш берувчи ва касаба уюшмаси қўмитаси томонидан ҳал этилади⟧.",
+              "anchor": "6268727"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "type": "doc-review",
+      "title": "Ariza loyihasidagi xatolarni toping",
+      "points": 10,
+      "sources": [],
+      "description": "Kichik yurist yozgan ariza loyihasi sizga keldi. Uni topshirishdan oldin xatolarni toping.",
+      "docTitle": "Mehnat nizolari bo'yicha komissiyaga ARIZA (loyiha)",
+      "clauses": [
+        {
+          "id": "c1",
+          "text": "Men, Aziz, 28 yoshda, do'konda sotuvchi bo'lib ishlayman.",
+          "flawed": false,
+          "why": "Bu xodimning o'zi haqidagi ma'lumot, unda xato yo'q.",
+          "fix": "",
+          "sources": []
+        },
+        {
+          "id": "c2",
+          "text": "Huquqim buzilgan sana sifatida ishga kirgan kunimni ko'rsataman.",
+          "flawed": true,
+          "why": "Arizada xodim huquqi buzilganini bilgan yoki bilishi kerak bo'lgan sana ko'rsatiladi, ishga kirgan sana emas (549-modda).",
+          "fix": "Ish haqi to'lanmayotganini bilgan sanani ko'rsatish.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "549-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган",
+              "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+              "text": "Ходимнинг меҳнат низолари бўйича комиссияга берилган аризасида қуйидагилар кўрсатилиши керак:\n⟦сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган⟧ ва у комиссияга мурожаат қилиш учун муддатнинг ўтиши бошланишини қайси сана билан боғласа, ўша сана);",
+              "anchor": "6268809"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "text": "Ish haqim uch oydan beri, oyiga 3 000 000 so'mdan to'lanmayapti.",
+          "flawed": false,
+          "why": "Bu mijoz aytgan faktlarga mos: 3 oy, oyiga 3 000 000 so'm.",
+          "fix": "",
+          "sources": []
+        },
+        {
+          "id": "c4",
+          "text": "Talabim: meni boshqa lavozimga o'tkazishingizni so'rayman.",
+          "flawed": true,
+          "why": "Mijozning muammosi to'lanmagan ish haqi. To'lov bo'yicha talab ish haqini va kechiktirilgan kunlar uchun kompensatsiyani to'lashdir (333, 546-moddalar).",
+          "fix": "To'lanmagan ish haqini to'lashni talab qilish.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "333-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ҳар бир кечиктирилган кун учун",
+              "heading": "333-модда. Ходимга иш ҳақи тўлашни ва унга тўланиши лозим бўлган бошқа тўловларни кечиктирганлик учун иш берувчининг моддий жавобгарлиги",
+              "text": "Иш берувчи иш ҳақини, таътил тўловларини, меҳнат шартномаси бекор қилингандаги тўловларни ва (ёки) ходимга тўланиши лозим бўлган бошқа тўловларни тўлаш муддатини бузган тақдирда, уларни тўлов муддатидан кейинги кундан эътиборан то ҳақиқатда ҳисоб-китоб қилинган кунни ўз ичига олган муддатгача ⟦ҳар бир кечиктирилган кун учун⟧ Ўзбекистон Республикаси Марказий банкининг ўша вақтда амалда бўлган қайта молиялаштириш ставкасидан келиб чиққан ҳолда фоизлар (пулли компенсация) билан бирга тўлаши шарт.",
+              "anchor": "6265195"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "546-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "асосли деб топилган тақдирда тўлиқ миқдорда қаноатлантирилади",
+              "heading": "546-модда. Ходимнинг пулга оид талабларини қаноатлантириш",
+              "text": "Ходимнинг пулга оид талаблари якка тартибдаги меҳнат низосини кўриб чиқувчи меҳнат низолари бўйича комиссия ёки суд томонидан ⟦асосли деб топилган тақдирда тўлиқ миқдорда қаноатлантирилади⟧.",
+              "anchor": "6268744"
+            }
+          ]
+        },
+        {
+          "id": "c5",
+          "text": "To'lanmagan jami ish haqi: 3 000 000 so'm.",
+          "flawed": true,
+          "why": "3 oy × 3 000 000 so'm = 9 000 000 so'm. Bu yerda bir oylik summa jami deb yozilgan (546-modda).",
+          "fix": "9 000 000 so'm.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "546-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Ходимнинг пулга оид талаблари",
+              "heading": "546-модда. Ходимнинг пулга оид талабларини қаноатлантириш",
+              "text": "Иш берувчи ⟦ходимнинг пулга оид талаблари⟧ни муддати чекланмаган ҳолда бутун давр учун қаноатлантиришга ҳақли.",
+              "anchor": "6268744"
+            }
+          ]
+        },
+        {
+          "id": "c6",
+          "text": "Kechiktirilgan kunlar uchun pulli kompensatsiya talab qilmayman.",
+          "flawed": true,
+          "why": "Ish beruvchi to'lov muddatini buzsa, har bir kechiktirilgan kun uchun pulli kompensatsiya bilan birga to'laydi (333-modda). Bu huquqdan arizada voz kechish xodimga zarar.",
+          "fix": "Kompensatsiyani ham talab qilish.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "333-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ҳар бир кечиктирилган кун учун",
+              "heading": "333-модда. Ходимга иш ҳақи тўлашни ва унга тўланиши лозим бўлган бошқа тўловларни кечиктирганлик учун иш берувчининг моддий жавобгарлиги",
+              "text": "Иш берувчи иш ҳақини, таътил тўловларини, меҳнат шартномаси бекор қилингандаги тўловларни ва (ёки) ходимга тўланиши лозим бўлган бошқа тўловларни тўлаш муддатини бузган тақдирда, уларни тўлов муддатидан кейинги кундан эътиборан то ҳақиқатда ҳисоб-китоб қилинган кунни ўз ичига олган муддатгача ⟦ҳар бир кечиктирилган кун учун⟧ Ўзбекистон Республикаси Марказий банкининг ўша вақтда амалда бўлган қайта молиялаштириш ставкасидан келиб чиққан ҳолда фоизлар (пулли компенсация) билан бирга тўлаши шарт.",
+              "anchor": "6265195"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "546-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "асосли деб топилган тақдирда тўлиқ миқдорда қаноатлантирилади",
+              "heading": "546-модда. Ходимнинг пулга оид талабларини қаноатлантириш",
+              "text": "Ходимнинг пулга оид талаблари якка тартибдаги меҳнат низосини кўриб чиқувчи меҳнат низолари бўйича комиссия ёки суд томонидан ⟦асосли деб топилган тақдирда тўлиқ миқдорда қаноатлантирилади⟧.",
+              "anchor": "6268744"
+            }
+          ]
+        },
+        {
+          "id": "c7",
+          "text": "Ish beruvchi bilan yozma mehnat shartnomasi tuzilgan, nusxasi menda bor.",
+          "flawed": false,
+          "why": "Mijozda yozma mehnat shartnomasi bor, bu muhim dalil.",
+          "fix": "",
+          "sources": []
+        },
+        {
+          "id": "c8",
+          "text": "Dalillar va ilova hujjatlari ro'yxatini ko'rsatmayman, ism va telefon raqamim yetarli.",
+          "flawed": true,
+          "why": "Arizada sana, dalillar, talablar va ilova qilinayotgan hujjatlar ro'yxati ko'rsatiladi (549-modda).",
+          "fix": "Dalillar va ilovalar ro'yxatini ko'rsatish.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "549-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "аризага илова қилинаётган ҳужжатлар рўйхати",
+              "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+              "text": "⟦аризага илова қилинаётган ҳужжатлар рўйхати⟧.",
+              "anchor": "6268809"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Ariza yozing",
+      "sources": [],
+      "points": 10,
+      "description": "Komissiyaga beriladigan ariza maydonlarini to'ldiring.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "date",
+          "label": "Arizada qaysi sana ko'rsatiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "written",
+              "label": "Arizani yozgan sana"
+            },
+            {
+              "id": "knew",
+              "label": "Huquqi buzilganini bilgan (bilishi kerak bo'lgan) sana"
+            },
+            {
+              "id": "hired",
+              "label": "Ishga kirgan sana"
+            }
+          ],
+          "correct": "knew",
+          "why": "Arizada xodim huquqi buzilganini bilgan yoki bilishi kerak bo'lgan sana ko'rsatiladi (549-modda). Murojaat muddati shu sanadan hisoblanadi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "549-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган",
+              "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+              "text": "Ходимнинг меҳнат низолари бўйича комиссияга берилган аризасида қуйидагилар кўрсатилиши керак:\n⟦сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган⟧ ва у комиссияга мурожаат қилиш учун муддатнинг ўтиши бошланишини қайси сана билан боғласа, ўша сана);",
+              "anchor": "6268809"
+            }
+          ]
+        },
+        {
+          "id": "demand",
+          "label": "Nimani talab qilasiz?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "pay",
+              "label": "To'lanmagan ish haqini va kechiktirilgan kunlar uchun pulli kompensatsiyani to'lashni"
+            },
+            {
+              "id": "transfer",
+              "label": "Boshqa lavozimga o'tkazishni"
+            },
+            {
+              "id": "restore",
+              "label": "Ishga tiklashni"
+            }
+          ],
+          "correct": "pay",
+          "why": "Ish beruvchi to'lov muddatini buzsa, har bir kechiktirilgan kun uchun pulli kompensatsiya bilan birga to'laydi (333-modda). Pulga oid talablar asosli bo'lsa, to'liq miqdorda qanoatlantiriladi (546-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "333-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ҳар бир кечиктирилган кун учун",
+              "heading": "333-модда. Ходимга иш ҳақи тўлашни ва унга тўланиши лозим бўлган бошқа тўловларни кечиктирганлик учун иш берувчининг моддий жавобгарлиги",
+              "text": "Иш берувчи иш ҳақини, таътил тўловларини, меҳнат шартномаси бекор қилингандаги тўловларни ва (ёки) ходимга тўланиши лозим бўлган бошқа тўловларни тўлаш муддатини бузган тақдирда, уларни тўлов муддатидан кейинги кундан эътиборан то ҳақиқатда ҳисоб-китоб қилинган кунни ўз ичига олган муддатгача ⟦ҳар бир кечиктирилган кун учун⟧ Ўзбекистон Республикаси Марказий банкининг ўша вақтда амалда бўлган қайта молиялаштириш ставкасидан келиб чиққан ҳолда фоизлар (пулли компенсация) билан бирга тўлаши шарт.",
+              "anchor": "6265195"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "546-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "асосли деб топилган тақдирда тўлиқ миқдорда қаноатлантирилади",
+              "heading": "546-модда. Ходимнинг пулга оид талабларини қаноатлантириш",
+              "text": "Ходимнинг пулга оид талаблари якка тартибдаги меҳнат низосини кўриб чиқувчи меҳнат низолари бўйича комиссия ёки суд томонидан ⟦асосли деб топилган тақдирда тўлиқ миқдорда қаноатлантирилади⟧.",
+              "anchor": "6268744"
+            }
+          ]
+        },
+        {
+          "id": "amount",
+          "label": "To'lanmagan jami ish haqi (so'm)",
+          "kind": "number",
+          "options": [],
+          "correct": "9000000",
+          "why": "3 oy × 3 000 000 so'm = 9 000 000 so'm. Buni mijozdan so'rab bilasiz. Pulli kompensatsiya (333-modda) bunga qo'shimcha hisoblanadi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "546-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Ходимнинг пулга оид талаблари",
+              "heading": "546-модда. Ходимнинг пулга оид талабларини қаноатлантириш",
+              "text": "Иш берувчи ⟦ходимнинг пулга оид талаблари⟧ни муддати чекланмаган ҳолда бутун давр учун қаноатлантиришга ҳақли.",
+              "anchor": "6268744"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Arizada nimalar ko'rsatilishi shart?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "name",
+              "label": "Faqat ism va telefon raqami"
+            },
+            {
+              "id": "full",
+              "label": "Sana, dalillar, talablar va ilova hujjatlari ro'yxati"
+            },
+            {
+              "id": "bio",
+              "label": "Notarius tasdiqlagan tarjimai hol"
+            }
+          ],
+          "correct": "full",
+          "why": "Arizada sana, xodimning dalillari, talablari va ilova qilinayotgan hujjatlar ro'yxati ko'rsatiladi (549-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "549-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "аризага илова қилинаётган ҳужжатлар рўйхати",
+              "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+              "text": "⟦аризага илова қилинаётган ҳужжатлар рўйхати⟧.",
+              "anchor": "6268809"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan komissiyaga arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijoz (Aziz) nomidan mehnat nizolari bo'yicha komissiyaga ariza yozing. Sanani, talabni, dalillarni va ilova hujjatlari ro'yxatini ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "date",
+          "label": "Huquqi buzilganini bilgan (bilishi kerak bo'lgan) sana ko'rsatilgan, ishga kirgan sana emas",
+          "weight": 25,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "549-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган",
+              "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+              "text": "Ходимнинг меҳнат низолари бўйича комиссияга берилган аризасида қуйидагилар кўрсатилиши керак:\n⟦сана (ходим ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган⟧ ва у комиссияга мурожаат қилиш учун муддатнинг ўтиши бошланишини қайси сана билан боғласа, ўша сана);",
+              "anchor": "6268809"
+            }
+          ]
+        },
+        {
+          "id": "amount",
+          "label": "To'lanmagan ish haqi to'g'ri hisoblangan: 3 oy × 3 000 000 = 9 000 000 so'm",
+          "weight": 25,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "546-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Ходимнинг пулга оид талаблари",
+              "heading": "546-модда. Ходимнинг пулга оид талабларини қаноатлантириш",
+              "text": "Иш берувчи ⟦ходимнинг пулга оид талаблари⟧ни муддати чекланмаган ҳолда бутун давр учун қаноатлантиришга ҳақли.",
+              "anchor": "6268744"
+            }
+          ]
+        },
+        {
+          "id": "comp",
+          "label": "Kechiktirilgan kunlar uchun pulli kompensatsiya talab qilingan",
+          "weight": 25,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "333-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ҳар бир кечиктирилган кун учун",
+              "heading": "333-модда. Ходимга иш ҳақи тўлашни ва унга тўланиши лозим бўлган бошқа тўловларни кечиктирганлик учун иш берувчининг моддий жавобгарлиги",
+              "text": "Иш берувчи иш ҳақини, таътил тўловларини, меҳнат шартномаси бекор қилингандаги тўловларни ва (ёки) ходимга тўланиши лозим бўлган бошқа тўловларни тўлаш муддатини бузган тақдирда, уларни тўлов муддатидан кейинги кундан эътиборан то ҳақиқатда ҳисоб-китоб қилинган кунни ўз ичига олган муддатгача ⟦ҳар бир кечиктирилган кун учун⟧ Ўзбекистон Республикаси Марказий банкининг ўша вақтда амалда бўлган қайта молиялаштириш ставкасидан келиб чиққан ҳолда фоизлар (пулли компенсация) билан бирга тўлаши шарт.",
+              "anchor": "6265195"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "546-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "асосли деб топилган тақдирда тўлиқ миқдорда қаноатлантирилади",
+              "heading": "546-модда. Ходимнинг пулга оид талабларини қаноатлантириш",
+              "text": "Ходимнинг пулга оид талаблари якка тартибдаги меҳнат низосини кўриб чиқувчи меҳнат низолари бўйича комиссия ёки суд томонидан ⟦асосли деб топилган тақдирда тўлиқ миқдорда қаноатлантирилади⟧.",
+              "anchor": "6268744"
+            }
+          ]
+        },
+        {
+          "id": "evidence",
+          "label": "Dalillar (masalan, mehnat shartnomasi) va ilova hujjatlari ro'yxati ko'rsatilgan",
+          "weight": 25,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "549-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "аризага илова қилинаётган ҳужжатлар рўйхати",
+              "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+              "text": "⟦аризага илова қилинаётган ҳужжатлар рўйхати⟧.",
+              "anchor": "6268809"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Komissiya tartibi",
+      "sources": [],
+      "points": 10,
+      "description": "Komissiya orqali nizo ko'rish tartibini to'g'ri ketma-ketlikda belgilang.",
+      "order": [
+        {
+          "id": "apply",
+          "label": "Xodim komissiyaga ariza beradi, ariza ro'yxatdan o'tkaziladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "549-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Ходимнинг меҳнат низолари бўйича комиссияга келиб тушган аризаси рўйхатдан ўтказилиши шарт.",
+              "heading": "549-модда. Меҳнат низолари бўйича комиссияга ариза бериш тартиби",
+              "text": "⟦Ходимнинг меҳнат низолари бўйича комиссияга келиб тушган аризаси рўйхатдан ўтказилиши шарт.⟧",
+              "anchor": "6268809"
+            }
+          ]
+        },
+        {
+          "id": "consider",
+          "label": "Komissiya nizoni ariza kunidan 10 kalendar kun ichida ko'radi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ўн календарь кун ичида кўриб чиқиши шарт",
+              "heading": "551-модда. Якка тартибдаги меҳнат низосини меҳнат низолари бўйича комиссияда кўриб чиқиш тартиби",
+              "text": "Меҳнат низолари бўйича комиссия якка тартибдаги меҳнат низосини ходим ариза берган кундан эътиборан ⟦ўн календарь кун ичида кўриб чиқиши шарт⟧.",
+              "anchor": "6268822"
+            }
+          ]
+        },
+        {
+          "id": "court",
+          "label": "Ko'rilmasa yoki qaror ma'qul bo'lmasa, sudga murojaat qilinadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "556-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "манфаатдор ходим ёки унинг вакили судга мурожаат қилишга ҳақли",
+              "heading": "556-модда. Якка тартибдаги меҳнат низосини кўриб чиқишни судга ўтказиш ва меҳнат низолари бўйича комиссия қарори устидан шикоят қилиш",
+              "text": "Агар меҳнат низолари бўйича комиссия ўн кунлик муддат ичида якка тартибдаги меҳнат низосини кўриб чиқмаса ёки ҳал этмаса, ⟦манфаатдор ходим ёки унинг вакили судга мурожаат қилишга ҳақли⟧.",
+              "anchor": "6268907"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Murojaat muddati",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+          "article": "554-modda",
+          "url": "https://lex.uz/docs/6257288",
+          "quote": "олти ойлик муддат ичида мурожаат қилиши мумкин",
+          "heading": "554-модда. Меҳнат низолари бўйича комиссияга мурожаат қилиш муддати",
+          "text": "Ходим меҳнат низолари бўйича комиссияга ўз ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган кундан эътиборан ⟦олти ойлик муддат ичида мурожаат қилиши мумкин⟧.",
+          "anchor": "6268875"
+        },
+        {
+          "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+          "article": "560-modda",
+          "url": "https://lex.uz/docs/6257288",
+          "quote": "олти ой",
+          "heading": "560-модда. Якка тартибдаги меҳнат низосининг кўриб чиқилиши учун судга мурожаат қилиш муддатлари",
+          "text": "бошқа меҳнат низолари бўйича — ходим ўзининг ҳуқуқи бузилганлиги тўғрисида билган ёки билиши керак бўлган кундан эътиборан ⟦олти ой⟧.",
+          "anchor": "6269139"
+        }
+      ],
+      "description": "Komissiyaga murojaat qilish muddatini belgilang.",
+      "points": 10,
+      "options": [
+        {
+          "id": "d10",
+          "label": "10 kun"
+        },
+        {
+          "id": "m3",
+          "label": "3 oy"
+        },
+        {
+          "id": "m6",
+          "label": "6 oy"
+        },
+        {
+          "id": "y1",
+          "label": "1 yil"
+        }
+      ],
+      "correct": "m6"
+    }
+  ]
+}

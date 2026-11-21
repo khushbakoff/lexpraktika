@@ -1,0 +1,437 @@
+{
+  "id": "jinoyat-zaruriy-mudofaa",
+  "title": "O'zimni himoya qilib, hujumchiga zarar yetkazdim",
+  "area": "Jinoyat huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijoz hujumdan himoyalanib, tajovuzchiga zarar yetkazgan. Zaruriy mudofaa shartlari va chegarasini Jinoyat kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Otabek, 27 yosh, haydovchi",
+    "openingLine": "Assalomu alaykum. Kechasi menga hujum qilishdi, o'zimni himoya qilib hujumchini itarib yubordim, u jarohat oldi. Meni javobgarlikka tortishadimi?",
+    "hiddenFacts": [
+      {
+        "id": "attack",
+        "fact": "Mijozga qonunga xilof hujum qilingan",
+        "revealOn": []
+      },
+      {
+        "id": "help",
+        "fact": "Mijoz yordam so'rashi yoki qochishi mumkin edi",
+        "revealOn": []
+      },
+      {
+        "id": "force",
+        "fact": "Mijoz hujumga mos kuch ishlatgan",
+        "revealOn": []
+      },
+      {
+        "id": "start",
+        "fact": "Mijoz hujumni o'zi qo'zg'atmagan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "attack",
+        "help",
+        "force"
+      ],
+      "questions": [
+        {
+          "id": "q-attack",
+          "text": "Nima bo'ldi?",
+          "factId": "attack",
+          "reply": "Kechasi ko'chada menga hujum qilishdi."
+        },
+        {
+          "id": "q-help",
+          "text": "Qochish yoki yordam so'rash imkoni bormidi?",
+          "factId": "help",
+          "reply": "Ehtimol qochsam bo'lardi, lekin himoyalandim."
+        },
+        {
+          "id": "q-force",
+          "text": "Qanday kuch ishlatdingiz?",
+          "factId": "force",
+          "reply": "Faqat hujumchini itarib, yiqitib yubordim."
+        },
+        {
+          "id": "q-start",
+          "text": "Janjalni kim boshladi?",
+          "factId": "start",
+          "reply": "U boshladi, men hech narsa qilmagandim."
+        },
+        {
+          "id": "q-filler",
+          "text": "Mashinangiz markasi nima?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, himoyalanish haqida gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Zaruriy mudofaa belgilari",
+      "sources": [],
+      "points": 15,
+      "description": "Zaruriy mudofaa holatini aniqlang.",
+      "prompt": "Zaruriy mudofaa holatiga qaysilari tegishli? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "self",
+          "label": "Mudofaalanuvchi yoki boshqa kishining shaxsi yoki huquqlarini himoya qilish",
+          "required": true,
+          "why": "37-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "37-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "mudofaalanuvchi yoxud boshqa kishining shaxsi yoki huquqlarini, jamiyat yoki davlat manfaatlarini qonunga xilof tajovuzlardan",
+              "heading": "37-modda. Zaruriy mudofaa",
+              "text": "Zaruriy mudofaa holatida sodir etilgan, yaʼni ⟦mudofaalanuvchi yoxud boshqa kishining shaxsi yoki huquqlarini, jamiyat yoki davlat manfaatlarini qonunga xilof tajovuzlardan⟧ tajovuzchiga zarar yetkazgan holda himoya qilish chogʻida qilingan harakat, agar zaruriy mudofaa chegarasidan chetga chiqilmagan boʻlsa, jinoyat deb topilmaydi.",
+              "anchor": "-184271"
+            }
+          ]
+        },
+        {
+          "id": "illegal",
+          "label": "Qonunga xilof tajovuzlardan tajovuzchiga zarar yetkazgan holda himoya qilish",
+          "required": true,
+          "why": "37-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "37-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "qonunga xilof tajovuzlardan tajovuzchiga zarar yetkazgan holda himoya qilish",
+              "heading": "37-modda. Zaruriy mudofaa",
+              "text": "Zaruriy mudofaa holatida sodir etilgan, yaʼni mudofaalanuvchi yoxud boshqa kishining shaxsi yoki huquqlarini, jamiyat yoki davlat manfaatlarini ⟦qonunga xilof tajovuzlardan tajovuzchiga zarar yetkazgan holda himoya qilish⟧ chogʻida qilingan harakat, agar zaruriy mudofaa chegarasidan chetga chiqilmagan boʻlsa, jinoyat deb topilmaydi.",
+              "anchor": "-184271"
+            }
+          ]
+        },
+        {
+          "id": "right",
+          "label": "Yordam so'rash yoki qutulish imkoniyati bo'lsa ham huquq saqlanadi",
+          "required": true,
+          "why": "37-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "37-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "zaruriy mudofaa huquqi shaxsga tegishlidir",
+              "heading": "37-modda. Zaruriy mudofaa",
+              "text": "Boshqa shaxslarga yoki hokimiyat organlariga yordam soʻrab murojaat qilish yoxud tajovuzdan oʻzga yoʻsinda qutulish imkoniyati bor-yoʻqligidan qatʼi nazar, ⟦zaruriy mudofaa huquqi shaxsga tegishlidir⟧.",
+              "anchor": "-184271"
+            }
+          ]
+        },
+        {
+          "id": "provoke",
+          "label": "Zarar yetkazish maqsadida qasddan hujum istagini qo'zg'atish",
+          "required": false,
+          "why": "Bu zaruriy mudofaa deb topilmaydi (37-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "37-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "Zarar yetkazish maqsadida qasddan hujum qilish istagini qoʻzgʻatish zaruriy mudofaa deb topilmaydi",
+              "heading": "37-modda. Zaruriy mudofaa",
+              "text": "⟦Zarar yetkazish maqsadida qasddan hujum qilish istagini qoʻzgʻatish zaruriy mudofaa deb topilmaydi⟧.",
+              "anchor": "-184271"
+            }
+          ]
+        },
+        {
+          "id": "excess",
+          "label": "Tajovuz xavfiga butunlay mos kelmaydigan mudofaa",
+          "required": false,
+          "why": "Bu zaruriy mudofaa chegarasidan chetga chiqishdir (37-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "37-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "Tajovuzning xususiyati va xavfliligi darajasiga butunlay muvofiq kelmaydigan mudofaa, zaruriy mudofaa chegarasidan chetga chiqish deb topiladi",
+              "heading": "37-modda. Zaruriy mudofaa",
+              "text": "⟦Tajovuzning xususiyati va xavfliligi darajasiga butunlay muvofiq kelmaydigan mudofaa, zaruriy mudofaa chegarasidan chetga chiqish deb topiladi⟧.",
+              "anchor": "-184271"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Mudofaa chegarasi",
+      "sources": [],
+      "points": 25,
+      "description": "Zaruriy mudofaa qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "within",
+          "label": "Zaruriy mudofaa chegarasidan chiqilmagan harakat",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "nocrime",
+              "label": "Jinoyat deb topilmaydi"
+            },
+            {
+              "id": "crime",
+              "label": "Baribir jinoyat"
+            },
+            {
+              "id": "admin",
+              "label": "Faqat ma'muriy huquqbuzarlik"
+            }
+          ],
+          "correct": "nocrime",
+          "why": "Jinoyat deb topilmaydi (37-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "37-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "agar zaruriy mudofaa chegarasidan chetga chiqilmagan boʻlsa, jinoyat deb topilmaydi",
+              "heading": "37-modda. Zaruriy mudofaa",
+              "text": "Zaruriy mudofaa holatida sodir etilgan, yaʼni mudofaalanuvchi yoxud boshqa kishining shaxsi yoki huquqlarini, jamiyat yoki davlat manfaatlarini qonunga xilof tajovuzlardan tajovuzchiga zarar yetkazgan holda himoya qilish chogʻida qilingan harakat, ⟦agar zaruriy mudofaa chegarasidan chetga chiqilmagan boʻlsa, jinoyat deb topilmaydi⟧.",
+              "anchor": "-184271"
+            }
+          ]
+        },
+        {
+          "id": "excess",
+          "label": "Chegaradan chetga chiqish nima?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "mismatch",
+              "label": "Tajovuzning xavfliligiga butunlay muvofiq kelmaydigan mudofaa"
+            },
+            {
+              "id": "any",
+              "label": "Har qanday mudofaa"
+            },
+            {
+              "id": "late",
+              "label": "Faqat hujum tugagach harakat"
+            }
+          ],
+          "correct": "mismatch",
+          "why": "Tajovuzning xususiyati va xavfliligiga butunlay mos kelmaydigan mudofaa (37-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "37-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "Tajovuzning xususiyati va xavfliligi darajasiga butunlay muvofiq kelmaydigan mudofaa",
+              "heading": "37-modda. Zaruriy mudofaa",
+              "text": "⟦Tajovuzning xususiyati va xavfliligi darajasiga butunlay muvofiq kelmaydigan mudofaa⟧, zaruriy mudofaa chegarasidan chetga chiqish deb topiladi.",
+              "anchor": "-184271"
+            }
+          ]
+        },
+        {
+          "id": "escape",
+          "label": "Yordam so'rash yoki boshqacha qutulish imkoniyati bo'lsa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "keep",
+              "label": "Zaruriy mudofaa huquqi shaxsga baribir tegishli"
+            },
+            {
+              "id": "lose",
+              "label": "Huquqdan mahrum bo'ladi"
+            },
+            {
+              "id": "half",
+              "label": "Huquq yarim saqlanadi"
+            }
+          ],
+          "correct": "keep",
+          "why": "Zaruriy mudofaa huquqi saqlanadi (37-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "37-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "zaruriy mudofaa huquqi shaxsga tegishlidir",
+              "heading": "37-modda. Zaruriy mudofaa",
+              "text": "Boshqa shaxslarga yoki hokimiyat organlariga yordam soʻrab murojaat qilish yoxud tajovuzdan oʻzga yoʻsinda qutulish imkoniyati bor-yoʻqligidan qatʼi nazar, ⟦zaruriy mudofaa huquqi shaxsga tegishlidir⟧.",
+              "anchor": "-184271"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (O'zimni himoya qilib, hujumchiga zarar yetkazdim). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Mijozga qonunga xilof hujum qilingan; Mijoz yordam so'rashi yoki qochishi mumkin edi; Mijoz hujumga mos kuch ishlatgan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "37-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "mudofaalanuvchi yoxud boshqa kishining shaxsi yoki huquqlarini, jamiyat yoki davlat manfaatlarini qonunga xilof tajovuzlardan",
+              "heading": "37-modda. Zaruriy mudofaa",
+              "text": "Zaruriy mudofaa holatida sodir etilgan, yaʼni ⟦mudofaalanuvchi yoxud boshqa kishining shaxsi yoki huquqlarini, jamiyat yoki davlat manfaatlarini qonunga xilof tajovuzlardan⟧ tajovuzchiga zarar yetkazgan holda himoya qilish chogʻida qilingan harakat, agar zaruriy mudofaa chegarasidan chetga chiqilmagan boʻlsa, jinoyat deb topilmaydi.",
+              "anchor": "-184271"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Mudofaalanuvchi yoki boshqa kishining shaxsi yoki huquqlarini himoya qilish; Qonunga xilof tajovuzlardan tajovuzchiga zarar yetkazgan holda himoya qilish; Yordam so'rash yoki qutulish imkoniyati bo'lsa ham huquq saqlanadi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Mudofaa baholash",
+      "sources": [],
+      "points": 15,
+      "description": "Holatni baholash ketma-ketligini belgilang.",
+      "order": [
+        {
+          "id": "attack",
+          "label": "Qonunga xilof tajovuz sodir bo'ladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "37-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "qonunga xilof tajovuzlardan tajovuzchiga zarar yetkazgan holda himoya qilish",
+              "heading": "37-modda. Zaruriy mudofaa",
+              "text": "Zaruriy mudofaa holatida sodir etilgan, yaʼni mudofaalanuvchi yoxud boshqa kishining shaxsi yoki huquqlarini, jamiyat yoki davlat manfaatlarini ⟦qonunga xilof tajovuzlardan tajovuzchiga zarar yetkazgan holda himoya qilish⟧ chogʻida qilingan harakat, agar zaruriy mudofaa chegarasidan chetga chiqilmagan boʻlsa, jinoyat deb topilmaydi.",
+              "anchor": "-184271"
+            }
+          ]
+        },
+        {
+          "id": "defend",
+          "label": "Himoyalanuvchi tajovuzchiga zarar yetkazib himoyalanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "37-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "tajovuzchiga zarar yetkazgan holda himoya qilish",
+              "heading": "37-modda. Zaruriy mudofaa",
+              "text": "Zaruriy mudofaa holatida sodir etilgan, yaʼni mudofaalanuvchi yoxud boshqa kishining shaxsi yoki huquqlarini, jamiyat yoki davlat manfaatlarini qonunga xilof tajovuzlardan ⟦tajovuzchiga zarar yetkazgan holda himoya qilish⟧ chogʻida qilingan harakat, agar zaruriy mudofaa chegarasidan chetga chiqilmagan boʻlsa, jinoyat deb topilmaydi.",
+              "anchor": "-184271"
+            }
+          ]
+        },
+        {
+          "id": "assess",
+          "label": "Mudofaa tajovuz xavfliligiga muvofiqligi baholanadi, chegaradan chiqilmasa jinoyat bo'lmaydi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "37-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "agar zaruriy mudofaa chegarasidan chetga chiqilmagan boʻlsa, jinoyat deb topilmaydi",
+              "heading": "37-modda. Zaruriy mudofaa",
+              "text": "Zaruriy mudofaa holatida sodir etilgan, yaʼni mudofaalanuvchi yoxud boshqa kishining shaxsi yoki huquqlarini, jamiyat yoki davlat manfaatlarini qonunga xilof tajovuzlardan tajovuzchiga zarar yetkazgan holda himoya qilish chogʻida qilingan harakat, ⟦agar zaruriy mudofaa chegarasidan chetga chiqilmagan boʻlsa, jinoyat deb topilmaydi⟧.",
+              "anchor": "-184271"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Hujumni qo'zg'atish",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+          "article": "37-modda",
+          "url": "https://lex.uz/docs/-111453",
+          "quote": "Zarar yetkazish maqsadida qasddan hujum qilish istagini qoʻzgʻatish zaruriy mudofaa deb topilmaydi",
+          "heading": "37-modda. Zaruriy mudofaa",
+          "text": "⟦Zarar yetkazish maqsadida qasddan hujum qilish istagini qoʻzgʻatish zaruriy mudofaa deb topilmaydi⟧.",
+          "anchor": "-184271"
+        }
+      ],
+      "points": 15,
+      "description": "Zarar yetkazish maqsadida qasddan hujum istagini qo'zg'atish zaruriy mudofaa deb topiladimi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Topilmaydi"
+        },
+        {
+          "id": "b",
+          "label": "Topiladi"
+        },
+        {
+          "id": "c",
+          "label": "Faqat kechasi topiladi"
+        },
+        {
+          "id": "d",
+          "label": "Faqat guvoh bo'lsa topiladi"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

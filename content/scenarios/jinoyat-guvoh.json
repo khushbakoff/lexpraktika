@@ -1,0 +1,478 @@
+{
+  "id": "jinoyat-guvoh",
+  "title": "Guvoh sifatida chaqirildim",
+  "area": "Jinoyat-protsessual huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijoz jinoyat ishi bo'yicha guvoh sifatida chaqirilgan. Guvoh huquqlari, majburiyatlari va javobgarligini Jinoyat-protsessual kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Malika, 31 yosh, sotuvchi",
+    "openingLine": "Assalomu alaykum. Meni tergovchi guvoh sifatida chaqirdi. Qo'rqyapman, huquqlarim qanday?",
+    "hiddenFacts": [
+      {
+        "id": "saw",
+        "fact": "Mijoz jinoyat holatini ko'rgan",
+        "revealOn": []
+      },
+      {
+        "id": "summon",
+        "fact": "Mijoz tergovchi chaqiruvi bilan chaqirilgan",
+        "revealOn": []
+      },
+      {
+        "id": "fear",
+        "fact": "Mijoz qarindoshiga qarshi ko'rsatuv berishdan xavotirda",
+        "revealOn": []
+      },
+      {
+        "id": "lang",
+        "fact": "Mijoz o'zbek tilini yaxshi biladi",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "saw",
+        "summon",
+        "fear"
+      ],
+      "questions": [
+        {
+          "id": "q-saw",
+          "text": "Siz nimani ko'rgansiz?",
+          "factId": "saw",
+          "reply": "Do'konda sodir bo'lgan janjalni ko'rganman."
+        },
+        {
+          "id": "q-summon",
+          "text": "Sizni kim chaqirdi?",
+          "factId": "summon",
+          "reply": "Tergovchi chaqiruv yubordi."
+        },
+        {
+          "id": "q-fear",
+          "text": "Nimadan qo'rqyapsiz?",
+          "factId": "fear",
+          "reply": "Ko'rsatuvim qarindoshimga zarar bo'lishidan."
+        },
+        {
+          "id": "q-lang",
+          "text": "Til muammosi bormi?",
+          "factId": "lang",
+          "reply": "Yo'q."
+        },
+        {
+          "id": "q-filler",
+          "text": "Do'kondagi eng yaxshi mahsulot qaysi?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, guvoh huquqlarim haqida gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Guvoh huquqlari",
+      "sources": [],
+      "points": 15,
+      "description": "Guvoh qanday huquqlarga ega.",
+      "prompt": "Guvoh qanday huquqlarga ega? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "lawyer",
+          "label": "Advokatning yuridik yordamidan foydalanish",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "advokatning yuridik yordamidan foydalanish",
+              "heading": "66-modda. Guvohning huquq va majburiyatlari",
+              "text": "Guvoh: ⟦advokatning yuridik yordamidan foydalanish⟧; tergov harakatlarida advokat bilan birga ishtirok etish; soʻroq yuritilayotgan tilni bilmasa yoki yetarlicha bilmasa, oʻz ona tilida koʻrsatuvlar berish va bu holda tarjimon xizmatidan foydalanish; uning soʻroq qilinishida ishtirok etuvchi tarjimonni rad qilish; dalillarni taqdim etish; koʻrsatuvlarini oʻz qoʻli bilan yozib berish; oʻziga va yaqin qarindoshlariga qarshi koʻrsatuv bermaslik; soʻroq bayonnomasi bilan tanishish, unga qoʻshimcha va oʻzgartishlar kiritish; koʻrsatuvlar berishda yozma belgilar va hujjatlardan foydalanish; oʻz manfaatlarini himoya qilish uchun, surishtiruvchining, tergovchining, prokurorning va sudning harakatlari hamda qarorlari ustidan shikoyatlar keltirish huquqiga ega.",
+              "anchor": "-253667"
+            }
+          ]
+        },
+        {
+          "id": "lang",
+          "label": "Ona tilida ko'rsatuv berish va tarjimon xizmatidan foydalanish",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "oʻz ona tilida koʻrsatuvlar berish va bu holda tarjimon xizmatidan foydalanish",
+              "heading": "66-modda. Guvohning huquq va majburiyatlari",
+              "text": "Guvoh: advokatning yuridik yordamidan foydalanish; tergov harakatlarida advokat bilan birga ishtirok etish; soʻroq yuritilayotgan tilni bilmasa yoki yetarlicha bilmasa, ⟦oʻz ona tilida koʻrsatuvlar berish va bu holda tarjimon xizmatidan foydalanish⟧; uning soʻroq qilinishida ishtirok etuvchi tarjimonni rad qilish; dalillarni taqdim etish; koʻrsatuvlarini oʻz qoʻli bilan yozib berish; oʻziga va yaqin qarindoshlariga qarshi koʻrsatuv bermaslik; soʻroq bayonnomasi bilan tanishish, unga qoʻshimcha va oʻzgartishlar kiritish; koʻrsatuvlar berishda yozma belgilar va hujjatlardan foydalanish; oʻz manfaatlarini himoya qilish uchun, surishtiruvchining, tergovchining, prokurorning va sudning harakatlari hamda qarorlari ustidan shikoyatlar keltirish huquqiga ega.",
+              "anchor": "-253667"
+            }
+          ]
+        },
+        {
+          "id": "relatives",
+          "label": "O'ziga va yaqin qarindoshlariga qarshi ko'rsatuv bermaslik",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "oʻziga va yaqin qarindoshlariga qarshi koʻrsatuv bermaslik",
+              "heading": "66-modda. Guvohning huquq va majburiyatlari",
+              "text": "Guvoh: advokatning yuridik yordamidan foydalanish; tergov harakatlarida advokat bilan birga ishtirok etish; soʻroq yuritilayotgan tilni bilmasa yoki yetarlicha bilmasa, oʻz ona tilida koʻrsatuvlar berish va bu holda tarjimon xizmatidan foydalanish; uning soʻroq qilinishida ishtirok etuvchi tarjimonni rad qilish; dalillarni taqdim etish; koʻrsatuvlarini oʻz qoʻli bilan yozib berish; ⟦oʻziga va yaqin qarindoshlariga qarshi koʻrsatuv bermaslik⟧; soʻroq bayonnomasi bilan tanishish, unga qoʻshimcha va oʻzgartishlar kiritish; koʻrsatuvlar berishda yozma belgilar va hujjatlardan foydalanish; oʻz manfaatlarini himoya qilish uchun, surishtiruvchining, tergovchining, prokurorning va sudning harakatlari hamda qarorlari ustidan shikoyatlar keltirish huquqiga ega.",
+              "anchor": "-253667"
+            }
+          ]
+        },
+        {
+          "id": "protocol",
+          "label": "So'roq bayonnomasi bilan tanishish",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "soʻroq bayonnomasi bilan tanishish",
+              "heading": "66-modda. Guvohning huquq va majburiyatlari",
+              "text": "Guvoh: advokatning yuridik yordamidan foydalanish; tergov harakatlarida advokat bilan birga ishtirok etish; soʻroq yuritilayotgan tilni bilmasa yoki yetarlicha bilmasa, oʻz ona tilida koʻrsatuvlar berish va bu holda tarjimon xizmatidan foydalanish; uning soʻroq qilinishida ishtirok etuvchi tarjimonni rad qilish; dalillarni taqdim etish; koʻrsatuvlarini oʻz qoʻli bilan yozib berish; oʻziga va yaqin qarindoshlariga qarshi koʻrsatuv bermaslik; ⟦soʻroq bayonnomasi bilan tanishish⟧, unga qoʻshimcha va oʻzgartishlar kiritish; koʻrsatuvlar berishda yozma belgilar va hujjatlardan foydalanish; oʻz manfaatlarini himoya qilish uchun, surishtiruvchining, tergovchining, prokurorning va sudning harakatlari hamda qarorlari ustidan shikoyatlar keltirish huquqiga ega.",
+              "anchor": "-253667"
+            }
+          ]
+        },
+        {
+          "id": "never",
+          "label": "Hech qanday savolga javob bermaslik",
+          "required": false,
+          "why": "Guvoh berilgan savollarga javob qaytarishi shart (66-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "berilgan savollarga javob qaytarishi",
+              "heading": "66-modda. Guvohning huquq va majburiyatlari",
+              "text": "Guvoh: surishtiruvchi, tergovchi, prokuror va sudning chaqiruviga binoan hozir boʻlishi; ish boʻyicha oʻziga maʼlum hamma narsa haqida haqqoniy soʻzlab berishi; ⟦berilgan savollarga javob qaytarishi⟧; ish boʻyicha oʻziga maʼlum boʻlgan holatlarni soʻroq qiluvchining ruxsatisiz oshkor etmasligi; ishning tergovi va sud majlisi vaqtida tartibga rioya etishi shart.",
+              "anchor": "-253667"
+            }
+          ]
+        },
+        {
+          "id": "skip",
+          "label": "Chaqiruvga ixtiyoriy kelmaslik",
+          "required": false,
+          "why": "Guvoh chaqiruvga binoan hozir bo'lishi shart (66-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "chaqiruviga binoan hozir boʻlishi",
+              "heading": "66-modda. Guvohning huquq va majburiyatlari",
+              "text": "Guvoh: surishtiruvchi, tergovchi, prokuror va sudning ⟦chaqiruviga binoan hozir boʻlishi⟧; ish boʻyicha oʻziga maʼlum hamma narsa haqida haqqoniy soʻzlab berishi; berilgan savollarga javob qaytarishi; ish boʻyicha oʻziga maʼlum boʻlgan holatlarni soʻroq qiluvchining ruxsatisiz oshkor etmasligi; ishning tergovi va sud majlisi vaqtida tartibga rioya etishi shart.",
+              "anchor": "-253667"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Guvoh majburiyatlari",
+      "sources": [],
+      "points": 25,
+      "description": "Guvoh qoidalari va javobgarligini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "who",
+          "label": "Kim guvoh sifatida chaqirilishi mumkin?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "anyone",
+              "label": "Holatni bilishi mumkin bo'lgan har qanday shaxs"
+            },
+            {
+              "id": "cops",
+              "label": "Faqat huquqni muhofaza organi xodimlari"
+            },
+            {
+              "id": "rel",
+              "label": "Faqat jabrlanuvchining qarindoshlari"
+            }
+          ],
+          "correct": "anyone",
+          "why": "Jinoyat ishi bo'yicha aniqlanishi lozim bo'lgan biror holatni bilishi mumkin bo'lgan har qanday shaxs (65-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "65-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Jinoyat ishi boʻyicha aniqlanishi lozim boʻlgan biror holatni bilishi mumkin boʻlgan har qanday shaxs guvoh sifatida koʻrsatuv berish uchun chaqirilishi mumkin",
+              "heading": "65-modda. Guvoh",
+              "text": "⟦Jinoyat ishi boʻyicha aniqlanishi lozim boʻlgan biror holatni bilishi mumkin boʻlgan har qanday shaxs guvoh sifatida koʻrsatuv berish uchun chaqirilishi mumkin⟧.",
+              "anchor": "-253665"
+            }
+          ]
+        },
+        {
+          "id": "noshow",
+          "label": "Guvoh uzrsiz sababga ko'ra kelmasa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "nothing",
+              "label": "Hech narsa bo'lmaydi"
+            },
+            {
+              "id": "force",
+              "label": "Majburiy ravishda olib kelinishi mumkin"
+            },
+            {
+              "id": "cancel",
+              "label": "Ish tugatiladi"
+            }
+          ],
+          "correct": "force",
+          "why": "Majburiy ravishda olib kelinishi mumkin (66-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "majburiy ravishda olib kelinishi mumkin",
+              "heading": "66-modda. Guvohning huquq va majburiyatlari",
+              "text": "Guvoh uzrsiz sababga koʻra kelmagan taqdirda ushbu Kodeksning 261 — 264-moddalarida nazarda tutilgan tartibda ⟦majburiy ravishda olib kelinishi mumkin⟧.",
+              "anchor": "-253667"
+            }
+          ]
+        },
+        {
+          "id": "lie",
+          "label": "Ko'rsatuv berishdan bosh tortish yoki bila turib yolg'on ko'rsatuv uchun",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Javobgarlik yo'q"
+            },
+            {
+              "id": "resp",
+              "label": "Qonunda belgilangan tarzda javobgar bo'ladi"
+            },
+            {
+              "id": "fine",
+              "label": "Faqat ogohlantirish"
+            }
+          ],
+          "correct": "resp",
+          "why": "Guvoh qonunda belgilangan tarzda javobgar bo'ladi (66-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Guvoh koʻrsatuv berishdan bosh tortganlik, shuningdek bila turib yolgʻon koʻrsatuv berganlik uchun qonunda belgilangan tarzda javobgar boʻladi",
+              "heading": "66-modda. Guvohning huquq va majburiyatlari",
+              "text": "⟦Guvoh koʻrsatuv berishdan bosh tortganlik, shuningdek bila turib yolgʻon koʻrsatuv berganlik uchun qonunda belgilangan tarzda javobgar boʻladi⟧.",
+              "anchor": "-253667"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Guvoh sifatida chaqirildim). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Mijoz jinoyat holatini ko'rgan; Mijoz tergovchi chaqiruvi bilan chaqirilgan; Mijoz qarindoshiga qarshi ko'rsatuv berishdan xavotirda",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "advokatning yuridik yordamidan foydalanish",
+              "heading": "66-modda. Guvohning huquq va majburiyatlari",
+              "text": "Guvoh: ⟦advokatning yuridik yordamidan foydalanish⟧; tergov harakatlarida advokat bilan birga ishtirok etish; soʻroq yuritilayotgan tilni bilmasa yoki yetarlicha bilmasa, oʻz ona tilida koʻrsatuvlar berish va bu holda tarjimon xizmatidan foydalanish; uning soʻroq qilinishida ishtirok etuvchi tarjimonni rad qilish; dalillarni taqdim etish; koʻrsatuvlarini oʻz qoʻli bilan yozib berish; oʻziga va yaqin qarindoshlariga qarshi koʻrsatuv bermaslik; soʻroq bayonnomasi bilan tanishish, unga qoʻshimcha va oʻzgartishlar kiritish; koʻrsatuvlar berishda yozma belgilar va hujjatlardan foydalanish; oʻz manfaatlarini himoya qilish uchun, surishtiruvchining, tergovchining, prokurorning va sudning harakatlari hamda qarorlari ustidan shikoyatlar keltirish huquqiga ega.",
+              "anchor": "-253667"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "65-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Jinoyat ishi boʻyicha aniqlanishi lozim boʻlgan biror holatni bilishi mumkin boʻlgan har qanday shaxs guvoh sifatida koʻrsatuv berish uchun chaqirilishi mumkin",
+              "heading": "65-modda. Guvoh",
+              "text": "⟦Jinoyat ishi boʻyicha aniqlanishi lozim boʻlgan biror holatni bilishi mumkin boʻlgan har qanday shaxs guvoh sifatida koʻrsatuv berish uchun chaqirilishi mumkin⟧.",
+              "anchor": "-253665"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Advokatning yuridik yordamidan foydalanish; Ona tilida ko'rsatuv berish va tarjimon xizmatidan foydalanish; O'ziga va yaqin qarindoshlariga qarshi ko'rsatuv bermaslik; So'roq bayonnomasi bilan tanishish",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Guvoh jarayoni",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "summon",
+          "label": "Guvoh sifatida chaqiriladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "65-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "guvoh sifatida koʻrsatuv berish uchun chaqirilishi mumkin",
+              "heading": "65-modda. Guvoh",
+              "text": "Jinoyat ishi boʻyicha aniqlanishi lozim boʻlgan biror holatni bilishi mumkin boʻlgan har qanday shaxs ⟦guvoh sifatida koʻrsatuv berish uchun chaqirilishi mumkin⟧.",
+              "anchor": "-253665"
+            }
+          ]
+        },
+        {
+          "id": "appear",
+          "label": "Chaqiruvga binoan hozir bo'ladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "chaqiruviga binoan hozir boʻlishi",
+              "heading": "66-modda. Guvohning huquq va majburiyatlari",
+              "text": "Guvoh: surishtiruvchi, tergovchi, prokuror va sudning ⟦chaqiruviga binoan hozir boʻlishi⟧; ish boʻyicha oʻziga maʼlum hamma narsa haqida haqqoniy soʻzlab berishi; berilgan savollarga javob qaytarishi; ish boʻyicha oʻziga maʼlum boʻlgan holatlarni soʻroq qiluvchining ruxsatisiz oshkor etmasligi; ishning tergovi va sud majlisi vaqtida tartibga rioya etishi shart.",
+              "anchor": "-253667"
+            }
+          ]
+        },
+        {
+          "id": "tell",
+          "label": "Ish bo'yicha o'ziga ma'lum hamma narsani haqqoniy so'zlab beradi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "haqqoniy soʻzlab berishi",
+              "heading": "66-modda. Guvohning huquq va majburiyatlari",
+              "text": "Guvoh: surishtiruvchi, tergovchi, prokuror va sudning chaqiruviga binoan hozir boʻlishi; ish boʻyicha oʻziga maʼlum hamma narsa haqida ⟦haqqoniy soʻzlab berishi⟧; berilgan savollarga javob qaytarishi; ish boʻyicha oʻziga maʼlum boʻlgan holatlarni soʻroq qiluvchining ruxsatisiz oshkor etmasligi; ishning tergovi va sud majlisi vaqtida tartibga rioya etishi shart.",
+              "anchor": "-253667"
+            }
+          ]
+        },
+        {
+          "id": "sign",
+          "label": "So'roq bayonnomasi bilan tanishib, qo'shimcha va o'zgartishlar kiritadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "soʻroq bayonnomasi bilan tanishish, unga qoʻshimcha va oʻzgartishlar kiritish",
+              "heading": "66-modda. Guvohning huquq va majburiyatlari",
+              "text": "Guvoh: advokatning yuridik yordamidan foydalanish; tergov harakatlarida advokat bilan birga ishtirok etish; soʻroq yuritilayotgan tilni bilmasa yoki yetarlicha bilmasa, oʻz ona tilida koʻrsatuvlar berish va bu holda tarjimon xizmatidan foydalanish; uning soʻroq qilinishida ishtirok etuvchi tarjimonni rad qilish; dalillarni taqdim etish; koʻrsatuvlarini oʻz qoʻli bilan yozib berish; oʻziga va yaqin qarindoshlariga qarshi koʻrsatuv bermaslik; ⟦soʻroq bayonnomasi bilan tanishish, unga qoʻshimcha va oʻzgartishlar kiritish⟧; koʻrsatuvlar berishda yozma belgilar va hujjatlardan foydalanish; oʻz manfaatlarini himoya qilish uchun, surishtiruvchining, tergovchining, prokurorning va sudning harakatlari hamda qarorlari ustidan shikoyatlar keltirish huquqiga ega.",
+              "anchor": "-253667"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Voyaga yetmagan guvoh",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "66-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "davlat hisobidan yuridik yordam koʻrsatadigan advokatning ishtirok etishini taʼminlash choralari koʻriladi",
+          "heading": "66-modda. Guvohning huquq va majburiyatlari",
+          "text": "Jinsiy zoʻravonlikka oid jinoyat ishlari boʻyicha voyaga yetmagan guvohga ushbu Kodeksning 50-moddasida belgilangan tartibda ⟦davlat hisobidan yuridik yordam koʻrsatadigan advokatning ishtirok etishini taʼminlash choralari koʻriladi⟧.",
+          "anchor": "-253667"
+        }
+      ],
+      "points": 15,
+      "description": "Jinsiy zo'ravonlikka oid ishlarda voyaga yetmagan guvoh uchun qanday chora ko'riladi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Davlat hisobidan yuridik yordam ko'rsatadigan advokat ishtirokini ta'minlash"
+        },
+        {
+          "id": "b",
+          "label": "Guvoh yolg'iz so'roq qilinadi"
+        },
+        {
+          "id": "c",
+          "label": "Ish yopiladi"
+        },
+        {
+          "id": "d",
+          "label": "Hech qanday chora"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "id": "notariat-vasiyatnoma",
+  "title": "Vasiyatnomani vakil orqali tasdiqlatsa bo'ladimi?",
+  "area": "Notariat",
+  "areaId": "fuqarolik",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Keksa mijoz vasiyatnomani qarindoshi orqali tasdiqlatmoqchi. Vasiyatnomani tasdiqlash qoidalarini «Notariat to'g'risida»gi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Hamida, 70 yosh",
+    "openingLine": "Assalomu alaykum. Vasiyatnoma yozdim, uni notariusga nevaram olib borib tasdiqlatsa bo'ladimi?",
+    "hiddenFacts": [
+      {
+        "id": "will",
+        "fact": "Mijoz vasiyatnoma yozgan",
+        "revealOn": []
+      },
+      {
+        "id": "agent",
+        "fact": "Vasiyatnomani nevara orqali tasdiqlatmoqchi",
+        "revealOn": []
+      },
+      {
+        "id": "proof",
+        "fact": "Mijozda uyga mulk huquqi hujjatlari uyda",
+        "revealOn": []
+      },
+      {
+        "id": "cap",
+        "fact": "Mijoz muomalaga layoqatli",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "will",
+        "agent",
+        "proof"
+      ],
+      "questions": [
+        {
+          "id": "q-will",
+          "text": "Nima yozgansiz?",
+          "factId": "will",
+          "reply": "Uyimni nevaramga vasiyat qilganman."
+        },
+        {
+          "id": "q-agent",
+          "text": "Kim olib boradi?",
+          "factId": "agent",
+          "reply": "Nevaram olib boradi."
+        },
+        {
+          "id": "q-proof",
+          "text": "Uy hujjatlari bormi?",
+          "factId": "proof",
+          "reply": "Hujjatlar uyda qolgan."
+        },
+        {
+          "id": "q-cap",
+          "text": "Sog'lig'ingiz qanday?",
+          "factId": "cap",
+          "reply": "O'zim hamma narsani tushunaman."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Vasiyatnoma tasdiqlash",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Vasiyatnomani tasdiqlash haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "cap",
+          "label": "Notariuslar muomalaga layoqatli fuqarolarning vasiyatnomalarini tasdiqlaydi",
+          "required": true,
+          "why": "45-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Notariuslar muomalaga layoqatli fuqarolarning qonunchilik talablariga muvofiq tuzilgan",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "⟦Notariuslar muomalaga layoqatli fuqarolarning qonunchilik talablariga muvofiq tuzilgan⟧ va ularning oʻzlari notariusga shaxsan taqdim etgan vasiyatnomalarini tasdiqlaydi. Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi.",
+              "anchor": "-55227"
+            }
+          ]
+        },
+        {
+          "id": "personal",
+          "label": "Vasiyatnoma notariusga vasiyat qiluvchi shaxsan taqdim etadi",
+          "required": true,
+          "why": "45-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "ularning oʻzlari notariusga shaxsan taqdim etgan vasiyatnomalarini tasdiqlaydi",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "Notariuslar muomalaga layoqatli fuqarolarning qonunchilik talablariga muvofiq tuzilgan va ⟦ularning oʻzlari notariusga shaxsan taqdim etgan vasiyatnomalarini tasdiqlaydi⟧. Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi.",
+              "anchor": "-55227"
+            }
+          ]
+        },
+        {
+          "id": "agent",
+          "label": "Vasiyatnomalarni vakillar orqali tasdiqlashga yo'l qo'yilmaydi",
+          "required": true,
+          "why": "45-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "Notariuslar muomalaga layoqatli fuqarolarning qonunchilik talablariga muvofiq tuzilgan va ularning oʻzlari notariusga shaxsan taqdim etgan vasiyatnomalarini tasdiqlaydi. ⟦Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi⟧.",
+              "anchor": "-55227"
+            }
+          ]
+        },
+        {
+          "id": "noproof",
+          "label": "Vasiyat qiluvchidan mol-mulkka huquqini tasdiqlovchi dalillar talab qilinmaydi",
+          "required": true,
+          "why": "45-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "uning vasiyat qilinayotgan mol-mulkka boʻlgan huquqini tasdiqlovchi dalillarni taqdim etish talab qilinmaydi",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "Vasiyatnomani tasdiqlab berishda vasiyat qiluvchidan ⟦uning vasiyat qilinayotgan mol-mulkka boʻlgan huquqini tasdiqlovchi dalillarni taqdim etish talab qilinmaydi⟧.",
+              "anchor": "-55227"
+            }
+          ]
+        },
+        {
+          "id": "byagent",
+          "label": "Vasiyatnomani ishonchli vakil orqali tasdiqlatish mumkin",
+          "required": false,
+          "why": "Vakil orqali tasdiqlashga yo'l qo'yilmaydi (45-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "Notariuslar muomalaga layoqatli fuqarolarning qonunchilik talablariga muvofiq tuzilgan va ularning oʻzlari notariusga shaxsan taqdim etgan vasiyatnomalarini tasdiqlaydi. ⟦Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi⟧.",
+              "anchor": "-55227"
+            }
+          ]
+        },
+        {
+          "id": "mustproof",
+          "label": "Vasiyat qiluvchi mulk huquqini isbotlovchi hujjatlarni taqdim etishi shart",
+          "required": false,
+          "why": "Bunday dalillar talab qilinmaydi (45-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "dalillarni taqdim etish talab qilinmaydi",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "Vasiyatnomani tasdiqlab berishda vasiyat qiluvchidan uning vasiyat qilinayotgan mol-mulkka boʻlgan huquqini tasdiqlovchi ⟦dalillarni taqdim etish talab qilinmaydi⟧.",
+              "anchor": "-55227"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Tasdiqlash shartlari",
+      "sources": [],
+      "points": 25,
+      "description": "Shartlarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "who",
+          "label": "Vasiyatnomani notariusga kim taqdim etadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "self",
+              "label": "Vasiyat qiluvchining o'zi shaxsan"
+            },
+            {
+              "id": "agent",
+              "label": "Ishonchli vakili"
+            },
+            {
+              "id": "heir",
+              "label": "Merosxo'r"
+            }
+          ],
+          "correct": "self",
+          "why": "Vasiyat qiluvchining o'zi shaxsan (45-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "ularning oʻzlari notariusga shaxsan taqdim etgan",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "Notariuslar muomalaga layoqatli fuqarolarning qonunchilik talablariga muvofiq tuzilgan va ⟦ularning oʻzlari notariusga shaxsan taqdim etgan⟧ vasiyatnomalarini tasdiqlaydi. Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi.",
+              "anchor": "-55227"
+            }
+          ]
+        },
+        {
+          "id": "agent",
+          "label": "Vasiyatnomani vakil orqali tasdiqlash",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "yes",
+              "label": "Mumkin"
+            },
+            {
+              "id": "no",
+              "label": "Yo'l qo'yilmaydi"
+            },
+            {
+              "id": "court",
+              "label": "Faqat sud ruxsati bilan"
+            }
+          ],
+          "correct": "no",
+          "why": "Yo'l qo'yilmaydi (45-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "Notariuslar muomalaga layoqatli fuqarolarning qonunchilik talablariga muvofiq tuzilgan va ularning oʻzlari notariusga shaxsan taqdim etgan vasiyatnomalarini tasdiqlaydi. ⟦Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi⟧.",
+              "anchor": "-55227"
+            }
+          ]
+        },
+        {
+          "id": "proof",
+          "label": "Mulk huquqini tasdiqlovchi dalillar",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "must",
+              "label": "Majburiy taqdim etiladi"
+            },
+            {
+              "id": "nottr",
+              "label": "Talab qilinmaydi"
+            },
+            {
+              "id": "half",
+              "label": "Faqat ko'chmas mulk uchun"
+            }
+          ],
+          "correct": "nottr",
+          "why": "Talab qilinmaydi (45-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "dalillarni taqdim etish talab qilinmaydi",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "Vasiyatnomani tasdiqlab berishda vasiyat qiluvchidan uning vasiyat qilinayotgan mol-mulkka boʻlgan huquqini tasdiqlovchi ⟦dalillarni taqdim etish talab qilinmaydi⟧.",
+              "anchor": "-55227"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Vasiyatnomani vakil orqali tasdiqlatsa bo'ladimi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Mijoz vasiyatnoma yozgan; Vasiyatnomani nevara orqali tasdiqlatmoqchi; Mijozda uyga mulk huquqi hujjatlari uyda",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Notariuslar muomalaga layoqatli fuqarolarning qonunchilik talablariga muvofiq tuzilgan",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "⟦Notariuslar muomalaga layoqatli fuqarolarning qonunchilik talablariga muvofiq tuzilgan⟧ va ularning oʻzlari notariusga shaxsan taqdim etgan vasiyatnomalarini tasdiqlaydi. Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi.",
+              "anchor": "-55227"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Notariuslar muomalaga layoqatli fuqarolarning vasiyatnomalarini tasdiqlaydi; Vasiyatnoma notariusga vasiyat qiluvchi shaxsan taqdim etadi; Vasiyatnomalarni vakillar orqali tasdiqlashga yo'l qo'yilmaydi; Vasiyat qiluvchidan mol-mulkka huquqini tasdiqlovchi dalillar talab qilinmaydi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Tasdiqlash tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "write",
+          "label": "Muomalaga layoqatli fuqaro qonunga muvofiq vasiyatnoma tuzadi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "qonunchilik talablariga muvofiq tuzilgan",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "Notariuslar muomalaga layoqatli fuqarolarning ⟦qonunchilik talablariga muvofiq tuzilgan⟧ va ularning oʻzlari notariusga shaxsan taqdim etgan vasiyatnomalarini tasdiqlaydi. Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi.",
+              "anchor": "-55227"
+            }
+          ]
+        },
+        {
+          "id": "bring",
+          "label": "Vasiyat qiluvchi uni notariusga shaxsan taqdim etadi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "notariusga shaxsan taqdim etgan",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "Notariuslar muomalaga layoqatli fuqarolarning qonunchilik talablariga muvofiq tuzilgan va ularning oʻzlari ⟦notariusga shaxsan taqdim etgan⟧ vasiyatnomalarini tasdiqlaydi. Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi.",
+              "anchor": "-55227"
+            }
+          ]
+        },
+        {
+          "id": "confirm",
+          "label": "Notarius vasiyatnomani tasdiqlaydi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "45-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "vasiyatnomalarini tasdiqlaydi",
+              "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+              "text": "Notariuslar muomalaga layoqatli fuqarolarning qonunchilik talablariga muvofiq tuzilgan va ularning oʻzlari notariusga shaxsan taqdim etgan ⟦vasiyatnomalarini tasdiqlaydi⟧. Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi.",
+              "anchor": "-55227"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Mulk huquqi",
+      "sources": [
+        {
+          "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+          "article": "45-modda",
+          "url": "https://lex.uz/docs/-54458",
+          "quote": "dalillarni taqdim etish talab qilinmaydi",
+          "heading": "45-modda. Vasiyatnomalarni tasdiqlash",
+          "text": "Vasiyatnomani tasdiqlab berishda vasiyat qiluvchidan uning vasiyat qilinayotgan mol-mulkka boʻlgan huquqini tasdiqlovchi ⟦dalillarni taqdim etish talab qilinmaydi⟧.",
+          "anchor": "-55227"
+        }
+      ],
+      "points": 15,
+      "description": "Vasiyatnomani tasdiqlab berishda vasiyat qiluvchidan mulk huquqini tasdiqlovchi dalillar talab qilinadimi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Talab qilinmaydi"
+        },
+        {
+          "id": "b",
+          "label": "Har doim talab qilinadi"
+        },
+        {
+          "id": "c",
+          "label": "Faqat uy-joy uchun"
+        },
+        {
+          "id": "d",
+          "label": "Faqat avtomobil uchun"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

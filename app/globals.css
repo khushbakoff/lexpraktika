@@ -1,0 +1,259 @@
+@import "tailwindcss";
+
+/* ---------- Tokenlar ---------- */
+:root {
+  --bg-base: #eef1f8;
+  --mesh-1: #c9d8ff;
+  --mesh-2: #ddd0ff;
+  --mesh-3: #c5efe8;
+  --mesh-4: #ffd9e4;
+
+  --text: #0f1a33;
+  --text-soft: #475270;
+  --accent: #2f5fe8;
+  --accent-contrast: #ffffff;
+  --success: #0f8f5f;
+  --warn: #b86a12;
+  --danger: #c42b1c;
+
+  --glass-bg: rgba(255, 255, 255, 0.74);
+  --glass-bg-strong: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(255, 255, 255, 0.9);
+  --glass-shadow: 0 6px 24px rgba(30, 45, 100, 0.1);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --bar-bg: rgba(255, 255, 255, 0.98);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-base: #111318;
+  --mesh-1: #172034;
+  --mesh-2: #1b1a2b;
+  --mesh-3: #13221f;
+  --mesh-4: #1c1620;
+
+  --text: #e3e6ed;
+  --text-soft: #9aa2b2;
+  --accent: #8aa6f5;
+  --accent-contrast: #111318;
+  --success: #4cc792;
+  --warn: #e0a552;
+  --danger: #f1707b;
+
+  --glass-bg: rgba(255, 255, 255, 0.055);
+  --glass-bg-strong: rgba(255, 255, 255, 0.085);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --bar-bg: rgba(24, 26, 31, 0.98);
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+/* JS ishlamasa: tizim sozlamasiga ergashadi */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --bg-base: #111318;
+    --mesh-1: #172034;
+    --mesh-2: #1b1a2b;
+    --mesh-3: #13221f;
+    --mesh-4: #1c1620;
+
+    --text: #e3e6ed;
+    --text-soft: #9aa2b2;
+    --accent: #8aa6f5;
+    --accent-contrast: #111318;
+    --success: #4cc792;
+    --warn: #e0a552;
+  --danger: #f1707b;
+
+    --glass-bg: rgba(255, 255, 255, 0.055);
+    --glass-bg-strong: rgba(255, 255, 255, 0.085);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    --bar-bg: rgba(24, 26, 31, 0.98);
+  }
+}
+
+/* Tailwind `dark:` varianti ham qo'lda tanlangan mavzuga ergashadi */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme inline {
+  --color-text: var(--text);
+  --color-soft: var(--text-soft);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
+  --color-warn: var(--warn);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-inter);
+}
+
+/* ---------- Asos ---------- */
+html {
+  background: var(--bg-base);
+  color: var(--text);
+}
+
+body {
+  min-height: 100dvh;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Mesh gradient fon (qimirlamaydi, scroll bilan ketmaydi) */
+.mesh-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(50% 40% at 15% 8%, var(--mesh-1) 0%, transparent 70%),
+    radial-gradient(45% 38% at 92% 18%, var(--mesh-2) 0%, transparent 70%),
+    radial-gradient(50% 40% at 85% 92%, var(--mesh-3) 0%, transparent 70%),
+    radial-gradient(42% 34% at 4% 88%, var(--mesh-4) 0%, transparent 70%),
+    var(--bg-base);
+}
+
+/* ---------- Glass ---------- */
+.glass {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--glass-highlight);
+}
+
+.glass-strong {
+  background: var(--glass-bg-strong);
+}
+
+/* Pastki bar: matn orqasidan ko'rinmasligi uchun deyarli zich */
+.bar-surface {
+  background: var(--bar-bg);
+}
+
+/* Tanlangan karta/tugma: rang, ramka va belgi o'zgaradi (.glass ning box-shadow'i Tailwind ring'ni bosib ketardi) */
+.glass[aria-checked="true"],
+.glass[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--accent) 18%, var(--glass-bg-strong));
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), var(--glass-shadow);
+}
+
+.glass[data-current="true"] {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), var(--glass-shadow);
+}
+
+/* backdrop-filter qo'llab-quvvatlanmasa zich fon */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass {
+    background: rgba(245, 247, 255, 0.94);
+  }
+  :root[data-theme="dark"] .glass {
+    background: rgba(20, 26, 48, 0.92);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: var(--glass-bg-strong);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Bosqich "nafas" animatsiyasi (faqat transform/opacity) */
+@keyframes pulse-ring {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+.pulse-ring {
+  animation: pulse-ring 2.4s ease-in-out infinite;
+}
+
+/* Pastki bar uchun joy: kontent barning orqasida qolmasin */
+.page-pad {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 108px);
+}
+
+/* Duolingo uslubidagi joriy tugun: sekin kengayadigan halqa */
+@keyframes node-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent); }
+  70%, 100% { box-shadow: 0 0 0 16px transparent; }
+}
+.node-pulse { animation: node-pulse 2s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .node-pulse { animation: none; }
+}
+
+/* Chuqur kesikli telefonlarda (iPhone, Android) status bar tagida kontent o'tib ketmasin: xiralashgan fon */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 60;
+  pointer-events: none;
+  background: rgba(238, 241, 248, 0.94);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+:root[data-theme="dark"] body::before {
+  background: rgba(17, 19, 24, 0.94);
+}
+
+/* Yordamchi yozish paneli: pastga sirpanganda matn orqasidan ko'rinib qolmasligi uchun xira, deyarli yopiq fon */
+.input-dock {
+  background: rgba(238, 241, 248, 0.9);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+:root[data-theme="dark"] .input-dock {
+  background: rgba(17, 19, 24, 0.9);
+}
+
+/* ---------- Ariza: Word varag'i (WordDoc) ---------- */
+.word-doc {
+  tab-size: 4;
+}
+.word-doc p {
+  position: relative;
+  margin: 0;
+}
+.word-doc p[data-bad="true"] {
+  text-decoration: underline wavy #e81123;
+  text-underline-offset: 5px;
+  text-decoration-skip-ink: none;
+}
+/* Karkas ko'rsatmasi va bo'sh varaq yozuvi: kursorni surmasligi uchun ustiga chiziladi */
+.word-doc p[data-hint][data-empty="true"]::before,
+.word-doc[data-blank="true"] > p:first-child::before {
+  position: absolute;
+  inset: 0 auto auto 0;
+  color: #8a8886;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 400;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.word-doc p[data-hint][data-empty="true"]::before {
+  content: attr(data-hint);
+}
+.word-doc[data-blank="true"] > p:first-child::before {
+  content: "Shu yerdan yozishni boshlang...";
+}

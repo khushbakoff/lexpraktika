@@ -1,0 +1,467 @@
+{
+  "id": "oila-ajratish-tartibi",
+  "title": "Nikohdan ajratish: sudda yoki FHDYo'da?",
+  "area": "Oila huquqi",
+  "areaId": "oila",
+  "tracks": [
+    "advokat",
+    "notarius",
+    "sudya",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Er-xotin ajrashmoqchi, voyaga yetmagan bolalar va mol-mulk nizosi bor. Nikohdan ajratish qayerda amalga oshirilishini Oila kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Shahlo, 34 yosh, ikki bolaning onasi",
+    "openingLine": "Assalomu alaykum. Eri bilan ajrashmoqchiman, ikki bolamiz va mol-mulk nizosi bor. Qayerga murojaat qilaman?",
+    "hiddenFacts": [
+      {
+        "id": "kids",
+        "fact": "Ikkita voyaga yetmagan bola bor",
+        "revealOn": []
+      },
+      {
+        "id": "dispute",
+        "fact": "Bolalar va mol-mulk bo'yicha nizo bor",
+        "revealOn": []
+      },
+      {
+        "id": "agree",
+        "fact": "Eri ajrashishga rozi emas",
+        "revealOn": []
+      },
+      {
+        "id": "jail",
+        "fact": "Er hech qanday jazoga tortilmagan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "kids",
+        "dispute",
+        "agree"
+      ],
+      "questions": [
+        {
+          "id": "q-kids",
+          "text": "Bolalar bormi?",
+          "factId": "kids",
+          "reply": "Ikki voyaga yetmagan bolamiz bor."
+        },
+        {
+          "id": "q-dispute",
+          "text": "Nizo bormi?",
+          "factId": "dispute",
+          "reply": "Ha, bolalar va mol-mulkni bo'lish bo'yicha."
+        },
+        {
+          "id": "q-agree",
+          "text": "Eringiz rozimi?",
+          "factId": "agree",
+          "reply": "Yo'q, rozi emas."
+        },
+        {
+          "id": "q-jail",
+          "text": "Eringiz sudlanganmi?",
+          "factId": "jail",
+          "reply": "Yo'q."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Ajratish organlari",
+      "sources": [],
+      "points": 15,
+      "description": "Qayerda va qachon.",
+      "prompt": "Nikohdan ajratish haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "court",
+          "label": "Nikohdan ajratish asosan sud tartibida amalga oshiriladi",
+          "required": true,
+          "why": "38-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Nikohdan ajratish sud tartibida",
+              "heading": "38-modda. Nikohdan ajratish tartibi",
+              "text": "⟦Nikohdan ajratish sud tartibida⟧, ushbu Kodeksning 42 va 43-moddalarida nazarda tutilgan hollarda esa, fuqarolik holati dalolatnomalarini qayd etish organlarida amalga oshiriladi.",
+              "anchor": "-158836"
+            }
+          ]
+        },
+        {
+          "id": "missing",
+          "label": "Er-xotindan biri sud tomonidan bedarak yo'qolgan deb topilsa, FHDYo organida ajratiladi",
+          "required": true,
+          "why": "43-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "sud tomonidan bedarak yoʻqolgan deb topilgan boʻlsa",
+              "heading": "43-modda. Er-xotindan birining arizasi boʻyicha fuqarolik holati dalolatnomalarini qayd etish organlarida nikohdan ajratish",
+              "text": "Agar er-xotindan biri:\n⟦sud tomonidan bedarak yoʻqolgan deb topilgan boʻlsa⟧;",
+              "anchor": "-158848"
+            }
+          ]
+        },
+        {
+          "id": "incapable",
+          "label": "Er-xotindan biri ruhiyati buzilishi sababli sud tomonidan muomalaga layoqatsiz deb topilsa, FHDYo organida ajratiladi",
+          "required": true,
+          "why": "43-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "sud tomonidan ruhiyati buzilishi (ruhiy kasalligi yoki aqli zaifligi) sababli muomalaga layoqatsiz deb topilgan boʻlsa",
+              "heading": "43-modda. Er-xotindan birining arizasi boʻyicha fuqarolik holati dalolatnomalarini qayd etish organlarida nikohdan ajratish",
+              "text": "sud tomonidan bedarak yoʻqolgan deb topilgan boʻlsa;\n⟦sud tomonidan ruhiyati buzilishi (ruhiy kasalligi yoki aqli zaifligi) sababli muomalaga layoqatsiz deb topilgan boʻlsa⟧;",
+              "anchor": "-158848"
+            }
+          ]
+        },
+        {
+          "id": "prison",
+          "label": "Er-xotindan biri uch yildan kam bo'lmagan muddatga ozodlikdan mahrum qilinsa, FHDYo organida ajratiladi",
+          "required": true,
+          "why": "43-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "sodir qilgan jinoyati uchun uch yildan kam boʻlmagan muddatga ozodlikdan mahrum qilingan boʻlsa",
+              "heading": "43-modda. Er-xotindan birining arizasi boʻyicha fuqarolik holati dalolatnomalarini qayd etish organlarida nikohdan ajratish",
+              "text": "⟦sodir qilgan jinoyati uchun uch yildan kam boʻlmagan muddatga ozodlikdan mahrum qilingan boʻlsa⟧, oʻrtada voyaga yetmagan bolalari borligidan qatʼi nazar, er-xotindan birining arizasiga koʻra ular fuqarolik holati dalolatnomalarini qayd etish organlarida nikohdan ajratiladi.",
+              "anchor": "-158848"
+            }
+          ]
+        },
+        {
+          "id": "kidsdispute",
+          "label": "Bolalar yoki mol-mulk nizosi bo'lsa ham FHDYo'da ajratiladi",
+          "required": false,
+          "why": "Bunday nizo bo'lsa, nikohdan sud tartibida ajratiladi (43-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "ular nikohdan sud tartibida ajratiladi",
+              "heading": "43-modda. Er-xotindan birining arizasi boʻyicha fuqarolik holati dalolatnomalarini qayd etish organlarida nikohdan ajratish",
+              "text": "Agar bolalar haqida, er-xotinning birgalikdagi umumiy mol-mulkini boʻlish haqida yoki yordamga muhtoj, mehnatga layoqatsiz er (xotin)ga taʼminot berish uchun mablagʻ toʻlash haqida nizo mavjud boʻlsa, ⟦ular nikohdan sud tartibida ajratiladi⟧.",
+              "anchor": "-158848"
+            }
+          ]
+        },
+        {
+          "id": "oral",
+          "label": "Og'zaki kelishuv bilan ajratiladi",
+          "required": false,
+          "why": "Ajratish sud yoki FHDYo organida amalga oshiriladi (38-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Nikohdan ajratish sud tartibida",
+              "heading": "38-modda. Nikohdan ajratish tartibi",
+              "text": "⟦Nikohdan ajratish sud tartibida⟧, ushbu Kodeksning 42 va 43-moddalarida nazarda tutilgan hollarda esa, fuqarolik holati dalolatnomalarini qayd etish organlarida amalga oshiriladi.",
+              "anchor": "-158836"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Ajratish tartibi",
+      "sources": [],
+      "points": 25,
+      "description": "Qayerda ajratilishini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "general",
+          "label": "Nikohdan ajratish asosan qaysi tartibda amalga oshiriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "court",
+              "label": "Sud tartibida"
+            },
+            {
+              "id": "mahalla",
+              "label": "Mahalla yig'inida"
+            },
+            {
+              "id": "notary",
+              "label": "Notarius"
+            }
+          ],
+          "correct": "court",
+          "why": "Sud tartibida (38-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Nikohdan ajratish sud tartibida",
+              "heading": "38-modda. Nikohdan ajratish tartibi",
+              "text": "⟦Nikohdan ajratish sud tartibida⟧, ushbu Kodeksning 42 va 43-moddalarida nazarda tutilgan hollarda esa, fuqarolik holati dalolatnomalarini qayd etish organlarida amalga oshiriladi.",
+              "anchor": "-158836"
+            }
+          ]
+        },
+        {
+          "id": "nizo",
+          "label": "Bolalar, umumiy mol-mulk bo'yicha nizo bo'lsa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "court",
+              "label": "Nikohdan sud tartibida ajratiladi"
+            },
+            {
+              "id": "fhdyo",
+              "label": "FHDYo organida ajratiladi"
+            },
+            {
+              "id": "none",
+              "label": "Ajratib bo'lmaydi"
+            }
+          ],
+          "correct": "court",
+          "why": "Nikohdan sud tartibida ajratiladi (43-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "ular nikohdan sud tartibida ajratiladi",
+              "heading": "43-modda. Er-xotindan birining arizasi boʻyicha fuqarolik holati dalolatnomalarini qayd etish organlarida nikohdan ajratish",
+              "text": "Agar bolalar haqida, er-xotinning birgalikdagi umumiy mol-mulkini boʻlish haqida yoki yordamga muhtoj, mehnatga layoqatsiz er (xotin)ga taʼminot berish uchun mablagʻ toʻlash haqida nizo mavjud boʻlsa, ⟦ular nikohdan sud tartibida ajratiladi⟧.",
+              "anchor": "-158848"
+            }
+          ]
+        },
+        {
+          "id": "prison",
+          "label": "Er-xotindan biri qanday muddatga ozodlikdan mahrum qilinsa, FHDYo organida ajratiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "m6",
+              "label": "6 oydan kam bo'lmagan"
+            },
+            {
+              "id": "y1",
+              "label": "1 yildan kam bo'lmagan"
+            },
+            {
+              "id": "y3",
+              "label": "3 yildan kam bo'lmagan"
+            },
+            {
+              "id": "y10",
+              "label": "10 yildan kam bo'lmagan"
+            }
+          ],
+          "correct": "y3",
+          "why": "Uch yildan kam bo'lmagan muddatga (43-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "uch yildan kam boʻlmagan muddatga ozodlikdan mahrum qilingan boʻlsa",
+              "heading": "43-modda. Er-xotindan birining arizasi boʻyicha fuqarolik holati dalolatnomalarini qayd etish organlarida nikohdan ajratish",
+              "text": "sodir qilgan jinoyati uchun ⟦uch yildan kam boʻlmagan muddatga ozodlikdan mahrum qilingan boʻlsa⟧, oʻrtada voyaga yetmagan bolalari borligidan qatʼi nazar, er-xotindan birining arizasiga koʻra ular fuqarolik holati dalolatnomalarini qayd etish organlarida nikohdan ajratiladi.",
+              "anchor": "-158848"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Nikohdan ajratish: sudda yoki FHDYo'da?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Ikkita voyaga yetmagan bola bor; Bolalar va mol-mulk bo'yicha nizo bor; Eri ajrashishga rozi emas",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "38-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Nikohdan ajratish sud tartibida",
+              "heading": "38-modda. Nikohdan ajratish tartibi",
+              "text": "⟦Nikohdan ajratish sud tartibida⟧, ushbu Kodeksning 42 va 43-moddalarida nazarda tutilgan hollarda esa, fuqarolik holati dalolatnomalarini qayd etish organlarida amalga oshiriladi.",
+              "anchor": "-158836"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "43-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "sud tomonidan bedarak yoʻqolgan deb topilgan boʻlsa",
+              "heading": "43-modda. Er-xotindan birining arizasi boʻyicha fuqarolik holati dalolatnomalarini qayd etish organlarida nikohdan ajratish",
+              "text": "Agar er-xotindan biri:\n⟦sud tomonidan bedarak yoʻqolgan deb topilgan boʻlsa⟧;",
+              "anchor": "-158848"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Nikohdan ajratish asosan sud tartibida amalga oshiriladi; Er-xotindan biri sud tomonidan bedarak yo'qolgan deb topilsa, FHDYo organida ajratiladi; Er-xotindan biri ruhiyati buzilishi sababli sud tomonidan muomalaga layoqatsiz deb topilsa, FHDYo organida ajratiladi; Er-xotindan biri uch yildan kam bo'lmagan muddatga ozodlikdan mahrum qilinsa, FHDYo organida ajratiladi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Sudda ajratish",
+      "sources": [],
+      "points": 15,
+      "description": "Jarayonni belgilang.",
+      "order": [
+        {
+          "id": "claim",
+          "label": "Nikohdan ajratish bo'yicha ish sudda da'vo tartibida ko'riladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Nikohdan ajratish toʻgʻrisidagi ishlar sud tomonidan Oʻzbekiston Respublikasi Fuqarolik protsessual kodeksi",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "⟦Nikohdan ajratish toʻgʻrisidagi ishlar sud tomonidan Oʻzbekiston Respublikasi Fuqarolik protsessual kodeksi⟧da daʼvo ishlarini hal qilish uchun belgilangan tartibda koʻrib chiqiladi.",
+              "anchor": "-158840"
+            }
+          ]
+        },
+        {
+          "id": "reconcile",
+          "label": "Sud ishni keyinga qoldirib, yarashish uchun olti oygacha muhlat tayinlashga haqli",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "yarashish uchun olti oygacha muhlat tayinlashga haqli",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "Sud ishning koʻrilishini keyinga qoldirib, er-xotinga ⟦yarashish uchun olti oygacha muhlat tayinlashga haqli⟧.",
+              "anchor": "-158840"
+            }
+          ]
+        },
+        {
+          "id": "divorce",
+          "label": "Birga yashashga va oilani saqlashga imkon yo'q deb topilsa, sud nikohdan ajratadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "41-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "ularni nikohdan ajratadi",
+              "heading": "41-modda. Sudning nikohdan ajratish asoslari",
+              "text": "Agar sud er va xotinning bundan buyon birgalikda yashashiga va oilani saqlab qolishga imkoniyat yoʻq deb topsa, ⟦ularni nikohdan ajratadi⟧.",
+              "anchor": "-158843"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Yarashish muhlati",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+          "article": "40-modda",
+          "url": "https://lex.uz/docs/-104720",
+          "quote": "yarashish uchun olti oygacha muhlat tayinlashga haqli",
+          "heading": "40-modda. Nikohdan sud tartibida ajratish",
+          "text": "Sud ishning koʻrilishini keyinga qoldirib, er-xotinga ⟦yarashish uchun olti oygacha muhlat tayinlashga haqli⟧.",
+          "anchor": "-158840"
+        }
+      ],
+      "points": 15,
+      "description": "Sud er-xotinga yarashish uchun eng ko'pi bilan qancha muhlat tayinlashi mumkin?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Olti oygacha"
+        },
+        {
+          "id": "b",
+          "label": "Bir yilgacha"
+        },
+        {
+          "id": "c",
+          "label": "Uch oygacha"
+        },
+        {
+          "id": "d",
+          "label": "Muhlat tayinlab bo'lmaydi"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

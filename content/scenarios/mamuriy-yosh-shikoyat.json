@@ -1,0 +1,471 @@
+{
+  "id": "mamuriy-yosh-shikoyat",
+  "title": "Ma'muriy qarorga shikoyat qilish muddati",
+  "area": "Ma'muriy huquq",
+  "areaId": "mamuriy",
+  "tracks": [
+    "davlat",
+    "huquq-tartibot",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijoz ma'muriy huquqbuzarlik qaroriga shikoyat qilmoqchi. Ma'muriy javobgarlik yoshi va shikoyat berish muddatini Ma'muriy javobgarlik to'g'risidagi kodeks bo'yicha belgilang.",
+  "client": {
+    "persona": "Sherzod, 25 yosh, tadbirkor",
+    "openingLine": "Assalomu alaykum. Menga ma'muriy jarima solishdi, qaror noto'g'ri deb o'ylayman. Qancha muddat ichida shikoyat qilishim mumkin?",
+    "hiddenFacts": [
+      {
+        "id": "decision",
+        "fact": "Ma'muriy huquqbuzarlik to'g'risidagi ish bo'yicha qaror chiqarilgan",
+        "revealOn": []
+      },
+      {
+        "id": "copy",
+        "fact": "Qarorning nusxasi 5 kun oldin olingan",
+        "revealOn": []
+      },
+      {
+        "id": "court",
+        "fact": "Qaror sud tomonidan chiqarilmagan",
+        "revealOn": []
+      },
+      {
+        "id": "age",
+        "fact": "Mijoz huquqbuzarlik paytida 25 yoshda",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "decision",
+        "copy",
+        "court"
+      ],
+      "questions": [
+        {
+          "id": "q-decision",
+          "text": "Qanday qaror?",
+          "factId": "decision",
+          "reply": "Jarima solish haqida qaror."
+        },
+        {
+          "id": "q-copy",
+          "text": "Nusxani qachon oldingiz?",
+          "factId": "copy",
+          "reply": "Taxminan 5 kun oldin."
+        },
+        {
+          "id": "q-court",
+          "text": "Qaror kim chiqargan?",
+          "factId": "court",
+          "reply": "Ma'muriy organ mansabdor shaxsi."
+        },
+        {
+          "id": "q-age",
+          "text": "Necha yoshda edingiz?",
+          "factId": "age",
+          "reply": "25 yoshda."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Yosh va shikoyat qoidalari",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Ma'muriy javobgarlik va shikoyat haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "age",
+          "label": "Huquqbuzarlik sodir etgan paytda o'n olti yoshga to'lgan shaxslar ma'muriy javobgarlikka tortiladi",
+          "required": true,
+          "why": "13-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "Maʼmuriy huquqbuzarlik sodir etgan paytda oʻn olti yoshga toʻlgan shaxslar",
+              "heading": "13-modda. Maʼmuriy javobgarlikka tortilish yoshi",
+              "text": "⟦Maʼmuriy huquqbuzarlik sodir etgan paytda oʻn olti yoshga toʻlgan shaxslar⟧, agar ushbu Kodeksda boshqacha qoida nazarda tutilmagan boʻlsa, maʼmuriy javobgarlikka tortiladi.",
+              "anchor": "-197853"
+            }
+          ]
+        },
+        {
+          "id": "ten",
+          "label": "Qaror nusxasi olingan kundan o'n kun ichida shikoyat berilishi mumkin",
+          "required": true,
+          "why": "316-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "316-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "shu qarorning nusxasi olingan kundan eʼtiboran oʻn kun ichida shikoyat berilishi mumkin",
+              "heading": "316-modda. Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shikoyat berish muddati",
+              "text": "Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida ⟦shu qarorning nusxasi olingan kundan eʼtiboran oʻn kun ichida shikoyat berilishi mumkin⟧, bundan sud qarori mustasno. Mazkur muddat uzrli sabablar bilan oʻtkazilib yuborilgan taqdirda, bu muddat shikoyatni koʻrib chiqishga vakolatli organ (mansabdor shaxs) tomonidan qayta tiklanishi mumkin.",
+              "anchor": "-201603"
+            }
+          ]
+        },
+        {
+          "id": "court",
+          "label": "Sud qarori uchun bu 10 kunlik qoida tatbiq etilmaydi",
+          "required": true,
+          "why": "316-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "316-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "bundan sud qarori mustasno",
+              "heading": "316-modda. Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shikoyat berish muddati",
+              "text": "Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shu qarorning nusxasi olingan kundan eʼtiboran oʻn kun ichida shikoyat berilishi mumkin, ⟦bundan sud qarori mustasno⟧. Mazkur muddat uzrli sabablar bilan oʻtkazilib yuborilgan taqdirda, bu muddat shikoyatni koʻrib chiqishga vakolatli organ (mansabdor shaxs) tomonidan qayta tiklanishi mumkin.",
+              "anchor": "-201603"
+            }
+          ]
+        },
+        {
+          "id": "restore",
+          "label": "Uzrli sabab bilan o'tkazib yuborilgan muddat vakolatli organ tomonidan tiklanishi mumkin",
+          "required": true,
+          "why": "316-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "316-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "bu muddat shikoyatni koʻrib chiqishga vakolatli organ (mansabdor shaxs) tomonidan qayta tiklanishi mumkin",
+              "heading": "316-modda. Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shikoyat berish muddati",
+              "text": "Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shu qarorning nusxasi olingan kundan eʼtiboran oʻn kun ichida shikoyat berilishi mumkin, bundan sud qarori mustasno. Mazkur muddat uzrli sabablar bilan oʻtkazilib yuborilgan taqdirda, ⟦bu muddat shikoyatni koʻrib chiqishga vakolatli organ (mansabdor shaxs) tomonidan qayta tiklanishi mumkin⟧.",
+              "anchor": "-201603"
+            }
+          ]
+        },
+        {
+          "id": "age14",
+          "label": "O'n to'rt yoshdan ma'muriy javobgarlik umumiy qoida bo'yicha boshlanadi",
+          "required": false,
+          "why": "Umumiy qoida bo'yicha o'n olti yosh (13-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "oʻn olti yoshga toʻlgan shaxslar",
+              "heading": "13-modda. Maʼmuriy javobgarlikka tortilish yoshi",
+              "text": "Maʼmuriy huquqbuzarlik sodir etgan paytda ⟦oʻn olti yoshga toʻlgan shaxslar⟧, agar ushbu Kodeksda boshqacha qoida nazarda tutilmagan boʻlsa, maʼmuriy javobgarlikka tortiladi.",
+              "anchor": "-197853"
+            }
+          ]
+        },
+        {
+          "id": "year",
+          "label": "Shikoyat muddati bir yil",
+          "required": false,
+          "why": "Shikoyat qaror nusxasi olingan kundan o'n kun ichida beriladi (316-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "316-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "oʻn kun ichida shikoyat berilishi mumkin",
+              "heading": "316-modda. Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shikoyat berish muddati",
+              "text": "Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shu qarorning nusxasi olingan kundan eʼtiboran ⟦oʻn kun ichida shikoyat berilishi mumkin⟧, bundan sud qarori mustasno. Mazkur muddat uzrli sabablar bilan oʻtkazilib yuborilgan taqdirda, bu muddat shikoyatni koʻrib chiqishga vakolatli organ (mansabdor shaxs) tomonidan qayta tiklanishi mumkin.",
+              "anchor": "-201603"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Yosh va muddat",
+      "sources": [],
+      "points": 25,
+      "description": "Qoidalarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "age",
+          "label": "Umumiy qoida bo'yicha ma'muriy javobgarlik yoshi",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "y14",
+              "label": "14 yosh"
+            },
+            {
+              "id": "y16",
+              "label": "16 yosh"
+            },
+            {
+              "id": "y18",
+              "label": "18 yosh"
+            },
+            {
+              "id": "y21",
+              "label": "21 yosh"
+            }
+          ],
+          "correct": "y16",
+          "why": "O'n olti yosh (13-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "oʻn olti yoshga toʻlgan shaxslar",
+              "heading": "13-modda. Maʼmuriy javobgarlikka tortilish yoshi",
+              "text": "Maʼmuriy huquqbuzarlik sodir etgan paytda ⟦oʻn olti yoshga toʻlgan shaxslar⟧, agar ushbu Kodeksda boshqacha qoida nazarda tutilmagan boʻlsa, maʼmuriy javobgarlikka tortiladi.",
+              "anchor": "-197853"
+            }
+          ]
+        },
+        {
+          "id": "term",
+          "label": "Shikoyat berish muddati (nusxa olingan kundan)",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d3",
+              "label": "3 kun"
+            },
+            {
+              "id": "d10",
+              "label": "10 kun"
+            },
+            {
+              "id": "d30",
+              "label": "30 kun"
+            },
+            {
+              "id": "y1",
+              "label": "1 yil"
+            }
+          ],
+          "correct": "d10",
+          "why": "O'n kun ichida (316-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "316-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "shu qarorning nusxasi olingan kundan eʼtiboran oʻn kun ichida shikoyat berilishi mumkin",
+              "heading": "316-modda. Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shikoyat berish muddati",
+              "text": "Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida ⟦shu qarorning nusxasi olingan kundan eʼtiboran oʻn kun ichida shikoyat berilishi mumkin⟧, bundan sud qarori mustasno. Mazkur muddat uzrli sabablar bilan oʻtkazilib yuborilgan taqdirda, bu muddat shikoyatni koʻrib chiqishga vakolatli organ (mansabdor shaxs) tomonidan qayta tiklanishi mumkin.",
+              "anchor": "-201603"
+            }
+          ]
+        },
+        {
+          "id": "restore",
+          "label": "Muddat uzrli sabab bilan o'tkazib yuborilsa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Hech qachon tiklanmaydi"
+            },
+            {
+              "id": "restore",
+              "label": "Vakolatli organ tiklashi mumkin"
+            },
+            {
+              "id": "auto",
+              "label": "Avtomatik tiklanadi"
+            }
+          ],
+          "correct": "restore",
+          "why": "Vakolatli organ muddatni qayta tiklashi mumkin (316-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "316-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "bu muddat shikoyatni koʻrib chiqishga vakolatli organ (mansabdor shaxs) tomonidan qayta tiklanishi mumkin",
+              "heading": "316-modda. Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shikoyat berish muddati",
+              "text": "Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shu qarorning nusxasi olingan kundan eʼtiboran oʻn kun ichida shikoyat berilishi mumkin, bundan sud qarori mustasno. Mazkur muddat uzrli sabablar bilan oʻtkazilib yuborilgan taqdirda, ⟦bu muddat shikoyatni koʻrib chiqishga vakolatli organ (mansabdor shaxs) tomonidan qayta tiklanishi mumkin⟧.",
+              "anchor": "-201603"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Ma'muriy qarorga shikoyat qilish muddati). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Ma'muriy huquqbuzarlik to'g'risidagi ish bo'yicha qaror chiqarilgan; Qarorning nusxasi 5 kun oldin olingan; Qaror sud tomonidan chiqarilmagan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "13-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "Maʼmuriy huquqbuzarlik sodir etgan paytda oʻn olti yoshga toʻlgan shaxslar",
+              "heading": "13-modda. Maʼmuriy javobgarlikka tortilish yoshi",
+              "text": "⟦Maʼmuriy huquqbuzarlik sodir etgan paytda oʻn olti yoshga toʻlgan shaxslar⟧, agar ushbu Kodeksda boshqacha qoida nazarda tutilmagan boʻlsa, maʼmuriy javobgarlikka tortiladi.",
+              "anchor": "-197853"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "316-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "shu qarorning nusxasi olingan kundan eʼtiboran oʻn kun ichida shikoyat berilishi mumkin",
+              "heading": "316-modda. Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shikoyat berish muddati",
+              "text": "Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida ⟦shu qarorning nusxasi olingan kundan eʼtiboran oʻn kun ichida shikoyat berilishi mumkin⟧, bundan sud qarori mustasno. Mazkur muddat uzrli sabablar bilan oʻtkazilib yuborilgan taqdirda, bu muddat shikoyatni koʻrib chiqishga vakolatli organ (mansabdor shaxs) tomonidan qayta tiklanishi mumkin.",
+              "anchor": "-201603"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Huquqbuzarlik sodir etgan paytda o'n olti yoshga to'lgan shaxslar ma'muriy javobgarlikka tortiladi; Qaror nusxasi olingan kundan o'n kun ichida shikoyat berilishi mumkin; Sud qarori uchun bu 10 kunlik qoida tatbiq etilmaydi; Uzrli sabab bilan o'tkazib yuborilgan muddat vakolatli organ tomonidan tiklanishi mumkin",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Shikoyat tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "copy",
+          "label": "Mijoz qarorning nusxasini oladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "316-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "shu qarorning nusxasi olingan kundan",
+              "heading": "316-modda. Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shikoyat berish muddati",
+              "text": "Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida ⟦shu qarorning nusxasi olingan kundan⟧ eʼtiboran oʻn kun ichida shikoyat berilishi mumkin, bundan sud qarori mustasno. Mazkur muddat uzrli sabablar bilan oʻtkazilib yuborilgan taqdirda, bu muddat shikoyatni koʻrib chiqishga vakolatli organ (mansabdor shaxs) tomonidan qayta tiklanishi mumkin.",
+              "anchor": "-201603"
+            }
+          ]
+        },
+        {
+          "id": "appeal",
+          "label": "Nusxa olingan kundan o'n kun ichida shikoyat beradi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "316-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "oʻn kun ichida shikoyat berilishi mumkin",
+              "heading": "316-modda. Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shikoyat berish muddati",
+              "text": "Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shu qarorning nusxasi olingan kundan eʼtiboran ⟦oʻn kun ichida shikoyat berilishi mumkin⟧, bundan sud qarori mustasno. Mazkur muddat uzrli sabablar bilan oʻtkazilib yuborilgan taqdirda, bu muddat shikoyatni koʻrib chiqishga vakolatli organ (mansabdor shaxs) tomonidan qayta tiklanishi mumkin.",
+              "anchor": "-201603"
+            }
+          ]
+        },
+        {
+          "id": "restore",
+          "label": "Uzrli sabab bilan o'tkazib yuborilsa, muddat qayta tiklanishi mumkin",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "316-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "qayta tiklanishi mumkin",
+              "heading": "316-modda. Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shikoyat berish muddati",
+              "text": "Maʼmuriy huquqbuzarlik toʻgʻrisidagi ish yuzasidan chiqarilgan qaror xususida shu qarorning nusxasi olingan kundan eʼtiboran oʻn kun ichida shikoyat berilishi mumkin, bundan sud qarori mustasno. Mazkur muddat uzrli sabablar bilan oʻtkazilib yuborilgan taqdirda, bu muddat shikoyatni koʻrib chiqishga vakolatli organ (mansabdor shaxs) tomonidan ⟦qayta tiklanishi mumkin⟧.",
+              "anchor": "-201603"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Javobgarlik yoshi",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+          "article": "13-modda",
+          "url": "https://lex.uz/docs/-97664",
+          "quote": "Maʼmuriy huquqbuzarlik sodir etgan paytda oʻn olti yoshga toʻlgan shaxslar",
+          "heading": "13-modda. Maʼmuriy javobgarlikka tortilish yoshi",
+          "text": "⟦Maʼmuriy huquqbuzarlik sodir etgan paytda oʻn olti yoshga toʻlgan shaxslar⟧, agar ushbu Kodeksda boshqacha qoida nazarda tutilmagan boʻlsa, maʼmuriy javobgarlikka tortiladi.",
+          "anchor": "-197853"
+        }
+      ],
+      "points": 15,
+      "description": "Ma'muriy huquqbuzarlik sodir etgan paytda necha yoshga to'lgan shaxslar (umumiy qoida bo'yicha) ma'muriy javobgarlikka tortiladi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "O'n olti"
+        },
+        {
+          "id": "b",
+          "label": "O'n to'rt"
+        },
+        {
+          "id": "c",
+          "label": "O'n sakkiz"
+        },
+        {
+          "id": "d",
+          "label": "Yigirma bir"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

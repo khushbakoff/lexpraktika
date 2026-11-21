@@ -1,0 +1,471 @@
+{
+  "id": "oila-yarashish-zoravonlik",
+  "title": "Ajrashish: zo'ravonlikdan jabrlangan ayol",
+  "area": "Oila huquqi",
+  "areaId": "oila",
+  "tracks": [
+    "advokat",
+    "notarius",
+    "sudya",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Oilaviy zo'ravonlikdan jabrlangan ayol ajrashmoqchi, er yarashish muhlatini so'ramoqda. Yarashish muhlati qoidalari va istisnolarini Oila kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Nodira, 31 yosh",
+    "openingLine": "Assalomu alaykum. Eri meni uradi, ajrashmoqchiman. U sudda yarashish uchun muhlat so'rayapti. Muhlat berishadimi?",
+    "hiddenFacts": [
+      {
+        "id": "viol",
+        "fact": "Mijoz oilaviy zo'ravonlikdan jabrlangan",
+        "revealOn": []
+      },
+      {
+        "id": "req",
+        "fact": "Er yarashish uchun muhlat so'ramoqda",
+        "revealOn": []
+      },
+      {
+        "id": "claim",
+        "fact": "Jabrlangan ayol muhlat tayinlanmasligini talab qilmoqda",
+        "revealOn": []
+      },
+      {
+        "id": "kids",
+        "fact": "Voyaga yetmagan bola bor",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "viol",
+        "req",
+        "claim"
+      ],
+      "questions": [
+        {
+          "id": "q-viol",
+          "text": "Nima bo'layapti?",
+          "factId": "viol",
+          "reply": "Eri meni muntazam uradi."
+        },
+        {
+          "id": "q-req",
+          "text": "Er sudda nima so'rayapti?",
+          "factId": "req",
+          "reply": "Yarashishga muhlat so'rayapti."
+        },
+        {
+          "id": "q-claim",
+          "text": "Siz nimani xohlaysiz?",
+          "factId": "claim",
+          "reply": "Muhlat berilmasin, deyman."
+        },
+        {
+          "id": "q-kids",
+          "text": "Bolalar bormi?",
+          "factId": "kids",
+          "reply": "Bitta 5 yoshli bolamiz bor."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Yarashish muhlati",
+      "sources": [],
+      "points": 15,
+      "description": "Muhlat qoidalarini aniqlang.",
+      "prompt": "Yarashish muhlati haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "six",
+          "label": "Sud ishni keyinga qoldirib, yarashish uchun olti oygacha muhlat tayinlashga haqli",
+          "required": true,
+          "why": "40-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "yarashish uchun olti oygacha muhlat tayinlashga haqli",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "Sud ishning koʻrilishini keyinga qoldirib, er-xotinga ⟦yarashish uchun olti oygacha muhlat tayinlashga haqli⟧.",
+              "anchor": "-158840"
+            }
+          ]
+        },
+        {
+          "id": "notify",
+          "label": "Muhlat tayinlansa, fuqarolar yig'ini yarashtirish komissiyasi uch kundan kechiktirmay yozma xabardor qilinadi",
+          "required": true,
+          "why": "40-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "uch kundan kechiktirmasdan yozma ravishda xabardor qilishi kerak",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "Sud er-xotinga yarashish uchun muhlat tayinlab, ishning koʻrilishini keyinga qoldirgan taqdirda, er-xotinning birga yashash joyidagi fuqarolar yigʻinining yarashtirish komissiyasini, agar ular birga yashamayotgan boʻlsa, har birining yashash joyidagi fuqarolar yigʻinining yarashtirish komissiyasini er-xotinni yarashtirish boʻyicha tegishli choralar koʻrish uchun ⟦uch kundan kechiktirmasdan yozma ravishda xabardor qilishi kerak⟧.",
+              "anchor": "-158840"
+            }
+          ]
+        },
+        {
+          "id": "violence",
+          "label": "Oilaviy zo'ravonlikdan jabrlangan shaxsning talabiga ko'ra yarashish uchun muhlat tayinlanmaydi",
+          "required": true,
+          "why": "40-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Sud oilaviy (maishiy) zoʻravonlikdan jabrlangan shaxsning talabiga koʻra yarashish uchun muhlat tayinlamaydi",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "⟦Sud oilaviy (maishiy) zoʻravonlikdan jabrlangan shaxsning talabiga koʻra yarashish uchun muhlat tayinlamaydi⟧.",
+              "anchor": "-158840"
+            }
+          ]
+        },
+        {
+          "id": "divorce",
+          "label": "Birga yashashga imkoniyat yo'q deb topilsa, sud nikohdan ajratadi",
+          "required": true,
+          "why": "41-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "41-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "ularni nikohdan ajratadi",
+              "heading": "41-modda. Sudning nikohdan ajratish asoslari",
+              "text": "Agar sud er va xotinning bundan buyon birgalikda yashashiga va oilani saqlab qolishga imkoniyat yoʻq deb topsa, ⟦ularni nikohdan ajratadi⟧.",
+              "anchor": "-158843"
+            }
+          ]
+        },
+        {
+          "id": "always",
+          "label": "Zo'ravonlik bo'lsa ham muhlat tayinlanishi majburiy",
+          "required": false,
+          "why": "Zo'ravonlikdan jabrlangan shaxsning talabiga ko'ra muhlat tayinlanmaydi (40-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Sud oilaviy (maishiy) zoʻravonlikdan jabrlangan shaxsning talabiga koʻra yarashish uchun muhlat tayinlamaydi",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "⟦Sud oilaviy (maishiy) zoʻravonlikdan jabrlangan shaxsning talabiga koʻra yarashish uchun muhlat tayinlamaydi⟧.",
+              "anchor": "-158840"
+            }
+          ]
+        },
+        {
+          "id": "year",
+          "label": "Yarashish muhlati bir yilgacha bo'lishi mumkin",
+          "required": false,
+          "why": "Olti oygacha (40-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "yarashish uchun olti oygacha muhlat tayinlashga haqli",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "Sud ishning koʻrilishini keyinga qoldirib, er-xotinga ⟦yarashish uchun olti oygacha muhlat tayinlashga haqli⟧.",
+              "anchor": "-158840"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Muhlat va istisno",
+      "sources": [],
+      "points": 25,
+      "description": "Qoidalarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "max",
+          "label": "Yarashish uchun eng ko'p muhlat",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "m1",
+              "label": "1 oygacha"
+            },
+            {
+              "id": "m3",
+              "label": "3 oygacha"
+            },
+            {
+              "id": "m6",
+              "label": "6 oygacha"
+            },
+            {
+              "id": "y1",
+              "label": "1 yilgacha"
+            }
+          ],
+          "correct": "m6",
+          "why": "Olti oygacha (40-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "yarashish uchun olti oygacha muhlat tayinlashga haqli",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "Sud ishning koʻrilishini keyinga qoldirib, er-xotinga ⟦yarashish uchun olti oygacha muhlat tayinlashga haqli⟧.",
+              "anchor": "-158840"
+            }
+          ]
+        },
+        {
+          "id": "viol",
+          "label": "Oilaviy zo'ravonlikdan jabrlangan shaxsning talabiga ko'ra",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "force",
+              "label": "Muhlat majburiy tayinlanadi"
+            },
+            {
+              "id": "none",
+              "label": "Muhlat tayinlanmaydi"
+            },
+            {
+              "id": "year",
+              "label": "Bir yil muhlat beriladi"
+            }
+          ],
+          "correct": "none",
+          "why": "Yarashish uchun muhlat tayinlanmaydi (40-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Sud oilaviy (maishiy) zoʻravonlikdan jabrlangan shaxsning talabiga koʻra yarashish uchun muhlat tayinlamaydi",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "⟦Sud oilaviy (maishiy) zoʻravonlikdan jabrlangan shaxsning talabiga koʻra yarashish uchun muhlat tayinlamaydi⟧.",
+              "anchor": "-158840"
+            }
+          ]
+        },
+        {
+          "id": "notice",
+          "label": "Muhlat tayinlansa, yarashtirish komissiyasi qancha muddatda xabardor qilinadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d1",
+              "label": "1 kundan kechiktirmay"
+            },
+            {
+              "id": "d3",
+              "label": "3 kundan kechiktirmay"
+            },
+            {
+              "id": "d30",
+              "label": "30 kundan kechiktirmay"
+            },
+            {
+              "id": "none",
+              "label": "Xabar berilmaydi"
+            }
+          ],
+          "correct": "d3",
+          "why": "Uch kundan kechiktirmay, yozma (40-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "uch kundan kechiktirmasdan yozma ravishda xabardor qilishi kerak",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "Sud er-xotinga yarashish uchun muhlat tayinlab, ishning koʻrilishini keyinga qoldirgan taqdirda, er-xotinning birga yashash joyidagi fuqarolar yigʻinining yarashtirish komissiyasini, agar ular birga yashamayotgan boʻlsa, har birining yashash joyidagi fuqarolar yigʻinining yarashtirish komissiyasini er-xotinni yarashtirish boʻyicha tegishli choralar koʻrish uchun ⟦uch kundan kechiktirmasdan yozma ravishda xabardor qilishi kerak⟧.",
+              "anchor": "-158840"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Ajrashish: zo'ravonlikdan jabrlangan ayol). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Mijoz oilaviy zo'ravonlikdan jabrlangan; Er yarashish uchun muhlat so'ramoqda; Jabrlangan ayol muhlat tayinlanmasligini talab qilmoqda",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "yarashish uchun olti oygacha muhlat tayinlashga haqli",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "Sud ishning koʻrilishini keyinga qoldirib, er-xotinga ⟦yarashish uchun olti oygacha muhlat tayinlashga haqli⟧.",
+              "anchor": "-158840"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "41-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "ularni nikohdan ajratadi",
+              "heading": "41-modda. Sudning nikohdan ajratish asoslari",
+              "text": "Agar sud er va xotinning bundan buyon birgalikda yashashiga va oilani saqlab qolishga imkoniyat yoʻq deb topsa, ⟦ularni nikohdan ajratadi⟧.",
+              "anchor": "-158843"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Sud ishni keyinga qoldirib, yarashish uchun olti oygacha muhlat tayinlashga haqli; Muhlat tayinlansa, fuqarolar yig'ini yarashtirish komissiyasi uch kundan kechiktirmay yozma xabardor qilinadi; Oilaviy zo'ravonlikdan jabrlangan shaxsning talabiga ko'ra yarashish uchun muhlat tayinlanmaydi; Birga yashashga imkoniyat yo'q deb topilsa, sud nikohdan ajratadi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Ish ko'rilishi",
+      "sources": [],
+      "points": 15,
+      "description": "Jarayonni belgilang.",
+      "order": [
+        {
+          "id": "court",
+          "label": "Ish sudda da'vo tartibida ko'riladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Nikohdan ajratish toʻgʻrisidagi ishlar sud tomonidan",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "⟦Nikohdan ajratish toʻgʻrisidagi ishlar sud tomonidan⟧ Oʻzbekiston Respublikasi Fuqarolik protsessual kodeksida daʼvo ishlarini hal qilish uchun belgilangan tartibda koʻrib chiqiladi.",
+              "anchor": "-158840"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "label": "Zo'ravonlikdan jabrlangan shaxs talab qilsa, yarashish muhlati tayinlanmaydi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "40-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "Sud oilaviy (maishiy) zoʻravonlikdan jabrlangan shaxsning talabiga koʻra yarashish uchun muhlat tayinlamaydi",
+              "heading": "40-modda. Nikohdan sud tartibida ajratish",
+              "text": "⟦Sud oilaviy (maishiy) zoʻravonlikdan jabrlangan shaxsning talabiga koʻra yarashish uchun muhlat tayinlamaydi⟧.",
+              "anchor": "-158840"
+            }
+          ]
+        },
+        {
+          "id": "decide",
+          "label": "Birga yashashga imkon yo'q bo'lsa, sud nikohdan ajratadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+              "article": "41-modda",
+              "url": "https://lex.uz/docs/-104720",
+              "quote": "ularni nikohdan ajratadi",
+              "heading": "41-modda. Sudning nikohdan ajratish asoslari",
+              "text": "Agar sud er va xotinning bundan buyon birgalikda yashashiga va oilani saqlab qolishga imkoniyat yoʻq deb topsa, ⟦ularni nikohdan ajratadi⟧.",
+              "anchor": "-158843"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Imkon yo'qligi",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Oila kodeksi",
+          "article": "41-modda",
+          "url": "https://lex.uz/docs/-104720",
+          "quote": "Agar sud er va xotinning bundan buyon birgalikda yashashiga va oilani saqlab qolishga imkoniyat yoʻq deb topsa",
+          "heading": "41-modda. Sudning nikohdan ajratish asoslari",
+          "text": "⟦Agar sud er va xotinning bundan buyon birgalikda yashashiga va oilani saqlab qolishga imkoniyat yoʻq deb topsa⟧, ularni nikohdan ajratadi.",
+          "anchor": "-158843"
+        }
+      ],
+      "points": 15,
+      "description": "Sud qaysi holatda er-xotinni nikohdan ajratadi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Birgalikda yashashga va oilani saqlab qolishga imkoniyat yo'q deb topsa"
+        },
+        {
+          "id": "b",
+          "label": "Faqat erning roziligi bo'lsa"
+        },
+        {
+          "id": "c",
+          "label": "Mahalla ruxsat bersa"
+        },
+        {
+          "id": "d",
+          "label": "Bola 18 yoshga to'lsa"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

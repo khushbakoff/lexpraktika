@@ -1,0 +1,432 @@
+{
+  "id": "ish-notarius-yuridik-shaxs",
+  "title": "Yuridik shaxs nomidan bitim: nimani tekshiraman?",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy",
+    "korxona"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "MChJ direktori bitim tuzmoqchi. Notarius yuridik shaxsning huquq layoqatini qanday tekshirishini Yo'riqnoma bo'yicha belgilang.",
+  "client": {
+    "persona": "Notarius",
+    "openingLine": "Assalomu alaykum. MChJ direktori bitimni tasdiqlatmoqchi. Yuridik shaxsning huquq layoqatini nimalar bo'yicha tekshiraman?",
+    "hiddenFacts": [
+      {
+        "id": "llc",
+        "fact": "Murojaat qiluvchi MChJ nomidan keldi",
+        "revealOn": []
+      },
+      {
+        "id": "goal",
+        "fact": "Bitim MChJ ustavidagi maqsadlarga mosligini tekshirish kerak",
+        "revealOn": []
+      },
+      {
+        "id": "reg",
+        "fact": "Davlat ro'yxatidan o'tganlik tasdig'i kerak",
+        "revealOn": []
+      },
+      {
+        "id": "head",
+        "fact": "Direktor ta'sis hujjati bo'yicha bitim tuzish huquqiga ega",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "llc",
+        "goal",
+        "reg"
+      ],
+      "questions": [
+        {
+          "id": "q-llc",
+          "text": "Kim nomidan keldingiz?",
+          "factId": "llc",
+          "reply": "MChJ nomidan."
+        },
+        {
+          "id": "q-goal",
+          "text": "Bitim nima haqida?",
+          "factId": "goal",
+          "reply": "Ustav faoliyatiga mos deb o'ylayman."
+        },
+        {
+          "id": "q-reg",
+          "text": "Ro'yxatdan o'tganmi?",
+          "factId": "reg",
+          "reply": "Ha, o'tgan."
+        },
+        {
+          "id": "q-head",
+          "text": "Siz direktormisiz?",
+          "factId": "head",
+          "reply": "Ha, direktorman."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Huquq layoqatini tekshirish",
+      "sources": [],
+      "points": 15,
+      "description": "Tekshiruv elementlarini aniqlang.",
+      "prompt": "Yuridik shaxslar ishtirokida notarius nimani tekshirishi shart? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "docs",
+          "label": "Yuridik shaxsning ta'sis hujjatlari bilan tanishib chiqish",
+          "required": true,
+          "why": "5-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "5-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi",
+              "heading": "5-band.",
+              "text": "Yuridik shaxslar ishtirokidagi notarial harakatlarni amalga oshirishda notarius tomonidan ularning huquq layoqati tekshiriladi. Yuridik shaxslarning huquq layoqatini tekshirish paytida ⟦yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi⟧, shuningdek u qonunchilik hujjatlarida belgilangan tartibda davlat roʻyxatidan oʻtkazilganligini hamda amalga oshirilayotgan notarial harakatlar ularning taʼsis hujjatlariga muvofiq yoki muvofiq emasligini Tizim orqali tekshirishi shart."
+            }
+          ]
+        },
+        {
+          "id": "reg",
+          "label": "Davlat ro'yxatidan o'tkazilganligini tekshirish",
+          "required": true,
+          "why": "5-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "5-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "davlat roʻyxatidan oʻtkazilganligini",
+              "heading": "5-band.",
+              "text": "Yuridik shaxslar ishtirokidagi notarial harakatlarni amalga oshirishda notarius tomonidan ularning huquq layoqati tekshiriladi. Yuridik shaxslarning huquq layoqatini tekshirish paytida yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi, shuningdek u qonunchilik hujjatlarida belgilangan tartibda ⟦davlat roʻyxatidan oʻtkazilganligini⟧ hamda amalga oshirilayotgan notarial harakatlar ularning taʼsis hujjatlariga muvofiq yoki muvofiq emasligini Tizim orqali tekshirishi shart."
+            }
+          ]
+        },
+        {
+          "id": "match",
+          "label": "Amalga oshirilayotgan harakat ta'sis hujjatlariga muvofiqligini Tizim orqali tekshirish",
+          "required": true,
+          "why": "5-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "5-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "amalga oshirilayotgan notarial harakatlar ularning taʼsis hujjatlariga muvofiq yoki muvofiq emasligini Tizim orqali tekshirishi shart",
+              "heading": "5-band.",
+              "text": "Yuridik shaxslar ishtirokidagi notarial harakatlarni amalga oshirishda notarius tomonidan ularning huquq layoqati tekshiriladi. Yuridik shaxslarning huquq layoqatini tekshirish paytida yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi, shuningdek u qonunchilik hujjatlarida belgilangan tartibda davlat roʻyxatidan oʻtkazilganligini hamda ⟦amalga oshirilayotgan notarial harakatlar ularning taʼsis hujjatlariga muvofiq yoki muvofiq emasligini Tizim orqali tekshirishi shart⟧."
+            }
+          ]
+        },
+        {
+          "id": "head",
+          "label": "Ta'sis hujjati bo'yicha bitim tuzish huquqiga ega rahbardan ishonchnoma talab qilinmaydi",
+          "required": true,
+          "why": "25-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notarius taʼsis hujjati boʻyicha bitimlar tuzish huquqiga ega boʻlgan yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ishonchnoma talab qilmaydi",
+              "heading": "25-band.",
+              "text": "⟦Notarius taʼsis hujjati boʻyicha bitimlar tuzish huquqiga ega boʻlgan yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ishonchnoma talab qilmaydi⟧. Bunday hollarda ularning mansab mavqeyini tasdiqlovchi hujjat talab qilinadi."
+            }
+          ]
+        },
+        {
+          "id": "skip",
+          "label": "Yuridik shaxsning huquq layoqatini tekshirish shart emas",
+          "required": false,
+          "why": "Yuridik shaxslar ishtirokida huquq layoqati tekshiriladi (5-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "5-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Yuridik shaxslar ishtirokidagi notarial harakatlarni amalga oshirishda notarius tomonidan ularning huquq layoqati tekshiriladi",
+              "heading": "5-band.",
+              "text": "⟦Yuridik shaxslar ishtirokidagi notarial harakatlarni amalga oshirishda notarius tomonidan ularning huquq layoqati tekshiriladi⟧. Yuridik shaxslarning huquq layoqatini tekshirish paytida yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi, shuningdek u qonunchilik hujjatlarida belgilangan tartibda davlat roʻyxatidan oʻtkazilganligini hamda amalga oshirilayotgan notarial harakatlar ularning taʼsis hujjatlariga muvofiq yoki muvofiq emasligini Tizim orqali tekshirishi shart."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Tekshiruv",
+      "sources": [],
+      "points": 25,
+      "description": "Qoidalarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "what",
+          "label": "Yuridik shaxsning huquq layoqati tekshirilganda nima bilan tanishiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "founding",
+              "label": "Ta'sis hujjatlari bilan"
+            },
+            {
+              "id": "price",
+              "label": "Narx ro'yxati bilan"
+            },
+            {
+              "id": "staff",
+              "label": "Xodimlar ro'yxati bilan"
+            }
+          ],
+          "correct": "founding",
+          "why": "Ta'sis hujjatlari bilan (5-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "5-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi",
+              "heading": "5-band.",
+              "text": "Yuridik shaxslar ishtirokidagi notarial harakatlarni amalga oshirishda notarius tomonidan ularning huquq layoqati tekshiriladi. Yuridik shaxslarning huquq layoqatini tekshirish paytida ⟦yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi⟧, shuningdek u qonunchilik hujjatlarida belgilangan tartibda davlat roʻyxatidan oʻtkazilganligini hamda amalga oshirilayotgan notarial harakatlar ularning taʼsis hujjatlariga muvofiq yoki muvofiq emasligini Tizim orqali tekshirishi shart."
+            }
+          ]
+        },
+        {
+          "id": "reg",
+          "label": "Yana nima tekshiriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "registered",
+              "label": "Davlat ro'yxatidan o'tkazilganligi"
+            },
+            {
+              "id": "color",
+              "label": "Muhr rangi"
+            },
+            {
+              "id": "office",
+              "label": "Ofis manzili rasmi"
+            }
+          ],
+          "correct": "registered",
+          "why": "Davlat ro'yxatidan o'tkazilganligi (5-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "5-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "davlat roʻyxatidan oʻtkazilganligini",
+              "heading": "5-band.",
+              "text": "Yuridik shaxslar ishtirokidagi notarial harakatlarni amalga oshirishda notarius tomonidan ularning huquq layoqati tekshiriladi. Yuridik shaxslarning huquq layoqatini tekshirish paytida yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi, shuningdek u qonunchilik hujjatlarida belgilangan tartibda ⟦davlat roʻyxatidan oʻtkazilganligini⟧ hamda amalga oshirilayotgan notarial harakatlar ularning taʼsis hujjatlariga muvofiq yoki muvofiq emasligini Tizim orqali tekshirishi shart."
+            }
+          ]
+        },
+        {
+          "id": "head",
+          "label": "Ta'sis hujjati bo'yicha bitim tuzish huquqiga ega rahbarlardan",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "proxy",
+              "label": "Ishonchnoma talab qilinadi"
+            },
+            {
+              "id": "noproxy",
+              "label": "Ishonchnoma talab qilinmaydi"
+            },
+            {
+              "id": "court",
+              "label": "Sud ruxsati talab qilinadi"
+            }
+          ],
+          "correct": "noproxy",
+          "why": "Ishonchnoma talab qilinmaydi (25-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ishonchnoma talab qilmaydi",
+              "heading": "25-band.",
+              "text": "Notarius taʼsis hujjati boʻyicha bitimlar tuzish huquqiga ega boʻlgan ⟦yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ishonchnoma talab qilmaydi⟧. Bunday hollarda ularning mansab mavqeyini tasdiqlovchi hujjat talab qilinadi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Yuridik shaxs nomidan bitim: nimani tekshiraman?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Murojaat qiluvchi MChJ nomidan keldi; Bitim MChJ ustavidagi maqsadlarga mosligini tekshirish kerak; Davlat ro'yxatidan o'tganlik tasdig'i kerak",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "5-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi",
+              "heading": "5-band.",
+              "text": "Yuridik shaxslar ishtirokidagi notarial harakatlarni amalga oshirishda notarius tomonidan ularning huquq layoqati tekshiriladi. Yuridik shaxslarning huquq layoqatini tekshirish paytida ⟦yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi⟧, shuningdek u qonunchilik hujjatlarida belgilangan tartibda davlat roʻyxatidan oʻtkazilganligini hamda amalga oshirilayotgan notarial harakatlar ularning taʼsis hujjatlariga muvofiq yoki muvofiq emasligini Tizim orqali tekshirishi shart."
+            },
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notarius taʼsis hujjati boʻyicha bitimlar tuzish huquqiga ega boʻlgan yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ishonchnoma talab qilmaydi",
+              "heading": "25-band.",
+              "text": "⟦Notarius taʼsis hujjati boʻyicha bitimlar tuzish huquqiga ega boʻlgan yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ishonchnoma talab qilmaydi⟧. Bunday hollarda ularning mansab mavqeyini tasdiqlovchi hujjat talab qilinadi."
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Yuridik shaxsning ta'sis hujjatlari bilan tanishib chiqish; Davlat ro'yxatidan o'tkazilganligini tekshirish; Amalga oshirilayotgan harakat ta'sis hujjatlariga muvofiqligini Tizim orqali tekshirish; Ta'sis hujjati bo'yicha bitim tuzish huquqiga ega rahbardan ishonchnoma talab qilinmaydi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Yuridik shaxs tekshiruvi",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "docs",
+          "label": "Ta'sis hujjatlari bilan tanishiladi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "5-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi",
+              "heading": "5-band.",
+              "text": "Yuridik shaxslar ishtirokidagi notarial harakatlarni amalga oshirishda notarius tomonidan ularning huquq layoqati tekshiriladi. Yuridik shaxslarning huquq layoqatini tekshirish paytida ⟦yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi⟧, shuningdek u qonunchilik hujjatlarida belgilangan tartibda davlat roʻyxatidan oʻtkazilganligini hamda amalga oshirilayotgan notarial harakatlar ularning taʼsis hujjatlariga muvofiq yoki muvofiq emasligini Tizim orqali tekshirishi shart."
+            }
+          ]
+        },
+        {
+          "id": "reg",
+          "label": "Davlat ro'yxatidan o'tkazilganligi tekshiriladi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "5-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "davlat roʻyxatidan oʻtkazilganligini",
+              "heading": "5-band.",
+              "text": "Yuridik shaxslar ishtirokidagi notarial harakatlarni amalga oshirishda notarius tomonidan ularning huquq layoqati tekshiriladi. Yuridik shaxslarning huquq layoqatini tekshirish paytida yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi, shuningdek u qonunchilik hujjatlarida belgilangan tartibda ⟦davlat roʻyxatidan oʻtkazilganligini⟧ hamda amalga oshirilayotgan notarial harakatlar ularning taʼsis hujjatlariga muvofiq yoki muvofiq emasligini Tizim orqali tekshirishi shart."
+            }
+          ]
+        },
+        {
+          "id": "match",
+          "label": "Harakat ta'sis hujjatlariga muvofiqligi Tizim orqali tekshiriladi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "5-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "ularning taʼsis hujjatlariga muvofiq yoki muvofiq emasligini Tizim orqali tekshirishi shart",
+              "heading": "5-band.",
+              "text": "Yuridik shaxslar ishtirokidagi notarial harakatlarni amalga oshirishda notarius tomonidan ularning huquq layoqati tekshiriladi. Yuridik shaxslarning huquq layoqatini tekshirish paytida yuridik shaxsning taʼsis hujjatlari bilan tanishib chiqishi, shuningdek u qonunchilik hujjatlarida belgilangan tartibda davlat roʻyxatidan oʻtkazilganligini hamda amalga oshirilayotgan notarial harakatlar ⟦ularning taʼsis hujjatlariga muvofiq yoki muvofiq emasligini Tizim orqali tekshirishi shart⟧."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Tizimda saqlash",
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "5-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "Tizim orqali olingan taʼsis hujjatlari va davlat roʻyxatidan oʻtkazilganligi toʻgʻrisidagi guvohnomasi Tizimda saqlanadi",
+          "heading": "5-band.",
+          "text": "Bunda, notarius tomonidan tegishli yuridik shaxsning huquq layoqatini tekshirishda yuridik shaxsning ⟦Tizim orqali olingan taʼsis hujjatlari va davlat roʻyxatidan oʻtkazilganligi toʻgʻrisidagi guvohnomasi Tizimda saqlanadi⟧."
+        }
+      ],
+      "points": 15,
+      "description": "Tizim orqali olingan ta'sis hujjatlari va ro'yxatdan o'tganlik guvohnomasi nima qilinadi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Tizimda saqlanadi"
+        },
+        {
+          "id": "b",
+          "label": "O'chiriladi"
+        },
+        {
+          "id": "c",
+          "label": "Mijozga qaytariladi va saqlanmaydi"
+        },
+        {
+          "id": "d",
+          "label": "Chop etilib yo'q qilinadi"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

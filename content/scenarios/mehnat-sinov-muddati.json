@@ -1,0 +1,507 @@
+{
+  "id": "mehnat-sinov-muddati",
+  "title": "Sinov muddatida bo'shatmoqchi",
+  "area": "Mehnat huquqi",
+  "areaId": "mehnat",
+  "tracks": [
+    "advokat",
+    "korxona",
+    "davlat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Yangi xodimga 5 oylik sinov belgilangan va ogohlantirmay bo'shatishmoqchi. Sinov muddati, ogohlantirish va sabab ko'rsatish qoidalarini Mehnat kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Jamshid, 26 yosh, yangi xodim",
+    "openingLine": "Assalomu alaykum. Ishga yangi kirdim, menga 5 oy sinov belgilashgan va ogohlantirmay bo'shatmoqchi. Bu to'g'rimi?",
+    "hiddenFacts": [
+      {
+        "id": "term",
+        "fact": "Oddiy xodimga 5 oylik sinov muddati belgilangan",
+        "revealOn": []
+      },
+      {
+        "id": "post",
+        "fact": "Jamshid oddiy mutaxassis, rahbar emas",
+        "revealOn": []
+      },
+      {
+        "id": "notice",
+        "fact": "Ish beruvchi yozma ogohlantirmoqchi emas, sabab ham ko'rsatmayapti",
+        "revealOn": []
+      },
+      {
+        "id": "sick",
+        "fact": "Xodim sinov davrida 10 kun kasal bo'lgan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "term",
+        "post",
+        "notice"
+      ],
+      "questions": [
+        {
+          "id": "q-term",
+          "text": "Sinov muddati qancha?",
+          "factId": "term",
+          "reply": "5 oy deb yozishgan."
+        },
+        {
+          "id": "q-post",
+          "text": "Lavozimingiz nima?",
+          "factId": "post",
+          "reply": "Oddiy mutaxassisman, rahbar emasman."
+        },
+        {
+          "id": "q-notice",
+          "text": "Sizni qanday bo'shatishmoqchi?",
+          "factId": "notice",
+          "reply": "Ogohlantirmay, sababsiz."
+        },
+        {
+          "id": "q-sick",
+          "text": "Kasal bo'lganmisiz?",
+          "factId": "sick",
+          "reply": "Ha, 10 kun kasal bo'ldim."
+        },
+        {
+          "id": "q-filler",
+          "text": "Avvalgi ishingiz nima edi?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, sinov masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Sinov muddati qoidalari",
+      "sources": [],
+      "points": 15,
+      "description": "Qaysi qoidalar to'g'ri.",
+      "prompt": "Dastlabki sinov haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "three",
+          "label": "Sinov muddati uch oydan oshmasligi kerak",
+          "required": true,
+          "why": "130-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "130-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Дастлабки синов муддати уч ойдан",
+              "heading": "130-модда. Дастлабки синов муддати",
+              "text": "⟦Дастлабки синов муддати уч ойдан⟧, ташкилотларнинг раҳбарлари ва уларнинг ўринбосарлари, бош бухгалтерлар ҳамда ташкилотлар алоҳида бўлинмаларининг раҳбарлари учун эса олти ойдан ошмаслиги керак.",
+              "anchor": "6260649"
+            }
+          ]
+        },
+        {
+          "id": "heads",
+          "label": "Rahbarlar, o'rinbosarlar, bosh hisobchilar va bo'linma rahbarlari uchun olti oydan oshmasligi kerak",
+          "required": true,
+          "why": "130-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "130-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "олти ойдан ошмаслиги керак",
+              "heading": "130-модда. Дастлабки синов муддати",
+              "text": "Дастлабки синов муддати уч ойдан, ташкилотларнинг раҳбарлари ва уларнинг ўринбосарлари, бош бухгалтерлар ҳамда ташкилотлар алоҳида бўлинмаларининг раҳбарлари учун эса ⟦олти ойдан ошмаслиги керак⟧.",
+              "anchor": "6260649"
+            }
+          ]
+        },
+        {
+          "id": "sick",
+          "label": "Vaqtincha mehnatga layoqatsizlik davri sinov muddatiga qo'shilmaydi",
+          "required": true,
+          "why": "130-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "130-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Вақтинча меҳнатга қобилиятсизлик даври ва ходим ҳақиқатда ишда бўлмаган бошқа даврлар дастлабки синов муддатига қўшилмайди",
+              "heading": "130-модда. Дастлабки синов муддати",
+              "text": "⟦Вақтинча меҳнатга қобилиятсизлик даври ва ходим ҳақиқатда ишда бўлмаган бошқа даврлар дастлабки синов муддатига қўшилмайди⟧.",
+              "anchor": "6260649"
+            }
+          ]
+        },
+        {
+          "id": "notice",
+          "label": "Tomonlar kamida uch kun oldin yozma ogohlantiradi",
+          "required": true,
+          "why": "132-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "132-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "тарафларнинг ҳар бири иккинчи тарафни камида уч кун олдин ёзма шаклда огоҳлантирган ҳолда меҳнат шартномасини бекор қилишга ҳақли",
+              "heading": "132-модда. Дастлабки синов натижаси",
+              "text": "Дастлабки синов муддати тугагунига қадар ⟦тарафларнинг ҳар бири иккинчи тарафни камида уч кун олдин ёзма шаклда огоҳлантирган ҳолда меҳнат шартномасини бекор қилишга ҳақли⟧.",
+              "anchor": "6260659"
+            }
+          ]
+        },
+        {
+          "id": "anyone",
+          "label": "Oddiy xodimga ham sinov 6 oygacha bo'lishi mumkin",
+          "required": false,
+          "why": "Oddiy xodimlar uchun sinov uch oydan oshmasligi kerak (130-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "130-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Дастлабки синов муддати уч ойдан",
+              "heading": "130-модда. Дастлабки синов муддати",
+              "text": "⟦Дастлабки синов муддати уч ойдан⟧, ташкилотларнинг раҳбарлари ва уларнинг ўринбосарлари, бош бухгалтерлар ҳамда ташкилотлар алоҳида бўлинмаларининг раҳбарлари учун эса олти ойдан ошмаслиги керак.",
+              "anchor": "6260649"
+            }
+          ]
+        },
+        {
+          "id": "noreason",
+          "label": "Ish beruvchi sinovda sababsiz va ogohlantirmay bo'shata oladi",
+          "required": false,
+          "why": "Ish beruvchi sinovdan o'tmagan deb topish sabablarini ko'rsatishi va ogohlantirishi shart (132-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "132-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ходимни синовдан ўтмаган деб эътироф этиш учун асос бўлиб хизмат қилган сабабларни кўрсатган ҳолда",
+              "heading": "132-модда. Дастлабки синов натижаси",
+              "text": "Иш берувчи ходим билан тузилган меҳнат шартномасини синов натижаси қониқарсиз бўлганда, ⟦ходимни синовдан ўтмаган деб эътироф этиш учун асос бўлиб хизмат қилган сабабларни кўрсатган ҳолда⟧ ўз ташаббусига кўра, дастлабки синов даврида бекор қилишга ҳақли.",
+              "anchor": "6260659"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Sinov va bo'shatish",
+      "sources": [],
+      "points": 25,
+      "description": "Sinov qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "max",
+          "label": "Oddiy xodim uchun sinov muddati eng ko'pi bilan",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "m1",
+              "label": "1 oy"
+            },
+            {
+              "id": "m3",
+              "label": "3 oy"
+            },
+            {
+              "id": "m6",
+              "label": "6 oy"
+            },
+            {
+              "id": "y1",
+              "label": "1 yil"
+            }
+          ],
+          "correct": "m3",
+          "why": "Uch oydan oshmasligi kerak (130-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "130-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Дастлабки синов муддати уч ойдан",
+              "heading": "130-модда. Дастлабки синов муддати",
+              "text": "⟦Дастлабки синов муддати уч ойдан⟧, ташкилотларнинг раҳбарлари ва уларнинг ўринбосарлари, бош бухгалтерлар ҳамда ташкилотлар алоҳида бўлинмаларининг раҳбарлари учун эса олти ойдан ошмаслиги керак.",
+              "anchor": "6260649"
+            }
+          ]
+        },
+        {
+          "id": "notice",
+          "label": "Sinov davrida shartnomani bekor qilish haqida ogohlantirish",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Kerak emas"
+            },
+            {
+              "id": "d3",
+              "label": "Kamida 3 kun oldin, yozma"
+            },
+            {
+              "id": "d30",
+              "label": "30 kun oldin"
+            },
+            {
+              "id": "oral",
+              "label": "Og'zaki, kunlik"
+            }
+          ],
+          "correct": "d3",
+          "why": "Tomonlar kamida uch kun oldin yozma ogohlantiradi (132-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "132-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "камида уч кун олдин ёзма шаклда огоҳлантирган ҳолда",
+              "heading": "132-модда. Дастлабки синов натижаси",
+              "text": "Дастлабки синов муддати тугагунига қадар тарафларнинг ҳар бири иккинчи тарафни ⟦камида уч кун олдин ёзма шаклда огоҳлантирган ҳолда⟧ меҳнат шартномасини бекор қилишга ҳақли.",
+              "anchor": "6260659"
+            }
+          ]
+        },
+        {
+          "id": "reason",
+          "label": "Ish beruvchi o'z tashabbusi bilan sinovda bo'shatganda nimani ko'rsatishi shart?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Hech narsani"
+            },
+            {
+              "id": "why",
+              "label": "Sinovdan o'tmagan deb topishga asos bo'lgan sabablarni"
+            },
+            {
+              "id": "fine",
+              "label": "Jarimani"
+            },
+            {
+              "id": "poll",
+              "label": "Hamkasblar fikrini"
+            }
+          ],
+          "correct": "why",
+          "why": "Xodimni sinovdan o'tmagan deb topishga asos bo'lgan sabablarni (132-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "132-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ходимни синовдан ўтмаган деб эътироф этиш учун асос бўлиб хизмат қилган сабабларни кўрсатган ҳолда",
+              "heading": "132-модда. Дастлабки синов натижаси",
+              "text": "Иш берувчи ходим билан тузилган меҳнат шартномасини синов натижаси қониқарсиз бўлганда, ⟦ходимни синовдан ўтмаган деб эътироф этиш учун асос бўлиб хизмат қилган сабабларни кўрсатган ҳолда⟧ ўз ташаббусига кўра, дастлабки синов даврида бекор қилишга ҳақли.",
+              "anchor": "6260659"
+            }
+          ]
+        },
+        {
+          "id": "sick",
+          "label": "Kasallik davri sinov muddatiga",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "yes",
+              "label": "Qo'shiladi"
+            },
+            {
+              "id": "no",
+              "label": "Qo'shilmaydi"
+            },
+            {
+              "id": "half",
+              "label": "Yarmi qo'shiladi"
+            }
+          ],
+          "correct": "no",
+          "why": "Qo'shilmaydi (130-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "130-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "дастлабки синов муддатига қўшилмайди",
+              "heading": "130-модда. Дастлабки синов муддати",
+              "text": "Вақтинча меҳнатга қобилиятсизлик даври ва ходим ҳақиқатда ишда бўлмаган бошқа даврлар ⟦дастлабки синов муддатига қўшилмайди⟧.",
+              "anchor": "6260649"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Sinov muddatida bo'shatmoqchi). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Oddiy xodimga 5 oylik sinov muddati belgilangan; Jamshid oddiy mutaxassis, rahbar emas; Ish beruvchi yozma ogohlantirmoqchi emas, sabab ham ko'rsatmayapti",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "130-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Дастлабки синов муддати уч ойдан",
+              "heading": "130-модда. Дастлабки синов муддати",
+              "text": "⟦Дастлабки синов муддати уч ойдан⟧, ташкилотларнинг раҳбарлари ва уларнинг ўринбосарлари, бош бухгалтерлар ҳамда ташкилотлар алоҳида бўлинмаларининг раҳбарлари учун эса олти ойдан ошмаслиги керак.",
+              "anchor": "6260649"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "132-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "тарафларнинг ҳар бири иккинчи тарафни камида уч кун олдин ёзма шаклда огоҳлантирган ҳолда меҳнат шартномасини бекор қилишга ҳақли",
+              "heading": "132-модда. Дастлабки синов натижаси",
+              "text": "Дастлабки синов муддати тугагунига қадар ⟦тарафларнинг ҳар бири иккинчи тарафни камида уч кун олдин ёзма шаклда огоҳлантирган ҳолда меҳнат шартномасини бекор қилишга ҳақли⟧.",
+              "anchor": "6260659"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Sinov muddati uch oydan oshmasligi kerak; Rahbarlar, o'rinbosarlar, bosh hisobchilar va bo'linma rahbarlari uchun olti oydan oshmasligi kerak; Vaqtincha mehnatga layoqatsizlik davri sinov muddatiga qo'shilmaydi; Tomonlar kamida uch kun oldin yozma ogohlantiradi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Sinovda bo'shatish tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "term",
+          "label": "Sinov muddati belgilanadi (oddiy xodim uchun uch oydan oshmasligi kerak)",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "130-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Дастлабки синов муддати уч ойдан",
+              "heading": "130-модда. Дастлабки синов муддати",
+              "text": "⟦Дастлабки синов муддати уч ойдан⟧, ташкилотларнинг раҳбарлари ва уларнинг ўринбосарлари, бош бухгалтерлар ҳамда ташкилотлар алоҳида бўлинмаларининг раҳбарлари учун эса олти ойдан ошмаслиги керак.",
+              "anchor": "6260649"
+            }
+          ]
+        },
+        {
+          "id": "notice",
+          "label": "Tomon ikkinchisini kamida uch kun oldin yozma ogohlantiradi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "132-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "камида уч кун олдин ёзма шаклда огоҳлантирган ҳолда",
+              "heading": "132-модда. Дастлабки синов натижаси",
+              "text": "Дастлабки синов муддати тугагунига қадар тарафларнинг ҳар бири иккинчи тарафни ⟦камида уч кун олдин ёзма шаклда огоҳлантирган ҳолда⟧ меҳнат шартномасини бекор қилишга ҳақли.",
+              "anchor": "6260659"
+            }
+          ]
+        },
+        {
+          "id": "reasons",
+          "label": "Ish beruvchi sinovdan o'tmaganlik sabablarini ko'rsatadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "132-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "сабабларни кўрсатган ҳолда ўз ташаббусига кўра, дастлабки синов даврида бекор қилишга ҳақли",
+              "heading": "132-модда. Дастлабки синов натижаси",
+              "text": "Иш берувчи ходим билан тузилган меҳнат шартномасини синов натижаси қониқарсиз бўлганда, ходимни синовдан ўтмаган деб эътироф этиш учун асос бўлиб хизмат қилган ⟦сабабларни кўрсатган ҳолда ўз ташаббусига кўра, дастлабки синов даврида бекор қилишга ҳақли⟧.",
+              "anchor": "6260659"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Xodim tashabbusi",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+          "article": "132-modda",
+          "url": "https://lex.uz/docs/6257288",
+          "quote": "ходимнинг ёзма аризаси асос бўлиб",
+          "heading": "132-модда. Дастлабки синов натижаси",
+          "text": "Ходимнинг ташаббуси билан меҳнат шартномасини дастлабки синов даврида бекор қилиш учун ⟦ходимнинг ёзма аризаси асос бўлиб⟧, унда ходимнинг меҳнатга оид муносабатларни ҳақиқатда тугатиш истаги акс эттирилиши керак. Бунда ходимни меҳнат шартномасини бекор қилиш тўғрисида қарор қабул қилишга ундаган сабаблар аҳамиятга эга эмас.",
+          "anchor": "6260659"
+        }
+      ],
+      "points": 15,
+      "description": "Xodim sinov davrida o'z tashabbusi bilan shartnomani bekor qilsa, nima asos bo'ladi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Xodimning yozma arizasi"
+        },
+        {
+          "id": "b",
+          "label": "Ish beruvchining og'zaki roziligi"
+        },
+        {
+          "id": "c",
+          "label": "Sud qarori"
+        },
+        {
+          "id": "d",
+          "label": "Prokuror ruxsati"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

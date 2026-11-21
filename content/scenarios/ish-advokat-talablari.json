@@ -1,0 +1,484 @@
+{
+  "id": "ish-advokat-talablari",
+  "title": "Advokat bo'lish uchun nomzodga talablar",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "advokat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Nomzod advokat bo'lmoqchi. Ma'lumot, fuqarolik, stajirovka, malaka imtihoni va litsenziya talablarini «Advokatura to'g'risida»gi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Sardor, 27 yosh, yurist",
+    "openingLine": "Assalomu alaykum. Advokat bo'lmoqchiman. Qanday shartlar kerak?",
+    "hiddenFacts": [
+      {
+        "id": "edu",
+        "fact": "Sardorda oliy yuridik ma'lumot bor",
+        "revealOn": []
+      },
+      {
+        "id": "citizen",
+        "fact": "U O'zbekiston fuqarosi",
+        "revealOn": []
+      },
+      {
+        "id": "exp",
+        "fact": "Hech qayerda yurist bo'lib ishlamagan, tajribasi yo'q",
+        "revealOn": []
+      },
+      {
+        "id": "rec",
+        "fact": "Sudlanmagan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "edu",
+        "citizen",
+        "exp"
+      ],
+      "questions": [
+        {
+          "id": "q-edu",
+          "text": "Ma'lumotingiz?",
+          "factId": "edu",
+          "reply": "Oliy yuridik ma'lumotim bor."
+        },
+        {
+          "id": "q-citizen",
+          "text": "Fuqarolikingiz?",
+          "factId": "citizen",
+          "reply": "O'zbekiston fuqarosiman."
+        },
+        {
+          "id": "q-exp",
+          "text": "Ish stajingiz?",
+          "factId": "exp",
+          "reply": "Yo'q, hali ishlamaganman."
+        },
+        {
+          "id": "q-rec",
+          "text": "Sudlanganmisiz?",
+          "factId": "rec",
+          "reply": "Yo'q."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Advokat bo'lish shartlari",
+      "sources": [],
+      "points": 15,
+      "description": "Shartlarni aniqlang.",
+      "prompt": "Advokat bo'lish shartlari haqida qaysilari to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "edu",
+          "label": "Oliy yuridik ma'lumotga ega bo'lish",
+          "required": true,
+          "why": "3-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "Oliy yuridik maʼlumotga ega boʻlgan",
+              "heading": "3-modda. Advokat",
+              "text": "⟦Oliy yuridik maʼlumotga ega boʻlgan⟧ va advokatlik faoliyati bilan shugʻullanish huquqini beruvchi litsenziyani (bundan buyon matnda litsenziya deb yuritiladi) belgilangan tartibda olgan Oʻzbekiston Respublikasining fuqarosi Oʻzbekiston Respublikasida advokat boʻlishi mumkin.",
+              "anchor": "-1425830"
+            }
+          ]
+        },
+        {
+          "id": "citizen",
+          "label": "O'zbekiston Respublikasining fuqarosi bo'lish",
+          "required": true,
+          "why": "3-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "Oʻzbekiston Respublikasining fuqarosi Oʻzbekiston Respublikasida advokat boʻlishi mumkin",
+              "heading": "3-modda. Advokat",
+              "text": "Oliy yuridik maʼlumotga ega boʻlgan va advokatlik faoliyati bilan shugʻullanish huquqini beruvchi litsenziyani (bundan buyon matnda litsenziya deb yuritiladi) belgilangan tartibda olgan ⟦Oʻzbekiston Respublikasining fuqarosi Oʻzbekiston Respublikasida advokat boʻlishi mumkin⟧.",
+              "anchor": "-1425830"
+            }
+          ]
+        },
+        {
+          "id": "license",
+          "label": "Advokatlik faoliyati bilan shug'ullanish huquqini beruvchi litsenziyani olish",
+          "required": true,
+          "why": "3-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "advokatlik faoliyati bilan shugʻullanish huquqini beruvchi litsenziyani",
+              "heading": "3-modda. Advokat",
+              "text": "Oliy yuridik maʼlumotga ega boʻlgan va ⟦advokatlik faoliyati bilan shugʻullanish huquqini beruvchi litsenziyani⟧ (bundan buyon matnda litsenziya deb yuritiladi) belgilangan tartibda olgan Oʻzbekiston Respublikasining fuqarosi Oʻzbekiston Respublikasida advokat boʻlishi mumkin.",
+              "anchor": "-1425830"
+            }
+          ]
+        },
+        {
+          "id": "intern",
+          "label": "Advokatlik tuzilmasida kamida uch oy stajirovka o'tish va malaka imtihonini topshirish",
+          "required": true,
+          "why": "3¹-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "kamida uch oy muddat stajirovka oʻtashi kerak hamda malaka imtihonini topshirishi shart",
+              "heading": "31-modda. Advokat maqomiga ega boʻlish",
+              "text": "Advokat maqomiga ega boʻlishga talabgor shaxs (bundan buyon matnda talabgor deb yuritiladi) litsenziya olish uchun advokatlik tuzilmasida (advokatlik byurosida, advokatlik firmasida, advokatlar hayʼatida, yuridik maslahatxonada) ⟦kamida uch oy muddat stajirovka oʻtashi kerak hamda malaka imtihonini topshirishi shart⟧.",
+              "anchor": "-1425839"
+            }
+          ]
+        },
+        {
+          "id": "convict",
+          "label": "Sudlanganlik holati tugallanmagan shaxs ham advokatlik qila oladi",
+          "required": false,
+          "why": "Bunday shaxsning advokatlik bilan shug'ullanishiga yo'l qo'yilmaydi (3-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "sudlanganlik holati tugallanmagan yoki sudlanganligi olib tashlanmagan shaxslarning advokatlik faoliyati bilan shugʻullanishiga yoʻl qoʻyilmaydi",
+              "heading": "3-modda. Advokat",
+              "text": "Belgilangan tartibda muomalaga layoqatsiz yoki muomala layoqati cheklangan deb topilgan, shuningdek ⟦sudlanganlik holati tugallanmagan yoki sudlanganligi olib tashlanmagan shaxslarning advokatlik faoliyati bilan shugʻullanishiga yoʻl qoʻyilmaydi⟧.",
+              "anchor": "-1425830"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Stajirovka va imtihon",
+      "sources": [],
+      "points": 25,
+      "description": "Muddat va tartibni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "intern",
+          "label": "Advokatlik tuzilmasida kamida qancha stajirovka o'tish kerak?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "m1",
+              "label": "1 oy"
+            },
+            {
+              "id": "m3",
+              "label": "3 oy"
+            },
+            {
+              "id": "m12",
+              "label": "12 oy"
+            },
+            {
+              "id": "y3",
+              "label": "3 yil"
+            }
+          ],
+          "correct": "m3",
+          "why": "Kamida uch oy (3¹-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "kamida uch oy muddat stajirovka oʻtashi kerak",
+              "heading": "31-modda. Advokat maqomiga ega boʻlish",
+              "text": "Advokat maqomiga ega boʻlishga talabgor shaxs (bundan buyon matnda talabgor deb yuritiladi) litsenziya olish uchun advokatlik tuzilmasida (advokatlik byurosida, advokatlik firmasida, advokatlar hayʼatida, yuridik maslahatxonada) ⟦kamida uch oy muddat stajirovka oʻtashi kerak⟧ hamda malaka imtihonini topshirishi shart.",
+              "anchor": "-1425839"
+            }
+          ]
+        },
+        {
+          "id": "retake",
+          "label": "Malaka imtihonini topshira olmagan talabgor uni takroran qachon topshiradi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "w1",
+              "label": "1 haftadan keyin"
+            },
+            {
+              "id": "m1",
+              "label": "1 oydan keyin"
+            },
+            {
+              "id": "m6",
+              "label": "6 oydan keyin"
+            },
+            {
+              "id": "y2",
+              "label": "2 yildan keyin"
+            }
+          ],
+          "correct": "m6",
+          "why": "Kamida olti oydan keyin (3¹-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "Malaka imtihonini topshira olmagan talabgor uni takroran topshirishga kamida olti oydan keyin qoʻyiladi",
+              "heading": "31-modda. Advokat maqomiga ega boʻlish",
+              "text": "⟦Malaka imtihonini topshira olmagan talabgor uni takroran topshirishga kamida olti oydan keyin qoʻyiladi⟧.",
+              "anchor": "-1425839"
+            }
+          ]
+        },
+        {
+          "id": "skip",
+          "label": "Qaysi shaxs stajirovkadan o'tmasdan malaka imtihonida ishtirok etishga haqli?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "judge",
+              "label": "Kamida uch yil yuridik ish stajiga ega sudya, tergovchi, prokuror yoki yuridik xizmat xodimi"
+            },
+            {
+              "id": "any",
+              "label": "Har qanday fuqaro"
+            },
+            {
+              "id": "student",
+              "label": "Talaba"
+            }
+          ],
+          "correct": "judge",
+          "why": "Sudya, tergovchi, surishtiruvchi, prokuror yoki davlat tashkiloti yuridik xizmati xodimi sifatida kamida uch yil yuridik mutaxassislik bo'yicha ish stajiga ega shaxs (3¹-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "kamida uch yil yuridik mutaxassislik boʻyicha ish stajiga ega boʻlgan shaxs advokatlik tuzilmasida stajirovkadan oʻtmasdan malaka imtihonida ishtirok etishga haqli",
+              "heading": "31-modda. Advokat maqomiga ega boʻlish",
+              "text": "Davlat organlari, xoʻjalik boshqaruvi organlari, davlat muassasalari va tashkilotlarining yuridik xizmati xodimi sifatida, sudya, tergovchi, surishtiruvchi yoki prokuror lavozimida ⟦kamida uch yil yuridik mutaxassislik boʻyicha ish stajiga ega boʻlgan shaxs advokatlik tuzilmasida stajirovkadan oʻtmasdan malaka imtihonida ishtirok etishga haqli⟧.",
+              "anchor": "-1425839"
+            }
+          ]
+        },
+        {
+          "id": "who",
+          "label": "Litsenziyani kim beradi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "justice",
+              "label": "Adliya organlari, malaka komissiyalari qarorlari asosida"
+            },
+            {
+              "id": "court",
+              "label": "Sud"
+            },
+            {
+              "id": "bank",
+              "label": "Bank"
+            }
+          ],
+          "correct": "justice",
+          "why": "Adliya organlari malaka komissiyalarining qarorlari asosida (3¹-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "tegishli malaka komissiyalarining qarorlari asosida beriladi",
+              "heading": "31-modda. Advokat maqomiga ega boʻlish",
+              "text": "Litsenziya Qoraqalpogʻiston Respublikasi Adliya vazirligi, viloyatlar va Toshkent shahar adliya boshqarmalari (bundan buyon matnda adliya organlari deb yuritiladi) tomonidan ⟦tegishli malaka komissiyalarining qarorlari asosida beriladi⟧.",
+              "anchor": "-1425839"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Advokat bo'lish uchun nomzodga talablar). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Sardorda oliy yuridik ma'lumot bor; U O'zbekiston fuqarosi; Hech qayerda yurist bo'lib ishlamagan, tajribasi yo'q",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "Oliy yuridik maʼlumotga ega boʻlgan",
+              "heading": "3-modda. Advokat",
+              "text": "⟦Oliy yuridik maʼlumotga ega boʻlgan⟧ va advokatlik faoliyati bilan shugʻullanish huquqini beruvchi litsenziyani (bundan buyon matnda litsenziya deb yuritiladi) belgilangan tartibda olgan Oʻzbekiston Respublikasining fuqarosi Oʻzbekiston Respublikasida advokat boʻlishi mumkin.",
+              "anchor": "-1425830"
+            },
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "kamida uch oy muddat stajirovka oʻtashi kerak hamda malaka imtihonini topshirishi shart",
+              "heading": "31-modda. Advokat maqomiga ega boʻlish",
+              "text": "Advokat maqomiga ega boʻlishga talabgor shaxs (bundan buyon matnda talabgor deb yuritiladi) litsenziya olish uchun advokatlik tuzilmasida (advokatlik byurosida, advokatlik firmasida, advokatlar hayʼatida, yuridik maslahatxonada) ⟦kamida uch oy muddat stajirovka oʻtashi kerak hamda malaka imtihonini topshirishi shart⟧.",
+              "anchor": "-1425839"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Oliy yuridik ma'lumotga ega bo'lish; O'zbekiston Respublikasining fuqarosi bo'lish; Advokatlik faoliyati bilan shug'ullanish huquqini beruvchi litsenziyani olish; Advokatlik tuzilmasida kamida uch oy stajirovka o'tish va malaka imtihonini topshirish",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Advokat bo'lish yo'li",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "edu",
+          "label": "Oliy yuridik ma'lumotli fuqaro advokatlik tuzilmasida kamida uch oy stajirovka o'tadi",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "kamida uch oy muddat stajirovka oʻtashi kerak",
+              "heading": "31-modda. Advokat maqomiga ega boʻlish",
+              "text": "Advokat maqomiga ega boʻlishga talabgor shaxs (bundan buyon matnda talabgor deb yuritiladi) litsenziya olish uchun advokatlik tuzilmasida (advokatlik byurosida, advokatlik firmasida, advokatlar hayʼatida, yuridik maslahatxonada) ⟦kamida uch oy muddat stajirovka oʻtashi kerak⟧ hamda malaka imtihonini topshirishi shart.",
+              "anchor": "-1425839"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "label": "Malaka imtihonini topshiradi",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "malaka imtihonini topshirishi shart",
+              "heading": "31-modda. Advokat maqomiga ega boʻlish",
+              "text": "Advokat maqomiga ega boʻlishga talabgor shaxs (bundan buyon matnda talabgor deb yuritiladi) litsenziya olish uchun advokatlik tuzilmasida (advokatlik byurosida, advokatlik firmasida, advokatlar hayʼatida, yuridik maslahatxonada) kamida uch oy muddat stajirovka oʻtashi kerak hamda ⟦malaka imtihonini topshirishi shart⟧.",
+              "anchor": "-1425839"
+            }
+          ]
+        },
+        {
+          "id": "license",
+          "label": "Adliya organi malaka komissiyasi qaroriga asosan litsenziya beradi",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "3¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "tegishli malaka komissiyalarining qarorlari asosida beriladi",
+              "heading": "31-modda. Advokat maqomiga ega boʻlish",
+              "text": "Litsenziya Qoraqalpogʻiston Respublikasi Adliya vazirligi, viloyatlar va Toshkent shahar adliya boshqarmalari (bundan buyon matnda adliya organlari deb yuritiladi) tomonidan ⟦tegishli malaka komissiyalarining qarorlari asosida beriladi⟧.",
+              "anchor": "-1425839"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Stajyor",
+      "sources": [
+        {
+          "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+          "article": "8¹-modda",
+          "url": "https://lex.uz/docs/-54503",
+          "quote": "Kamida uch yillik ish stajiga ega boʻlgan advokat stajyorga ega boʻlishga haqli",
+          "heading": "81-modda. Advokatning stajyori",
+          "text": "⟦Kamida uch yillik ish stajiga ega boʻlgan advokat stajyorga ega boʻlishga haqli⟧.",
+          "anchor": "-1426288"
+        }
+      ],
+      "points": 15,
+      "description": "Advokat stajyorga ega bo'lishi uchun nechchi yillik ish stajiga ega bo'lishi kerak?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Kamida uch yil"
+        },
+        {
+          "id": "b",
+          "label": "Kamida bir yil"
+        },
+        {
+          "id": "c",
+          "label": "Kamida o'n yil"
+        },
+        {
+          "id": "d",
+          "label": "Staj shart emas"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

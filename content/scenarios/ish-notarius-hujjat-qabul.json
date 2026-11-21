@@ -1,0 +1,423 @@
+{
+  "id": "ish-notarius-hujjat-qabul",
+  "title": "Qaysi hujjatlar qabul qilinmaydi?",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijoz notarial harakat uchun hujjatlar keltirgan. Qaysi hujjatlar qabul qilinmasligini Yo'riqnoma bo'yicha belgilang.",
+  "client": {
+    "persona": "Notarius yordamchisi",
+    "openingLine": "Assalomu alaykum. Mijoz hujjatlarni olib keldi: biri qalamda yozilgan, boshqasi varaqlari tikilmagan. Qaysi birini qabul qilmayman?",
+    "hiddenFacts": [
+      {
+        "id": "pencil",
+        "fact": "Bir hujjat qalamda yozilgan",
+        "revealOn": []
+      },
+      {
+        "id": "pages",
+        "fact": "Ikkinchi hujjat bir necha varaq, tikilmagan, raqamlanmagan",
+        "revealOn": []
+      },
+      {
+        "id": "fax",
+        "fact": "Uchinchi hujjatda faksimile imzo-muhr bor",
+        "revealOn": []
+      },
+      {
+        "id": "xerox",
+        "fact": "To'rtinchisi: asl nusxa o'rniga kseronusxa",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "pencil",
+        "pages",
+        "fax"
+      ],
+      "questions": [
+        {
+          "id": "q-pencil",
+          "text": "Birinchi hujjat?",
+          "factId": "pencil",
+          "reply": "Qalamda yozilgan."
+        },
+        {
+          "id": "q-pages",
+          "text": "Ikkinchisi?",
+          "factId": "pages",
+          "reply": "Bir necha varaq, tikilmagan."
+        },
+        {
+          "id": "q-fax",
+          "text": "Uchinchisi?",
+          "factId": "fax",
+          "reply": "Faksimile imzo bor."
+        },
+        {
+          "id": "q-xerox",
+          "text": "To'rtinchisi?",
+          "factId": "xerox",
+          "reply": "Kseronusxa."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Qabul qilinmaydigan hujjatlar",
+      "sources": [],
+      "points": 15,
+      "description": "Qaysilari qabul qilinmaydi.",
+      "prompt": "Notarius qaysi hujjatlarni notarial harakat uchun qabul qilmaydi? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "erased",
+          "label": "Qirib o'chirilgan, izoh berilmagan tuzatishlar bo'lgan yoki qalamda yozilgan hujjatlar",
+          "required": true,
+          "why": "9-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "9-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "qirib oʻchirilgan yoki qoʻshimchalar kiritilgan, soʻzlari ustidan chizilgan va izoh berilmagan boshqa tuzatishlari boʻlgan, shuningdek qalamda yozilgan hujjatlar",
+              "heading": "9-band.",
+              "text": "Notariuslar tomonidan notarial harakatlarni amalga oshirish uchun hujjatlar quyidagi hollarda qabul qilinmaydi:\n⟦qirib oʻchirilgan yoki qoʻshimchalar kiritilgan, soʻzlari ustidan chizilgan va izoh berilmagan boshqa tuzatishlari boʻlgan, shuningdek qalamda yozilgan hujjatlar⟧;"
+            }
+          ]
+        },
+        {
+          "id": "pages",
+          "label": "Bir necha varaqli, varaqlari raqamlanmagan va ip o'tkazib tikilmagan hujjatlar",
+          "required": true,
+          "why": "9-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "9-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "bir necha varaqlarda bayon etilib, varaqlari raqamlanmagan va ip oʻtkazib tikilmagan hujjatlar",
+              "heading": "9-band.",
+              "text": "⟦bir necha varaqlarda bayon etilib, varaqlari raqamlanmagan va ip oʻtkazib tikilmagan hujjatlar⟧, hujjatni bergan tashkilot mansabdor shaxsining imzosi va muhri boʻlmagan hujjatlar;"
+            }
+          ]
+        },
+        {
+          "id": "nosign",
+          "label": "Hujjat bergan tashkilot mansabdor shaxsining imzosi va muhri bo'lmagan hujjatlar",
+          "required": true,
+          "why": "9-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "9-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "hujjatni bergan tashkilot mansabdor shaxsining imzosi va muhri boʻlmagan hujjatlar",
+              "heading": "9-band.",
+              "text": "bir necha varaqlarda bayon etilib, varaqlari raqamlanmagan va ip oʻtkazib tikilmagan hujjatlar, ⟦hujjatni bergan tashkilot mansabdor shaxsining imzosi va muhri boʻlmagan hujjatlar⟧;"
+            }
+          ]
+        },
+        {
+          "id": "fax",
+          "label": "Faksimile imzo-muhr qo'yilgan hujjatlar",
+          "required": true,
+          "why": "9-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "9-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "faksimile imzo muhri qoʻyilgan hujjatlar",
+              "heading": "9-band.",
+              "text": "⟦faksimile imzo muhri qoʻyilgan hujjatlar⟧."
+            }
+          ]
+        },
+        {
+          "id": "ink",
+          "label": "Ruchkada aniq yozilgan, tuzatishsiz hujjat",
+          "required": false,
+          "why": "Bu hujjat qabul qilinishi mumkin, qalamda yozilgani qabul qilinmaydi (9-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "9-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "shuningdek qalamda yozilgan hujjatlar",
+              "heading": "9-band.",
+              "text": "Notariuslar tomonidan notarial harakatlarni amalga oshirish uchun hujjatlar quyidagi hollarda qabul qilinmaydi:\nqirib oʻchirilgan yoki qoʻshimchalar kiritilgan, soʻzlari ustidan chizilgan va izoh berilmagan boshqa tuzatishlari boʻlgan, ⟦shuningdek qalamda yozilgan hujjatlar⟧;"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Istisnolar",
+      "sources": [],
+      "points": 25,
+      "description": "Istisno va qo'shimcha qoidalarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "business",
+          "label": "Tadbirkorlik subyektlari bergan hujjatlarda muhr",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "req",
+              "label": "Muhr majburiy"
+            },
+            {
+              "id": "notreq",
+              "label": "Muhr bo'lishi talab qilinmaydi"
+            },
+            {
+              "id": "two",
+              "label": "Ikkita muhr kerak"
+            }
+          ],
+          "correct": "notreq",
+          "why": "Muhr bo'lishi talab qilinmaydi (9-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "9-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Tadbirkorlik subyektlari tomonidan berilgan hujjatlarda muhr boʻlishi talab qilinmaydi",
+              "heading": "9-band.",
+              "text": "⟦Tadbirkorlik subyektlari tomonidan berilgan hujjatlarda muhr boʻlishi talab qilinmaydi⟧."
+            }
+          ]
+        },
+        {
+          "id": "xerox",
+          "label": "Bitimlarni tasdiqlashda kseronusxa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "replace",
+              "label": "Asl nusxa o'rnini bosadi"
+            },
+            {
+              "id": "notreplace",
+              "label": "Asl nusxa va dublikat o'rnini bosa olmaydi"
+            },
+            {
+              "id": "half",
+              "label": "Faqat dublikat o'rnini bosadi"
+            }
+          ],
+          "correct": "notreplace",
+          "why": "Asl nusxa va dublikat o'rnini bosa olmaydi (9-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "9-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Bitimlarni tasdiqlashda hujjatlarning kseronusxasi uning asl nusxasi va dublikati oʻrnini bosa olmaydi",
+              "heading": "9-band.",
+              "text": "⟦Bitimlarni tasdiqlashda hujjatlarning kseronusxasi uning asl nusxasi va dublikati oʻrnini bosa olmaydi⟧."
+            }
+          ]
+        },
+        {
+          "id": "minor",
+          "label": "Ahamiyatsiz, izoh berilmagan tuzatish yoki kamchilik bo'lsa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "may",
+              "label": "Maqsadi uchun ahamiyatsiz bo'lsa, qabul qilishga haqli"
+            },
+            {
+              "id": "never",
+              "label": "Hech qachon qabul qilmaydi"
+            },
+            {
+              "id": "always",
+              "label": "Doim qabul qiladi"
+            }
+          ],
+          "correct": "may",
+          "why": "Hujjat maqsadi uchun ahamiyatsiz bo'lsa, notarius qabul qilishga haqli (9-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "9-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "notarius bunday hujjatni notarial harakatni amalga oshirish uchun qabul qilishga haqli",
+              "heading": "9-band.",
+              "text": "Agar hujjatdagi mavjud izoh berilmagan tuzatishlar yoki boshqa kamchiliklar taqdim etilgan hujjatning maqsadi uchun ahamiyatsiz boʻlsa, ⟦notarius bunday hujjatni notarial harakatni amalga oshirish uchun qabul qilishga haqli⟧."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Qaysi hujjatlar qabul qilinmaydi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Bir hujjat qalamda yozilgan; Ikkinchi hujjat bir necha varaq, tikilmagan, raqamlanmagan; Uchinchi hujjatda faksimile imzo-muhr bor",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "9-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "qirib oʻchirilgan yoki qoʻshimchalar kiritilgan, soʻzlari ustidan chizilgan va izoh berilmagan boshqa tuzatishlari boʻlgan, shuningdek qalamda yozilgan hujjatlar",
+              "heading": "9-band.",
+              "text": "Notariuslar tomonidan notarial harakatlarni amalga oshirish uchun hujjatlar quyidagi hollarda qabul qilinmaydi:\n⟦qirib oʻchirilgan yoki qoʻshimchalar kiritilgan, soʻzlari ustidan chizilgan va izoh berilmagan boshqa tuzatishlari boʻlgan, shuningdek qalamda yozilgan hujjatlar⟧;"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Qirib o'chirilgan, izoh berilmagan tuzatishlar bo'lgan yoki qalamda yozilgan hujjatlar; Bir necha varaqli, varaqlari raqamlanmagan va ip o'tkazib tikilmagan hujjatlar; Hujjat bergan tashkilot mansabdor shaxsining imzosi va muhri bo'lmagan hujjatlar; Faksimile imzo-muhr qo'yilgan hujjatlar",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Hujjatni ko'rib chiqish",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "check",
+          "label": "Notarius taqdim etilgan hujjatni qabul qilish shartlariga ko'ra tekshiradi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "9-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notariuslar tomonidan notarial harakatlarni amalga oshirish uchun hujjatlar quyidagi hollarda qabul qilinmaydi",
+              "heading": "9-band.",
+              "text": "⟦Notariuslar tomonidan notarial harakatlarni amalga oshirish uchun hujjatlar quyidagi hollarda qabul qilinmaydi⟧:"
+            }
+          ]
+        },
+        {
+          "id": "reject",
+          "label": "Qalamda yozilgan, tikilmagan yoki imzo-muhrsiz hujjat qabul qilinmaydi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "9-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "shuningdek qalamda yozilgan hujjatlar",
+              "heading": "9-band.",
+              "text": "Notariuslar tomonidan notarial harakatlarni amalga oshirish uchun hujjatlar quyidagi hollarda qabul qilinmaydi:\nqirib oʻchirilgan yoki qoʻshimchalar kiritilgan, soʻzlari ustidan chizilgan va izoh berilmagan boshqa tuzatishlari boʻlgan, ⟦shuningdek qalamda yozilgan hujjatlar⟧;"
+            }
+          ]
+        },
+        {
+          "id": "minor",
+          "label": "Ahamiyatsiz kamchilik bo'lsa, notarius hujjatni qabul qilishga haqli",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "9-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "notarius bunday hujjatni notarial harakatni amalga oshirish uchun qabul qilishga haqli",
+              "heading": "9-band.",
+              "text": "Agar hujjatdagi mavjud izoh berilmagan tuzatishlar yoki boshqa kamchiliklar taqdim etilgan hujjatning maqsadi uchun ahamiyatsiz boʻlsa, ⟦notarius bunday hujjatni notarial harakatni amalga oshirish uchun qabul qilishga haqli⟧."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Kseronusxa",
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "9-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "Bitimlarni tasdiqlashda hujjatlarning kseronusxasi uning asl nusxasi va dublikati oʻrnini bosa olmaydi",
+          "heading": "9-band.",
+          "text": "⟦Bitimlarni tasdiqlashda hujjatlarning kseronusxasi uning asl nusxasi va dublikati oʻrnini bosa olmaydi⟧."
+        }
+      ],
+      "points": 15,
+      "description": "Bitimlarni tasdiqlashda kseronusxa asl nusxa o'rnini bosa oladimi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Yo'q, asl nusxa va dublikat o'rnini bosa olmaydi"
+        },
+        {
+          "id": "b",
+          "label": "Ha, har doim"
+        },
+        {
+          "id": "c",
+          "label": "Faqat ish haqi guvohnomasida"
+        },
+        {
+          "id": "d",
+          "label": "Faqat chet elda"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

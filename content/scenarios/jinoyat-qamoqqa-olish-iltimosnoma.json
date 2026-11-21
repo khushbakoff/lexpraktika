@@ -1,0 +1,458 @@
+{
+  "id": "jinoyat-qamoqqa-olish-iltimosnoma",
+  "title": "Qamoqqa olish uchun iltimosnoma tartibi",
+  "area": "Jinoyat-protsessual huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Tergovchi qamoqqa olish ehtiyot chorasini qo'llashni so'ramoqchi. Iltimosnomani qo'zg'atish va sudga yuborish tartibini Jinoyat-protsessual kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Sanjar, 31 yosh, tergovchi",
+    "openingLine": "Assalomu alaykum. Ushlab turilgan gumon qilinuvchiga qamoqqa olishni so'ramoqchiman. Iltimosnomani qanday tartibda yuboraman?",
+    "hiddenFacts": [
+      {
+        "id": "detained",
+        "fact": "Gumon qilinuvchi ushlab turilgan",
+        "revealOn": []
+      },
+      {
+        "id": "need",
+        "fact": "Qamoqqa olish zarurati asoslari mavjud",
+        "revealOn": []
+      },
+      {
+        "id": "time",
+        "fact": "Ushlab turish muddati tugashiga bir necha soat qolgan",
+        "revealOn": []
+      },
+      {
+        "id": "pros",
+        "fact": "Prokuror hali iltimosnomani ko'rmagan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "detained",
+        "need",
+        "time"
+      ],
+      "questions": [
+        {
+          "id": "q-detained",
+          "text": "Shaxs holati qanday?",
+          "factId": "detained",
+          "reply": "U ushlab turilgan."
+        },
+        {
+          "id": "q-need",
+          "text": "Nima uchun qamoq kerak?",
+          "factId": "need",
+          "reply": "Yashirinish xavfi mavjud."
+        },
+        {
+          "id": "q-time",
+          "text": "Muddat qancha qoldi?",
+          "factId": "time",
+          "reply": "Bir necha soat."
+        },
+        {
+          "id": "q-pros",
+          "text": "Prokuror bilan kelishdingizmi?",
+          "factId": "pros",
+          "reply": "Hali yo'q."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Iltimosnoma qoidalari",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Qamoqqa olish yoki uy qamog'i tarzidagi ehtiyot chorasini qo'llash tartibi haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "who",
+          "label": "Bu chora faqat ushlab turilgan gumon qilinuvchiga yoki ayblanuvchi sifatida jalb etilgan shaxsga nisbatan qo'llanishi mumkin",
+          "required": true,
+          "why": "243-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "faqat ushlab turilgan gumon qilinuvchiga yoki ayblanuvchi tariqasida ishda ishtirok etishga jalb qilingan shaxsga nisbatan qoʻllanilishi mumkin",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasi ⟦faqat ushlab turilgan gumon qilinuvchiga yoki ayblanuvchi tariqasida ishda ishtirok etishga jalb qilingan shaxsga nisbatan qoʻllanilishi mumkin⟧.",
+              "anchor": "-2461171"
+            }
+          ]
+        },
+        {
+          "id": "decision",
+          "label": "Prokuror yoki prokuror roziligi bilan tergovchi iltimosnoma qo'zg'atish haqida qaror chiqaradi",
+          "required": true,
+          "why": "243-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "prokuror, shuningdek prokurorning roziligi bilan surishtiruvchi yoki tergovchi qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisida iltimosnoma qoʻzgʻatish haqida qaror chiqaradi",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "Qonunda nazarda tutilgan holatlar mavjud boʻlganda va surishtiruv yoki dastlabki tergov davomida qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasi tanlanganda ⟦prokuror, shuningdek prokurorning roziligi bilan surishtiruvchi yoki tergovchi qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisida iltimosnoma qoʻzgʻatish haqida qaror chiqaradi⟧.",
+              "anchor": "-2461171"
+            }
+          ]
+        },
+        {
+          "id": "eight",
+          "label": "Ushlab turish muddati tugashidan kamida sakkiz soat oldin sudga taqdim qilinishi kerak",
+          "required": true,
+          "why": "243-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ushlab turish muddati tugashidan kamida sakkiz soat oldin sudga taqdim qilinishi kerak",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "Prokuror qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisidagi iltimosnomaning asosliligini tekshirib, unga rozi boʻlgan taqdirda, iltimosnoma qoʻzgʻatish toʻgʻrisidagi qaror va zarur materiallarni sudga yuboradi. Agar iltimosnoma ushlab turilgan gumon qilinuvchi yoki ayblanuvchiga nisbatan qoʻzgʻatilayotgan boʻlsa, qaror va koʻrsatilgan materiallar ⟦ushlab turish muddati tugashidan kamida sakkiz soat oldin sudga taqdim qilinishi kerak⟧.",
+              "anchor": "-2461171"
+            }
+          ]
+        },
+        {
+          "id": "court",
+          "label": "Iltimosnomani tuman (shahar) sudining tergov sudyasi ko'radi",
+          "required": true,
+          "why": "243-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "tuman (shahar) sudining tergov sudyasi",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisidagi iltimosnoma jinoyat sodir etilgan yoki surishtiruv, dastlabki tergov yuritilayotgan joydagi jinoyat ishlari boʻyicha ⟦tuman (shahar) sudining tergov sudyasi⟧ tomonidan, mazkur sudning sudyasi boʻlmaganda esa yoxud qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisidagi materialni koʻrib chiqishda uning ishtirokini istisno etuvchi holatlar mavjud boʻlgan taqdirda, Qoraqalpogʻiston Respublikasi sudi, viloyat, Toshkent shahar sudi raisining koʻrsatmasiga binoan boshqa tegishli sudning tergov sudyasi tomonidan yakka tartibda koʻrib chiqiladi.",
+              "anchor": "-2461171"
+            }
+          ]
+        },
+        {
+          "id": "anyone",
+          "label": "Qamoqqa olish tarzidagi chorani har qanday shaxsga nisbatan qo'llash mumkin",
+          "required": false,
+          "why": "Faqat ushlab turilgan gumon qilinuvchi yoki ayblanuvchiga nisbatan (243-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "faqat ushlab turilgan gumon qilinuvchiga yoki ayblanuvchi tariqasida",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasi ⟦faqat ushlab turilgan gumon qilinuvchiga yoki ayblanuvchi tariqasida⟧ ishda ishtirok etishga jalb qilingan shaxsga nisbatan qoʻllanilishi mumkin.",
+              "anchor": "-2461171"
+            }
+          ]
+        },
+        {
+          "id": "anytime",
+          "label": "Iltimosnomani muddat tugagandan keyin ham taqdim etish mumkin",
+          "required": false,
+          "why": "Ushlab turish muddati tugashidan kamida sakkiz soat oldin taqdim qilinishi kerak (243-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "kamida sakkiz soat oldin sudga taqdim qilinishi kerak",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "Prokuror qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisidagi iltimosnomaning asosliligini tekshirib, unga rozi boʻlgan taqdirda, iltimosnoma qoʻzgʻatish toʻgʻrisidagi qaror va zarur materiallarni sudga yuboradi. Agar iltimosnoma ushlab turilgan gumon qilinuvchi yoki ayblanuvchiga nisbatan qoʻzgʻatilayotgan boʻlsa, qaror va koʻrsatilgan materiallar ushlab turish muddati tugashidan ⟦kamida sakkiz soat oldin sudga taqdim qilinishi kerak⟧.",
+              "anchor": "-2461171"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Tartib",
+      "sources": [],
+      "points": 25,
+      "description": "Tartib qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "who",
+          "label": "Qamoqqa olish chorasi kimga nisbatan qo'llanishi mumkin?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "any",
+              "label": "Har qanday shaxsga"
+            },
+            {
+              "id": "detained",
+              "label": "Ushlab turilgan gumon qilinuvchi yoki ayblanuvchiga"
+            },
+            {
+              "id": "witness",
+              "label": "Guvohga"
+            }
+          ],
+          "correct": "detained",
+          "why": "Faqat ushlab turilgan gumon qilinuvchi yoki ayblanuvchi sifatida jalb etilgan shaxsga (243-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "faqat ushlab turilgan gumon qilinuvchiga yoki ayblanuvchi tariqasida ishda ishtirok etishga jalb qilingan shaxsga nisbatan qoʻllanilishi mumkin",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasi ⟦faqat ushlab turilgan gumon qilinuvchiga yoki ayblanuvchi tariqasida ishda ishtirok etishga jalb qilingan shaxsga nisbatan qoʻllanilishi mumkin⟧.",
+              "anchor": "-2461171"
+            }
+          ]
+        },
+        {
+          "id": "hours",
+          "label": "Iltimosnoma sudga ushlab turish muddati tugashidan kamida necha soat oldin taqdim qilinadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "h1",
+              "label": "1 soat"
+            },
+            {
+              "id": "h8",
+              "label": "8 soat"
+            },
+            {
+              "id": "h24",
+              "label": "24 soat"
+            },
+            {
+              "id": "h72",
+              "label": "72 soat"
+            }
+          ],
+          "correct": "h8",
+          "why": "Kamida sakkiz soat oldin (243-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "kamida sakkiz soat oldin sudga taqdim qilinishi kerak",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "Prokuror qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisidagi iltimosnomaning asosliligini tekshirib, unga rozi boʻlgan taqdirda, iltimosnoma qoʻzgʻatish toʻgʻrisidagi qaror va zarur materiallarni sudga yuboradi. Agar iltimosnoma ushlab turilgan gumon qilinuvchi yoki ayblanuvchiga nisbatan qoʻzgʻatilayotgan boʻlsa, qaror va koʻrsatilgan materiallar ushlab turish muddati tugashidan ⟦kamida sakkiz soat oldin sudga taqdim qilinishi kerak⟧.",
+              "anchor": "-2461171"
+            }
+          ]
+        },
+        {
+          "id": "court",
+          "label": "Iltimosnomani qaysi sud ko'radi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "invest",
+              "label": "Tuman (shahar) sudining tergov sudyasi"
+            },
+            {
+              "id": "sup",
+              "label": "Oliy sud"
+            },
+            {
+              "id": "arb",
+              "label": "Hakamlik sudi"
+            }
+          ],
+          "correct": "invest",
+          "why": "Tuman (shahar) sudining tergov sudyasi (243-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "tuman (shahar) sudining tergov sudyasi",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisidagi iltimosnoma jinoyat sodir etilgan yoki surishtiruv, dastlabki tergov yuritilayotgan joydagi jinoyat ishlari boʻyicha ⟦tuman (shahar) sudining tergov sudyasi⟧ tomonidan, mazkur sudning sudyasi boʻlmaganda esa yoxud qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisidagi materialni koʻrib chiqishda uning ishtirokini istisno etuvchi holatlar mavjud boʻlgan taqdirda, Qoraqalpogʻiston Respublikasi sudi, viloyat, Toshkent shahar sudi raisining koʻrsatmasiga binoan boshqa tegishli sudning tergov sudyasi tomonidan yakka tartibda koʻrib chiqiladi.",
+              "anchor": "-2461171"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Qamoqqa olish uchun iltimosnoma tartibi). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Gumon qilinuvchi ushlab turilgan; Qamoqqa olish zarurati asoslari mavjud; Ushlab turish muddati tugashiga bir necha soat qolgan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "faqat ushlab turilgan gumon qilinuvchiga yoki ayblanuvchi tariqasida ishda ishtirok etishga jalb qilingan shaxsga nisbatan qoʻllanilishi mumkin",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasi ⟦faqat ushlab turilgan gumon qilinuvchiga yoki ayblanuvchi tariqasida ishda ishtirok etishga jalb qilingan shaxsga nisbatan qoʻllanilishi mumkin⟧.",
+              "anchor": "-2461171"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Bu chora faqat ushlab turilgan gumon qilinuvchiga yoki ayblanuvchi sifatida jalb etilgan shaxsga nisbatan qo'llanishi mumkin; Prokuror yoki prokuror roziligi bilan tergovchi iltimosnoma qo'zg'atish haqida qaror chiqaradi; Ushlab turish muddati tugashidan kamida sakkiz soat oldin sudga taqdim qilinishi kerak; Iltimosnomani tuman (shahar) sudining tergov sudyasi ko'radi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Iltimosnoma jarayoni",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "decide",
+          "label": "Prokuror (yoki uning roziligi bilan tergovchi) iltimosnoma qo'zg'atish haqida qaror chiqaradi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "iltimosnoma qoʻzgʻatish haqida qaror chiqaradi",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "Qonunda nazarda tutilgan holatlar mavjud boʻlganda va surishtiruv yoki dastlabki tergov davomida qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasi tanlanganda prokuror, shuningdek prokurorning roziligi bilan surishtiruvchi yoki tergovchi qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisida ⟦iltimosnoma qoʻzgʻatish haqida qaror chiqaradi⟧.",
+              "anchor": "-2461171"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "label": "Prokuror iltimosnomaning asosliligini tekshiradi va sudga yuboradi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Prokuror qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisidagi iltimosnomaning asosliligini tekshirib",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "⟦Prokuror qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisidagi iltimosnomaning asosliligini tekshirib⟧, unga rozi boʻlgan taqdirda, iltimosnoma qoʻzgʻatish toʻgʻrisidagi qaror va zarur materiallarni sudga yuboradi. Agar iltimosnoma ushlab turilgan gumon qilinuvchi yoki ayblanuvchiga nisbatan qoʻzgʻatilayotgan boʻlsa, qaror va koʻrsatilgan materiallar ushlab turish muddati tugashidan kamida sakkiz soat oldin sudga taqdim qilinishi kerak.",
+              "anchor": "-2461171"
+            }
+          ]
+        },
+        {
+          "id": "submit",
+          "label": "Qaror va materiallar muddat tugashidan kamida sakkiz soat oldin sudga taqdim qilinadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "243-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ushlab turish muddati tugashidan kamida sakkiz soat oldin sudga taqdim qilinishi kerak",
+              "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+              "text": "Prokuror qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisidagi iltimosnomaning asosliligini tekshirib, unga rozi boʻlgan taqdirda, iltimosnoma qoʻzgʻatish toʻgʻrisidagi qaror va zarur materiallarni sudga yuboradi. Agar iltimosnoma ushlab turilgan gumon qilinuvchi yoki ayblanuvchiga nisbatan qoʻzgʻatilayotgan boʻlsa, qaror va koʻrsatilgan materiallar ⟦ushlab turish muddati tugashidan kamida sakkiz soat oldin sudga taqdim qilinishi kerak⟧.",
+              "anchor": "-2461171"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Qaror mazmuni",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "243-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "zaruratini keltirib chiqargan asoslar bayon qilinadi",
+          "heading": "243-modda. Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash tartibi",
+          "text": "Qamoqqa olish yoki uy qamogʻi tarzidagi ehtiyot chorasini qoʻllash toʻgʻrisida iltimosnoma qoʻzgʻatish haqidagi qarorda ushlab turilgan gumon qilinuvchi yoki ayblanuvchini qamoqqa olish yoki uni uy qamogʻiga joylashtirish ⟦zaruratini keltirib chiqargan asoslar bayon qilinadi⟧.",
+          "anchor": "-2461171"
+        }
+      ],
+      "points": 15,
+      "description": "Iltimosnoma qo'zg'atish haqidagi qarorda nima bayon qilinadi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Qamoqqa olish yoki uy qamog'iga joylashtirish zaruratini keltirib chiqargan asoslar"
+        },
+        {
+          "id": "b",
+          "label": "Faqat shaxsning ismi"
+        },
+        {
+          "id": "c",
+          "label": "Guvohlar ro'yxati"
+        },
+        {
+          "id": "d",
+          "label": "Jazo miqdori"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

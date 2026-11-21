@@ -1,0 +1,471 @@
+{
+  "id": "protsessual-sud-buyrugi",
+  "title": "Ish haqi qarzini sud buyrug'i bilan undirish",
+  "area": "Fuqarolik protsessi",
+  "areaId": "mehnat",
+  "tracks": [
+    "sudya",
+    "advokat",
+    "umumiy",
+    "korxona"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Xodim hisoblangan, ammo to'lanmagan ish haqini sud buyrug'i orqali undirmoqchi. Sud buyrug'i beriladigan hollar, tartibi va kuchga kirishini Fuqarolik protsessual kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Shuhrat, 42 yosh, xodim",
+    "openingLine": "Assalomu alaykum. Hisoblangan ish haqim to'lanmadi. Sud buyrug'i bilan tez undirsa bo'ladimi?",
+    "hiddenFacts": [
+      {
+        "id": "wage",
+        "fact": "Hisoblangan, lekin to'lanmagan ish haqi bor",
+        "revealOn": []
+      },
+      {
+        "id": "clear",
+        "fact": "Talab bahssiz, qo'shimcha shaxslarni jalb etish talab qilinmaydi",
+        "revealOn": []
+      },
+      {
+        "id": "fast",
+        "fact": "Mijoz tez natija xohlaydi",
+        "revealOn": []
+      },
+      {
+        "id": "debtor",
+        "fact": "Qarzdor e'tiroz bildirishi mumkin",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "wage",
+        "clear",
+        "fast"
+      ],
+      "questions": [
+        {
+          "id": "q-wage",
+          "text": "Qarz nima?",
+          "factId": "wage",
+          "reply": "Hisoblangan ish haqim to'lanmagan."
+        },
+        {
+          "id": "q-clear",
+          "text": "Nizo bormi?",
+          "factId": "clear",
+          "reply": "Qarz summasi aniq, bahs yo'q."
+        },
+        {
+          "id": "q-fast",
+          "text": "Nimani xohlaysiz?",
+          "factId": "fast",
+          "reply": "Tezroq undirishni."
+        },
+        {
+          "id": "q-debtor",
+          "text": "Ish beruvchi rozimi?",
+          "factId": "debtor",
+          "reply": "Bilmayman, e'tiroz bildirishi mumkin."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Sud buyrug'i hollari",
+      "sources": [],
+      "points": 15,
+      "description": "Qaysi talablar bo'yicha sud buyrug'i beriladi.",
+      "prompt": "Sud buyrug'i qaysi hollarda beriladi? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "wage",
+          "label": "Hisoblangan, lekin xodimga to'lanmagan ish haqini undirish",
+          "required": true,
+          "why": "171-modda 5-band.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "171-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "hisoblangan, lekin xodimga toʻlanmagan ish haqini va unga tenglashtirilgan toʻlovlarni undirish haqida talab arz qilingan boʻlsa",
+              "heading": "171-modda. Sud buyrugʻini berish boʻyicha talablar",
+              "text": "4) voyaga yetmagan bolalar uchun alimentlar undirish toʻgʻrisidagi, otalikni belgilash bilan yoki uchinchi shaxslarni jalb etish zarurati bilan bogʻliq boʻlmagan talab arz qilingan boʻlsa;\n5) ⟦hisoblangan, lekin xodimga toʻlanmagan ish haqini va unga tenglashtirilgan toʻlovlarni undirish haqida talab arz qilingan boʻlsa⟧;",
+              "anchor": "-3521785"
+            }
+          ]
+        },
+        {
+          "id": "alimony",
+          "label": "Voyaga yetmagan bolalar uchun aliment (otalikni belgilashsiz)",
+          "required": true,
+          "why": "171-modda 4-band.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "171-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "voyaga yetmagan bolalar uchun alimentlar undirish toʻgʻrisidagi, otalikni belgilash bilan yoki uchinchi shaxslarni jalb etish zarurati bilan bogʻliq boʻlmagan talab arz qilingan boʻlsa",
+              "heading": "171-modda. Sud buyrugʻini berish boʻyicha talablar",
+              "text": "4) ⟦voyaga yetmagan bolalar uchun alimentlar undirish toʻgʻrisidagi, otalikni belgilash bilan yoki uchinchi shaxslarni jalb etish zarurati bilan bogʻliq boʻlmagan talab arz qilingan boʻlsa⟧;",
+              "anchor": "-3521785"
+            }
+          ]
+        },
+        {
+          "id": "rent",
+          "label": "Ijara shartnomasida belgilangan to'lovlar muddatida to'lanmaganligi sababli ularni undirish",
+          "required": true,
+          "why": "171-modda 7-band.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "171-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "ijara shartnomasida belgilangan ijara toʻlovlari muddatida toʻlanmaganligi sababli ushbu toʻlovlarni undirish toʻgʻrisida talab arz qilingan boʻlsa",
+              "heading": "171-modda. Sud buyrugʻini berish boʻyicha talablar",
+              "text": "6) fuqarolardan soliqlar va boshqa majburiy toʻlovlar boʻyicha qarzdorlikni undirish toʻgʻrisida talab arz qilingan boʻlsa;\n7) ⟦ijara shartnomasida belgilangan ijara toʻlovlari muddatida toʻlanmaganligi sababli ushbu toʻlovlarni undirish toʻgʻrisida talab arz qilingan boʻlsa⟧;",
+              "anchor": "-3521785"
+            }
+          ]
+        },
+        {
+          "id": "notary",
+          "label": "Talab notarial tasdiqlangan bitimga asoslangan bo'lsa",
+          "required": true,
+          "why": "171-modda 1-band.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "171-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "talab notarial tasdiqlangan bitimga asoslangan boʻlsa",
+              "heading": "171-modda. Sud buyrugʻini berish boʻyicha talablar",
+              "text": "Sud buyrugʻi quyidagi hollarda beriladi, agar:\n1) ⟦talab notarial tasdiqlangan bitimga asoslangan boʻlsa⟧;",
+              "anchor": "-3521785"
+            }
+          ]
+        },
+        {
+          "id": "divorce",
+          "label": "Nikohdan ajratish talabi",
+          "required": false,
+          "why": "171-modda ro'yxatida nikohdan ajratish yo'q.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "171-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "Sud buyrugʻi quyidagi hollarda beriladi, agar:",
+              "heading": "171-modda. Sud buyrugʻini berish boʻyicha talablar",
+              "text": "⟦Sud buyrugʻi quyidagi hollarda beriladi, agar:⟧",
+              "anchor": "-3521785"
+            }
+          ]
+        },
+        {
+          "id": "moral",
+          "label": "Ma'naviy zararni undirish talabi",
+          "required": false,
+          "why": "171-modda ro'yxatida bunday talab yo'q.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "171-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "Sud buyrugʻi quyidagi hollarda beriladi, agar:",
+              "heading": "171-modda. Sud buyrugʻini berish boʻyicha talablar",
+              "text": "⟦Sud buyrugʻi quyidagi hollarda beriladi, agar:⟧",
+              "anchor": "-3521785"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Sud buyrug'i tartibi",
+      "sources": [],
+      "points": 25,
+      "description": "Tartib va muddatlarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "days",
+          "label": "Sud buyrug'i ariza kelib tushgan kundan necha kun ichida beriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d1",
+              "label": "1 kun"
+            },
+            {
+              "id": "d3",
+              "label": "3 kun"
+            },
+            {
+              "id": "d10",
+              "label": "10 kun"
+            },
+            {
+              "id": "m1",
+              "label": "1 oy"
+            }
+          ],
+          "correct": "d3",
+          "why": "Uch kun ichida (177-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "177-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "ariza sudga kelib tushgan kundan eʼtiboran uch kun ichida sudya tomonidan beriladi",
+              "heading": "177-modda. Sud buyrugʻini berish tartibi va muddati",
+              "text": "Arz qilingan talabning mazmuni boʻyicha sud buyrugʻi ⟦ariza sudga kelib tushgan kundan eʼtiboran uch kun ichida sudya tomonidan beriladi⟧.",
+              "anchor": "-3521982"
+            }
+          ]
+        },
+        {
+          "id": "hearing",
+          "label": "Sud buyrug'i qanday beriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "hear",
+              "label": "Sud majlisida taraflar ishtirokida"
+            },
+            {
+              "id": "nohear",
+              "label": "Taraflarni chaqirmasdan, sud muhokamasisiz"
+            },
+            {
+              "id": "video",
+              "label": "Faqat video aloqa orqali"
+            }
+          ],
+          "correct": "nohear",
+          "why": "Taraflarni chaqirmasdan, tushuntirishlarni eshitmasdan, sud muhokamasisiz (177-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "177-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "undiruvchi va qarzdorni sudga chaqirmasdan, ularning tushuntirishlarini eshitmasdan yakka tartibda, sud muhokamasisiz beriladi",
+              "heading": "177-modda. Sud buyrugʻini berish tartibi va muddati",
+              "text": "Sud buyrugʻi sudya tomonidan ⟦undiruvchi va qarzdorni sudga chaqirmasdan, ularning tushuntirishlarini eshitmasdan yakka tartibda, sud muhokamasisiz beriladi⟧.",
+              "anchor": "-3521982"
+            }
+          ]
+        },
+        {
+          "id": "force",
+          "label": "Sud buyrug'i qachon qonuniy kuchga kiradi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "now",
+              "label": "Berilgan zahoti"
+            },
+            {
+              "id": "d10",
+              "label": "10 kun o'tgach"
+            },
+            {
+              "id": "d30",
+              "label": "30 kun o'tgach"
+            },
+            {
+              "id": "y1",
+              "label": "1 yildan keyin"
+            }
+          ],
+          "correct": "d10",
+          "why": "Berilgandan so'ng o'n kunlik muddat o'tgach (180-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "180-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "Sud buyrugʻi u berilgandan soʻng oʻn kunlik muddat oʻtgach qonuniy kuchga kiradi",
+              "heading": "180-modda. Sud buyrugʻining qonuniy kuchga kirishi",
+              "text": "⟦Sud buyrugʻi u berilgandan soʻng oʻn kunlik muddat oʻtgach qonuniy kuchga kiradi⟧.",
+              "anchor": "-3522044"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Ish haqi qarzini sud buyrug'i bilan undirish). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Hisoblangan, lekin to'lanmagan ish haqi bor; Talab bahssiz, qo'shimcha shaxslarni jalb etish talab qilinmaydi; Mijoz tez natija xohlaydi",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "171-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "hisoblangan, lekin xodimga toʻlanmagan ish haqini va unga tenglashtirilgan toʻlovlarni undirish haqida talab arz qilingan boʻlsa",
+              "heading": "171-modda. Sud buyrugʻini berish boʻyicha talablar",
+              "text": "4) voyaga yetmagan bolalar uchun alimentlar undirish toʻgʻrisidagi, otalikni belgilash bilan yoki uchinchi shaxslarni jalb etish zarurati bilan bogʻliq boʻlmagan talab arz qilingan boʻlsa;\n5) ⟦hisoblangan, lekin xodimga toʻlanmagan ish haqini va unga tenglashtirilgan toʻlovlarni undirish haqida talab arz qilingan boʻlsa⟧;",
+              "anchor": "-3521785"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "177-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "ariza sudga kelib tushgan kundan eʼtiboran uch kun ichida sudya tomonidan beriladi",
+              "heading": "177-modda. Sud buyrugʻini berish tartibi va muddati",
+              "text": "Arz qilingan talabning mazmuni boʻyicha sud buyrugʻi ⟦ariza sudga kelib tushgan kundan eʼtiboran uch kun ichida sudya tomonidan beriladi⟧.",
+              "anchor": "-3521982"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Hisoblangan, lekin xodimga to'lanmagan ish haqini undirish; Voyaga yetmagan bolalar uchun aliment (otalikni belgilashsiz); Ijara shartnomasida belgilangan to'lovlar muddatida to'lanmaganligi sababli ularni undirish; Talab notarial tasdiqlangan bitimga asoslangan bo'lsa",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Sud buyrug'i jarayoni",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "apply",
+          "label": "Undiruvchi sud buyrug'ini berish haqida ariza beradi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "177-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "ariza sudga kelib tushgan kundan",
+              "heading": "177-modda. Sud buyrugʻini berish tartibi va muddati",
+              "text": "Arz qilingan talabning mazmuni boʻyicha sud buyrugʻi ⟦ariza sudga kelib tushgan kundan⟧ eʼtiboran uch kun ichida sudya tomonidan beriladi.",
+              "anchor": "-3521982"
+            }
+          ]
+        },
+        {
+          "id": "issue",
+          "label": "Sudya uch kun ichida taraflarni chaqirmasdan sud buyrug'ini beradi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "177-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "ariza sudga kelib tushgan kundan eʼtiboran uch kun ichida sudya tomonidan beriladi",
+              "heading": "177-modda. Sud buyrugʻini berish tartibi va muddati",
+              "text": "Arz qilingan talabning mazmuni boʻyicha sud buyrugʻi ⟦ariza sudga kelib tushgan kundan eʼtiboran uch kun ichida sudya tomonidan beriladi⟧.",
+              "anchor": "-3521982"
+            }
+          ]
+        },
+        {
+          "id": "copy",
+          "label": "Qarzdor e'tiroz bermasa, muhr bilan tasdiqlangan nusxa ijroga beriladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+              "article": "177-modda",
+              "url": "https://lex.uz/docs/-3517337",
+              "quote": "Agar belgilangan muddatda qarzdordan sudga eʼtiroz kelib tushmasa, sudya undiruvchiga sudning muhri bilan tasdiqlangan buyruq koʻchirma nusxasini ijroga taqdim etish uchun beradi",
+              "heading": "177-modda. Sud buyrugʻini berish tartibi va muddati",
+              "text": "⟦Agar belgilangan muddatda qarzdordan sudga eʼtiroz kelib tushmasa, sudya undiruvchiga sudning muhri bilan tasdiqlangan buyruq koʻchirma nusxasini ijroga taqdim etish uchun beradi⟧.",
+              "anchor": "-3521982"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Kuchga kirish",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Fuqarolik protsessual kodeksi",
+          "article": "180-modda",
+          "url": "https://lex.uz/docs/-3517337",
+          "quote": "Sud buyrugʻi u berilgandan soʻng oʻn kunlik muddat oʻtgach qonuniy kuchga kiradi",
+          "heading": "180-modda. Sud buyrugʻining qonuniy kuchga kirishi",
+          "text": "⟦Sud buyrugʻi u berilgandan soʻng oʻn kunlik muddat oʻtgach qonuniy kuchga kiradi⟧.",
+          "anchor": "-3522044"
+        }
+      ],
+      "points": 15,
+      "description": "Sud buyrug'i qachon qonuniy kuchga kiradi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Berilgandan so'ng o'n kun o'tgach"
+        },
+        {
+          "id": "b",
+          "label": "Berilgan kuni"
+        },
+        {
+          "id": "c",
+          "label": "Bir oydan keyin"
+        },
+        {
+          "id": "d",
+          "label": "Apellyatsiyadan keyin"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

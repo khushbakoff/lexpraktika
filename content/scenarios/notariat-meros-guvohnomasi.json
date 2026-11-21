@@ -1,0 +1,463 @@
+{
+  "id": "notariat-meros-guvohnomasi",
+  "title": "Merosga bo'lgan huquq guvohnomasi",
+  "area": "Notariat",
+  "areaId": "oila",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy",
+    "sudya"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Ota vafot etgan, merosxo'rlar orasida voyaga yetmagan bola bor. Merosga bo'lgan huquq guvohnomasini olish tartibini «Notariat to'g'risida»gi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Bekzod, 38 yosh, merosxo'r",
+    "openingLine": "Assalomu alaykum. Otamiz vafot etdi, uch merosxo'rmiz, biri voyaga yetmagan. Meros guvohnomasini qanday olamiz?",
+    "hiddenFacts": [
+      {
+        "id": "died",
+        "fact": "Ota vafot etgan, meros ochilgan",
+        "revealOn": []
+      },
+      {
+        "id": "heirs",
+        "fact": "Uch merosxo'r bor, biri voyaga yetmagan",
+        "revealOn": []
+      },
+      {
+        "id": "place",
+        "fact": "Meros otaning so'nggi yashash joyida ochilgan",
+        "revealOn": []
+      },
+      {
+        "id": "accepted",
+        "fact": "Merosxo'rlar merosni qabul qilganlar",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "died",
+        "heirs",
+        "place"
+      ],
+      "questions": [
+        {
+          "id": "q-died",
+          "text": "Nima bo'ldi?",
+          "factId": "died",
+          "reply": "Otamiz vafot etdi."
+        },
+        {
+          "id": "q-heirs",
+          "text": "Merosxo'rlar kimlar?",
+          "factId": "heirs",
+          "reply": "Uchimiz, kenjamiz hali 15 yoshda."
+        },
+        {
+          "id": "q-place",
+          "text": "Ota qayerda yashagan?",
+          "factId": "place",
+          "reply": "Samarqandda."
+        },
+        {
+          "id": "q-accepted",
+          "text": "Merosni qabul qildingizmi?",
+          "factId": "accepted",
+          "reply": "Ha, hammamiz qabul qildik."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Meros guvohnomasi qoidalari",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Merosga bo'lgan huquq guvohnomasi haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "place",
+          "label": "Guvohnomani meros ochilgan joydagi notarius beradi",
+          "required": true,
+          "why": "58-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "58-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Meros ochilgan joydagi notarius merosxoʻrlarning yozma arizalariga koʻra merosga boʻlgan huquq toʻgʻrisida guvohnomalar beradi",
+              "heading": "58-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnomalar berish joyi va muddatlari",
+              "text": "⟦Meros ochilgan joydagi notarius merosxoʻrlarning yozma arizalariga koʻra merosga boʻlgan huquq toʻgʻrisida guvohnomalar beradi⟧.",
+              "anchor": "-55277"
+            }
+          ]
+        },
+        {
+          "id": "written",
+          "label": "Guvohnoma merosxo'rlarning yozma arizalariga ko'ra beriladi",
+          "required": true,
+          "why": "58-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "58-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "merosxoʻrlarning yozma arizalariga koʻra",
+              "heading": "58-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnomalar berish joyi va muddatlari",
+              "text": "Meros ochilgan joydagi notarius ⟦merosxoʻrlarning yozma arizalariga koʻra⟧ merosga boʻlgan huquq toʻgʻrisida guvohnomalar beradi.",
+              "anchor": "-55277"
+            }
+          ]
+        },
+        {
+          "id": "together",
+          "label": "Guvohnoma barcha merosxo'rlarga birgalikda yoki xohishiga ko'ra har biriga alohida beriladi",
+          "required": true,
+          "why": "59-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "59-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "barcha merosxoʻrlarga birgalikda yoki ularning xohishiga bogʻliq ravishda har biriga alohida berilishi mumkin",
+              "heading": "59-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnoma berish tartibi",
+              "text": "Merosga boʻlgan huquq toʻgʻrisidagi guvohnoma ⟦barcha merosxoʻrlarga birgalikda yoki ularning xohishiga bogʻliq ravishda har biriga alohida berilishi mumkin⟧.",
+              "anchor": "-55280"
+            }
+          ]
+        },
+        {
+          "id": "minor",
+          "label": "Voyaga yetmagan merosxo'r bo'lsa, vasiylik va homiylik organlariga xabar qilinadi",
+          "required": true,
+          "why": "59-modda.",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "59-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "vasiylik va homiylik organlariga xabar qiladi",
+              "heading": "59-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnoma berish tartibi",
+              "text": "Notariuslar voyaga yetmagan yoki muomalaga layoqatsiz merosxoʻrlarning mulkiy manfaatlarini muhofaza qilish uchun ularga merosga boʻlgan huquq toʻgʻrisida guvohnoma berilganligi haqida merosxoʻrlar yashayotgan joydagi ⟦vasiylik va homiylik organlariga xabar qiladi⟧.",
+              "anchor": "-55280"
+            }
+          ]
+        },
+        {
+          "id": "anyplace",
+          "label": "Guvohnomani istalgan shahardagi notarius beradi",
+          "required": false,
+          "why": "Meros ochilgan joydagi notarius beradi (58-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "58-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Meros ochilgan joydagi notarius",
+              "heading": "58-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnomalar berish joyi va muddatlari",
+              "text": "⟦Meros ochilgan joydagi notarius⟧ merosxoʻrlarning yozma arizalariga koʻra merosga boʻlgan huquq toʻgʻrisida guvohnomalar beradi.",
+              "anchor": "-55277"
+            }
+          ]
+        },
+        {
+          "id": "oral",
+          "label": "Guvohnoma og'zaki arizaga ko'ra beriladi",
+          "required": false,
+          "why": "Yozma arizaga ko'ra (58-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "58-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "yozma arizalariga koʻra",
+              "heading": "58-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnomalar berish joyi va muddatlari",
+              "text": "Meros ochilgan joydagi notarius merosxoʻrlarning ⟦yozma arizalariga koʻra⟧ merosga boʻlgan huquq toʻgʻrisida guvohnomalar beradi.",
+              "anchor": "-55277"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Guvohnoma berish",
+      "sources": [],
+      "points": 25,
+      "description": "Qoidalarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "who",
+          "label": "Guvohnomani qaysi notarius beradi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "any",
+              "label": "Istalgan notarius"
+            },
+            {
+              "id": "open",
+              "label": "Meros ochilgan joydagi notarius"
+            },
+            {
+              "id": "heir",
+              "label": "Merosxo'r yashaydigan joydagi notarius"
+            }
+          ],
+          "correct": "open",
+          "why": "Meros ochilgan joydagi notarius (58-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "58-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Meros ochilgan joydagi notarius",
+              "heading": "58-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnomalar berish joyi va muddatlari",
+              "text": "⟦Meros ochilgan joydagi notarius⟧ merosxoʻrlarning yozma arizalariga koʻra merosga boʻlgan huquq toʻgʻrisida guvohnomalar beradi.",
+              "anchor": "-55277"
+            }
+          ]
+        },
+        {
+          "id": "app",
+          "label": "Guvohnoma qanday ariza asosida beriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "written",
+              "label": "Yozma ariza"
+            },
+            {
+              "id": "oral",
+              "label": "Og'zaki ariza"
+            },
+            {
+              "id": "none",
+              "label": "Arizasiz"
+            }
+          ],
+          "correct": "written",
+          "why": "Merosxo'rlarning yozma arizasi (58-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "58-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "merosxoʻrlarning yozma arizalariga koʻra",
+              "heading": "58-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnomalar berish joyi va muddatlari",
+              "text": "Meros ochilgan joydagi notarius ⟦merosxoʻrlarning yozma arizalariga koʻra⟧ merosga boʻlgan huquq toʻgʻrisida guvohnomalar beradi.",
+              "anchor": "-55277"
+            }
+          ]
+        },
+        {
+          "id": "minor",
+          "label": "Voyaga yetmagan merosxo'r bo'lsa notarius nima qiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Hech narsa"
+            },
+            {
+              "id": "guard",
+              "label": "Vasiylik va homiylik organlariga xabar qiladi"
+            },
+            {
+              "id": "refuse",
+              "label": "Guvohnoma bermaydi"
+            }
+          ],
+          "correct": "guard",
+          "why": "Vasiylik va homiylik organlariga xabar qiladi (59-modda).",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "59-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "vasiylik va homiylik organlariga xabar qiladi",
+              "heading": "59-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnoma berish tartibi",
+              "text": "Notariuslar voyaga yetmagan yoki muomalaga layoqatsiz merosxoʻrlarning mulkiy manfaatlarini muhofaza qilish uchun ularga merosga boʻlgan huquq toʻgʻrisida guvohnoma berilganligi haqida merosxoʻrlar yashayotgan joydagi ⟦vasiylik va homiylik organlariga xabar qiladi⟧.",
+              "anchor": "-55280"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Merosga bo'lgan huquq guvohnomasi). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Ota vafot etgan, meros ochilgan; Uch merosxo'r bor, biri voyaga yetmagan; Meros otaning so'nggi yashash joyida ochilgan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "58-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Meros ochilgan joydagi notarius merosxoʻrlarning yozma arizalariga koʻra merosga boʻlgan huquq toʻgʻrisida guvohnomalar beradi",
+              "heading": "58-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnomalar berish joyi va muddatlari",
+              "text": "⟦Meros ochilgan joydagi notarius merosxoʻrlarning yozma arizalariga koʻra merosga boʻlgan huquq toʻgʻrisida guvohnomalar beradi⟧.",
+              "anchor": "-55277"
+            },
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "59-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "barcha merosxoʻrlarga birgalikda yoki ularning xohishiga bogʻliq ravishda har biriga alohida berilishi mumkin",
+              "heading": "59-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnoma berish tartibi",
+              "text": "Merosga boʻlgan huquq toʻgʻrisidagi guvohnoma ⟦barcha merosxoʻrlarga birgalikda yoki ularning xohishiga bogʻliq ravishda har biriga alohida berilishi mumkin⟧.",
+              "anchor": "-55280"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Guvohnomani meros ochilgan joydagi notarius beradi; Guvohnoma merosxo'rlarning yozma arizalariga ko'ra beriladi; Guvohnoma barcha merosxo'rlarga birgalikda yoki xohishiga ko'ra har biriga alohida beriladi; Voyaga yetmagan merosxo'r bo'lsa, vasiylik va homiylik organlariga xabar qilinadi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Guvohnoma olish",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "apply",
+          "label": "Merosxo'rlar meros ochilgan joydagi notariusga yozma ariza beradi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "58-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "merosxoʻrlarning yozma arizalariga koʻra",
+              "heading": "58-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnomalar berish joyi va muddatlari",
+              "text": "Meros ochilgan joydagi notarius ⟦merosxoʻrlarning yozma arizalariga koʻra⟧ merosga boʻlgan huquq toʻgʻrisida guvohnomalar beradi.",
+              "anchor": "-55277"
+            }
+          ]
+        },
+        {
+          "id": "issue",
+          "label": "Notarius guvohnomani qonunchilikda belgilangan muddatlarda beradi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "58-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "Guvohnomalar qonunchilikda belgilangan muddatlarda beriladi",
+              "heading": "58-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnomalar berish joyi va muddatlari",
+              "text": "⟦Guvohnomalar qonunchilikda belgilangan muddatlarda beriladi⟧.",
+              "anchor": "-55277"
+            }
+          ]
+        },
+        {
+          "id": "notify",
+          "label": "Voyaga yetmagan merosxo'r bo'lsa, vasiylik organiga xabar qilinadi",
+          "sources": [
+            {
+              "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+              "article": "59-modda",
+              "url": "https://lex.uz/docs/-54458",
+              "quote": "vasiylik va homiylik organlariga xabar qiladi",
+              "heading": "59-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnoma berish tartibi",
+              "text": "Notariuslar voyaga yetmagan yoki muomalaga layoqatsiz merosxoʻrlarning mulkiy manfaatlarini muhofaza qilish uchun ularga merosga boʻlgan huquq toʻgʻrisida guvohnoma berilganligi haqida merosxoʻrlar yashayotgan joydagi ⟦vasiylik va homiylik organlariga xabar qiladi⟧.",
+              "anchor": "-55280"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Guvohnoma shakli",
+      "sources": [
+        {
+          "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+          "article": "59-modda",
+          "url": "https://lex.uz/docs/-54458",
+          "quote": "barcha merosxoʻrlarga birgalikda yoki ularning xohishiga bogʻliq ravishda har biriga alohida berilishi mumkin",
+          "heading": "59-modda. Merosga boʻlgan huquq toʻgʻrisida guvohnoma berish tartibi",
+          "text": "Merosga boʻlgan huquq toʻgʻrisidagi guvohnoma ⟦barcha merosxoʻrlarga birgalikda yoki ularning xohishiga bogʻliq ravishda har biriga alohida berilishi mumkin⟧.",
+          "anchor": "-55280"
+        }
+      ],
+      "points": 15,
+      "description": "Guvohnoma merosxo'rlarga qanday beriladi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Birgalikda yoki xohishiga ko'ra har biriga alohida"
+        },
+        {
+          "id": "b",
+          "label": "Faqat bittasiga"
+        },
+        {
+          "id": "c",
+          "label": "Faqat katta merosxo'rga"
+        },
+        {
+          "id": "d",
+          "label": "Faqat sud orqali"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

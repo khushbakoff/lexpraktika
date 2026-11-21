@@ -1,0 +1,480 @@
+{
+  "id": "jinoyat-ehtiyot-chorasi",
+  "title": "Ehtiyot chorasi tanlash: garov yoki qamoq?",
+  "area": "Jinoyat-protsessual huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Firibgarlikda ayblanayotgan shaxs uchun ehtiyot chorasi tanlanmoqda. Ehtiyot choralari turlari, maqsadi va tanlashda hisobga olinadigan holatlarni Jinoyat-protsessual kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Gulnora, 45 yosh, ayblanuvchining rafiqasi",
+    "openingLine": "Assalomu alaykum. Erimga qamoq tanlashmoqchi. Boshqa variantlar yo'qmi?",
+    "hiddenFacts": [
+      {
+        "id": "charge",
+        "fact": "Er firibgarlikda ayblanmoqda",
+        "revealOn": []
+      },
+      {
+        "id": "family",
+        "fact": "Oilasi bor, ikki bolasi, doimiy yashash joyi bor",
+        "revealOn": []
+      },
+      {
+        "id": "flee",
+        "fact": "Surishtiruvdan yashirinish xavfi aniq emas",
+        "revealOn": []
+      },
+      {
+        "id": "health",
+        "fact": "Er surunkali kasal",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "charge",
+        "family",
+        "flee"
+      ],
+      "questions": [
+        {
+          "id": "q-charge",
+          "text": "Eringiz nimada ayblanmoqda?",
+          "factId": "charge",
+          "reply": "Firibgarlikda."
+        },
+        {
+          "id": "q-family",
+          "text": "Oilaviy ahvolingiz qanday?",
+          "factId": "family",
+          "reply": "Ikki bolamiz bor, doimiy turar joyimiz bor."
+        },
+        {
+          "id": "q-flee",
+          "text": "Yashirinish xavfi bormi?",
+          "factId": "flee",
+          "reply": "Yo'q, u hech qayerga ketmagan."
+        },
+        {
+          "id": "q-health",
+          "text": "Sog'lig'i qanday?",
+          "factId": "health",
+          "reply": "Yurak kasalligi bor."
+        },
+        {
+          "id": "q-filler",
+          "text": "Siz qaysi shaharda yashaysiz?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ehtiyot chorasi haqida gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Ehtiyot choralari turlari",
+      "sources": [],
+      "points": 15,
+      "description": "Qaysilari ehtiyot chorasi hisoblanadi.",
+      "prompt": "Quyidagilardan qaysilari ehtiyot chorasi hisoblanadi? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "pledge",
+          "label": "Munosib xulq-atvorda bo'lish haqida tilxat",
+          "required": true,
+          "why": "237-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "237-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "munosib xulq-atvorda boʻlish toʻgʻrisida tilxat",
+              "heading": "237-modda. Ehtiyot choralarining turlari",
+              "text": "Ehtiyot choralariga quyidagilar kiradi: ⟦munosib xulq-atvorda boʻlish toʻgʻrisida tilxat⟧; shaxsiy kafillik, jamoat birlashmasi yoki jamoaning kafilligi; garov; uy qamogʻi; qamoqqa olish; voyaga yetmaganlarni kuzatuv ostiga olish uchun topshirish; harbiy xizmatchining xulq-atvori ustidan qoʻmondonlik kuzatuvi. Bir shaxsga nisbatan bir vaqtning oʻzida ana shu choralardan faqat bittasi qoʻllanilishiga yoʻl qoʻyiladi.",
+              "anchor": "-254719"
+            }
+          ]
+        },
+        {
+          "id": "guarantee",
+          "label": "Shaxsiy kafillik",
+          "required": true,
+          "why": "237-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "237-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "shaxsiy kafillik",
+              "heading": "237-modda. Ehtiyot choralarining turlari",
+              "text": "Ehtiyot choralariga quyidagilar kiradi: munosib xulq-atvorda boʻlish toʻgʻrisida tilxat; ⟦shaxsiy kafillik⟧, jamoat birlashmasi yoki jamoaning kafilligi; garov; uy qamogʻi; qamoqqa olish; voyaga yetmaganlarni kuzatuv ostiga olish uchun topshirish; harbiy xizmatchining xulq-atvori ustidan qoʻmondonlik kuzatuvi. Bir shaxsga nisbatan bir vaqtning oʻzida ana shu choralardan faqat bittasi qoʻllanilishiga yoʻl qoʻyiladi.",
+              "anchor": "-254719"
+            }
+          ]
+        },
+        {
+          "id": "bail",
+          "label": "Garov",
+          "required": true,
+          "why": "237-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "237-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "garov; uy qamogʻi; qamoqqa olish",
+              "heading": "237-modda. Ehtiyot choralarining turlari",
+              "text": "Ehtiyot choralariga quyidagilar kiradi: munosib xulq-atvorda boʻlish toʻgʻrisida tilxat; shaxsiy kafillik, jamoat birlashmasi yoki jamoaning kafilligi; ⟦garov; uy qamogʻi; qamoqqa olish⟧; voyaga yetmaganlarni kuzatuv ostiga olish uchun topshirish; harbiy xizmatchining xulq-atvori ustidan qoʻmondonlik kuzatuvi. Bir shaxsga nisbatan bir vaqtning oʻzida ana shu choralardan faqat bittasi qoʻllanilishiga yoʻl qoʻyiladi.",
+              "anchor": "-254719"
+            }
+          ]
+        },
+        {
+          "id": "house",
+          "label": "Uy qamog'i",
+          "required": true,
+          "why": "237-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "237-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "uy qamogʻi",
+              "heading": "237-modda. Ehtiyot choralarining turlari",
+              "text": "Ehtiyot choralariga quyidagilar kiradi: munosib xulq-atvorda boʻlish toʻgʻrisida tilxat; shaxsiy kafillik, jamoat birlashmasi yoki jamoaning kafilligi; garov; ⟦uy qamogʻi⟧; qamoqqa olish; voyaga yetmaganlarni kuzatuv ostiga olish uchun topshirish; harbiy xizmatchining xulq-atvori ustidan qoʻmondonlik kuzatuvi. Bir shaxsga nisbatan bir vaqtning oʻzida ana shu choralardan faqat bittasi qoʻllanilishiga yoʻl qoʻyiladi.",
+              "anchor": "-254719"
+            }
+          ]
+        },
+        {
+          "id": "arrest",
+          "label": "Qamoqqa olish",
+          "required": true,
+          "why": "237-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "237-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "qamoqqa olish",
+              "heading": "237-modda. Ehtiyot choralarining turlari",
+              "text": "Ehtiyot choralariga quyidagilar kiradi: munosib xulq-atvorda boʻlish toʻgʻrisida tilxat; shaxsiy kafillik, jamoat birlashmasi yoki jamoaning kafilligi; garov; uy qamogʻi; ⟦qamoqqa olish⟧; voyaga yetmaganlarni kuzatuv ostiga olish uchun topshirish; harbiy xizmatchining xulq-atvori ustidan qoʻmondonlik kuzatuvi. Bir shaxsga nisbatan bir vaqtning oʻzida ana shu choralardan faqat bittasi qoʻllanilishiga yoʻl qoʻyiladi.",
+              "anchor": "-254719"
+            }
+          ]
+        },
+        {
+          "id": "fine",
+          "label": "Jarima solish",
+          "required": false,
+          "why": "Jarima jazo turi, ehtiyot chorasi emas (237-modda ro'yxatida yo'q).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "237-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Ehtiyot choralariga quyidagilar kiradi",
+              "heading": "237-modda. Ehtiyot choralarining turlari",
+              "text": "⟦Ehtiyot choralariga quyidagilar kiradi⟧: munosib xulq-atvorda boʻlish toʻgʻrisida tilxat; shaxsiy kafillik, jamoat birlashmasi yoki jamoaning kafilligi; garov; uy qamogʻi; qamoqqa olish; voyaga yetmaganlarni kuzatuv ostiga olish uchun topshirish; harbiy xizmatchining xulq-atvori ustidan qoʻmondonlik kuzatuvi. Bir shaxsga nisbatan bir vaqtning oʻzida ana shu choralardan faqat bittasi qoʻllanilishiga yoʻl qoʻyiladi.",
+              "anchor": "-254719"
+            }
+          ]
+        },
+        {
+          "id": "work",
+          "label": "Majburiy jamoat ishlari",
+          "required": false,
+          "why": "Bu jazo, ehtiyot chorasi emas.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "237-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Ehtiyot choralariga quyidagilar kiradi",
+              "heading": "237-modda. Ehtiyot choralarining turlari",
+              "text": "⟦Ehtiyot choralariga quyidagilar kiradi⟧: munosib xulq-atvorda boʻlish toʻgʻrisida tilxat; shaxsiy kafillik, jamoat birlashmasi yoki jamoaning kafilligi; garov; uy qamogʻi; qamoqqa olish; voyaga yetmaganlarni kuzatuv ostiga olish uchun topshirish; harbiy xizmatchining xulq-atvori ustidan qoʻmondonlik kuzatuvi. Bir shaxsga nisbatan bir vaqtning oʻzida ana shu choralardan faqat bittasi qoʻllanilishiga yoʻl qoʻyiladi.",
+              "anchor": "-254719"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Tanlash qoidalari",
+      "sources": [],
+      "points": 25,
+      "description": "Ehtiyot chorasini tanlash qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "aim",
+          "label": "Ehtiyot chorasi qaysi maqsadda qo'llaniladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "aim",
+              "label": "Bo'yin tovlash va halal berishning oldini olish, hukm ijrosini ta'minlash"
+            },
+            {
+              "id": "pun",
+              "label": "Ayblanuvchini jazolash"
+            },
+            {
+              "id": "shame",
+              "label": "Ayblanuvchini sharmanda qilish"
+            }
+          ],
+          "correct": "aim",
+          "why": "Surishtiruv, tergov va suddan bo'yin tovlash, yangi jinoyat va haqiqatni aniqlashga halal berishning oldini olish, hukm ijrosini ta'minlash (236-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "236-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "surishtiruvdan, dastlabki tergovdan va suddan boʻyin tovlashining oldini olish",
+              "heading": "236-modda. Ehtiyot choralari qoʻllanilishining maqsad va asoslari",
+              "text": "Ehtiyot chorasi ayblanuvchi, sudlanuvchi ⟦surishtiruvdan, dastlabki tergovdan va suddan boʻyin tovlashining oldini olish⟧; uning bundan buyongi jinoiy faoliyatining oldini olish; uning ish boʻyicha haqiqatni aniqlashga halal beradigan urinishlariga yoʻl qoʻymaslik; hukmning ijro etilishini taʼminlash maqsadida qoʻllaniladi.",
+              "anchor": "-254712"
+            }
+          ]
+        },
+        {
+          "id": "count",
+          "label": "Bir shaxsga bir vaqtda nechta ehtiyot chorasi qo'llanilishi mumkin?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "one",
+              "label": "Faqat bittasi"
+            },
+            {
+              "id": "two",
+              "label": "Ikkitagacha"
+            },
+            {
+              "id": "all",
+              "label": "Hammasi birga"
+            }
+          ],
+          "correct": "one",
+          "why": "Bir vaqtning o'zida faqat bittasi (237-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "237-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Bir shaxsga nisbatan bir vaqtning oʻzida ana shu choralardan faqat bittasi qoʻllanilishiga yoʻl qoʻyiladi",
+              "heading": "237-modda. Ehtiyot choralarining turlari",
+              "text": "Ehtiyot choralariga quyidagilar kiradi: munosib xulq-atvorda boʻlish toʻgʻrisida tilxat; shaxsiy kafillik, jamoat birlashmasi yoki jamoaning kafilligi; garov; uy qamogʻi; qamoqqa olish; voyaga yetmaganlarni kuzatuv ostiga olish uchun topshirish; harbiy xizmatchining xulq-atvori ustidan qoʻmondonlik kuzatuvi. ⟦Bir shaxsga nisbatan bir vaqtning oʻzida ana shu choralardan faqat bittasi qoʻllanilishiga yoʻl qoʻyiladi⟧.",
+              "anchor": "-254719"
+            }
+          ]
+        },
+        {
+          "id": "factors",
+          "label": "Chorani tanlashda qaysi holatlar hisobga olinadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "only",
+              "label": "Faqat ayblovning og'irligi"
+            },
+            {
+              "id": "all",
+              "label": "Ayblovning og'irligi, shaxsi, yoshi, sog'lig'i, oilaviy ahvoli va boshqalar"
+            },
+            {
+              "id": "none",
+              "label": "Hech narsa, tergovchi xohishi"
+            }
+          ],
+          "correct": "all",
+          "why": "Ayblovning og'irligi, ayblanuvchining shaxsi, mashg'uloti, yoshi, sog'lig'i, oilaviy ahvoli va boshqa holatlar (238-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "238-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "qoʻyilgan aybning ogʻirligini, ayblanuvchining shaxsini, mashgʻulot turini, yoshi, sogʻligʻi, oilaviy ahvoli va boshqa holatlarni ham hisobga oladi",
+              "heading": "238-modda. Ehtiyot chorasini tanlashda eʼtiborga olinadigan holatlar",
+              "text": "Ehtiyot choralaridan qaysi birini qoʻllash toʻgʻrisidagi masalani hal qilishda surishtiruvchi, tergovchi, prokuror, sud ushbu Kodeksning 236-moddasida nazarda tutilgan asoslardan tashqari ⟦qoʻyilgan aybning ogʻirligini, ayblanuvchining shaxsini, mashgʻulot turini, yoshi, sogʻligʻi, oilaviy ahvoli va boshqa holatlarni ham hisobga oladi⟧.",
+              "anchor": "-254725"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Ehtiyot chorasi tanlash: garov yoki qamoq?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Er firibgarlikda ayblanmoqda; Oilasi bor, ikki bolasi, doimiy yashash joyi bor; Surishtiruvdan yashirinish xavfi aniq emas",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "237-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "munosib xulq-atvorda boʻlish toʻgʻrisida tilxat",
+              "heading": "237-modda. Ehtiyot choralarining turlari",
+              "text": "Ehtiyot choralariga quyidagilar kiradi: ⟦munosib xulq-atvorda boʻlish toʻgʻrisida tilxat⟧; shaxsiy kafillik, jamoat birlashmasi yoki jamoaning kafilligi; garov; uy qamogʻi; qamoqqa olish; voyaga yetmaganlarni kuzatuv ostiga olish uchun topshirish; harbiy xizmatchining xulq-atvori ustidan qoʻmondonlik kuzatuvi. Bir shaxsga nisbatan bir vaqtning oʻzida ana shu choralardan faqat bittasi qoʻllanilishiga yoʻl qoʻyiladi.",
+              "anchor": "-254719"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "236-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "surishtiruvdan, dastlabki tergovdan va suddan boʻyin tovlashining oldini olish",
+              "heading": "236-modda. Ehtiyot choralari qoʻllanilishining maqsad va asoslari",
+              "text": "Ehtiyot chorasi ayblanuvchi, sudlanuvchi ⟦surishtiruvdan, dastlabki tergovdan va suddan boʻyin tovlashining oldini olish⟧; uning bundan buyongi jinoiy faoliyatining oldini olish; uning ish boʻyicha haqiqatni aniqlashga halal beradigan urinishlariga yoʻl qoʻymaslik; hukmning ijro etilishini taʼminlash maqsadida qoʻllaniladi.",
+              "anchor": "-254712"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Munosib xulq-atvorda bo'lish haqida tilxat; Shaxsiy kafillik; Garov; Uy qamog'i",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Chorani tanlash",
+      "sources": [],
+      "points": 15,
+      "description": "Tanlash jarayonini belgilang.",
+      "order": [
+        {
+          "id": "aim",
+          "label": "Ehtiyot chorasi maqsad va asoslari aniqlanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "236-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Ehtiyot chorasi ayblanuvchi, sudlanuvchi surishtiruvdan",
+              "heading": "236-modda. Ehtiyot choralari qoʻllanilishining maqsad va asoslari",
+              "text": "⟦Ehtiyot chorasi ayblanuvchi, sudlanuvchi surishtiruvdan⟧, dastlabki tergovdan va suddan boʻyin tovlashining oldini olish; uning bundan buyongi jinoiy faoliyatining oldini olish; uning ish boʻyicha haqiqatni aniqlashga halal beradigan urinishlariga yoʻl qoʻymaslik; hukmning ijro etilishini taʼminlash maqsadida qoʻllaniladi.",
+              "anchor": "-254712"
+            }
+          ]
+        },
+        {
+          "id": "factors",
+          "label": "Ayblanuvchi shaxsi, sog'lig'i, oilaviy ahvoli va boshqa holatlar hisobga olinadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "238-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ayblanuvchining shaxsini, mashgʻulot turini, yoshi, sogʻligʻi, oilaviy ahvoli",
+              "heading": "238-modda. Ehtiyot chorasini tanlashda eʼtiborga olinadigan holatlar",
+              "text": "Ehtiyot choralaridan qaysi birini qoʻllash toʻgʻrisidagi masalani hal qilishda surishtiruvchi, tergovchi, prokuror, sud ushbu Kodeksning 236-moddasida nazarda tutilgan asoslardan tashqari qoʻyilgan aybning ogʻirligini, ⟦ayblanuvchining shaxsini, mashgʻulot turini, yoshi, sogʻligʻi, oilaviy ahvoli⟧ va boshqa holatlarni ham hisobga oladi.",
+              "anchor": "-254725"
+            }
+          ]
+        },
+        {
+          "id": "choose",
+          "label": "Turlardan bittasi tanlanib qo'llanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "237-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "faqat bittasi qoʻllanilishiga yoʻl qoʻyiladi",
+              "heading": "237-modda. Ehtiyot choralarining turlari",
+              "text": "Ehtiyot choralariga quyidagilar kiradi: munosib xulq-atvorda boʻlish toʻgʻrisida tilxat; shaxsiy kafillik, jamoat birlashmasi yoki jamoaning kafilligi; garov; uy qamogʻi; qamoqqa olish; voyaga yetmaganlarni kuzatuv ostiga olish uchun topshirish; harbiy xizmatchining xulq-atvori ustidan qoʻmondonlik kuzatuvi. Bir shaxsga nisbatan bir vaqtning oʻzida ana shu choralardan ⟦faqat bittasi qoʻllanilishiga yoʻl qoʻyiladi⟧.",
+              "anchor": "-254719"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Qamoqqa olish uchun asos",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "236-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "yashirinishi mumkin degan oʻrinli taxmin ham qamoqda saqlash tarzidagi ehtiyot chorasini tanlash uchun asos boʻlishi mumkin",
+          "heading": "236-modda. Ehtiyot choralari qoʻllanilishining maqsad va asoslari",
+          "text": "Ayblanuvchi, sudlanuvchi sodir etgan, Jinoyat kodeksi 15-moddasining toʻrtinchi va beshinchi qismlarida nazarda tutilgan jinoyatning xavfliligi tufayli u surishtiruvdan, dastlabki tergovdan va suddan ⟦yashirinishi mumkin degan oʻrinli taxmin ham qamoqda saqlash tarzidagi ehtiyot chorasini tanlash uchun asos boʻlishi mumkin⟧.",
+          "anchor": "-254712"
+        }
+      ],
+      "points": 15,
+      "description": "Qaysi holat qamoqda saqlash tarzidagi ehtiyot chorasini tanlash uchun asos bo'lishi mumkin?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Jinoyatning xavfliligi tufayli yashirinishi mumkin degan o'rinli taxmin"
+        },
+        {
+          "id": "b",
+          "label": "Ayblanuvchi sog'lig'ining yomonligi"
+        },
+        {
+          "id": "c",
+          "label": "Qo'shnilar noroziligi"
+        },
+        {
+          "id": "d",
+          "label": "Hech qaysi"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

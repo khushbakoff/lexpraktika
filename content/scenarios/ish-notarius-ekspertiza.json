@@ -1,0 +1,439 @@
+{
+  "id": "ish-notarius-ekspertiza",
+  "title": "Hujjat aynanligiga shubha: ekspertizaga yuborish",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Taqdim etilgan hujjat soxta bo'lishi mumkin. Notarius hujjatni ekspertizaga yuborish tartibini va qarorning mazmunini Yo'riqnoma bo'yicha belgilang.",
+  "client": {
+    "persona": "Notarius",
+    "openingLine": "Assalomu alaykum. Mijoz keltirgan hujjatning aynanligiga shubham bor. Uni nima qilaman?",
+    "hiddenFacts": [
+      {
+        "id": "doubt",
+        "fact": "Hujjat aynanligiga shubha tug'ilgan",
+        "revealOn": []
+      },
+      {
+        "id": "who",
+        "fact": "Hujjatni mijoz taqdim etgan",
+        "revealOn": []
+      },
+      {
+        "id": "where",
+        "fact": "Ekspertizaga yuborilmoqchi",
+        "revealOn": []
+      },
+      {
+        "id": "q",
+        "fact": "Ekspertiza hal etishi kerak bo'lgan savollar bor",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "doubt",
+        "who",
+        "where"
+      ],
+      "questions": [
+        {
+          "id": "q-doubt",
+          "text": "Nimadan shubhalanyapsiz?",
+          "factId": "doubt",
+          "reply": "Hujjat soxta ko'rinadi."
+        },
+        {
+          "id": "q-who",
+          "text": "Kim keltirdi?",
+          "factId": "who",
+          "reply": "Mijozning o'zi."
+        },
+        {
+          "id": "q-where",
+          "text": "Qayerga yubormoqchisiz?",
+          "factId": "where",
+          "reply": "Ekspertiza muassasasiga."
+        },
+        {
+          "id": "q-q",
+          "text": "Qanday savollar?",
+          "factId": "q",
+          "reply": "Hujjat haqiqiymi, imzo kimniki."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Ekspertizaga yuborish",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Hujjat aynanligiga shubha tug'ilganda qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "keep",
+          "label": "Notarius hujjatni olib qolib, ekspertizaga yuborishga haqli",
+          "required": true,
+          "why": "10-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Taqdim etilgan hujjatning aynanligiga shubha tugʻilsa, notarius bu hujjatni olib qolib, uni ekspertizaga yuborishga haqlidir",
+              "heading": "10-band.",
+              "text": "⟦Taqdim etilgan hujjatning aynanligiga shubha tugʻilsa, notarius bu hujjatni olib qolib, uni ekspertizaga yuborishga haqlidir⟧."
+            }
+          ]
+        },
+        {
+          "id": "decision",
+          "label": "Notarius hujjatni ekspertizaga yuborish to'g'risida qaror chiqaradi",
+          "required": true,
+          "why": "10-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notarius hujjatni ekspertizaga yuborish toʻgʻrisida qaror chiqaradi",
+              "heading": "10-band.",
+              "text": "⟦Notarius hujjatni ekspertizaga yuborish toʻgʻrisida qaror chiqaradi⟧ va unda qaror chiqarilgan sana, qaror chiqargan notariusning familiyasi, ismi va otasining ismi, notarial idoraning nomi, hujjatning nomi, u kimning nomiga berilganligi, notarial harakatni amalga oshirish uchun hujjat kim tomonidan taqdim etilganligi (familiyasi, ismi, otasining ismi, turar joyi va shaxsini tasdiqlovchi hujjat, yuridik shaxs boʻlsa uning nomi va joylashgan yeri (pochta manzili), STIR, hujjatni ekspertizaga yuborish zaruratini keltirib chiqargan holatlar, hujjat ekspertiza qilinishi uchun qayerga (qaysi ekspertiza muassasasiga) yuborilayotganligi va ekspertiza hal etishi uchun qoʻyilayotgan savollar koʻrsatiladi."
+            }
+          ]
+        },
+        {
+          "id": "cause",
+          "label": "Qarorda ekspertizaga yuborish zaruratini keltirib chiqargan holatlar ko'rsatiladi",
+          "required": true,
+          "why": "10-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "hujjatni ekspertizaga yuborish zaruratini keltirib chiqargan holatlar",
+              "heading": "10-band.",
+              "text": "Notarius hujjatni ekspertizaga yuborish toʻgʻrisida qaror chiqaradi va unda qaror chiqarilgan sana, qaror chiqargan notariusning familiyasi, ismi va otasining ismi, notarial idoraning nomi, hujjatning nomi, u kimning nomiga berilganligi, notarial harakatni amalga oshirish uchun hujjat kim tomonidan taqdim etilganligi (familiyasi, ismi, otasining ismi, turar joyi va shaxsini tasdiqlovchi hujjat, yuridik shaxs boʻlsa uning nomi va joylashgan yeri (pochta manzili), STIR, ⟦hujjatni ekspertizaga yuborish zaruratini keltirib chiqargan holatlar⟧, hujjat ekspertiza qilinishi uchun qayerga (qaysi ekspertiza muassasasiga) yuborilayotganligi va ekspertiza hal etishi uchun qoʻyilayotgan savollar koʻrsatiladi."
+            }
+          ]
+        },
+        {
+          "id": "questions",
+          "label": "Qarorda ekspertiza hal etishi uchun qo'yilayotgan savollar ko'rsatiladi",
+          "required": true,
+          "why": "10-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "ekspertiza hal etishi uchun qoʻyilayotgan savollar koʻrsatiladi",
+              "heading": "10-band.",
+              "text": "Notarius hujjatni ekspertizaga yuborish toʻgʻrisida qaror chiqaradi va unda qaror chiqarilgan sana, qaror chiqargan notariusning familiyasi, ismi va otasining ismi, notarial idoraning nomi, hujjatning nomi, u kimning nomiga berilganligi, notarial harakatni amalga oshirish uchun hujjat kim tomonidan taqdim etilganligi (familiyasi, ismi, otasining ismi, turar joyi va shaxsini tasdiqlovchi hujjat, yuridik shaxs boʻlsa uning nomi va joylashgan yeri (pochta manzili), STIR, hujjatni ekspertizaga yuborish zaruratini keltirib chiqargan holatlar, hujjat ekspertiza qilinishi uchun qayerga (qaysi ekspertiza muassasasiga) yuborilayotganligi va ⟦ekspertiza hal etishi uchun qoʻyilayotgan savollar koʻrsatiladi⟧."
+            }
+          ]
+        },
+        {
+          "id": "ignore",
+          "label": "Shubhaga e'tibor bermay, hujjatni qaytarib berish kerak",
+          "required": false,
+          "why": "Notarius hujjatni olib qolib, ekspertizaga yuborishga haqli (10-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "notarius bu hujjatni olib qolib",
+              "heading": "10-band.",
+              "text": "Taqdim etilgan hujjatning aynanligiga shubha tugʻilsa, ⟦notarius bu hujjatni olib qolib⟧, uni ekspertizaga yuborishga haqlidir."
+            }
+          ]
+        },
+        {
+          "id": "noreason",
+          "label": "Qarorda sabablarni ko'rsatish shart emas",
+          "required": false,
+          "why": "Qarorda zarurat holatlari va savollar ko'rsatiladi (10-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "hujjatni ekspertizaga yuborish zaruratini keltirib chiqargan holatlar",
+              "heading": "10-band.",
+              "text": "Notarius hujjatni ekspertizaga yuborish toʻgʻrisida qaror chiqaradi va unda qaror chiqarilgan sana, qaror chiqargan notariusning familiyasi, ismi va otasining ismi, notarial idoraning nomi, hujjatning nomi, u kimning nomiga berilganligi, notarial harakatni amalga oshirish uchun hujjat kim tomonidan taqdim etilganligi (familiyasi, ismi, otasining ismi, turar joyi va shaxsini tasdiqlovchi hujjat, yuridik shaxs boʻlsa uning nomi va joylashgan yeri (pochta manzili), STIR, ⟦hujjatni ekspertizaga yuborish zaruratini keltirib chiqargan holatlar⟧, hujjat ekspertiza qilinishi uchun qayerga (qaysi ekspertiza muassasasiga) yuborilayotganligi va ekspertiza hal etishi uchun qoʻyilayotgan savollar koʻrsatiladi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Qaror mazmuni",
+      "sources": [],
+      "points": 25,
+      "description": "Qaror elementlarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "right",
+          "label": "Notarius aynanlikka shubhada hujjat bilan nima qilishga haqli?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "send",
+              "label": "Hujjatni olib qolib, ekspertizaga yuboradi"
+            },
+            {
+              "id": "return",
+              "label": "Faqat qaytarib beradi"
+            },
+            {
+              "id": "tear",
+              "label": "Yirtib tashlaydi"
+            }
+          ],
+          "correct": "send",
+          "why": "Hujjatni olib qolib, ekspertizaga yuborishga (10-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "notarius bu hujjatni olib qolib, uni ekspertizaga yuborishga haqlidir",
+              "heading": "10-band.",
+              "text": "Taqdim etilgan hujjatning aynanligiga shubha tugʻilsa, ⟦notarius bu hujjatni olib qolib, uni ekspertizaga yuborishga haqlidir⟧."
+            }
+          ]
+        },
+        {
+          "id": "form",
+          "label": "Bu masala qanday rasmiylashtiriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "decision",
+              "label": "Notarius qaror chiqaradi"
+            },
+            {
+              "id": "oral",
+              "label": "Og'zaki ko'rsatma"
+            },
+            {
+              "id": "sms",
+              "label": "SMS orqali"
+            }
+          ],
+          "correct": "decision",
+          "why": "Notarius qaror chiqaradi (10-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notarius hujjatni ekspertizaga yuborish toʻgʻrisida qaror chiqaradi",
+              "heading": "10-band.",
+              "text": "⟦Notarius hujjatni ekspertizaga yuborish toʻgʻrisida qaror chiqaradi⟧ va unda qaror chiqarilgan sana, qaror chiqargan notariusning familiyasi, ismi va otasining ismi, notarial idoraning nomi, hujjatning nomi, u kimning nomiga berilganligi, notarial harakatni amalga oshirish uchun hujjat kim tomonidan taqdim etilganligi (familiyasi, ismi, otasining ismi, turar joyi va shaxsini tasdiqlovchi hujjat, yuridik shaxs boʻlsa uning nomi va joylashgan yeri (pochta manzili), STIR, hujjatni ekspertizaga yuborish zaruratini keltirib chiqargan holatlar, hujjat ekspertiza qilinishi uchun qayerga (qaysi ekspertiza muassasasiga) yuborilayotganligi va ekspertiza hal etishi uchun qoʻyilayotgan savollar koʻrsatiladi."
+            }
+          ]
+        },
+        {
+          "id": "content",
+          "label": "Qarorda yana nima ko'rsatiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "questions",
+              "label": "Ekspertiza hal etishi uchun qo'yilayotgan savollar"
+            },
+            {
+              "id": "none",
+              "label": "Hech narsa"
+            },
+            {
+              "id": "price",
+              "label": "Ekspertiza narxi"
+            }
+          ],
+          "correct": "questions",
+          "why": "Ekspertiza hal etishi uchun qo'yilayotgan savollar (10-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "ekspertiza hal etishi uchun qoʻyilayotgan savollar koʻrsatiladi",
+              "heading": "10-band.",
+              "text": "Notarius hujjatni ekspertizaga yuborish toʻgʻrisida qaror chiqaradi va unda qaror chiqarilgan sana, qaror chiqargan notariusning familiyasi, ismi va otasining ismi, notarial idoraning nomi, hujjatning nomi, u kimning nomiga berilganligi, notarial harakatni amalga oshirish uchun hujjat kim tomonidan taqdim etilganligi (familiyasi, ismi, otasining ismi, turar joyi va shaxsini tasdiqlovchi hujjat, yuridik shaxs boʻlsa uning nomi va joylashgan yeri (pochta manzili), STIR, hujjatni ekspertizaga yuborish zaruratini keltirib chiqargan holatlar, hujjat ekspertiza qilinishi uchun qayerga (qaysi ekspertiza muassasasiga) yuborilayotganligi va ⟦ekspertiza hal etishi uchun qoʻyilayotgan savollar koʻrsatiladi⟧."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Hujjat aynanligiga shubha: ekspertizaga yuborish). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Hujjat aynanligiga shubha tug'ilgan; Hujjatni mijoz taqdim etgan; Ekspertizaga yuborilmoqchi",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Taqdim etilgan hujjatning aynanligiga shubha tugʻilsa, notarius bu hujjatni olib qolib, uni ekspertizaga yuborishga haqlidir",
+              "heading": "10-band.",
+              "text": "⟦Taqdim etilgan hujjatning aynanligiga shubha tugʻilsa, notarius bu hujjatni olib qolib, uni ekspertizaga yuborishga haqlidir⟧."
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Notarius hujjatni olib qolib, ekspertizaga yuborishga haqli; Notarius hujjatni ekspertizaga yuborish to'g'risida qaror chiqaradi; Qarorda ekspertizaga yuborish zaruratini keltirib chiqargan holatlar ko'rsatiladi; Qarorda ekspertiza hal etishi uchun qo'yilayotgan savollar ko'rsatiladi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Ekspertiza tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "doubt",
+          "label": "Hujjat aynanligiga shubha tug'iladi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Taqdim etilgan hujjatning aynanligiga shubha tugʻilsa",
+              "heading": "10-band.",
+              "text": "⟦Taqdim etilgan hujjatning aynanligiga shubha tugʻilsa⟧, notarius bu hujjatni olib qolib, uni ekspertizaga yuborishga haqlidir."
+            }
+          ]
+        },
+        {
+          "id": "decide",
+          "label": "Notarius hujjatni ekspertizaga yuborish haqida qaror chiqaradi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notarius hujjatni ekspertizaga yuborish toʻgʻrisida qaror chiqaradi",
+              "heading": "10-band.",
+              "text": "⟦Notarius hujjatni ekspertizaga yuborish toʻgʻrisida qaror chiqaradi⟧ va unda qaror chiqarilgan sana, qaror chiqargan notariusning familiyasi, ismi va otasining ismi, notarial idoraning nomi, hujjatning nomi, u kimning nomiga berilganligi, notarial harakatni amalga oshirish uchun hujjat kim tomonidan taqdim etilganligi (familiyasi, ismi, otasining ismi, turar joyi va shaxsini tasdiqlovchi hujjat, yuridik shaxs boʻlsa uning nomi va joylashgan yeri (pochta manzili), STIR, hujjatni ekspertizaga yuborish zaruratini keltirib chiqargan holatlar, hujjat ekspertiza qilinishi uchun qayerga (qaysi ekspertiza muassasasiga) yuborilayotganligi va ekspertiza hal etishi uchun qoʻyilayotgan savollar koʻrsatiladi."
+            }
+          ]
+        },
+        {
+          "id": "send",
+          "label": "Hujjat olib qolinib, ekspertiza muassasasiga yuboriladi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "10-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "notarius bu hujjatni olib qolib, uni ekspertizaga yuborishga haqlidir",
+              "heading": "10-band.",
+              "text": "Taqdim etilgan hujjatning aynanligiga shubha tugʻilsa, ⟦notarius bu hujjatni olib qolib, uni ekspertizaga yuborishga haqlidir⟧."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Qarorda nima",
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "10-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "hujjatni ekspertizaga yuborish zaruratini keltirib chiqargan holatlar",
+          "heading": "10-band.",
+          "text": "Notarius hujjatni ekspertizaga yuborish toʻgʻrisida qaror chiqaradi va unda qaror chiqarilgan sana, qaror chiqargan notariusning familiyasi, ismi va otasining ismi, notarial idoraning nomi, hujjatning nomi, u kimning nomiga berilganligi, notarial harakatni amalga oshirish uchun hujjat kim tomonidan taqdim etilganligi (familiyasi, ismi, otasining ismi, turar joyi va shaxsini tasdiqlovchi hujjat, yuridik shaxs boʻlsa uning nomi va joylashgan yeri (pochta manzili), STIR, ⟦hujjatni ekspertizaga yuborish zaruratini keltirib chiqargan holatlar⟧, hujjat ekspertiza qilinishi uchun qayerga (qaysi ekspertiza muassasasiga) yuborilayotganligi va ekspertiza hal etishi uchun qoʻyilayotgan savollar koʻrsatiladi."
+        }
+      ],
+      "points": 15,
+      "description": "Qarorda ekspertizaga yuborish zaruratini keltirib chiqargan nima ko'rsatiladi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Holatlar"
+        },
+        {
+          "id": "b",
+          "label": "Faqat sana"
+        },
+        {
+          "id": "c",
+          "label": "Narx"
+        },
+        {
+          "id": "d",
+          "label": "Hech narsa"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

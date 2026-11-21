@@ -1,0 +1,478 @@
+{
+  "id": "ish-notarius-shaxsni-aniqlash",
+  "title": "Murojaat qiluvchi shaxsini qanday aniqlayman?",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Notarial idoraga turli shaxslar keladi. Notarius shaxsni qaysi hujjatlar asosida aniqlashini Yo'riqnoma bo'yicha belgilang.",
+  "client": {
+    "persona": "Notarius yordamchisi",
+    "openingLine": "Assalomu alaykum. Idoraga turli mijozlar keladi: voyaga yetmagan, harbiy xizmatchi, chet el fuqarosi. Ularning shaxsini qanday hujjat bilan aniqlayman?",
+    "hiddenFacts": [
+      {
+        "id": "citizen",
+        "fact": "O'zbekiston fuqarosi keldi",
+        "revealOn": []
+      },
+      {
+        "id": "child",
+        "fact": "15 yoshli fuqaro keldi",
+        "revealOn": []
+      },
+      {
+        "id": "foreign",
+        "fact": "Chet el fuqarosi keldi",
+        "revealOn": []
+      },
+      {
+        "id": "military",
+        "fact": "Harbiy xizmatchi keldi",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "citizen",
+        "child",
+        "foreign"
+      ],
+      "questions": [
+        {
+          "id": "q-citizen",
+          "text": "Birinchi mijoz kim?",
+          "factId": "citizen",
+          "reply": "O'zbekiston fuqarosi."
+        },
+        {
+          "id": "q-child",
+          "text": "Ikkinchisi?",
+          "factId": "child",
+          "reply": "15 yoshli yosh bola."
+        },
+        {
+          "id": "q-foreign",
+          "text": "Uchinchisi?",
+          "factId": "foreign",
+          "reply": "Chet el fuqarosi."
+        },
+        {
+          "id": "q-military",
+          "text": "To'rtinchisi?",
+          "factId": "military",
+          "reply": "Harbiy xizmatchi."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Shaxsni aniqlovchi hujjatlar",
+      "sources": [],
+      "points": 15,
+      "description": "Mos hujjatni toping.",
+      "prompt": "Qaysi hujjatlar shaxsni aniqlash uchun asos bo'ladi? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "passport",
+          "label": "O'zbekiston fuqarosi uchun fuqaroning pasporti (ID-kartasi)",
+          "required": true,
+          "why": "3-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Oʻzbekiston Respublikasi fuqarosining pasporti (identifikatsiya ID-kartasi)",
+              "heading": "3-band.",
+              "text": "Notarial harakatlarni amalga oshirishni soʻrab murojaat qiluvchi fuqarolarning shaxsi quyidagi hujjatlarga asosan aniqlanadi:\nOʻzbekiston fuqarolarining shaxsi — ⟦Oʻzbekiston Respublikasi fuqarosining pasporti (identifikatsiya ID-kartasi)⟧;"
+            }
+          ]
+        },
+        {
+          "id": "birth",
+          "label": "16 yoshga to'lmagan fuqaro uchun tug'ilganlik to'g'risidagi guvohnoma",
+          "required": true,
+          "why": "3-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "tugʻilganlik toʻgʻrisidagi guvohnoma",
+              "heading": "3-band.",
+              "text": "Oʻzbekiston fuqarolarining shaxsi — Oʻzbekiston Respublikasi fuqarosining pasporti (identifikatsiya ID-kartasi);\n16 yoshga toʻlmagan fuqarolarning shaxsi — ⟦tugʻilganlik toʻgʻrisidagi guvohnoma⟧;"
+            }
+          ]
+        },
+        {
+          "id": "military",
+          "label": "Harbiy xizmatchi uchun harbiy qism bergan shaxsiy guvohnoma yoki harbiy bilet",
+          "required": true,
+          "why": "3-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "harbiy xizmatchilarning shaxsi",
+              "heading": "3-band.",
+              "text": "⟦harbiy xizmatchilarning shaxsi⟧ — harbiy qismlar va harbiy muassasalar qoʻmondonligi tomonidan beriladigan shaxsiy guvohnomalar yoki harbiy biletlar (harbiy xizmatga majbur fuqarolarning harbiy bileti bundan mustasno);"
+            }
+          ]
+        },
+        {
+          "id": "foreign",
+          "label": "Chet el fuqarosi uchun milliy pasport yoki O'zbekistonda yashash guvohnomasi",
+          "required": true,
+          "why": "3-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "chet el fuqarolarining shaxsi",
+              "heading": "3-band.",
+              "text": "⟦chet el fuqarolarining shaxsi⟧ — ularning milliy pasporti (qonunchilik hujjatlariga muvofiq chet el fuqarolari tegishli ichki ishlar organlari tomonidan roʻyxatga olinishi lozim) yoki Oʻzbekiston Respublikasida yashash guvohnomasi (identifikatsiya ID-kartasi) yoxud diplomatik pasporti yoki Oʻzbekiston Respublikasida akkreditatsiya qilinganligini tasdiqlovchi akkreditatsiya kartochkasi;"
+            }
+          ]
+        },
+        {
+          "id": "stateless",
+          "label": "Fuqaroligi bo'lmagan shaxs uchun O'zbekistonda yashash guvohnomasi (ID-karta)",
+          "required": true,
+          "why": "3-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "fuqaroligi boʻlmagan shaxs uchun",
+              "heading": "3-band.",
+              "text": "⟦fuqaroligi boʻlmagan shaxs uchun⟧ — Oʻzbekiston Respublikasida yashash guvohnomasi (identifikatsiya ID-kartasi)."
+            }
+          ]
+        },
+        {
+          "id": "photo",
+          "label": "Mijozning telefondagi surati",
+          "required": false,
+          "why": "3-bandda shaxsni aniqlash hujjatlari ro'yxati belgilangan, telefondagi surat ro'yxatda yo'q.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notarial harakatlarni amalga oshirishni soʻrab murojaat qiluvchi fuqarolarning shaxsi quyidagi hujjatlarga asosan aniqlanadi",
+              "heading": "3-band.",
+              "text": "Notarius notarial harakatlarni amalga oshirishni soʻrab murojaat qiluvchilarning (ularning qonuniy vakillarining, shuningdek vasiy va homiylarining) va yuridik shaxs vakillarining shaxsini aniqlaydi.\n⟦Notarial harakatlarni amalga oshirishni soʻrab murojaat qiluvchi fuqarolarning shaxsi quyidagi hujjatlarga asosan aniqlanadi⟧:"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Hujjat tanlash",
+      "sources": [],
+      "points": 25,
+      "description": "Har bir mijoz uchun to'g'ri hujjatni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "child",
+          "label": "15 yoshli bola uchun",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "birth",
+              "label": "Tug'ilganlik to'g'risidagi guvohnoma"
+            },
+            {
+              "id": "passport",
+              "label": "Fuqaro pasporti"
+            },
+            {
+              "id": "card",
+              "label": "Maktab kartasi"
+            }
+          ],
+          "correct": "birth",
+          "why": "16 yoshga to'lmaganlar uchun tug'ilganlik to'g'risidagi guvohnoma (3-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "16 yoshga toʻlmagan fuqarolarning shaxsi",
+              "heading": "3-band.",
+              "text": "Oʻzbekiston fuqarolarining shaxsi — Oʻzbekiston Respublikasi fuqarosining pasporti (identifikatsiya ID-kartasi);\n⟦16 yoshga toʻlmagan fuqarolarning shaxsi⟧ — tugʻilganlik toʻgʻrisidagi guvohnoma;"
+            }
+          ]
+        },
+        {
+          "id": "citizen",
+          "label": "O'zbekiston fuqarosi uchun",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "passport",
+              "label": "Fuqaroning pasporti (ID-kartasi)"
+            },
+            {
+              "id": "birth",
+              "label": "Tug'ilganlik guvohnomasi"
+            },
+            {
+              "id": "none",
+              "label": "Hujjat shart emas"
+            }
+          ],
+          "correct": "passport",
+          "why": "Fuqaroning pasporti (ID-kartasi) (3-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Oʻzbekiston Respublikasi fuqarosining pasporti (identifikatsiya ID-kartasi)",
+              "heading": "3-band.",
+              "text": "Notarial harakatlarni amalga oshirishni soʻrab murojaat qiluvchi fuqarolarning shaxsi quyidagi hujjatlarga asosan aniqlanadi:\nOʻzbekiston fuqarolarining shaxsi — ⟦Oʻzbekiston Respublikasi fuqarosining pasporti (identifikatsiya ID-kartasi)⟧;"
+            }
+          ]
+        },
+        {
+          "id": "abroad",
+          "label": "Xorijda doimiy yashayotgan va konsullik ro'yxatida turgan O'zbekiston fuqarosi uchun",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "bio",
+              "label": "Xorijga chiqish biometrik pasporti"
+            },
+            {
+              "id": "id",
+              "label": "Faqat ichki ID-karta"
+            },
+            {
+              "id": "none",
+              "label": "Hujjat shart emas"
+            }
+          ],
+          "correct": "bio",
+          "why": "Xorijga chiqish biometrik pasporti (3-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "xorijga chiqish biometrik pasporti",
+              "heading": "3-band.",
+              "text": "chet el fuqarolarining shaxsi — ularning milliy pasporti (qonunchilik hujjatlariga muvofiq chet el fuqarolari tegishli ichki ishlar organlari tomonidan roʻyxatga olinishi lozim) yoki Oʻzbekiston Respublikasida yashash guvohnomasi (identifikatsiya ID-kartasi) yoxud diplomatik pasporti yoki Oʻzbekiston Respublikasida akkreditatsiya qilinganligini tasdiqlovchi akkreditatsiya kartochkasi;\nxorijda doimiy yashayotgan va konsullik roʻyxatida turgan Oʻzbekiston fuqarolarining shaxsi — Oʻzbekiston Respublikasi fuqarosining ⟦xorijga chiqish biometrik pasporti⟧;"
+            }
+          ]
+        },
+        {
+          "id": "stateless",
+          "label": "Fuqaroligi bo'lmagan shaxs uchun",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "residence",
+              "label": "O'zbekistonda yashash guvohnomasi (ID-karta)"
+            },
+            {
+              "id": "none",
+              "label": "Hujjat shart emas"
+            },
+            {
+              "id": "birth",
+              "label": "Tug'ilganlik guvohnomasi"
+            }
+          ],
+          "correct": "residence",
+          "why": "O'zbekistonda yashash guvohnomasi (ID-karta) (3-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Oʻzbekiston Respublikasida yashash guvohnomasi (identifikatsiya ID-kartasi)",
+              "heading": "3-band.",
+              "text": "chet el fuqarolarining shaxsi — ularning milliy pasporti (qonunchilik hujjatlariga muvofiq chet el fuqarolari tegishli ichki ishlar organlari tomonidan roʻyxatga olinishi lozim) yoki ⟦Oʻzbekiston Respublikasida yashash guvohnomasi (identifikatsiya ID-kartasi)⟧ yoxud diplomatik pasporti yoki Oʻzbekiston Respublikasida akkreditatsiya qilinganligini tasdiqlovchi akkreditatsiya kartochkasi;"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Murojaat qiluvchi shaxsini qanday aniqlayman?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: O'zbekiston fuqarosi keldi; 15 yoshli fuqaro keldi; Chet el fuqarosi keldi",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Oʻzbekiston Respublikasi fuqarosining pasporti (identifikatsiya ID-kartasi)",
+              "heading": "3-band.",
+              "text": "Notarial harakatlarni amalga oshirishni soʻrab murojaat qiluvchi fuqarolarning shaxsi quyidagi hujjatlarga asosan aniqlanadi:\nOʻzbekiston fuqarolarining shaxsi — ⟦Oʻzbekiston Respublikasi fuqarosining pasporti (identifikatsiya ID-kartasi)⟧;"
+            },
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi",
+              "heading": "4-band.",
+              "text": "Notarius notarial harakat amalga oshirishni soʻrab murojaat etgan jismoniy shaxsning ⟦muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi⟧."
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: O'zbekiston fuqarosi uchun fuqaroning pasporti (ID-kartasi); 16 yoshga to'lmagan fuqaro uchun tug'ilganlik to'g'risidagi guvohnoma; Harbiy xizmatchi uchun harbiy qism bergan shaxsiy guvohnoma yoki harbiy bilet; Chet el fuqarosi uchun milliy pasport yoki O'zbekistonda yashash guvohnomasi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Qabul tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "meet",
+          "label": "Murojaat qiluvchi notarial harakatni so'rab keladi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notarius notarial harakatlarni amalga oshirishni soʻrab murojaat qiluvchilarning",
+              "heading": "3-band.",
+              "text": "⟦Notarius notarial harakatlarni amalga oshirishni soʻrab murojaat qiluvchilarning⟧ (ularning qonuniy vakillarining, shuningdek vasiy va homiylarining) va yuridik shaxs vakillarining shaxsini aniqlaydi."
+            }
+          ]
+        },
+        {
+          "id": "id",
+          "label": "Notarius uning shaxsini tegishli hujjat asosida aniqlaydi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "3-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "shaxsini aniqlaydi",
+              "heading": "3-band.",
+              "text": "Notarius notarial harakatlarni amalga oshirishni soʻrab murojaat qiluvchilarning (ularning qonuniy vakillarining, shuningdek vasiy va homiylarining) va yuridik shaxs vakillarining ⟦shaxsini aniqlaydi⟧."
+            }
+          ]
+        },
+        {
+          "id": "cap",
+          "label": "Shaxsiy muloqotda muomala layoqatini aniqlaydi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "4-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi",
+              "heading": "4-band.",
+              "text": "Notarius notarial harakat amalga oshirishni soʻrab murojaat etgan jismoniy shaxsning ⟦muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi⟧."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Vakillar",
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "3-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "Notarius notarial harakatlarni amalga oshirishni soʻrab murojaat qiluvchilarning (ularning qonuniy vakillarining, shuningdek vasiy va homiylarining) va yuridik shaxs vakillarining shaxsini aniqlaydi",
+          "heading": "3-band.",
+          "text": "⟦Notarius notarial harakatlarni amalga oshirishni soʻrab murojaat qiluvchilarning (ularning qonuniy vakillarining, shuningdek vasiy va homiylarining) va yuridik shaxs vakillarining shaxsini aniqlaydi⟧."
+        }
+      ],
+      "points": 15,
+      "description": "Notarius kimlarning shaxsini aniqlaydi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Murojaat qiluvchilar, ularning qonuniy vakillari, vasiy va homiylari hamda yuridik shaxs vakillari"
+        },
+        {
+          "id": "b",
+          "label": "Faqat mijozning o'zini"
+        },
+        {
+          "id": "c",
+          "label": "Faqat guvohlarni"
+        },
+        {
+          "id": "d",
+          "label": "Hech kimni"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

@@ -1,0 +1,463 @@
+{
+  "id": "fuqarolik-maishiy-pudrat",
+  "title": "Tikuvchi kostyumni yomon tikdi",
+  "area": "Fuqarolik huquqi",
+  "areaId": "fuqarolik",
+  "tracks": [
+    "advokat",
+    "korxona",
+    "sudya",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Buyurtmachi tikuvchidan kostyum buyurtma qilgan, ish sifatsiz bajarilgan. Maishiy pudratda buyurtmachi huquqlarini Fuqarolik kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Nodir, 35 yosh, menejer",
+    "openingLine": "Assalomu alaykum. Kostyum tiktirgandim, o'lchami xato va chok yomon. Tikuvchi tuzatmayapti. Nima qilsam bo'ladi?",
+    "hiddenFacts": [
+      {
+        "id": "order",
+        "fact": "Maishiy pudrat shartnomasi: kostyum tikish",
+        "revealOn": []
+      },
+      {
+        "id": "bad",
+        "fact": "Ish tegishli darajada bajarilmagan",
+        "revealOn": []
+      },
+      {
+        "id": "refuse",
+        "fact": "Tikuvchi tuzatishdan bosh tortmoqda",
+        "revealOn": []
+      },
+      {
+        "id": "paid",
+        "fact": "Buyurtmachi to'lovni to'liq to'lagan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "order",
+        "bad",
+        "refuse"
+      ],
+      "questions": [
+        {
+          "id": "q-order",
+          "text": "Nima buyurtma qilgansiz?",
+          "factId": "order",
+          "reply": "Kostyum tiktirgandim."
+        },
+        {
+          "id": "q-bad",
+          "text": "Nima yomon?",
+          "factId": "bad",
+          "reply": "O'lchami noto'g'ri, choklari yomon."
+        },
+        {
+          "id": "q-refuse",
+          "text": "Tikuvchi nima deydi?",
+          "factId": "refuse",
+          "reply": "Tuzatmayman, deydi."
+        },
+        {
+          "id": "q-paid",
+          "text": "To'lov qilganmisiz?",
+          "factId": "paid",
+          "reply": "Ha, to'liq to'lagandim."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Buyurtmachi huquqlari",
+      "sources": [],
+      "points": 15,
+      "description": "Maishiy pudratda huquqlarni aniqlang.",
+      "prompt": "Maishiy pudrat shartnomasi bo'yicha ish tegishli darajada bajarilmasa, buyurtmachi qaysi huquqlardan foydalanishi mumkin? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "rights",
+          "label": "Sotib oluvchiga berilgan huquqlardan foydalanish",
+          "required": true,
+          "why": "665-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "665-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotib oluvchiga berilgan huquqlardan foydalanishi mumkin",
+              "heading": "665-modda. Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachining huquqlari",
+              "text": "Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachi ushbu Kodeksning 434 — 436-moddalariga muvofiq ⟦sotib oluvchiga berilgan huquqlardan foydalanishi mumkin⟧.",
+              "anchor": "-189040"
+            }
+          ]
+        },
+        {
+          "id": "repair",
+          "label": "Kamchiliklarni tekinga bartaraf etishni talab qilish",
+          "required": true,
+          "why": "434-modda orqali.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "tovarning kamchiliklarini tekinga bartaraf etishni",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "⟦tovarning kamchiliklarini tekinga bartaraf etishni⟧ yoki sotib oluvchi yoxud uchinchi shaxs tomonidan tovarning kamchiliklarini bartaraf etish uchun qilingan xarajatlar qoplanishini;",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "reduce",
+          "label": "Narxni mutanosib kamaytirishni talab qilish",
+          "required": true,
+          "why": "434-modda orqali.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "xarid narxini mutanosib ravishda kamaytirishni",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "tovarning kamchiliklarini tekinga bartaraf etishni yoki sotib oluvchi yoxud uchinchi shaxs tomonidan tovarning kamchiliklarini bartaraf etish uchun qilingan xarajatlar qoplanishini;\n⟦xarid narxini mutanosib ravishda kamaytirishni⟧;",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "cancel",
+          "label": "Zararni qoplagan holda shartnomani bekor qilishni talab qilish",
+          "required": true,
+          "why": "434-modda orqali.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "koʻrilgan zarar oʻrnini qoplagan holda shartnoma bekor qilinishini talab qilish huquqiga ega",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "⟦koʻrilgan zarar oʻrnini qoplagan holda shartnoma bekor qilinishini talab qilish huquqiga ega⟧.",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "none",
+          "label": "Buyurtmachining hech qanday huquqi yo'q",
+          "required": false,
+          "why": "Buyurtmachi sotib oluvchi huquqlaridan foydalanishi mumkin (665-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "665-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotib oluvchiga berilgan huquqlardan foydalanishi mumkin",
+              "heading": "665-modda. Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachining huquqlari",
+              "text": "Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachi ushbu Kodeksning 434 — 436-moddalariga muvofiq ⟦sotib oluvchiga berilgan huquqlardan foydalanishi mumkin⟧.",
+              "anchor": "-189040"
+            }
+          ]
+        },
+        {
+          "id": "buyfix",
+          "label": "Faqat to'lovni yarim kamaytirib, boshqa talab qo'yib bo'lmaydi",
+          "required": false,
+          "why": "Buyurtmachi bir nechta huquqdan birini o'z xohishiga ko'ra tanlaydi (434-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotib oluvchi oʻz xohishiga koʻra",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida, agar uning kamchiliklari shartnoma tuzish paytida maʼlum qilinmagan boʻlsa, ⟦sotib oluvchi oʻz xohishiga koʻra⟧:",
+              "anchor": "-183202"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Talab",
+      "sources": [],
+      "points": 25,
+      "description": "Talab qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "rule",
+          "label": "Maishiy pudratda ish tegishli darajada bajarilmasa, buyurtmachi huquqlari qaysi kodeks moddalariga havola qiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "buyer",
+              "label": "Sotib oluvchiga berilgan huquqlar (434–436-moddalar)"
+            },
+            {
+              "id": "none",
+              "label": "Hech qanday"
+            },
+            {
+              "id": "tax",
+              "label": "Soliq kodeksi"
+            }
+          ],
+          "correct": "buyer",
+          "why": "Sotib oluvchiga berilgan huquqlardan foydalanishi mumkin (665-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "665-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotib oluvchiga berilgan huquqlardan foydalanishi mumkin",
+              "heading": "665-modda. Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachining huquqlari",
+              "text": "Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachi ushbu Kodeksning 434 — 436-moddalariga muvofiq ⟦sotib oluvchiga berilgan huquqlardan foydalanishi mumkin⟧.",
+              "anchor": "-189040"
+            }
+          ]
+        },
+        {
+          "id": "choice",
+          "label": "Buyurtmachi huquqni qanday tanlaydi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "own",
+              "label": "O'z xohishiga ko'ra"
+            },
+            {
+              "id": "master",
+              "label": "Usta tanlaydi"
+            },
+            {
+              "id": "court",
+              "label": "Faqat sud"
+            }
+          ],
+          "correct": "own",
+          "why": "O'z xohishiga ko'ra (434-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotib oluvchi oʻz xohishiga koʻra",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida, agar uning kamchiliklari shartnoma tuzish paytida maʼlum qilinmagan boʻlsa, ⟦sotib oluvchi oʻz xohishiga koʻra⟧:",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "cancel",
+          "label": "Shartnoma bekor qilinganda qanday talab qo'yish mumkin?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "loss",
+              "label": "Ko'rilgan zarar o'rnini qoplash bilan shartnomani bekor qilish"
+            },
+            {
+              "id": "none",
+              "label": "Zararni talab qilib bo'lmaydi"
+            },
+            {
+              "id": "tip",
+              "label": "Faqat uzr"
+            }
+          ],
+          "correct": "loss",
+          "why": "Ko'rilgan zarar o'rnini qoplagan holda shartnomani bekor qilish (434-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "koʻrilgan zarar oʻrnini qoplagan holda shartnoma bekor qilinishini talab qilish huquqiga ega",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "⟦koʻrilgan zarar oʻrnini qoplagan holda shartnoma bekor qilinishini talab qilish huquqiga ega⟧.",
+              "anchor": "-183202"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Tikuvchi kostyumni yomon tikdi). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Maishiy pudrat shartnomasi: kostyum tikish; Ish tegishli darajada bajarilmagan; Tikuvchi tuzatishdan bosh tortmoqda",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "665-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotib oluvchiga berilgan huquqlardan foydalanishi mumkin",
+              "heading": "665-modda. Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachining huquqlari",
+              "text": "Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachi ushbu Kodeksning 434 — 436-moddalariga muvofiq ⟦sotib oluvchiga berilgan huquqlardan foydalanishi mumkin⟧.",
+              "anchor": "-189040"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "tovarning kamchiliklarini tekinga bartaraf etishni",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "⟦tovarning kamchiliklarini tekinga bartaraf etishni⟧ yoki sotib oluvchi yoxud uchinchi shaxs tomonidan tovarning kamchiliklarini bartaraf etish uchun qilingan xarajatlar qoplanishini;",
+              "anchor": "-183202"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Sotib oluvchiga berilgan huquqlardan foydalanish; Kamchiliklarni tekinga bartaraf etishni talab qilish; Narxni mutanosib kamaytirishni talab qilish; Zararni qoplagan holda shartnomani bekor qilishni talab qilish",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Buyurtmachi yo'li",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "found",
+          "label": "Ish tegishli darajada bajarilmaganligi aniqlanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "665-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "ish tegishli darajada yoki umuman bajarilmagan taqdirda",
+              "heading": "665-modda. Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachining huquqlari",
+              "text": "Maishiy pudrat shartnomasi boʻyicha ⟦ish tegishli darajada yoki umuman bajarilmagan taqdirda⟧ buyurtmachi ushbu Kodeksning 434 — 436-moddalariga muvofiq sotib oluvchiga berilgan huquqlardan foydalanishi mumkin.",
+              "anchor": "-189040"
+            }
+          ]
+        },
+        {
+          "id": "rights",
+          "label": "Buyurtmachi sotib oluvchiga berilgan huquqlardan foydalanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "665-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotib oluvchiga berilgan huquqlardan foydalanishi mumkin",
+              "heading": "665-modda. Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachining huquqlari",
+              "text": "Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachi ushbu Kodeksning 434 — 436-moddalariga muvofiq ⟦sotib oluvchiga berilgan huquqlardan foydalanishi mumkin⟧.",
+              "anchor": "-189040"
+            }
+          ]
+        },
+        {
+          "id": "choose",
+          "label": "Huquqlardan birini (tuzatish, narxni kamaytirish, bekor qilish) o'z xohishiga ko'ra tanlaydi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "434-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotib oluvchi oʻz xohishiga koʻra",
+              "heading": "434-modda. Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida uning huquqlari",
+              "text": "Sotib oluvchiga sifati tegishli darajada boʻlmagan tovar sotilganida, agar uning kamchiliklari shartnoma tuzish paytida maʼlum qilinmagan boʻlsa, ⟦sotib oluvchi oʻz xohishiga koʻra⟧:",
+              "anchor": "-183202"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Qaysi modda",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+          "article": "665-modda",
+          "url": "https://lex.uz/docs/-180552",
+          "quote": "sotib oluvchiga berilgan huquqlardan foydalanishi mumkin",
+          "heading": "665-modda. Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachining huquqlari",
+          "text": "Maishiy pudrat shartnomasi boʻyicha ish tegishli darajada yoki umuman bajarilmagan taqdirda buyurtmachi ushbu Kodeksning 434 — 436-moddalariga muvofiq ⟦sotib oluvchiga berilgan huquqlardan foydalanishi mumkin⟧.",
+          "anchor": "-189040"
+        }
+      ],
+      "points": 15,
+      "description": "Maishiy pudratda ish yomon bajarilganda buyurtmachi qaysi shaxsning huquqlaridan foydalanishi mumkin?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Sotib oluvchining huquqlaridan"
+        },
+        {
+          "id": "b",
+          "label": "Sotuvchining huquqlaridan"
+        },
+        {
+          "id": "c",
+          "label": "Pudratchining huquqlaridan"
+        },
+        {
+          "id": "d",
+          "label": "Hech kimnikidan"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

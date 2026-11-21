@@ -1,0 +1,498 @@
+{
+  "id": "mehnat-bekor-qilish-ogohlantirish",
+  "title": "Shtat qisqarishi: qancha oldin ogohlantiriladi?",
+  "area": "Mehnat huquqi",
+  "areaId": "mehnat",
+  "tracks": [
+    "advokat",
+    "korxona",
+    "davlat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Kompaniya shtatni qisqartirib xodimni bo'shatmoqchi. Ish beruvchi tashabbusi bilan bekor qilishda ogohlantirish shakli va muddatlarini Mehnat kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Zafar, 41 yosh, kompaniya yuristi",
+    "openingLine": "Assalomu alaykum. Shtat qisqartirilyapti, bir xodimni bo'shatmoqchimiz. Uni qancha oldin va qanday ogohlantirish kerak?",
+    "hiddenFacts": [
+      {
+        "id": "reason",
+        "fact": "Bo'shatish sababi: ishlar hajmining qisqarishi tufayli shtat o'zgarishi",
+        "revealOn": []
+      },
+      {
+        "id": "form",
+        "fact": "Ogohlantirish hali berilmagan",
+        "revealOn": []
+      },
+      {
+        "id": "emp",
+        "fact": "Xodim 3 yildan beri ishlaydi",
+        "revealOn": []
+      },
+      {
+        "id": "other",
+        "fact": "Boshqa xodim malakasizligi sababli ham ko'rib chiqilmoqda",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "reason",
+        "form",
+        "emp"
+      ],
+      "questions": [
+        {
+          "id": "q-reason",
+          "text": "Bo'shatish sababi nima?",
+          "factId": "reason",
+          "reply": "Ishlar hajmi qisqarib, shtat o'zgardi."
+        },
+        {
+          "id": "q-form",
+          "text": "Ogohlantirish berilganmi?",
+          "factId": "form",
+          "reply": "Hali yo'q."
+        },
+        {
+          "id": "q-emp",
+          "text": "U qancha ishlagan?",
+          "factId": "emp",
+          "reply": "Uch yildan beri."
+        },
+        {
+          "id": "q-other",
+          "text": "Boshqa holat bormi?",
+          "factId": "other",
+          "reply": "Boshqa xodimning malakasi yetarli emas."
+        },
+        {
+          "id": "q-filler",
+          "text": "Kompaniya qayerda joylashgan?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ogohlantirish muddatini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Ogohlantirish muddatlari",
+      "sources": [],
+      "points": 15,
+      "description": "Asos bo'yicha muddatlarni aniqlang.",
+      "prompt": "Ish beruvchi tashabbusi bilan bekor qilishda qaysi ogohlantirish muddatlari to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "written",
+          "label": "Ogohlantirish yozma shaklda, imzo qo'ydirib beriladi",
+          "required": true,
+          "why": "165-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ёзма шаклда (имзо қўйдириб) огоҳлантириши шарт",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "Иш берувчи ўзининг меҳнат шартномасини бекор қилиш нияти ҳақида ходимни қуйидаги муддатларда ⟦ёзма шаклда (имзо қўйдириб) огоҳлантириши шарт⟧:",
+              "anchor": "6261634"
+            }
+          ]
+        },
+        {
+          "id": "twomonths",
+          "label": "Ishlar hajmi qisqarishi sababli shtat o'zgarsa kamida ikki oy oldin",
+          "required": true,
+          "why": "165-modda 1-band.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "камида икки ой олдин",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "ташкилот раҳбарига, унинг ўринбосарларига, бош бухгалтерга ва ташкилотнинг алоҳида бўлинмаси раҳбарига нисбатан ташкилот мулкдорининг ўзгарганлиги муносабати билан бекор қилинганда ⟦камида икки ой олдин⟧;",
+              "anchor": "6261634"
+            }
+          ]
+        },
+        {
+          "id": "twoweeks",
+          "label": "Malakasi yetarli emasligi sababli kamida ikki hafta oldin",
+          "required": true,
+          "why": "165-modda 2-band.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "камида икки ҳафта олдин",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "ташкилот раҳбарига, унинг ўринбосарларига, бош бухгалтерга ва ташкилотнинг алоҳида бўлинмаси раҳбарига нисбатан ташкилот мулкдорининг ўзгарганлиги муносабати билан бекор қилинганда камида икки ой олдин;\n2) меҳнат шартномаси ходимнинг малакаси етарли бўлмаганлиги туфайли бажараётган ишига мувофиқ эмаслиги муносабати билан бекор қилинганда ⟦камида икки ҳафта олдин⟧;",
+              "anchor": "6261634"
+            }
+          ]
+        },
+        {
+          "id": "threedays",
+          "label": "Xodimning aybli harakatlari sababli kamida uch kun oldin",
+          "required": true,
+          "why": "165-modda 3-band.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "камида уч кун олдин",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "3) меҳнат шартномаси ходимнинг айбли ҳаракатлари (ҳаракатсизлиги) муносабати билан бекор қилинганда ⟦камида уч кун олдин⟧.",
+              "anchor": "6261634"
+            }
+          ]
+        },
+        {
+          "id": "oral",
+          "label": "Og'zaki ogohlantirish yetarli",
+          "required": false,
+          "why": "Ogohlantirish yozma shaklda, imzo qo'ydirib beriladi (165-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ёзма шаклда (имзо қўйдириб) огоҳлантириши шарт",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "Иш берувчи ўзининг меҳнат шартномасини бекор қилиш нияти ҳақида ходимни қуйидаги муддатларда ⟦ёзма шаклда (имзо қўйдириб) огоҳлантириши шарт⟧:",
+              "anchor": "6261634"
+            }
+          ]
+        },
+        {
+          "id": "none",
+          "label": "Shtat qisqarishida ogohlantirish shart emas",
+          "required": false,
+          "why": "Kamida ikki oy oldin ogohlantirish kerak (165-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "камида икки ой олдин",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "ташкилот раҳбарига, унинг ўринбосарларига, бош бухгалтерга ва ташкилотнинг алоҳида бўлинмаси раҳбарига нисбатан ташкилот мулкдорининг ўзгарганлиги муносабати билан бекор қилинганда ⟦камида икки ой олдин⟧;",
+              "anchor": "6261634"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Muddat hisobi",
+      "sources": [],
+      "points": 25,
+      "description": "Har bir asos bo'yicha muddatni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "cut",
+          "label": "Shtat/ishlar hajmi qisqarishi bilan bekor qilishda ogohlantirish",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d3",
+              "label": "3 kun"
+            },
+            {
+              "id": "w2",
+              "label": "2 hafta"
+            },
+            {
+              "id": "m2",
+              "label": "2 oy"
+            },
+            {
+              "id": "m6",
+              "label": "6 oy"
+            }
+          ],
+          "correct": "m2",
+          "why": "Kamida ikki oy oldin (165-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "камида икки ой олдин",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "ташкилот раҳбарига, унинг ўринбосарларига, бош бухгалтерга ва ташкилотнинг алоҳида бўлинмаси раҳбарига нисбатан ташкилот мулкдорининг ўзгарганлиги муносабати билан бекор қилинганда ⟦камида икки ой олдин⟧;",
+              "anchor": "6261634"
+            }
+          ]
+        },
+        {
+          "id": "qual",
+          "label": "Malaka yetarli emasligi sababli bekor qilishda",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d3",
+              "label": "3 kun"
+            },
+            {
+              "id": "w2",
+              "label": "2 hafta"
+            },
+            {
+              "id": "m2",
+              "label": "2 oy"
+            },
+            {
+              "id": "m6",
+              "label": "6 oy"
+            }
+          ],
+          "correct": "w2",
+          "why": "Kamida ikki hafta oldin (165-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "камида икки ҳафта олдин",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "ташкилот раҳбарига, унинг ўринбосарларига, бош бухгалтерга ва ташкилотнинг алоҳида бўлинмаси раҳбарига нисбатан ташкилот мулкдорининг ўзгарганлиги муносабати билан бекор қилинганда камида икки ой олдин;\n2) меҳнат шартномаси ходимнинг малакаси етарли бўлмаганлиги туфайли бажараётган ишига мувофиқ эмаслиги муносабати билан бекор қилинганда ⟦камида икки ҳафта олдин⟧;",
+              "anchor": "6261634"
+            }
+          ]
+        },
+        {
+          "id": "fault",
+          "label": "Xodimning aybli harakatlari sababli bekor qilishda",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d3",
+              "label": "3 kun"
+            },
+            {
+              "id": "w2",
+              "label": "2 hafta"
+            },
+            {
+              "id": "m2",
+              "label": "2 oy"
+            },
+            {
+              "id": "m6",
+              "label": "6 oy"
+            }
+          ],
+          "correct": "d3",
+          "why": "Kamida uch kun oldin (165-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "камида уч кун олдин",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "3) меҳнат шартномаси ходимнинг айбли ҳаракатлари (ҳаракатсизлиги) муносабати билан бекор қилинганда ⟦камида уч кун олдин⟧.",
+              "anchor": "6261634"
+            }
+          ]
+        },
+        {
+          "id": "form",
+          "label": "Ogohlantirish shakli",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "written",
+              "label": "Yozma, imzo qo'ydirib"
+            },
+            {
+              "id": "oral",
+              "label": "Og'zaki"
+            },
+            {
+              "id": "sms",
+              "label": "Faqat SMS"
+            }
+          ],
+          "correct": "written",
+          "why": "Yozma, imzo qo'ydirib (165-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ёзма шаклда (имзо қўйдириб) огоҳлантириши шарт",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "Иш берувчи ўзининг меҳнат шартномасини бекор қилиш нияти ҳақида ходимни қуйидаги муддатларда ⟦ёзма шаклда (имзо қўйдириб) огоҳлантириши шарт⟧:",
+              "anchor": "6261634"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Shtat qisqarishi: qancha oldin ogohlantiriladi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Bo'shatish sababi: ishlar hajmining qisqarishi tufayli shtat o'zgarishi; Ogohlantirish hali berilmagan; Xodim 3 yildan beri ishlaydi",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ёзма шаклда (имзо қўйдириб) огоҳлантириши шарт",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "Иш берувчи ўзининг меҳнат шартномасини бекор қилиш нияти ҳақида ходимни қуйидаги муддатларда ⟦ёзма шаклда (имзо қўйдириб) огоҳлантириши шарт⟧:",
+              "anchor": "6261634"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Ogohlantirish yozma shaklda, imzo qo'ydirib beriladi; Ishlar hajmi qisqarishi sababli shtat o'zgarsa kamida ikki oy oldin; Malakasi yetarli emasligi sababli kamida ikki hafta oldin; Xodimning aybli harakatlari sababli kamida uch kun oldin",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Bekor qilish tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Ish beruvchi harakatlarini belgilang.",
+      "order": [
+        {
+          "id": "decide",
+          "label": "Ish beruvchi shartnomani bekor qilish niyatini belgilaydi (masalan, shtat o'zgarishi)",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Иш берувчи ўзининг меҳнат шартномасини бекор қилиш нияти ҳақида ходимни",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "⟦Иш берувчи ўзининг меҳнат шартномасини бекор қилиш нияти ҳақида ходимни⟧ қуйидаги муддатларда ёзма шаклда (имзо қўйдириб) огоҳлантириши шарт:",
+              "anchor": "6261634"
+            }
+          ]
+        },
+        {
+          "id": "notice",
+          "label": "Xodimni yozma, imzo qo'ydirib ogohlantiradi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ёзма шаклда (имзо қўйдириб) огоҳлантириши шарт",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "Иш берувчи ўзининг меҳнат шартномасини бекор қилиш нияти ҳақида ходимни қуйидаги муддатларда ⟦ёзма шаклда (имзо қўйдириб) огоҳлантириши шарт⟧:",
+              "anchor": "6261634"
+            }
+          ]
+        },
+        {
+          "id": "wait",
+          "label": "Asosga mos muddat (masalan, kamida ikki oy) o'tgach shartnoma bekor qilinadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "165-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "камида икки ой олдин",
+              "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+              "text": "ташкилот раҳбарига, унинг ўринбосарларига, бош бухгалтерга ва ташкилотнинг алоҳида бўлинмаси раҳбарига нисбатан ташкилот мулкдорининг ўзгарганлиги муносабати билан бекор қилинганда ⟦камида икки ой олдин⟧;",
+              "anchor": "6261634"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Aybli harakat",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+          "article": "165-modda",
+          "url": "https://lex.uz/docs/6257288",
+          "quote": "камида уч кун олдин",
+          "heading": "165-модда. Меҳнат шартномасини иш берувчининг ташаббусига кўра бекор қилиш тўғрисида огоҳлантириш",
+          "text": "3) меҳнат шартномаси ходимнинг айбли ҳаракатлари (ҳаракатсизлиги) муносабати билан бекор қилинганда ⟦камида уч кун олдин⟧.",
+          "anchor": "6261634"
+        }
+      ],
+      "points": 15,
+      "description": "Xodimning aybli harakatlari sababli bekor qilishda ogohlantirish muddati qancha?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Kamida 3 kun"
+        },
+        {
+          "id": "b",
+          "label": "Kamida 2 oy"
+        },
+        {
+          "id": "c",
+          "label": "Kamida 6 oy"
+        },
+        {
+          "id": "d",
+          "label": "Ogohlantirish shart emas"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

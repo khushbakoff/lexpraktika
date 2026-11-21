@@ -1,0 +1,435 @@
+{
+  "id": "ish-advokat-advokatlik-siri",
+  "title": "Mijoz ma'lumotini oshkor qilsa bo'ladimi?",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "advokat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Advokat firmasi xodimi mijoz haqidagi ma'lumotni so'ragan shaxsga aytmoqchi. Advokatlik siri tarkibi va uni saqlash majburiyatini Advokatura qonuni bo'yicha belgilang.",
+  "client": {
+    "persona": "Advokat yordamchisi",
+    "openingLine": "Assalomu alaykum. Kimdir mijozimiz bizga murojaat qilgan-qilmaganini so'radi. Aytsam bo'ladimi?",
+    "hiddenFacts": [
+      {
+        "id": "ask",
+        "fact": "Begona shaxs mijoz murojaati haqida so'ramoqda",
+        "revealOn": []
+      },
+      {
+        "id": "fact",
+        "fact": "Mijoz firmaga murojaat qilgan",
+        "revealOn": []
+      },
+      {
+        "id": "advice",
+        "fact": "Advokat mijozga maslahat bergan",
+        "revealOn": []
+      },
+      {
+        "id": "self",
+        "fact": "So'ragan shaxs ma'lumotdan o'z manfaati uchun foydalanmoqchi",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "ask",
+        "fact",
+        "advice"
+      ],
+      "questions": [
+        {
+          "id": "q-ask",
+          "text": "Kim so'rayapti?",
+          "factId": "ask",
+          "reply": "Mijozning tanishi."
+        },
+        {
+          "id": "q-fact",
+          "text": "Mijoz murojaat qilganmi?",
+          "factId": "fact",
+          "reply": "Ha, murojaat qilgan."
+        },
+        {
+          "id": "q-advice",
+          "text": "Maslahat berilganmi?",
+          "factId": "advice",
+          "reply": "Ha, advokat maslahat bergan."
+        },
+        {
+          "id": "q-self",
+          "text": "Nega so'rayapti?",
+          "factId": "self",
+          "reply": "Foydalanmoqchi bo'lsa kerak."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Advokatlik siri tarkibi",
+      "sources": [],
+      "points": 15,
+      "description": "Nimalar advokatlik siriga kiradi.",
+      "prompt": "Quyidagilardan qaysilari advokatlik siriga kiradi? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "fact",
+          "label": "Ishonch bildiruvchi advokatdan yordam so'rab murojaat etganligining o'zi",
+          "required": true,
+          "why": "9-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "9-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "ishonch bildiruvchi shaxs (himoya ostidagi shaxs) advokatdan yordam soʻrab murojaat etganligining oʻzi",
+              "heading": "9-modda. Advokatlik siri",
+              "text": "Advokat advokatlik sirini saqlashi shart. Advokatlik siri jumlasiga ⟦ishonch bildiruvchi shaxs (himoya ostidagi shaxs) advokatdan yordam soʻrab murojaat etganligining oʻzi⟧, ishonch bildiruvchi shaxs (himoya ostidagi shaxs) yordam soʻrab murojaat etgan masalalar, advokatdan ishonch bildiruvchi shaxs (himoya ostidagi shaxs) olgan maslahatlar, nasihatlar va tushuntirishlarning mohiyati, advokatning ishonch bildiruvchi shaxs (himoya ostidagi shaxs) bilan oʻtkazgan suhbatida toʻxtab oʻtilgan barcha masalalar kiradi.",
+              "anchor": "-1426342"
+            }
+          ]
+        },
+        {
+          "id": "topic",
+          "label": "Ishonch bildiruvchi yordam so'rab murojaat etgan masalalar",
+          "required": true,
+          "why": "9-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "9-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "ishonch bildiruvchi shaxs (himoya ostidagi shaxs) yordam soʻrab murojaat etgan masalalar",
+              "heading": "9-modda. Advokatlik siri",
+              "text": "Advokat advokatlik sirini saqlashi shart. Advokatlik siri jumlasiga ishonch bildiruvchi shaxs (himoya ostidagi shaxs) advokatdan yordam soʻrab murojaat etganligining oʻzi, ⟦ishonch bildiruvchi shaxs (himoya ostidagi shaxs) yordam soʻrab murojaat etgan masalalar⟧, advokatdan ishonch bildiruvchi shaxs (himoya ostidagi shaxs) olgan maslahatlar, nasihatlar va tushuntirishlarning mohiyati, advokatning ishonch bildiruvchi shaxs (himoya ostidagi shaxs) bilan oʻtkazgan suhbatida toʻxtab oʻtilgan barcha masalalar kiradi.",
+              "anchor": "-1426342"
+            }
+          ]
+        },
+        {
+          "id": "advice",
+          "label": "Advokatdan olingan maslahat va tushuntirishlarning mohiyati",
+          "required": true,
+          "why": "9-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "9-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "advokatdan ishonch bildiruvchi shaxs (himoya ostidagi shaxs) olgan maslahatlar, nasihatlar va tushuntirishlarning mohiyati",
+              "heading": "9-modda. Advokatlik siri",
+              "text": "Advokat advokatlik sirini saqlashi shart. Advokatlik siri jumlasiga ishonch bildiruvchi shaxs (himoya ostidagi shaxs) advokatdan yordam soʻrab murojaat etganligining oʻzi, ishonch bildiruvchi shaxs (himoya ostidagi shaxs) yordam soʻrab murojaat etgan masalalar, ⟦advokatdan ishonch bildiruvchi shaxs (himoya ostidagi shaxs) olgan maslahatlar, nasihatlar va tushuntirishlarning mohiyati⟧, advokatning ishonch bildiruvchi shaxs (himoya ostidagi shaxs) bilan oʻtkazgan suhbatida toʻxtab oʻtilgan barcha masalalar kiradi.",
+              "anchor": "-1426342"
+            }
+          ]
+        },
+        {
+          "id": "talk",
+          "label": "Suhbatda to'xtalib o'tilgan barcha masalalar",
+          "required": true,
+          "why": "9-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "9-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "advokatning ishonch bildiruvchi shaxs (himoya ostidagi shaxs) bilan oʻtkazgan suhbatida toʻxtab oʻtilgan barcha masalalar",
+              "heading": "9-modda. Advokatlik siri",
+              "text": "Advokat advokatlik sirini saqlashi shart. Advokatlik siri jumlasiga ishonch bildiruvchi shaxs (himoya ostidagi shaxs) advokatdan yordam soʻrab murojaat etganligining oʻzi, ishonch bildiruvchi shaxs (himoya ostidagi shaxs) yordam soʻrab murojaat etgan masalalar, advokatdan ishonch bildiruvchi shaxs (himoya ostidagi shaxs) olgan maslahatlar, nasihatlar va tushuntirishlarning mohiyati, ⟦advokatning ishonch bildiruvchi shaxs (himoya ostidagi shaxs) bilan oʻtkazgan suhbatida toʻxtab oʻtilgan barcha masalalar⟧ kiradi.",
+              "anchor": "-1426342"
+            }
+          ]
+        },
+        {
+          "id": "public",
+          "label": "Mijoz murojaat qilgani haqidagi ma'lumot sir emas, uni aytish mumkin",
+          "required": false,
+          "why": "Murojaat etganlik faktining o'zi advokatlik siriga kiradi (9-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "9-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "advokatdan yordam soʻrab murojaat etganligining oʻzi",
+              "heading": "9-modda. Advokatlik siri",
+              "text": "Advokat advokatlik sirini saqlashi shart. Advokatlik siri jumlasiga ishonch bildiruvchi shaxs (himoya ostidagi shaxs) ⟦advokatdan yordam soʻrab murojaat etganligining oʻzi⟧, ishonch bildiruvchi shaxs (himoya ostidagi shaxs) yordam soʻrab murojaat etgan masalalar, advokatdan ishonch bildiruvchi shaxs (himoya ostidagi shaxs) olgan maslahatlar, nasihatlar va tushuntirishlarning mohiyati, advokatning ishonch bildiruvchi shaxs (himoya ostidagi shaxs) bilan oʻtkazgan suhbatida toʻxtab oʻtilgan barcha masalalar kiradi.",
+              "anchor": "-1426342"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Sirni saqlash",
+      "sources": [],
+      "points": 25,
+      "description": "Majburiyatlarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "keep",
+          "label": "Advokatlik sirini saqlash",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "must",
+              "label": "Advokat uchun shart"
+            },
+            {
+              "id": "opt",
+              "label": "Ixtiyoriy"
+            },
+            {
+              "id": "fee",
+              "label": "Haq to'lansa oshkor etiladi"
+            }
+          ],
+          "correct": "must",
+          "why": "Advokat saqlashi shart (9-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "9-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "Advokat advokatlik sirini saqlashi shart",
+              "heading": "9-modda. Advokatlik siri",
+              "text": "⟦Advokat advokatlik sirini saqlashi shart⟧. Advokatlik siri jumlasiga ishonch bildiruvchi shaxs (himoya ostidagi shaxs) advokatdan yordam soʻrab murojaat etganligining oʻzi, ishonch bildiruvchi shaxs (himoya ostidagi shaxs) yordam soʻrab murojaat etgan masalalar, advokatdan ishonch bildiruvchi shaxs (himoya ostidagi shaxs) olgan maslahatlar, nasihatlar va tushuntirishlarning mohiyati, advokatning ishonch bildiruvchi shaxs (himoya ostidagi shaxs) bilan oʻtkazgan suhbatida toʻxtab oʻtilgan barcha masalalar kiradi.",
+              "anchor": "-1426342"
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "label": "Sirni oshkor etish taqiqi kimlarga tegishli?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "all",
+              "label": "Advokat, yordamchi, stajyor, firma mansabdor shaxslari va texnik xodimlariga"
+            },
+            {
+              "id": "lawyer",
+              "label": "Faqat advokatning o'ziga"
+            },
+            {
+              "id": "none",
+              "label": "Hech kimga"
+            }
+          ],
+          "correct": "all",
+          "why": "Advokat, yordamchisi, stajyori, byuro, hay'at va firmalar mansabdor shaxslari va texnik xodimlariga (9-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "9-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "Advokat, advokat yordamchisi, advokat stajyori, advokatlar byurolari, hayʼatlari va firmalari mansabdor shaxslari va texnik xodimlarining",
+              "heading": "9-modda. Advokatlik siri",
+              "text": "⟦Advokat, advokat yordamchisi, advokat stajyori, advokatlar byurolari, hayʼatlari va firmalari mansabdor shaxslari va texnik xodimlarining⟧ advokatlik siri boʻlmish maʼlumotlarni oshkor etishi va bu maʼlumotlardan oʻz manfaatlari yoki uchinchi shaxslar manfaatlari yoʻlida foydalanishi man etiladi.",
+              "anchor": "-1426342"
+            }
+          ]
+        },
+        {
+          "id": "use",
+          "label": "Sir bo'lgan ma'lumotlardan o'z yoki uchinchi shaxs manfaatida foydalanish",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "ban",
+              "label": "Man etiladi"
+            },
+            {
+              "id": "ok",
+              "label": "Mumkin"
+            },
+            {
+              "id": "half",
+              "label": "Yarim mumkin"
+            }
+          ],
+          "correct": "ban",
+          "why": "Man etiladi (9-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "9-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "advokatlik siri boʻlmish maʼlumotlarni oshkor etishi va bu maʼlumotlardan oʻz manfaatlari yoki uchinchi shaxslar manfaatlari yoʻlida foydalanishi man etiladi",
+              "heading": "9-modda. Advokatlik siri",
+              "text": "Advokat, advokat yordamchisi, advokat stajyori, advokatlar byurolari, hayʼatlari va firmalari mansabdor shaxslari va texnik xodimlarining ⟦advokatlik siri boʻlmish maʼlumotlarni oshkor etishi va bu maʼlumotlardan oʻz manfaatlari yoki uchinchi shaxslar manfaatlari yoʻlida foydalanishi man etiladi⟧.",
+              "anchor": "-1426342"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Mijoz ma'lumotini oshkor qilsa bo'ladimi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Begona shaxs mijoz murojaati haqida so'ramoqda; Mijoz firmaga murojaat qilgan; Advokat mijozga maslahat bergan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "9-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "ishonch bildiruvchi shaxs (himoya ostidagi shaxs) advokatdan yordam soʻrab murojaat etganligining oʻzi",
+              "heading": "9-modda. Advokatlik siri",
+              "text": "Advokat advokatlik sirini saqlashi shart. Advokatlik siri jumlasiga ⟦ishonch bildiruvchi shaxs (himoya ostidagi shaxs) advokatdan yordam soʻrab murojaat etganligining oʻzi⟧, ishonch bildiruvchi shaxs (himoya ostidagi shaxs) yordam soʻrab murojaat etgan masalalar, advokatdan ishonch bildiruvchi shaxs (himoya ostidagi shaxs) olgan maslahatlar, nasihatlar va tushuntirishlarning mohiyati, advokatning ishonch bildiruvchi shaxs (himoya ostidagi shaxs) bilan oʻtkazgan suhbatida toʻxtab oʻtilgan barcha masalalar kiradi.",
+              "anchor": "-1426342"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Ishonch bildiruvchi advokatdan yordam so'rab murojaat etganligining o'zi; Ishonch bildiruvchi yordam so'rab murojaat etgan masalalar; Advokatdan olingan maslahat va tushuntirishlarning mohiyati; Suhbatda to'xtalib o'tilgan barcha masalalar",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "So'rovga javob",
+      "sources": [],
+      "points": 15,
+      "description": "To'g'ri harakatlarni belgilang.",
+      "order": [
+        {
+          "id": "ask",
+          "label": "Begona shaxs mijoz haqida so'raydi",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "9-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "advokatdan yordam soʻrab murojaat etganligining oʻzi",
+              "heading": "9-modda. Advokatlik siri",
+              "text": "Advokat advokatlik sirini saqlashi shart. Advokatlik siri jumlasiga ishonch bildiruvchi shaxs (himoya ostidagi shaxs) ⟦advokatdan yordam soʻrab murojaat etganligining oʻzi⟧, ishonch bildiruvchi shaxs (himoya ostidagi shaxs) yordam soʻrab murojaat etgan masalalar, advokatdan ishonch bildiruvchi shaxs (himoya ostidagi shaxs) olgan maslahatlar, nasihatlar va tushuntirishlarning mohiyati, advokatning ishonch bildiruvchi shaxs (himoya ostidagi shaxs) bilan oʻtkazgan suhbatida toʻxtab oʻtilgan barcha masalalar kiradi.",
+              "anchor": "-1426342"
+            }
+          ]
+        },
+        {
+          "id": "secret",
+          "label": "Murojaat faktining o'zi advokatlik sirligini tushunadi",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "9-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "ishonch bildiruvchi shaxs (himoya ostidagi shaxs) advokatdan yordam soʻrab murojaat etganligining oʻzi",
+              "heading": "9-modda. Advokatlik siri",
+              "text": "Advokat advokatlik sirini saqlashi shart. Advokatlik siri jumlasiga ⟦ishonch bildiruvchi shaxs (himoya ostidagi shaxs) advokatdan yordam soʻrab murojaat etganligining oʻzi⟧, ishonch bildiruvchi shaxs (himoya ostidagi shaxs) yordam soʻrab murojaat etgan masalalar, advokatdan ishonch bildiruvchi shaxs (himoya ostidagi shaxs) olgan maslahatlar, nasihatlar va tushuntirishlarning mohiyati, advokatning ishonch bildiruvchi shaxs (himoya ostidagi shaxs) bilan oʻtkazgan suhbatida toʻxtab oʻtilgan barcha masalalar kiradi.",
+              "anchor": "-1426342"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "label": "Ma'lumotni oshkor etmaydi va undan foydalanmaydi",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "9-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "man etiladi",
+              "heading": "9-modda. Advokatlik siri",
+              "text": "Advokat, advokat yordamchisi, advokat stajyori, advokatlar byurolari, hayʼatlari va firmalari mansabdor shaxslari va texnik xodimlarining advokatlik siri boʻlmish maʼlumotlarni oshkor etishi va bu maʼlumotlardan oʻz manfaatlari yoki uchinchi shaxslar manfaatlari yoʻlida foydalanishi ⟦man etiladi⟧.",
+              "anchor": "-1426342"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Sir majburiyati",
+      "sources": [
+        {
+          "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+          "article": "9-modda",
+          "url": "https://lex.uz/docs/-54503",
+          "quote": "Advokat advokatlik sirini saqlashi shart",
+          "heading": "9-modda. Advokatlik siri",
+          "text": "⟦Advokat advokatlik sirini saqlashi shart⟧. Advokatlik siri jumlasiga ishonch bildiruvchi shaxs (himoya ostidagi shaxs) advokatdan yordam soʻrab murojaat etganligining oʻzi, ishonch bildiruvchi shaxs (himoya ostidagi shaxs) yordam soʻrab murojaat etgan masalalar, advokatdan ishonch bildiruvchi shaxs (himoya ostidagi shaxs) olgan maslahatlar, nasihatlar va tushuntirishlarning mohiyati, advokatning ishonch bildiruvchi shaxs (himoya ostidagi shaxs) bilan oʻtkazgan suhbatida toʻxtab oʻtilgan barcha masalalar kiradi.",
+          "anchor": "-1426342"
+        }
+      ],
+      "points": 15,
+      "description": "Advokat advokatlik sirini saqlashi qanday?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Shart"
+        },
+        {
+          "id": "b",
+          "label": "Ixtiyoriy"
+        },
+        {
+          "id": "c",
+          "label": "Faqat sudda"
+        },
+        {
+          "id": "d",
+          "label": "Faqat bir yil"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

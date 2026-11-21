@@ -1,0 +1,463 @@
+{
+  "id": "jinoyat-pushaymon-iqrorlik",
+  "title": "Pushaymon bo'lish va aybga iqrorlik: jazo qanday yengillashadi?",
+  "area": "Jinoyat huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Birinchi marta jinoyat sodir etgan shaxs pushaymon bo'lib, aybiga iqror bo'lmoqchi. Javobgarlikdan ozod qilish va jazoning yengillashuvi shartlarini Jinoyat kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Bobur, 27 yosh, ayblanuvchi",
+    "openingLine": "Assalomu alaykum. Birinchi marta jinoyat sodir etdim, pushaymonman, zararni qoplaganman. Jazo yengillashishi yoki javobgarlikdan ozod bo'lishim mumkinmi?",
+    "hiddenFacts": [
+      {
+        "id": "first",
+        "fact": "Mijoz jinoyatni birinchi marta sodir etgan, u uncha og'ir bo'lmagan jinoyat",
+        "revealOn": []
+      },
+      {
+        "id": "confess",
+        "fact": "Mijoz aybini bo'yniga olish haqida arz qilgan va faol yordam bergan",
+        "revealOn": []
+      },
+      {
+        "id": "damage",
+        "fact": "Keltirilgan zararni bartaraf qilgan",
+        "revealOn": []
+      },
+      {
+        "id": "deal",
+        "fact": "Aybga iqrorlik to'g'risida kelishuv tuzilgan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "first",
+        "confess",
+        "damage"
+      ],
+      "questions": [
+        {
+          "id": "q-first",
+          "text": "Bu birinchi marta sodir etgan jinoyatingizmi?",
+          "factId": "first",
+          "reply": "Ha, birinchi marta."
+        },
+        {
+          "id": "q-confess",
+          "text": "Aybingizni tan olganmisiz?",
+          "factId": "confess",
+          "reply": "Ha, arz qilganman va tergovga yordam berganman."
+        },
+        {
+          "id": "q-damage",
+          "text": "Zararni qoplaganmisiz?",
+          "factId": "damage",
+          "reply": "Ha, to'liq qoplaganman."
+        },
+        {
+          "id": "q-deal",
+          "text": "Kelishuv tuzilganmi?",
+          "factId": "deal",
+          "reply": "Ha, aybga iqrorlik haqida kelishuv tuzilgan."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Javobgarlikdan ozod qilish",
+      "sources": [],
+      "points": 15,
+      "description": "Shartlarni aniqlang.",
+      "prompt": "Pushaymon bo'lganlik tufayli javobgarlikdan ozod qilish shartlariga qaysilari kiradi? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "first",
+          "label": "Ijtimoiy xavfi katta bo'lmagan yoki uncha og'ir bo'lmagan jinoyatni birinchi marta sodir etgan bo'lish",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "Ijtimoiy xavfi katta boʻlmagan yoki uncha ogʻir boʻlmagan jinoyatni birinchi marta sodir etgan shaxs",
+              "heading": "66-modda. Aybdor oʻz qilmishiga amalda pushaymon boʻlganligi munosabati bilan javobgarlikdan ozod qilish",
+              "text": "⟦Ijtimoiy xavfi katta boʻlmagan yoki uncha ogʻir boʻlmagan jinoyatni birinchi marta sodir etgan shaxs⟧, agar u aybini boʻyniga olish toʻgʻrisida arz qilgan, chin koʻngildan pushaymon boʻlgan, jinoyatning ochilishiga faol yordam bergan va keltirilgan zararni bartaraf qilgan boʻlsa, javobgarlikdan ozod qilinishi mumkin.",
+              "anchor": "-1723499"
+            }
+          ]
+        },
+        {
+          "id": "arz",
+          "label": "Aybini bo'yniga olish to'g'risida arz qilish",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "aybini boʻyniga olish toʻgʻrisida arz qilgan",
+              "heading": "66-modda. Aybdor oʻz qilmishiga amalda pushaymon boʻlganligi munosabati bilan javobgarlikdan ozod qilish",
+              "text": "Ijtimoiy xavfi katta boʻlmagan yoki uncha ogʻir boʻlmagan jinoyatni birinchi marta sodir etgan shaxs, agar u ⟦aybini boʻyniga olish toʻgʻrisida arz qilgan⟧, chin koʻngildan pushaymon boʻlgan, jinoyatning ochilishiga faol yordam bergan va keltirilgan zararni bartaraf qilgan boʻlsa, javobgarlikdan ozod qilinishi mumkin.",
+              "anchor": "-1723499"
+            }
+          ]
+        },
+        {
+          "id": "repent",
+          "label": "Chin ko'ngildan pushaymon bo'lish",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "chin koʻngildan pushaymon boʻlgan",
+              "heading": "66-modda. Aybdor oʻz qilmishiga amalda pushaymon boʻlganligi munosabati bilan javobgarlikdan ozod qilish",
+              "text": "Ijtimoiy xavfi katta boʻlmagan yoki uncha ogʻir boʻlmagan jinoyatni birinchi marta sodir etgan shaxs, agar u aybini boʻyniga olish toʻgʻrisida arz qilgan, ⟦chin koʻngildan pushaymon boʻlgan⟧, jinoyatning ochilishiga faol yordam bergan va keltirilgan zararni bartaraf qilgan boʻlsa, javobgarlikdan ozod qilinishi mumkin.",
+              "anchor": "-1723499"
+            }
+          ]
+        },
+        {
+          "id": "help",
+          "label": "Jinoyatning ochilishiga faol yordam berish",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "jinoyatning ochilishiga faol yordam bergan",
+              "heading": "66-modda. Aybdor oʻz qilmishiga amalda pushaymon boʻlganligi munosabati bilan javobgarlikdan ozod qilish",
+              "text": "Ijtimoiy xavfi katta boʻlmagan yoki uncha ogʻir boʻlmagan jinoyatni birinchi marta sodir etgan shaxs, agar u aybini boʻyniga olish toʻgʻrisida arz qilgan, chin koʻngildan pushaymon boʻlgan, ⟦jinoyatning ochilishiga faol yordam bergan⟧ va keltirilgan zararni bartaraf qilgan boʻlsa, javobgarlikdan ozod qilinishi mumkin.",
+              "anchor": "-1723499"
+            }
+          ]
+        },
+        {
+          "id": "repair",
+          "label": "Keltirilgan zararni bartaraf qilish",
+          "required": true,
+          "why": "66-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "keltirilgan zararni bartaraf qilgan",
+              "heading": "66-modda. Aybdor oʻz qilmishiga amalda pushaymon boʻlganligi munosabati bilan javobgarlikdan ozod qilish",
+              "text": "Ijtimoiy xavfi katta boʻlmagan yoki uncha ogʻir boʻlmagan jinoyatni birinchi marta sodir etgan shaxs, agar u aybini boʻyniga olish toʻgʻrisida arz qilgan, chin koʻngildan pushaymon boʻlgan, jinoyatning ochilishiga faol yordam bergan va ⟦keltirilgan zararni bartaraf qilgan⟧ boʻlsa, javobgarlikdan ozod qilinishi mumkin.",
+              "anchor": "-1723499"
+            }
+          ]
+        },
+        {
+          "id": "repeat",
+          "label": "Jinoyatni takroran sodir etgan shaxs ham shu asosda ozod qilinishi mumkin",
+          "required": false,
+          "why": "Faqat birinchi marta sodir etgan shaxs ozod qilinishi mumkin (66-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "birinchi marta sodir etgan shaxs",
+              "heading": "66-modda. Aybdor oʻz qilmishiga amalda pushaymon boʻlganligi munosabati bilan javobgarlikdan ozod qilish",
+              "text": "Ijtimoiy xavfi katta boʻlmagan yoki uncha ogʻir boʻlmagan jinoyatni ⟦birinchi marta sodir etgan shaxs⟧, agar u aybini boʻyniga olish toʻgʻrisida arz qilgan, chin koʻngildan pushaymon boʻlgan, jinoyatning ochilishiga faol yordam bergan va keltirilgan zararni bartaraf qilgan boʻlsa, javobgarlikdan ozod qilinishi mumkin.",
+              "anchor": "-1723499"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Jazo chegaralari",
+      "sources": [],
+      "points": 25,
+      "description": "Jazoning yengillashuvi chegaralarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "deal",
+          "label": "Aybga iqrorlik to'g'risida kelishuv tuzilgan jinoyatlarda jazo",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "full",
+              "label": "Eng ko'p jazo tayinlanishi mumkin"
+            },
+            {
+              "id": "half",
+              "label": "Eng ko'p jazoning yarmidan oshmasligi kerak"
+            },
+            {
+              "id": "third",
+              "label": "Uchdan biridan oshmasligi kerak"
+            }
+          ],
+          "correct": "half",
+          "why": "Maxsus qismdagi eng ko'p jazoning yarmidan oshmasligi kerak (572-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "572-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "eng koʻp jazoning yarmidan oshmasligi kerak",
+              "heading": "572-modda. Aybga iqrorlik toʻgʻrisida kelishuv tuzilgan jinoyatlar boʻyicha jazo tayinlash",
+              "text": "Aybga iqrorlik toʻgʻrisida kelishuv tuzilgan jinoyatlar boʻyicha tayinlanadigan jazoning muddati yoki miqdori ushbu Kodeks Maxsus qismining tegishli moddasida (qismida) nazarda tutilgan ⟦eng koʻp jazoning yarmidan oshmasligi kerak⟧.",
+              "anchor": "-5301216"
+            }
+          ]
+        },
+        {
+          "id": "repent",
+          "label": "Pushaymon bo'lganida jazo tayinlashda (yengillashtiruvchi holatlar bor, og'irlashtiruvchi yo'q)",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "half",
+              "label": "Yarmidan oshmasligi kerak"
+            },
+            {
+              "id": "twothirds",
+              "label": "Uchdan ikki qismidan oshmasligi kerak"
+            },
+            {
+              "id": "full",
+              "label": "Cheklov yo'q"
+            }
+          ],
+          "correct": "twothirds",
+          "why": "Eng ko'p jazoning uchdan ikki qismidan oshmasligi kerak (571-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "571-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "eng koʻp jazoning uchdan ikki qismidan oshmasligi kerak",
+              "heading": "571-modda. Aybdor oʻz qilmishiga amalda pushaymon boʻlganida jazo tayinlash",
+              "text": "Ushbu Kodeks 55-moddasi birinchi qismining “a” va “b” bandlarida nazarda tutilgan jazoni yengillashtiruvchi holatlar mavjud boʻlgan va ushbu Kodeks 56-moddasining birinchi qismida nazarda tutilgan jazoni ogʻirlashtiruvchi holatlar mavjud boʻlmagan taqdirda jazo muddati yoki miqdori ushbu Kodeks Maxsus qismining tegishli moddasida nazarda tutilgan ⟦eng koʻp jazoning uchdan ikki qismidan oshmasligi kerak⟧. Mazkur qoida javobgarlikni ogʻirlashtiradigan holatlarda qasddan odam oʻldirish (97-moddaning ikkinchi qismi), oʻn toʻrt yoshga toʻlmagan shaxsning nomusiga tegish (118-moddaning toʻrtinchi qismi), oʻn toʻrt yoshga toʻlmagan shaxsga nisbatan zoʻrlik ishlatib, qoʻrqitib yoki uning ojizligidan foydalanib, jinsiy ehtiyojni gʻayritabiiy usulda qondirish (119-moddaning toʻrtinchi qismi) va terrorizm (155-moddaning uchinchi qismi) bilan bogʻliq jinoyatlarni sodir etgan shaxslarga tatbiq etilmaydi.",
+              "anchor": "-1723291"
+            }
+          ]
+        },
+        {
+          "id": "free",
+          "label": "Birinchi marta uncha og'ir bo'lmagan jinoyat, arz qilgan, pushaymon, faol yordam, zarar bartaraf etilgan bo'lsa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "may",
+              "label": "Javobgarlikdan ozod qilinishi mumkin"
+            },
+            {
+              "id": "never",
+              "label": "Hech qachon ozod qilinmaydi"
+            },
+            {
+              "id": "always",
+              "label": "Avtomatik ozod qilinadi"
+            }
+          ],
+          "correct": "may",
+          "why": "Javobgarlikdan ozod qilinishi mumkin (66-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "javobgarlikdan ozod qilinishi mumkin",
+              "heading": "66-modda. Aybdor oʻz qilmishiga amalda pushaymon boʻlganligi munosabati bilan javobgarlikdan ozod qilish",
+              "text": "Ijtimoiy xavfi katta boʻlmagan yoki uncha ogʻir boʻlmagan jinoyatni birinchi marta sodir etgan shaxs, agar u aybini boʻyniga olish toʻgʻrisida arz qilgan, chin koʻngildan pushaymon boʻlgan, jinoyatning ochilishiga faol yordam bergan va keltirilgan zararni bartaraf qilgan boʻlsa, ⟦javobgarlikdan ozod qilinishi mumkin⟧.",
+              "anchor": "-1723499"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Pushaymon bo'lish va aybga iqrorlik: jazo qanday yengillashadi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Mijoz jinoyatni birinchi marta sodir etgan, u uncha og'ir bo'lmagan jinoyat; Mijoz aybini bo'yniga olish haqida arz qilgan va faol yordam bergan; Keltirilgan zararni bartaraf qilgan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "Ijtimoiy xavfi katta boʻlmagan yoki uncha ogʻir boʻlmagan jinoyatni birinchi marta sodir etgan shaxs",
+              "heading": "66-modda. Aybdor oʻz qilmishiga amalda pushaymon boʻlganligi munosabati bilan javobgarlikdan ozod qilish",
+              "text": "⟦Ijtimoiy xavfi katta boʻlmagan yoki uncha ogʻir boʻlmagan jinoyatni birinchi marta sodir etgan shaxs⟧, agar u aybini boʻyniga olish toʻgʻrisida arz qilgan, chin koʻngildan pushaymon boʻlgan, jinoyatning ochilishiga faol yordam bergan va keltirilgan zararni bartaraf qilgan boʻlsa, javobgarlikdan ozod qilinishi mumkin.",
+              "anchor": "-1723499"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "572-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "eng koʻp jazoning yarmidan oshmasligi kerak",
+              "heading": "572-modda. Aybga iqrorlik toʻgʻrisida kelishuv tuzilgan jinoyatlar boʻyicha jazo tayinlash",
+              "text": "Aybga iqrorlik toʻgʻrisida kelishuv tuzilgan jinoyatlar boʻyicha tayinlanadigan jazoning muddati yoki miqdori ushbu Kodeks Maxsus qismining tegishli moddasida (qismida) nazarda tutilgan ⟦eng koʻp jazoning yarmidan oshmasligi kerak⟧.",
+              "anchor": "-5301216"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Ijtimoiy xavfi katta bo'lmagan yoki uncha og'ir bo'lmagan jinoyatni birinchi marta sodir etgan bo'lish; Aybini bo'yniga olish to'g'risida arz qilish; Chin ko'ngildan pushaymon bo'lish; Jinoyatning ochilishiga faol yordam berish",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Yengillashuv bosqichlari",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "repair",
+          "label": "Shaxs aybini bo'yniga oladi, pushaymon bo'ladi, yordam beradi va zararni bartaraf qiladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "aybini boʻyniga olish toʻgʻrisida arz qilgan, chin koʻngildan pushaymon boʻlgan, jinoyatning ochilishiga faol yordam bergan va keltirilgan zararni bartaraf qilgan boʻlsa",
+              "heading": "66-modda. Aybdor oʻz qilmishiga amalda pushaymon boʻlganligi munosabati bilan javobgarlikdan ozod qilish",
+              "text": "Ijtimoiy xavfi katta boʻlmagan yoki uncha ogʻir boʻlmagan jinoyatni birinchi marta sodir etgan shaxs, agar u ⟦aybini boʻyniga olish toʻgʻrisida arz qilgan, chin koʻngildan pushaymon boʻlgan, jinoyatning ochilishiga faol yordam bergan va keltirilgan zararni bartaraf qilgan boʻlsa⟧, javobgarlikdan ozod qilinishi mumkin.",
+              "anchor": "-1723499"
+            }
+          ]
+        },
+        {
+          "id": "free",
+          "label": "Shartlar bo'lsa, javobgarlikdan ozod qilinishi mumkin",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "66-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "javobgarlikdan ozod qilinishi mumkin",
+              "heading": "66-modda. Aybdor oʻz qilmishiga amalda pushaymon boʻlganligi munosabati bilan javobgarlikdan ozod qilish",
+              "text": "Ijtimoiy xavfi katta boʻlmagan yoki uncha ogʻir boʻlmagan jinoyatni birinchi marta sodir etgan shaxs, agar u aybini boʻyniga olish toʻgʻrisida arz qilgan, chin koʻngildan pushaymon boʻlgan, jinoyatning ochilishiga faol yordam bergan va keltirilgan zararni bartaraf qilgan boʻlsa, ⟦javobgarlikdan ozod qilinishi mumkin⟧.",
+              "anchor": "-1723499"
+            }
+          ]
+        },
+        {
+          "id": "deal",
+          "label": "Aybga iqrorlik kelishuvi bo'lsa, jazo eng ko'p jazoning yarmidan oshmaydi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "572-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "eng koʻp jazoning yarmidan oshmasligi kerak",
+              "heading": "572-modda. Aybga iqrorlik toʻgʻrisida kelishuv tuzilgan jinoyatlar boʻyicha jazo tayinlash",
+              "text": "Aybga iqrorlik toʻgʻrisida kelishuv tuzilgan jinoyatlar boʻyicha tayinlanadigan jazoning muddati yoki miqdori ushbu Kodeks Maxsus qismining tegishli moddasida (qismida) nazarda tutilgan ⟦eng koʻp jazoning yarmidan oshmasligi kerak⟧.",
+              "anchor": "-5301216"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Pushaymon",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+          "article": "571-modda",
+          "url": "https://lex.uz/docs/-111453",
+          "quote": "eng koʻp jazoning uchdan ikki qismidan oshmasligi kerak",
+          "heading": "571-modda. Aybdor oʻz qilmishiga amalda pushaymon boʻlganida jazo tayinlash",
+          "text": "Ushbu Kodeks 55-moddasi birinchi qismining “a” va “b” bandlarida nazarda tutilgan jazoni yengillashtiruvchi holatlar mavjud boʻlgan va ushbu Kodeks 56-moddasining birinchi qismida nazarda tutilgan jazoni ogʻirlashtiruvchi holatlar mavjud boʻlmagan taqdirda jazo muddati yoki miqdori ushbu Kodeks Maxsus qismining tegishli moddasida nazarda tutilgan ⟦eng koʻp jazoning uchdan ikki qismidan oshmasligi kerak⟧. Mazkur qoida javobgarlikni ogʻirlashtiradigan holatlarda qasddan odam oʻldirish (97-moddaning ikkinchi qismi), oʻn toʻrt yoshga toʻlmagan shaxsning nomusiga tegish (118-moddaning toʻrtinchi qismi), oʻn toʻrt yoshga toʻlmagan shaxsga nisbatan zoʻrlik ishlatib, qoʻrqitib yoki uning ojizligidan foydalanib, jinsiy ehtiyojni gʻayritabiiy usulda qondirish (119-moddaning toʻrtinchi qismi) va terrorizm (155-moddaning uchinchi qismi) bilan bogʻliq jinoyatlarni sodir etgan shaxslarga tatbiq etilmaydi.",
+          "anchor": "-1723291"
+        }
+      ],
+      "points": 15,
+      "description": "Pushaymon bo'lganida jazo tayinlashda jazo eng ko'p jazoning qancha qismidan oshmasligi kerak (yengillashtiruvchi holatlar bor, og'irlashtiruvchi yo'q)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Uchdan ikki qismidan"
+        },
+        {
+          "id": "b",
+          "label": "Yarmidan"
+        },
+        {
+          "id": "c",
+          "label": "To'rtdan biridan"
+        },
+        {
+          "id": "d",
+          "label": "Cheklov yo'q"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

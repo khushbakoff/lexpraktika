@@ -1,0 +1,478 @@
+{
+  "id": "jinoyat-ayblanuvchi-huquqlari",
+  "title": "Ayblanuvchining huquqlari tushuntirilmadi",
+  "area": "Jinoyat-protsessual huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Ayblanuvchiga huquqlari tushuntirilmagan. Himoyalanish huquqi, ayblanuvchi huquqlari va himoyachi bilan uchrashuv qoidalarini Jinoyat-protsessual kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Davron, 52 yosh, ayblanuvchining himoyachisi",
+    "openingLine": "Assalomu alaykum. Mijozimga ayb e'lon qilishdi, lekin huquqlarini tushuntirishmadi. Bu qanchalik jiddiy?",
+    "hiddenFacts": [
+      {
+        "id": "charged",
+        "fact": "Mijozga ayb e'lon qilingan",
+        "revealOn": []
+      },
+      {
+        "id": "noexplain",
+        "fact": "Huquqlari tushuntirilmagan",
+        "revealOn": []
+      },
+      {
+        "id": "refuse",
+        "fact": "Mijoz ko'rsatuv berishdan bosh tortmoqchi",
+        "revealOn": []
+      },
+      {
+        "id": "meet",
+        "fact": "Himoyachi bilan uchrashuvga tergovchi cheklov qo'ymoqda",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "charged",
+        "noexplain",
+        "refuse"
+      ],
+      "questions": [
+        {
+          "id": "q-charged",
+          "text": "Mijozga nima e'lon qilindi?",
+          "factId": "charged",
+          "reply": "Unga ayb e'lon qilindi."
+        },
+        {
+          "id": "q-noexplain",
+          "text": "Huquqlari tushuntirilganmi?",
+          "factId": "noexplain",
+          "reply": "Yo'q, hech narsa tushuntirilmagan."
+        },
+        {
+          "id": "q-refuse",
+          "text": "Mijoz nima qilmoqchi?",
+          "factId": "refuse",
+          "reply": "Ko'rsatuv bermaslikni xohlaydi."
+        },
+        {
+          "id": "q-meet",
+          "text": "Siz bilan uchrashuvga to'sqinlik bormi?",
+          "factId": "meet",
+          "reply": "Tergovchi vaqtni cheklamoqchi."
+        },
+        {
+          "id": "q-filler",
+          "text": "Mijozning kasbi nima?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, huquqlar masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Ayblanuvchi huquqlari",
+      "sources": [],
+      "points": 15,
+      "description": "Ayblanuvchi qanday huquqlarga ega.",
+      "prompt": "Ayblanuvchi qanday huquqlarga ega? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "know",
+          "label": "O'zining nimada ayblanayotganini bilish",
+          "required": true,
+          "why": "46-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "46-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "oʻzining nimada ayblanayotganligini bilish",
+              "heading": "46-modda. Ayblanuvchining huquq va majburiyatlari",
+              "text": "Ayblanuvchi: ⟦oʻzining nimada ayblanayotganligini bilish⟧; qamoqqa olinganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish, ushbu Kodeks 230-moddasining ikkinchi qismida nazarda tutilgan hollar bundan mustasno; oʻziga qoʻyilgan ayblov yuzasidan hamda ishning boshqa har qanday holatlari boʻyicha koʻrsatuvlar berish yoxu…",
+              "anchor": "-253580"
+            }
+          ]
+        },
+        {
+          "id": "call",
+          "label": "Qamoqqa olinganligi va turgan joyi haqida advokat yoki yaqin qarindoshiga xabar berish",
+          "required": true,
+          "why": "46-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "46-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "qamoqqa olinganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish",
+              "heading": "46-modda. Ayblanuvchining huquq va majburiyatlari",
+              "text": "Ayblanuvchi: oʻzining nimada ayblanayotganligini bilish; ⟦qamoqqa olinganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish⟧; himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish, ushbu Kodeks 230-moddasining ikkinchi qismida nazarda tutilgan hollar bundan mustasno; oʻziga qoʻyilgan ayblov yuzasidan hamda ishning boshqa har qanday holatlari boʻyicha koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish va koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mum…",
+              "anchor": "-253580"
+            }
+          ]
+        },
+        {
+          "id": "lawyer",
+          "label": "Himoyachiga ega bo'lish va u bilan xoli uchrashish",
+          "required": true,
+          "why": "46-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "46-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish",
+              "heading": "46-modda. Ayblanuvchining huquq va majburiyatlari",
+              "text": "Ayblanuvchi: oʻzining nimada ayblanayotganligini bilish; qamoqqa olinganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; ⟦himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish⟧, ushbu Kodeks 230-moddasining ikkinchi qismida nazarda tutilgan hollar bundan mustasno; oʻziga qoʻyilgan ayblov yuzasidan hamda ishning boshqa har qanday holatlari boʻyicha koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish va koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xabardor boʻlish; oʻz ona tilidan hamda tarjimon xizmatidan foydalanish; oʻzining himoyalanish huquqin…",
+              "anchor": "-253580"
+            }
+          ]
+        },
+        {
+          "id": "silence",
+          "label": "Ko'rsatuv berish yoki berishdan bosh tortish",
+          "required": true,
+          "why": "46-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "46-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish",
+              "heading": "46-modda. Ayblanuvchining huquq va majburiyatlari",
+              "text": "…yblanayotganligini bilish; qamoqqa olinganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish, ushbu Kodeks 230-moddasining ikkinchi qismida nazarda tutilgan hollar bundan mustasno; oʻziga qoʻyilgan ayblov yuzasidan hamda ishning boshqa har qanday holatlari boʻyicha ⟦koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish⟧ va koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xabardor boʻlish; oʻz ona tilidan hamda tarjimon xizmatidan foydalanish; oʻzining himoyalanish huquqini shaxsan oʻzi amalga oshirish; iltimosnoma berish va rad qilish; dalillar taqdim etish; surishtiruvchi yoki tergovchining ruxsati bilan tergov harakatlarida ishtirok etish; surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ish…",
+              "anchor": "-253580"
+            }
+          ]
+        },
+        {
+          "id": "against",
+          "label": "Ko'rsatuvlari o'ziga qarshi dalil sifatida ishlatilishi mumkinligidan xabardor bo'lish",
+          "required": true,
+          "why": "46-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "46-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xabardor boʻlish",
+              "heading": "46-modda. Ayblanuvchining huquq va majburiyatlari",
+              "text": "…gʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish, ushbu Kodeks 230-moddasining ikkinchi qismida nazarda tutilgan hollar bundan mustasno; oʻziga qoʻyilgan ayblov yuzasidan hamda ishning boshqa har qanday holatlari boʻyicha koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish va ⟦koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xabardor boʻlish⟧; oʻz ona tilidan hamda tarjimon xizmatidan foydalanish; oʻzining himoyalanish huquqini shaxsan oʻzi amalga oshirish; iltimosnoma berish va rad qilish; dalillar taqdim etish; surishtiruvchi yoki tergovchining ruxsati bilan tergov harakatlarida ishtirok etish; surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ishning barcha materiallari bilan tanishib chiqish hamda undan zarur maʼlumotlarni yozib olish, materiallar va hujjatlardan texnika…",
+              "anchor": "-253580"
+            }
+          ]
+        },
+        {
+          "id": "destroy",
+          "label": "Ishga doir dalillarni yo'q qilish",
+          "required": false,
+          "why": "Ayblanuvchi huquqlari orasida dalillarni yo'q qilish yo'q; aksincha haqiqatni aniqlashga to'sqinlik qilmasligi shart.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "46-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Ayblanuvchi: oʻzining nimada ayblanayotganligini bilish",
+              "heading": "46-modda. Ayblanuvchining huquq va majburiyatlari",
+              "text": "⟦Ayblanuvchi: oʻzining nimada ayblanayotganligini bilish⟧; qamoqqa olinganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish, ushbu Kodeks 230-moddasining ikkinchi qismida nazarda tutilgan hollar bundan mustasno; oʻziga qoʻyilgan ayblov yuzasidan hamda ishning boshqa har qanday holatlari boʻyicha koʻrsatuvlar berish yoxu…",
+              "anchor": "-253580"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Himoyalanish huquqi",
+      "sources": [],
+      "points": 25,
+      "description": "Himoyalanish huquqi va uni ta'minlash qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "right",
+          "label": "Gumon qilinuvchi, ayblanuvchi va sudlanuvchi nimaga ega?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "defend",
+              "label": "Himoyalanish huquqiga, barcha imkoniyatlar ta'minlanadi"
+            },
+            {
+              "id": "none",
+              "label": "Huquq yo'q, tergovchi hal qiladi"
+            },
+            {
+              "id": "late",
+              "label": "Faqat sud bosqichida"
+            }
+          ],
+          "correct": "defend",
+          "why": "Himoyalanish huquqiga ega, o'zini himoya qilish uchun barcha imkoniyatlar ta'minlanadi (24-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "24-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ayblanuvchi va sudlanuvchi himoyalanish huquqiga ega boʻlib, ularga oʻzini himoya qilish uchun barcha imkoniyatlar taʼminlanadi",
+              "heading": "24-modda. Gumon qilinuvchi, ayblanuvchi va sudlanuvchini himoyalanish huquqi bilan taʼminlash",
+              "text": "Gumon qilinuvchi, ⟦ayblanuvchi va sudlanuvchi himoyalanish huquqiga ega boʻlib, ularga oʻzini himoya qilish uchun barcha imkoniyatlar taʼminlanadi⟧.",
+              "anchor": "-252899"
+            }
+          ]
+        },
+        {
+          "id": "explain",
+          "label": "Berilgan huquqlarni tushuntirib berish majburiyati kimning zimmasida?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "officials",
+              "label": "Surishtiruvchi, tergovchi, prokuror, sud"
+            },
+            {
+              "id": "lawyer",
+              "label": "Faqat himoyachi"
+            },
+            {
+              "id": "nobody",
+              "label": "Hech kim"
+            }
+          ],
+          "correct": "officials",
+          "why": "Surishtiruvchi, tergovchi, prokuror va sud zimmasida (24-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "24-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "surishtiruvchi, tergovchi, prokuror, sud zimmasidagi gumon qilinuvchiga, ayblanuvchiga va sudlanuvchiga unga berilgan huquqlarni tushuntirib berish",
+              "heading": "24-modda. Gumon qilinuvchi, ayblanuvchi va sudlanuvchini himoyalanish huquqi bilan taʼminlash",
+              "text": "Himoyalanish huquqi ⟦surishtiruvchi, tergovchi, prokuror, sud zimmasidagi gumon qilinuvchiga, ayblanuvchiga va sudlanuvchiga unga berilgan huquqlarni tushuntirib berish⟧ hamda u oʻziga qoʻyilgan ayblovdan himoyalanish uchun qonunda nazarda tutilgan barcha vosita va usullardan foydalanishda haqiqiy imkoniyatga ega boʻlishiga qaratilgan chora-tadbirlar koʻrish majburiyati bilan taʼminlanadi.",
+              "anchor": "-252899"
+            }
+          ]
+        },
+        {
+          "id": "silence",
+          "label": "Ko'rsatuv berishdan bosh tortish haqida nima ma'lum qilinishi kerak?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "warn",
+              "label": "Ko'rsatuvlari o'ziga qarshi dalil sifatida ishlatilishi mumkinligi haqida xabardor qilinadi"
+            },
+            {
+              "id": "no",
+              "label": "Hech narsa"
+            },
+            {
+              "id": "pen",
+              "label": "Bosh tortgani uchun jazolanadi"
+            }
+          ],
+          "correct": "warn",
+          "why": "Ko'rsatuvlari o'ziga qarshi dalil sifatida ishlatilishi mumkinligi haqida xabardor bo'lish huquqi bor (46-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "46-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xabardor boʻlish",
+              "heading": "46-modda. Ayblanuvchining huquq va majburiyatlari",
+              "text": "…gʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish, ushbu Kodeks 230-moddasining ikkinchi qismida nazarda tutilgan hollar bundan mustasno; oʻziga qoʻyilgan ayblov yuzasidan hamda ishning boshqa har qanday holatlari boʻyicha koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish va ⟦koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xabardor boʻlish⟧; oʻz ona tilidan hamda tarjimon xizmatidan foydalanish; oʻzining himoyalanish huquqini shaxsan oʻzi amalga oshirish; iltimosnoma berish va rad qilish; dalillar taqdim etish; surishtiruvchi yoki tergovchining ruxsati bilan tergov harakatlarida ishtirok etish; surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ishning barcha materiallari bilan tanishib chiqish hamda undan zarur maʼlumotlarni yozib olish, materiallar va hujjatlardan texnika…",
+              "anchor": "-253580"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Ayblanuvchining huquqlari tushuntirilmadi). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Mijozga ayb e'lon qilingan; Huquqlari tushuntirilmagan; Mijoz ko'rsatuv berishdan bosh tortmoqchi",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "46-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "oʻzining nimada ayblanayotganligini bilish",
+              "heading": "46-modda. Ayblanuvchining huquq va majburiyatlari",
+              "text": "Ayblanuvchi: ⟦oʻzining nimada ayblanayotganligini bilish⟧; qamoqqa olinganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish, ushbu Kodeks 230-moddasining ikkinchi qismida nazarda tutilgan hollar bundan mustasno; oʻziga qoʻyilgan ayblov yuzasidan hamda ishning boshqa har qanday holatlari boʻyicha koʻrsatuvlar berish yoxu…",
+              "anchor": "-253580"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "24-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ayblanuvchi va sudlanuvchi himoyalanish huquqiga ega boʻlib, ularga oʻzini himoya qilish uchun barcha imkoniyatlar taʼminlanadi",
+              "heading": "24-modda. Gumon qilinuvchi, ayblanuvchi va sudlanuvchini himoyalanish huquqi bilan taʼminlash",
+              "text": "Gumon qilinuvchi, ⟦ayblanuvchi va sudlanuvchi himoyalanish huquqiga ega boʻlib, ularga oʻzini himoya qilish uchun barcha imkoniyatlar taʼminlanadi⟧.",
+              "anchor": "-252899"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: O'zining nimada ayblanayotganini bilish; Qamoqqa olinganligi va turgan joyi haqida advokat yoki yaqin qarindoshiga xabar berish; Himoyachiga ega bo'lish va u bilan xoli uchrashish; Ko'rsatuv berish yoki berishdan bosh tortish",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Ayblov va himoya",
+      "sources": [],
+      "points": 15,
+      "description": "Jarayonni ketma-ketlikda belgilang.",
+      "order": [
+        {
+          "id": "charge",
+          "label": "Ayblanuvchiga nimada ayblanayotgani ma'lum qilinadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "46-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "oʻzining nimada ayblanayotganligini bilish",
+              "heading": "46-modda. Ayblanuvchining huquq va majburiyatlari",
+              "text": "Ayblanuvchi: ⟦oʻzining nimada ayblanayotganligini bilish⟧; qamoqqa olinganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish, ushbu Kodeks 230-moddasining ikkinchi qismida nazarda tutilgan hollar bundan mustasno; oʻziga qoʻyilgan ayblov yuzasidan hamda ishning boshqa har qanday holatlari boʻyicha koʻrsatuvlar berish yoxu…",
+              "anchor": "-253580"
+            }
+          ]
+        },
+        {
+          "id": "explain",
+          "label": "Unga berilgan huquqlar tushuntiriladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "24-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "huquqlarni tushuntirib berish",
+              "heading": "24-modda. Gumon qilinuvchi, ayblanuvchi va sudlanuvchini himoyalanish huquqi bilan taʼminlash",
+              "text": "Himoyalanish huquqi surishtiruvchi, tergovchi, prokuror, sud zimmasidagi gumon qilinuvchiga, ayblanuvchiga va sudlanuvchiga unga berilgan ⟦huquqlarni tushuntirib berish⟧ hamda u oʻziga qoʻyilgan ayblovdan himoyalanish uchun qonunda nazarda tutilgan barcha vosita va usullardan foydalanishda haqiqiy imkoniyatga ega boʻlishiga qaratilgan chora-tadbirlar koʻrish majburiyati bilan taʼminlanadi.",
+              "anchor": "-252899"
+            }
+          ]
+        },
+        {
+          "id": "lawyer",
+          "label": "Himoyachi bilan cheklovsiz xoli uchrashadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "46-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish",
+              "heading": "46-modda. Ayblanuvchining huquq va majburiyatlari",
+              "text": "Ayblanuvchi: oʻzining nimada ayblanayotganligini bilish; qamoqqa olinganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; ⟦himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish⟧, ushbu Kodeks 230-moddasining ikkinchi qismida nazarda tutilgan hollar bundan mustasno; oʻziga qoʻyilgan ayblov yuzasidan hamda ishning boshqa har qanday holatlari boʻyicha koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish va koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xabardor boʻlish; oʻz ona tilidan hamda tarjimon xizmatidan foydalanish; oʻzining himoyalanish huquqin…",
+              "anchor": "-253580"
+            }
+          ]
+        },
+        {
+          "id": "choose",
+          "label": "Ko'rsatuv beradi yoki berishdan bosh tortadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "46-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish",
+              "heading": "46-modda. Ayblanuvchining huquq va majburiyatlari",
+              "text": "…yblanayotganligini bilish; qamoqqa olinganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish, ushbu Kodeks 230-moddasining ikkinchi qismida nazarda tutilgan hollar bundan mustasno; oʻziga qoʻyilgan ayblov yuzasidan hamda ishning boshqa har qanday holatlari boʻyicha ⟦koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish⟧ va koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xabardor boʻlish; oʻz ona tilidan hamda tarjimon xizmatidan foydalanish; oʻzining himoyalanish huquqini shaxsan oʻzi amalga oshirish; iltimosnoma berish va rad qilish; dalillar taqdim etish; surishtiruvchi yoki tergovchining ruxsati bilan tergov harakatlarida ishtirok etish; surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ish…",
+              "anchor": "-253580"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Uchrashuvlar",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "46-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish",
+          "heading": "46-modda. Ayblanuvchining huquq va majburiyatlari",
+          "text": "Ayblanuvchi: oʻzining nimada ayblanayotganligini bilish; qamoqqa olinganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; himoyachiga ega boʻlish hamda ⟦uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish⟧, ushbu Kodeks 230-moddasining ikkinchi qismida nazarda tutilgan hollar bundan mustasno; oʻziga qoʻyilgan ayblov yuzasidan hamda ishning boshqa har qanday holatlari boʻyicha koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish va koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xabardor boʻlish; oʻz ona tilidan hamda tarjimon xizmatidan foydalanish; oʻzining himoyalanish huquqin…",
+          "anchor": "-253580"
+        }
+      ],
+      "points": 15,
+      "description": "Ayblanuvchining himoyachi bilan uchrashuvlari soni va davomiyligi qanday?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Cheklanmagan, xoli (230-moddaning ikkinchi qismidagi hollar bundan mustasno)"
+        },
+        {
+          "id": "b",
+          "label": "Haftada bir soat"
+        },
+        {
+          "id": "c",
+          "label": "Faqat tergovchi ishtirokida"
+        },
+        {
+          "id": "d",
+          "label": "Mumkin emas"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

@@ -1,0 +1,467 @@
+{
+  "id": "mehnat-ish-vaqtidan-tashqari",
+  "title": "Har kuni kechgacha ishlatishmoqda",
+  "area": "Mehnat huquqi",
+  "areaId": "mehnat",
+  "tracks": [
+    "advokat",
+    "korxona",
+    "davlat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Xodim har kuni belgilangan vaqtdan ortiq ishlayapti. Ish vaqtidan tashqari ish tushunchasi va eng ko'p davomiyligini Mehnat kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Dilfuza, 29 yosh, hisobchi",
+    "openingLine": "Assalomu alaykum. Rahbar har kuni kechgacha ishlashga majbur qilyapti, soatlar hisobga olinmayapti. Bu qonuniymi?",
+    "hiddenFacts": [
+      {
+        "id": "extra",
+        "fact": "Dilfuza belgilangan ish vaqtidan ortiq ishlayapti",
+        "revealOn": []
+      },
+      {
+        "id": "days",
+        "fact": "Bu bir necha kun ketma-ket davom etmoqda",
+        "revealOn": []
+      },
+      {
+        "id": "count",
+        "fact": "Ortiqcha soatlar hisobga olinmayapti",
+        "revealOn": []
+      },
+      {
+        "id": "nocons",
+        "fact": "Xodimning roziligi so'ralmagan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "extra",
+        "days",
+        "count"
+      ],
+      "questions": [
+        {
+          "id": "q-extra",
+          "text": "Qancha ortiqcha ishlaysiz?",
+          "factId": "extra",
+          "reply": "Har kuni 3–4 soat ortiq."
+        },
+        {
+          "id": "q-days",
+          "text": "Necha kundan beri?",
+          "factId": "days",
+          "reply": "Ketma-ket bir necha kun."
+        },
+        {
+          "id": "q-count",
+          "text": "Soatlar hisoblanyaptimi?",
+          "factId": "count",
+          "reply": "Yo'q, hech qayerda yozilmaydi."
+        },
+        {
+          "id": "q-nocons",
+          "text": "Sizdan rozilik so'rashdimi?",
+          "factId": "nocons",
+          "reply": "Yo'q, shunchaki buyruq berishadi."
+        },
+        {
+          "id": "q-filler",
+          "text": "Ofis qaysi qavatda?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish vaqti haqida gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Ish vaqtidan tashqari ish",
+      "sources": [],
+      "points": 15,
+      "description": "Qaysi qoidalar to'g'ri.",
+      "prompt": "Ish vaqtidan tashqari ish haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "def",
+          "label": "Belgilangan ish vaqti davomiyligidan tashqari ishga jalb etish ish vaqtidan tashqari ish hisoblanadi",
+          "required": true,
+          "why": "189-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "189-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Иш берувчи томонидан ходимни ходим учун белгиланган иш вақти давомийлигидан ташқари ишга жалб этиш иш вақтидан ташқари иш деб ҳисобланади",
+              "heading": "189-модда. Иш вақтидан ташқари иш",
+              "text": "⟦Иш берувчи томонидан ходимни ходим учун белгиланган иш вақти давомийлигидан ташқари ишга жалб этиш иш вақтидан ташқари иш деб ҳисобланади⟧.",
+              "anchor": "6262411"
+            }
+          ]
+        },
+        {
+          "id": "daily",
+          "label": "Kunlik hisobda belgilangan smena davomiyligidan oshadigan ish ish vaqtidan tashqari ish",
+          "required": true,
+          "why": "189-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "189-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Иш вақти кунлик ҳисобга олинганда ходим учун белгиланган ҳар кунги иш (смена) вақтининг давомийлигидан ошадиган иш иш вақтидан ташқари иш деб ҳисобланади",
+              "heading": "189-модда. Иш вақтидан ташқари иш",
+              "text": "⟦Иш вақти кунлик ҳисобга олинганда ходим учун белгиланган ҳар кунги иш (смена) вақтининг давомийлигидан ошадиган иш иш вақтидан ташқари иш деб ҳисобланади⟧.",
+              "anchor": "6262411"
+            }
+          ]
+        },
+        {
+          "id": "max",
+          "label": "Ketma-ket ikki kun davomida to'rt soatdan oshmasligi kerak",
+          "required": true,
+          "why": "190-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "190-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "сурункасига икки кун давомида тўрт соатдан",
+              "heading": "190-модда. Иш вақтидан ташқари ишларнинг энг кўп давомийлиги",
+              "text": "Иш вақтидан ташқари ишнинг давомийлиги ходим учун ⟦сурункасига икки кун давомида тўрт соатдан⟧ (меҳнат шароитлари ноқулай бўлган ишларда — бир кунда икки соатдан) ошмаслиги керак.",
+              "anchor": "6262447"
+            }
+          ]
+        },
+        {
+          "id": "track",
+          "label": "Ish beruvchi ortiqcha ish davomiyligini aniq hisobga olinishini ta'minlashi shart",
+          "required": true,
+          "why": "190-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "190-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Иш берувчи ходимнинг иш вақтидан ташқари ишининг давомийлиги аниқ ҳисобга олинишини таъминлаши шарт",
+              "heading": "190-модда. Иш вақтидан ташқари ишларнинг энг кўп давомийлиги",
+              "text": "⟦Иш берувчи ходимнинг иш вақтидан ташқари ишининг давомийлиги аниқ ҳисобга олинишини таъминлаши шарт⟧.",
+              "anchor": "6262447"
+            }
+          ]
+        },
+        {
+          "id": "unlim",
+          "label": "Ish beruvchi ortiqcha ishni cheklovsiz buyura oladi",
+          "required": false,
+          "why": "Ortiqcha ish davomiyligi cheklangan (190-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "190-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "сурункасига икки кун давомида тўрт соатдан",
+              "heading": "190-модда. Иш вақтидан ташқари ишларнинг энг кўп давомийлиги",
+              "text": "Иш вақтидан ташқари ишнинг давомийлиги ходим учун ⟦сурункасига икки кун давомида тўрт соатдан⟧ (меҳнат шароитлари ноқулай бўлган ишларда — бир кунда икки соатдан) ошмаслиги керак.",
+              "anchor": "6262447"
+            }
+          ]
+        },
+        {
+          "id": "untracked",
+          "label": "Ortiqcha soatlarni hisobga olish shart emas",
+          "required": false,
+          "why": "Ish beruvchi aniq hisobga olinishini ta'minlashi shart (190-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "190-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "аниқ ҳисобга олинишини таъминлаши шарт",
+              "heading": "190-модда. Иш вақтидан ташқари ишларнинг энг кўп давомийлиги",
+              "text": "Иш берувчи ходимнинг иш вақтидан ташқари ишининг давомийлиги ⟦аниқ ҳисобга олинишини таъминлаши шарт⟧.",
+              "anchor": "6262447"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Ortiqcha ish qoidalari",
+      "sources": [],
+      "points": 25,
+      "description": "Ortiqcha ish qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "def",
+          "label": "Ish vaqtidan tashqari ish nima?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "extra",
+              "label": "Belgilangan ish vaqti davomiyligidan tashqari ishga jalb etish"
+            },
+            {
+              "id": "night",
+              "label": "Faqat tungi ish"
+            },
+            {
+              "id": "any",
+              "label": "Har qanday ish"
+            }
+          ],
+          "correct": "extra",
+          "why": "Xodimni belgilangan ish vaqti davomiyligidan tashqari ishga jalb etish (189-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "189-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "иш вақтидан ташқари иш деб ҳисобланади",
+              "heading": "189-модда. Иш вақтидан ташқари иш",
+              "text": "Иш берувчи томонидан ходимни ходим учун белгиланган иш вақти давомийлигидан ташқари ишга жалб этиш ⟦иш вақтидан ташқари иш деб ҳисобланади⟧.",
+              "anchor": "6262411"
+            }
+          ]
+        },
+        {
+          "id": "max",
+          "label": "Ortiqcha ishning eng ko'p davomiyligi",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "one",
+              "label": "Bir kunda 1 soat"
+            },
+            {
+              "id": "four",
+              "label": "Ketma-ket ikki kun davomida 4 soatdan"
+            },
+            {
+              "id": "eight",
+              "label": "Kuniga 8 soat"
+            },
+            {
+              "id": "none",
+              "label": "Cheklov yo'q"
+            }
+          ],
+          "correct": "four",
+          "why": "Ketma-ket ikki kun davomida to'rt soatdan oshmasligi kerak (190-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "190-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "сурункасига икки кун давомида тўрт соатдан",
+              "heading": "190-модда. Иш вақтидан ташқари ишларнинг энг кўп давомийлиги",
+              "text": "Иш вақтидан ташқари ишнинг давомийлиги ходим учун ⟦сурункасига икки кун давомида тўрт соатдан⟧ (меҳнат шароитлари ноқулай бўлган ишларда — бир кунда икки соатдан) ошмаслиги керак.",
+              "anchor": "6262447"
+            }
+          ]
+        },
+        {
+          "id": "track",
+          "label": "Ortiqcha ish soatlarini hisobga olish",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "must",
+              "label": "Ish beruvchi aniq hisobga olishni ta'minlashi shart"
+            },
+            {
+              "id": "opt",
+              "label": "Ixtiyoriy"
+            },
+            {
+              "id": "emp",
+              "label": "Faqat xodim hisoblaydi"
+            }
+          ],
+          "correct": "must",
+          "why": "Ish beruvchi aniq hisobga olinishini ta'minlashi shart (190-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "190-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Иш берувчи ходимнинг иш вақтидан ташқари ишининг давомийлиги аниқ ҳисобга олинишини таъминлаши шарт",
+              "heading": "190-модда. Иш вақтидан ташқари ишларнинг энг кўп давомийлиги",
+              "text": "⟦Иш берувчи ходимнинг иш вақтидан ташқари ишининг давомийлиги аниқ ҳисобга олинишини таъминлаши шарт⟧.",
+              "anchor": "6262447"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Har kuni kechgacha ishlatishmoqda). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Dilfuza belgilangan ish vaqtidan ortiq ishlayapti; Bu bir necha kun ketma-ket davom etmoqda; Ortiqcha soatlar hisobga olinmayapti",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "189-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "Иш берувчи томонидан ходимни ходим учун белгиланган иш вақти давомийлигидан ташқари ишга жалб этиш иш вақтидан ташқари иш деб ҳисобланади",
+              "heading": "189-модда. Иш вақтидан ташқари иш",
+              "text": "⟦Иш берувчи томонидан ходимни ходим учун белгиланган иш вақти давомийлигидан ташқари ишга жалб этиш иш вақтидан ташқари иш деб ҳисобланади⟧.",
+              "anchor": "6262411"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "190-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "сурункасига икки кун давомида тўрт соатдан",
+              "heading": "190-модда. Иш вақтидан ташқари ишларнинг энг кўп давомийлиги",
+              "text": "Иш вақтидан ташқари ишнинг давомийлиги ходим учун ⟦сурункасига икки кун давомида тўрт соатдан⟧ (меҳнат шароитлари ноқулай бўлган ишларда — бир кунда икки соатдан) ошмаслиги керак.",
+              "anchor": "6262447"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Belgilangan ish vaqti davomiyligidan tashqari ishga jalb etish ish vaqtidan tashqari ish hisoblanadi; Kunlik hisobda belgilangan smena davomiyligidan oshadigan ish ish vaqtidan tashqari ish; Ketma-ket ikki kun davomida to'rt soatdan oshmasligi kerak; Ish beruvchi ortiqcha ish davomiyligini aniq hisobga olinishini ta'minlashi shart",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Ortiqcha ishni baholash",
+      "sources": [],
+      "points": 15,
+      "description": "Baholash ketma-ketligini belgilang.",
+      "order": [
+        {
+          "id": "plan",
+          "label": "Xodim uchun ish vaqti davomiyligi belgilanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "189-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "ходим учун белгиланган иш вақти давомийлигидан ташқари",
+              "heading": "189-модда. Иш вақтидан ташқари иш",
+              "text": "Иш берувчи томонидан ходимни ⟦ходим учун белгиланган иш вақти давомийлигидан ташқари⟧ ишга жалб этиш иш вақтидан ташқари иш деб ҳисобланади.",
+              "anchor": "6262411"
+            }
+          ]
+        },
+        {
+          "id": "exceed",
+          "label": "Belgilanganidan ortiq ishga jalb etilsa, bu ish vaqtidan tashqari ish hisoblanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "189-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "иш вақтидан ташқари иш деб ҳисобланади",
+              "heading": "189-модда. Иш вақтидан ташқари иш",
+              "text": "Иш берувчи томонидан ходимни ходим учун белгиланган иш вақти давомийлигидан ташқари ишга жалб этиш ⟦иш вақтидан ташқари иш деб ҳисобланади⟧.",
+              "anchor": "6262411"
+            }
+          ]
+        },
+        {
+          "id": "limit",
+          "label": "Ortiqcha ish davomiyligi ketma-ket ikki kunda to'rt soatdan oshmasligi kerak",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+              "article": "190-modda",
+              "url": "https://lex.uz/docs/6257288",
+              "quote": "сурункасига икки кун давомида тўрт соатдан",
+              "heading": "190-модда. Иш вақтидан ташқари ишларнинг энг кўп давомийлиги",
+              "text": "Иш вақтидан ташқари ишнинг давомийлиги ходим учун ⟦сурункасига икки кун давомида тўрт соатдан⟧ (меҳнат шароитлари ноқулай бўлган ишларда — бир кунда икки соатдан) ошмаслиги керак.",
+              "anchor": "6262447"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Hisobga olish",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Mehnat kodeksi (2022)",
+          "article": "190-modda",
+          "url": "https://lex.uz/docs/6257288",
+          "quote": "Иш берувчи ходимнинг иш вақтидан ташқари ишининг давомийлиги аниқ ҳисобга олинишини таъминлаши шарт",
+          "heading": "190-модда. Иш вақтидан ташқари ишларнинг энг кўп давомийлиги",
+          "text": "⟦Иш берувчи ходимнинг иш вақтидан ташқари ишининг давомийлиги аниқ ҳисобга олинишини таъминлаши шарт⟧.",
+          "anchor": "6262447"
+        }
+      ],
+      "points": 15,
+      "description": "Ish vaqtidan tashqari ish davomiyligini aniq hisobga olinishini kim ta'minlashi shart?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Ish beruvchi"
+        },
+        {
+          "id": "b",
+          "label": "Xodim"
+        },
+        {
+          "id": "c",
+          "label": "Prokuror"
+        },
+        {
+          "id": "d",
+          "label": "Hech kim"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

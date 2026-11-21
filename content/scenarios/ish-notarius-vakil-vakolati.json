@@ -1,0 +1,440 @@
+{
+  "id": "ish-notarius-vakil-vakolati",
+  "title": "Vakil nomidan bitim: vakolatni qanday tekshiraman?",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy",
+    "advokat"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Bitimni vakil tuzmoqchi. Notarius vakolatni qanday tekshirishini Yo'riqnoma bo'yicha belgilang.",
+  "client": {
+    "persona": "Notarius",
+    "openingLine": "Assalomu alaykum. Bitimni ishonchli vakil tuzmoqchi. Vakolatini qanday tekshiraman?",
+    "hiddenFacts": [
+      {
+        "id": "proxy",
+        "fact": "Vakilda ishonchnoma bor",
+        "revealOn": []
+      },
+      {
+        "id": "death",
+        "fact": "Vakolat beruvchi hayotligini tekshirish kerak",
+        "revealOn": []
+      },
+      {
+        "id": "other",
+        "fact": "Boshqa hujjat bilan ham tasdiqlanishi mumkin",
+        "revealOn": []
+      },
+      {
+        "id": "head",
+        "fact": "Boshqa mijoz yuridik shaxs rahbari",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "proxy",
+        "death",
+        "other"
+      ],
+      "questions": [
+        {
+          "id": "q-proxy",
+          "text": "Vakilda nima bor?",
+          "factId": "proxy",
+          "reply": "Ishonchnoma."
+        },
+        {
+          "id": "q-death",
+          "text": "Vakolat beruvchi hayotmi?",
+          "factId": "death",
+          "reply": "Bilmayman, tekshirish kerak."
+        },
+        {
+          "id": "q-other",
+          "text": "Boshqa hujjat bormi?",
+          "factId": "other",
+          "reply": "Qaror va bayonnoma ham bor."
+        },
+        {
+          "id": "q-head",
+          "text": "Yana kim keldi?",
+          "factId": "head",
+          "reply": "Ta'sis hujjati bo'yicha bitim tuza oladigan direktor."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Vakolatni tekshirish",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Vakil tomonidan bitim tuzilganda qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "check",
+          "label": "Bitim vakil tomonidan tuzilsa, uning vakolati tekshiriladi",
+          "required": true,
+          "why": "25-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Bitim vakil tomonidan tuzilgan taqdirda, uning vakolati tekshiriladi",
+              "heading": "25-band.",
+              "text": "⟦Bitim vakil tomonidan tuzilgan taqdirda, uning vakolati tekshiriladi⟧."
+            }
+          ]
+        },
+        {
+          "id": "docs",
+          "label": "Vakolat ishonchnoma va (yoki) vakolatni tasdiqlovchi boshqa hujjatlar bilan tasdiqlanadi",
+          "required": true,
+          "why": "25-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Vakilning vakolati uning nomiga berilgan ishonchnoma va (yoki) vakolatini tasdiqlovchi boshqa hujjatlar",
+              "heading": "25-band.",
+              "text": "⟦Vakilning vakolati uning nomiga berilgan ishonchnoma va (yoki) vakolatini tasdiqlovchi boshqa hujjatlar⟧ (qaror, umumiy majlis bayonnomasi, kuzatuv kengashining qarori, buyruq va hokazo) bilan tasdiqlanadi. Bunda, vakolat beruvchi jismoniy shaxslarning oʻlim haqida dalolatnoma yozuvi qayd etilmaganligi Tizim orqali “FHDYning yagona elektron arxivi” axborot tizimida tekshiriladi va olingan maʼlumotnoma Tizimda saqlanadi."
+            }
+          ]
+        },
+        {
+          "id": "death",
+          "label": "Vakolat beruvchi jismoniy shaxsning o'lim haqida dalolatnoma yozuvi qayd etilmaganligi Tizim orqali tekshiriladi",
+          "required": true,
+          "why": "25-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "oʻlim haqida dalolatnoma yozuvi qayd etilmaganligi Tizim orqali",
+              "heading": "25-band.",
+              "text": "Vakilning vakolati uning nomiga berilgan ishonchnoma va (yoki) vakolatini tasdiqlovchi boshqa hujjatlar (qaror, umumiy majlis bayonnomasi, kuzatuv kengashining qarori, buyruq va hokazo) bilan tasdiqlanadi. Bunda, vakolat beruvchi jismoniy shaxslarning ⟦oʻlim haqida dalolatnoma yozuvi qayd etilmaganligi Tizim orqali⟧ “FHDYning yagona elektron arxivi” axborot tizimida tekshiriladi va olingan maʼlumotnoma Tizimda saqlanadi."
+            }
+          ]
+        },
+        {
+          "id": "head",
+          "label": "Ta'sis hujjati bo'yicha bitim tuzish huquqiga ega rahbardan ishonchnoma talab qilinmaydi",
+          "required": true,
+          "why": "25-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ishonchnoma talab qilmaydi",
+              "heading": "25-band.",
+              "text": "Notarius taʼsis hujjati boʻyicha bitimlar tuzish huquqiga ega boʻlgan ⟦yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ishonchnoma talab qilmaydi⟧. Bunday hollarda ularning mansab mavqeyini tasdiqlovchi hujjat talab qilinadi."
+            }
+          ]
+        },
+        {
+          "id": "noneed",
+          "label": "Vakilning vakolatini tekshirish shart emas",
+          "required": false,
+          "why": "Vakolat tekshiriladi (25-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "uning vakolati tekshiriladi",
+              "heading": "25-band.",
+              "text": "Bitim vakil tomonidan tuzilgan taqdirda, ⟦uning vakolati tekshiriladi⟧."
+            }
+          ]
+        },
+        {
+          "id": "always",
+          "label": "Har qanday rahbardan ishonchnoma talab qilinadi",
+          "required": false,
+          "why": "Ta'sis hujjati bo'yicha bitim tuza oladigan rahbardan talab qilinmaydi (25-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "ishonchnoma talab qilmaydi",
+              "heading": "25-band.",
+              "text": "Notarius taʼsis hujjati boʻyicha bitimlar tuzish huquqiga ega boʻlgan yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ⟦ishonchnoma talab qilmaydi⟧. Bunday hollarda ularning mansab mavqeyini tasdiqlovchi hujjat talab qilinadi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Vakolat hujjatlari",
+      "sources": [],
+      "points": 25,
+      "description": "Qoidalarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "check",
+          "label": "Bitim vakil tomonidan tuzilsa notarius",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "verify",
+              "label": "Vakolatini tekshiradi"
+            },
+            {
+              "id": "skip",
+              "label": "Tekshirmaydi"
+            },
+            {
+              "id": "later",
+              "label": "Keyin tekshiradi"
+            }
+          ],
+          "correct": "verify",
+          "why": "Vakolatini tekshiradi (25-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Bitim vakil tomonidan tuzilgan taqdirda, uning vakolati tekshiriladi",
+              "heading": "25-band.",
+              "text": "⟦Bitim vakil tomonidan tuzilgan taqdirda, uning vakolati tekshiriladi⟧."
+            }
+          ]
+        },
+        {
+          "id": "death",
+          "label": "Vakolat beruvchi hayotligi qayerda tekshiriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "system",
+              "label": "Tizim orqali FHDYo elektron arxivida"
+            },
+            {
+              "id": "phone",
+              "label": "Telefon orqali"
+            },
+            {
+              "id": "none",
+              "label": "Tekshirilmaydi"
+            }
+          ],
+          "correct": "system",
+          "why": "Tizim orqali FHDYo elektron arxivida (25-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "oʻlim haqida dalolatnoma yozuvi qayd etilmaganligi Tizim orqali",
+              "heading": "25-band.",
+              "text": "Vakilning vakolati uning nomiga berilgan ishonchnoma va (yoki) vakolatini tasdiqlovchi boshqa hujjatlar (qaror, umumiy majlis bayonnomasi, kuzatuv kengashining qarori, buyruq va hokazo) bilan tasdiqlanadi. Bunda, vakolat beruvchi jismoniy shaxslarning ⟦oʻlim haqida dalolatnoma yozuvi qayd etilmaganligi Tizim orqali⟧ “FHDYning yagona elektron arxivi” axborot tizimida tekshiriladi va olingan maʼlumotnoma Tizimda saqlanadi."
+            }
+          ]
+        },
+        {
+          "id": "head",
+          "label": "Ta'sis hujjati bo'yicha bitim tuza oladigan rahbardan",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "proxy",
+              "label": "Ishonchnoma talab qilinadi"
+            },
+            {
+              "id": "noproxy",
+              "label": "Ishonchnoma talab qilinmaydi"
+            },
+            {
+              "id": "court",
+              "label": "Sud qarori talab qilinadi"
+            }
+          ],
+          "correct": "noproxy",
+          "why": "Ishonchnoma talab qilinmaydi (25-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ishonchnoma talab qilmaydi",
+              "heading": "25-band.",
+              "text": "Notarius taʼsis hujjati boʻyicha bitimlar tuzish huquqiga ega boʻlgan ⟦yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ishonchnoma talab qilmaydi⟧. Bunday hollarda ularning mansab mavqeyini tasdiqlovchi hujjat talab qilinadi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Vakil nomidan bitim: vakolatni qanday tekshiraman?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Vakilda ishonchnoma bor; Vakolat beruvchi hayotligini tekshirish kerak; Boshqa hujjat bilan ham tasdiqlanishi mumkin",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Bitim vakil tomonidan tuzilgan taqdirda, uning vakolati tekshiriladi",
+              "heading": "25-band.",
+              "text": "⟦Bitim vakil tomonidan tuzilgan taqdirda, uning vakolati tekshiriladi⟧."
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Bitim vakil tomonidan tuzilsa, uning vakolati tekshiriladi; Vakolat ishonchnoma va (yoki) vakolatni tasdiqlovchi boshqa hujjatlar bilan tasdiqlanadi; Vakolat beruvchi jismoniy shaxsning o'lim haqida dalolatnoma yozuvi qayd etilmaganligi Tizim orqali tekshiriladi; Ta'sis hujjati bo'yicha bitim tuzish huquqiga ega rahbardan ishonchnoma talab qilinmaydi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Vakolatni tekshirish tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "rep",
+          "label": "Bitim vakil tomonidan tuziladi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Bitim vakil tomonidan tuzilgan taqdirda",
+              "heading": "25-band.",
+              "text": "⟦Bitim vakil tomonidan tuzilgan taqdirda⟧, uning vakolati tekshiriladi."
+            }
+          ]
+        },
+        {
+          "id": "docs",
+          "label": "Vakolat ishonchnoma yoki boshqa hujjatlar bilan tasdiqlanadi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Vakilning vakolati uning nomiga berilgan ishonchnoma va (yoki) vakolatini tasdiqlovchi boshqa hujjatlar",
+              "heading": "25-band.",
+              "text": "⟦Vakilning vakolati uning nomiga berilgan ishonchnoma va (yoki) vakolatini tasdiqlovchi boshqa hujjatlar⟧ (qaror, umumiy majlis bayonnomasi, kuzatuv kengashining qarori, buyruq va hokazo) bilan tasdiqlanadi. Bunda, vakolat beruvchi jismoniy shaxslarning oʻlim haqida dalolatnoma yozuvi qayd etilmaganligi Tizim orqali “FHDYning yagona elektron arxivi” axborot tizimida tekshiriladi va olingan maʼlumotnoma Tizimda saqlanadi."
+            }
+          ]
+        },
+        {
+          "id": "alive",
+          "label": "Vakolat beruvchining o'limi qayd etilmaganligi Tizim orqali tekshiriladi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "25-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "oʻlim haqida dalolatnoma yozuvi qayd etilmaganligi Tizim orqali",
+              "heading": "25-band.",
+              "text": "Vakilning vakolati uning nomiga berilgan ishonchnoma va (yoki) vakolatini tasdiqlovchi boshqa hujjatlar (qaror, umumiy majlis bayonnomasi, kuzatuv kengashining qarori, buyruq va hokazo) bilan tasdiqlanadi. Bunda, vakolat beruvchi jismoniy shaxslarning ⟦oʻlim haqida dalolatnoma yozuvi qayd etilmaganligi Tizim orqali⟧ “FHDYning yagona elektron arxivi” axborot tizimida tekshiriladi va olingan maʼlumotnoma Tizimda saqlanadi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Rahbar",
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "25-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ishonchnoma talab qilmaydi",
+          "heading": "25-band.",
+          "text": "Notarius taʼsis hujjati boʻyicha bitimlar tuzish huquqiga ega boʻlgan ⟦yuridik shaxslarning rahbarlaridan bitimlar va boshqa harakatlarni bajarish uchun ishonchnoma talab qilmaydi⟧. Bunday hollarda ularning mansab mavqeyini tasdiqlovchi hujjat talab qilinadi."
+        }
+      ],
+      "points": 15,
+      "description": "Ta'sis hujjati bo'yicha bitimlar tuzish huquqiga ega yuridik shaxs rahbaridan ishonchnoma talab qilinadimi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Talab qilinmaydi"
+        },
+        {
+          "id": "b",
+          "label": "Doim talab qilinadi"
+        },
+        {
+          "id": "c",
+          "label": "Faqat chet elda"
+        },
+        {
+          "id": "d",
+          "label": "Faqat sud qarori bilan"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

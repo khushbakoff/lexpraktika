@@ -1,0 +1,171 @@
+{
+  "id": "prokuratura",
+  "title": "Prokuratura",
+  "trackId": "huquq-tartibot",
+  "icon": "police",
+  "tagline": "Prokuror va tergovchi: ish qo'zg'atish, tergov, ushlab turish, ehtiyot choralari",
+  "about": "Prokuratura organlari nomzoddan oliy yuridik ma'lumot, kasbiy fazilatlar, sog'liq va qasamyodni, shuningdek jinoyat-protsessual qonunchilik bo'yicha aniq bilimni (ish qo'zg'atish, ushlab turish, ehtiyot choralari, tergov muddatlari) talab qiladi.",
+  "requirements": [
+    {
+      "id": "candidate",
+      "title": "Lavozimga talablar va qasamyod",
+      "detail": "Ma'lumot, fuqarolik, sog'liq, yosh va qasamyod.",
+      "kind": "kirish",
+      "scenarioIds": [
+        "ish-prokuratura-talablari"
+      ],
+      "sources": [
+        {
+          "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+          "article": "43-modda",
+          "url": "https://lex.uz/docs/-106197",
+          "quote": "oliy yuridik maʼlumotga ega, zarur kasbiy fazilatlari boʻlgan, zimmalariga yuklanadigan xizmat vazifalarini bajarishga sogʻligʻi imkon beradigan Oʻzbekiston Respublikasining fuqarolari tayinlanadi"
+        },
+        {
+          "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+          "article": "44-modda",
+          "url": "https://lex.uz/docs/-106197",
+          "quote": "Prokuror yoki tergovchi lavozimiga birinchi marta tayinlanayotgan shaxs quyidagi mazmunda qasamyod qabul qiladi"
+        }
+      ]
+    },
+    {
+      "id": "demands",
+      "title": "Prokuror talablarining majburiyligi",
+      "detail": "Talablarni bajarish va shikoyat.",
+      "kind": "ish",
+      "scenarioIds": [
+        "ish-prokuror-talablari-majburiyligi"
+      ],
+      "sources": [
+        {
+          "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+          "article": "6-modda",
+          "url": "https://lex.uz/docs/-106197",
+          "quote": "Prokurorning talablari ustidan shikoyat qilinishi ularning ijrosini toʻxtatib qoʻymaydi"
+        }
+      ]
+    },
+    {
+      "id": "case",
+      "title": "Jinoyat ishini qo'zg'atish",
+      "detail": "Sabablar, qaror va rad etish.",
+      "kind": "ish",
+      "scenarioIds": [
+        "jinoyat-ish-qozgatish"
+      ],
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "331-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "surishtiruvchi, tergovchi, prokuror shuningdek tergovga qadar tekshiruvni amalga oshiruvchi organning mansabdor shaxsi qaror chiqaradi"
+        }
+      ]
+    },
+    {
+      "id": "detention",
+      "title": "Ushlab turish va ehtiyot choralari",
+      "detail": "Asoslar, muddatlar, qamoqqa olish iltimosnomasi.",
+      "kind": "ish",
+      "scenarioIds": [
+        "jinoyat-ushlab-turish",
+        "jinoyat-ehtiyot-chorasi",
+        "jinoyat-qamoqqa-olish-iltimosnoma"
+      ],
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "226-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "koʻpi bilan qirq sakkiz soatni tashkil etadi"
+        },
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "243-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "ushlab turish muddati tugashidan kamida sakkiz soat oldin sudga taqdim qilinishi kerak"
+        }
+      ]
+    },
+    {
+      "id": "investigation",
+      "title": "Tergov muddati va dalillar",
+      "detail": "Dastlabki tergov muddatlari va dalillarni baholash.",
+      "kind": "ish",
+      "scenarioIds": [
+        "jinoyat-dastlabki-tergov-muddati",
+        "jinoyat-dalillar"
+      ],
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "351-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "uch oydan oshmagan muddatda tamomlanishi lozim"
+        },
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "81-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "aniqlashiga asos boʻladigan har qanday faktik maʼlumotlar jinoyat ishi boʻyicha dalil hisoblanadi"
+        }
+      ]
+    },
+    {
+      "id": "participants",
+      "title": "Jarayon ishtirokchilari huquqlari",
+      "detail": "Jabrlanuvchi, guvoh va ayblanuvchi huquqlari.",
+      "kind": "ish",
+      "scenarioIds": [
+        "jinoyat-jabrlanuvchi",
+        "jinoyat-guvoh",
+        "jinoyat-ayblanuvchi-huquqlari"
+      ],
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "55-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "oʻz ona tilidan va tarjimon xizmatidan foydalanish"
+        },
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "66-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "oʻziga va yaqin qarindoshlariga qarshi koʻrsatuv bermaslik"
+        }
+      ]
+    }
+  ],
+  "workflow": [
+    {
+      "title": "Ariza keldi: jinoyat ishini qo'zg'atish",
+      "scenarioId": "jinoyat-ish-qozgatish"
+    },
+    {
+      "title": "Gumon qilinuvchi ushlandi",
+      "scenarioId": "jinoyat-ushlab-turish"
+    },
+    {
+      "title": "Ehtiyot chorasini tanlash",
+      "scenarioId": "jinoyat-ehtiyot-chorasi"
+    },
+    {
+      "title": "Qamoqqa olish iltimosnomasi",
+      "scenarioId": "jinoyat-qamoqqa-olish-iltimosnoma"
+    },
+    {
+      "title": "Dalillarni to'plash va baholash",
+      "scenarioId": "jinoyat-dalillar"
+    },
+    {
+      "title": "Jabrlanuvchi va guvoh bilan ishlash",
+      "scenarioId": "jinoyat-jabrlanuvchi"
+    },
+    {
+      "title": "Tergov muddatini nazorat qilish",
+      "scenarioId": "jinoyat-dastlabki-tergov-muddati"
+    }
+  ]
+}

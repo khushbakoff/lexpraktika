@@ -1,0 +1,437 @@
+{
+  "id": "fuqarolik-sotuvchini-xabardor-qilish",
+  "title": "Kamchilikni kech aniqladim: sotuvchiga qachon aytaman?",
+  "area": "Fuqarolik huquqi",
+  "areaId": "fuqarolik",
+  "tracks": [
+    "advokat",
+    "korxona",
+    "sudya",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Xaridor tovar miqdori/sifati shartlari buzilganini kech aniqlagan. Sotuvchini xabardor qilish majburiyati va oqibatlarini Fuqarolik kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Murod, 39 yosh, do'kon egasi",
+    "openingLine": "Assalomu alaykum. Olingan tovar partiyasida sifat shartiga mos kelmaydigan mahsulot chiqdi, ammo sotuvchiga kech aytdim. Endi talabim rad etilishi mumkinmi?",
+    "hiddenFacts": [
+      {
+        "id": "breach",
+        "fact": "Tovar sifat/miqdor shartlari buzilgan",
+        "revealOn": []
+      },
+      {
+        "id": "late",
+        "fact": "Sotuvchiga oqilona muddatdan keyin xabar berilgan",
+        "revealOn": []
+      },
+      {
+        "id": "knew",
+        "fact": "Sotuvchi tovar shartnomaga mos kelmasligini bilgan",
+        "revealOn": []
+      },
+      {
+        "id": "cost",
+        "fact": "Kech xabar sotuvchiga nomutanosib xarajat keltirishi mumkin",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "breach",
+        "late",
+        "knew"
+      ],
+      "questions": [
+        {
+          "id": "q-breach",
+          "text": "Nima buzilgan?",
+          "factId": "breach",
+          "reply": "Partiyada sifati past tovar chiqdi."
+        },
+        {
+          "id": "q-late",
+          "text": "Sotuvchiga qachon aytdingiz?",
+          "factId": "late",
+          "reply": "Aniqlaganimdan ancha keyin."
+        },
+        {
+          "id": "q-knew",
+          "text": "Sotuvchi bilganmi?",
+          "factId": "knew",
+          "reply": "Ha, u bilgan deb o'ylayman."
+        },
+        {
+          "id": "q-cost",
+          "text": "Xabarning kechikishi sotuvchiga ziyon keltirdimi?",
+          "factId": "cost",
+          "reply": "Ehtimol."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Xabardor qilish qoidalari",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Sotuvchini xabardor qilish haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "must",
+          "label": "Xaridor shartlar buzilganligini sotuvchiga oqilona muddatda ma'lum qilishi shart",
+          "required": true,
+          "why": "416-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "416-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotuvchiga maʼlum qilishi shart",
+              "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+              "text": "Sotib oluvchi oldi-sotdi shartnomasining tovarlar miqdori, assortimenti, sifati, butligi, idishi va (yoki) oʻralishi toʻgʻrisidagi shartlari buzilganligi haqida qonunchilikda yoki shartnomada koʻzda tutilgan muddatda, agar bunday muddat belgilangan boʻlmasa, shartnomaning tegishli sharti buzilganligi tovarlar xususiyati va vazifasidan kelib chiqqan holda aniqlanishi lozim boʻlganidan soʻng oqilona muddatda ⟦sotuvchiga maʼlum qilishi shart⟧.",
+              "anchor": "-182665"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "label": "Xabar bermagan xaridorning talablarini sotuvchi to'liq yoki qisman rad etishga haqli bo'lishi mumkin",
+          "required": true,
+          "why": "416-modda ikkinchi qismi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "416-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "talablarini qondirishdan toʻliq yoki qisman bosh tortishga haqli",
+              "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+              "text": "Sotib oluvchi ushbu moddaning birinchi qismida koʻrsatilgan majburiyatni bajarmagan taqdirda, sotuvchi bu hol sotib oluvchining talablarini qanoatlantirib boʻlmaydigan qilib qoʻyganini yoki sotuvchi oldi-sotdi shartnomasi shartlari buzilgani haqida oʻz vaqtida xabardor qilinganida sarflashi mumkin boʻlgan mablagʻlarga nisbatan nomutanosib xarajatlarga olib kelishini isbotlasa, u sotib oluvchining tegishli ⟦talablarini qondirishdan toʻliq yoki qisman bosh tortishga haqli⟧.",
+              "anchor": "-182665"
+            }
+          ]
+        },
+        {
+          "id": "knew",
+          "label": "Sotuvchi shartlarga mos kelmasligini bilgan bo'lsa, xaridorning xabar bermaganini vaj qilib ko'rsata olmaydi",
+          "required": true,
+          "why": "416-modda uchinchi qismi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "416-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "vaj qilib koʻrsatishga haqli emas",
+              "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+              "text": "Agar sotuvchi sotib oluvchiga topshirilgan tovarlar oldi-sotdi shartnomasi shartlariga javob bermasligini bilgan yoki bilishi lozim boʻlgan boʻlsa, u sotib oluvchi ushbu moddaning birinchi qismida nazarda tutilgan majburiyatni bajarmaganligini ⟦vaj qilib koʻrsatishga haqli emas⟧.",
+              "anchor": "-182665"
+            }
+          ]
+        },
+        {
+          "id": "never",
+          "label": "Xaridor sotuvchini xabardor qilishi shart emas",
+          "required": false,
+          "why": "Xaridor xabardor qilishi shart (416-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "416-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotuvchiga maʼlum qilishi shart",
+              "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+              "text": "Sotib oluvchi oldi-sotdi shartnomasining tovarlar miqdori, assortimenti, sifati, butligi, idishi va (yoki) oʻralishi toʻgʻrisidagi shartlari buzilganligi haqida qonunchilikda yoki shartnomada koʻzda tutilgan muddatda, agar bunday muddat belgilangan boʻlmasa, shartnomaning tegishli sharti buzilganligi tovarlar xususiyati va vazifasidan kelib chiqqan holda aniqlanishi lozim boʻlganidan soʻng oqilona muddatda ⟦sotuvchiga maʼlum qilishi shart⟧.",
+              "anchor": "-182665"
+            }
+          ]
+        },
+        {
+          "id": "always",
+          "label": "Xabar bermagan xaridor har doim barcha talablaridan mahrum bo'ladi",
+          "required": false,
+          "why": "Sotuvchi buni isbotlasa va bilmagan bo'lsa rad etishga haqli, bilgan bo'lsa haqli emas (416-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "416-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "vaj qilib koʻrsatishga haqli emas",
+              "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+              "text": "Agar sotuvchi sotib oluvchiga topshirilgan tovarlar oldi-sotdi shartnomasi shartlariga javob bermasligini bilgan yoki bilishi lozim boʻlgan boʻlsa, u sotib oluvchi ushbu moddaning birinchi qismida nazarda tutilgan majburiyatni bajarmaganligini ⟦vaj qilib koʻrsatishga haqli emas⟧.",
+              "anchor": "-182665"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Xabar qilish",
+      "sources": [],
+      "points": 25,
+      "description": "Xabardor qilish qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "who",
+          "label": "Shartlar buzilganligi haqida kim kimni xabardor qilishi shart?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "buyer",
+              "label": "Sotib oluvchi sotuvchini"
+            },
+            {
+              "id": "seller",
+              "label": "Sotuvchi sotib oluvchini"
+            },
+            {
+              "id": "court",
+              "label": "Sud tomonlarni"
+            }
+          ],
+          "correct": "buyer",
+          "why": "Sotib oluvchi sotuvchini (416-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "416-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotuvchiga maʼlum qilishi shart",
+              "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+              "text": "Sotib oluvchi oldi-sotdi shartnomasining tovarlar miqdori, assortimenti, sifati, butligi, idishi va (yoki) oʻralishi toʻgʻrisidagi shartlari buzilganligi haqida qonunchilikda yoki shartnomada koʻzda tutilgan muddatda, agar bunday muddat belgilangan boʻlmasa, shartnomaning tegishli sharti buzilganligi tovarlar xususiyati va vazifasidan kelib chiqqan holda aniqlanishi lozim boʻlganidan soʻng oqilona muddatda ⟦sotuvchiga maʼlum qilishi shart⟧.",
+              "anchor": "-182665"
+            }
+          ]
+        },
+        {
+          "id": "late",
+          "label": "Xabar bermasa, sotuvchi",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "may",
+              "label": "Talablarni qondirishdan to'liq yoki qisman bosh tortishga haqli bo'lishi mumkin"
+            },
+            {
+              "id": "never",
+              "label": "Hech narsa qila olmaydi"
+            },
+            {
+              "id": "fine",
+              "label": "Xaridorni jarimaga tortadi"
+            }
+          ],
+          "correct": "may",
+          "why": "Isbotlasa, talablarni to'liq yoki qisman rad etishga haqli (416-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "416-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "talablarini qondirishdan toʻliq yoki qisman bosh tortishga haqli",
+              "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+              "text": "Sotib oluvchi ushbu moddaning birinchi qismida koʻrsatilgan majburiyatni bajarmagan taqdirda, sotuvchi bu hol sotib oluvchining talablarini qanoatlantirib boʻlmaydigan qilib qoʻyganini yoki sotuvchi oldi-sotdi shartnomasi shartlari buzilgani haqida oʻz vaqtida xabardor qilinganida sarflashi mumkin boʻlgan mablagʻlarga nisbatan nomutanosib xarajatlarga olib kelishini isbotlasa, u sotib oluvchining tegishli ⟦talablarini qondirishdan toʻliq yoki qisman bosh tortishga haqli⟧.",
+              "anchor": "-182665"
+            }
+          ]
+        },
+        {
+          "id": "knew",
+          "label": "Sotuvchi tovar shartnomaga mos kelmasligini bilgan bo'lsa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "excuse",
+              "label": "Xabar bermaganligini vaj qilib ko'rsatishi mumkin"
+            },
+            {
+              "id": "noexcuse",
+              "label": "Bunday vajga haqli emas"
+            },
+            {
+              "id": "half",
+              "label": "Yarmini vaj qiladi"
+            }
+          ],
+          "correct": "noexcuse",
+          "why": "Xaridor xabar bermaganligini vaj qilib ko'rsatishga haqli emas (416-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "416-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "vaj qilib koʻrsatishga haqli emas",
+              "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+              "text": "Agar sotuvchi sotib oluvchiga topshirilgan tovarlar oldi-sotdi shartnomasi shartlariga javob bermasligini bilgan yoki bilishi lozim boʻlgan boʻlsa, u sotib oluvchi ushbu moddaning birinchi qismida nazarda tutilgan majburiyatni bajarmaganligini ⟦vaj qilib koʻrsatishga haqli emas⟧.",
+              "anchor": "-182665"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Kamchilikni kech aniqladim: sotuvchiga qachon aytaman?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Tovar sifat/miqdor shartlari buzilgan; Sotuvchiga oqilona muddatdan keyin xabar berilgan; Sotuvchi tovar shartnomaga mos kelmasligini bilgan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "416-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sotuvchiga maʼlum qilishi shart",
+              "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+              "text": "Sotib oluvchi oldi-sotdi shartnomasining tovarlar miqdori, assortimenti, sifati, butligi, idishi va (yoki) oʻralishi toʻgʻrisidagi shartlari buzilganligi haqida qonunchilikda yoki shartnomada koʻzda tutilgan muddatda, agar bunday muddat belgilangan boʻlmasa, shartnomaning tegishli sharti buzilganligi tovarlar xususiyati va vazifasidan kelib chiqqan holda aniqlanishi lozim boʻlganidan soʻng oqilona muddatda ⟦sotuvchiga maʼlum qilishi shart⟧.",
+              "anchor": "-182665"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Xaridor shartlar buzilganligini sotuvchiga oqilona muddatda ma'lum qilishi shart; Xabar bermagan xaridorning talablarini sotuvchi to'liq yoki qisman rad etishga haqli bo'lishi mumkin; Sotuvchi shartlarga mos kelmasligini bilgan bo'lsa, xaridorning xabar bermaganini vaj qilib ko'rsata olmaydi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Xabardor qilish tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "find",
+          "label": "Xaridor shartlar buzilganligini aniqlaydi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "416-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "oldi-sotdi shartnomasining tovarlar miqdori, assortimenti, sifati, butligi, idishi",
+              "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+              "text": "Sotib oluvchi ⟦oldi-sotdi shartnomasining tovarlar miqdori, assortimenti, sifati, butligi, idishi⟧ va (yoki) oʻralishi toʻgʻrisidagi shartlari buzilganligi haqida qonunchilikda yoki shartnomada koʻzda tutilgan muddatda, agar bunday muddat belgilangan boʻlmasa, shartnomaning tegishli sharti buzilganligi tovarlar xususiyati va vazifasidan kelib chiqqan holda aniqlanishi lozim boʻlganidan soʻng oqilona muddatda sotuvchiga maʼlum qilishi shart.",
+              "anchor": "-182665"
+            }
+          ]
+        },
+        {
+          "id": "notify",
+          "label": "Oqilona muddatda sotuvchiga ma'lum qiladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "416-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "oqilona muddatda sotuvchiga maʼlum qilishi shart",
+              "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+              "text": "Sotib oluvchi oldi-sotdi shartnomasining tovarlar miqdori, assortimenti, sifati, butligi, idishi va (yoki) oʻralishi toʻgʻrisidagi shartlari buzilganligi haqida qonunchilikda yoki shartnomada koʻzda tutilgan muddatda, agar bunday muddat belgilangan boʻlmasa, shartnomaning tegishli sharti buzilganligi tovarlar xususiyati va vazifasidan kelib chiqqan holda aniqlanishi lozim boʻlganidan soʻng ⟦oqilona muddatda sotuvchiga maʼlum qilishi shart⟧.",
+              "anchor": "-182665"
+            }
+          ]
+        },
+        {
+          "id": "claim",
+          "label": "Talablarini qo'yadi; sotuvchi bilgan bo'lsa, kech xabarni vaj qila olmaydi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "416-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "vaj qilib koʻrsatishga haqli emas",
+              "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+              "text": "Agar sotuvchi sotib oluvchiga topshirilgan tovarlar oldi-sotdi shartnomasi shartlariga javob bermasligini bilgan yoki bilishi lozim boʻlgan boʻlsa, u sotib oluvchi ushbu moddaning birinchi qismida nazarda tutilgan majburiyatni bajarmaganligini ⟦vaj qilib koʻrsatishga haqli emas⟧.",
+              "anchor": "-182665"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Xabar muddati",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+          "article": "416-modda",
+          "url": "https://lex.uz/docs/-180552",
+          "quote": "qonunchilikda yoki shartnomada koʻzda tutilgan muddatda, agar bunday muddat belgilangan boʻlmasa",
+          "heading": "416-modda. Oldi-sotdi shartnomasi tegishli darajada bajarilmagani haqida sotuvchini xabardor qilish",
+          "text": "Sotib oluvchi oldi-sotdi shartnomasining tovarlar miqdori, assortimenti, sifati, butligi, idishi va (yoki) oʻralishi toʻgʻrisidagi shartlari buzilganligi haqida ⟦qonunchilikda yoki shartnomada koʻzda tutilgan muddatda, agar bunday muddat belgilangan boʻlmasa⟧, shartnomaning tegishli sharti buzilganligi tovarlar xususiyati va vazifasidan kelib chiqqan holda aniqlanishi lozim boʻlganidan soʻng oqilona muddatda sotuvchiga maʼlum qilishi shart.",
+          "anchor": "-182665"
+        }
+      ],
+      "points": 15,
+      "description": "Xaridor shartlar buzilganini qanday muddatda ma'lum qilishi shart?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Qonunchilikda yoki shartnomada belgilangan, bo'lmasa oqilona muddatda"
+        },
+        {
+          "id": "b",
+          "label": "Hech qachon shart emas"
+        },
+        {
+          "id": "c",
+          "label": "Ertasi kuni"
+        },
+        {
+          "id": "d",
+          "label": "Bir yildan keyin"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

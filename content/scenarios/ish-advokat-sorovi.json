@@ -1,0 +1,447 @@
+{
+  "id": "ish-advokat-sorovi",
+  "title": "Advokat so'rovi: ma'lumot qancha muddatda beriladi?",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "advokat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Advokat davlat organidan mijoz ishi uchun hujjat so'ramoqda. Advokat so'rovi bo'yicha muddatlarni Advokatura qonuni bo'yicha belgilang.",
+  "client": {
+    "persona": "Advokat",
+    "openingLine": "Assalomu alaykum. Mijoz ishi uchun tuman hokimligidan hujjat so'radim. Ular qancha muddatda javob berishi kerak?",
+    "hiddenFacts": [
+      {
+        "id": "req",
+        "fact": "Advokat hokimlikka advokat so'rovi yuborgan",
+        "revealOn": []
+      },
+      {
+        "id": "dos",
+        "fact": "Ish bo'yicha surishtiruv yoki tergov boshlanganini ko'rsatuvchi hujjat bor",
+        "revealOn": []
+      },
+      {
+        "id": "nodoc",
+        "fact": "Hokimlikda so'ralgan hujjat bo'lmasligi mumkin",
+        "revealOn": []
+      },
+      {
+        "id": "day",
+        "fact": "So'rov yuborilganiga bir necha kun bo'lgan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "req",
+        "dos",
+        "nodoc"
+      ],
+      "questions": [
+        {
+          "id": "q-req",
+          "text": "Nima yuborgansiz?",
+          "factId": "req",
+          "reply": "Advokat so'rovi."
+        },
+        {
+          "id": "q-dos",
+          "text": "Tergov boshlanganmi?",
+          "factId": "dos",
+          "reply": "Ha, surishtiruv boshlangan."
+        },
+        {
+          "id": "q-nodoc",
+          "text": "Hujjat hokimlikda bormi?",
+          "factId": "nodoc",
+          "reply": "Bo'lmasligi mumkin."
+        },
+        {
+          "id": "q-day",
+          "text": "Qachon yubordingiz?",
+          "factId": "day",
+          "reply": "Bir necha kun oldin."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "So'rov muddatlari",
+      "sources": [],
+      "points": 15,
+      "description": "Muddatlarni aniqlang.",
+      "prompt": "Advokat so'rovi bo'yicha qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "right",
+          "label": "Advokat davlat organlari va tashkilotlarga axborot (hujjatlar) so'rab advokat so'rovini yuborishga haqli",
+          "required": true,
+          "why": "7¹-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "advokat soʻrovini (bundan buyon matnda advokat soʻrovi deb yuritiladi) yuborishga haqli",
+              "heading": "71-modda. Advokat soʻrovi",
+              "text": "Advokat davlat organlariga va boshqa organlarga, shuningdek korxonalar, muassasalar va tashkilotlarga mazkur organlar hamda tashkilotlarning vakolatlariga kiradigan masalalar yuzasidan advokat tomonidan malakali yuridik yordam koʻrsatilishi uchun zarur boʻlgan maʼlumotnomalar, tavsifnomalar va boshqa hujjatlarni (bundan buyon matnda axborot (hujjatlar) deb yuritiladi) taqdim etish masalalari yuzasidan ⟦advokat soʻrovini (bundan buyon matnda advokat soʻrovi deb yuritiladi) yuborishga haqli⟧.",
+              "anchor": "-4013524"
+            }
+          ]
+        },
+        {
+          "id": "fifteen",
+          "label": "Axborot (hujjatlar) so'rov olingan sanadan o'n besh kundan kechiktirmay taqdim etiladi",
+          "required": true,
+          "why": "7¹-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "advokat soʻrovi olingan sanadan eʼtiboran oʻn besh kundan kechiktirmay taqdim etiladi",
+              "heading": "71-modda. Advokat soʻrovi",
+              "text": "Axborot (hujjatlar), shuningdek ularning koʻchirma nusxalari ⟦advokat soʻrovi olingan sanadan eʼtiboran oʻn besh kundan kechiktirmay taqdim etiladi⟧. Advokat soʻroviga koʻra ekspertiza xulosasini olish muddatlari davlat sud-ekspertiza muassasalari va nodavlat sud-ekspertiza tashkilotlari bilan tuzilgan shartnomalarda belgilanadi.",
+              "anchor": "-4013524"
+            }
+          ]
+        },
+        {
+          "id": "five",
+          "label": "Ma'lumot bo'lmasa, tashkilot buni besh kundan kechiktirmay xabar qilishi shart",
+          "required": true,
+          "why": "7¹-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "soʻrov olingan sanadan eʼtiboran besh kundan kechiktirmay bu haqda xabar qilishi shart",
+              "heading": "71-modda. Advokat soʻrovi",
+              "text": "Agar davlat organi yoki boshqa organ, shuningdek korxona, muassasa, tashkilot soʻralayotgan axborotga (hujjatlarga) ega boʻlmasa, ular oʻzlariga murojaat etgan advokatga ⟦soʻrov olingan sanadan eʼtiboran besh kundan kechiktirmay bu haqda xabar qilishi shart⟧.",
+              "anchor": "-4013524"
+            }
+          ]
+        },
+        {
+          "id": "three",
+          "label": "Surishtiruv, tergov yoki sud boshlanganini ko'rsatuvchi hujjat bo'lsa, uch ish kunidan kechiktirmay beriladi",
+          "required": true,
+          "why": "7¹-modda.",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "uch ish kunidan kechiktirmay taqdim etilishi kerak",
+              "heading": "71-modda. Advokat soʻrovi",
+              "text": "Advokat tomonidan ish boʻyicha surishtiruv, dastlabki tergov yoki sud muhokamasi boshlanganligi toʻgʻrisida dalolat beradigan hujjat taqdim etilgan taqdirda, soʻrovda koʻrsatilgan axborot (hujjatlar) ⟦uch ish kunidan kechiktirmay taqdim etilishi kerak⟧.",
+              "anchor": "-4013524"
+            }
+          ]
+        },
+        {
+          "id": "month",
+          "label": "Axborot bir oy ichida taqdim etiladi",
+          "required": false,
+          "why": "O'n besh kun (tergov/sud boshlangan bo'lsa uch ish kuni) (7¹-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "oʻn besh kundan kechiktirmay taqdim etiladi",
+              "heading": "71-modda. Advokat soʻrovi",
+              "text": "Axborot (hujjatlar), shuningdek ularning koʻchirma nusxalari advokat soʻrovi olingan sanadan eʼtiboran ⟦oʻn besh kundan kechiktirmay taqdim etiladi⟧. Advokat soʻroviga koʻra ekspertiza xulosasini olish muddatlari davlat sud-ekspertiza muassasalari va nodavlat sud-ekspertiza tashkilotlari bilan tuzilgan shartnomalarda belgilanadi.",
+              "anchor": "-4013524"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Muddatlar",
+      "sources": [],
+      "points": 25,
+      "description": "Muddatlarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "main",
+          "label": "Umumiy qoida: axborot so'rov olingan sanadan",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d3",
+              "label": "3 kun"
+            },
+            {
+              "id": "d15",
+              "label": "15 kun"
+            },
+            {
+              "id": "d30",
+              "label": "30 kun"
+            },
+            {
+              "id": "m3",
+              "label": "3 oy"
+            }
+          ],
+          "correct": "d15",
+          "why": "O'n besh kundan kechiktirmay (7¹-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "oʻn besh kundan kechiktirmay taqdim etiladi",
+              "heading": "71-modda. Advokat soʻrovi",
+              "text": "Axborot (hujjatlar), shuningdek ularning koʻchirma nusxalari advokat soʻrovi olingan sanadan eʼtiboran ⟦oʻn besh kundan kechiktirmay taqdim etiladi⟧. Advokat soʻroviga koʻra ekspertiza xulosasini olish muddatlari davlat sud-ekspertiza muassasalari va nodavlat sud-ekspertiza tashkilotlari bilan tuzilgan shartnomalarda belgilanadi.",
+              "anchor": "-4013524"
+            }
+          ]
+        },
+        {
+          "id": "none",
+          "label": "Organda so'ralgan axborot bo'lmasa, advokatga xabar",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d1",
+              "label": "1 kun"
+            },
+            {
+              "id": "d5",
+              "label": "5 kun"
+            },
+            {
+              "id": "d15",
+              "label": "15 kun"
+            },
+            {
+              "id": "none",
+              "label": "Xabar kerak emas"
+            }
+          ],
+          "correct": "d5",
+          "why": "Besh kundan kechiktirmay (7¹-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "soʻrov olingan sanadan eʼtiboran besh kundan kechiktirmay bu haqda xabar qilishi shart",
+              "heading": "71-modda. Advokat soʻrovi",
+              "text": "Agar davlat organi yoki boshqa organ, shuningdek korxona, muassasa, tashkilot soʻralayotgan axborotga (hujjatlarga) ega boʻlmasa, ular oʻzlariga murojaat etgan advokatga ⟦soʻrov olingan sanadan eʼtiboran besh kundan kechiktirmay bu haqda xabar qilishi shart⟧.",
+              "anchor": "-4013524"
+            }
+          ]
+        },
+        {
+          "id": "case",
+          "label": "Ish bo'yicha surishtiruv, tergov yoki sud boshlanganini ko'rsatuvchi hujjat bo'lsa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d3w",
+              "label": "3 ish kuni"
+            },
+            {
+              "id": "d15",
+              "label": "15 kun"
+            },
+            {
+              "id": "m1",
+              "label": "1 oy"
+            },
+            {
+              "id": "none",
+              "label": "Muddat yo'q"
+            }
+          ],
+          "correct": "d3w",
+          "why": "Uch ish kunidan kechiktirmay (7¹-modda).",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "uch ish kunidan kechiktirmay taqdim etilishi kerak",
+              "heading": "71-modda. Advokat soʻrovi",
+              "text": "Advokat tomonidan ish boʻyicha surishtiruv, dastlabki tergov yoki sud muhokamasi boshlanganligi toʻgʻrisida dalolat beradigan hujjat taqdim etilgan taqdirda, soʻrovda koʻrsatilgan axborot (hujjatlar) ⟦uch ish kunidan kechiktirmay taqdim etilishi kerak⟧.",
+              "anchor": "-4013524"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Advokat so'rovi: ma'lumot qancha muddatda beriladi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Advokat hokimlikka advokat so'rovi yuborgan; Ish bo'yicha surishtiruv yoki tergov boshlanganini ko'rsatuvchi hujjat bor; Hokimlikda so'ralgan hujjat bo'lmasligi mumkin",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "advokat soʻrovini (bundan buyon matnda advokat soʻrovi deb yuritiladi) yuborishga haqli",
+              "heading": "71-modda. Advokat soʻrovi",
+              "text": "Advokat davlat organlariga va boshqa organlarga, shuningdek korxonalar, muassasalar va tashkilotlarga mazkur organlar hamda tashkilotlarning vakolatlariga kiradigan masalalar yuzasidan advokat tomonidan malakali yuridik yordam koʻrsatilishi uchun zarur boʻlgan maʼlumotnomalar, tavsifnomalar va boshqa hujjatlarni (bundan buyon matnda axborot (hujjatlar) deb yuritiladi) taqdim etish masalalari yuzasidan ⟦advokat soʻrovini (bundan buyon matnda advokat soʻrovi deb yuritiladi) yuborishga haqli⟧.",
+              "anchor": "-4013524"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Advokat davlat organlari va tashkilotlarga axborot (hujjatlar) so'rab advokat so'rovini yuborishga haqli; Axborot (hujjatlar) so'rov olingan sanadan o'n besh kundan kechiktirmay taqdim etiladi; Ma'lumot bo'lmasa, tashkilot buni besh kundan kechiktirmay xabar qilishi shart; Surishtiruv, tergov yoki sud boshlanganini ko'rsatuvchi hujjat bo'lsa, uch ish kunidan kechiktirmay beriladi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "So'rov jarayoni",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "send",
+          "label": "Advokat advokat so'rovini yuboradi",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "advokat soʻrovini (bundan buyon matnda advokat soʻrovi deb yuritiladi) yuborishga haqli",
+              "heading": "71-modda. Advokat soʻrovi",
+              "text": "Advokat davlat organlariga va boshqa organlarga, shuningdek korxonalar, muassasalar va tashkilotlarga mazkur organlar hamda tashkilotlarning vakolatlariga kiradigan masalalar yuzasidan advokat tomonidan malakali yuridik yordam koʻrsatilishi uchun zarur boʻlgan maʼlumotnomalar, tavsifnomalar va boshqa hujjatlarni (bundan buyon matnda axborot (hujjatlar) deb yuritiladi) taqdim etish masalalari yuzasidan ⟦advokat soʻrovini (bundan buyon matnda advokat soʻrovi deb yuritiladi) yuborishga haqli⟧.",
+              "anchor": "-4013524"
+            }
+          ]
+        },
+        {
+          "id": "reply",
+          "label": "Organ axborotni o'n besh kun ichida taqdim etadi (yoki besh kunda yo'qligini xabar qiladi)",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "oʻn besh kundan kechiktirmay taqdim etiladi",
+              "heading": "71-modda. Advokat soʻrovi",
+              "text": "Axborot (hujjatlar), shuningdek ularning koʻchirma nusxalari advokat soʻrovi olingan sanadan eʼtiboran ⟦oʻn besh kundan kechiktirmay taqdim etiladi⟧. Advokat soʻroviga koʻra ekspertiza xulosasini olish muddatlari davlat sud-ekspertiza muassasalari va nodavlat sud-ekspertiza tashkilotlari bilan tuzilgan shartnomalarda belgilanadi.",
+              "anchor": "-4013524"
+            }
+          ]
+        },
+        {
+          "id": "fast",
+          "label": "Tergov yoki sud boshlanganini ko'rsatuvchi hujjat bo'lsa, muddat uch ish kuni",
+          "sources": [
+            {
+              "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+              "article": "7¹-modda",
+              "url": "https://lex.uz/docs/-54503",
+              "quote": "uch ish kunidan kechiktirmay taqdim etilishi kerak",
+              "heading": "71-modda. Advokat soʻrovi",
+              "text": "Advokat tomonidan ish boʻyicha surishtiruv, dastlabki tergov yoki sud muhokamasi boshlanganligi toʻgʻrisida dalolat beradigan hujjat taqdim etilgan taqdirda, soʻrovda koʻrsatilgan axborot (hujjatlar) ⟦uch ish kunidan kechiktirmay taqdim etilishi kerak⟧.",
+              "anchor": "-4013524"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Besh kun",
+      "sources": [
+        {
+          "act": "«Advokatura toʻgʻrisida»gi Qonun (349-I-son)",
+          "article": "7¹-modda",
+          "url": "https://lex.uz/docs/-54503",
+          "quote": "soʻrov olingan sanadan eʼtiboran besh kundan kechiktirmay bu haqda xabar qilishi shart",
+          "heading": "71-modda. Advokat soʻrovi",
+          "text": "Agar davlat organi yoki boshqa organ, shuningdek korxona, muassasa, tashkilot soʻralayotgan axborotga (hujjatlarga) ega boʻlmasa, ular oʻzlariga murojaat etgan advokatga ⟦soʻrov olingan sanadan eʼtiboran besh kundan kechiktirmay bu haqda xabar qilishi shart⟧.",
+          "anchor": "-4013524"
+        }
+      ],
+      "points": 15,
+      "description": "So'ralgan axborot tashkilotda bo'lmasa, tashkilot advokatga qancha muddatda xabar qilishi shart?",
+      "options": [
+        {
+          "id": "a",
+          "label": "So'rov olingan sanadan besh kundan kechiktirmay"
+        },
+        {
+          "id": "b",
+          "label": "Bir oy ichida"
+        },
+        {
+          "id": "c",
+          "label": "Xabar qilmaydi"
+        },
+        {
+          "id": "d",
+          "label": "Bir yil ichida"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

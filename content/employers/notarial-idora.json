@@ -1,0 +1,222 @@
+{
+  "id": "notarial-idora",
+  "title": "Notarial idora",
+  "trackId": "notarius",
+  "icon": "memo",
+  "tagline": "Notarius va notarius yordamchisi: shartnoma, ishonchnoma, vasiyatnoma, meros",
+  "about": "Davlat yoki xususiy notarial idora ish beruvchi sifatida nomzoddan qonundagi shartlarni (yosh, ma'lumot, staj, stajirovka, malaka imtihoni) va Adliya vazirligi Yo'riqnomasidagi ish tartibini aniq bilishni talab qiladi: shaxsni aniqlash, layoqatni tekshirish, hujjatlarni qabul qilish, rad etish va xatoni tuzatish.",
+  "requirements": [
+    {
+      "id": "candidate",
+      "title": "Notarius bo'lish shartlari",
+      "detail": "Yosh, oliy yuridik ma'lumot, kamida 3 yil staj, stajirovka, malaka imtihoni va cheklovlar.",
+      "kind": "kirish",
+      "scenarioIds": [
+        "ish-notarius-talablari"
+      ],
+      "sources": [
+        {
+          "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+          "article": "2-modda",
+          "url": "https://lex.uz/docs/-54458",
+          "quote": "oliy yuridik maʼlumotga, yuridik mutaxassislik boʻyicha kamida uch yillik ish stajiga ega boʻlgan, shu jumladan notarial idorada kamida bir yil stajirovka oʻtagan, malaka imtihonini topshirgan"
+        },
+        {
+          "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+          "article": "151-modda",
+          "url": "https://lex.uz/docs/-54458",
+          "quote": "Malaka imtihonini topshira olmagan talabgor uni takroran topshirishga kamida olti oydan keyin qoʻyiladi"
+        }
+      ]
+    },
+    {
+      "id": "identity",
+      "title": "Murojaat qiluvchi shaxsini aniqlash",
+      "detail": "Fuqaro, voyaga yetmagan, harbiy xizmatchi, chet el fuqarosi uchun tegishli hujjatlar.",
+      "kind": "ish",
+      "scenarioIds": [
+        "ish-notarius-shaxsni-aniqlash"
+      ],
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "3-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "Notarius notarial harakatlarni amalga oshirishni soʻrab murojaat qiluvchilarning (ularning qonuniy vakillarining, shuningdek vasiy va homiylarining) va yuridik shaxs vakillarining shaxsini aniqlaydi"
+        }
+      ]
+    },
+    {
+      "id": "capacity",
+      "title": "Muomala va huquq layoqatini tekshirish",
+      "detail": "Jismoniy shaxsning muomala layoqati va yuridik shaxsning huquq layoqati.",
+      "kind": "ish",
+      "scenarioIds": [
+        "ish-notarius-muomala-layoqati",
+        "ish-notarius-yuridik-shaxs"
+      ],
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "4-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "muomala layoqatini u bilan shaxsiy muloqot davomida aniqlaydi"
+        },
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "5-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "Yuridik shaxslar ishtirokidagi notarial harakatlarni amalga oshirishda notarius tomonidan ularning huquq layoqati tekshiriladi"
+        }
+      ]
+    },
+    {
+      "id": "documents",
+      "title": "Hujjatlarni qabul qilish talablari",
+      "detail": "Qaysi hujjatlar qabul qilinmaydi, aynanlikka shubha va ekspertiza.",
+      "kind": "ish",
+      "scenarioIds": [
+        "ish-notarius-hujjat-qabul",
+        "ish-notarius-ekspertiza"
+      ],
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "9-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "hujjatni bergan tashkilot mansabdor shaxsining imzosi va muhri boʻlmagan hujjatlar"
+        },
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "10-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "Notarius hujjatni ekspertizaga yuborish toʻgʻrisida qaror chiqaradi"
+        }
+      ]
+    },
+    {
+      "id": "authority",
+      "title": "Vakil va ishonchnomalar",
+      "detail": "Vakil vakolatini tekshirish va qayta ishonib topshirish.",
+      "kind": "ish",
+      "scenarioIds": [
+        "ish-notarius-vakil-vakolati",
+        "notariat-ishonib-topshirish"
+      ],
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "25-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "Bitim vakil tomonidan tuzilgan taqdirda, uning vakolati tekshiriladi"
+        },
+        {
+          "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+          "article": "47-modda",
+          "url": "https://lex.uz/docs/-54458",
+          "quote": "asosiy ishonchnoma boʻyicha berilganidan koʻproq huquqni qamrab olmasligi kerak"
+        }
+      ]
+    },
+    {
+      "id": "refusal",
+      "title": "Rad etish va shikoyat",
+      "detail": "Notarial harakatni rad etish asoslari, qaror muddati va shikoyat.",
+      "kind": "ish",
+      "scenarioIds": [
+        "ish-notarius-rad-etish-yoriqnoma",
+        "notarius-rad-etdi"
+      ],
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "21-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "bunday harakatni amalga oshirish qonunga zid boʻlsa"
+        },
+        {
+          "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+          "article": "38-modda",
+          "url": "https://lex.uz/docs/-54458",
+          "quote": "notarius murojaat qilingan kundan boshlab uch kundan kechiktirmasdan qaror chiqaradi"
+        }
+      ]
+    },
+    {
+      "id": "error",
+      "title": "Xatoni tuzatish",
+      "detail": "O'z xatosi aniqlansa, prokuror va adliya organiga xabar qilish.",
+      "kind": "ish",
+      "scenarioIds": [
+        "ish-notarius-xato-aniqlandi"
+      ],
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "23-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "u ana shu notarial harakatni belgilangan tartibda bekor qilish choralarini koʻrish uchun bu haqda prokurorga xabar qilishga majbur"
+        }
+      ]
+    },
+    {
+      "id": "acts",
+      "title": "Vasiyatnoma, meros va nusxa shahodati",
+      "detail": "Eng ko'p uchraydigan notarial harakatlar.",
+      "kind": "ish",
+      "scenarioIds": [
+        "notariat-vasiyatnoma",
+        "notariat-meros-guvohnomasi",
+        "notariat-nusxa-shahodati"
+      ],
+      "sources": [
+        {
+          "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+          "article": "45-modda",
+          "url": "https://lex.uz/docs/-54458",
+          "quote": "Vasiyatnomalarni vakillar orqali tasdiqlashga yoʻl qoʻyilmaydi"
+        },
+        {
+          "act": "«Notariat toʻgʻrisida»gi Qonun (343-I-son)",
+          "article": "59-modda",
+          "url": "https://lex.uz/docs/-54458",
+          "quote": "vasiylik va homiylik organlariga xabar qiladi"
+        }
+      ]
+    }
+  ],
+  "workflow": [
+    {
+      "title": "Mijozni qabul qilish: shaxsni aniqlash",
+      "scenarioId": "ish-notarius-shaxsni-aniqlash"
+    },
+    {
+      "title": "Muomala layoqatini aniqlash",
+      "scenarioId": "ish-notarius-muomala-layoqati"
+    },
+    {
+      "title": "Yuridik shaxs bo'lsa: huquq layoqati",
+      "scenarioId": "ish-notarius-yuridik-shaxs"
+    },
+    {
+      "title": "Vakil bo'lsa: vakolatni tekshirish",
+      "scenarioId": "ish-notarius-vakil-vakolati"
+    },
+    {
+      "title": "Hujjatlarni qabul qilish",
+      "scenarioId": "ish-notarius-hujjat-qabul"
+    },
+    {
+      "title": "Shubha bo'lsa: ekspertiza",
+      "scenarioId": "ish-notarius-ekspertiza"
+    },
+    {
+      "title": "Zarur bo'lsa: rad etish",
+      "scenarioId": "ish-notarius-rad-etish-yoriqnoma"
+    },
+    {
+      "title": "Xato aniqlansa: xabar qilish",
+      "scenarioId": "ish-notarius-xato-aniqlandi"
+    }
+  ]
+}

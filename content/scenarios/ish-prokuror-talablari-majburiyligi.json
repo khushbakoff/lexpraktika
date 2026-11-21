@@ -1,0 +1,436 @@
+{
+  "id": "ish-prokuror-talablari-majburiyligi",
+  "title": "Prokuror talabiga shikoyat qilinsa, ijro to'xtaydimi?",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "huquq-tartibot",
+    "davlat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Prokuror korxonadan hujjat va tushuntirish talab qildi, korxona shikoyat qildi. Prokuror talablarining majburiyligini «Prokuratura to'g'risida»gi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Korxona yuristi",
+    "openingLine": "Assalomu alaykum. Prokuror bizdan hujjatlar va tushuntirish talab qildi. Biz shikoyat qildik. Shikoyat qilsak ijro to'xtaydimi?",
+    "hiddenFacts": [
+      {
+        "id": "demand",
+        "fact": "Prokuror hujjat va tushuntirish talab qilgan",
+        "revealOn": []
+      },
+      {
+        "id": "appeal",
+        "fact": "Korxona talab ustidan shikoyat qilgan",
+        "revealOn": []
+      },
+      {
+        "id": "free",
+        "fact": "Prokuratura hujjat nusxalari uchun haq so'ramoqda",
+        "revealOn": []
+      },
+      {
+        "id": "scope",
+        "fact": "Talab prokurorning vakolati doirasida",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "demand",
+        "appeal",
+        "free"
+      ],
+      "questions": [
+        {
+          "id": "q-demand",
+          "text": "Prokuror nima talab qildi?",
+          "factId": "demand",
+          "reply": "Hujjatlar va tushuntirish."
+        },
+        {
+          "id": "q-appeal",
+          "text": "Shikoyat qildingizmi?",
+          "factId": "appeal",
+          "reply": "Ha, shikoyat qildik."
+        },
+        {
+          "id": "q-free",
+          "text": "Nusxalar uchun to'lov bormi?",
+          "factId": "free",
+          "reply": "Nusxalar uchun haq to'lashimiz kerakmi deb o'ylayapmiz."
+        },
+        {
+          "id": "q-scope",
+          "text": "Vakolat doirasidami?",
+          "factId": "scope",
+          "reply": "Ha, vakolati doirasida."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Talablarning majburiyligi",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Prokuror talablari haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "must",
+          "label": "Prokurorning vakolati doirasidagi talablarini bajarish barcha fuqarolar va yuridik shaxslar uchun majburiy",
+          "required": true,
+          "why": "6-modda.",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "barcha fuqarolar va yuridik shaxslar uchun majburiydir",
+              "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+              "text": "Prokurorning hujjatlar, materiallar va boshqa maʼlumotlarni taqdim etish, taftish, tekshirishlar oʻtkazish, mutaxassis ajratish, prokuraturaga kelish va aniqlangan qonunbuzarliklar xususida tushuntirishlar berish, qonunbuzarliklarni, ularga imkoniyat yaratayotgan sabab va shart-sharoitlarni bartaraf etish, shuningdek qonunga rioya etish toʻgʻrisidagi oʻz vakolatlari doirasida qoʻyayotgan talablarini bajarish ⟦barcha fuqarolar va yuridik shaxslar uchun majburiydir⟧.",
+              "anchor": "-106263"
+            }
+          ]
+        },
+        {
+          "id": "free",
+          "label": "Prokuratura organlariga zarur axborot, hujjatlar va nusxalar talab bo'yicha bepul beriladi",
+          "required": true,
+          "why": "6-modda.",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "mazkur organlarning talabiga muvofiq bepul beriladi",
+              "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+              "text": "Prokuratura organlari oʻz vazifalarini amalga oshirishlari uchun zarur boʻlgan axborot, hujjatlar va ularning nusxalari ⟦mazkur organlarning talabiga muvofiq bepul beriladi⟧.",
+              "anchor": "-106263"
+            }
+          ]
+        },
+        {
+          "id": "appeal",
+          "label": "Prokuror talablari ustidan shikoyat qilinishi ularning ijrosini to'xtatib qo'ymaydi",
+          "required": true,
+          "why": "6-modda.",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "Prokurorning talablari ustidan shikoyat qilinishi ularning ijrosini toʻxtatib qoʻymaydi",
+              "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+              "text": "⟦Prokurorning talablari ustidan shikoyat qilinishi ularning ijrosini toʻxtatib qoʻymaydi⟧.",
+              "anchor": "-106263"
+            }
+          ]
+        },
+        {
+          "id": "stop",
+          "label": "Shikoyat qilinsa, prokuror talabi ijrosi avtomatik to'xtaydi",
+          "required": false,
+          "why": "Shikoyat ijroni to'xtatmaydi (6-modda).",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "ijrosini toʻxtatib qoʻymaydi",
+              "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+              "text": "Prokurorning talablari ustidan shikoyat qilinishi ularning ⟦ijrosini toʻxtatib qoʻymaydi⟧.",
+              "anchor": "-106263"
+            }
+          ]
+        },
+        {
+          "id": "pay",
+          "label": "Prokuratura hujjat nusxalari uchun haq to'laydi, korxona pul oladi",
+          "required": false,
+          "why": "Axborot, hujjat va nusxalar bepul beriladi (6-modda).",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "bepul beriladi",
+              "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+              "text": "Prokuratura organlari oʻz vazifalarini amalga oshirishlari uchun zarur boʻlgan axborot, hujjatlar va ularning nusxalari mazkur organlarning talabiga muvofiq ⟦bepul beriladi⟧.",
+              "anchor": "-106263"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Majburiyat",
+      "sources": [],
+      "points": 25,
+      "description": "Qoidalarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "must",
+          "label": "Prokurorning vakolati doirasidagi talablarini bajarish kimlar uchun majburiy?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "all",
+              "label": "Barcha fuqarolar va yuridik shaxslar uchun"
+            },
+            {
+              "id": "state",
+              "label": "Faqat davlat organlari uchun"
+            },
+            {
+              "id": "none",
+              "label": "Majburiy emas"
+            }
+          ],
+          "correct": "all",
+          "why": "Barcha fuqarolar va yuridik shaxslar uchun (6-modda).",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "barcha fuqarolar va yuridik shaxslar uchun majburiydir",
+              "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+              "text": "Prokurorning hujjatlar, materiallar va boshqa maʼlumotlarni taqdim etish, taftish, tekshirishlar oʻtkazish, mutaxassis ajratish, prokuraturaga kelish va aniqlangan qonunbuzarliklar xususida tushuntirishlar berish, qonunbuzarliklarni, ularga imkoniyat yaratayotgan sabab va shart-sharoitlarni bartaraf etish, shuningdek qonunga rioya etish toʻgʻrisidagi oʻz vakolatlari doirasida qoʻyayotgan talablarini bajarish ⟦barcha fuqarolar va yuridik shaxslar uchun majburiydir⟧.",
+              "anchor": "-106263"
+            }
+          ]
+        },
+        {
+          "id": "appeal",
+          "label": "Prokuror talabi ustidan shikoyat berilsa, talab ijrosi",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "stop",
+              "label": "To'xtaydi"
+            },
+            {
+              "id": "continue",
+              "label": "To'xtamaydi"
+            },
+            {
+              "id": "half",
+              "label": "Yarim to'xtaydi"
+            }
+          ],
+          "correct": "continue",
+          "why": "To'xtamaydi (6-modda).",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "Prokurorning talablari ustidan shikoyat qilinishi ularning ijrosini toʻxtatib qoʻymaydi",
+              "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+              "text": "⟦Prokurorning talablari ustidan shikoyat qilinishi ularning ijrosini toʻxtatib qoʻymaydi⟧.",
+              "anchor": "-106263"
+            }
+          ]
+        },
+        {
+          "id": "copies",
+          "label": "Prokuratura talabiga ko'ra axborot, hujjat va nusxalar",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "free",
+              "label": "Bepul beriladi"
+            },
+            {
+              "id": "pay",
+              "label": "Pullik beriladi"
+            },
+            {
+              "id": "tax",
+              "label": "Soliq bilan beriladi"
+            }
+          ],
+          "correct": "free",
+          "why": "Bepul beriladi (6-modda).",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "mazkur organlarning talabiga muvofiq bepul beriladi",
+              "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+              "text": "Prokuratura organlari oʻz vazifalarini amalga oshirishlari uchun zarur boʻlgan axborot, hujjatlar va ularning nusxalari ⟦mazkur organlarning talabiga muvofiq bepul beriladi⟧.",
+              "anchor": "-106263"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Prokuror talabiga shikoyat qilinsa, ijro to'xtaydimi?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Prokuror hujjat va tushuntirish talab qilgan; Korxona talab ustidan shikoyat qilgan; Prokuratura hujjat nusxalari uchun haq so'ramoqda",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "barcha fuqarolar va yuridik shaxslar uchun majburiydir",
+              "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+              "text": "Prokurorning hujjatlar, materiallar va boshqa maʼlumotlarni taqdim etish, taftish, tekshirishlar oʻtkazish, mutaxassis ajratish, prokuraturaga kelish va aniqlangan qonunbuzarliklar xususida tushuntirishlar berish, qonunbuzarliklarni, ularga imkoniyat yaratayotgan sabab va shart-sharoitlarni bartaraf etish, shuningdek qonunga rioya etish toʻgʻrisidagi oʻz vakolatlari doirasida qoʻyayotgan talablarini bajarish ⟦barcha fuqarolar va yuridik shaxslar uchun majburiydir⟧.",
+              "anchor": "-106263"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Prokurorning vakolati doirasidagi talablarini bajarish barcha fuqarolar va yuridik shaxslar uchun majburiy; Prokuratura organlariga zarur axborot, hujjatlar va nusxalar talab bo'yicha bepul beriladi; Prokuror talablari ustidan shikoyat qilinishi ularning ijrosini to'xtatib qo'ymaydi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Talabni bajarish",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "demand",
+          "label": "Prokuror o'z vakolati doirasida hujjat va tushuntirish talab qiladi",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "oʻz vakolatlari doirasida qoʻyayotgan talablarini bajarish",
+              "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+              "text": "Prokurorning hujjatlar, materiallar va boshqa maʼlumotlarni taqdim etish, taftish, tekshirishlar oʻtkazish, mutaxassis ajratish, prokuraturaga kelish va aniqlangan qonunbuzarliklar xususida tushuntirishlar berish, qonunbuzarliklarni, ularga imkoniyat yaratayotgan sabab va shart-sharoitlarni bartaraf etish, shuningdek qonunga rioya etish toʻgʻrisidagi ⟦oʻz vakolatlari doirasida qoʻyayotgan talablarini bajarish⟧ barcha fuqarolar va yuridik shaxslar uchun majburiydir.",
+              "anchor": "-106263"
+            }
+          ]
+        },
+        {
+          "id": "do",
+          "label": "Talabni bajarish majburiy, hujjatlar bepul beriladi",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "barcha fuqarolar va yuridik shaxslar uchun majburiydir",
+              "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+              "text": "Prokurorning hujjatlar, materiallar va boshqa maʼlumotlarni taqdim etish, taftish, tekshirishlar oʻtkazish, mutaxassis ajratish, prokuraturaga kelish va aniqlangan qonunbuzarliklar xususida tushuntirishlar berish, qonunbuzarliklarni, ularga imkoniyat yaratayotgan sabab va shart-sharoitlarni bartaraf etish, shuningdek qonunga rioya etish toʻgʻrisidagi oʻz vakolatlari doirasida qoʻyayotgan talablarini bajarish ⟦barcha fuqarolar va yuridik shaxslar uchun majburiydir⟧.",
+              "anchor": "-106263"
+            }
+          ]
+        },
+        {
+          "id": "appeal",
+          "label": "Shikoyat berilsa ham, talab ijrosi to'xtamaydi",
+          "sources": [
+            {
+              "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+              "article": "6-modda",
+              "url": "https://lex.uz/docs/-106197",
+              "quote": "Prokurorning talablari ustidan shikoyat qilinishi ularning ijrosini toʻxtatib qoʻymaydi",
+              "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+              "text": "⟦Prokurorning talablari ustidan shikoyat qilinishi ularning ijrosini toʻxtatib qoʻymaydi⟧.",
+              "anchor": "-106263"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Shikoyat",
+      "sources": [
+        {
+          "act": "«Prokuratura toʻgʻrisida»gi Qonun",
+          "article": "6-modda",
+          "url": "https://lex.uz/docs/-106197",
+          "quote": "Prokurorning talablari ustidan shikoyat qilinishi ularning ijrosini toʻxtatib qoʻymaydi",
+          "heading": "6-modda. Prokuror talablari bajarilishining majburiyligi",
+          "text": "⟦Prokurorning talablari ustidan shikoyat qilinishi ularning ijrosini toʻxtatib qoʻymaydi⟧.",
+          "anchor": "-106263"
+        }
+      ],
+      "points": 15,
+      "description": "Prokuror talablari ustidan shikoyat qilinsa nima bo'ladi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Ijro to'xtamaydi"
+        },
+        {
+          "id": "b",
+          "label": "Ijro to'xtaydi"
+        },
+        {
+          "id": "c",
+          "label": "Talab bekor bo'ladi"
+        },
+        {
+          "id": "d",
+          "label": "Prokuror ishdan chetlatiladi"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

@@ -1,0 +1,463 @@
+{
+  "id": "jinoyat-jabrlanuvchi",
+  "title": "Telefonim o'g'irlandi: jabrlanuvchi huquqlarim",
+  "area": "Jinoyat-protsessual huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijoz o'g'irlik tufayli mulkiy zarar ko'rgan. Jabrlanuvchi deb e'tirof etish, uning huquqlari va majburiyatlarini Jinoyat-protsessual kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Sherzod, 29 yosh, haydovchi",
+    "openingLine": "Assalomu alaykum. Telefonimni o'g'irlashdi, ariza berdim. Endi mening huquqlarim qanday?",
+    "hiddenFacts": [
+      {
+        "id": "harm",
+        "fact": "Mijozga mulkiy zarar yetkazilgan (telefon o'g'irlangan)",
+        "revealOn": []
+      },
+      {
+        "id": "report",
+        "fact": "Mijoz jinoyat haqida ariza bergan",
+        "revealOn": []
+      },
+      {
+        "id": "status",
+        "fact": "Hali jabrlanuvchi deb e'tirof etilmagan",
+        "revealOn": []
+      },
+      {
+        "id": "lang",
+        "fact": "Mijoz rus tilida erkin gapiradi, o'zbekcha qiynaladi",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "harm",
+        "report",
+        "status"
+      ],
+      "questions": [
+        {
+          "id": "q-harm",
+          "text": "Sizga qanday zarar yetdi?",
+          "factId": "harm",
+          "reply": "Telefonim o'g'irlandi, mulkiy zarar."
+        },
+        {
+          "id": "q-report",
+          "text": "Ariza berdingizmi?",
+          "factId": "report",
+          "reply": "Ha, ichki ishlar organiga ariza berdim."
+        },
+        {
+          "id": "q-status",
+          "text": "Sizni jabrlanuvchi deb e'tirof etishdimi?",
+          "factId": "status",
+          "reply": "Yo'q, hali qaror chiqmagan."
+        },
+        {
+          "id": "q-lang",
+          "text": "Qaysi tilda qulay?",
+          "factId": "lang",
+          "reply": "Rus tilida qulayroq."
+        },
+        {
+          "id": "q-filler",
+          "text": "Telefoningiz qanday rangda edi?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, huquqlarim haqida gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Jabrlanuvchi huquqlari",
+      "sources": [],
+      "points": 15,
+      "description": "Jabrlanuvchi qanday huquqlarga ega.",
+      "prompt": "Jabrlanuvchi qanday huquqlarga ega? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "testify",
+          "label": "Ko'rsatuv berish va dalillar taqdim qilish",
+          "required": true,
+          "why": "55-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "55-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "koʻrsatuv berish; dalillar taqdim qilish; iltimosnoma berish va rad qilish",
+              "heading": "55-modda. Jabrlanuvchining huquq va majburiyatlari",
+              "text": "Jabrlanuvchi: ⟦koʻrsatuv berish; dalillar taqdim qilish; iltimosnoma berish va rad qilish⟧; oʻz ona tilidan va tarjimon xizmatidan foydalanish; oʻz manfaatlarini himoya qilish uchun vakil olish; surishtiruvchi yoki tergovchining ruxsati bilan tergov harakatlarida ishtirok etish; surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ishning barcha materiallari bilan tanishish va undan zarur maʼlumotlarni yozib olish, materiallar va hujjatlardan texnika vositalari yordamida oʻz hisobidan koʻchirma nusxalar olish yoki ulardagi maʼlu…",
+              "anchor": "-253627"
+            }
+          ]
+        },
+        {
+          "id": "lang",
+          "label": "O'z ona tilidan va tarjimon xizmatidan foydalanish",
+          "required": true,
+          "why": "55-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "55-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "oʻz ona tilidan va tarjimon xizmatidan foydalanish",
+              "heading": "55-modda. Jabrlanuvchining huquq va majburiyatlari",
+              "text": "Jabrlanuvchi: koʻrsatuv berish; dalillar taqdim qilish; iltimosnoma berish va rad qilish; ⟦oʻz ona tilidan va tarjimon xizmatidan foydalanish⟧; oʻz manfaatlarini himoya qilish uchun vakil olish; surishtiruvchi yoki tergovchining ruxsati bilan tergov harakatlarida ishtirok etish; surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ishning barcha materiallari bilan tanishish va undan zarur maʼlumotlarni yozib olish, materiallar va hujjatlardan texnika vositalari yordamida oʻz hisobidan koʻchirma nusxalar olish yoki ulardagi maʼlumotlarni oʻzga shaklda qayd etish; qonunda nazarda t…",
+              "anchor": "-253627"
+            }
+          ]
+        },
+        {
+          "id": "rep",
+          "label": "O'z manfaatlarini himoya qilish uchun vakil olish",
+          "required": true,
+          "why": "55-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "55-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "oʻz manfaatlarini himoya qilish uchun vakil olish",
+              "heading": "55-modda. Jabrlanuvchining huquq va majburiyatlari",
+              "text": "Jabrlanuvchi: koʻrsatuv berish; dalillar taqdim qilish; iltimosnoma berish va rad qilish; oʻz ona tilidan va tarjimon xizmatidan foydalanish; ⟦oʻz manfaatlarini himoya qilish uchun vakil olish⟧; surishtiruvchi yoki tergovchining ruxsati bilan tergov harakatlarida ishtirok etish; surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ishning barcha materiallari bilan tanishish va undan zarur maʼlumotlarni yozib olish, materiallar va hujjatlardan texnika vositalari yordamida oʻz hisobidan koʻchirma nusxalar olish yoki ulardagi maʼlumotlarni oʻzga shaklda qayd etish; qonunda nazarda tutilgan hollarda yarashuv toʻgʻrisida ariza berish …",
+              "anchor": "-253627"
+            }
+          ]
+        },
+        {
+          "id": "files",
+          "label": "Tergov tamom bo'lgach ishning barcha materiallari bilan tanishish",
+          "required": true,
+          "why": "55-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "55-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ishning barcha materiallari bilan tanishish",
+              "heading": "55-modda. Jabrlanuvchining huquq va majburiyatlari",
+              "text": "Jabrlanuvchi: koʻrsatuv berish; dalillar taqdim qilish; iltimosnoma berish va rad qilish; oʻz ona tilidan va tarjimon xizmatidan foydalanish; oʻz manfaatlarini himoya qilish uchun vakil olish; surishtiruvchi yoki tergovchining ruxsati bilan tergov harakatlarida ishtirok etish; surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ⟦ishning barcha materiallari bilan tanishish⟧ va undan zarur maʼlumotlarni yozib olish, materiallar va hujjatlardan texnika vositalari yordamida oʻz hisobidan koʻchirma nusxalar olish yoki ulardagi maʼlumotlarni oʻzga shaklda qayd etish; qonunda nazarda tutilgan hollarda yarashuv toʻgʻrisida ariza berish hamda sud tomonidan ish boʻyicha dastlabki eshituv oʻtkazilayotganda va yarashuv toʻgʻrisidagi ishlar boʻyicha, birinchi instansiya, apellyatsiya, kassatsiya va taftish instansiyasi sudini…",
+              "anchor": "-253627"
+            }
+          ]
+        },
+        {
+          "id": "cancel",
+          "label": "Tergovchining qarorini o'zi bekor qilish",
+          "required": false,
+          "why": "55-moddadagi huquqlar ro'yxatida bunday huquq yo'q.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "55-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Jabrlanuvchi: koʻrsatuv berish; dalillar taqdim qilish",
+              "heading": "55-modda. Jabrlanuvchining huquq va majburiyatlari",
+              "text": "⟦Jabrlanuvchi: koʻrsatuv berish; dalillar taqdim qilish⟧; iltimosnoma berish va rad qilish; oʻz ona tilidan va tarjimon xizmatidan foydalanish; oʻz manfaatlarini himoya qilish uchun vakil olish; surishtiruvchi yoki tergovchining ruxsati bilan tergov harakatlarida ishtirok etish; surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ishning barcha materiallari bilan tanishish va undan zarur maʼlumotlarni yozib olish, materiallar va hujjatlardan texnika vositalari yordamida oʻz hisobidan koʻchirma …",
+              "anchor": "-253627"
+            }
+          ]
+        },
+        {
+          "id": "sentence",
+          "label": "Ayblanuvchiga jazo tayinlash",
+          "required": false,
+          "why": "Jazoni sud tayinlaydi, bu jabrlanuvchi huquqlari ro'yxatida yo'q.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "55-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Jabrlanuvchi: koʻrsatuv berish; dalillar taqdim qilish",
+              "heading": "55-modda. Jabrlanuvchining huquq va majburiyatlari",
+              "text": "⟦Jabrlanuvchi: koʻrsatuv berish; dalillar taqdim qilish⟧; iltimosnoma berish va rad qilish; oʻz ona tilidan va tarjimon xizmatidan foydalanish; oʻz manfaatlarini himoya qilish uchun vakil olish; surishtiruvchi yoki tergovchining ruxsati bilan tergov harakatlarida ishtirok etish; surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ishning barcha materiallari bilan tanishish va undan zarur maʼlumotlarni yozib olish, materiallar va hujjatlardan texnika vositalari yordamida oʻz hisobidan koʻchirma …",
+              "anchor": "-253627"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Jabrlanuvchi maqomi",
+      "sources": [],
+      "points": 25,
+      "description": "Maqomni qanday olish va uning qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "who",
+          "label": "Jabrlanuvchi deb e'tirof etish haqida qanday hujjat chiqariladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "cert",
+              "label": "Faqat guvohnoma"
+            },
+            {
+              "id": "decision",
+              "label": "Surishtiruvchi/tergovchi/prokuror qaror, sud ajrim"
+            },
+            {
+              "id": "law",
+              "label": "Qonun bilan avtomatik"
+            }
+          ],
+          "correct": "decision",
+          "why": "Surishtiruvchi, tergovchi, prokuror qaror, sud esa ajrim chiqaradi (54-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "54-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Jabrlanuvchi deb eʼtirof etish haqida surishtiruvchi, tergovchi, prokuror qaror, sud esa ajrim chiqaradi",
+              "heading": "54-modda. Jabrlanuvchi",
+              "text": "Jinoyat, xuddi shuningdek aqli noraso shaxsning ijtimoiy xavfli qilmishi shaxsga maʼnaviy, jismoniy yoki mulkiy zarar yetkazgan deb hisoblash uchun dalillar boʻlgan taqdirda, bunday shaxs jabrlanuvchi deb eʼtirof etiladi. ⟦Jabrlanuvchi deb eʼtirof etish haqida surishtiruvchi, tergovchi, prokuror qaror, sud esa ajrim chiqaradi⟧.",
+              "anchor": "-253624"
+            }
+          ]
+        },
+        {
+          "id": "harm",
+          "label": "Kim jabrlanuvchi deb e'tirof etiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "any",
+              "label": "Jinoyat haqida eshitgan har kim"
+            },
+            {
+              "id": "harm",
+              "label": "Ma'naviy, jismoniy yoki mulkiy zarar yetkazilgan deb hisoblash uchun dalillar bo'lgan shaxs"
+            },
+            {
+              "id": "cop",
+              "label": "Faqat ariza bergan shaxs"
+            }
+          ],
+          "correct": "harm",
+          "why": "Jinoyat shaxsga ma'naviy, jismoniy yoki mulkiy zarar yetkazgan deb hisoblash uchun dalillar bo'lsa (54-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "54-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "shaxsga maʼnaviy, jismoniy yoki mulkiy zarar yetkazgan deb hisoblash uchun dalillar boʻlgan taqdirda, bunday shaxs jabrlanuvchi deb eʼtirof etiladi",
+              "heading": "54-modda. Jabrlanuvchi",
+              "text": "Jinoyat, xuddi shuningdek aqli noraso shaxsning ijtimoiy xavfli qilmishi ⟦shaxsga maʼnaviy, jismoniy yoki mulkiy zarar yetkazgan deb hisoblash uchun dalillar boʻlgan taqdirda, bunday shaxs jabrlanuvchi deb eʼtirof etiladi⟧. Jabrlanuvchi deb eʼtirof etish haqida surishtiruvchi, tergovchi, prokuror qaror, sud esa ajrim chiqaradi.",
+              "anchor": "-253624"
+            }
+          ]
+        },
+        {
+          "id": "minor",
+          "label": "Jabrlanuvchi voyaga yetmagan bo'lsa, ishda kim ishtirok etadi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Hech kim"
+            },
+            {
+              "id": "rep",
+              "label": "Qonuniy vakili, u bilan birga yoki o'rniga"
+            },
+            {
+              "id": "pros",
+              "label": "Faqat prokuror"
+            }
+          ],
+          "correct": "rep",
+          "why": "U bilan birgalikda yoki uning o'rniga qonuniy vakili ishtirok etadi (54-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "54-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ishda u bilan birgalikda yoki uning oʻrniga qonuniy vakili ishtirok etadi",
+              "heading": "54-modda. Jabrlanuvchi",
+              "text": "Jabrlanuvchi voyaga yetmagan yoki belgilangan tartibda muomalaga layoqatsiz deb eʼtirof etilgan shaxs boʻlsa, ⟦ishda u bilan birgalikda yoki uning oʻrniga qonuniy vakili ishtirok etadi⟧.",
+              "anchor": "-253624"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Telefonim o'g'irlandi: jabrlanuvchi huquqlarim). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Mijozga mulkiy zarar yetkazilgan (telefon o'g'irlangan); Mijoz jinoyat haqida ariza bergan; Hali jabrlanuvchi deb e'tirof etilmagan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "55-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "koʻrsatuv berish; dalillar taqdim qilish; iltimosnoma berish va rad qilish",
+              "heading": "55-modda. Jabrlanuvchining huquq va majburiyatlari",
+              "text": "Jabrlanuvchi: ⟦koʻrsatuv berish; dalillar taqdim qilish; iltimosnoma berish va rad qilish⟧; oʻz ona tilidan va tarjimon xizmatidan foydalanish; oʻz manfaatlarini himoya qilish uchun vakil olish; surishtiruvchi yoki tergovchining ruxsati bilan tergov harakatlarida ishtirok etish; surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ishning barcha materiallari bilan tanishish va undan zarur maʼlumotlarni yozib olish, materiallar va hujjatlardan texnika vositalari yordamida oʻz hisobidan koʻchirma nusxalar olish yoki ulardagi maʼlu…",
+              "anchor": "-253627"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "54-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Jabrlanuvchi deb eʼtirof etish haqida surishtiruvchi, tergovchi, prokuror qaror, sud esa ajrim chiqaradi",
+              "heading": "54-modda. Jabrlanuvchi",
+              "text": "Jinoyat, xuddi shuningdek aqli noraso shaxsning ijtimoiy xavfli qilmishi shaxsga maʼnaviy, jismoniy yoki mulkiy zarar yetkazgan deb hisoblash uchun dalillar boʻlgan taqdirda, bunday shaxs jabrlanuvchi deb eʼtirof etiladi. ⟦Jabrlanuvchi deb eʼtirof etish haqida surishtiruvchi, tergovchi, prokuror qaror, sud esa ajrim chiqaradi⟧.",
+              "anchor": "-253624"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Ko'rsatuv berish va dalillar taqdim qilish; O'z ona tilidan va tarjimon xizmatidan foydalanish; O'z manfaatlarini himoya qilish uchun vakil olish; Tergov tamom bo'lgach ishning barcha materiallari bilan tanishish",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Jarayon tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Jabrlanuvchi uchun jarayonni belgilang.",
+      "order": [
+        {
+          "id": "report",
+          "label": "Shaxs jinoyat haqida ariza beradi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "322-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "shaxslarning arizalari",
+              "heading": "322-modda. Jinoyat ishini qoʻzgʻatish sabablari va asoslari",
+              "text": "Jinoyat ishini qoʻzgʻatish uchun:\n1) ⟦shaxslarning arizalari⟧;",
+              "anchor": "-255364"
+            }
+          ]
+        },
+        {
+          "id": "recognize",
+          "label": "Jabrlanuvchi deb e'tirof etish haqida qaror chiqariladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "54-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Jabrlanuvchi deb eʼtirof etish haqida surishtiruvchi, tergovchi, prokuror qaror, sud esa ajrim chiqaradi",
+              "heading": "54-modda. Jabrlanuvchi",
+              "text": "Jinoyat, xuddi shuningdek aqli noraso shaxsning ijtimoiy xavfli qilmishi shaxsga maʼnaviy, jismoniy yoki mulkiy zarar yetkazgan deb hisoblash uchun dalillar boʻlgan taqdirda, bunday shaxs jabrlanuvchi deb eʼtirof etiladi. ⟦Jabrlanuvchi deb eʼtirof etish haqida surishtiruvchi, tergovchi, prokuror qaror, sud esa ajrim chiqaradi⟧.",
+              "anchor": "-253624"
+            }
+          ]
+        },
+        {
+          "id": "files",
+          "label": "Tergov tamom bo'lgach, jabrlanuvchi ish materiallari bilan tanishadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "55-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ishning barcha materiallari bilan tanishish",
+              "heading": "55-modda. Jabrlanuvchining huquq va majburiyatlari",
+              "text": "Jabrlanuvchi: koʻrsatuv berish; dalillar taqdim qilish; iltimosnoma berish va rad qilish; oʻz ona tilidan va tarjimon xizmatidan foydalanish; oʻz manfaatlarini himoya qilish uchun vakil olish; surishtiruvchi yoki tergovchining ruxsati bilan tergov harakatlarida ishtirok etish; ⟦surishtiruv yoki dastlabki tergov tamom boʻlganidan soʻng ishning barcha materiallari bilan tanishish⟧ va undan zarur maʼlumotlarni yozib olish, materiallar va hujjatlardan texnika vositalari yordamida oʻz hisobidan koʻchirma nusxalar olish yoki ulardagi maʼlumotlarni oʻzga shaklda qayd etish; qonunda nazarda tutilgan hollarda yarashuv toʻgʻrisida ariza berish hamda sud tomonidan ish boʻyicha dastlabki eshituv oʻtkazilayotganda va yarashuv toʻgʻrisidagi ishlar boʻyicha, birinchi instansiya, apellyatsiya, kassatsiya va taftish instansiyasi sudini…",
+              "anchor": "-253627"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Jabrlanuvchi majburiyati",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "55-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "surishtiruvchi, tergovchi, prokuror va sudning chaqiruviga binoan hozir boʻlishi",
+          "heading": "55-modda. Jabrlanuvchining huquq va majburiyatlari",
+          "text": "Jabrlanuvchi: ⟦surishtiruvchi, tergovchi, prokuror va sudning chaqiruviga binoan hozir boʻlishi⟧; haqqoniy koʻrsatuvlar berishi; haqiqatni aniqlashga dalillarni yoʻq qilish, soxtalashtirish, guvohlarni koʻndirishga urinish va qonunga xilof boshqa harakatlar bilan toʻsqinlik qilmasligi; surishtiruvchi, tergovchi, prokuror va sudning talabi boʻyicha dalillar taqdim qilishi; ishning tergovi va sud majlisi vaqtida tartibga rioya etishi shart.",
+          "anchor": "-253627"
+        }
+      ],
+      "points": 15,
+      "description": "Quyidagilardan qaysi biri jabrlanuvchining majburiyati?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Surishtiruvchi, tergovchi, prokuror va sudning chaqiruviga binoan hozir bo'lish"
+        },
+        {
+          "id": "b",
+          "label": "Tergovchi qarorini bekor qilish"
+        },
+        {
+          "id": "c",
+          "label": "Ishni o'zi tugatish"
+        },
+        {
+          "id": "d",
+          "label": "Majburiyati yo'q"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

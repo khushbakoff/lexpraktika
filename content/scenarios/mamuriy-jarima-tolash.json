@@ -1,0 +1,466 @@
+{
+  "id": "mamuriy-jarima-tolash",
+  "title": "Ma'muriy jarimani qachongacha to'lash kerak?",
+  "area": "Ma'muriy huquq",
+  "areaId": "mamuriy",
+  "tracks": [
+    "davlat",
+    "huquq-tartibot",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Haydovchiga ma'muriy jarima solingan. Jarima to'lash muddatlari, shikoyat berilgandagi muddat va 16–18 yoshdagilar uchun qoidalarni Ma'muriy javobgarlik to'g'risidagi kodeks bo'yicha belgilang.",
+  "client": {
+    "persona": "Javlon, 28 yosh, haydovchi",
+    "openingLine": "Assalomu alaykum. Yo'l harakati qoidasini buzganim uchun jarima solishdi. Qachongacha to'lashim kerak?",
+    "hiddenFacts": [
+      {
+        "id": "fine",
+        "fact": "Yo'l harakati qoidalarini buzganlik uchun jarima solingan",
+        "revealOn": []
+      },
+      {
+        "id": "date",
+        "fact": "Qaror chiqarilgan kundan bir necha kun o'tgan",
+        "revealOn": []
+      },
+      {
+        "id": "appeal",
+        "fact": "Mijoz qarorga shikoyat qilmoqchi",
+        "revealOn": []
+      },
+      {
+        "id": "age",
+        "fact": "Mijoz voyaga yetgan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "fine",
+        "date",
+        "appeal"
+      ],
+      "questions": [
+        {
+          "id": "q-fine",
+          "text": "Nima uchun jarima solishdi?",
+          "factId": "fine",
+          "reply": "Yo'l harakati qoidasini buzganim uchun."
+        },
+        {
+          "id": "q-date",
+          "text": "Qaror qachon chiqqan?",
+          "factId": "date",
+          "reply": "Taxminan 10 kun oldin."
+        },
+        {
+          "id": "q-appeal",
+          "text": "Shikoyat qilmoqchimisiz?",
+          "factId": "appeal",
+          "reply": "Ha, shikoyat qilmoqchiman."
+        },
+        {
+          "id": "q-age",
+          "text": "Necha yoshdasiz?",
+          "factId": "age",
+          "reply": "28 yoshdaman."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Jarima muddatlari",
+      "sources": [],
+      "points": 15,
+      "description": "Qoidalarni aniqlang.",
+      "prompt": "Jarima to'lash haqida qaysi qoidalar to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "general",
+          "label": "Umumiy qoida: jarima qaror topshirilgan kundan o'ttiz kundan kechiktirmay to'lanadi",
+          "required": true,
+          "why": "332-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "qaror topshirilgan kundan boshlab oʻttiz kundan kechiktirmay",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "Jarima huquqbuzar tomonidan unga jarima solish toʻgʻrisidagi ⟦qaror topshirilgan kundan boshlab oʻttiz kundan kechiktirmay⟧, bunday qaror xususida shikoyat berilgan yoki protest bildirilgan taqdirda — shikoyat yoki protest qanoatlantirilmaganligi toʻgʻrisida xabar berilgan kundan boshlab oʻn besh kundan kechiktirmay toʻlanishi lozim, ushbu moddaning ikkinchi qismi bundan mustasno.",
+              "anchor": "-201758"
+            }
+          ]
+        },
+        {
+          "id": "appeal",
+          "label": "Shikoyat qanoatlantirilmasa, xabar berilgan kundan o'n besh kundan kechiktirmay to'lanadi",
+          "required": true,
+          "why": "332-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "shikoyat yoki protest qanoatlantirilmaganligi toʻgʻrisida xabar berilgan kundan boshlab oʻn besh kundan kechiktirmay toʻlanishi lozim",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "Jarima huquqbuzar tomonidan unga jarima solish toʻgʻrisidagi qaror topshirilgan kundan boshlab oʻttiz kundan kechiktirmay, bunday qaror xususida shikoyat berilgan yoki protest bildirilgan taqdirda — ⟦shikoyat yoki protest qanoatlantirilmaganligi toʻgʻrisida xabar berilgan kundan boshlab oʻn besh kundan kechiktirmay toʻlanishi lozim⟧, ushbu moddaning ikkinchi qismi bundan mustasno.",
+              "anchor": "-201758"
+            }
+          ]
+        },
+        {
+          "id": "traffic",
+          "label": "Yo'l harakati qoidalari uchun jarima qaror chiqarilgan kundan oltmish kundan kechiktirmay to'lanadi",
+          "required": true,
+          "why": "332-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "jarima solish toʻgʻrisidagi qaror chiqarilgan kundan eʼtiboran oltmish kundan kechiktirmay",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "Yoʻl harakati qoidalarini buzganlik uchun solingan jarimani huquqbuzar ⟦jarima solish toʻgʻrisidagi qaror chiqarilgan kundan eʼtiboran oltmish kundan kechiktirmay⟧, bunday qaror xususida shikoyat berilgan yoki protest bildirilgan hollarda esa, shikoyat yoki protest qanoatlantirilmay qoldirilganligi toʻgʻrisida xabar berilgan kundan eʼtiboran oʻttiz kundan kechiktirmay toʻlashi kerak.",
+              "anchor": "-201758"
+            }
+          ]
+        },
+        {
+          "id": "minor",
+          "label": "16–18 yoshdagilarda mustaqil ish haqi bo'lmasa, jarima ota-onalaridan undiriladi",
+          "required": true,
+          "why": "332-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "jarima ularning ota-onalari yoki ular oʻrnini bosuvchi shaxslardan undirib olinadi",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "Oʻn olti yoshdan oʻn sakkiz yoshgacha boʻlgan shaxslarning mustaqil ish haqi boʻlmagan taqdirda, ⟦jarima ularning ota-onalari yoki ular oʻrnini bosuvchi shaxslardan undirib olinadi⟧.",
+              "anchor": "-201758"
+            }
+          ]
+        },
+        {
+          "id": "never",
+          "label": "Jarima to'lash muddati belgilanmagan",
+          "required": false,
+          "why": "Muddatlar 332-moddada belgilangan.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "qaror topshirilgan kundan boshlab oʻttiz kundan kechiktirmay",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "Jarima huquqbuzar tomonidan unga jarima solish toʻgʻrisidagi ⟦qaror topshirilgan kundan boshlab oʻttiz kundan kechiktirmay⟧, bunday qaror xususida shikoyat berilgan yoki protest bildirilgan taqdirda — shikoyat yoki protest qanoatlantirilmaganligi toʻgʻrisida xabar berilgan kundan boshlab oʻn besh kundan kechiktirmay toʻlanishi lozim, ushbu moddaning ikkinchi qismi bundan mustasno.",
+              "anchor": "-201758"
+            }
+          ]
+        },
+        {
+          "id": "bankless",
+          "label": "Jarima har doim naqd pulda joyida to'lanadi",
+          "required": false,
+          "why": "Jarima tegishli bank muassasasiga to'lanadi (joyida undiriladigan jarima bundan mustasno).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "tegishli bank muassasasiga toʻlanadi",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "Maʼmuriy huquqbuzarlik sodir etganlik uchun solingan jarima huquqbuzar tomonidan ⟦tegishli bank muassasasiga toʻlanadi⟧, huquqbuzarlik sodir etilgan joyning oʻzida undirib olinadigan jarima bundan mustasno.",
+              "anchor": "-201758"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Muddat hisobi",
+      "sources": [],
+      "points": 25,
+      "description": "Jarima muddatlarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "general",
+          "label": "Umumiy qoida bo'yicha jarima to'lash muddati",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d10",
+              "label": "10 kun"
+            },
+            {
+              "id": "d30",
+              "label": "30 kun"
+            },
+            {
+              "id": "d60",
+              "label": "60 kun"
+            },
+            {
+              "id": "y1",
+              "label": "1 yil"
+            }
+          ],
+          "correct": "d30",
+          "why": "Qaror topshirilgan kundan o'ttiz kundan kechiktirmay (332-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "qaror topshirilgan kundan boshlab oʻttiz kundan kechiktirmay",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "Jarima huquqbuzar tomonidan unga jarima solish toʻgʻrisidagi ⟦qaror topshirilgan kundan boshlab oʻttiz kundan kechiktirmay⟧, bunday qaror xususida shikoyat berilgan yoki protest bildirilgan taqdirda — shikoyat yoki protest qanoatlantirilmaganligi toʻgʻrisida xabar berilgan kundan boshlab oʻn besh kundan kechiktirmay toʻlanishi lozim, ushbu moddaning ikkinchi qismi bundan mustasno.",
+              "anchor": "-201758"
+            }
+          ]
+        },
+        {
+          "id": "traffic",
+          "label": "Yo'l harakati qoidalarini buzganlik uchun jarima to'lash muddati",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d10",
+              "label": "10 kun"
+            },
+            {
+              "id": "d30",
+              "label": "30 kun"
+            },
+            {
+              "id": "d60",
+              "label": "60 kun"
+            },
+            {
+              "id": "y1",
+              "label": "1 yil"
+            }
+          ],
+          "correct": "d60",
+          "why": "Qaror chiqarilgan kundan oltmish kundan kechiktirmay (332-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "jarima solish toʻgʻrisidagi qaror chiqarilgan kundan eʼtiboran oltmish kundan kechiktirmay",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "Yoʻl harakati qoidalarini buzganlik uchun solingan jarimani huquqbuzar ⟦jarima solish toʻgʻrisidagi qaror chiqarilgan kundan eʼtiboran oltmish kundan kechiktirmay⟧, bunday qaror xususida shikoyat berilgan yoki protest bildirilgan hollarda esa, shikoyat yoki protest qanoatlantirilmay qoldirilganligi toʻgʻrisida xabar berilgan kundan eʼtiboran oʻttiz kundan kechiktirmay toʻlashi kerak.",
+              "anchor": "-201758"
+            }
+          ]
+        },
+        {
+          "id": "appeal",
+          "label": "Umumiy qoidada shikoyat qanoatlantirilmasa, to'lash muddati",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "d5",
+              "label": "5 kun"
+            },
+            {
+              "id": "d15",
+              "label": "15 kun"
+            },
+            {
+              "id": "d30",
+              "label": "30 kun"
+            },
+            {
+              "id": "d60",
+              "label": "60 kun"
+            }
+          ],
+          "correct": "d15",
+          "why": "Xabar berilgan kundan o'n besh kundan kechiktirmay (332-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "shikoyat yoki protest qanoatlantirilmaganligi toʻgʻrisida xabar berilgan kundan boshlab oʻn besh kundan kechiktirmay toʻlanishi lozim",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "Jarima huquqbuzar tomonidan unga jarima solish toʻgʻrisidagi qaror topshirilgan kundan boshlab oʻttiz kundan kechiktirmay, bunday qaror xususida shikoyat berilgan yoki protest bildirilgan taqdirda — ⟦shikoyat yoki protest qanoatlantirilmaganligi toʻgʻrisida xabar berilgan kundan boshlab oʻn besh kundan kechiktirmay toʻlanishi lozim⟧, ushbu moddaning ikkinchi qismi bundan mustasno.",
+              "anchor": "-201758"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Ma'muriy jarimani qachongacha to'lash kerak?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Yo'l harakati qoidalarini buzganlik uchun jarima solingan; Qaror chiqarilgan kundan bir necha kun o'tgan; Mijoz qarorga shikoyat qilmoqchi",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "qaror topshirilgan kundan boshlab oʻttiz kundan kechiktirmay",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "Jarima huquqbuzar tomonidan unga jarima solish toʻgʻrisidagi ⟦qaror topshirilgan kundan boshlab oʻttiz kundan kechiktirmay⟧, bunday qaror xususida shikoyat berilgan yoki protest bildirilgan taqdirda — shikoyat yoki protest qanoatlantirilmaganligi toʻgʻrisida xabar berilgan kundan boshlab oʻn besh kundan kechiktirmay toʻlanishi lozim, ushbu moddaning ikkinchi qismi bundan mustasno.",
+              "anchor": "-201758"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Umumiy qoida: jarima qaror topshirilgan kundan o'ttiz kundan kechiktirmay to'lanadi; Shikoyat qanoatlantirilmasa, xabar berilgan kundan o'n besh kundan kechiktirmay to'lanadi; Yo'l harakati qoidalari uchun jarima qaror chiqarilgan kundan oltmish kundan kechiktirmay to'lanadi; 16–18 yoshdagilarda mustaqil ish haqi bo'lmasa, jarima ota-onalaridan undiriladi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Jarima to'lash",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "decision",
+          "label": "Jarima solish haqida qaror chiqariladi va topshiriladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "Jarima huquqbuzar tomonidan unga jarima solish toʻgʻrisidagi qaror topshirilgan kundan boshlab",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "⟦Jarima huquqbuzar tomonidan unga jarima solish toʻgʻrisidagi qaror topshirilgan kundan boshlab⟧ oʻttiz kundan kechiktirmay, bunday qaror xususida shikoyat berilgan yoki protest bildirilgan taqdirda — shikoyat yoki protest qanoatlantirilmaganligi toʻgʻrisida xabar berilgan kundan boshlab oʻn besh kundan kechiktirmay toʻlanishi lozim, ushbu moddaning ikkinchi qismi bundan mustasno.",
+              "anchor": "-201758"
+            }
+          ]
+        },
+        {
+          "id": "pay",
+          "label": "Huquqbuzar belgilangan muddatda jarimani bank muassasasiga to'laydi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "tegishli bank muassasasiga toʻlanadi",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "Maʼmuriy huquqbuzarlik sodir etganlik uchun solingan jarima huquqbuzar tomonidan ⟦tegishli bank muassasasiga toʻlanadi⟧, huquqbuzarlik sodir etilgan joyning oʻzida undirib olinadigan jarima bundan mustasno.",
+              "anchor": "-201758"
+            }
+          ]
+        },
+        {
+          "id": "appeal",
+          "label": "Shikoyat qilinsa va qanoatlantirilmasa, xabar berilgan kundan o'n besh kunda to'lanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+              "article": "332-modda",
+              "url": "https://lex.uz/docs/-97664",
+              "quote": "shikoyat yoki protest qanoatlantirilmaganligi toʻgʻrisida xabar berilgan kundan boshlab oʻn besh kundan kechiktirmay toʻlanishi lozim",
+              "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+              "text": "Jarima huquqbuzar tomonidan unga jarima solish toʻgʻrisidagi qaror topshirilgan kundan boshlab oʻttiz kundan kechiktirmay, bunday qaror xususida shikoyat berilgan yoki protest bildirilgan taqdirda — ⟦shikoyat yoki protest qanoatlantirilmaganligi toʻgʻrisida xabar berilgan kundan boshlab oʻn besh kundan kechiktirmay toʻlanishi lozim⟧, ushbu moddaning ikkinchi qismi bundan mustasno.",
+              "anchor": "-201758"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "16–18 yoshdagilar",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi",
+          "article": "332-modda",
+          "url": "https://lex.uz/docs/-97664",
+          "quote": "jarima ularning ota-onalari yoki ular oʻrnini bosuvchi shaxslardan undirib olinadi",
+          "heading": "332-modda. Jarima solish toʻgʻrisidagi qarorni ijro etish muddatlari va tartibi",
+          "text": "Oʻn olti yoshdan oʻn sakkiz yoshgacha boʻlgan shaxslarning mustaqil ish haqi boʻlmagan taqdirda, ⟦jarima ularning ota-onalari yoki ular oʻrnini bosuvchi shaxslardan undirib olinadi⟧.",
+          "anchor": "-201758"
+        }
+      ],
+      "points": 15,
+      "description": "16–18 yoshdagi shaxsning mustaqil ish haqi bo'lmasa, jarima kimdan undiriladi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Ota-onalari yoki ularning o'rnini bosuvchi shaxslardan"
+        },
+        {
+          "id": "b",
+          "label": "Maktabdan"
+        },
+        {
+          "id": "c",
+          "label": "Qo'shnilaridan"
+        },
+        {
+          "id": "d",
+          "label": "Undirilmaydi"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

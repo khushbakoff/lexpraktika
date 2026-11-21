@@ -1,0 +1,511 @@
+{
+  "id": "jinoyat-ushlab-turish",
+  "title": "Akam ushlab turilgan, advokatsiz",
+  "area": "Jinoyat-protsessual huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 1,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijozning akasi o'g'irlikda gumon bilan ushlangan. Ushlab turish asoslari, muddati, huquqlari va ozod qilish tartibini Jinoyat-protsessual kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Zilola, 35 yosh, ushlangan shaxsning opasi",
+    "openingLine": "Assalomu alaykum. Akamni 20 soat oldin ushlab olishdi, advokat ham yo'q. Nima qilishim kerak?",
+    "hiddenFacts": [
+      {
+        "id": "held",
+        "fact": "Akasi 20 soat oldin gumon bilan ushlangan",
+        "revealOn": []
+      },
+      {
+        "id": "ground",
+        "fact": "Guvohlar uni jinoyat sodir etgan shaxs sifatida ko'rsatgan",
+        "revealOn": []
+      },
+      {
+        "id": "lawyer",
+        "fact": "Himoyachi (advokat) yo'q, oilaga xabar berilmagan",
+        "revealOn": []
+      },
+      {
+        "id": "rights",
+        "fact": "Huquqlari hali tushuntirilmagan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "held",
+        "ground",
+        "lawyer"
+      ],
+      "questions": [
+        {
+          "id": "q-held",
+          "text": "Akangiz qachon ushlangan?",
+          "factId": "held",
+          "reply": "Taxminan 20 soat oldin."
+        },
+        {
+          "id": "q-ground",
+          "text": "Nima asosda ushlashdi?",
+          "factId": "ground",
+          "reply": "Ikki guvoh uni o'g'ri deb ko'rsatibdi."
+        },
+        {
+          "id": "q-lawyer",
+          "text": "Advokat bormi, sizga xabar berishdimi?",
+          "factId": "lawyer",
+          "reply": "Yo'q, na advokat bor, na xabar berishdi."
+        },
+        {
+          "id": "q-rights",
+          "text": "Huquqlari tushuntirildimi?",
+          "factId": "rights",
+          "reply": "Bilmayman, ehtimol yo'q."
+        },
+        {
+          "id": "q-filler",
+          "text": "Akangiz qaysi futbol jamoasini yoqtiradi?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, akamning ahvoli haqida gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Ushlab turish asoslari",
+      "sources": [],
+      "points": 15,
+      "description": "Qaysi holatlarda shaxs ushlab turilishi mumkin.",
+      "prompt": "Jinoyatda gumon qilingan shaxs qaysi asoslarda ushlab turilishi mumkin? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "caught",
+          "label": "Shaxs jinoyat ustida yoki sodir etganidan keyin darhol qo'lga tushsa",
+          "required": true,
+          "why": "221-moddaning 1-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "221-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "shaxs jinoyat ustida yoki bevosita uni sodir etganidan keyin qoʻlga tushsa",
+              "heading": "221-modda. Ushlab turish asoslari",
+              "text": "Jinoyatni sodir etishda gumon qilingan shaxs quyidagi asoslar mavjud boʻlganda ushlab turilishi mumkin:\n1) ⟦shaxs jinoyat ustida yoki bevosita uni sodir etganidan keyin qoʻlga tushsa⟧;",
+              "anchor": "-254609"
+            }
+          ]
+        },
+        {
+          "id": "witness",
+          "label": "Guvohlar, shu jumladan jabrlanuvchilar uni jinoyat sodir etgan shaxs sifatida to'g'ridan-to'g'ri ko'rsatsa",
+          "required": true,
+          "why": "221-moddaning 2-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "221-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "jinoyat shohidlari, shu jumladan jabrlanuvchilar uni jinoyat sodir etgan shaxs tariqasida toʻgʻridan-toʻgʻri koʻrsatsalar",
+              "heading": "221-modda. Ushlab turish asoslari",
+              "text": "1) shaxs jinoyat ustida yoki bevosita uni sodir etganidan keyin qoʻlga tushsa;\n2) ⟦jinoyat shohidlari, shu jumladan jabrlanuvchilar uni jinoyat sodir etgan shaxs tariqasida toʻgʻridan-toʻgʻri koʻrsatsalar⟧;",
+              "anchor": "-254609"
+            }
+          ]
+        },
+        {
+          "id": "traces",
+          "label": "Uning o'zida, kiyimida yoki uyida jinoyatning yaqqol izlari topilsa",
+          "required": true,
+          "why": "221-moddaning 3-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "221-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "uning oʻzida yoki kiyimida, yonida yoki uyida sodir etilgan jinoyatning yaqqol izlari topilsa",
+              "heading": "221-modda. Ushlab turish asoslari",
+              "text": "2) jinoyat shohidlari, shu jumladan jabrlanuvchilar uni jinoyat sodir etgan shaxs tariqasida toʻgʻridan-toʻgʻri koʻrsatsalar;\n3) ⟦uning oʻzida yoki kiyimida, yonida yoki uyida sodir etilgan jinoyatning yaqqol izlari topilsa⟧;",
+              "anchor": "-254609"
+            }
+          ]
+        },
+        {
+          "id": "flee",
+          "label": "Gumon uchun asos bor va u qochmoqchi bo'lsa yoki doimiy yashash joyi bo'lmasa",
+          "required": true,
+          "why": "221-moddaning 4-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "221-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "u qochmoqchi boʻlsa yoki doimiy yashaydigan joyi yoʻq yoxud shaxsi aniqlanmagan boʻlsa",
+              "heading": "221-modda. Ushlab turish asoslari",
+              "text": "4) shaxsni jinoyat sodir etishda gumon qilish uchun asos boʻladigan maʼlumotlar mavjud boʻlib, ⟦u qochmoqchi boʻlsa yoki doimiy yashaydigan joyi yoʻq yoxud shaxsi aniqlanmagan boʻlsa⟧.",
+              "anchor": "-254609"
+            }
+          ]
+        },
+        {
+          "id": "rumor",
+          "label": "Qo'shnilar uning ustidan shubha bildirgan bo'lsa",
+          "required": false,
+          "why": "221-moddadagi asoslar ro'yxatida faqat shubha bildirilishi yo'q.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "221-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Jinoyatni sodir etishda gumon qilingan shaxs quyidagi asoslar mavjud boʻlganda ushlab turilishi mumkin",
+              "heading": "221-modda. Ushlab turish asoslari",
+              "text": "⟦Jinoyatni sodir etishda gumon qilingan shaxs quyidagi asoslar mavjud boʻlganda ushlab turilishi mumkin⟧:",
+              "anchor": "-254609"
+            }
+          ]
+        },
+        {
+          "id": "civil",
+          "label": "U fuqarolik nizosida javobgar bo'lsa",
+          "required": false,
+          "why": "221-modda faqat jinoyatda gumon qilingan shaxsga tegishli.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "221-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Jinoyatni sodir etishda gumon qilingan shaxs quyidagi asoslar mavjud boʻlganda ushlab turilishi mumkin",
+              "heading": "221-modda. Ushlab turish asoslari",
+              "text": "⟦Jinoyatni sodir etishda gumon qilingan shaxs quyidagi asoslar mavjud boʻlganda ushlab turilishi mumkin⟧:",
+              "anchor": "-254609"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Muddat va huquqlar",
+      "sources": [],
+      "points": 25,
+      "description": "Ushlab turish muddati va gumon qilinuvchi huquqlarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "term",
+          "label": "Ushlab turish muddati (shaxs amalda ushlangan paytdan)",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "h24",
+              "label": "24 soat"
+            },
+            {
+              "id": "h48",
+              "label": "48 soat"
+            },
+            {
+              "id": "h72",
+              "label": "72 soat"
+            },
+            {
+              "id": "d10",
+              "label": "10 kun"
+            }
+          ],
+          "correct": "h48",
+          "why": "Ko'pi bilan qirq sakkiz soat (226-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "226-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "koʻpi bilan qirq sakkiz soatni tashkil etadi",
+              "heading": "226-modda. Ushlab turish muddati",
+              "text": "Ushlab turish muddati shaxs amalda ushlangan paytdan (erkin harakatlanishga boʻlgan huquqlarning haqiqiy cheklangan payti) eʼtiboran ⟦koʻpi bilan qirq sakkiz soatni tashkil etadi⟧. Surishtiruvchi, tergovchi yoki prokuror tomonidan zarur va yetarli asoslar taqdim etilganda ushlab turish sudning qarori bilan qoʻshimcha ravishda qirq sakkiz soatga uzaytirilishi mumkin.",
+              "anchor": "-254639"
+            }
+          ]
+        },
+        {
+          "id": "extend",
+          "label": "Ushlab turishni uzaytirish tartibi",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "self",
+              "label": "Tergovchi o'zi 10 kunga uzaytiradi"
+            },
+            {
+              "id": "court",
+              "label": "Sud qarori bilan qo'shimcha 48 soatga"
+            },
+            {
+              "id": "pros",
+              "label": "Prokuror 72 soatga"
+            },
+            {
+              "id": "none",
+              "label": "Uzaytirib bo'lmaydi"
+            }
+          ],
+          "correct": "court",
+          "why": "Zarur asoslar bo'lsa, sud qarori bilan qo'shimcha qirq sakkiz soatga uzaytirilishi mumkin (226-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "226-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "sudning qarori bilan qoʻshimcha ravishda qirq sakkiz soatga uzaytirilishi mumkin",
+              "heading": "226-modda. Ushlab turish muddati",
+              "text": "Ushlab turish muddati shaxs amalda ushlangan paytdan (erkin harakatlanishga boʻlgan huquqlarning haqiqiy cheklangan payti) eʼtiboran koʻpi bilan qirq sakkiz soatni tashkil etadi. Surishtiruvchi, tergovchi yoki prokuror tomonidan zarur va yetarli asoslar taqdim etilganda ushlab turish ⟦sudning qarori bilan qoʻshimcha ravishda qirq sakkiz soatga uzaytirilishi mumkin⟧.",
+              "anchor": "-254639"
+            }
+          ]
+        },
+        {
+          "id": "call",
+          "label": "Ushlangan shaxs oilasiga qanday xabar berish huquqiga ega?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Bunday huquq yo'q"
+            },
+            {
+              "id": "phone",
+              "label": "Advokatga yoki yaqin qarindoshiga telefon orqali"
+            },
+            {
+              "id": "inv",
+              "label": "Faqat tergovchi orqali"
+            },
+            {
+              "id": "mail",
+              "label": "Faqat xat orqali"
+            }
+          ],
+          "correct": "phone",
+          "why": "Ushlab turilgani va turgan joyi haqida advokatga yoki yaqin qarindoshiga telefon orqali qo'ng'iroq qilish yoki xabar berish huquqi bor (48-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "48-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ushlab turilganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish",
+              "heading": "48-modda. Gumon qilinuvchining huquq va majburiyatlari",
+              "text": "Gumon qilinuvchi: oʻzining nimada gumon qilinayotganligini bilish; ⟦ushlab turilganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish⟧; u amalda ushlangan yoki jinoyat joyida ushlash bilan bogʻliq tezkor-qidiruv tadbiri amalda yakunlangan yoxud uning gumon qilinuvchi deb eʼtirof etilganligi toʻgʻrisidagi qaror unga maʼlum qilingan paytdan boshlab himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish, ushbu Kodeksning 230-moddasi ikkinchi qismida nazarda tutilgan hollar bundan mustasno; ushlanganidan keyin yigirma to…",
+              "anchor": "-253587"
+            }
+          ]
+        },
+        {
+          "id": "lawyer",
+          "label": "Himoyachiga ega bo'lish va u bilan uchrashuvlar",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "limited",
+              "label": "Haftada bir marta 10 daqiqa"
+            },
+            {
+              "id": "free",
+              "label": "Soni va davomiyligi cheklanmagan, xoli"
+            },
+            {
+              "id": "later",
+              "label": "Faqat ayblov e'lon qilingandan keyin"
+            },
+            {
+              "id": "none",
+              "label": "Huquq yo'q"
+            }
+          ],
+          "correct": "free",
+          "why": "Himoyachiga ega bo'lish huquqi bor, uchrashuvlar soni va davomiyligi cheklanmagan, xoli uchrashadi (48-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "48-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish",
+              "heading": "48-modda. Gumon qilinuvchining huquq va majburiyatlari",
+              "text": "Gumon qilinuvchi: oʻzining nimada gumon qilinayotganligini bilish; ushlab turilganligi va turgan joyi toʻgʻrisida advokatga yoki yaqin qarindoshiga telefon orqali qoʻngʻiroq qilish yoxud xabar berish; u amalda ushlangan yoki jinoyat joyida ushlash bilan bogʻliq tezkor-qidiruv tadbiri amalda yakunlangan yoxud uning gumon qilinuvchi deb eʼtirof etilganligi toʻgʻrisidagi qaror unga maʼlum qilingan paytdan boshlab ⟦himoyachiga ega boʻlish hamda uchrashuvlarning soni va davom etish vaqti cheklanmagan holda u bilan xoli uchrashish⟧, ushbu Kodeksning 230-moddasi ikkinchi qismida nazarda tutilgan hollar bundan mustasno; ushlanganidan keyin yigirma toʻrt soatdan kechiktirmay soʻroq qilinishini talab qilish; oʻziga nisbatan qoʻyilgan gumon xususida hamda ishning boshqa har qanday holatlari toʻgʻrisida koʻrsatuvlar berish yoxud koʻrsatuvlar berishdan bosh tortish va koʻrsatuvlaridan jinoyat ishiga doir dalillar sifatida uning oʻziga qarshi foydalanilishi mumkinligi haqida xaba…",
+              "anchor": "-253587"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Akam ushlab turilgan, advokatsiz). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Akasi 20 soat oldin gumon bilan ushlangan; Guvohlar uni jinoyat sodir etgan shaxs sifatida ko'rsatgan; Himoyachi (advokat) yo'q, oilaga xabar berilmagan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "221-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "shaxs jinoyat ustida yoki bevosita uni sodir etganidan keyin qoʻlga tushsa",
+              "heading": "221-modda. Ushlab turish asoslari",
+              "text": "Jinoyatni sodir etishda gumon qilingan shaxs quyidagi asoslar mavjud boʻlganda ushlab turilishi mumkin:\n1) ⟦shaxs jinoyat ustida yoki bevosita uni sodir etganidan keyin qoʻlga tushsa⟧;",
+              "anchor": "-254609"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "226-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "koʻpi bilan qirq sakkiz soatni tashkil etadi",
+              "heading": "226-modda. Ushlab turish muddati",
+              "text": "Ushlab turish muddati shaxs amalda ushlangan paytdan (erkin harakatlanishga boʻlgan huquqlarning haqiqiy cheklangan payti) eʼtiboran ⟦koʻpi bilan qirq sakkiz soatni tashkil etadi⟧. Surishtiruvchi, tergovchi yoki prokuror tomonidan zarur va yetarli asoslar taqdim etilganda ushlab turish sudning qarori bilan qoʻshimcha ravishda qirq sakkiz soatga uzaytirilishi mumkin.",
+              "anchor": "-254639"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Shaxs jinoyat ustida yoki sodir etganidan keyin darhol qo'lga tushsa; Guvohlar, shu jumladan jabrlanuvchilar uni jinoyat sodir etgan shaxs sifatida to'g'ridan-to'g'ri ko'rsatsa; Uning o'zida, kiyimida yoki uyida jinoyatning yaqqol izlari topilsa; Gumon uchun asos bor va u qochmoqchi bo'lsa yoki doimiy yashash joyi bo'lmasa",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Ushlab turish tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Jarayonni to'g'ri ketma-ketlikda belgilang.",
+      "order": [
+        {
+          "id": "detain",
+          "label": "Jinoyatda gumon qilingan shaxs asoslar mavjud bo'lganda ushlab turiladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "221-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Jinoyatni sodir etishda gumon qilingan shaxs quyidagi asoslar mavjud boʻlganda ushlab turilishi mumkin",
+              "heading": "221-modda. Ushlab turish asoslari",
+              "text": "⟦Jinoyatni sodir etishda gumon qilingan shaxs quyidagi asoslar mavjud boʻlganda ushlab turilishi mumkin⟧:",
+              "anchor": "-254609"
+            }
+          ]
+        },
+        {
+          "id": "decide",
+          "label": "Muddat tugamasidan ayb e'lon qilinadi va ehtiyot chorasi masalasi hal qilinadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "226-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ehtiyot chorasini tanlash haqidagi masala hal qilinishi zarur",
+              "heading": "226-modda. Ushlab turish muddati",
+              "text": "Ushlab turish muddati tugagunga qadar va asoslar mavjud boʻlganda shaxs ayblanuvchi tariqasida ishda ishtirok etishga jalb qilinishi, unga ayb eʼlon qilinishi, ushbu Kodeksning 109 — 112-moddalaridagi qoidalar boʻyicha soʻroq qilinishi va ushbu Kodeksning 236 — 240-moddalari qoidalariga amal qilgan holda ⟦ehtiyot chorasini tanlash haqidagi masala hal qilinishi zarur⟧.",
+              "anchor": "-254639"
+            }
+          ]
+        },
+        {
+          "id": "release",
+          "label": "Asos qolmasa yoki muddat tugasa va ehtiyot chorasi qo'llanmasa, shaxs ozod qilinadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "234-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ushlab turishning belgilangan muddati tugagan boʻlsa",
+              "heading": "234-modda. Ushlab turilganni ozod qilish asoslari va tartibi",
+              "text": "3) ⟦ushlab turishning belgilangan muddati tugagan boʻlsa⟧ va ushlab turilganga nisbatan qamoqqa olish tarzidagi ehtiyot chorasi qoʻllanilmagan yoxud ushbu Kodeks 243-moddasi oʻninchi qismining 3-bandiga muvofiq ushlab turish muddati uzaytirilmagan boʻlsa, ozod qilinadi.",
+              "anchor": "-1325080"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Ozod qilish",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "234-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "surishtiruvchi va tergovchi uni darhol ozod qilishlari shart",
+          "heading": "234-modda. Ushlab turilganni ozod qilish asoslari va tartibi",
+          "text": "Ushlab turilgan shaxsni bundan buyon ushlab turish uchun asoslar yoʻqligi aniqlanishi bilanoq ⟦surishtiruvchi va tergovchi uni darhol ozod qilishlari shart⟧.",
+          "anchor": "-1325080"
+        }
+      ],
+      "points": 15,
+      "description": "Ushlab turish uchun asoslar yo'qligi aniqlansa, kim va qachon shaxsni ozod qilishi shart?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Surishtiruvchi va tergovchi darhol"
+        },
+        {
+          "id": "b",
+          "label": "Faqat sud, 10 kundan keyin"
+        },
+        {
+          "id": "c",
+          "label": "Mahalla raisi"
+        },
+        {
+          "id": "d",
+          "label": "Muddat tugamaguncha hech kim"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

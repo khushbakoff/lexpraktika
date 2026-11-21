@@ -1,0 +1,446 @@
+{
+  "id": "jinoyat-tuhmat-haqorat",
+  "title": "Internetda meni haqorat qilishdi",
+  "area": "Jinoyat huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijozni ijtimoiy tarmoqda haqorat qilishgan va uydirma tarqatishgan. Tuhmat va haqorat belgilari hamda javobgarlik shartlarini Jinoyat kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Nigora, 33 yosh, o'qituvchi",
+    "openingLine": "Assalomu alaykum. Ijtimoiy tarmoqda kimdir meni haqorat qildi va mening nomimdan uydirma tarqatdi. Jinoyatmi?",
+    "hiddenFacts": [
+      {
+        "id": "lie",
+        "fact": "Mijoz haqida bila turib uydirma tarqatilgan",
+        "revealOn": []
+      },
+      {
+        "id": "insult",
+        "fact": "Mijoz haqorat qilingan",
+        "revealOn": []
+      },
+      {
+        "id": "net",
+        "fact": "Yozuvlar Internet ijtimoiy tarmog'ida joylashtirilgan",
+        "revealOn": []
+      },
+      {
+        "id": "admin",
+        "fact": "Shu shaxs avval ma'muriy jazoga tortilgan",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "lie",
+        "insult",
+        "net"
+      ],
+      "questions": [
+        {
+          "id": "q-lie",
+          "text": "Nima yozishgan?",
+          "factId": "lie",
+          "reply": "Men haqimda yolg'on gaplarni yozishgan."
+        },
+        {
+          "id": "q-insult",
+          "text": "Haqorat ham bo'lganmi?",
+          "factId": "insult",
+          "reply": "Ha, beodob so'zlar ishlatishgan."
+        },
+        {
+          "id": "q-net",
+          "text": "Qayerda joylashtirilgan?",
+          "factId": "net",
+          "reply": "Ijtimoiy tarmoqdagi ochiq sahifada."
+        },
+        {
+          "id": "q-admin",
+          "text": "U avval ham shunday qilganmi?",
+          "factId": "admin",
+          "reply": "Ha, ilgari ma'muriy jarima olgan."
+        },
+        {
+          "id": "q-filler",
+          "text": "Siz qaysi fanni o'qitasiz?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, huquqiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Tuhmat va haqorat belgilari",
+      "sources": [],
+      "points": 15,
+      "description": "Tuhmat va haqoratni ajrating.",
+      "prompt": "Quyidagilardan qaysilari to'g'ri? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "slander",
+          "label": "Tuhmat: bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish",
+          "required": true,
+          "why": "139-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "139-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish",
+              "heading": "139-modda. Tuhmat",
+              "text": "Tuhmat qilish, yaʼni ⟦bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish⟧, shunday harakatlar uchun maʼmuriy jazo qoʻllanilganidan keyin sodir etilgan boʻlsa, —",
+              "anchor": "-262239"
+            }
+          ]
+        },
+        {
+          "id": "insult",
+          "label": "Haqorat: shaxsning sha'ni va qadr-qimmatini beodoblik bilan qasddan tahqirlash",
+          "required": true,
+          "why": "140-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "140-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "shaxsning shaʼni va qadr-qimmatini beodoblik bilan qasddan tahqirlash",
+              "heading": "140-modda. Haqorat qilish",
+              "text": "Haqorat qilish, yaʼni ⟦shaxsning shaʼni va qadr-qimmatini beodoblik bilan qasddan tahqirlash⟧, basharti, shunday harakatlar uchun maʼmuriy jazo qoʻllanilgandan keyin sodir etilgan boʻlsa, —",
+              "anchor": "-262273"
+            }
+          ]
+        },
+        {
+          "id": "net",
+          "label": "Internet yoki ommaviy axborot vositalarida joylashtirish orqali tuhmat qilish alohida qismda ko'rsatilgan",
+          "required": true,
+          "why": "139-modda ikkinchi qismi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "139-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "telekommunikatsiya tarmoqlarida yoki Internet jahon axborot tarmogʻida joylashtirish orqali tuhmat qilish",
+              "heading": "139-modda. Tuhmat",
+              "text": "Nashr qilish yoki boshqacha usulda koʻpaytirilgan tarzda, shu jumladan ommaviy axborot vositalarida, ⟦telekommunikatsiya tarmoqlarida yoki Internet jahon axborot tarmogʻida joylashtirish orqali tuhmat qilish⟧, —",
+              "anchor": "-262239"
+            }
+          ]
+        },
+        {
+          "id": "truth",
+          "label": "Haqiqatga mos ma'lumotni aytish tuhmat hisoblanadi",
+          "required": false,
+          "why": "Tuhmat — bila turib uydirma tarqatish, haqiqiy ma'lumot tuhmat emas (139-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "139-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "Tuhmat qilish, yaʼni bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish",
+              "heading": "139-modda. Tuhmat",
+              "text": "⟦Tuhmat qilish, yaʼni bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish⟧, shunday harakatlar uchun maʼmuriy jazo qoʻllanilganidan keyin sodir etilgan boʻlsa, —",
+              "anchor": "-262239"
+            }
+          ]
+        },
+        {
+          "id": "quiet",
+          "label": "Haqorat faqat yuzma-yuz bo'lganda jinoyat bo'ladi",
+          "required": false,
+          "why": "140-modda Internet orqali haqoratni ham alohida ko'rsatadi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "140-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "telekommunikatsiya tarmoqlarida yoki Internet jahon axborot tarmogʻida joylashtirish orqali haqorat qilish",
+              "heading": "140-modda. Haqorat qilish",
+              "text": "Nashr qilish yoki boshqacha usulda koʻpaytirilgan tarzda, shu jumladan ommaviy axborot vositalarida, ⟦telekommunikatsiya tarmoqlarida yoki Internet jahon axborot tarmogʻida joylashtirish orqali haqorat qilish⟧ —",
+              "anchor": "-262273"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Javobgarlik shartlari",
+      "sources": [],
+      "points": 25,
+      "description": "Jinoiy javobgarlik shartlarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "slander",
+          "label": "Tuhmat nima?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "invent",
+              "label": "Bila turib sharmanda qiladigan uydirmalar tarqatish"
+            },
+            {
+              "id": "truth",
+              "label": "Haqiqatni aytish"
+            },
+            {
+              "id": "opinion",
+              "label": "Shaxsiy fikr bildirish"
+            }
+          ],
+          "correct": "invent",
+          "why": "Bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish (139-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "139-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish",
+              "heading": "139-modda. Tuhmat",
+              "text": "Tuhmat qilish, yaʼni ⟦bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish⟧, shunday harakatlar uchun maʼmuriy jazo qoʻllanilganidan keyin sodir etilgan boʻlsa, —",
+              "anchor": "-262239"
+            }
+          ]
+        },
+        {
+          "id": "insult",
+          "label": "Haqorat nima?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "dignity",
+              "label": "Sha'ni va qadr-qimmatini beodoblik bilan qasddan tahqirlash"
+            },
+            {
+              "id": "critic",
+              "label": "Har qanday tanqid"
+            },
+            {
+              "id": "joke",
+              "label": "Hazil"
+            }
+          ],
+          "correct": "dignity",
+          "why": "Shaxsning sha'ni va qadr-qimmatini beodoblik bilan qasddan tahqirlash (140-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "140-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "shaxsning shaʼni va qadr-qimmatini beodoblik bilan qasddan tahqirlash",
+              "heading": "140-modda. Haqorat qilish",
+              "text": "Haqorat qilish, yaʼni ⟦shaxsning shaʼni va qadr-qimmatini beodoblik bilan qasddan tahqirlash⟧, basharti, shunday harakatlar uchun maʼmuriy jazo qoʻllanilgandan keyin sodir etilgan boʻlsa, —",
+              "anchor": "-262273"
+            }
+          ]
+        },
+        {
+          "id": "admin",
+          "label": "Asosiy qismda jinoiy javobgarlik qachon paydo bo'ladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "always",
+              "label": "Har doim, birinchi marta ham"
+            },
+            {
+              "id": "after",
+              "label": "Shunday harakat uchun ma'muriy jazo qo'llanilganidan keyin sodir etilsa"
+            },
+            {
+              "id": "never",
+              "label": "Hech qachon"
+            }
+          ],
+          "correct": "after",
+          "why": "Shunday harakatlar uchun ma'muriy jazo qo'llanilganidan keyin sodir etilgan bo'lsa (139, 140-moddalar).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "139-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "shunday harakatlar uchun maʼmuriy jazo qoʻllanilganidan keyin sodir etilgan boʻlsa",
+              "heading": "139-modda. Tuhmat",
+              "text": "Tuhmat qilish, yaʼni bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish, ⟦shunday harakatlar uchun maʼmuriy jazo qoʻllanilganidan keyin sodir etilgan boʻlsa⟧, —",
+              "anchor": "-262239"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Internetda meni haqorat qilishdi). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Mijoz haqida bila turib uydirma tarqatilgan; Mijoz haqorat qilingan; Yozuvlar Internet ijtimoiy tarmog'ida joylashtirilgan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "139-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish",
+              "heading": "139-modda. Tuhmat",
+              "text": "Tuhmat qilish, yaʼni ⟦bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish⟧, shunday harakatlar uchun maʼmuriy jazo qoʻllanilganidan keyin sodir etilgan boʻlsa, —",
+              "anchor": "-262239"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "140-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "shaxsning shaʼni va qadr-qimmatini beodoblik bilan qasddan tahqirlash",
+              "heading": "140-modda. Haqorat qilish",
+              "text": "Haqorat qilish, yaʼni ⟦shaxsning shaʼni va qadr-qimmatini beodoblik bilan qasddan tahqirlash⟧, basharti, shunday harakatlar uchun maʼmuriy jazo qoʻllanilgandan keyin sodir etilgan boʻlsa, —",
+              "anchor": "-262273"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Tuhmat: bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish; Haqorat: shaxsning sha'ni va qadr-qimmatini beodoblik bilan qasddan tahqirlash; Internet yoki ommaviy axborot vositalarida joylashtirish orqali tuhmat qilish alohida qismda ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Javobgarlik bosqichlari",
+      "sources": [],
+      "points": 15,
+      "description": "Javobgarlik bosqichlarini belgilang.",
+      "order": [
+        {
+          "id": "act",
+          "label": "Shaxs tuhmat yoki haqorat qiladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "139-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "Tuhmat qilish, yaʼni bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish",
+              "heading": "139-modda. Tuhmat",
+              "text": "⟦Tuhmat qilish, yaʼni bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish⟧, shunday harakatlar uchun maʼmuriy jazo qoʻllanilganidan keyin sodir etilgan boʻlsa, —",
+              "anchor": "-262239"
+            }
+          ]
+        },
+        {
+          "id": "admin",
+          "label": "Shunday harakat uchun ma'muriy jazo qo'llaniladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "140-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "basharti, shunday harakatlar uchun maʼmuriy jazo qoʻllanilgandan keyin sodir etilgan boʻlsa",
+              "heading": "140-modda. Haqorat qilish",
+              "text": "Haqorat qilish, yaʼni shaxsning shaʼni va qadr-qimmatini beodoblik bilan qasddan tahqirlash, ⟦basharti, shunday harakatlar uchun maʼmuriy jazo qoʻllanilgandan keyin sodir etilgan boʻlsa⟧, —",
+              "anchor": "-262273"
+            }
+          ]
+        },
+        {
+          "id": "crime",
+          "label": "Shu harakat qayta sodir etilsa, jinoiy javobgarlik paydo bo'ladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+              "article": "139-modda",
+              "url": "https://lex.uz/docs/-111453",
+              "quote": "shunday harakatlar uchun maʼmuriy jazo qoʻllanilganidan keyin sodir etilgan boʻlsa",
+              "heading": "139-modda. Tuhmat",
+              "text": "Tuhmat qilish, yaʼni bila turib boshqa shaxsni sharmanda qiladigan uydirmalar tarqatish, ⟦shunday harakatlar uchun maʼmuriy jazo qoʻllanilganidan keyin sodir etilgan boʻlsa⟧, —",
+              "anchor": "-262239"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Internetda tuhmat",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat kodeksi",
+          "article": "139-modda",
+          "url": "https://lex.uz/docs/-111453",
+          "quote": "telekommunikatsiya tarmoqlarida yoki Internet jahon axborot tarmogʻida joylashtirish orqali tuhmat qilish",
+          "heading": "139-modda. Tuhmat",
+          "text": "Nashr qilish yoki boshqacha usulda koʻpaytirilgan tarzda, shu jumladan ommaviy axborot vositalarida, ⟦telekommunikatsiya tarmoqlarida yoki Internet jahon axborot tarmogʻida joylashtirish orqali tuhmat qilish⟧, —",
+          "anchor": "-262239"
+        }
+      ],
+      "points": 15,
+      "description": "Internetda joylashtirish orqali tuhmat qilish Jinoyat kodeksida qanday ko'rsatilgan?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Alohida (ikkinchi) qismda, ommaviy axborot vositalari va Internet orqali"
+        },
+        {
+          "id": "b",
+          "label": "Javobgarlik yo'q"
+        },
+        {
+          "id": "c",
+          "label": "Faqat qog'ozdagi nashrlar uchun"
+        },
+        {
+          "id": "d",
+          "label": "Faqat televideniye uchun"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

@@ -1,0 +1,439 @@
+{
+  "id": "ish-notarius-rad-etish-yoriqnoma",
+  "title": "Notarial harakatni rad etish asoslari",
+  "area": "Kasbga kirish va ish jarayoni",
+  "areaId": "kasb",
+  "tracks": [
+    "notarius",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Notarius qaysi hollarda notarial harakatni rad etishi kerakligini Yo'riqnoma bo'yicha belgilang.",
+  "client": {
+    "persona": "Notarius",
+    "openingLine": "Assalomu alaykum. Bugun bir nechta mijozga rad etish kerak bo'lishi mumkin. Qaysi hollarda rad etaman?",
+    "hiddenFacts": [
+      {
+        "id": "law",
+        "fact": "Bitim qonunga zid",
+        "revealOn": []
+      },
+      {
+        "id": "rep",
+        "fact": "Vakilning vakolati yo'q",
+        "revealOn": []
+      },
+      {
+        "id": "charter",
+        "fact": "Yuridik shaxs bitimi ustavga zid",
+        "revealOn": []
+      },
+      {
+        "id": "docs",
+        "fact": "Hujjatlar talabga mos emas",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "law",
+        "rep",
+        "charter"
+      ],
+      "questions": [
+        {
+          "id": "q-law",
+          "text": "Birinchi holat?",
+          "factId": "law",
+          "reply": "Bitim qonunga zid."
+        },
+        {
+          "id": "q-rep",
+          "text": "Ikkinchi holat?",
+          "factId": "rep",
+          "reply": "Vakil vakolatini tasdiqlay olmayapti."
+        },
+        {
+          "id": "q-charter",
+          "text": "Uchinchi holat?",
+          "factId": "charter",
+          "reply": "Bitim ustav maqsadlariga zid."
+        },
+        {
+          "id": "q-docs",
+          "text": "To'rtinchi holat?",
+          "factId": "docs",
+          "reply": "Hujjatlar qonun talabiga mos emas."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ish masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Rad etish asoslari",
+      "sources": [],
+      "points": 15,
+      "description": "Qaysi hollarda rad etiladi.",
+      "prompt": "Notarius qaysi hollarda notarial harakatni rad etadi? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "law",
+          "label": "Bunday harakatni amalga oshirish qonunga zid bo'lsa",
+          "required": true,
+          "why": "21-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "bunday harakatni amalga oshirish qonunga zid boʻlsa",
+              "heading": "21-band.",
+              "text": "Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi, agar:\n⟦bunday harakatni amalga oshirish qonunga zid boʻlsa⟧;"
+            }
+          ]
+        },
+        {
+          "id": "other",
+          "label": "Bu harakat boshqa notarius tomonidan amalga oshirilishi kerak bo'lsa",
+          "required": true,
+          "why": "21-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "bu harakat boshqa notarius tomonidan amalga oshirilishi kerak boʻlsa",
+              "heading": "21-band.",
+              "text": "bunday harakatni amalga oshirish qonunga zid boʻlsa;\n⟦bu harakat boshqa notarius tomonidan amalga oshirilishi kerak boʻlsa⟧;"
+            }
+          ]
+        },
+        {
+          "id": "incap",
+          "label": "Muomalaga layoqatsiz fuqaro yoki zarur vakolatlari bo'lmagan vakil murojaat qilgan bo'lsa",
+          "required": true,
+          "why": "21-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "muomalaga layoqatsiz fuqaro yoxud zarur vakolatlari boʻlmagan vakil notarial harakatni amalga oshirishni soʻrab murojaat qilgan boʻlsa",
+              "heading": "21-band.",
+              "text": "bu harakat boshqa notarius tomonidan amalga oshirilishi kerak boʻlsa;\n⟦muomalaga layoqatsiz fuqaro yoxud zarur vakolatlari boʻlmagan vakil notarial harakatni amalga oshirishni soʻrab murojaat qilgan boʻlsa⟧;"
+            }
+          ]
+        },
+        {
+          "id": "charter",
+          "label": "Yuridik shaxs nomidan bitim ustav maqsadlariga zid bo'lsa",
+          "required": true,
+          "why": "21-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "yuridik shaxs nomidan amalga oshiriladigan bitim uning ustavida yoki nizomida koʻrsatilgan maqsadlarga zid boʻlsa",
+              "heading": "21-band.",
+              "text": "muomalaga layoqatsiz fuqaro yoxud zarur vakolatlari boʻlmagan vakil notarial harakatni amalga oshirishni soʻrab murojaat qilgan boʻlsa;\n⟦yuridik shaxs nomidan amalga oshiriladigan bitim uning ustavida yoki nizomida koʻrsatilgan maqsadlarga zid boʻlsa⟧;"
+            }
+          ]
+        },
+        {
+          "id": "deal",
+          "label": "Bitim qonun talablariga muvofiq bo'lmasa",
+          "required": true,
+          "why": "21-band.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "bitim qonun talablariga muvofiq boʻlmasa",
+              "heading": "21-band.",
+              "text": "yuridik shaxs nomidan amalga oshiriladigan bitim uning ustavida yoki nizomida koʻrsatilgan maqsadlarga zid boʻlsa;\n⟦bitim qonun talablariga muvofiq boʻlmasa⟧;"
+            }
+          ]
+        },
+        {
+          "id": "tired",
+          "label": "Notarius charchagan bo'lsa",
+          "required": false,
+          "why": "21-bandda bunday asos yo'q.",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi, agar",
+              "heading": "21-band.",
+              "text": "⟦Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi, agar⟧:"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Rad etish tartibi",
+      "sources": [],
+      "points": 25,
+      "description": "Qoidalarni belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "law",
+          "label": "Harakat qonunga zid bo'lsa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "refuse",
+              "label": "Rad etadi"
+            },
+            {
+              "id": "do",
+              "label": "Tasdiqlaydi"
+            },
+            {
+              "id": "ask",
+              "label": "Mijozdan so'raydi"
+            }
+          ],
+          "correct": "refuse",
+          "why": "Notarius rad etadi (21-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "bunday harakatni amalga oshirish qonunga zid boʻlsa",
+              "heading": "21-band.",
+              "text": "Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi, agar:\n⟦bunday harakatni amalga oshirish qonunga zid boʻlsa⟧;"
+            }
+          ]
+        },
+        {
+          "id": "docs",
+          "label": "Taqdim etilgan hujjatlar qonunchilik talablariga mos bo'lmasa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "refuse",
+              "label": "Rad etadi"
+            },
+            {
+              "id": "do",
+              "label": "Tasdiqlaydi"
+            },
+            {
+              "id": "later",
+              "label": "Keyinga qoldiradi"
+            }
+          ],
+          "correct": "refuse",
+          "why": "Rad etadi (21-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "notarial harakatni amalga oshirish uchun taqdim etilayotgan hujjatlar qonunchilik hujjatlari talablariga muvofiq boʻlmasa",
+              "heading": "21-band.",
+              "text": "⟦notarial harakatni amalga oshirish uchun taqdim etilayotgan hujjatlar qonunchilik hujjatlari talablariga muvofiq boʻlmasa⟧."
+            }
+          ]
+        },
+        {
+          "id": "rep",
+          "label": "Zarur vakolatlari bo'lmagan vakil murojaat qilsa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "refuse",
+              "label": "Rad etadi"
+            },
+            {
+              "id": "do",
+              "label": "Tasdiqlaydi"
+            },
+            {
+              "id": "fee",
+              "label": "Haq olib tasdiqlaydi"
+            }
+          ],
+          "correct": "refuse",
+          "why": "Rad etadi (21-band).",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "zarur vakolatlari boʻlmagan vakil notarial harakatni amalga oshirishni soʻrab murojaat qilgan boʻlsa",
+              "heading": "21-band.",
+              "text": "bu harakat boshqa notarius tomonidan amalga oshirilishi kerak boʻlsa;\nmuomalaga layoqatsiz fuqaro yoxud ⟦zarur vakolatlari boʻlmagan vakil notarial harakatni amalga oshirishni soʻrab murojaat qilgan boʻlsa⟧;"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Notarial harakatni rad etish asoslari). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Bitim qonunga zid; Vakilning vakolati yo'q; Yuridik shaxs bitimi ustavga zid",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "bunday harakatni amalga oshirish qonunga zid boʻlsa",
+              "heading": "21-band.",
+              "text": "Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi, agar:\n⟦bunday harakatni amalga oshirish qonunga zid boʻlsa⟧;"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Bunday harakatni amalga oshirish qonunga zid bo'lsa; Bu harakat boshqa notarius tomonidan amalga oshirilishi kerak bo'lsa; Muomalaga layoqatsiz fuqaro yoki zarur vakolatlari bo'lmagan vakil murojaat qilgan bo'lsa; Yuridik shaxs nomidan bitim ustav maqsadlariga zid bo'lsa",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Rad etish bosqichlari",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "check",
+          "label": "Notarius harakat uchun asoslarni tekshiradi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi",
+              "heading": "21-band.",
+              "text": "⟦Notarius quyidagi hollarda notarial harakatni amalga oshirishni rad etadi⟧, agar:"
+            }
+          ]
+        },
+        {
+          "id": "found",
+          "label": "Asos aniqlansa (masalan, bitim qonunga zid), rad etadi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "bitim qonun talablariga muvofiq boʻlmasa",
+              "heading": "21-band.",
+              "text": "yuridik shaxs nomidan amalga oshiriladigan bitim uning ustavida yoki nizomida koʻrsatilgan maqsadlarga zid boʻlsa;\n⟦bitim qonun talablariga muvofiq boʻlmasa⟧;"
+            }
+          ]
+        },
+        {
+          "id": "docs",
+          "label": "Hujjatlar talabga mos bo'lmasa ham rad etadi",
+          "sources": [
+            {
+              "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+              "article": "21-band",
+              "url": "https://lex.uz/docs/-4138215",
+              "quote": "hujjatlar qonunchilik hujjatlari talablariga muvofiq boʻlmasa",
+              "heading": "21-band.",
+              "text": "notarial harakatni amalga oshirish uchun taqdim etilayotgan ⟦hujjatlar qonunchilik hujjatlari talablariga muvofiq boʻlmasa⟧."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Vakolat",
+      "sources": [
+        {
+          "act": "Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnoma (Adliya vazirligi, roʻyxat raqami 3113)",
+          "article": "21-band",
+          "url": "https://lex.uz/docs/-4138215",
+          "quote": "zarur vakolatlari boʻlmagan vakil notarial harakatni amalga oshirishni soʻrab murojaat qilgan boʻlsa",
+          "heading": "21-band.",
+          "text": "bu harakat boshqa notarius tomonidan amalga oshirilishi kerak boʻlsa;\nmuomalaga layoqatsiz fuqaro yoxud ⟦zarur vakolatlari boʻlmagan vakil notarial harakatni amalga oshirishni soʻrab murojaat qilgan boʻlsa⟧;"
+        }
+      ],
+      "points": 15,
+      "description": "Zarur vakolatlari bo'lmagan vakil murojaat qilsa, notarius nima qiladi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Notarial harakatni rad etadi"
+        },
+        {
+          "id": "b",
+          "label": "Tasdiqlaydi"
+        },
+        {
+          "id": "c",
+          "label": "Jarima soladi"
+        },
+        {
+          "id": "d",
+          "label": "Prokuratura chaqiradi"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "id": "jinoyat-ish-qozgatish",
+  "title": "Jinoyat ishi qo'zg'atilmadi: nima qilaman?",
+  "area": "Jinoyat-protsessual huquqi",
+  "areaId": "jinoyat",
+  "tracks": [
+    "huquq-tartibot",
+    "sudya",
+    "advokat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijoz firibgarlik haqida ariza bergan, ammo ish qo'zg'atilmadi. Jinoyat ishini qo'zg'atish sabablari, tartibi va rad etishga shikoyat qilishni Jinoyat-protsessual kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Aziza, 37 yosh, tadbirkor",
+    "openingLine": "Assalomu alaykum. Firibgarlik haqida ariza berdim, lekin ish qo'zg'atishmadi. Nima qilsam bo'ladi?",
+    "hiddenFacts": [
+      {
+        "id": "report",
+        "fact": "Mijoz firibgarlik haqida yozma ariza bergan",
+        "revealOn": []
+      },
+      {
+        "id": "refusal",
+        "fact": "Ish qo'zg'atishni rad etishgan",
+        "revealOn": []
+      },
+      {
+        "id": "notice",
+        "fact": "Shikoyat tartibi tushuntirilmagan",
+        "revealOn": []
+      },
+      {
+        "id": "proof",
+        "fact": "Mijozda shartnoma va to'lov hujjatlari bor",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "report",
+        "refusal",
+        "notice"
+      ],
+      "questions": [
+        {
+          "id": "q-report",
+          "text": "Qanday ariza bergansiz?",
+          "factId": "report",
+          "reply": "Yozma ariza, hujjatlari bilan."
+        },
+        {
+          "id": "q-refusal",
+          "text": "Natija qanday bo'ldi?",
+          "factId": "refusal",
+          "reply": "Ish qo'zg'atishni rad etishdi."
+        },
+        {
+          "id": "q-notice",
+          "text": "Shikoyat tartibini tushuntirishdimi?",
+          "factId": "notice",
+          "reply": "Yo'q, hech narsa demadilar."
+        },
+        {
+          "id": "q-proof",
+          "text": "Dalillaringiz bormi?",
+          "factId": "proof",
+          "reply": "Shartnoma va bank to'lovlari bor."
+        },
+        {
+          "id": "q-filler",
+          "text": "Biznesingiz nima bilan shug'ullanadi?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ariza haqida gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Ish qo'zg'atish sabablari",
+      "sources": [],
+      "points": 15,
+      "description": "Jinoyat ishi qaysi sabablarga ko'ra qo'zg'atiladi.",
+      "prompt": "Jinoyat ishini qo'zg'atish uchun qaysilari sabab bo'ladi? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "apps",
+          "label": "Shaxslarning arizalari",
+          "required": true,
+          "why": "322-moddaning 1-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "322-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "shaxslarning arizalari",
+              "heading": "322-modda. Jinoyat ishini qoʻzgʻatish sabablari va asoslari",
+              "text": "Jinoyat ishini qoʻzgʻatish uchun:\n1) ⟦shaxslarning arizalari⟧;",
+              "anchor": "-255364"
+            }
+          ]
+        },
+        {
+          "id": "reports",
+          "label": "Korxona, muassasa, tashkilot va mansabdor shaxslar xabarlari",
+          "required": true,
+          "why": "322-moddaning 2-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "322-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "korxonalar, muassasalar, tashkilotlar, jamoat birlashmalari va mansabdor shaxslar bergan xabarlar",
+              "heading": "322-modda. Jinoyat ishini qoʻzgʻatish sabablari va asoslari",
+              "text": "1) shaxslarning arizalari;\n2) ⟦korxonalar, muassasalar, tashkilotlar, jamoat birlashmalari va mansabdor shaxslar bergan xabarlar⟧;",
+              "anchor": "-255364"
+            }
+          ]
+        },
+        {
+          "id": "media",
+          "label": "Ommaviy axborot vositalari xabarlari",
+          "required": true,
+          "why": "322-moddaning 3-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "322-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "ommaviy axborot vositalari bergan xabarlar",
+              "heading": "322-modda. Jinoyat ishini qoʻzgʻatish sabablari va asoslari",
+              "text": "2) korxonalar, muassasalar, tashkilotlar, jamoat birlashmalari va mansabdor shaxslar bergan xabarlar;\n3) ⟦ommaviy axborot vositalari bergan xabarlar⟧;",
+              "anchor": "-255364"
+            }
+          ]
+        },
+        {
+          "id": "self",
+          "label": "Organning jinoyat belgilarini o'zi aniqlashi",
+          "required": true,
+          "why": "322-moddaning 4-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "322-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "bevosita oʻzi aniqlashi",
+              "heading": "322-modda. Jinoyat ishini qoʻzgʻatish sabablari va asoslari",
+              "text": "4) jinoyat sodir etilganligini koʻrsatuvchi maʼlumotlar va izlarni surishtiruvchi, tergovchi, prokuror, shuningdek tergovga qadar tekshiruvni amalga oshiruvchi organning ⟦bevosita oʻzi aniqlashi⟧;",
+              "anchor": "-255364"
+            }
+          ]
+        },
+        {
+          "id": "confess",
+          "label": "Aybini bo'yniga olish haqidagi arz",
+          "required": true,
+          "why": "322-moddaning 5-bandi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "322-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "aybini boʻyniga olish haqidagi arz sabab boʻladi",
+              "heading": "322-modda. Jinoyat ishini qoʻzgʻatish sabablari va asoslari",
+              "text": "5) ⟦aybini boʻyniga olish haqidagi arz sabab boʻladi⟧.",
+              "anchor": "-255364"
+            }
+          ]
+        },
+        {
+          "id": "gossip",
+          "label": "Noma'lum shaxsning og'zaki mish-mishi",
+          "required": false,
+          "why": "322-moddadagi sabablar ro'yxatida bunday sabab yo'q.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "322-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Jinoyat ishini qoʻzgʻatish uchun",
+              "heading": "322-modda. Jinoyat ishini qoʻzgʻatish sabablari va asoslari",
+              "text": "⟦Jinoyat ishini qoʻzgʻatish uchun⟧:",
+              "anchor": "-255364"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Qaror va rad etish",
+      "sources": [],
+      "points": 25,
+      "description": "Ish qo'zg'atish va rad etish qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "who",
+          "label": "Ish qo'zg'atish haqida qarorni kim chiqaradi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "officials",
+              "label": "Surishtiruvchi, tergovchi, prokuror yoki tergovga qadar tekshiruv organining mansabdor shaxsi"
+            },
+            {
+              "id": "judge",
+              "label": "Faqat sudya"
+            },
+            {
+              "id": "citizen",
+              "label": "Arizachining o'zi"
+            }
+          ],
+          "correct": "officials",
+          "why": "Surishtiruvchi, tergovchi, prokuror, shuningdek tergovga qadar tekshiruvni amalga oshiruvchi organning mansabdor shaxsi (331-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "331-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "surishtiruvchi, tergovchi, prokuror shuningdek tergovga qadar tekshiruvni amalga oshiruvchi organning mansabdor shaxsi qaror chiqaradi",
+              "heading": "331-modda. Jinoyat ishini qoʻzgʻatish tartibi",
+              "text": "Ushbu Kodeksning 322-moddasida nazarda tutilgan sabab va asoslar mavjud boʻlgan taqdirda jinoyat ishini qoʻzgʻatish toʻgʻrisida ⟦surishtiruvchi, tergovchi, prokuror shuningdek tergovga qadar tekshiruvni amalga oshiruvchi organning mansabdor shaxsi qaror chiqaradi⟧.",
+              "anchor": "-255464"
+            }
+          ]
+        },
+        {
+          "id": "copy",
+          "label": "Ish qo'zg'atish haqidagi qarorning ko'chirma nusxasi kimga yuboriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "pros",
+              "label": "Tergov ustidan nazorat qiluvchi prokurorga"
+            },
+            {
+              "id": "press",
+              "label": "Matbuotga"
+            },
+            {
+              "id": "none",
+              "label": "Hech kimga"
+            }
+          ],
+          "correct": "pros",
+          "why": "Ishning tergov qilinishi ustidan nazoratni amalga oshiradigan prokurorga (331-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "331-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "koʻchirma nusxasi ushbu ishning tergov qilinishi ustidan nazoratni amalga oshirishi lozim boʻlgan prokurorga yuboriladi",
+              "heading": "331-modda. Jinoyat ishini qoʻzgʻatish tartibi",
+              "text": "Jinoyat ishini qoʻzgʻatish toʻgʻrisidagi qarorning ⟦koʻchirma nusxasi ushbu ishning tergov qilinishi ustidan nazoratni amalga oshirishi lozim boʻlgan prokurorga yuboriladi⟧.",
+              "anchor": "-255464"
+            }
+          ]
+        },
+        {
+          "id": "notice",
+          "label": "Ish qo'zg'atish rad etilsa, arizachiga nima tushuntiriladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "appeal",
+              "label": "Qaror ustidan shikoyat qilish huquqi va tartibi"
+            },
+            {
+              "id": "nothing",
+              "label": "Hech narsa"
+            },
+            {
+              "id": "fine",
+              "label": "Arizachi jarimaga tortiladi"
+            }
+          ],
+          "correct": "appeal",
+          "why": "Arizachi xabardor qilinadi va qaror ustidan shikoyat qilish huquqi va tartibi tushuntiriladi (333-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "333-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Bunda ularga qaror ustidan shikoyat qilish huquqi va tartibi tushuntirilishi lozim",
+              "heading": "333-modda. Jinoyat ishini qoʻzgʻatishni rad qilish",
+              "text": "Ushbu Kodeks 83-moddasining 1 va 2-bandlarida hamda 84-moddasi birinchi qismining 1, 3 — 8-bandlarida nazarda tutilgan holatlar aniqlangan taqdirda, tergovga qadar tekshiruvni amalga oshiruvchi organning mansabdor shaxsi, surishtiruvchi, tergovchi yoki prokuror jinoyat ishini qoʻzgʻatishni rad qilish toʻgʻrisida qaror chiqaradi, jinoyat sodir etilganligi toʻgʻrisida xabar bergan fuqaro, korxona, muassasa, tashkilot, jamoat birlashmasi yoki mansabdor shaxs bu haqda xabardor qilinadi. ⟦Bunda ularga qaror ustidan shikoyat qilish huquqi va tartibi tushuntirilishi lozim⟧. Jinoyat ishini qoʻzgʻatishni rad qilish toʻgʻrisidagi qarorning koʻchirma nusxasi prokurorga yuboriladi.",
+              "anchor": "-255478"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Jinoyat ishi qo'zg'atilmadi: nima qilaman?). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Mijoz firibgarlik haqida yozma ariza bergan; Ish qo'zg'atishni rad etishgan; Shikoyat tartibi tushuntirilmagan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "322-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "shaxslarning arizalari",
+              "heading": "322-modda. Jinoyat ishini qoʻzgʻatish sabablari va asoslari",
+              "text": "Jinoyat ishini qoʻzgʻatish uchun:\n1) ⟦shaxslarning arizalari⟧;",
+              "anchor": "-255364"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "331-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "surishtiruvchi, tergovchi, prokuror shuningdek tergovga qadar tekshiruvni amalga oshiruvchi organning mansabdor shaxsi qaror chiqaradi",
+              "heading": "331-modda. Jinoyat ishini qoʻzgʻatish tartibi",
+              "text": "Ushbu Kodeksning 322-moddasida nazarda tutilgan sabab va asoslar mavjud boʻlgan taqdirda jinoyat ishini qoʻzgʻatish toʻgʻrisida ⟦surishtiruvchi, tergovchi, prokuror shuningdek tergovga qadar tekshiruvni amalga oshiruvchi organning mansabdor shaxsi qaror chiqaradi⟧.",
+              "anchor": "-255464"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Shaxslarning arizalari; Korxona, muassasa, tashkilot va mansabdor shaxslar xabarlari; Ommaviy axborot vositalari xabarlari; Organning jinoyat belgilarini o'zi aniqlashi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Ish qo'zg'atish tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Jarayonni ketma-ketlikda belgilang.",
+      "order": [
+        {
+          "id": "app",
+          "label": "Shaxs jinoyat haqida ariza beradi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "322-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "shaxslarning arizalari",
+              "heading": "322-modda. Jinoyat ishini qoʻzgʻatish sabablari va asoslari",
+              "text": "Jinoyat ishini qoʻzgʻatish uchun:\n1) ⟦shaxslarning arizalari⟧;",
+              "anchor": "-255364"
+            }
+          ]
+        },
+        {
+          "id": "decide",
+          "label": "Jinoyat belgilari bo'lsa, ish qo'zg'atish haqida qaror chiqariladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "331-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Qarorda: ishni qoʻzgʻatish sabablari va asoslari",
+              "heading": "331-modda. Jinoyat ishini qoʻzgʻatish tartibi",
+              "text": "⟦Qarorda: ishni qoʻzgʻatish sabablari va asoslari⟧; Jinoyat kodeksining jinoyat ishi qoʻzgʻatilgan jinoyatni nazarda tutuvchi moddasi; bundan buyon ishni oʻz yurituviga oluvchi mansabdor shaxs koʻrsatiladi.",
+              "anchor": "-255464"
+            }
+          ]
+        },
+        {
+          "id": "pros",
+          "label": "Qarorning nusxasi nazorat qiluvchi prokurorga yuboriladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "331-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "koʻchirma nusxasi ushbu ishning tergov qilinishi ustidan nazoratni amalga oshirishi lozim boʻlgan prokurorga yuboriladi",
+              "heading": "331-modda. Jinoyat ishini qoʻzgʻatish tartibi",
+              "text": "Jinoyat ishini qoʻzgʻatish toʻgʻrisidagi qarorning ⟦koʻchirma nusxasi ushbu ishning tergov qilinishi ustidan nazoratni amalga oshirishi lozim boʻlgan prokurorga yuboriladi⟧.",
+              "anchor": "-255464"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "label": "Rad etilsa, arizachi xabardor qilinadi va shikoyat tartibi tushuntiriladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+              "article": "333-modda",
+              "url": "https://lex.uz/docs/-111460",
+              "quote": "Bunda ularga qaror ustidan shikoyat qilish huquqi va tartibi tushuntirilishi lozim",
+              "heading": "333-modda. Jinoyat ishini qoʻzgʻatishni rad qilish",
+              "text": "Ushbu Kodeks 83-moddasining 1 va 2-bandlarida hamda 84-moddasi birinchi qismining 1, 3 — 8-bandlarida nazarda tutilgan holatlar aniqlangan taqdirda, tergovga qadar tekshiruvni amalga oshiruvchi organning mansabdor shaxsi, surishtiruvchi, tergovchi yoki prokuror jinoyat ishini qoʻzgʻatishni rad qilish toʻgʻrisida qaror chiqaradi, jinoyat sodir etilganligi toʻgʻrisida xabar bergan fuqaro, korxona, muassasa, tashkilot, jamoat birlashmasi yoki mansabdor shaxs bu haqda xabardor qilinadi. ⟦Bunda ularga qaror ustidan shikoyat qilish huquqi va tartibi tushuntirilishi lozim⟧. Jinoyat ishini qoʻzgʻatishni rad qilish toʻgʻrisidagi qarorning koʻchirma nusxasi prokurorga yuboriladi.",
+              "anchor": "-255478"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Ish qo'zg'atish asosi",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi",
+          "article": "322-modda",
+          "url": "https://lex.uz/docs/-111460",
+          "quote": "Jinoyat belgilari mavjudligini koʻrsatuvchi maʼlumotlar jinoyat ishini qoʻzgʻatish uchun asos boʻladi",
+          "heading": "322-modda. Jinoyat ishini qoʻzgʻatish sabablari va asoslari",
+          "text": "⟦Jinoyat belgilari mavjudligini koʻrsatuvchi maʼlumotlar jinoyat ishini qoʻzgʻatish uchun asos boʻladi⟧.",
+          "anchor": "-255364"
+        }
+      ],
+      "points": 15,
+      "description": "Jinoyat belgilari mavjudligini ko'rsatuvchi ma'lumotlar nima uchun asos bo'ladi?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Jinoyat ishini qo'zg'atish uchun"
+        },
+        {
+          "id": "b",
+          "label": "Arizachini jarimaga tortish uchun"
+        },
+        {
+          "id": "c",
+          "label": "Faqat ogohlantirish uchun"
+        },
+        {
+          "id": "d",
+          "label": "Hech nima uchun"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

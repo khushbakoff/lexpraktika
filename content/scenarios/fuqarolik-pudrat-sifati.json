@@ -1,0 +1,454 @@
+{
+  "id": "fuqarolik-pudrat-sifati",
+  "title": "Pudratchi remontni sifatsiz bajardi",
+  "area": "Fuqarolik huquqi",
+  "areaId": "fuqarolik",
+  "tracks": [
+    "advokat",
+    "korxona",
+    "sudya",
+    "umumiy"
+  ],
+  "level": 3,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Buyurtmachi remont uchun pudrat shartnomasi tuzgan, ish shartnomadan chetga chiqib bajarilgan. Buyurtmachi huquqlari va pudratchi javobgarligini Fuqarolik kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Abbos, 44 yosh, ofis egasi",
+    "openingLine": "Assalomu alaykum. Ofisimni remont qildirdim, ish shartnomadan chetga chiqib, sifatsiz bajarildi. Pudratchi tuzatmayapti. Nima qilishim mumkin?",
+    "hiddenFacts": [
+      {
+        "id": "deviate",
+        "fact": "Ish pudrat shartnomasidan chetga chiqib bajarilgan",
+        "revealOn": []
+      },
+      {
+        "id": "worse",
+        "fact": "Ish natijasi yomonlashgan",
+        "revealOn": []
+      },
+      {
+        "id": "reasonable",
+        "fact": "Buyurtmachi oqilona muddat belgilab, tuzatishni talab qilgan, bajarilmagan",
+        "revealOn": []
+      },
+      {
+        "id": "serious",
+        "fact": "Kamchiliklar jiddiy",
+        "revealOn": []
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Mijozdan kerakli faktlarni so'rang.",
+      "requiredFactIds": [
+        "deviate",
+        "worse",
+        "reasonable"
+      ],
+      "questions": [
+        {
+          "id": "q-deviate",
+          "text": "Nima noto'g'ri?",
+          "factId": "deviate",
+          "reply": "Shartnomadagi materiallar boshqasi bilan almashtirilgan."
+        },
+        {
+          "id": "q-worse",
+          "text": "Natija qanday?",
+          "factId": "worse",
+          "reply": "Devor va pol sifatsiz chiqdi."
+        },
+        {
+          "id": "q-reasonable",
+          "text": "Tuzatishni talab qildingizmi?",
+          "factId": "reasonable",
+          "reply": "Ha, 10 kun muddat berdim, bajarishmadi."
+        },
+        {
+          "id": "q-serious",
+          "text": "Kamchiliklar qanchalik jiddiy?",
+          "factId": "serious",
+          "reply": "Ancha jiddiy, qayta qilish kerak."
+        },
+        {
+          "id": "q-filler",
+          "text": "Bugun ob-havo qanday?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, asosiy masalani gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "multi",
+      "type": "document-pick",
+      "title": "Buyurtmachi talablari",
+      "sources": [],
+      "points": 15,
+      "description": "Pudratda sifat yomon bo'lsa nimani talab qilish mumkin.",
+      "prompt": "Pudratchi ishni shartnomadan chetga chiqib bajarsa, buyurtmachi nimani talab qilishga haqli? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "fix",
+          "label": "Kamchiliklarni oqilona muddatda bepul bartaraf etishni",
+          "required": true,
+          "why": "650-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "kamchiliklarni oqilona muddatda bepul bartaraf etishni",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "Agar ish pudratchi tomonidan pudrat shartnomasidan chetga chiqqan holda bajarilib, ish natijasini yomonlashtirgan boʻlsa, yoki uni shartnomada nazarda tutilgan maqsadlar uchun yoxud shartnomada yaroqsizlik haqida tegishli shartlar boʻlmagan taqdirda, odatdagi maqsadlar uchun foydalanishga yaroqsiz qilib qoʻyadigan boshqa kamchiliklar bilan bajarilgan boʻlsa, buyurtmachi, basharti qonunda yoki shartnomada boshqacha tartib nazarda tutilgan boʻlmasa, oʻz xohishiga koʻra pudratchidan:\n⟦kamchiliklarni oqilona muddatda bepul bartaraf etishni⟧;",
+              "anchor": "-188928"
+            }
+          ]
+        },
+        {
+          "id": "reduce",
+          "label": "Ish uchun belgilangan bahoni mutanosib kamaytirishni",
+          "required": true,
+          "why": "650-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "ish uchun belgilangan bahoni mutanosib ravishda kamaytirishni",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "kamchiliklarni oqilona muddatda bepul bartaraf etishni;\n⟦ish uchun belgilangan bahoni mutanosib ravishda kamaytirishni⟧;",
+              "anchor": "-188928"
+            }
+          ]
+        },
+        {
+          "id": "cost",
+          "label": "Shartnomada kamchiliklarni bartaraf etish huquqi nazarda tutilgan bo'lsa, o'z xarajatlarini qoplashni",
+          "required": true,
+          "why": "650-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "ularni bartaraf etishga qilgan oʻz xarajatlarini qoplashni talab qilishga haqli",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "shartnomada buyurtmachining kamchiliklarni bartaraf etish huquqi nazarda tutilgan boʻlsa, ⟦ularni bartaraf etishga qilgan oʻz xarajatlarini qoplashni talab qilishga haqli⟧.",
+              "anchor": "-188928"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "label": "Kamchiliklar jiddiy va bartaraf etib bo'lmasa yoki oqilona muddatda bartaraf etilmasa, shartnomani bajarishdan bosh tortish va zararni qoplash",
+          "required": true,
+          "why": "650-modda.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "buyurtmachi shartnomani bajarishdan bosh tortishga va keltirilgan zararni qoplashni talab qilishga haqli",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "Agar ishdagi pudrat shartnomasi shartlaridan chetga chiqishlar yoki boshqa xil kamchiliklar jiddiy va bartaraf etib boʻlmaydigan darajada boʻlsa yoxud aniqlangan kamchiliklar buyurtmachi tomonidan belgilangan oqilona muddatda bartaraf etilmagan boʻlsa, ⟦buyurtmachi shartnomani bajarishdan bosh tortishga va keltirilgan zararni qoplashni talab qilishga haqli⟧.",
+              "anchor": "-188928"
+            }
+          ]
+        },
+        {
+          "id": "none",
+          "label": "Buyurtmachi faqat uzr so'rashni talab qila oladi",
+          "required": false,
+          "why": "650-modda buyurtmachiga aniq talablar beradi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "oʻz xohishiga koʻra pudratchidan",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "Agar ish pudratchi tomonidan pudrat shartnomasidan chetga chiqqan holda bajarilib, ish natijasini yomonlashtirgan boʻlsa, yoki uni shartnomada nazarda tutilgan maqsadlar uchun yoxud shartnomada yaroqsizlik haqida tegishli shartlar boʻlmagan taqdirda, odatdagi maqsadlar uchun foydalanishga yaroqsiz qilib qoʻyadigan boshqa kamchiliklar bilan bajarilgan boʻlsa, buyurtmachi, basharti qonunda yoki shartnomada boshqacha tartib nazarda tutilgan boʻlmasa, ⟦oʻz xohishiga koʻra pudratchidan⟧:",
+              "anchor": "-188928"
+            }
+          ]
+        },
+        {
+          "id": "pay",
+          "label": "Buyurtmachi har qanday holatda ham narxni to'liq to'lashga majbur",
+          "required": false,
+          "why": "Buyurtmachi narxni mutanosib kamaytirishni talab qilishga haqli (650-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "ish uchun belgilangan bahoni mutanosib ravishda kamaytirishni",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "kamchiliklarni oqilona muddatda bepul bartaraf etishni;\n⟦ish uchun belgilangan bahoni mutanosib ravishda kamaytirishni⟧;",
+              "anchor": "-188928"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Pudratchi javobgarligi",
+      "sources": [],
+      "points": 25,
+      "description": "Javobgarlik qoidalarini belgilang.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "choice",
+          "label": "Buyurtmachi dastlabki talablardan birini qanday tanlaydi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "own",
+              "label": "O'z xohishiga ko'ra"
+            },
+            {
+              "id": "contractor",
+              "label": "Pudratchi tanlaydi"
+            },
+            {
+              "id": "court",
+              "label": "Sud tanlaydi"
+            }
+          ],
+          "correct": "own",
+          "why": "O'z xohishiga ko'ra (650-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "oʻz xohishiga koʻra pudratchidan",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "Agar ish pudratchi tomonidan pudrat shartnomasidan chetga chiqqan holda bajarilib, ish natijasini yomonlashtirgan boʻlsa, yoki uni shartnomada nazarda tutilgan maqsadlar uchun yoxud shartnomada yaroqsizlik haqida tegishli shartlar boʻlmagan taqdirda, odatdagi maqsadlar uchun foydalanishga yaroqsiz qilib qoʻyadigan boshqa kamchiliklar bilan bajarilgan boʻlsa, buyurtmachi, basharti qonunda yoki shartnomada boshqacha tartib nazarda tutilgan boʻlmasa, ⟦oʻz xohishiga koʻra pudratchidan⟧:",
+              "anchor": "-188928"
+            }
+          ]
+        },
+        {
+          "id": "redo",
+          "label": "Pudratchi kamchiliklarni bartaraf etish o'rniga nima qilishga haqli?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "redo",
+              "label": "Kechiktirishdan yetkazilgan zararni qoplab, ishni yangidan bepul bajarib berish"
+            },
+            {
+              "id": "none",
+              "label": "Hech narsa"
+            },
+            {
+              "id": "pay",
+              "label": "Pul qaytarish va ketish"
+            }
+          ],
+          "correct": "redo",
+          "why": "Zararni qoplagan holda ishni yangidan bepul bajarib berishga haqli (650-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "ishni yangidan bepul bajarib berishga haqli",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "Pudratchi ishdagi oʻzi javobgar boʻlgan kamchiliklarni bartaraf etish oʻrniga, buyurtmachiga shartnomani bajarishni kechiktirganlik natijasida yetkazgan zararni qoplagan holda ⟦ishni yangidan bepul bajarib berishga haqli⟧. Bunday holda buyurtmachi ilgari oʻziga topshirilgan ish natijasini, agar ishning xarakteriga koʻra uni qaytarib berish mumkin boʻlsa, pudratchiga qaytarib berishi shart.",
+              "anchor": "-188928"
+            }
+          ]
+        },
+        {
+          "id": "serious",
+          "label": "Kamchiliklar jiddiy va bartaraf etib bo'lmasa",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "refuse",
+              "label": "Shartnomani bajarishdan bosh tortib, zararni talab qilishga haqli"
+            },
+            {
+              "id": "wait",
+              "label": "Cheksiz kutishi shart"
+            },
+            {
+              "id": "none",
+              "label": "Hech narsa talab qilolmaydi"
+            }
+          ],
+          "correct": "refuse",
+          "why": "Buyurtmachi shartnomani bajarishdan bosh tortishga va zararni qoplashni talab qilishga haqli (650-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "shartnomani bajarishdan bosh tortishga va keltirilgan zararni qoplashni talab qilishga haqli",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "Agar ishdagi pudrat shartnomasi shartlaridan chetga chiqishlar yoki boshqa xil kamchiliklar jiddiy va bartaraf etib boʻlmaydigan darajada boʻlsa yoxud aniqlangan kamchiliklar buyurtmachi tomonidan belgilangan oqilona muddatda bartaraf etilmagan boʻlsa, buyurtmachi ⟦shartnomani bajarishdan bosh tortishga va keltirilgan zararni qoplashni talab qilishga haqli⟧.",
+              "anchor": "-188928"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Pudratchi remontni sifatsiz bajardi). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Ish pudrat shartnomasidan chetga chiqib bajarilgan; Ish natijasi yomonlashgan; Buyurtmachi oqilona muddat belgilab, tuzatishni talab qilgan, bajarilmagan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "kamchiliklarni oqilona muddatda bepul bartaraf etishni",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "Agar ish pudratchi tomonidan pudrat shartnomasidan chetga chiqqan holda bajarilib, ish natijasini yomonlashtirgan boʻlsa, yoki uni shartnomada nazarda tutilgan maqsadlar uchun yoxud shartnomada yaroqsizlik haqida tegishli shartlar boʻlmagan taqdirda, odatdagi maqsadlar uchun foydalanishga yaroqsiz qilib qoʻyadigan boshqa kamchiliklar bilan bajarilgan boʻlsa, buyurtmachi, basharti qonunda yoki shartnomada boshqacha tartib nazarda tutilgan boʻlmasa, oʻz xohishiga koʻra pudratchidan:\n⟦kamchiliklarni oqilona muddatda bepul bartaraf etishni⟧;",
+              "anchor": "-188928"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Kamchiliklarni oqilona muddatda bepul bartaraf etishni; Ish uchun belgilangan bahoni mutanosib kamaytirishni; Shartnomada kamchiliklarni bartaraf etish huquqi nazarda tutilgan bo'lsa, o'z xarajatlarini qoplashni; Kamchiliklar jiddiy va bartaraf etib bo'lmasa yoki oqilona muddatda bartaraf etilmasa, shartnomani bajarishdan bosh tortish va zararni qoplash",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Buyurtmachi harakatlari",
+      "sources": [],
+      "points": 15,
+      "description": "Tartibni belgilang.",
+      "order": [
+        {
+          "id": "found",
+          "label": "Ish shartnomadan chetga chiqib, natijani yomonlashtirib bajarilganligi aniqlanadi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "Agar ish pudratchi tomonidan pudrat shartnomasidan chetga chiqqan holda bajarilib, ish natijasini yomonlashtirgan boʻlsa",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "⟦Agar ish pudratchi tomonidan pudrat shartnomasidan chetga chiqqan holda bajarilib, ish natijasini yomonlashtirgan boʻlsa⟧, yoki uni shartnomada nazarda tutilgan maqsadlar uchun yoxud shartnomada yaroqsizlik haqida tegishli shartlar boʻlmagan taqdirda, odatdagi maqsadlar uchun foydalanishga yaroqsiz qilib qoʻyadigan boshqa kamchiliklar bilan bajarilgan boʻlsa, buyurtmachi, basharti qonunda yoki shartnomada boshqacha tartib nazarda tutilgan boʻlmasa, oʻz xohishiga koʻra pudratchidan:",
+              "anchor": "-188928"
+            }
+          ]
+        },
+        {
+          "id": "demand",
+          "label": "Buyurtmachi oqilona muddatda kamchilikni bepul bartaraf etishni talab qiladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "kamchiliklarni oqilona muddatda bepul bartaraf etishni",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "Agar ish pudratchi tomonidan pudrat shartnomasidan chetga chiqqan holda bajarilib, ish natijasini yomonlashtirgan boʻlsa, yoki uni shartnomada nazarda tutilgan maqsadlar uchun yoxud shartnomada yaroqsizlik haqida tegishli shartlar boʻlmagan taqdirda, odatdagi maqsadlar uchun foydalanishga yaroqsiz qilib qoʻyadigan boshqa kamchiliklar bilan bajarilgan boʻlsa, buyurtmachi, basharti qonunda yoki shartnomada boshqacha tartib nazarda tutilgan boʻlmasa, oʻz xohishiga koʻra pudratchidan:\n⟦kamchiliklarni oqilona muddatda bepul bartaraf etishni⟧;",
+              "anchor": "-188928"
+            }
+          ]
+        },
+        {
+          "id": "refuse",
+          "label": "Muddatda bartaraf etilmasa, shartnomani bajarishdan bosh tortib, zararni talab qiladi",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "650-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "yoxud aniqlangan kamchiliklar buyurtmachi tomonidan belgilangan oqilona muddatda bartaraf etilmagan boʻlsa",
+              "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+              "text": "Agar ishdagi pudrat shartnomasi shartlaridan chetga chiqishlar yoki boshqa xil kamchiliklar jiddiy va bartaraf etib boʻlmaydigan darajada boʻlsa ⟦yoxud aniqlangan kamchiliklar buyurtmachi tomonidan belgilangan oqilona muddatda bartaraf etilmagan boʻlsa⟧, buyurtmachi shartnomani bajarishdan bosh tortishga va keltirilgan zararni qoplashni talab qilishga haqli.",
+              "anchor": "-188928"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Narxni kamaytirish",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+          "article": "650-modda",
+          "url": "https://lex.uz/docs/-180552",
+          "quote": "ish uchun belgilangan bahoni mutanosib ravishda kamaytirishni",
+          "heading": "650-modda. Ishning sifati lozim darajada boʻlmaganligi uchun pudratchining javobgarligi",
+          "text": "kamchiliklarni oqilona muddatda bepul bartaraf etishni;\n⟦ish uchun belgilangan bahoni mutanosib ravishda kamaytirishni⟧;",
+          "anchor": "-188928"
+        }
+      ],
+      "points": 15,
+      "description": "Buyurtmachi ish uchun belgilangan bahoni qanday kamaytirishni talab qilishi mumkin?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Mutanosib ravishda"
+        },
+        {
+          "id": "b",
+          "label": "Yarmiga"
+        },
+        {
+          "id": "c",
+          "label": "To'liq bekor qilib"
+        },
+        {
+          "id": "d",
+          "label": "Kamaytirish mumkin emas"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

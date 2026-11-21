@@ -1,0 +1,523 @@
+{
+  "id": "shaxsiy-malumot-ochirish",
+  "title": "Do'kon ma'lumotlarimni o'chirmayapti",
+  "area": "Shaxsiy ma'lumotlar",
+  "areaId": "shaxsiy-malumot",
+  "tracks": [
+    "korxona",
+    "advokat",
+    "davlat",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Mijoz onlayn do'konga bergan roziligini qaytarib oldi, lekin do'kon ma'lumotlarini o'chirmayapti va eski manzilni o'zgartirmayapti. Subyekt huquqlari, operator majburiyatlari va muddatni «Shaxsga doir ma'lumotlar to'g'risida»gi Qonun bo'yicha belgilang.",
+  "client": {
+    "persona": "Sevara, 26 yosh, o'qituvchi",
+    "openingLine": "Assalomu alaykum. Onlayn do'konga rozilikni qaytarib oldim, lekin ular ma'lumotlarimni o'chirmayapti.",
+    "hiddenFacts": [
+      {
+        "id": "consent",
+        "fact": "Ro'yxatdan o'tganda rozilik bergan",
+        "revealOn": [
+          "rozilik"
+        ]
+      },
+      {
+        "id": "withdrawn",
+        "fact": "Besh kun oldin yozma ariza bilan rozilikni chaqirib olgan",
+        "revealOn": [
+          "qaytar",
+          "chaqir"
+        ]
+      },
+      {
+        "id": "kept",
+        "fact": "Do'kon ma'lumotlarni o'chirmagan, reklama yuborishda davom etmoqda",
+        "revealOn": [
+          "o'chir",
+          "reklama"
+        ]
+      },
+      {
+        "id": "wrong",
+        "fact": "Eski manzil turibdi, o'zgartirish so'ralgan, javob yo'q",
+        "revealOn": [
+          "xato",
+          "manzil"
+        ]
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 15,
+      "description": "Rozilik berilganmi, chaqirib olinganmi, ma'lumot noto'g'rimi.",
+      "requiredFactIds": [
+        "withdrawn",
+        "kept",
+        "wrong"
+      ],
+      "questions": [
+        {
+          "id": "q-consent",
+          "text": "Onlayn do'konga ma'lumotlaringizga ishlov berishga rozilik bergandingizmi?",
+          "factId": "consent",
+          "reply": "Ha, ro'yxatdan o'tganda rozilik bergandim."
+        },
+        {
+          "id": "q-withdrawn",
+          "text": "Rozilikni qaytarib oldingizmi?",
+          "factId": "withdrawn",
+          "reply": "Ha, besh kun oldin yozma ariza bilan rozilikni chaqirib oldim."
+        },
+        {
+          "id": "q-kept",
+          "text": "Do'kon ma'lumotlaringizni nima qildi?",
+          "factId": "kept",
+          "reply": "Hech narsa o'chirmadi, hali ham reklama xabarlari yuboryapti."
+        },
+        {
+          "id": "q-wrong",
+          "text": "Ma'lumotlaringizda xatolik bormi?",
+          "factId": "wrong",
+          "reply": "Ha, eski manzilim turibdi, o'zgartirishni so'ragandim, javob yo'q."
+        },
+        {
+          "id": "q-shop",
+          "text": "Do'kondan nima sotib olgandingiz?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ma'lumotlarim haqida gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "rights",
+      "type": "document-pick",
+      "title": "Subyektning huquqlari",
+      "sources": [],
+      "points": 15,
+      "description": "Shaxsga doir ma'lumotlar subyekti qanday huquqlarga ega.",
+      "prompt": "Shaxsga doir ma'lumotlar subyekti qanday huquqlarga ega? To'g'ri variantlarning hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "know",
+          "label": "O'z ma'lumotlari mavjudligini va tarkibini bilish",
+          "required": true,
+          "why": "30-moddadagi huquq.",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "30-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "oʻz shaxsga doir maʼlumotlari va ularning tarkibi mavjudligini bilish",
+              "heading": "30-modda. Subyektning huquq va majburiyatlari",
+              "text": "Shaxsga doir maʼlumotlar subyekti:\nmulkdorda va (yoki) operatorda, shuningdek uchinchi shaxsda ⟦oʻz shaxsga doir maʼlumotlari va ularning tarkibi mavjudligini bilish⟧;",
+              "anchor": "-4397693"
+            }
+          ]
+        },
+        {
+          "id": "info",
+          "label": "Ishlov berish to'g'risidagi axborotni so'rov bo'yicha olish",
+          "required": true,
+          "why": "30-moddadagi huquq.",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "30-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "shaxsga doir maʼlumotlarga ishlov berish toʻgʻrisidagi axborotni soʻrov boʻyicha olish",
+              "heading": "30-modda. Subyektning huquq va majburiyatlari",
+              "text": "mulkdorda va (yoki) operatorda, shuningdek uchinchi shaxsda oʻz shaxsga doir maʼlumotlari va ularning tarkibi mavjudligini bilish;\nmulkdordan va (yoki) operatordan ⟦shaxsga doir maʼlumotlarga ishlov berish toʻgʻrisidagi axborotni soʻrov boʻyicha olish⟧:",
+              "anchor": "-4397693"
+            }
+          ]
+        },
+        {
+          "id": "consent",
+          "label": "Ishlov berishga rozilik berish va bunday rozilikni chaqirib olish",
+          "required": true,
+          "why": "30-moddadagi huquq.",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "30-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "oʻz shaxsga doir maʼlumotlariga ishlov berish uchun rozilik berish va bunday rozilikni chaqirib olish",
+              "heading": "30-modda. Subyektning huquq va majburiyatlari",
+              "text": "oʻzining shaxsga doir maʼlumotlariga nisbatan huquqlari va qonuniy manfaatlarini himoya qilish masalalari yuzasidan vakolatli davlat organiga yoki sudga murojaat etish;\n⟦oʻz shaxsga doir maʼlumotlariga ishlov berish uchun rozilik berish va bunday rozilikni chaqirib olish⟧, bundan ushbu Qonunda nazarda tutilgan hollar mustasno;",
+              "anchor": "-4397693"
+            }
+          ]
+        },
+        {
+          "id": "authority",
+          "label": "Vakolatli davlat organiga yoki sudga murojaat etish",
+          "required": true,
+          "why": "30-moddadagi huquq.",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "30-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "vakolatli davlat organiga yoki sudga murojaat etish",
+              "heading": "30-modda. Subyektning huquq va majburiyatlari",
+              "text": "mulkdordan va (yoki) operatordan oʻzining shaxsga doir maʼlumotlaridan foydalanish imkoniyatini berish shartlari toʻgʻrisida axborot olish;\noʻzining shaxsga doir maʼlumotlariga nisbatan huquqlari va qonuniy manfaatlarini himoya qilish masalalari yuzasidan ⟦vakolatli davlat organiga yoki sudga murojaat etish⟧;",
+              "anchor": "-4397693"
+            }
+          ]
+        },
+        {
+          "id": "suspend",
+          "label": "Ma'lumotlar to'liq bo'lmasa, eskirgan yoki noaniq bo'lsa, ishlovni vaqtincha to'xtatishni talab qilish",
+          "required": true,
+          "why": "30-moddadagi huquq.",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "30-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "oʻzining shaxsga doir maʼlumotlariga ishlov berishni vaqtincha toʻxtatib turishni talab qilish huquqiga ega",
+              "heading": "30-modda. Subyektning huquq va majburiyatlari",
+              "text": "agar shaxsga doir maʼlumotlar toʻliq boʻlmasa, eskirgan, noaniq boʻlsa, qonunga xilof ravishda olingan boʻlsa yoki ishlov berish maqsadlari uchun zarur boʻlmasa, mulkdordan va (yoki) operatordan ⟦oʻzining shaxsga doir maʼlumotlariga ishlov berishni vaqtincha toʻxtatib turishni talab qilish huquqiga ega⟧.",
+              "anchor": "-4397693"
+            }
+          ]
+        },
+        {
+          "id": "others",
+          "label": "Operatorning boshqa mijozlari haqidagi ma'lumotlarni talab qilish",
+          "required": false,
+          "why": "30-moddada subyektning huquqlari faqat o'z ma'lumotlariga tegishli.",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "30-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "oʻz shaxsga doir maʼlumotlari va ularning tarkibi mavjudligini bilish",
+              "heading": "30-modda. Subyektning huquq va majburiyatlari",
+              "text": "Shaxsga doir maʼlumotlar subyekti:\nmulkdorda va (yoki) operatorda, shuningdek uchinchi shaxsda ⟦oʻz shaxsga doir maʼlumotlari va ularning tarkibi mavjudligini bilish⟧;",
+              "anchor": "-4397693"
+            }
+          ]
+        },
+        {
+          "id": "sell",
+          "label": "Operator ma'lumotlarini uchinchi shaxsga sotishni talab qilish",
+          "required": false,
+          "why": "30-moddada bunday huquq yo'q.",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "30-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "oʻz shaxsga doir maʼlumotlari va ularning tarkibi mavjudligini bilish",
+              "heading": "30-modda. Subyektning huquq va majburiyatlari",
+              "text": "Shaxsga doir maʼlumotlar subyekti:\nmulkdorda va (yoki) operatorda, shuningdek uchinchi shaxsda ⟦oʻz shaxsga doir maʼlumotlari va ularning tarkibi mavjudligini bilish⟧;",
+              "anchor": "-4397693"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Talab va javobgarlik",
+      "sources": [],
+      "points": 25,
+      "description": "Operatorga qo'yiladigan talablarni to'ldiring.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "destroy",
+          "label": "Rozilik chaqirib olinganda operator ma'lumotlarni nima qilishi lozim?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "keep",
+              "label": "Saqlab qo'yishi mumkin"
+            },
+            {
+              "id": "destroy",
+              "label": "Yo'q qilishi lozim"
+            },
+            {
+              "id": "sell",
+              "label": "Boshqa kompaniyaga berishi mumkin"
+            }
+          ],
+          "correct": "destroy",
+          "why": "Subyektning ishlov berish uchun bergan roziligi chaqirib olinganda ma'lumotlar yo'q qilinishi lozim (17-modda).",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "17-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "subyektning shaxsga doir maʼlumotlarga ishlov berish uchun berilgan roziligi chaqirib olinganda",
+              "heading": "17-modda. Shaxsga doir maʼlumotlarni yoʻq qilish",
+              "text": "shaxsga doir maʼlumotlarga ishlov berish maqsadiga erishilganda;\n⟦subyektning shaxsga doir maʼlumotlarga ishlov berish uchun berilgan roziligi chaqirib olinganda⟧;",
+              "anchor": "-4397378"
+            }
+          ]
+        },
+        {
+          "id": "proof",
+          "label": "Operator qanday dalilni taqdim etishi kerak?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Hech qanday dalil kerak emas"
+            },
+            {
+              "id": "consent",
+              "label": "Subyektning roziligi olinganligi dalilini"
+            },
+            {
+              "id": "passport",
+              "label": "Subyektning pasport nusxasini"
+            }
+          ],
+          "correct": "consent",
+          "why": "Operator qonunchilikda nazarda tutilgan hollarda subyektning roziligi olinganligi dalilini taqdim etishi shart (31-modda).",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "31-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "subyektning oʻz shaxsga doir maʼlumotlariga ishlov berish uchun roziligi olinganligi dalilini taqdim etishi",
+              "heading": "31-modda. Mulkdorning va (yoki) operatorning huquq va majburiyatlari",
+              "text": "shaxsga doir maʼlumotlarga ishlov berishdan koʻzlangan maqsadga erishilgan taqdirda, shuningdek ushbu Qonunda belgilangan boshqa hollarda ularni yoʻq qilish choralarini koʻrishi;\nqonunchilikda nazarda tutilgan hollarda ⟦subyektning oʻz shaxsga doir maʼlumotlariga ishlov berish uchun roziligi olinganligi dalilini taqdim etishi⟧;",
+              "anchor": "-4397865"
+            }
+          ]
+        },
+        {
+          "id": "special",
+          "label": "Maxsus ma'lumotlarga ishlov berish uchun qanday rozilik talab etiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "oral",
+              "label": "Og'zaki rozilik"
+            },
+            {
+              "id": "written",
+              "label": "Yozma, shu jumladan elektron hujjat tarzidagi rozilik"
+            },
+            {
+              "id": "none",
+              "label": "Rozilik talab etilmaydi"
+            }
+          ],
+          "correct": "written",
+          "why": "Maxsus ma'lumotlarga ishlov berish uchun subyektning yozma shakldagi, shu jumladan elektron hujjat tarzidagi roziligi talab etiladi (21-modda).",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "21-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "Shaxsga doir maxsus maʼlumotlarga ishlov berish uchun subyektning yozma shakldagi, shu jumladan elektron hujjat tarzidagi roziligi talab etiladi.",
+              "heading": "21-modda. Shaxsga doir maʼlumotlarga ishlov berishga rozilik berish va rozilikni chaqirib olish tartibi",
+              "text": "⟦Shaxsga doir maxsus maʼlumotlarga ishlov berish uchun subyektning yozma shakldagi, shu jumladan elektron hujjat tarzidagi roziligi talab etiladi.⟧",
+              "anchor": "-4397469"
+            }
+          ]
+        },
+        {
+          "id": "body",
+          "label": "Shaxsga doir ma'lumotlar sohasidagi vakolatli davlat organi qaysi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "bank",
+              "label": "Markaziy bank"
+            },
+            {
+              "id": "center",
+              "label": "Vazirlar Mahkamasi huzuridagi Davlat personallashtirish markazi"
+            },
+            {
+              "id": "tax",
+              "label": "Soliq qo'mitasi"
+            }
+          ],
+          "correct": "center",
+          "why": "Vazirlar Mahkamasi huzuridagi Davlat personallashtirish markazi vakolatli davlat organidir (8-modda).",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "8-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "Davlat personallashtirish markazi shaxsga doir maʼlumotlar sohasidagi vakolatli davlat organidir",
+              "heading": "8-modda. Shaxsga doir maʼlumotlar sohasidagi vakolatli davlat organi",
+              "text": "Oʻzbekiston Respublikasi Vazirlar Mahkamasi huzuridagi ⟦Davlat personallashtirish markazi shaxsga doir maʼlumotlar sohasidagi vakolatli davlat organidir⟧ (bundan buyon matnda vakolatli davlat organi deb yuritiladi).",
+              "anchor": "-4397302"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Do'kon ma'lumotlarimni o'chirmayapti). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Besh kun oldin yozma ariza bilan rozilikni chaqirib olgan; Do'kon ma'lumotlarni o'chirmagan, reklama yuborishda davom etmoqda; Eski manzil turibdi, o'zgartirish so'ralgan, javob yo'q",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "30-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "oʻz shaxsga doir maʼlumotlari va ularning tarkibi mavjudligini bilish",
+              "heading": "30-modda. Subyektning huquq va majburiyatlari",
+              "text": "Shaxsga doir maʼlumotlar subyekti:\nmulkdorda va (yoki) operatorda, shuningdek uchinchi shaxsda ⟦oʻz shaxsga doir maʼlumotlari va ularning tarkibi mavjudligini bilish⟧;",
+              "anchor": "-4397693"
+            },
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "17-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "subyektning shaxsga doir maʼlumotlarga ishlov berish uchun berilgan roziligi chaqirib olinganda",
+              "heading": "17-modda. Shaxsga doir maʼlumotlarni yoʻq qilish",
+              "text": "shaxsga doir maʼlumotlarga ishlov berish maqsadiga erishilganda;\n⟦subyektning shaxsga doir maʼlumotlarga ishlov berish uchun berilgan roziligi chaqirib olinganda⟧;",
+              "anchor": "-4397378"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: O'z ma'lumotlari mavjudligini va tarkibini bilish; Ishlov berish to'g'risidagi axborotni so'rov bo'yicha olish; Ishlov berishga rozilik berish va bunday rozilikni chaqirib olish; Vakolatli davlat organiga yoki sudga murojaat etish",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Harakatlar tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Mijoz harakatlarini mantiqiy ketma-ketlikda belgilang.",
+      "order": [
+        {
+          "id": "withdraw",
+          "label": "Operatorga rozilikni chaqirib olish haqida murojaat qilish",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "30-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "oʻz shaxsga doir maʼlumotlariga ishlov berish uchun rozilik berish va bunday rozilikni chaqirib olish",
+              "heading": "30-modda. Subyektning huquq va majburiyatlari",
+              "text": "oʻzining shaxsga doir maʼlumotlariga nisbatan huquqlari va qonuniy manfaatlarini himoya qilish masalalari yuzasidan vakolatli davlat organiga yoki sudga murojaat etish;\n⟦oʻz shaxsga doir maʼlumotlariga ishlov berish uchun rozilik berish va bunday rozilikni chaqirib olish⟧, bundan ushbu Qonunda nazarda tutilgan hollar mustasno;",
+              "anchor": "-4397693"
+            }
+          ]
+        },
+        {
+          "id": "destroy",
+          "label": "Operator ma'lumotlarni yo'q qilishi lozim",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "17-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "subyektning shaxsga doir maʼlumotlarga ishlov berish uchun berilgan roziligi chaqirib olinganda",
+              "heading": "17-modda. Shaxsga doir maʼlumotlarni yoʻq qilish",
+              "text": "shaxsga doir maʼlumotlarga ishlov berish maqsadiga erishilganda;\n⟦subyektning shaxsga doir maʼlumotlarga ishlov berish uchun berilgan roziligi chaqirib olinganda⟧;",
+              "anchor": "-4397378"
+            }
+          ]
+        },
+        {
+          "id": "complain",
+          "label": "Bajarilmasa, vakolatli davlat organiga yoki sudga murojaat qilish",
+          "sources": [
+            {
+              "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+              "article": "30-modda",
+              "url": "https://lex.uz/docs/-4396419",
+              "quote": "vakolatli davlat organiga yoki sudga murojaat etish",
+              "heading": "30-modda. Subyektning huquq va majburiyatlari",
+              "text": "mulkdordan va (yoki) operatordan oʻzining shaxsga doir maʼlumotlaridan foydalanish imkoniyatini berish shartlari toʻgʻrisida axborot olish;\noʻzining shaxsga doir maʼlumotlariga nisbatan huquqlari va qonuniy manfaatlarini himoya qilish masalalari yuzasidan ⟦vakolatli davlat organiga yoki sudga murojaat etish⟧;",
+              "anchor": "-4397693"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "O'zgartirish muddati",
+      "sources": [
+        {
+          "act": "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi Qonun (OʻRQ-547-son)",
+          "article": "11-modda",
+          "url": "https://lex.uz/docs/-4396419",
+          "quote": "uch kunlik muddatdan kechiktirmay mulkdor va (yoki) operator tomonidan amalga oshiriladi",
+          "heading": "11-modda. Shaxsga doir maʼlumotlarni oʻzgartirish va toʻldirish",
+          "text": "Shaxsga doir maʼlumotlarni oʻzgartirish va toʻldirish subyektning murojaati asosida, ushbu murojaat berilgan paytdan eʼtiboran ⟦uch kunlik muddatdan kechiktirmay mulkdor va (yoki) operator tomonidan amalga oshiriladi⟧.",
+          "anchor": "-4397349"
+        }
+      ],
+      "description": "Subyektning murojaati asosida shaxsga doir ma'lumotlarni o'zgartirish va to'ldirish murojaat berilgan paytdan qancha muddatdan kechiktirmay amalga oshirilishi kerak?",
+      "points": 15,
+      "options": [
+        {
+          "id": "d1",
+          "label": "1 kun"
+        },
+        {
+          "id": "d3",
+          "label": "3 kun"
+        },
+        {
+          "id": "d15",
+          "label": "15 kun"
+        },
+        {
+          "id": "m1",
+          "label": "1 oy"
+        }
+      ],
+      "correct": "d3"
+    }
+  ]
+}

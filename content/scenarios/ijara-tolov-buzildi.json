@@ -1,0 +1,747 @@
+{
+  "id": "ijara-tolov-buzildi",
+  "title": "Ijarachi ijara haqini to'lamayapti",
+  "area": "Fuqarolik huquqi (ijara)",
+  "areaId": "fuqarolik",
+  "tracks": [
+    "advokat",
+    "notarius",
+    "korxona",
+    "sudya",
+    "umumiy"
+  ],
+  "level": 2,
+  "status": "sample",
+  "reviewedBy": null,
+  "summary": "Bino egasi (ijaraga beruvchi) mijoz. Ijarachi MChJ uch oydan beri ijara haqini to'lamayapti. Dalillar, bekor qilish asoslari, ariza va tartibni Fuqarolik kodeksi bo'yicha belgilang.",
+  "client": {
+    "persona": "Shavkat, 45 yosh, tijorat binosi egasi",
+    "openingLine": "Assalomu alaykum. Binomni bir MChJ ga ijaraga berganman. Uch oydan beri ijara haqini to'lamayapti.",
+    "hiddenFacts": [
+      {
+        "id": "missed",
+        "fact": "Ijara haqi ketma-ket 3 oy to'lanmagan",
+        "revealOn": [
+          "qachondan",
+          "muddat"
+        ]
+      },
+      {
+        "id": "amount",
+        "fact": "Oylik ijara haqi 5 000 000 so'm",
+        "revealOn": [
+          "qancha",
+          "oylik"
+        ]
+      },
+      {
+        "id": "written",
+        "fact": "Shartnoma yozma, 2 yilga tuzilgan, davlat ro'yxatidan o'tgan",
+        "revealOn": [
+          "shartnoma"
+        ]
+      },
+      {
+        "id": "warning",
+        "fact": "Ijarachiga hali yozma ogohlantirish yuborilmagan",
+        "revealOn": [
+          "ogohlantir",
+          "xat"
+        ]
+      },
+      {
+        "id": "care",
+        "fact": "Ijarachi binoni yaxshi saqlayapti",
+        "revealOn": [
+          "bino",
+          "holat"
+        ]
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "facts",
+      "type": "client-chat",
+      "title": "Faktlarni aniqlang",
+      "sources": [],
+      "points": 5,
+      "description": "Qachondan to'lamayapti, qancha, shartnoma qanday, ogohlantirish yuborilganmi.",
+      "requiredFactIds": [
+        "missed",
+        "amount",
+        "written",
+        "warning"
+      ],
+      "questions": [
+        {
+          "id": "q-missed",
+          "text": "Ijara haqi qachondan to'lanmayapti?",
+          "factId": "missed",
+          "reply": "Uch oy ketma-ket, birorta to'lov bo'lmadi."
+        },
+        {
+          "id": "q-amount",
+          "text": "Oylik ijara haqi qancha?",
+          "factId": "amount",
+          "reply": "Oyiga 5 000 000 so'm."
+        },
+        {
+          "id": "q-written",
+          "text": "Shartnoma yozma tuzilganmi, ro'yxatdan o'tganmi?",
+          "factId": "written",
+          "reply": "Yozma, ikki yilga, davlat ro'yxatidan o'tkazilgan."
+        },
+        {
+          "id": "q-warning",
+          "text": "Ijarachiga yozma ogohlantirish yuborganmisiz?",
+          "factId": "warning",
+          "reply": "Yo'q, hozircha faqat og'zaki aytganman."
+        },
+        {
+          "id": "q-care",
+          "text": "Ijarachi binoni qanday saqlayapti?",
+          "factId": "care",
+          "reply": "Bino toza, yaxshi holatda."
+        },
+        {
+          "id": "q-fav",
+          "text": "Sevimli taomingiz nima?",
+          "factId": null,
+          "reply": "Bu hozir muhim emas, ijara masalasini gaplashaylik."
+        }
+      ]
+    },
+    {
+      "id": "documents",
+      "type": "document-pick",
+      "title": "Hujjatlarni yig'ing",
+      "sources": [],
+      "points": 15,
+      "description": "Nizo uchun kerakli hujjatlarni tanlang.",
+      "prompt": "Ijara nizosi uchun kerakli hujjatlarni belgilang.",
+      "submitLabel": "Hujjatlarni topshirish",
+      "options": [
+        {
+          "id": "contract",
+          "label": "Yozma ijara shartnomasi",
+          "required": true,
+          "why": "Taraflardan biri yuridik shaxs bo'lsa, ijara shartnomasi muddatidan qat'i nazar yozma shaklda tuzilishi shart (539-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "539-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "taraflardan birontasi yuridik shaxs boʻlgan hollarda esa, muddatidan qatʼi nazar, yozma shaklda tuzilishi shart.",
+              "heading": "539-modda. Mulk ijarasi shartnomasining shakli",
+              "text": "Mulk ijarasi shartnomasi bir yildan ortiq muddatga moʻljallangan boʻlsa, ⟦taraflardan birontasi yuridik shaxs boʻlgan hollarda esa, muddatidan qatʼi nazar, yozma shaklda tuzilishi shart.⟧",
+              "anchor": "-184381"
+            }
+          ]
+        },
+        {
+          "id": "registration",
+          "label": "Shartnomaning davlat ro'yxatidan o'tganligi va soliq organida hisobga qo'yilganligi haqidagi hujjat",
+          "required": true,
+          "why": "Ko'chmas mulk ijarasi shartnomasi davlat ro'yxatidan o'tkazilishi va soliq organlarida hisobga qo'yilishi lozim (539-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "539-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "Koʻchmas mulk ijarasi shartnomasi davlat roʻyxatidan oʻtkazilishi va soliq organlarida hisobga qoʻyilishi lozim",
+              "heading": "539-modda. Mulk ijarasi shartnomasining shakli",
+              "text": "⟦Koʻchmas mulk ijarasi shartnomasi davlat roʻyxatidan oʻtkazilishi va soliq organlarida hisobga qoʻyilishi lozim⟧, bundan qonunchilikda nazarda tutilgan hollar mustasno. Koʻchmas mulk ijarasi shartnomalarini soliq organlarida hisobga qoʻyish tartibi Oʻzbekiston Respublikasi Vazirlar Mahkamasi tomonidan belgilanadi.",
+              "anchor": "-184381"
+            }
+          ]
+        },
+        {
+          "id": "bank",
+          "label": "To'lovlar bo'yicha bank ko'chirmasi",
+          "required": true,
+          "why": "Ijarachi ijara haqini o'z vaqtida to'lashi shart (544-modda). To'lov muddatini ketma-ket ikki martadan ortiq buzish bekor qilish asosi (551-modda). Ko'chirma buzilishni ko'rsatadi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "544-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "Ijaraga oluvchi mol-mulkdan foydalanganlik uchun haqni oʻz vaqtida toʻlab turishi shart.",
+              "heading": "544-modda. Mol-mulkdan foydalanganlik uchun haq toʻlash",
+              "text": "⟦Ijaraga oluvchi mol-mulkdan foydalanganlik uchun haqni oʻz vaqtida toʻlab turishi shart.⟧",
+              "anchor": "-184420"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "shartnomada belgilangan toʻlov muddatini ketma-ket ikki martadan ortiq buzib",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "mol-mulkni jiddiy yomonlashtirsa;\n⟦shartnomada belgilangan toʻlov muddatini ketma-ket ikki martadan ortiq buzib⟧, mol-mulkdan foydalanganlik uchun haq toʻlamasa;",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "family",
+          "label": "Ijarachi direktorining oilaviy ahvoli haqida ma'lumotnoma",
+          "required": false,
+          "why": "551-moddadagi bekor qilish asoslari ro'yxatida bunday holat yo'q.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "Mulk ijarasi shartnomasi ijaraga beruvchining talabi bilan sud tomonidan muddatidan oldin bekor qilinishi mumkin",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "⟦Mulk ijarasi shartnomasi ijaraga beruvchining talabi bilan sud tomonidan muddatidan oldin bekor qilinishi mumkin⟧, agar ijaraga oluvchi:",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "photos",
+          "label": "Binoning reklama suratlari",
+          "required": false,
+          "why": "Ijara haqi to'lanmaganligini yoki bekor qilish asosini tasdiqlamaydi (551-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "Mulk ijarasi shartnomasi ijaraga beruvchining talabi bilan sud tomonidan muddatidan oldin bekor qilinishi mumkin",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "⟦Mulk ijarasi shartnomasi ijaraga beruvchining talabi bilan sud tomonidan muddatidan oldin bekor qilinishi mumkin⟧, agar ijaraga oluvchi:",
+              "anchor": "-184460"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grounds",
+      "type": "document-pick",
+      "title": "Bekor qilish asoslari",
+      "sources": [],
+      "points": 10,
+      "description": "Qaysi holatlar muddatidan oldin bekor qilish asosi bo'ladi.",
+      "prompt": "Quyidagilardan qaysilari ijaraga beruvchiga shartnomani sud orqali muddatidan oldin bekor qildirish asosi bo'ladi? Hammasini belgilang.",
+      "submitLabel": "Javobni topshirish",
+      "options": [
+        {
+          "id": "pay",
+          "label": "To'lov muddatini ketma-ket ikki martadan ortiq buzib, ijara haqini to'lamaslik",
+          "required": true,
+          "why": "551-moddaning to'g'ridan-to'g'ri asosi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "shartnomada belgilangan toʻlov muddatini ketma-ket ikki martadan ortiq buzib, mol-mulkdan foydalanganlik uchun haq toʻlamasa",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "mol-mulkni jiddiy yomonlashtirsa;\n⟦shartnomada belgilangan toʻlov muddatini ketma-ket ikki martadan ortiq buzib, mol-mulkdan foydalanganlik uchun haq toʻlamasa⟧;",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "damage",
+          "label": "Mol-mulkni jiddiy yomonlashtirish",
+          "required": true,
+          "why": "551-moddaning asosi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "mol-mulkni jiddiy yomonlashtirsa",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "ijaraga beruvchining yozma ogohlantirishiga qaramasdan mol-mulkdan shartnoma shartlarini yoki mol-mulkning vazifalarini jiddiy ravishda buzgan yoxud bir necha marta buzgan holda foydalansa;\n⟦mol-mulkni jiddiy yomonlashtirsa⟧;",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "misuse",
+          "label": "Yozma ogohlantirishga qaramay shartnomaga zid foydalanish",
+          "required": true,
+          "why": "551-moddaning asosi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "ijaraga beruvchining yozma ogohlantirishiga qaramasdan",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "Mulk ijarasi shartnomasi ijaraga beruvchining talabi bilan sud tomonidan muddatidan oldin bekor qilinishi mumkin, agar ijaraga oluvchi:\n⟦ijaraga beruvchining yozma ogohlantirishiga qaramasdan⟧ mol-mulkdan shartnoma shartlarini yoki mol-mulkning vazifalarini jiddiy ravishda buzgan yoxud bir necha marta buzgan holda foydalansa;",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "repairs",
+          "label": "Kapital ta'mir ijarachi zimmasida bo'lgan holda uni belgilangan muddatda bajarmaslik",
+          "required": true,
+          "why": "551-moddaning asosi.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "kapital taʼmirlash ishlarini bajarish ijaraga oluvchi zimmasidagi majburiyat boʻlgan hollarda",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "qonunchilikka yoki shartnomaga muvofiq ⟦kapital taʼmirlash ishlarini bajarish ijaraga oluvchi zimmasidagi majburiyat boʻlgan hollarda⟧ shartnomada belgilangan muddatlarda, shartnomada bunday muddat belgilangan boʻlmasa, oqilona muddatlarda mol-mulkni kapital taʼmirlashni amalga oshirmasa.",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "once",
+          "label": "Ijara haqini bir marta bir necha kunga kechiktirish",
+          "required": false,
+          "why": "Asos ketma-ket ikki martadan ortiq buzishdir. Bir marta kechikish asos emas (551-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "ketma-ket ikki martadan ortiq buzib",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "mol-mulkni jiddiy yomonlashtirsa;\nshartnomada belgilangan toʻlov muddatini ⟦ketma-ket ikki martadan ortiq buzib⟧, mol-mulkdan foydalanganlik uchun haq toʻlamasa;",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "market",
+          "label": "Bozorda boshqa ijarachi ko'proq to'lashni taklif qilgani",
+          "required": false,
+          "why": "551-moddaning asoslari ro'yxatida bunday holat yo'q.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "Mulk ijarasi shartnomasi ijaraga beruvchining talabi bilan sud tomonidan muddatidan oldin bekor qilinishi mumkin",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "⟦Mulk ijarasi shartnomasi ijaraga beruvchining talabi bilan sud tomonidan muddatidan oldin bekor qilinishi mumkin⟧, agar ijaraga oluvchi:",
+              "anchor": "-184460"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "type": "doc-review",
+      "title": "Ogohlantirish xatidagi xatolarni toping",
+      "points": 10,
+      "sources": [],
+      "description": "Kichik yurist ijarachiga yozma ogohlantirish xati loyihasini tayyorladi. Yuborishdan oldin xatolarni toping.",
+      "docTitle": "Ijarachiga yozma OGOHLANTIRISH xati (loyiha)",
+      "clauses": [
+        {
+          "id": "c1",
+          "text": "Men, Shavkat, tijorat binosi egasi sifatida, binoni MChJ ga ijaraga bergan ijaraga beruvchiman.",
+          "flawed": false,
+          "why": "Bu mijoz haqidagi ma'lumot, unda xato yo'q.",
+          "fix": "",
+          "sources": []
+        },
+        {
+          "id": "c2",
+          "text": "Sizning ijara haqi bo'yicha qarzingiz 5 000 000 so'm.",
+          "flawed": true,
+          "why": "Ijara haqi uch oydan beri to'lanmagan: 3 oy × 5 000 000 so'm = 15 000 000 so'm. Bir oylik summa jami qarz deb yozilgan. Ijaraga oluvchi haqni o'z vaqtida to'lashi shart (544-modda).",
+          "fix": "15 000 000 so'm.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "544-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "Ijaraga oluvchi mol-mulkdan foydalanganlik uchun haqni oʻz vaqtida toʻlab turishi shart.",
+              "heading": "544-modda. Mol-mulkdan foydalanganlik uchun haq toʻlash",
+              "text": "⟦Ijaraga oluvchi mol-mulkdan foydalanganlik uchun haqni oʻz vaqtida toʻlab turishi shart.⟧",
+              "anchor": "-184420"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "text": "Ijara haqi ketma-ket uch oydan beri to'lanmagan.",
+          "flawed": false,
+          "why": "Bu mijoz aytgan faktga mos.",
+          "fix": "",
+          "sources": []
+        },
+        {
+          "id": "c4",
+          "text": "Ushbu xat olingach shartnoma darhol bekor bo'ladi, qarzni to'lash uchun sizga muddat bermayman.",
+          "flawed": true,
+          "why": "Ijaraga beruvchi ijaraga oluvchini yozma ogohlantirganidan va unga majburiyatlarini bajarish uchun imkoniyat berganidan keyingina bekor qilinishini talab qilishga haqli (551-modda).",
+          "fix": "To'lash uchun aniq muddat berish.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "yozma ravishda ogohlantirganidan va unga oʻz majburiyatlarini bajarish uchun imkoniyat berganidan keyingina",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "Ijaraga beruvchi ijaraga oluvchini ⟦yozma ravishda ogohlantirganidan va unga oʻz majburiyatlarini bajarish uchun imkoniyat berganidan keyingina⟧ shartnoma muddatidan oldin bekor qilinishini talab qilishga haqli.",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "c5",
+          "text": "Bekor qilish uchun sudga murojaat qilishim shart emas, shu xatning o'zi yetarli.",
+          "flawed": true,
+          "why": "Ijara shartnomasi ijaraga beruvchining talabi bilan sud tomonidan muddatidan oldin bekor qilinishi mumkin (551-modda).",
+          "fix": "Bekor qilishni sudda talab qilish.",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sud tomonidan muddatidan oldin bekor qilinishi mumkin",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "Mulk ijarasi shartnomasi ijaraga beruvchining talabi bilan ⟦sud tomonidan muddatidan oldin bekor qilinishi mumkin⟧, agar ijaraga oluvchi:",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "c6",
+          "text": "Ushbu ogohlantirish yozma shaklda yuboriladi.",
+          "flawed": false,
+          "why": "Ogohlantirish yozma bo'lishi kerak (551-modda), shuning uchun bu band to'g'ri.",
+          "fix": "",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "yozma ravishda ogohlantirganidan va unga oʻz majburiyatlarini bajarish uchun imkoniyat berganidan keyingina",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "Ijaraga beruvchi ijaraga oluvchini ⟦yozma ravishda ogohlantirganidan va unga oʻz majburiyatlarini bajarish uchun imkoniyat berganidan keyingina⟧ shartnoma muddatidan oldin bekor qilinishini talab qilishga haqli.",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "c7",
+          "text": "Bino qaytarilmasa ham, faqat bir oylik ijara haqini talab qilaman.",
+          "flawed": true,
+          "why": "Bino qaytarilmasa yoki kechiktirib qaytarilsa, ijaraga beruvchi kechiktirilgan barcha vaqt uchun haq to'lashni talab qilishga haqli, haq zararni qoplamasa zararni ham (554-modda).",
+          "fix": "Kechiktirilgan butun vaqt uchun haq (va zarar).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "554-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "kechiktirilgan barcha vaqt davomida mol-mulkdan foydalanganlik uchun haq toʻlashni talab qilishga haqli",
+              "heading": "554-modda. Mol-mulkni ijaraga beruvchiga qaytarish",
+              "text": "Agar ijaraga oluvchi ijaraga olgan mol-mulkni qaytarmasa yoki kechiktirib qaytarsa, ijaraga beruvchi ⟦kechiktirilgan barcha vaqt davomida mol-mulkdan foydalanganlik uchun haq toʻlashni talab qilishga haqli⟧. Bu haq ijaraga beruvchi koʻrgan zararni qoplamagan taqdirda zararni toʻlashni talab qilishga haqli.",
+              "anchor": "-184480"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "type": "form",
+      "title": "Talab va ariza",
+      "sources": [],
+      "points": 15,
+      "description": "Talab shaklini to'ldiring.",
+      "rubric": [],
+      "fields": [
+        {
+          "id": "who",
+          "label": "Shartnomani muddatidan oldin kim bekor qiladi?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "self",
+              "label": "Ijaraga beruvchi o'zi, sudsiz"
+            },
+            {
+              "id": "court",
+              "label": "Sud, ijaraga beruvchining talabi bilan"
+            },
+            {
+              "id": "notary",
+              "label": "Notarius"
+            }
+          ],
+          "correct": "court",
+          "why": "Ijaraga beruvchining talabi bilan shartnoma sud tomonidan muddatidan oldin bekor qilinadi (551-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sud tomonidan muddatidan oldin bekor qilinishi mumkin",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "Mulk ijarasi shartnomasi ijaraga beruvchining talabi bilan ⟦sud tomonidan muddatidan oldin bekor qilinishi mumkin⟧, agar ijaraga oluvchi:",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "before",
+          "label": "Sudga murojaat qilishdan oldin nima qilish shart?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Hech narsa, to'g'ridan-to'g'ri sudga"
+            },
+            {
+              "id": "warn",
+              "label": "Yozma ogohlantirish va majburiyatni bajarishga imkon berish"
+            },
+            {
+              "id": "lock",
+              "label": "Binoni qulflab qo'yish"
+            }
+          ],
+          "correct": "warn",
+          "why": "Ijaraga beruvchi ijarachini yozma ogohlantirgandan va unga majburiyatlarini bajarish uchun imkoniyat bergandan keyingina bekor qilishni talab qilishga haqli (551-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "yozma ravishda ogohlantirganidan va unga oʻz majburiyatlarini bajarish uchun imkoniyat berganidan keyingina",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "Ijaraga beruvchi ijaraga oluvchini ⟦yozma ravishda ogohlantirganidan va unga oʻz majburiyatlarini bajarish uchun imkoniyat berganidan keyingina⟧ shartnoma muddatidan oldin bekor qilinishini talab qilishga haqli.",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "amount",
+          "label": "To'lanmagan jami ijara haqi (so'm)",
+          "kind": "number",
+          "options": [],
+          "correct": "15000000",
+          "why": "3 oy × 5 000 000 so'm = 15 000 000 so'm. Ijarachi haqni o'z vaqtida to'lashi shart (544-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "544-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "Ijaraga oluvchi mol-mulkdan foydalanganlik uchun haqni oʻz vaqtida toʻlab turishi shart.",
+              "heading": "544-modda. Mol-mulkdan foydalanganlik uchun haq toʻlash",
+              "text": "⟦Ijaraga oluvchi mol-mulkdan foydalanganlik uchun haqni oʻz vaqtida toʻlab turishi shart.⟧",
+              "anchor": "-184420"
+            }
+          ]
+        },
+        {
+          "id": "return",
+          "label": "Bekor qilingach ijarachi binoni qaytarmasa nimani talab qilish mumkin?",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "none",
+              "label": "Faqat binoni qaytarish, haq talab qilib bo'lmaydi"
+            },
+            {
+              "id": "fee",
+              "label": "Kechiktirilgan butun vaqt uchun haq va qoplanmagan zarar"
+            },
+            {
+              "id": "swap",
+              "label": "Ijarachining mol-mulkini o'ziniki qilib olish"
+            }
+          ],
+          "correct": "fee",
+          "why": "Ijarachi mol-mulkni qaytarmasa yoki kechiktirsa, ijaraga beruvchi kechiktirilgan butun vaqt uchun haq, u zararni qoplamasa zararning o'zini ham talab qilishga haqli (554-modda).",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "554-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "kechiktirilgan barcha vaqt davomida mol-mulkdan foydalanganlik uchun haq toʻlashni talab qilishga haqli",
+              "heading": "554-modda. Mol-mulkni ijaraga beruvchiga qaytarish",
+              "text": "Agar ijaraga oluvchi ijaraga olgan mol-mulkni qaytarmasa yoki kechiktirib qaytarsa, ijaraga beruvchi ⟦kechiktirilgan barcha vaqt davomida mol-mulkdan foydalanganlik uchun haq toʻlashni talab qilishga haqli⟧. Bu haq ijaraga beruvchi koʻrgan zararni qoplamagan taqdirda zararni toʻlashni talab qilishga haqli.",
+              "anchor": "-184480"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "type": "draft",
+      "title": "Arizani o'zingiz yozing",
+      "points": 15,
+      "sources": [],
+      "description": "Mijoz nomidan arizani erkin matnda yozing. AI uni mezonlar bo'yicha tekshiradi va nima yetishmayotganini aytadi.",
+      "prompt": "Mijozning vaziyati bo'yicha ariza yozing (Ijarachi ijara haqini to'lamayapti). Kimga va kim nomidan yozilayotganini, faktlarni, aniq talabni, qonuniy asosni va ilovalarni ko'rsating.",
+      "minChars": 200,
+      "rubric": [
+        {
+          "id": "parties",
+          "label": "Ariza kimga (organ yoki sud nomi) va kim tomonidan (ism, manzil) berilgani, javobgar tomon ko'rsatilgan",
+          "weight": 15,
+          "sources": []
+        },
+        {
+          "id": "facts",
+          "label": "Mijozning asosiy faktlari to'g'ri va aniq yozilgan: Ijara haqi ketma-ket 3 oy to'lanmagan; Oylik ijara haqi 5 000 000 so'm; Shartnoma yozma, 2 yilga tuzilgan, davlat ro'yxatidan o'tgan; Ijarachiga hali yozma ogohlantirish yuborilmagan",
+          "weight": 35,
+          "sources": []
+        },
+        {
+          "id": "claim",
+          "label": "Aniq talab yozilgan: nimani talab qilinayotgani (kerak bo'lsa summa yoki muddat bilan)",
+          "weight": 20,
+          "sources": []
+        },
+        {
+          "id": "basis",
+          "label": "Huquqiy asos sifatida qonun moddasiga ishora qilingan",
+          "weight": 15,
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "539-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "taraflardan birontasi yuridik shaxs boʻlgan hollarda esa, muddatidan qatʼi nazar, yozma shaklda tuzilishi shart.",
+              "heading": "539-modda. Mulk ijarasi shartnomasining shakli",
+              "text": "Mulk ijarasi shartnomasi bir yildan ortiq muddatga moʻljallangan boʻlsa, ⟦taraflardan birontasi yuridik shaxs boʻlgan hollarda esa, muddatidan qatʼi nazar, yozma shaklda tuzilishi shart.⟧",
+              "anchor": "-184381"
+            },
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "544-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "Ijaraga oluvchi mol-mulkdan foydalanganlik uchun haqni oʻz vaqtida toʻlab turishi shart.",
+              "heading": "544-modda. Mol-mulkdan foydalanganlik uchun haq toʻlash",
+              "text": "⟦Ijaraga oluvchi mol-mulkdan foydalanganlik uchun haqni oʻz vaqtida toʻlab turishi shart.⟧",
+              "anchor": "-184420"
+            }
+          ]
+        },
+        {
+          "id": "attach",
+          "label": "Ilova qilinadigan hujjatlar ro'yxati va sana, imzo ko'rsatilgan: Yozma ijara shartnomasi; Shartnomaning davlat ro'yxatidan o'tganligi va soliq organida hisobga qo'yilganligi haqidagi hujjat; To'lovlar bo'yicha bank ko'chirmasi",
+          "weight": 15,
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "authority-pick",
+      "title": "Harakatlar tartibi",
+      "sources": [],
+      "points": 15,
+      "description": "Ijaraga beruvchi harakatlarini to'g'ri ketma-ketlikda belgilang.",
+      "order": [
+        {
+          "id": "warn",
+          "label": "Ijarachini yozma ogohlantirish",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "yozma ravishda ogohlantirganidan",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "Ijaraga beruvchi ijaraga oluvchini ⟦yozma ravishda ogohlantirganidan⟧ va unga oʻz majburiyatlarini bajarish uchun imkoniyat berganidan keyingina shartnoma muddatidan oldin bekor qilinishini talab qilishga haqli.",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "chance",
+          "label": "Majburiyatni bajarish uchun imkoniyat berish",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "unga oʻz majburiyatlarini bajarish uchun imkoniyat berganidan",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "Ijaraga beruvchi ijaraga oluvchini yozma ravishda ogohlantirganidan va ⟦unga oʻz majburiyatlarini bajarish uchun imkoniyat berganidan⟧ keyingina shartnoma muddatidan oldin bekor qilinishini talab qilishga haqli.",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "court",
+          "label": "Sudga muddatidan oldin bekor qilish talabi bilan murojaat qilish",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "551-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "sud tomonidan muddatidan oldin bekor qilinishi mumkin",
+              "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+              "text": "Mulk ijarasi shartnomasi ijaraga beruvchining talabi bilan ⟦sud tomonidan muddatidan oldin bekor qilinishi mumkin⟧, agar ijaraga oluvchi:",
+              "anchor": "-184460"
+            }
+          ]
+        },
+        {
+          "id": "return",
+          "label": "Shartnoma bekor bo'lgach, mol-mulkni qaytarishni talab qilish",
+          "sources": [
+            {
+              "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+              "article": "554-modda",
+              "url": "https://lex.uz/docs/-180552",
+              "quote": "Mulk ijarasi shartnomasi bekor boʻlganidan keyin ijaraga oluvchi ijaraga beruvchiga mol-mulkni",
+              "heading": "554-modda. Mol-mulkni ijaraga beruvchiga qaytarish",
+              "text": "⟦Mulk ijarasi shartnomasi bekor boʻlganidan keyin ijaraga oluvchi ijaraga beruvchiga mol-mulkni⟧ oʻziga topshirilgan holatda, normal eskirishni hisobga olib yoki shartnomada kelishilgan holatda qaytarishi lozim.",
+              "anchor": "-184480"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "deadline-pick",
+      "title": "Bekor qilish sharti",
+      "sources": [
+        {
+          "act": "Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)",
+          "article": "551-modda",
+          "url": "https://lex.uz/docs/-180552",
+          "quote": "ketma-ket ikki martadan ortiq buzib",
+          "heading": "551-modda. Ijaraga beruvchining talabi boʻyicha mulk ijarasi shartnomasini muddatidan oldin bekor qilish",
+          "text": "mol-mulkni jiddiy yomonlashtirsa;\nshartnomada belgilangan toʻlov muddatini ⟦ketma-ket ikki martadan ortiq buzib⟧, mol-mulkdan foydalanganlik uchun haq toʻlamasa;",
+          "anchor": "-184460"
+        }
+      ],
+      "description": "To'lov buzilishi bo'yicha qachon bekor qilishni talab qilish mumkin.",
+      "points": 15,
+      "options": [
+        {
+          "id": "once",
+          "label": "Bir marta kechiksa"
+        },
+        {
+          "id": "two",
+          "label": "Ketma-ket ikki martadan ortiq buzsa"
+        },
+        {
+          "id": "monthly",
+          "label": "Har oyda bir marta kechiksa ham"
+        },
+        {
+          "id": "any",
+          "label": "Ijaraga beruvchi xohlasa"
+        }
+      ],
+      "correct": "two"
+    }
+  ]
+}
