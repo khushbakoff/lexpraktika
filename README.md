@@ -1,10 +1,6 @@
 # LexPraktika
 
-## Taqdimot
-
-[![LexPraktika taqdimoti](taqdimot/muqova.png)](taqdimot/LexPraktika_taqdimot.pdf)
-
-**[Taqdimotni ochish (PDF, 9 slayd)](taqdimot/LexPraktika_taqdimot.pdf)** · **[Demo](https://lex.193-180-213-14.sslip.io)** · **[Telegram bot](https://t.me/LexPraktika_bot)**
+**[Taqdimot (PDF)](LexPraktika_taqdimot.pdf)** · **[Demo](https://lex.193-180-213-14.sslip.io)** · **[Telegram bot](https://t.me/LexPraktika_bot)**
 
 ---
 
