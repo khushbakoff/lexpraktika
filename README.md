@@ -6,6 +6,8 @@ LexHackathon 2026, 02-trek ishtirokchisi. Interfeys tili: o'zbek (lotin).
 
 Demo: https://lex.193-180-213-14.sslip.io
 
+Taqdimot (PDF): [docs/taqdimot/LexPraktika_taqdimot.pdf](docs/taqdimot/LexPraktika_taqdimot.pdf)
+
 ## Muammo
 
 Huquq fakultetlari nazariyani yaxshi o'rgatadi, lekin talaba amaliyotda "mijoz keldi, endi nima qilaman?" savoliga duch keladi. Qaysi organga murojaat qilinadi, qanday hujjat yoziladi, qaysi muddatda, qaysi modda asosida. Buni mashq qiladigan joy yo'q.

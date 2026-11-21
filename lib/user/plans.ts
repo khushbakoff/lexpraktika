@@ -27,7 +27,7 @@ export const PLANS: Record<PlanId, Plan> = {
   pro: {
     id: "pro",
     title: "Pro",
-    price: "349 000 so'm",
+    price: "249 000 so'm",
     note: "Bir martalik, kurs uchun",
     features: [
       "AI mijoz bilan cheksiz erkin suhbat",
