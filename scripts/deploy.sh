@@ -4,7 +4,8 @@
 # Ishlatish: sh scripts/deploy.sh        (HOST ni o'zgartirish: LEXSIM_HOST=user@host sh scripts/deploy.sh)
 set -e
 cd "$(dirname "$0")/.."
-HOST="${LEXSIM_HOST:-ismoil12@193.180.213.14}"
+[ -f .deploy.env ] && . ./.deploy.env   # LEXSIM_HOST=user@host (gitga kirmaydi)
+HOST="${LEXSIM_HOST:?LEXSIM_HOST kerak: .deploy.env fayliga LEXSIM_HOST=user@host yozing}"
 URL="${LEXSIM_URL:-https://lex.193-180-213-14.sslip.io}"
 STAGE="$(mktemp -d)"
 

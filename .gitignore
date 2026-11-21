@@ -50,3 +50,4 @@ android/app/build/
 android/.gradle/
 .research/raw/
 *.log
+.deploy.env

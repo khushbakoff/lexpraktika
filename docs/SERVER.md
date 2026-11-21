@@ -2,7 +2,7 @@
 
 - **Manzil:** https://lex.193-180-213-14.sslip.io (nginx + Let's Encrypt; sslip.io domen IP ga o'zi yo'naltiradi). To'g'ridan-to'g'ri http://193.180.213.14:3200 ham ochiq, lekin `COOKIE_SECURE=true` bo'lgani uchun kirish faqat HTTPS orqali ishlaydi. nginx sozlamasi: `/etc/nginx/sites-available/lexpraktika` (qalqon-vpn bloki bilan bir xil sslip hostini ishlatmaslik uchun `lex.` prefiksi bor).
 - **Server:** Ubuntu 24.04, boshqa loyihalar bilan umumiy (logistik, olimjon-market va h.k.). Xotira tig'iz (14 GB dan ~12 GB band, swap deyarli to'la), shuning uchun LexPraktika xotirasi cheklangan.
-- **LexPraktika joyi:** `/var/www/lexsim` (egasi `ismoil12`), xizmat: `systemd` `lexsim.service`, port **3200**, xotira `MemoryHigh=300M`, `MemoryMax=400M`.
+- **LexPraktika joyi:** `/var/www/lexsim` (egasi: deploy foydalanuvchisi), xizmat: `systemd` `lexsim.service`, port **3200**, xotira `MemoryHigh=300M`, `MemoryMax=400M`.
 - **Baza:** umumiy MongoDB (`127.0.0.1:27017`), **alohida `lexsim` bazasi**. Boshqa bazalarga tegilmaydi. Autentifikatsiya serverda yoqilmagan (mongod faqat localhost'da), bu LexPraktika'ga bog'liq emas.
 - **Sirlar:** `/var/www/lexsim/.env.production` (mode 600): `MONGODB_URI`, `MONGODB_DB`, `SESSION_SECRET`, `COOKIE_SECURE`. Ixtiyoriy: `AI_API_KEY`, `AI_MODEL`, `DEFAULT_PLAN`, `APP_URL`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_BOT_USERNAME` (`.env.example` ga qarang). Git'ga yoki chatga qo'ymang.
 - **Firewall:** `ufw allow 3200/tcp` (faqat LexPraktika porti qo'shilgan).
@@ -15,11 +15,11 @@ Mahalliy build qiladi, paketlaydi, serverga yuklaydi, xizmatni qayta ishga tushi
 
 ## Foydali buyruqlar
 ```
-ssh ismoil12@193.180.213.14 'systemctl status lexsim --no-pager'
-ssh ismoil12@193.180.213.14 'journalctl -u lexsim -n 100 --no-pager'
-ssh ismoil12@193.180.213.14 'sudo systemctl restart lexsim'
+ssh "$LEXSIM_HOST" 'systemctl status lexsim --no-pager'
+ssh "$LEXSIM_HOST" 'journalctl -u lexsim -n 100 --no-pager'
+ssh "$LEXSIM_HOST" 'sudo systemctl restart lexsim'
 ```
-Demo ma'lumot yuklash (SSH tunnel orqali): `ssh -f -N -L 27018:127.0.0.1:27017 ismoil12@193.180.213.14` so'ng `MONGODB_URI=mongodb://127.0.0.1:27018 MONGODB_DB=lexsim npm run seed`.
+Demo ma'lumot yuklash (SSH tunnel orqali): `ssh -f -N -L 27018:127.0.0.1:27017 "$LEXSIM_HOST"` so'ng `MONGODB_URI=mongodb://127.0.0.1:27018 MONGODB_DB=lexsim npm run seed`.
 
 ## LexPraktika'ni serverdan to'liq olib tashlash (boshqa loyihalarga ta'sir qilmaydi)
 ```
